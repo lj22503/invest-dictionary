@@ -438,6 +438,65 @@
       right: 5%;
     }
   }
+
+/* ===== 统一导航头部 ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(245,242,236,0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #D9D4CC;
+}
+.site-header .brand {
+  font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.site-header .brand .en {
+  font-size: 0.72rem;
+  color: #C43A31;
+  letter-spacing: 0.14em;
+  font-style: italic;
+  font-weight: 400;
+}
+.site-header nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.site-header nav a,
+.site-header nav button {
+  font-size: 0.88rem;
+  color: #5A5A5A;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.site-header nav a:hover,
+.site-header nav button:hover {
+  color: #C43A31;
+  border-bottom-color: #C43A31;
+}
+@media (max-width: 560px) {
+  .site-header { flex-direction: column; gap: 8px; padding: 12px 16px; }
+  .site-header nav { gap: 14px; }
+}
 </style>
 
 <!-- 词条页增强样式 -->
@@ -691,8 +750,19 @@
     }
   }
 </style>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body class="term-page">
+<header class="site-header">
+  <a class="brand" href="../index.html">投资词典<span class="en">Invest Dictionary</span></a>
+  <nav aria-label="主导航">
+    <a href="../index.html">全部词条</a>
+    <button onclick="location.href='../index.html?random=1'">随机一词</button>
+    <a href="https://github.com/lj22503/invest-dictionary" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
 <div class="copy-toast" id="copyToast">链接已复制</div>
 
 <nav class="term-breadcrumb" aria-label="面包屑导航">
@@ -799,15 +869,7 @@
 
 <div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
 
-<div class="share-bar" style="margin-top: 1.5rem;">
-  <span class="share-label">分享：</span>
-  <span class="share-btn wechat-btn" onclick="copyPageUrl()">
-    微信
-    </span>
-  </span>
-  <a class="share-btn weibo-btn" href="https://service.weibo.com/share/share.php?url=https%3A//investbuddy.com/terms/%25E5%25A4%258F%25E6%2599%25AE%25E6%25AF%2594%25E7%258E%2587%25EF%25BC%2588%25E6%2580%25A7%25E4%25BB%25B7%25E6%25AF%2594%25EF%25BC%259A%25E6%25AF%258F%25E6%2589%25BF%25E6%258B%25851%25E4%25BB%25BD%25E9%25A3%258E%25E9%2599%25A9%25E6%258D%25A2%25E5%25A4%259A%25E5%25B0%2591%25E6%2594%25B6%25E7%259B%258A%25EF%25BC%2589.html&title=%E5%A4%8F%E6%99%AE%E6%AF%94%E7%8E%87%EF%BC%88%E6%80%A7%E4%BB%B7%E6%AF%94%EF%BC%9A%E6%AF%8F%E6%89%BF%E6%8B%851%E4%BB%BD%E9%A3%8E%E9%99%A9%E6%8D%A2%E5%A4%9A%E5%B0%91%E6%94%B6%E7%9B%8A%EF%BC%89%20-%20%E6%8A%95%E8%B5%84%E8%AF%8D%E5%85%B8%20%C2%B7%20Invest%20Dictionary" target="_blank" rel="noopener">微博</a>
-  <button class="share-btn copy-btn" onclick="copyPageUrl()">复制链接</button>
-</div>
+
 
 <div class="term-footer-spacer"></div>
 

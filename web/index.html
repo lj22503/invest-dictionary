@@ -241,17 +241,164 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif; }
 
 /* Hidden */
 .hidden { display: none !important; }
+
+/* ===== 统一导航头部 ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(245,242,236,0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #D9D4CC;
+}
+.site-header .brand {
+  font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.site-header .brand .en {
+  font-size: 0.72rem;
+  color: #C43A31;
+  letter-spacing: 0.14em;
+  font-style: italic;
+  font-weight: 400;
+}
+.site-header nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.site-header nav a,
+.site-header nav button {
+  font-size: 0.88rem;
+  color: #5A5A5A;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.site-header nav a:hover,
+.site-header nav button:hover {
+  color: #C43A31;
+  border-bottom-color: #C43A31;
+}
+@media (max-width: 560px) {
+  .site-header { flex-direction: column; gap: 8px; padding: 12px 16px; }
+  .site-header nav { gap: 14px; }
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: #C43A31;
+  margin-bottom: 18px;
+}
+.hero .subtitle {
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 26px;
+  border-radius: 24px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1.5px solid #C43A31;
+  background: #C43A31;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif;
+}
+.hero-btn.ghost {
+  background: transparent;
+  color: #C43A31;
+}
+.hero-btn:hover {
+  box-shadow: 0 4px 14px rgba(196,58,49,0.25);
+  transform: translateY(-1px);
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px dashed #D9D4CC;
+}
+.hero-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-stats .stat strong {
+  font-family: "Noto Serif SC", "KaiTi", serif;
+  font-size: 1.9rem;
+  color: #2C2C2C;
+  line-height: 1.1;
+}
+.hero-stats .stat span {
+  font-size: 0.78rem;
+  color: #5A5A5A;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.chapter-anchor { display: block; scroll-margin-top: 80px; }
 </style>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
+<header class="site-header">
+  <a class="brand" href="index.html">投资词典<span class="en">Invest Dictionary</span></a>
+  <nav aria-label="主导航">
+    <a href="index.html">全部词条</a>
+    <button onclick="location.href='?random=1'">随机一词</button>
+    <a href="https://github.com/lj22503/invest-dictionary" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
 
 <!-- Hero -->
 <section class="hero">
+  <p class="hero-eyebrow">说人话 · 不装逼 · 每天一篇</p>
   <h1>投资词典</h1>
   <p class="en-title">Invest Dictionary</p>
-  <p class="subtitle">213 个投资术语，说人话，不装逼</p>
+  <p class="subtitle">把 213 个投资术语，翻译成你听得懂的话。<br>不装腔作势，一读就懂。</p>
   <div class="search-wrap">
-    <input type="search" id="searchBox" placeholder="搜索词条或篇章...">
+    <input type="search" id="searchBox" placeholder="搜索词条或篇章..." aria-label="搜索词条或篇章">
+  </div>
+  <div class="hero-actions">
+    <a class="hero-btn" href="#chapters">按篇章浏览</a>
+    <button class="hero-btn ghost" onclick="location.href='?random=1'">随机读一篇</button>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><strong>213</strong><span>词条</span></div>
+    <div class="stat"><strong>22</strong><span>篇章</span></div>
+    <div class="stat"><strong>4</strong><span>故事卡 / 词条</span></div>
   </div>
 </section>
 
@@ -259,6 +406,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif; }
 
 
 <!-- Main -->
+<span id="chapters" class="chapter-anchor"></span>
 <main class="main" id="mainContent"></main>
 
 <!-- No results -->
@@ -4161,6 +4309,12 @@ var ALL_ENTRIES = [
     "file": "杀熟（熟人推荐最危险）.html"
   }
 ];
+(function () {
+  if (location.search.indexOf('random=1') !== -1) {
+    var rand = ALL_ENTRIES[Math.floor(Math.random() * ALL_ENTRIES.length)];
+    location.replace('terms/' + encodeURIComponent(rand.file));
+  }
+})();
 var CHAPTER_ORDER = ["第一篇：钱的本质", "第二篇：个人财务底盘", "第三篇：风险护城河", "第四篇：投资武器库 · 股票篇", "第五篇：投资武器库 · 债券与固收篇", "第六篇：投资武器库 · 基金篇", "第七篇：投资武器库 · 其他类", "第八篇：读懂指标 · 估值与业绩篇", "第九篇：读懂指标 · 市场情绪与风险篇", "第十篇：交易规则与摩擦成本", "第十一篇：宏观风向标", "第十二篇：宏观与周期", "第十三篇：衍生品与对冲", "第十四篇：策略与数学", "第十五篇：策略与数学 · 进阶", "第十六篇：金融市场黑话与交易场景", "第十七篇：日常支付与账户管理", "第十八篇：借贷与生活刚需", "第十九篇：人生账本与长期规划", "第二十篇：消费心理与财富品格", "第二十一篇：投资心理与行为陷阱", "第二十二篇：骗局与避坑指南"];
 
 (function() {
