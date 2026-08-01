@@ -99,6 +99,13 @@ AIGC:
 - **修复**：在 Cloudflare 添加 CNAME `dictionary` → `8f73e94d8020e067.vercel-dns-017.com`，等待生效后 Vercel 自动变 Valid。
 - **预防**：第三方 DNS 托管的域名绑定前，先准备 DNS 记录。
 
+## 13. Cloudflare 代理（橙云）导致 Vercel 提示 Proxy Detected + 可能 525
+
+- **现象**：CNAME 走 Cloudflare Proxied 后，Vercel Domains 显示 Proxy Detected 警告；域名刚生效初期访问偶发 `525 SSL handshake failed`。
+- **根因**：① Cloudflare 橙云代理使 Vercel 的 DDoS 防护/性能优化失效，Vercel 显示功能警告；② 域名生效初 Vercel 侧证书签发/握手未就绪，Cloudflare 转发时出现临时 525。
+- **修复**：525 为临时状态，等待证书签发完成即可；如要消除 Proxy Detected 警告，将 Cloudflare 记录改为 DNS only（灰云）。
+- **预防**：绑定第三方代理时预知 Vercel 会提示 Proxy Detected；域名生效后先等 1-3 分钟再验证，避免误判 525 为失败。
+
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
 *（内容由AI生成，仅供参考）*
