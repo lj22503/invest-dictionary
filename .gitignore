@@ -1,0 +1,25 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Node / Vercel
+node_modules/
+.vercel/
+
+# Local env
+.env
+.env.local
+
+# Temp / verify screenshots (local only)
+web/verify/

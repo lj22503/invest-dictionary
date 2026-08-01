@@ -1,0 +1,21 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://dictionary.mangofolio.com/sitemap.xml
+（内容由AI生成，仅供参考）

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+  投资词典 · 词条页模板
+  使用说明：
+  1. 替换 {词条名}、{一句话定义}、{相关词条A/B} 等占位符
+  2. canonical / og:url 必须指向正式域名 https://dictionary.mangofolio.com
+  3. 正文按"故事卡"组织：每张卡 = card-title（口语化标题）+ card-body（内容）
+  4. 文件名按 slug 归一化规则：词条名中 /、*、> 一律替换为 _（下划线）
+  5. 相关词条链接 href 必须使用归一化文件名（否则含特殊字符的词条会断链）
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{词条名} - 投资词典 · Invest Dictionary</title>
+<meta name="description" content="{一句话定义}">
+<meta name="keywords" content="{词条名}, {相关词条A}, {相关词条B}">
+<link rel="canonical" href="https://dictionary.mangofolio.com/terms/{归一化文件名}.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{词条名} - 投资词典 · Invest Dictionary">
+<meta property="og:description" content="{一句话定义}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dictionary.mangofolio.com/terms/{归一化文件名}.html">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{词条名} - 投资词典 · Invest Dictionary">
+<meta name="twitter:description" content="{一句话定义}">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "{词条名}",
+  "description": "{一句话定义}",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "投资词典 · Invest Dictionary"
+  },
+  "termCode": "{id}",
+  "url": "https://dictionary.mangofolio.com/terms/{归一化文件名}.html"
+}
+</script>
+
+<style>
+  /* 纸感手账风格：米白纸张 + 楷体 + 朱红点缀 */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5efe0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;  /* 注意：必须是 column，否则新增区块会被挤成单行 */
+    align-items: center;
+    padding: 2rem 1rem 4rem;
+    font-family: "KaiTi", "楷体", "STKaiti", "Noto Serif SC", "Songti SC", "PingFang SC", "Microsoft YaHei", serif;
+    color: #3a3a3a;
+    line-height: 1.9;
+  }
+  .paper { max-width: 720px; width: 100%; background: #faf6ee; border: 1px solid #e8e0d0; border-radius: 6px; padding: 2.2rem 2.4rem; box-shadow: 0 4px 20px rgba(60,45,25,0.06); }
+  h1 { font-size: 1.9rem; font-weight: 700; color: #2c2c2c; margin-bottom: .5rem; }
+  .term-subtitle { color: #7a6a55; font-size: .95rem; margin-bottom: 1.5rem; }
+  .story-card { margin-bottom: 2.2rem; }
+  .card-title {
+    font-size: 1.5rem; font-weight: 400; color: #3a3a3a; margin-bottom: 1rem;
+    display: inline-block; position: relative; letter-spacing: .06em;
+  }
+  .card-title::after {
+    content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 4px;
+    background: repeating-linear-gradient(90deg, #d4745c 0 3px, transparent 3px 7px, #d4745c 7px 10px, transparent 10px 14px);
+    opacity: .65; border-radius: 1px;
+  }
+  .card-body { font-size: .95rem; color: #4a4035; line-height: 2.1; }
+  .card-body p { margin-bottom: .7rem; }
+  .highlight::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 8px; background: rgba(232,120,74,.18); z-index: -1; }
+  .tag { display: inline-block; background: rgba(232,120,74,.10); color: #8b5040; padding: .1em .5em; border: 1px dashed rgba(232,120,74,.30); border-radius: 3px 6px 4px 5px; font-size: .88rem; }
+  .step-list { list-style: none; }
+  .step-list li { position: relative; padding-left: 1.8em; margin-bottom: .7rem; }
+  .step-list li::before { content: ''; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; background: #e8784a; border-radius: 50%; opacity: .7; }
+  .card-quote { border-left: 3px dashed #d4745c; padding-left: 1rem; margin: 1rem 0; color: #6b5040; font-style: italic; }
+  .term-related { margin-top: 2rem; padding-top: 1.2rem; border-top: 2px dashed #c4b5a0; }
+  .term-related a { color: #c43a31; text-decoration: none; margin-right: 1rem; }
+  .term-related a:hover { text-decoration: underline; }
+  @media (max-width: 600px) { html { font-size: 15px; } .paper { padding: 1.4rem 1.2rem; } }
+</style>
+</head>
+<body>
+<main class="paper">
+  <h1>{词条名}</h1>
+  <p class="term-subtitle">{一句话定义}</p>
+
+  <section class="story-card">
+    <h2 class="card-title">{卡片1标题：这是什么}</h2>
+    <div class="card-body">
+      <p>{内容…}</p>
+    </div>
+  </section>
+
+  <section class="story-card">
+    <h2 class="card-title">{卡片2标题：为什么重要}</h2>
+    <div class="card-body">
+      <p>{内容…}</p>
+      <blockquote class="card-quote">{金句/口诀}</blockquote>
+    </div>
+  </section>
+
+  <section class="story-card">
+    <h2 class="card-title">{卡片3标题：怎么用}</h2>
+    <div class="card-body">
+      <ul class="step-list">
+        <li>{步骤 1}</li>
+        <li>{步骤 2}</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="story-card">
+    <h2 class="card-title">{卡片4标题：常见坑}</h2>
+    <div class="card-body">
+      <p><span class="tag">坑</span> {坑点内容}</p>
+    </div>
+  </section>
+
+  <div class="term-related">
+    <strong>相关词条：</strong>
+    <a href="{相关词条A归一化文件名}.html">{相关词条A}</a>
+    <a href="{相关词条B归一化文件名}.html">{相关词条B}</a>
+  </div>
+</main>
+</body>
+</html>

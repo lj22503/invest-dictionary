@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>持有期收益率 - 投资词典 · Invest Dictionary</title>
+<meta name="description" content="你从买入到卖出，实际赚了多少">
+<meta name="keywords" content="持有期收益率, 年化收益率, 最大回撤, 夏普比率, 回撤修复天数">
+<link rel="canonical" href="https://dictionary.mangofolio.com/terms/%E6%8C%81%E6%9C%89%E6%9C%9F%E6%94%B6%E7%9B%8A%E7%8E%87.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="持有期收益率 - 投资词典 · Invest Dictionary">
+<meta property="og:description" content="你从买入到卖出，实际赚了多少">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dictionary.mangofolio.com/terms/%E6%8C%81%E6%9C%89%E6%9C%9F%E6%94%B6%E7%9B%8A%E7%8E%87.html">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="持有期收益率 - 投资词典 · Invest Dictionary">
+<meta name="twitter:description" content="你从买入到卖出，实际赚了多少">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "持有期收益率",
+  "description": "你从买入到卖出，实际赚了多少",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "投资词典 · Invest Dictionary"
+  },
+  "termCode": "95",
+  "url": "https://dictionary.mangofolio.com/terms/%E6%8C%81%E6%9C%89%E6%9C%9F%E6%94%B6%E7%9B%8A%E7%8E%87.html"
+}
+</script>
+
+<!-- ianneo 原始样式 -->
+<style>
+/* ===== Reset & Base ===== */
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #f5efe0;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem 4rem;
+    font-family:
+      "KaiTi", "楷体", "STKaiti",
+      "FangSong", "仿宋", "STFangsong",
+      "Noto Serif SC", "Source Han Serif SC",
+      "Songti SC", "宋体", "SimSun",
+      "PingFang SC", "Microsoft YaHei",
+      serif;
+    color: #3a3a3a;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Paper Sheet ===== */
+  .paper {
+    max-width: 720px;
+    width: 100%;
+    background: #faf6ee;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 27px,
+        rgba(180,155,120,0.06) 27px,
+        rgba(180,155,120,0.06) 28px
+      );
+    border: 1.5px dashed #c4b5a0;
+    border-radius: 4px 10px 6px 9px;
+    padding: 3rem 2.5rem 2.5rem;
+    box-shadow:
+      2px 3px 0 rgba(60,45,25,0.06),
+      5px 7px 14px rgba(60,45,25,0.10),
+      inset 0 0 80px rgba(230,215,190,0.18);
+    position: relative;
+    overflow: visible;
+  }
+
+  .paper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 70px;
+    height: 28px;
+    background: rgba(220,205,175,0.55);
+    border: 1px dashed #c4b5a0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  /* ===== Header Area ===== */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.8rem;
+    position: relative;
+  }
+
+  .title-wrap {
+    flex: 1;
+  }
+
+  .main-title {
+    font-family: "KaiTi", "楷体", "STKaiti", "FangSong", "仿宋", serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #3a3a3a;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.35em;
+    letter-spacing: 0.12em;
+  }
+
+  .main-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #e8784a 0px,
+        #e8784a 4px,
+        transparent 4px,
+        transparent 10px,
+        #e8784a 10px,
+        #e8784a 12px,
+        transparent 12px,
+        transparent 18px
+      );
+    border-radius: 2px;
+    opacity: 0.75;
+  }
+
+  .subtitle {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #8b7a65;
+    letter-spacing: 0.05em;
+    font-style: italic;
+  }
+
+  /* ===== Card Divider ===== */
+  .card-divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-divider::before {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 3px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #c4b5a0 0px,
+        #c4b5a0 6px,
+        transparent 6px,
+        transparent 16px,
+        #c4b5a0 16px,
+        #c4b5a0 22px,
+        transparent 22px,
+        transparent 36px
+      );
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  .card-divider::after {
+    content: '\✂';
+    position: absolute;
+    font-size: 0.8rem;
+    color: #b8a58e;
+    opacity: 0.5;
+    top: -4px;
+    right: 12%;
+    transform: rotate(10deg);
+  }
+
+  /* ===== Cards ===== */
+  .card {
+    position: relative;
+    padding: 1.8rem 1.5rem 2rem;
+    margin-bottom: 0.6rem;
+    border: 1.5px dashed #c4b5a0;
+    border-radius: 6px 14px 8px 11px;
+    background: #fdfaf4;
+    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+  }
+
+  /* ===== Card Number Circle ===== */
+  .card-number {
+    position: absolute;
+    top: -18px;
+    left: -12px;
+    width: 38px;
+    height: 38px;
+    border: 2px dashed #c4b5a0;
+    border-radius: 48% 52% 50% 50% / 45% 55% 52% 48%;
+    background: #faf6ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "KaiTi", "楷体", "STKaiti", serif;
+    font-size: 1.1rem;
+    color: #6b5e4e;
+    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    user-select: none;
+  }
+
+  /* ===== Card Title ===== */
+  .card-title {
+    font-family: "KaiTi", "楷体", "STKaiti", "FangSong", "仿宋", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #3a3a3a;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.45em;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.08em;
+  }
+
+  .card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #d4745c 0px,
+        #d4745c 3px,
+        transparent 3px,
+        transparent 7px,
+        #d4745c 7px,
+        #d4745c 10px,
+        transparent 10px,
+        transparent 14px
+      );
+    border-radius: 1px;
+    opacity: 0.65;
+  }
+
+  /* ===== Card Content ===== */
+  .card-body {
+    font-size: 0.95rem;
+    color: #4a4035;
+    line-height: 2.1;
+    margin-bottom: 1rem;
+  }
+
+  .card-body p {
+    margin-bottom: 0.7rem;
+  }
+
+  .card-body .highlight {
+    position: relative;
+    display: inline;
+    padding: 0 0.15em;
+  }
+
+  .card-body .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(232,120,74,0.18);
+    z-index: -1;
+    border-radius: 2px;
+  }
+
+  .card-body .tag {
+    display: inline-block;
+    background: rgba(232,120,74,0.10);
+    color: #8b5040;
+    padding: 0.1em 0.5em;
+    border-radius: 3px 6px 4px 5px;
+    border: 1px dashed rgba(232,120,74,0.30);
+    font-size: 0.88rem;
+    margin: 0 0.1em;
+  }
+
+  /* ===== Card Quote ===== */
+  .card-quote {
+    border-left: 3px dashed #d4745c;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #6b5040;
+    font-style: italic;
+    font-size: 0.92rem;
+  }
+
+  /* ===== Formula Display ===== */
+  .formula-box {
+    background: rgba(232,120,74,0.06);
+    border: 1px dashed #c4b5a0;
+    border-radius: 4px 10px 5px 8px;
+    padding: 0.8rem 1.2rem;
+    margin: 0.8rem 0;
+    text-align: center;
+    font-family: "KaiTi", "楷体", "STKaiti", serif;
+    font-size: 1.05rem;
+    color: #5a3a2a;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== Comparison Table ===== */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+
+  .compare-table th {
+    background: rgba(232,120,74,0.10);
+    border: 1px dashed #c4b5a0;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    font-family: "KaiTi", "楷体", "STKaiti", serif;
+    font-weight: 400;
+    color: #5a3a2a;
+  }
+
+  .compare-table td {
+    border: 1px dashed rgba(196,181,160,0.6);
+    padding: 0.5rem 0.8rem;
+    color: #4a4035;
+    line-height: 1.7;
+  }
+
+  .compare-table tr:nth-child(even) td {
+    background: rgba(250,246,238,0.5);
+  }
+
+  /* ===== Step list ===== */
+  .step-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .step-list li {
+    position: relative;
+    padding-left: 1.8em;
+    margin-bottom: 0.7rem;
+  }
+
+  .step-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 8px;
+    height: 8px;
+    background: #e8784a;
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+  }
+
+  /* ===== Note list ===== */
+  .note-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .note-list li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.6rem;
+  }
+
+  .note-list li::before {
+    content: '\26A0';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.85rem;
+    color: #d4745c;
+    opacity: 0.7;
+  }
+
+  /* ===== Footer Area ===== */
+  .footer-area {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed #c4b5a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-sign {
+    background: #faf6ee;
+    border: 1.5px dashed #c4b5a0;
+    border-radius: 3px 10px 5px 8px;
+    padding: 0.6rem 1.2rem;
+    font-family: "KaiTi", "楷体", "STKaiti", serif;
+    font-size: 1rem;
+    color: #5a4a3a;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+  }
+
+  .footer-sign .arrow {
+    font-size: 1.3rem;
+    color: #e8784a;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    html { font-size: 15px; }
+
+    .paper {
+      padding: 2rem 1.2rem 1.8rem;
+      border-radius: 3px 8px 5px 7px;
+    }
+
+    .main-title {
+      font-size: 2rem;
+    }
+
+    .card {
+      padding: 1.5rem 1rem 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+    }
+
+    .card-number {
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+      top: -15px;
+      left: -8px;
+    }
+
+    .card-body {
+      font-size: 0.88rem;
+      line-height: 1.9;
+    }
+
+    .footer-sign {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.9rem;
+    }
+
+    .card-divider::after {
+      right: 5%;
+    }
+  }
+</style>
+
+<!-- 词条页增强样式 -->
+<style>
+  /* ===== InvestBuddy 主题变量 ===== */
+  :root {
+    --bg-paper: #F5F2EC;
+    --accent: #C43A31;
+    --accent-hover: #A33028;
+    --ink: #2C2C2C;
+    --ink-light: #5A4A3A;
+    --border-dashed: #c4b5a0;
+    --card-bg: #faf6ee;
+  }
+
+  /* ===== 外层包裹 ===== */
+  body.term-page {
+    background: var(--bg-paper);
+    padding-top: 0;
+  }
+
+  /* ===== 面包屑 ===== */
+  .term-breadcrumb {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .term-breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .term-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  .term-breadcrumb .bc-sep {
+    margin: 0 0.4rem;
+    color: #b8a58e;
+  }
+  .term-breadcrumb .bc-current {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ===== 分享按钮区 ===== */
+  .share-bar {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto 1.2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .share-bar .share-label {
+    font-size: 0.82rem;
+    color: var(--ink-light);
+    margin-right: 0.3rem;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.85rem;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 4px 8px 5px 7px;
+    background: var(--card-bg);
+    color: var(--ink);
+    font-size: 0.82rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: "KaiTi", "楷体", serif;
+  }
+  .share-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+  }
+  .share-btn.wechat-btn {
+    position: relative;
+  }
+  .share-btn.wechat-btn .qr-popup {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 6px;
+    padding: 0.8rem;
+    box-shadow: 2px 3px 12px rgba(0,0,0,0.12);
+    z-index: 100;
+    text-align: center;
+  }
+  .share-btn.wechat-btn:hover .qr-popup {
+    display: block;
+  }
+  .share-btn.wechat-btn .qr-popup img {
+    width: 120px;
+    height: 120px;
+    background: #f0f0f0;
+    display: block;
+  }
+  .share-btn.wechat-btn .qr-popup span {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 0.3rem;
+  }
+  .copy-toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .copy-toast.show {
+    opacity: 1;
+  }
+
+  /* ===== 导航区 ===== */
+  .term-pager {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.8rem auto 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-family: "KaiTi", "楷体", "PingFang SC", sans-serif;
+  }
+  .term-pager a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 4px 8px 5px 7px;
+    background: var(--card-bg);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: all 0.2s ease;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .term-pager a:hover {
+    border-color: var(--accent);
+    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+  }
+  .term-pager .pager-disabled {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1.5px dashed #ddd;
+    border-radius: 4px 8px 5px 7px;
+    background: #f8f8f8;
+    color: #bbb;
+    font-size: 0.88rem;
+    cursor: default;
+  }
+
+  /* ===== 关联词条 ===== */
+  .term-related {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
+    padding: 1rem 1.5rem;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 6px 10px 7px 8px;
+    background: var(--card-bg);
+    font-family: "KaiTi", "楷体", "PingFang SC", sans-serif;
+  }
+  .term-related h3 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    font-family: "KaiTi", "楷体", serif;
+  }
+  .related-links {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+  .related-links a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .related-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== 返回目录 ===== */
+  .term-back {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "KaiTi", "楷体", "PingFang SC", sans-serif;
+  }
+  .term-back a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .term-back a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== 底部间距 ===== */
+  .term-footer-spacer {
+    height: 3rem;
+  }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 600px) {
+    .share-bar {
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .share-btn {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.78rem;
+    }
+    .term-breadcrumb {
+      font-size: 0.78rem;
+    }
+    .term-pager {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .term-pager a, .term-pager .pager-disabled {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body class="term-page">
+<div class="copy-toast" id="copyToast">链接已复制</div>
+
+<nav class="term-breadcrumb" aria-label="面包屑导航">
+  <a href="../index.html">投资词典</a>
+  <span class="bc-sep">›</span>
+  <a href="../index.html#%E7%AC%AC%E4%B9%9D%E7%AF%87%EF%BC%9A%E8%AF%BB%E6%87%82%E6%8C%87%E6%A0%87%20%C2%B7%20%E5%B8%82%E5%9C%BA%E6%83%85%E7%BB%AA%E4%B8%8E%E9%A3%8E%E9%99%A9%E7%AF%87">第九篇：读懂指标 · 市场情绪与风险篇</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-current">持有期收益率</span>
+</nav>
+
+<!-- 顶部分享按钮 -->
+<div class="share-bar">
+  <span class="share-label">分享：</span>
+  <span class="share-btn wechat-btn" onclick="copyPageUrl()">
+    微信
+    </span>
+  </span>
+  <a class="share-btn weibo-btn" href="https://service.weibo.com/share/share.php?url=https%3A//investbuddy.com/terms/%25E6%258C%2581%25E6%259C%2589%25E6%259C%259F%25E6%2594%25B6%25E7%259B%258A%25E7%258E%2587.html&title=%E6%8C%81%E6%9C%89%E6%9C%9F%E6%94%B6%E7%9B%8A%E7%8E%87%20-%20%E6%8A%95%E8%B5%84%E8%AF%8D%E5%85%B8%20%C2%B7%20Invest%20Dictionary" target="_blank" rel="noopener">微博</a>
+  <button class="share-btn copy-btn" onclick="copyPageUrl()">复制链接</button>
+</div>
+
+<!-- ianneo 正文 -->
+<div class="paper">
+<!-- ===== Header ===== -->
+  <header class="header">
+    <div class="title-wrap">
+      <h1 class="main-title">持有期收益率</h1>
+      <p class="subtitle">—— 理财字典 · 第九篇：读懂指标 · 市场情绪与风险篇</p>
+    </div>
+  </header>
+
+  <!-- ===== Card 1: Definition ===== -->
+  <article class="card">
+    <div class="card-number">①</div>
+    <h2 class="card-title">你从买入到卖出，<span class="highlight">实际赚了多少</span></h2>
+    <div class="card-body">
+      <p>持有期收益率——英文叫 <span class="tag">Holding Period Return（HPR）</span>——是最老实的收益算法。</p>
+      <p>不除以年，不换算月，不玩花样。就是：</p>
+      <div class="formula-box">
+        持有期收益率 =（卖出价 + 期间分红 − 买入价）÷ 买入价 × 100%
+      </div>
+      <div class="card-quote">
+        如果说<span class="highlight">年化收益率是"时速表"</span>——把所有距离都拉到"每小时"来比速度；那<span class="highlight">持有期收益率就是"里程表"</span>——你实际跑了多少公里，就是多少。
+      </div>
+      <p>比如你花<span class="highlight">10,000块</span>买了一只基金，持有<span class="highlight">3个月</span>后卖出，到手<span class="highlight">10,800块</span>，期间没有分红。（10,800 − 10,000）÷ 10,000 = <span class="tag">8%</span>。这8%，就是你的持有期收益率。</p>
+      <p style="font-size:0.85rem; color:#8b7a65;">注意：8%是3个月的收益，不是一年的。很多人在这里犯第一个错。</p>
+    </div>
+  </article>
+
+  <div class="card-divider"></div>
+
+  <!-- ===== Card 2: Comparison ===== -->
+  <article class="card">
+    <div class="card-number">②</div>
+    <h2 class="card-title">8% or 36%？<span class="highlight">同一个账户，两个答案</span></h2>
+    <div class="card-body">
+      <p>接着上面的例子：你持仓3个月赚了8%。现在别人问你"年化收益多少"？</p>
+      <p>年化复合收益率 =（1 + 0.08）<sup>4</sup> − 1 ≈ <span class="highlight">36.05%</span>。</p>
+      <div class="card-quote">
+        同一次交易，<span class="highlight">持有期收益率告诉你"赚了8%"</span>，<span class="highlight">年化告诉你"相当于每年赚36%"</span>。两个数字差了4倍多。
+      </div>
+      <p>它们的关系像一个等式：<span class="tag">持有期是"真实发生过的"</span>，<span class="tag">年化是"假设能复制的"</span>。前者是历史，后者是外推。</p>
+      <p>两者什么时候一样？——<span class="highlight">持有刚好满一年</span>，且没有分红再投资。这时候，持有期 = 年化。</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>维度</th>
+            <th>持有期收益率</th>
+            <th>年化收益率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>计算方式</td>
+            <td>（期末−期初）/ 期初</td>
+            <td>考虑了时间复利效应</td>
+          </tr>
+          <tr>
+            <td>时间维度</td>
+            <td>不受持有期限影响</td>
+            <td>统一拉到"每年"刻度</td>
+          </tr>
+          <tr>
+            <td>可比性</td>
+            <td>不同期限没法直接比</td>
+            <td>任何期限都能横向对比</td>
+          </tr>
+          <tr>
+            <td>实际意义</td>
+            <td>你账户里真实多的钱</td>
+            <td>"如果这趋势持续一年"</td>
+          </tr>
+          <tr>
+            <td>一句话</td>
+            <td><strong>你实打实赚到的</strong></td>
+            <td><strong>一个标准化假想</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="card-divider"></div>
+
+  <!-- ===== Card 3: Real Case ===== -->
+  <article class="card">
+    <div class="card-number">③</div>
+    <h2 class="card-title">张三的基金 vs 李四的基金</h2>
+    <div class="card-body">
+      <p>张三在2023年1月1日买入A基金，花了<span class="highlight">50,000元</span>。2024年6月30日卖出，到手<span class="highlight">58,000元</span>，期间分红<span class="highlight">1,200元</span>。</p>
+      <div class="formula-box">
+        持有期收益率 =（58,000 + 1,200 − 50,000）÷ 50,000 = <span class="highlight">18.4%</span>
+      </div>
+      <p>持有期18个月，18.4%。</p>
+      <p>李四在同一天买了B基金，也是50,000元。但他只持有了<span class="highlight">6个月</span>，卖出时到手<span class="highlight">54,500元</span>，没有分红。</p>
+      <div class="formula-box">
+        持有期收益率 =（54,500 − 50,000）÷ 50,000 = <span class="highlight">9%</span>
+      </div>
+      <div class="card-quote">
+        如果只看持有期收益率：张三18.4% &gt; 李四9%。<br>但换算成年化：张三 ≈ 11.9%，李四 ≈ 18.8%。<br><span class="highlight">李四的年化反而更高！</span>
+      </div>
+      <p>这就是持有期收益率的"盲区"——它不关心你等了多久。等得久、总收益高，不等于效率高。</p>
+      <p style="color:#6b5e4e;">所以聪明的投资者，两种收益率都看：持有期看"实"，年化看"效"。</p>
+    </div>
+  </article>
+
+  <div class="card-divider"></div>
+
+  <!-- ===== Card 4: Caveats ===== -->
+  <article class="card">
+    <div class="card-number">④</div>
+    <h2 class="card-title">持有期收益率<span class="highlight">不会告诉你的三件事</span></h2>
+    <div class="card-body">
+      <ul class="note-list">
+        <li><strong>它不关心时间。</strong>持仓1年赚10%和持仓6个月赚10%，持有期收益率一样，都是10%。但资金占用的"代价"完全不同。</li>
+        <li><strong>它不关心波动。</strong>先跌60%再涨回原价——持有期收益率是0%，但这半年你被折磨得死去活来。只看持有期，你会以为自己"没亏没赚、平平稳稳"。</li>
+        <li><strong>它不关心再投资。</strong>假设你持有3年，每年分红5%，持有期收益率只算总收益，不考虑"这5%再投进去能多赚多少"。</li>
+      </ul>
+      <div class="card-quote">
+        持有期收益率<span class="highlight">诚实地告诉你赚了多少</span>，但不告诉你<span class="highlight">付出多大代价、经历多少煎熬</span>才赚到。
+      </div>
+      <p>用好它的姿势是：<span class="tag">持有期看"实"</span>，<span class="tag">年化看"效"</span>，<span class="tag">最大回撤看"苦"</span>，<span class="tag">夏普比率看"值"</span>。四个维度拼在一起，才是一笔完整的投资画像。</p>
+      <p style="font-size:0.85rem; color:#8b7a65;">下次有人跟你炫耀"我这笔赚了XX%"，先问一句：持有期多长？</p>
+    </div>
+  </article>
+</div>
+
+<!-- 底部：关联功法 + 导航 + 分享 -->
+<section class="term-related">
+  <h3>相关词条</h3>
+  <div class="related-links"><a href="%E5%B9%B4%E5%8C%96%E6%94%B6%E7%9B%8A%E7%8E%87%EF%BC%88%E5%8F%8A%E5%B9%B4%E5%8C%96%E5%A4%8D%E5%90%88%E6%94%B6%E7%9B%8A%E7%8E%87%EF%BC%89.html">年化收益率</a> · <a href="%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4%EF%BC%88%E8%B7%8C%E5%BE%97%E6%9C%80%E6%B7%B1%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89.html">最大回撤</a> · <a href="%E5%A4%8F%E6%99%AE%E6%AF%94%E7%8E%87%EF%BC%88%E6%80%A7%E4%BB%B7%E6%AF%94%EF%BC%9A%E6%AF%8F%E6%89%BF%E6%8B%851%E4%BB%BD%E9%A3%8E%E9%99%A9%E6%8D%A2%E5%A4%9A%E5%B0%91%E6%94%B6%E7%9B%8A%EF%BC%89.html">夏普比率</a> · <a href="%E5%9B%9E%E6%92%A4%E4%BF%AE%E5%A4%8D%E5%A4%A9%E6%95%B0%EF%BC%88%E8%B7%8C%E4%B8%8B%E5%8E%BB%E5%A4%9A%E4%B9%85%E8%83%BD%E5%9B%9E%E6%9D%A5%EF%BC%89.html">回撤修复天数</a></div>
+</section>
+
+<nav class="term-pager"><a href="%E5%B9%B4%E5%8C%96%E6%94%B6%E7%9B%8A%E7%8E%87%EF%BC%88%E5%8F%8A%E5%B9%B4%E5%8C%96%E5%A4%8D%E5%90%88%E6%94%B6%E7%9B%8A%E7%8E%87%EF%BC%89.html" class="pager-prev" title="年化收益率（及年化复合收益率）">← 年化收益率（及年化复合收益率）</a><a href="%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4%EF%BC%88%E8%B7%8C%E5%BE%97%E6%9C%80%E6%B7%B1%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89.html" class="pager-next" title="最大回撤（跌得最深的一次）">最大回撤（跌得最深的一次） →</a></nav>
+
+<div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
+
+<div class="share-bar" style="margin-top: 1.5rem;">
+  <span class="share-label">分享：</span>
+  <span class="share-btn wechat-btn" onclick="copyPageUrl()">
+    微信
+    </span>
+  </span>
+  <a class="share-btn weibo-btn" href="https://service.weibo.com/share/share.php?url=https%3A//investbuddy.com/terms/%25E6%258C%2581%25E6%259C%2589%25E6%259C%259F%25E6%2594%25B6%25E7%259B%258A%25E7%258E%2587.html&title=%E6%8C%81%E6%9C%89%E6%9C%9F%E6%94%B6%E7%9B%8A%E7%8E%87%20-%20%E6%8A%95%E8%B5%84%E8%AF%8D%E5%85%B8%20%C2%B7%20Invest%20Dictionary" target="_blank" rel="noopener">微博</a>
+  <button class="share-btn copy-btn" onclick="copyPageUrl()">复制链接</button>
+</div>
+
+<div class="term-footer-spacer"></div>
+
+<script>
+function copyPageUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  }).catch(function() {
+    // fallback
+    var ta = document.createElement('textarea');
+    ta.value = window.location.href;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  });
+}
+</script>
+
+<!-- Mangofolio 系列导航 -->
+<footer class="mangofolio-nav">
+  <style>
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #c43a31; text-decoration: none; }
+    .mangofolio-nav a:hover { text-decoration: underline; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+  </style>
+  <span class="mf-label">Mangofolio 系列</span>
+  <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
+  <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
+  <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
+  <a href="https://view.mangofolio.com">市场观察 View</a>
+  <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
+</footer>
+
+</body>
+</html>
