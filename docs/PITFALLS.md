@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_26f98d348d8611f1bfea525400e6dd8f
+    ReservedCode1: moyq4uaE1OK1egSoBHulprg3fYiFh9htHUcKLNdmw1R0wJoPPmumybF+LzZ049HGRd7tQ58pKy7YEd0mNAkmRgeZrIi+mDOdkM/x6YdzTXM9uEF+lWIoJRubX2k7ld00WkIHxN/bYOpmNvvZVl6uZdn4p0NjF4p72xY6oV+tzp3AAbikIzFkDo4fMtk=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_26f98d348d8611f1bfea525400e6dd8f
+    ReservedCode2: moyq4uaE1OK1egSoBHulprg3fYiFh9htHUcKLNdmw1R0wJoPPmumybF+LzZ049HGRd7tQ58pKy7YEd0mNAkmRgeZrIi+mDOdkM/x6YdzTXM9uEF+lWIoJRubX2k7ld00WkIHxN/bYOpmNvvZVl6uZdn4p0NjF4p72xY6oV+tzp3AAbikIzFkDo4fMtk=
+---
+
 # Invest Dictionary · 已知坑点（PITFALLS）
 
 > 开发与发布过程中踩过的坑，供后续维护者和 AI Agent 排雷。
@@ -74,5 +85,20 @@
 - **修复**：直接读取 `skills/market/neat-freak/SKILL.md` 按其方法论手动执行。
 - **预防**：引用外部 skill 前先确认在可用列表，否则降级为读取方法论执行。
 
+## 11. Vercel Git 集成必须设置 Root Directory
+
+- **现象**：仓库根目录无 index.html（站点在 web/ 子目录），直接导入部署会失败或部署出空壳。
+- **根因**：Vercel 默认以仓库根为项目根；本项目静态站点在 `web/`。
+- **修复**：导入时在 Project Settings → Root Directory 设为 `web/`。
+- **预防**：Git 集成部署前确认站点根目录与仓库结构关系。
+
+## 12. 自定义域名需先配置 DNS（Cloudflare 托管场景）
+
+- **现象**：Vercel Domains 添加 dictionary.mangofolio.com 后状态为 Invalid Configuration。
+- **根因**：mangofolio.com 由 Cloudflare 托管，Vercel 无法自动接管 DNS。
+- **修复**：在 Cloudflare 添加 CNAME `dictionary` → `8f73e94d8020e067.vercel-dns-017.com`，等待生效后 Vercel 自动变 Valid。
+- **预防**：第三方 DNS 托管的域名绑定前，先准备 DNS 记录。
+
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
+*（内容由AI生成，仅供参考）*

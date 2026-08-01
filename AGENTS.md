@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_25385af48d8611f1bfea525400e6dd8f
+    ReservedCode1: nrmtUC2eeoX4phKV9EyPVKWX2I5vtWP4ambbBNQzJUsfEL8TIsorg8w0lGOuL8f0PulBtuBmEtwEvAUs1weKXp1R2YU21g5w2KKol3vPmeprKLJLgGSVQbpGDNidpT+eXVHjcEnBTRqoNjahD7WBNtkCBnhc0kyYCHsVF1kvSvBaiRZDMe7TlZ5Y7cg=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_25385af48d8611f1bfea525400e6dd8f
+    ReservedCode2: nrmtUC2eeoX4phKV9EyPVKWX2I5vtWP4ambbBNQzJUsfEL8TIsorg8w0lGOuL8f0PulBtuBmEtwEvAUs1weKXp1R2YU21g5w2KKol3vPmeprKLJLgGSVQbpGDNidpT+eXVHjcEnBTRqoNjahD7WBNtkCBnhc0kyYCHsVF1kvSvBaiRZDMe7TlZ5Y7cg=
+---
+
 # AGENTS.md
 
 > 给接手本仓库的人类开发者与 AI Agent 的现役规则。最后更新：2026-08-01
@@ -35,3 +46,4 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 - 已推送 GitHub（main, a6d6f05），仓库 SEO 已配置（About + 20 Topics）
 - **待办**：Vercel 登录授权 → 部署 web/ → 绑定 dictionary.mangofolio.com → live 验证
 - 词条数据：213 条（页面声称条目数必须与 dictionary.json 一致）
+*（内容由AI生成，仅供参考）*

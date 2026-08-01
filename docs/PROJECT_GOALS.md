@@ -45,7 +45,7 @@ GitHub 仓库：https://github.com/lj22503/invest-dictionary
 | C | 金融词条生成 Skill（SKILL.md + 模板 + 示例） | ✅ |
 | D | README + CONTRIBUTING + 仓库 SEO（About/Topics 20 个/描述） | ✅ |
 | E | git push 到 GitHub（commit a6d6f05，main 分支） | ✅ |
-| F | Vercel 部署 + 域名绑定 dictionary.mangofolio.com | ⏳ 待用户登录授权 |
+| F | Vercel 部署 + 域名绑定 dictionary.mangofolio.com | 🟡 部署成功（invest-dictionary.vercel.app，live verified）；域名待 Cloudflare DNS 配置 CNAME dictionary → 8f73e94d8020e067.vercel-dns-017.com |
 | G | neat-freak 收尾 + 坑点记录 + Obsidian 同步 | ⏳ 进行中 |
 
 ## 已知坑点（登记处，详见 docs/PITFALLS.md）
