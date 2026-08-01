@@ -41,15 +41,13 @@ GitHub 仓库：https://github.com/lj22503/invest-dictionary
 | 阶段 | 内容 | 状态 |
 |------|------|------|
 | A | 本地项目骨架 + 目标记录 | ✅ 本文档 |
-| B | 网页版整理（域名替换、Mangofolio 导航、vercel.json） | ⏳ |
-| C | 金融词条生成 Skill | ⏳ |
-| D | README + CONTRIBUTING + 仓库 SEO（About/Topics/描述） | ⏳ |
-| E | git push 到 GitHub | ⏳ |
-| F | Vercel 部署 + 域名绑定 dictionary.mangofolio.com | ⏳ |
-| G | neat-freak 收尾 + 坑点记录 + Obsidian 同步 | ⏳ |
+| B | 网页版整理（域名替换、Mangofolio 导航、vercel.json、index SEO） | ✅ |
+| C | 金融词条生成 Skill（SKILL.md + 模板 + 示例） | ✅ |
+| D | README + CONTRIBUTING + 仓库 SEO（About/Topics 20 个/描述） | ✅ |
+| E | git push 到 GitHub（commit a6d6f05，main 分支） | ✅ |
+| F | Vercel 部署 + 域名绑定 dictionary.mangofolio.com | ⏳ 待用户登录授权 |
+| G | neat-freak 收尾 + 坑点记录 + Obsidian 同步 | ⏳ 进行中 |
 
 ## 已知坑点（登记处，详见 docs/PITFALLS.md）
 
-- [ ] 详情页 canonical 曾指向 investbuddy.com（历史项目残留）
-- [ ] sitemap.xml 214 条 URL 曾全部指向 investbuddy.com
-- [ ] robots.txt 的 Sitemap 声明曾指向 investbuddy.com
+已登记 10 条完整坑点（slug 特殊字符、%2F 断链、旧域名残留、条目数不一致、flex 布局塌陷、假二维码、git 分支名、staged 未提交、Vercel 未登录、market skill 未注册）。
