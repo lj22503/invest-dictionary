@@ -524,19 +524,10 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif; }
   <div class="hot-left">
     <div class="hot-head">
       <span class="hot-title">今日热词</span>
-      <span class="hot-date">2026-08-07</span>
+      <span class="hot-date"></span>
     </div>
     <div class="hot-list">
-      <div class="hot-track" id="hotTrack">
-        <a class="hot-item" href="terms/DR%E5%88%A9%E7%8E%87.html">
-          <span class="hot-term"><span class="hot-badge">HOT</span>DR利率</span>
-          <span class="hot-desc">银行互相借钱用的利率，以后你的贷款利率可能改看它，不再只看 LPR。</span>
-        </a>
-        <a class="hot-item" href="terms/%E5%A4%A7%E9%A2%9D%E5%AD%98%E5%8D%95.html">
-          <span class="hot-term"><span class="hot-badge">HOT</span>大额存单</span>
-          <span class="hot-desc">20 万起步的“VIP 定期存款”，利息比普通定存高，还能转让，50 万内国家兜底。</span>
-        </a>
-      </div>
+      <div class="hot-track" id="hotTrack"></div>
     </div>
   </div>
   <div class="hot-subscribe">
@@ -4539,35 +4530,67 @@ var ALL_ENTRIES = [
 })();
 (function () {
   var track = document.getElementById('hotTrack');
+  var dateEl = document.querySelector('.hot-date');
   if (!track) return;
-  var items = track.querySelectorAll('.hot-item');
-  // 无热词时兜底：从词条库取前 3 条经典词条作为默认展示
-  if (items.length === 0 && typeof ALL_ENTRIES !== 'undefined' && ALL_ENTRIES.length) {
-    var defaults = ALL_ENTRIES.slice(0, 3);
+
+  function renderItems(items) {
     var html = '';
-    defaults.forEach(function (e) {
-      html += '<a class="hot-item" href="terms/' + encodeURIComponent(e.title) + '.html">' +
-        '<span class="hot-term"><span class="hot-badge">HOT</span>' + e.title + '</span>' +
-        '<span class="hot-desc">今日暂无热词，点开复习这条经典词条。</span></a>';
+    items.forEach(function (it) {
+      html += '<a class="hot-item" href="' + it.url + '">' +
+        '<span class="hot-term"><span class="hot-badge">HOT</span>' + it.title + '</span>' +
+        '<span class="hot-desc">' + it.desc + '</span></a>';
     });
     track.innerHTML = html;
-    items = track.querySelectorAll('.hot-item');
   }
-  if (items.length < 2) return;
-  var step = items[0].offsetHeight;
-  var idx = 0;
-  setInterval(function () {
-    idx++;
-    track.style.transform = 'translateY(-' + (idx * step) + 'px)';
-    if (idx >= items.length - 1) {
-      setTimeout(function () {
-        track.style.transition = 'none';
-        track.style.transform = 'translateY(0)';
-        idx = 0;
-        setTimeout(function () { track.style.transition = 'transform 0.5s ease'; }, 30);
-      }, 500);
+
+  function renderFallback() {
+    // 兜底：从词条库取前 3 条经典词条作为默认展示
+    if (typeof ALL_ENTRIES !== 'undefined' && ALL_ENTRIES.length) {
+      var defaults = ALL_ENTRIES.slice(0, 3);
+      var html = '';
+      defaults.forEach(function (e) {
+        html += '<a class="hot-item" href="terms/' + encodeURIComponent(e.title) + '.html">' +
+          '<span class="hot-term"><span class="hot-badge">HOT</span>' + e.title + '</span>' +
+          '<span class="hot-desc">今日暂无热词，点开复习这条经典词条。</span></a>';
+      });
+      track.innerHTML = html;
     }
-  }, 3500);
+  }
+
+  function startCarousel() {
+    var items = track.querySelectorAll('.hot-item');
+    if (items.length < 2) return;
+    var step = items[0].offsetHeight;
+    var idx = 0;
+    setInterval(function () {
+      idx++;
+      track.style.transform = 'translateY(-' + (idx * step) + 'px)';
+      if (idx >= items.length - 1) {
+        setTimeout(function () {
+          track.style.transition = 'none';
+          track.style.transform = 'translateY(0)';
+          idx = 0;
+          setTimeout(function () { track.style.transition = 'transform 0.5s ease'; }, 30);
+        }, 500);
+      }
+    }, 3500);
+  }
+
+  fetch('/api/daily-hot')
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d && d.ok && d.items && d.items.length) {
+        if (dateEl && d.date) dateEl.textContent = d.date;
+        renderItems(d.items);
+      } else {
+        renderFallback();
+      }
+      startCarousel();
+    })
+    .catch(function () {
+      renderFallback();
+      startCarousel();
+    });
 })();
 var CHAPTER_ORDER = ["第一篇：钱的本质", "第二篇：个人财务底盘", "第三篇：风险护城河", "第四篇：投资武器库 · 股票篇", "第五篇：投资武器库 · 债券与固收篇", "第六篇：投资武器库 · 基金篇", "第七篇：投资武器库 · 其他类", "第八篇：读懂指标 · 估值与业绩篇", "第九篇：读懂指标 · 市场情绪与风险篇", "第十篇：交易规则与摩擦成本", "第十一篇：宏观风向标", "第十二篇：宏观与周期", "第十三篇：衍生品与对冲", "第十四篇：策略与数学", "第十五篇：策略与数学 · 进阶", "第十六篇：金融市场黑话与交易场景", "第十七篇：日常支付与账户管理", "第十八篇：借贷与生活刚需", "第十九篇：人生账本与长期规划", "第二十篇：消费心理与财富品格", "第二十一篇：投资心理与行为陷阱", "第二十二篇：骗局与避坑指南"];
 

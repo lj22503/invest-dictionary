@@ -1,4 +1,6 @@
-[
+
+// Embedded data
+var ALL_ENTRIES = [
   {
     "id": 1,
     "slug": "货币",
@@ -16,7 +18,8 @@
       "通货膨胀"
     ],
     "next": "通货膨胀",
-    "filename": "货币-final.html"
+    "filename": "货币-final.html",
+    "file": "货币.html"
   },
   {
     "id": 2,
@@ -32,14 +35,18 @@
     "related": [
       "货币",
       "利率",
-      "购买力"
+      "购买力",
+      "M0",
+      "M1",
+      "M2"
     ],
     "next": "M0 / M1 / M2",
-    "filename": "信用-final.html"
+    "filename": "信用-final.html",
+    "file": "信用.html"
   },
   {
     "id": 3,
-    "slug": "M0 _ M1 _ M2（货币供应量）",
+    "slug": "M0 / M1 / M2（货币供应量）",
     "title": "M0 / M1 / M2（货币供应量）",
     "chapter": "第一篇：钱的本质",
     "card_titles": [
@@ -56,7 +63,8 @@
       "购买力"
     ],
     "next": "购买力",
-    "filename": "M0-M1-M2-final.html"
+    "filename": "M0-M1-M2-final.html",
+    "file": "M0 _ M1 _ M2（货币供应量）.html"
   },
   {
     "id": 4,
@@ -72,10 +80,12 @@
     "related": [
       "货币",
       "通货紧缩",
+      "M0/M1/M2",
       "利率"
     ],
     "next": "通货紧缩",
-    "filename": "通货膨胀-final.html"
+    "filename": "通货膨胀-final.html",
+    "file": "通货膨胀（CPI）.html"
   },
   {
     "id": 5,
@@ -91,10 +101,12 @@
     "related": [
       "通货膨胀",
       "货币",
-      "利率"
+      "利率",
+      "M0/M1/M2"
     ],
     "next": "利率",
-    "filename": "通货紧缩-final.html"
+    "filename": "通货紧缩-final.html",
+    "file": "通货紧缩.html"
   },
   {
     "id": 6,
@@ -109,7 +121,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "利率-final.html"
+    "filename": "利率-final.html",
+    "file": "利率（基准利率）.html"
   },
   {
     "id": 7,
@@ -124,7 +137,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "无风险利率-final.html"
+    "filename": "无风险利率-final.html",
+    "file": "无风险利率（十年期国债收益率）.html"
   },
   {
     "id": 8,
@@ -139,7 +153,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "负利率-final.html"
+    "filename": "负利率-final.html",
+    "file": "负利率.html"
   },
   {
     "id": 9,
@@ -154,7 +169,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "购买力-final.html"
+    "filename": "购买力-final.html",
+    "file": "购买力.html"
   },
   {
     "id": 10,
@@ -175,7 +191,8 @@
       "无风险利率"
     ],
     "next": "主动收入",
-    "filename": "货币时间价值-final.html"
+    "filename": "货币时间价值-final.html",
+    "file": "货币时间价值.html"
   },
   {
     "id": 11,
@@ -190,7 +207,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "主动收入-final.html"
+    "filename": "主动收入-final.html",
+    "file": "主动收入.html"
   },
   {
     "id": 12,
@@ -205,11 +223,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "被动收入-final.html"
+    "filename": "被动收入-final.html",
+    "file": "被动收入（睡后收入）.html"
   },
   {
     "id": 13,
-    "slug": "资产（金融资产 _ 实物资产 _ 无形资产）",
+    "slug": "资产（金融资产 / 实物资产 / 无形资产）",
     "title": "资产（金融资产 / 实物资产 / 无形资产）",
     "chapter": "第二篇：个人财务底盘",
     "card_titles": [
@@ -220,7 +239,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "资产-final.html"
+    "filename": "资产-final.html",
+    "file": "资产（金融资产 _ 实物资产 _ 无形资产）.html"
   },
   {
     "id": 14,
@@ -235,7 +255,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "负债-final.html"
+    "filename": "负债-final.html",
+    "file": "负债（良性负债 vs 恶性负债）.html"
   },
   {
     "id": 15,
@@ -250,7 +271,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "资产负债表-final.html"
+    "filename": "资产负债表-final.html",
+    "file": "资产负债表.html"
   },
   {
     "id": 16,
@@ -265,7 +287,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "收入支出表-final.html"
+    "filename": "收入支出表-final.html",
+    "file": "收入支出表（现金流表）.html"
   },
   {
     "id": 17,
@@ -280,7 +303,8 @@
     ],
     "related": [],
     "next": "负债率",
-    "filename": "应急金-final.html"
+    "filename": "应急金-final.html",
+    "file": "应急金（备用金）.html"
   },
   {
     "id": 18,
@@ -295,7 +319,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "负债率-final.html"
+    "filename": "负债率-final.html",
+    "file": "负债率（资产负债率）.html"
   },
   {
     "id": 19,
@@ -316,7 +341,8 @@
       "财务自由"
     ],
     "next": "财务自由（4%法则）",
-    "filename": "月供占收入比-final.html"
+    "filename": "月供占收入比-final.html",
+    "file": "月供占收入比.html"
   },
   {
     "id": 20,
@@ -337,26 +363,31 @@
       "机会成本"
     ],
     "next": "信用评分 / 征信",
-    "filename": "财务自由（4%法则）-final.html"
+    "filename": "财务自由（4%法则）-final.html",
+    "file": "财务自由（4%法则）.html"
   },
   {
     "id": 21,
-    "slug": "信用评分 _ 征信",
+    "slug": "信用评分 / 征信",
     "title": "信用评分 / 征信",
     "chapter": "第二篇：个人财务底盘",
     "card_titles": [
-      "全世界最贵的三个字",
-      "老张的两张借条",
-      "查你的\"人品折现率\"",
-      "你死后，信用还能活多久？"
+      "你的第二张身份证",
+      "逾期7天，多还6万利息",
+      "每年2次免费\"信用体检\"",
+      "征信不是查出来的，是攒出来的"
     ],
     "related": [
       "货币",
       "利率",
-      "购买力"
+      "购买力",
+      "M0",
+      "M1",
+      "M2"
     ],
     "next": "M0 / M1 / M2",
-    "filename": "信用-final.html"
+    "filename": "信用-final.html",
+    "file": "信用评分 _ 征信.html"
   },
   {
     "id": 22,
@@ -371,7 +402,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "拿铁因子-final.html"
+    "filename": "拿铁因子-final.html",
+    "file": "拿铁因子.html"
   },
   {
     "id": 23,
@@ -386,7 +418,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "机会成本-final.html"
+    "filename": "机会成本-final.html",
+    "file": "机会成本.html"
   },
   {
     "id": 24,
@@ -401,7 +434,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "沉没成本-final.html"
+    "filename": "沉没成本-final.html",
+    "file": "沉没成本.html"
   },
   {
     "id": 25,
@@ -416,7 +450,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "边际效用-final.html"
+    "filename": "边际效用-final.html",
+    "file": "边际效用.html"
   },
   {
     "id": 26,
@@ -437,11 +472,12 @@
       "黑天鹅事件"
     ],
     "next": "保险四大件",
-    "filename": "风险-final.html"
+    "filename": "风险-final.html",
+    "file": "风险（系统性风险 vs 非系统性风险）.html"
   },
   {
     "id": 27,
-    "slug": "保险四大件（重疾险 _ 医疗险 _ 定期寿险 _ 意外险）",
+    "slug": "保险四大件（重疾险 / 医疗险 / 定期寿险 / 意外险）",
     "title": "保险四大件（重疾险 / 医疗险 / 定期寿险 / 意外险）",
     "chapter": "第三篇：风险护城河",
     "card_titles": [
@@ -452,7 +488,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "保险四大件-final.html"
+    "filename": "保险四大件-final.html",
+    "file": "保险四大件（重疾险 _ 医疗险 _ 定期寿险 _ 意外险）.html"
   },
   {
     "id": 28,
@@ -467,7 +504,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "年金险-final.html"
+    "filename": "年金险-final.html",
+    "file": "年金险.html"
   },
   {
     "id": 29,
@@ -482,7 +520,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "增额终身寿险-final.html"
+    "filename": "增额终身寿险-final.html",
+    "file": "增额终身寿险.html"
   },
   {
     "id": 30,
@@ -497,11 +536,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "现金价值-final.html"
+    "filename": "现金价值-final.html",
+    "file": "现金价值（退保能拿回多少）.html"
   },
   {
     "id": 31,
-    "slug": "免赔额 _ 等待期 _ 保障期限",
+    "slug": "免赔额 / 等待期 / 保障期限",
     "title": "免赔额 / 等待期 / 保障期限",
     "chapter": "第三篇：风险护城河",
     "card_titles": [
@@ -512,7 +552,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "免赔额（等待期、保障期限）-final.html"
+    "filename": "免赔额（等待期、保障期限）-final.html",
+    "file": "免赔额 _ 等待期 _ 保障期限.html"
   },
   {
     "id": 32,
@@ -527,7 +568,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "刚性兑付-final.html"
+    "filename": "刚性兑付-final.html",
+    "file": "刚性兑付（及其被打破）.html"
   },
   {
     "id": 33,
@@ -542,7 +584,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "黑天鹅事件-final.html"
+    "filename": "黑天鹅事件-final.html",
+    "file": "黑天鹅事件.html"
   },
   {
     "id": 34,
@@ -557,7 +600,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "灰犀牛事件-final.html"
+    "filename": "灰犀牛事件-final.html",
+    "file": "灰犀牛事件.html"
   },
   {
     "id": 35,
@@ -572,7 +616,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "安全边际-final.html"
+    "filename": "安全边际-final.html",
+    "file": "安全边际.html"
   },
   {
     "id": 36,
@@ -587,7 +632,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "止损-final.html"
+    "filename": "止损-final.html",
+    "file": "止损（止损线）.html"
   },
   {
     "id": 37,
@@ -602,11 +648,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "保本-final.html"
+    "filename": "保本-final.html",
+    "file": "保本（及“保本保息”骗局）.html"
   },
   {
     "id": 38,
-    "slug": "股票（普通股 _ 优先股）",
+    "slug": "股票（普通股 / 优先股）",
     "title": "股票（普通股 / 优先股）",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -617,11 +664,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "股票-final.html"
+    "filename": "股票-final.html",
+    "file": "股票（普通股 _ 优先股）.html"
   },
   {
     "id": 39,
-    "slug": "A股 _ H股 _ 美股 _ B股",
+    "slug": "A股 / H股 / 美股 / B股",
     "title": "A股 / H股 / 美股 / B股",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -632,11 +680,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "A股-H股-美股-B股-final.html"
+    "filename": "A股-H股-美股-B股-final.html",
+    "file": "A股 _ H股 _ 美股 _ B股.html"
   },
   {
     "id": 40,
-    "slug": "主板 _ 创业板 _ 科创板 _ 北交所",
+    "slug": "主板 / 创业板 / 科创板 / 北交所",
     "title": "主板 / 创业板 / 科创板 / 北交所",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -647,11 +696,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "主板-创业板-科创板-北交所-final.html"
+    "filename": "主板-创业板-科创板-北交所-final.html",
+    "file": "主板 _ 创业板 _ 科创板 _ 北交所.html"
   },
   {
     "id": 41,
-    "slug": "蓝筹股 _ 白马股",
+    "slug": "蓝筹股 / 白马股",
     "title": "蓝筹股 / 白马股",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -662,11 +712,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "蓝筹股-final.html"
+    "filename": "蓝筹股-final.html",
+    "file": "蓝筹股 _ 白马股.html"
   },
   {
     "id": 42,
-    "slug": "成长股 _ 价值股",
+    "slug": "成长股 / 价值股",
     "title": "成长股 / 价值股",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -677,11 +728,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "成长股价值股-final.html"
+    "filename": "成长股价值股-final.html",
+    "file": "成长股 _ 价值股.html"
   },
   {
     "id": 43,
-    "slug": "周期股 _ 防御股",
+    "slug": "周期股 / 防御股",
     "title": "周期股 / 防御股",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -692,7 +744,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "周期股防御股-final.html"
+    "filename": "周期股防御股-final.html",
+    "file": "周期股 _ 防御股.html"
   },
   {
     "id": 44,
@@ -707,11 +760,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "ST股-final.html"
+    "filename": "ST股-final.html",
+    "file": "ST股 _ST股（退市风险警示）.html"
   },
   {
     "id": 45,
-    "slug": "新股（IPO _ 打新）",
+    "slug": "新股（IPO / 打新）",
     "title": "新股（IPO / 打新）",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -722,11 +776,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "新股-final.html"
+    "filename": "新股-final.html",
+    "file": "新股（IPO _ 打新）.html"
   },
   {
     "id": 46,
-    "slug": "分红（派息 _ 送股 _ 转增）",
+    "slug": "分红（派息 / 送股 / 转增）",
     "title": "分红（派息 / 送股 / 转增）",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -737,11 +792,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "分红-final.html"
+    "filename": "分红-final.html",
+    "file": "分红（派息 _ 送股 _ 转增）.html"
   },
   {
     "id": 47,
-    "slug": "除权 _ 除息",
+    "slug": "除权 / 除息",
     "title": "除权 / 除息",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -752,11 +808,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "除权除息-final.html"
+    "filename": "除权除息-final.html",
+    "file": "除权 _ 除息.html"
   },
   {
     "id": 48,
-    "slug": "填权 _ 贴权",
+    "slug": "填权 / 贴权",
     "title": "填权 / 贴权",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -767,7 +824,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "填权贴权-final.html"
+    "filename": "填权贴权-final.html",
+    "file": "填权 _ 贴权.html"
   },
   {
     "id": 49,
@@ -782,11 +840,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "股息率-final.html"
+    "filename": "股息率-final.html",
+    "file": "股息率.html"
   },
   {
     "id": 50,
-    "slug": "股本 _ 流通盘（流通市值）",
+    "slug": "股本 / 流通盘（流通市值）",
     "title": "股本 / 流通盘（流通市值）",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -797,11 +856,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "股本-final.html"
+    "filename": "股本-final.html",
+    "file": "股本 _ 流通盘（流通市值）.html"
   },
   {
     "id": 51,
-    "slug": "大股东 _ 机构投资者 _ 散户",
+    "slug": "大股东 / 机构投资者 / 散户",
     "title": "大股东 / 机构投资者 / 散户",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -812,7 +872,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "大股东-机构投资者-散户-final.html"
+    "filename": "大股东-机构投资者-散户-final.html",
+    "file": "大股东 _ 机构投资者 _ 散户.html"
   },
   {
     "id": 52,
@@ -833,11 +894,12 @@
       "蓝筹股"
     ],
     "next": "停牌 / 退市",
-    "filename": "回购-final.html"
+    "filename": "回购-final.html",
+    "file": "回购（股票回购注销）.html"
   },
   {
     "id": 53,
-    "slug": "停牌 _ 退市",
+    "slug": "停牌 / 退市",
     "title": "停牌 / 退市",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
@@ -848,11 +910,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "停牌-final.html"
+    "filename": "停牌-final.html",
+    "file": "停牌 _ 退市.html"
   },
   {
     "id": 54,
-    "slug": "债券（票面利率 _ 到期收益率）",
+    "slug": "债券（票面利率 / 到期收益率）",
     "title": "债券（票面利率 / 到期收益率）",
     "chapter": "第五篇：投资武器库 · 债券与固收篇",
     "card_titles": [
@@ -863,7 +926,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "债券-final.html"
+    "filename": "债券-final.html",
+    "file": "债券（票面利率 _ 到期收益率）.html"
   },
   {
     "id": 55,
@@ -878,11 +942,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "国债-final.html"
+    "filename": "国债-final.html",
+    "file": "国债（利率债）.html"
   },
   {
     "id": 56,
-    "slug": "地方政府债 _ 城投债（信用债）",
+    "slug": "地方政府债 / 城投债（信用债）",
     "title": "地方政府债 / 城投债（信用债）",
     "chapter": "第五篇：投资武器库 · 债券与固收篇",
     "card_titles": [
@@ -898,11 +963,12 @@
       "可转债"
     ],
     "next": "企业债/公司债 —— 借钱的公司不还了怎么办？",
-    "filename": "地方政府债-城投债-final.html"
+    "filename": "地方政府债-城投债-final.html",
+    "file": "地方政府债 _ 城投债（信用债）.html"
   },
   {
     "id": 57,
-    "slug": "企业债 _ 公司债",
+    "slug": "企业债 / 公司债",
     "title": "企业债 / 公司债",
     "chapter": "第五篇：投资武器库 · 债券与固收篇",
     "card_titles": [
@@ -918,7 +984,8 @@
       "可转债"
     ],
     "next": "可转债",
-    "filename": "企业债-公司债-final.html"
+    "filename": "企业债-公司债-final.html",
+    "file": "企业债 _ 公司债.html"
   },
   {
     "id": 58,
@@ -933,7 +1000,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "可转债-final.html"
+    "filename": "可转债-final.html",
+    "file": "可转债（下有保底，上不封顶）.html"
   },
   {
     "id": 59,
@@ -948,11 +1016,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "固收+-final.html"
+    "filename": "固收+-final.html",
+    "file": "固收+（稳健型产品）.html"
   },
   {
     "id": 60,
-    "slug": "银行理财（净值型 _ 预期收益型）",
+    "slug": "银行理财（净值型 / 预期收益型）",
     "title": "银行理财（净值型 / 预期收益型）",
     "chapter": "第五篇：投资武器库 · 债券与固收篇",
     "card_titles": [
@@ -968,7 +1037,8 @@
       "固收+"
     ],
     "next": "基金",
-    "filename": "银行理财-final.html"
+    "filename": "银行理财-final.html",
+    "file": "银行理财（净值型 _ 预期收益型）.html"
   },
   {
     "id": 61,
@@ -988,11 +1058,12 @@
       "主动型基金vs被动型基金"
     ],
     "next": "货币基金",
-    "filename": "基金-final.html"
+    "filename": "基金-final.html",
+    "file": "基金（公募基金）.html"
   },
   {
     "id": 62,
-    "slug": "货币基金（余额宝_零钱通）",
+    "slug": "货币基金（余额宝/零钱通）",
     "title": "货币基金（余额宝/零钱通）",
     "chapter": "第六篇：投资武器库 · 基金篇",
     "card_titles": [
@@ -1003,7 +1074,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "货币基金-final.html"
+    "filename": "货币基金-final.html",
+    "file": "货币基金（余额宝_零钱通）.html"
   },
   {
     "id": 63,
@@ -1018,7 +1090,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "债券基金-final.html"
+    "filename": "债券基金-final.html",
+    "file": "债券基金.html"
   },
   {
     "id": 64,
@@ -1033,7 +1106,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "混合基金-final.html"
+    "filename": "混合基金-final.html",
+    "file": "混合基金.html"
   },
   {
     "id": 65,
@@ -1048,7 +1122,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "股票基金-final.html"
+    "filename": "股票基金-final.html",
+    "file": "股票基金.html"
   },
   {
     "id": 66,
@@ -1063,7 +1138,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "指数基金-final.html"
+    "filename": "指数基金-final.html",
+    "file": "指数基金（宽基指数 vs 行业指数）.html"
   },
   {
     "id": 67,
@@ -1078,7 +1154,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "ETF-final.html"
+    "filename": "ETF-final.html",
+    "file": "ETF（交易型开放式指数基金）.html"
   },
   {
     "id": 68,
@@ -1093,7 +1170,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "ETF联接基金-final.html"
+    "filename": "ETF联接基金-final.html",
+    "file": "ETF联接基金.html"
   },
   {
     "id": 69,
@@ -1108,7 +1186,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "LOF-final.html"
+    "filename": "LOF-final.html",
+    "file": "LOF（上市开放式基金）.html"
   },
   {
     "id": 70,
@@ -1123,7 +1202,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "FOF-final.html"
+    "filename": "FOF-final.html",
+    "file": "FOF（基金中的基金）.html"
   },
   {
     "id": 71,
@@ -1138,7 +1218,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "QDII基金-final.html"
+    "filename": "QDII基金-final.html",
+    "file": "QDII基金（投资海外）.html"
   },
   {
     "id": 72,
@@ -1153,7 +1234,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "主动型基金vs被动型基金-final.html"
+    "filename": "主动型基金vs被动型基金-final.html",
+    "file": "主动型基金 vs 被动型基金.html"
   },
   {
     "id": 73,
@@ -1168,7 +1250,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "基金经理-final.html"
+    "filename": "基金经理-final.html",
+    "file": "基金经理.html"
   },
   {
     "id": 74,
@@ -1183,7 +1266,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "REITs-final.html"
+    "filename": "REITs-final.html",
+    "file": "REITs（房地产投资信托基金）.html"
   },
   {
     "id": 75,
@@ -1198,7 +1282,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "黄金-final.html"
+    "filename": "黄金-final.html",
+    "file": "黄金（避险资产）.html"
   },
   {
     "id": 76,
@@ -1213,11 +1298,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "信托-final.html"
+    "filename": "信托-final.html",
+    "file": "信托（及暴雷风险）.html"
   },
   {
     "id": 77,
-    "slug": "私募股权基金（PE_VC，高风险高门槛）",
+    "slug": "私募股权基金（PE/VC，高风险高门槛）",
     "title": "私募股权基金（PE/VC，高风险高门槛）",
     "chapter": "第七篇：投资武器库 · 其他类",
     "card_titles": [
@@ -1228,7 +1314,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "私募股权基金（PEVC高风险高门槛）-final.html"
+    "filename": "私募股权基金（PEVC高风险高门槛）-final.html",
+    "file": "私募股权基金（PE_VC，高风险高门槛）.html"
   },
   {
     "id": 78,
@@ -1243,7 +1330,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "数字人民币-final.html"
+    "filename": "数字人民币-final.html",
+    "file": "数字人民币.html"
   },
   {
     "id": 79,
@@ -1258,11 +1346,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "个人养老金账户（抵税新政）-final.html"
+    "filename": "个人养老金账户（抵税新政）-final.html",
+    "file": "个人养老金账户（抵税新政）.html"
   },
   {
     "id": 80,
-    "slug": "市盈率（PE _ 滚动PE _ 静态PE）",
+    "slug": "市盈率（PE / 滚动PE / 静态PE）",
     "title": "市盈率（PE / 滚动PE / 静态PE）",
     "chapter": "第八篇：读懂指标 · 估值与业绩篇",
     "card_titles": [
@@ -1273,7 +1362,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "市盈率-final.html"
+    "filename": "市盈率-final.html",
+    "file": "市盈率（PE _ 滚动PE _ 静态PE）.html"
   },
   {
     "id": 81,
@@ -1288,7 +1378,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "市净率-final.html"
+    "filename": "市净率-final.html",
+    "file": "市净率（PB）.html"
   },
   {
     "id": 82,
@@ -1303,7 +1394,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "净资产收益率（ROE）-final.html"
+    "filename": "净资产收益率（ROE）-final.html",
+    "file": "净资产收益率（ROE，巴菲特最爱的指标）.html"
   },
   {
     "id": 83,
@@ -1318,7 +1410,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "每股收益（EPS）-final.html"
+    "filename": "每股收益（EPS）-final.html",
+    "file": "每股收益（EPS）.html"
   },
   {
     "id": 84,
@@ -1333,7 +1426,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "营收-final.html"
+    "filename": "营收-final.html",
+    "file": "营收（营业收入）.html"
   },
   {
     "id": 85,
@@ -1348,7 +1442,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "净利润-final.html"
+    "filename": "净利润-final.html",
+    "file": "净利润（归母净利润）.html"
   },
   {
     "id": 86,
@@ -1363,11 +1458,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "扣非净利润-final.html"
+    "filename": "扣非净利润-final.html",
+    "file": "扣非净利润（扣除非经常性损益）.html"
   },
   {
     "id": 87,
-    "slug": "毛利率 _ 净利率",
+    "slug": "毛利率 / 净利率",
     "title": "毛利率 / 净利率",
     "chapter": "第八篇：读懂指标 · 估值与业绩篇",
     "card_titles": [
@@ -1378,7 +1474,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "毛利率净利率-final.html"
+    "filename": "毛利率净利率-final.html",
+    "file": "毛利率 _ 净利率.html"
   },
   {
     "id": 88,
@@ -1393,7 +1490,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "经营现金流-final.html"
+    "filename": "经营现金流-final.html",
+    "file": "经营现金流（比净利润更真实）.html"
   },
   {
     "id": 89,
@@ -1408,11 +1506,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "资产负债率-final.html"
+    "filename": "资产负债率-final.html",
+    "file": "资产负债率（公司负债水平）.html"
   },
   {
     "id": 90,
-    "slug": "流动比率 _ 速动比率（短期偿债能力）",
+    "slug": "流动比率 / 速动比率（短期偿债能力）",
     "title": "流动比率 / 速动比率（短期偿债能力）",
     "chapter": "第八篇：读懂指标 · 估值与业绩篇",
     "card_titles": [
@@ -1423,11 +1522,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "流动比率速动比率-final.html"
+    "filename": "流动比率速动比率-final.html",
+    "file": "流动比率 _ 速动比率（短期偿债能力）.html"
   },
   {
     "id": 91,
-    "slug": "预收款 _ 合同负债（未来收入的蓄水池）",
+    "slug": "预收款 / 合同负债（未来收入的蓄水池）",
     "title": "预收款 / 合同负债（未来收入的蓄水池）",
     "chapter": "第八篇：读懂指标 · 估值与业绩篇",
     "card_titles": [
@@ -1438,11 +1538,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "预收款-合同负债-final.html"
+    "filename": "预收款-合同负债-final.html",
+    "file": "预收款 _ 合同负债（未来收入的蓄水池）.html"
   },
   {
     "id": 92,
-    "slug": "成交量（缩量 _ 放量）",
+    "slug": "成交量（缩量 / 放量）",
     "title": "成交量（缩量 / 放量）",
     "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
     "card_titles": [
@@ -1453,7 +1554,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "成交量-final.html"
+    "filename": "成交量-final.html",
+    "file": "成交量（缩量 _ 放量）.html"
   },
   {
     "id": 93,
@@ -1468,7 +1570,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "换手率-final.html"
+    "filename": "换手率-final.html",
+    "file": "换手率（活跃度指标）.html"
   },
   {
     "id": 94,
@@ -1483,7 +1586,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "年化收益率（及年化复合收益率）-final.html"
+    "filename": "年化收益率（及年化复合收益率）-final.html",
+    "file": "年化收益率（及年化复合收益率）.html"
   },
   {
     "id": 95,
@@ -1503,7 +1607,8 @@
       "回撤修复天数"
     ],
     "next": "最大回撤",
-    "filename": "持有期收益率-final.html"
+    "filename": "持有期收益率-final.html",
+    "file": "持有期收益率.html"
   },
   {
     "id": 96,
@@ -1518,7 +1623,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "最大回撤-final.html"
+    "filename": "最大回撤-final.html",
+    "file": "最大回撤（跌得最深的一次）.html"
   },
   {
     "id": 97,
@@ -1533,7 +1639,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "回撤修复天数-final.html"
+    "filename": "回撤修复天数-final.html",
+    "file": "回撤修复天数（跌下去多久能回来）.html"
   },
   {
     "id": 98,
@@ -1548,7 +1655,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "夏普比率-final.html"
+    "filename": "夏普比率-final.html",
+    "file": "夏普比率（性价比：每承担1份风险换多少收益）.html"
   },
   {
     "id": 99,
@@ -1563,11 +1671,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "一级市场vs二级市场-final.html"
+    "filename": "一级市场vs二级市场-final.html",
+    "file": "一级市场 vs 二级市场.html"
   },
   {
     "id": 100,
-    "slug": "集合竞价 vs 连续竞价（开盘价_收盘价怎么来的）",
+    "slug": "集合竞价 vs 连续竞价（开盘价/收盘价怎么来的）",
     "title": "集合竞价 vs 连续竞价（开盘价/收盘价怎么来的）",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1578,11 +1687,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "集合竞价vs连续竞价-final.html"
+    "filename": "集合竞价vs连续竞价-final.html",
+    "file": "集合竞价 vs 连续竞价（开盘价_收盘价怎么来的）.html"
   },
   {
     "id": 101,
-    "slug": "T+0 _ T+1（何时能卖出）",
+    "slug": "T+0 / T+1（何时能卖出）",
     "title": "T+0 / T+1（何时能卖出）",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1593,11 +1703,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "T+0-T+1-final.html"
+    "filename": "T+0-T+1-final.html",
+    "file": "T+0 _ T+1（何时能卖出）.html"
   },
   {
     "id": 102,
-    "slug": "涨停板 _ 跌停板",
+    "slug": "涨停板 / 跌停板",
     "title": "涨停板 / 跌停板",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1608,7 +1719,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "涨停板跌停板-final.html"
+    "filename": "涨停板跌停板-final.html",
+    "file": "涨停板 _ 跌停板.html"
   },
   {
     "id": 103,
@@ -1623,11 +1735,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "市价单vs限价单-final.html"
+    "filename": "市价单vs限价单-final.html",
+    "file": "市价单 vs 限价单（滑点是什么）.html"
   },
   {
     "id": 104,
-    "slug": "融资 _ 融券（加杠杆和做空）",
+    "slug": "融资 / 融券（加杠杆和做空）",
     "title": "融资 / 融券（加杠杆和做空）",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1638,11 +1751,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "融资融券-final.html"
+    "filename": "融资融券-final.html",
+    "file": "融资 _ 融券（加杠杆和做空）.html"
   },
   {
     "id": 105,
-    "slug": "融资余额 _ 融券余量（市场情绪温度计）",
+    "slug": "融资余额 / 融券余量（市场情绪温度计）",
     "title": "融资余额 / 融券余量（市场情绪温度计）",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1653,11 +1767,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "融资余额-融券余量-final.html"
+    "filename": "融资余额-融券余量-final.html",
+    "file": "融资余额 _ 融券余量（市场情绪温度计）.html"
   },
   {
     "id": 106,
-    "slug": "保证金 _ 维持保证金",
+    "slug": "保证金 / 维持保证金",
     "title": "保证金 / 维持保证金",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1668,11 +1783,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "保证金-维持保证金-final.html"
+    "filename": "保证金-维持保证金-final.html",
+    "file": "保证金 _ 维持保证金.html"
   },
   {
     "id": 107,
-    "slug": "爆仓 _ 穿仓",
+    "slug": "爆仓 / 穿仓",
     "title": "爆仓 / 穿仓",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1683,11 +1799,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "爆仓穿仓-final.html"
+    "filename": "爆仓穿仓-final.html",
+    "file": "爆仓 _ 穿仓.html"
   },
   {
     "id": 108,
-    "slug": "大宗交易（折价_溢价意味着什么）",
+    "slug": "大宗交易（折价/溢价意味着什么）",
     "title": "大宗交易（折价/溢价意味着什么）",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1698,11 +1815,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "大宗交易-final.html"
+    "filename": "大宗交易-final.html",
+    "file": "大宗交易（折价_溢价意味着什么）.html"
   },
   {
     "id": 109,
-    "slug": "北上资金（沪深港通_聪明钱）",
+    "slug": "北上资金（沪深港通/聪明钱）",
     "title": "北上资金（沪深港通/聪明钱）",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1713,7 +1831,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "北上资金-final.html"
+    "filename": "北上资金-final.html",
+    "file": "北上资金（沪深港通_聪明钱）.html"
   },
   {
     "id": 110,
@@ -1728,7 +1847,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "龙虎榜-final.html"
+    "filename": "龙虎榜-final.html",
+    "file": "龙虎榜（游资与机构席位）.html"
   },
   {
     "id": 111,
@@ -1743,11 +1863,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "印花税-final.html"
+    "filename": "印花税-final.html",
+    "file": "印花税.html"
   },
   {
     "id": 112,
-    "slug": "佣金（手续费 _ 最低5元）",
+    "slug": "佣金（手续费 / 最低5元）",
     "title": "佣金（手续费 / 最低5元）",
     "chapter": "第十篇：交易规则与摩擦成本",
     "card_titles": [
@@ -1763,7 +1884,8 @@
       "止损"
     ],
     "next": "CPI（居民消费价格指数）",
-    "filename": "佣金-final.html"
+    "filename": "佣金-final.html",
+    "file": "佣金（手续费 _ 最低5元）.html"
   },
   {
     "id": 113,
@@ -1778,7 +1900,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "GDP（名义GDP vs 实际GDP）-final.html"
+    "filename": "GDP（名义GDP vs 实际GDP）-final.html",
+    "file": "GDP（名义GDP vs 实际GDP）.html"
   },
   {
     "id": 114,
@@ -1793,7 +1916,8 @@
     ],
     "related": [],
     "next": "PPI",
-    "filename": "CPI-final.html"
+    "filename": "CPI-final.html",
+    "file": "CPI（居民消费价格指数）.html"
   },
   {
     "id": 115,
@@ -1808,7 +1932,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "PPI-final.html"
+    "filename": "PPI-final.html",
+    "file": "PPI（工业生产者出厂价格指数）.html"
   },
   {
     "id": 116,
@@ -1823,7 +1948,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "PMI-final.html"
+    "filename": "PMI-final.html",
+    "file": "PMI（采购经理指数，经济体温计）.html"
   },
   {
     "id": 117,
@@ -1838,7 +1964,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "社融-final.html"
+    "filename": "社融-final.html",
+    "file": "社融（社会融资规模）.html"
   },
   {
     "id": 118,
@@ -1853,7 +1980,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "社零-final.html"
+    "filename": "社零-final.html",
+    "file": "社零（社会消费品零售总额）.html"
   },
   {
     "id": 119,
@@ -1868,11 +1996,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "LPR-final.html"
+    "filename": "LPR-final.html",
+    "file": "LPR（贷款市场报价利率）.html"
   },
   {
     "id": 120,
-    "slug": "MLF（中期借贷便利_麻辣粉）",
+    "slug": "MLF（中期借贷便利/麻辣粉）",
     "title": "MLF（中期借贷便利/麻辣粉）",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
@@ -1883,11 +2012,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "MLF-final.html"
+    "filename": "MLF-final.html",
+    "file": "MLF（中期借贷便利_麻辣粉）.html"
   },
   {
     "id": 121,
-    "slug": "OMO（公开市场操作 _ 7天逆回购）",
+    "slug": "OMO（公开市场操作 / 7天逆回购）",
     "title": "OMO（公开市场操作 / 7天逆回购）",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
@@ -1898,11 +2028,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "OMO-final.html"
+    "filename": "OMO-final.html",
+    "file": "OMO（公开市场操作 _ 7天逆回购）.html"
   },
   {
     "id": 122,
-    "slug": "SLF（常备借贷便利_酸辣粉）",
+    "slug": "SLF（常备借贷便利/酸辣粉）",
     "title": "SLF（常备借贷便利/酸辣粉）",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
@@ -1920,7 +2051,8 @@
       "量化宽松（QE）"
     ],
     "next": "降准",
-    "filename": "SLF-final.html"
+    "filename": "SLF-final.html",
+    "file": "SLF（常备借贷便利_酸辣粉）.html"
   },
   {
     "id": 123,
@@ -1935,11 +2067,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "降准-final.html"
+    "filename": "降准-final.html",
+    "file": "降准（存款准备金率下调）.html"
   },
   {
     "id": 124,
-    "slug": "降息 _ 加息",
+    "slug": "降息 / 加息",
     "title": "降息 / 加息",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
@@ -1950,11 +2083,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "降息-加息-final.html"
+    "filename": "降息-加息-final.html",
+    "file": "降息 _ 加息.html"
   },
   {
     "id": 125,
-    "slug": "量化宽松（QE _ 放水）",
+    "slug": "量化宽松（QE / 放水）",
     "title": "量化宽松（QE / 放水）",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
@@ -1965,7 +2099,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "量化宽松（QE-放水）-final.html"
+    "filename": "量化宽松（QE-放水）-final.html",
+    "file": "量化宽松（QE _ 放水）.html"
   },
   {
     "id": 126,
@@ -1980,7 +2115,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "缩表-final.html"
+    "filename": "缩表-final.html",
+    "file": "缩表（美联储缩表）.html"
   },
   {
     "id": 127,
@@ -1995,11 +2131,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "美联储点阵图-final.html"
+    "filename": "美联储点阵图-final.html",
+    "file": "美联储点阵图.html"
   },
   {
     "id": 128,
-    "slug": "经济周期（复苏 _ 繁荣 _ 衰退 _ 萧条）",
+    "slug": "经济周期（复苏 / 繁荣 / 衰退 / 萧条）",
     "title": "经济周期（复苏 / 繁荣 / 衰退 / 萧条）",
     "chapter": "第十二篇：宏观与周期",
     "card_titles": [
@@ -2010,11 +2147,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "经济周期-final.html"
+    "filename": "经济周期-final.html",
+    "file": "经济周期（复苏 _ 繁荣 _ 衰退 _ 萧条）.html"
   },
   {
     "id": 129,
-    "slug": "财政赤字 _ 赤字率（3%警戒线）",
+    "slug": "财政赤字 / 赤字率（3%警戒线）",
     "title": "财政赤字 / 赤字率（3%警戒线）",
     "chapter": "第十二篇：宏观与周期",
     "card_titles": [
@@ -2025,7 +2163,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "财政赤字-final.html"
+    "filename": "财政赤字-final.html",
+    "file": "财政赤字 _ 赤字率（3%警戒线）.html"
   },
   {
     "id": 130,
@@ -2040,11 +2179,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "专项债-final.html"
+    "filename": "专项债-final.html",
+    "file": "专项债（地方基建的钱从哪来）.html"
   },
   {
     "id": 131,
-    "slug": "汇率（人民币升值_贬值）",
+    "slug": "汇率（人民币升值/贬值）",
     "title": "汇率（人民币升值/贬值）",
     "chapter": "第十二篇：宏观与周期",
     "card_titles": [
@@ -2055,11 +2195,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "汇率（人民币升值贬值）-final.html"
+    "filename": "汇率（人民币升值贬值）-final.html",
+    "file": "汇率（人民币升值_贬值）.html"
   },
   {
     "id": 132,
-    "slug": "期货（股指期货_商品期货）",
+    "slug": "期货（股指期货/商品期货）",
     "title": "期货（股指期货/商品期货）",
     "chapter": "第十三篇：衍生品与对冲",
     "card_titles": [
@@ -2070,11 +2211,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "期货-final.html"
+    "filename": "期货-final.html",
+    "file": "期货（股指期货_商品期货）.html"
   },
   {
     "id": 133,
-    "slug": "期权（看涨期权 _ 看跌期权）",
+    "slug": "期权（看涨期权 / 看跌期权）",
     "title": "期权（看涨期权 / 看跌期权）",
     "chapter": "第十三篇：衍生品与对冲",
     "card_titles": [
@@ -2085,7 +2227,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "期权（看涨期权-看跌期权）-final.html"
+    "filename": "期权（看涨期权-看跌期权）-final.html",
+    "file": "期权（看涨期权 _ 看跌期权）.html"
   },
   {
     "id": 134,
@@ -2100,7 +2243,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "权证-final.html"
+    "filename": "权证-final.html",
+    "file": "权证（港股常见）.html"
   },
   {
     "id": 135,
@@ -2121,11 +2265,12 @@
       "做空"
     ],
     "next": "对冲",
-    "filename": "远期合约-final.html"
+    "filename": "远期合约-final.html",
+    "file": "远期合约.html"
   },
   {
     "id": 136,
-    "slug": "对冲（Hedge _ 套期保值）",
+    "slug": "对冲（Hedge / 套期保值）",
     "title": "对冲（Hedge / 套期保值）",
     "chapter": "第十三篇：衍生品与对冲",
     "card_titles": [
@@ -2136,11 +2281,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "对冲-final.html"
+    "filename": "对冲-final.html",
+    "file": "对冲（Hedge _ 套期保值）.html"
   },
   {
     "id": 137,
-    "slug": "套利（无风险套利_价差套利）",
+    "slug": "套利（无风险套利/价差套利）",
     "title": "套利（无风险套利/价差套利）",
     "chapter": "第十三篇：衍生品与对冲",
     "card_titles": [
@@ -2151,11 +2297,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "套利-final.html"
+    "filename": "套利-final.html",
+    "file": "套利（无风险套利_价差套利）.html"
   },
   {
     "id": 138,
-    "slug": "做空（沽空_卖空）",
+    "slug": "做空（沽空/卖空）",
     "title": "做空（沽空/卖空）",
     "chapter": "第十三篇：衍生品与对冲",
     "card_titles": [
@@ -2166,7 +2313,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "做空-final.html"
+    "filename": "做空-final.html",
+    "file": "做空（沽空_卖空）.html"
   },
   {
     "id": 139,
@@ -2181,7 +2329,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "定投-final.html"
+    "filename": "定投-final.html",
+    "file": "定投（定期定额投资）.html"
   },
   {
     "id": 140,
@@ -2196,7 +2345,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "微笑曲线-final.html"
+    "filename": "微笑曲线-final.html",
+    "file": "微笑曲线.html"
   },
   {
     "id": 141,
@@ -2211,7 +2361,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "资产配置-final.html"
+    "filename": "资产配置-final.html",
+    "file": "资产配置（核心-卫星策略）.html"
   },
   {
     "id": 142,
@@ -2226,11 +2377,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "再平衡-final.html"
+    "filename": "再平衡-final.html",
+    "file": "再平衡（动态调整仓位）.html"
   },
   {
     "id": 143,
-    "slug": "止盈（止盈线 _ 分批止盈）",
+    "slug": "止盈（止盈线 / 分批止盈）",
     "title": "止盈（止盈线 / 分批止盈）",
     "chapter": "第十四篇：策略与数学",
     "card_titles": [
@@ -2241,11 +2393,12 @@
     ],
     "related": [],
     "next": "",
-    "filename": "止盈-final.html"
+    "filename": "止盈-final.html",
+    "file": "止盈（止盈线 _ 分批止盈）.html"
   },
   {
     "id": 144,
-    "slug": "金字塔加仓 _ 倒金字塔加仓",
+    "slug": "金字塔加仓 / 倒金字塔加仓",
     "title": "金字塔加仓 / 倒金字塔加仓",
     "chapter": "第十四篇：策略与数学",
     "card_titles": [
@@ -2256,7 +2409,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "金字塔加仓-final.html"
+    "filename": "金字塔加仓-final.html",
+    "file": "金字塔加仓 _ 倒金字塔加仓.html"
   },
   {
     "id": 145,
@@ -2271,7 +2425,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "网格交易-final.html"
+    "filename": "网格交易-final.html",
+    "file": "网格交易.html"
   },
   {
     "id": 146,
@@ -2286,7 +2441,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "胜率vs赔率-final.html"
+    "filename": "胜率vs赔率-final.html",
+    "file": "胜率 vs 赔率.html"
   },
   {
     "id": 147,
@@ -2301,7 +2457,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "阿尔法（α） vs 贝塔（β）-final.html"
+    "filename": "阿尔法（α） vs 贝塔（β）-final.html",
+    "file": "阿尔法（α） vs 贝塔（β）.html"
   },
   {
     "id": 148,
@@ -2316,7 +2473,8 @@
     ],
     "related": [],
     "next": "",
-    "filename": "年化波动率-final.html"
+    "filename": "年化波动率-final.html",
+    "file": "年化波动率（标准差）.html"
   },
   {
     "id": 149,
@@ -2336,7 +2494,8 @@
       "年化波动率"
     ],
     "next": "凯利公式",
-    "filename": "相关性系数-final.html"
+    "filename": "相关性系数-final.html",
+    "file": "相关性系数（资产同涨同跌还是跷跷板）.html"
   },
   {
     "id": 150,
@@ -2359,11 +2518,12 @@
       "夏普比率"
     ],
     "next": "IRR（内部收益率）",
-    "filename": "凯利公式-final.html"
+    "filename": "凯利公式-final.html",
+    "file": "凯利公式（每次下注多少合适）.html"
   },
   {
     "id": 151,
-    "slug": "IRR（内部收益率 _ 分期真实利率）",
+    "slug": "IRR（内部收益率 / 分期真实利率）",
     "title": "IRR（内部收益率 / 分期真实利率）",
     "chapter": "第十五篇：策略与数学 · 进阶",
     "card_titles": [
@@ -2381,11 +2541,12 @@
       "赔率"
     ],
     "next": "上车 / 下车",
-    "filename": "IRR-final.html"
+    "filename": "IRR-final.html",
+    "file": "IRR（内部收益率 _ 分期真实利率）.html"
   },
   {
     "id": 152,
-    "slug": "上车 _ 下车",
+    "slug": "上车 / 下车",
     "title": "上车 / 下车",
     "chapter": "第十六篇：金融市场黑话与交易场景",
     "card_titles": [
@@ -2402,7 +2563,8 @@
       "逃顶"
     ],
     "next": "踏空",
-    "filename": "上车下车-final.html"
+    "filename": "上车下车-final.html",
+    "file": "上车 _ 下车.html"
   },
   {
     "id": 153,
@@ -2420,10 +2582,12 @@
       "下车",
       "被套",
       "割肉",
-      "追高"
+      "追高",
+      "FOMO"
     ],
     "next": "被套（套牢）",
-    "filename": "踏空-final.html"
+    "filename": "踏空-final.html",
+    "file": "踏空（看着涨没买）.html"
   },
   {
     "id": 154,
@@ -2445,7 +2609,8 @@
       "抄底"
     ],
     "next": "割肉（亏损卖出）",
-    "filename": "被套-final.html"
+    "filename": "被套-final.html",
+    "file": "被套（套牢）.html"
   },
   {
     "id": 155,
@@ -2465,7 +2630,8 @@
       "接盘侠"
     ],
     "next": "抄底（接飞刀）",
-    "filename": "割肉（亏损卖出）-final.html"
+    "filename": "割肉（亏损卖出）-final.html",
+    "file": "割肉（亏损卖出）.html"
   },
   {
     "id": 156,
@@ -2485,7 +2651,8 @@
       "被套（套牢）"
     ],
     "next": "逃顶",
-    "filename": "抄底（接飞刀）-final.html"
+    "filename": "抄底（接飞刀）-final.html",
+    "file": "抄底（接飞刀）.html"
   },
   {
     "id": 157,
@@ -2505,7 +2672,8 @@
       "踏空"
     ],
     "next": "接盘侠（高位接盘）",
-    "filename": "逃顶-final.html"
+    "filename": "逃顶-final.html",
+    "file": "逃顶.html"
   },
   {
     "id": 158,
@@ -2525,11 +2693,12 @@
       "韭菜"
     ],
     "next": "国家队（证金 / 汇金 / 社保）",
-    "filename": "接盘侠（高位接盘）-final.html"
+    "filename": "接盘侠（高位接盘）-final.html",
+    "file": "接盘侠（高位接盘）.html"
   },
   {
     "id": 159,
-    "slug": "国家队（证金 _ 汇金 _ 社保）",
+    "slug": "国家队（证金 / 汇金 / 社保）",
     "title": "国家队（证金 / 汇金 / 社保）",
     "chapter": "第十六篇：金融市场黑话与交易场景",
     "card_titles": [
@@ -2547,11 +2716,12 @@
       "护盘"
     ],
     "next": "北向资金 / 南向资金",
-    "filename": "国家队（证金-汇金-社保）-final.html"
+    "filename": "国家队（证金-汇金-社保）-final.html",
+    "file": "国家队（证金 _ 汇金 _ 社保）.html"
   },
   {
     "id": 160,
-    "slug": "北向资金 _ 南向资金",
+    "slug": "北向资金 / 南向资金",
     "title": "北向资金 / 南向资金",
     "chapter": "第十六篇：金融市场黑话与交易场景",
     "card_titles": [
@@ -2566,11 +2736,12 @@
       "游资"
     ],
     "next": "主力 / 庄家",
-    "filename": "北向资金南向资金-final.html"
+    "filename": "北向资金南向资金-final.html",
+    "file": "北向资金 _ 南向资金.html"
   },
   {
     "id": 161,
-    "slug": "主力 _ 庄家（操纵市场）",
+    "slug": "主力 / 庄家（操纵市场）",
     "title": "主力 / 庄家（操纵市场）",
     "chapter": "第十六篇：金融市场黑话与交易场景",
     "card_titles": [
@@ -2586,11 +2757,12 @@
       "韭菜"
     ],
     "next": "游资",
-    "filename": "主力庄家-final.html"
+    "filename": "主力庄家-final.html",
+    "file": "主力 _ 庄家（操纵市场）.html"
   },
   {
     "id": 162,
-    "slug": "游资（热钱 _ 短线资金）",
+    "slug": "游资（热钱 / 短线资金）",
     "title": "游资（热钱 / 短线资金）",
     "chapter": "第十六篇：金融市场黑话与交易场景",
     "card_titles": [
@@ -2608,7 +2780,8 @@
       "跌停板"
     ],
     "next": "韭菜",
-    "filename": "游资-final.html"
+    "filename": "游资-final.html",
+    "file": "游资（热钱 _ 短线资金）.html"
   },
   {
     "id": 163,
@@ -2622,12 +2795,14 @@
       "你毕业了吗？"
     ],
     "related": [
+      "FOMO",
       "羊群效应",
       "损失厌恶",
       "处置效应"
     ],
     "next": "去散户化",
-    "filename": "韭菜-final.html"
+    "filename": "韭菜-final.html",
+    "file": "韭菜（反复被收割的散户）.html"
   },
   {
     "id": 164,
@@ -2642,12 +2817,14 @@
     ],
     "related": [
       "指数基金",
+      "ETF",
       "北向",
       "南向",
       "被动投资"
     ],
     "next": "拉高出货",
-    "filename": "去散户化-final.html"
+    "filename": "去散户化-final.html",
+    "file": "去散户化.html"
   },
   {
     "id": 165,
@@ -2667,7 +2844,8 @@
       "游资"
     ],
     "next": "砸盘",
-    "filename": "拉高出货-final.html"
+    "filename": "拉高出货-final.html",
+    "file": "拉高出货.html"
   },
   {
     "id": 166,
@@ -2687,7 +2865,8 @@
       "成交量"
     ],
     "next": "护盘",
-    "filename": "砸盘-final.html"
+    "filename": "砸盘-final.html",
+    "file": "砸盘.html"
   },
   {
     "id": 167,
@@ -2707,11 +2886,12 @@
       "逃顶"
     ],
     "next": "政策底 / 市场底",
-    "filename": "护盘-final.html"
+    "filename": "护盘-final.html",
+    "file": "护盘.html"
   },
   {
     "id": 168,
-    "slug": "政策底 _ 市场底（双底）",
+    "slug": "政策底 / 市场底（双底）",
     "title": "政策底 / 市场底（双底）",
     "chapter": "第十六篇：金融市场黑话与交易场景",
     "card_titles": [
@@ -2727,11 +2907,12 @@
       "安全边际"
     ],
     "next": "第三方支付",
-    "filename": "政策底-市场底-final.html"
+    "filename": "政策底-市场底-final.html",
+    "file": "政策底 _ 市场底（双底）.html"
   },
   {
     "id": 169,
-    "slug": "第三方支付（微信支付 _ 支付宝）",
+    "slug": "第三方支付（微信支付 / 支付宝）",
     "title": "第三方支付（微信支付 / 支付宝）",
     "chapter": "第十七篇：日常支付与账户管理",
     "card_titles": [
@@ -2749,11 +2930,12 @@
       "还款日"
     ],
     "next": "扫码支付 / 免密支付 / 快捷支付",
-    "filename": "第三方支付-final.html"
+    "filename": "第三方支付-final.html",
+    "file": "第三方支付（微信支付 _ 支付宝）.html"
   },
   {
     "id": 170,
-    "slug": "扫码支付 _ 免密支付 _ 快捷支付",
+    "slug": "扫码支付 / 免密支付 / 快捷支付",
     "title": "扫码支付 / 免密支付 / 快捷支付",
     "chapter": "第十七篇：日常支付与账户管理",
     "card_titles": [
@@ -2769,11 +2951,12 @@
       "最低还款额"
     ],
     "next": "零钱通/余额宝",
-    "filename": "扫码支付_免密支付_快捷支付-final.html"
+    "filename": "扫码支付_免密支付_快捷支付-final.html",
+    "file": "扫码支付 _ 免密支付 _ 快捷支付.html"
   },
   {
     "id": 171,
-    "slug": "零钱通 _ 余额宝（货币基金包装）",
+    "slug": "零钱通 / 余额宝（货币基金包装）",
     "title": "零钱通 / 余额宝（货币基金包装）",
     "chapter": "第十七篇：日常支付与账户管理",
     "card_titles": [
@@ -2790,11 +2973,12 @@
       "扫码支付"
     ],
     "next": "信用卡账单日 / 还款日",
-    "filename": "零钱通余额宝-final.html"
+    "filename": "零钱通余额宝-final.html",
+    "file": "零钱通 _ 余额宝（货币基金包装）.html"
   },
   {
     "id": 172,
-    "slug": "信用卡账单日 _ 还款日",
+    "slug": "信用卡账单日 / 还款日",
     "title": "信用卡账单日 / 还款日",
     "chapter": "第十七篇：日常支付与账户管理",
     "card_titles": [
@@ -2811,11 +2995,12 @@
       "扫码支付"
     ],
     "next": "信用卡免息期",
-    "filename": "信用卡账单日还款日-final.html"
+    "filename": "信用卡账单日还款日-final.html",
+    "file": "信用卡账单日 _ 还款日.html"
   },
   {
     "id": 173,
-    "slug": "信用卡免息期（最长_最短）",
+    "slug": "信用卡免息期（最长/最短）",
     "title": "信用卡免息期（最长/最短）",
     "chapter": "第十七篇：日常支付与账户管理",
     "card_titles": [
@@ -2833,7 +3018,8 @@
       "扫码支付"
     ],
     "next": "最低还款额",
-    "filename": "信用卡免息期-final.html"
+    "filename": "信用卡免息期-final.html",
+    "file": "信用卡免息期（最长_最短）.html"
   },
   {
     "id": 174,
@@ -2851,10 +3037,12 @@
       "还款日",
       "信用卡免息期",
       "分期手续费",
+      "IRR",
       "征信"
     ],
     "next": "信用卡分期手续费",
-    "filename": "最低还款额-final.html"
+    "filename": "最低还款额-final.html",
+    "file": "最低还款额（及其利息陷阱）.html"
   },
   {
     "id": 175,
@@ -2874,7 +3062,8 @@
       "日息/月息/年息换算"
     ],
     "next": "自动续费陷阱",
-    "filename": "信用卡分期手续费-final.html"
+    "filename": "信用卡分期手续费-final.html",
+    "file": "信用卡分期手续费（实际IRR）.html"
   },
   {
     "id": 176,
@@ -2894,7 +3083,8 @@
       "机会成本"
     ],
     "next": "房贷利率重定价日",
-    "filename": "自动续费陷阱-final.html"
+    "filename": "自动续费陷阱-final.html",
+    "file": "自动续费陷阱.html"
   },
   {
     "id": 177,
@@ -2908,13 +3098,15 @@
       "你选的是\"浮动利率\"，还是\"被动浮动\"？"
     ],
     "related": [
+      "LPR",
       "降息/加息",
       "等额本金",
       "等额本息",
       "提前还贷"
     ],
     "next": "等额本金 vs 等额本息",
-    "filename": "房贷利率重定价日-final.html"
+    "filename": "房贷利率重定价日-final.html",
+    "file": "房贷利率重定价日.html"
   },
   {
     "id": 178,
@@ -2930,14 +3122,17 @@
     "related": [
       "房贷利率重定价日",
       "提前还贷",
-      "利率"
+      "LPR",
+      "利率",
+      "IRR"
     ],
     "next": "提前还贷（违约金 / 划算吗）",
-    "filename": "等额本金vs等额本息-final.html"
+    "filename": "等额本金vs等额本息-final.html",
+    "file": "等额本金 vs 等额本息（提前还贷选哪个）.html"
   },
   {
     "id": 179,
-    "slug": "提前还贷（违约金 _ 划算吗）",
+    "slug": "提前还贷（违约金 / 划算吗）",
     "title": "提前还贷（违约金 / 划算吗）",
     "chapter": "第十八篇：借贷与生活刚需",
     "card_titles": [
@@ -2952,11 +3147,12 @@
       "断供"
     ],
     "next": "经营贷 / 消费贷",
-    "filename": "提前还贷-final.html"
+    "filename": "提前还贷-final.html",
+    "file": "提前还贷（违约金 _ 划算吗）.html"
   },
   {
     "id": 180,
-    "slug": "经营贷 _ 消费贷（及违规挪用风险）",
+    "slug": "经营贷 / 消费贷（及违规挪用风险）",
     "title": "经营贷 / 消费贷（及违规挪用风险）",
     "chapter": "第十八篇：借贷与生活刚需",
     "card_titles": [
@@ -2974,11 +3170,12 @@
       "利率（基准利率）"
     ],
     "next": "日息 / 月息 / 年息换算",
-    "filename": "经营贷消费贷-final.html"
+    "filename": "经营贷消费贷-final.html",
+    "file": "经营贷 _ 消费贷（及违规挪用风险）.html"
   },
   {
     "id": 181,
-    "slug": "日息 _ 月息 _ 年息换算（别被“日息万五”骗了）",
+    "slug": "日息 / 月息 / 年息换算（别被“日息万五”骗了）",
     "title": "日息 / 月息 / 年息换算（别被“日息万五”骗了）",
     "chapter": "第十八篇：借贷与生活刚需",
     "card_titles": [
@@ -2995,7 +3192,8 @@
       "最低还款额"
     ],
     "next": "断供（及法拍房）",
-    "filename": "日息月息年息换算-final.html"
+    "filename": "日息月息年息换算-final.html",
+    "file": "日息 _ 月息 _ 年息换算（别被“日息万五”骗了）.html"
   },
   {
     "id": 182,
@@ -3016,7 +3214,8 @@
       "房贷利率重定价日"
     ],
     "next": "社保养老金",
-    "filename": "断供-final.html"
+    "filename": "断供-final.html",
+    "file": "断供（及法拍房）.html"
   },
   {
     "id": 183,
@@ -3038,7 +3237,8 @@
       "职业年金"
     ],
     "next": "个人账户养老金",
-    "filename": "社保养老金-final.html"
+    "filename": "社保养老金-final.html",
+    "file": "社保养老金（现收现付制）.html"
   },
   {
     "id": 184,
@@ -3058,11 +3258,12 @@
       "延迟退休"
     ],
     "next": "企业年金/职业年金",
-    "filename": "个人账户养老金-final.html"
+    "filename": "个人账户养老金-final.html",
+    "file": "个人账户养老金（累计制）.html"
   },
   {
     "id": 185,
-    "slug": "企业年金 _ 职业年金",
+    "slug": "企业年金 / 职业年金",
     "title": "企业年金 / 职业年金",
     "chapter": "第十九篇：人生账本与长期规划",
     "card_titles": [
@@ -3078,11 +3279,12 @@
       "抚养比/赡养率"
     ],
     "next": "抚养比/赡养率",
-    "filename": "企业年金职业年金-final.html"
+    "filename": "企业年金职业年金-final.html",
+    "file": "企业年金 _ 职业年金.html"
   },
   {
     "id": 186,
-    "slug": "抚养比 _ 赡养率",
+    "slug": "抚养比 / 赡养率",
     "title": "抚养比 / 赡养率",
     "chapter": "第十九篇：人生账本与长期规划",
     "card_titles": [
@@ -3098,7 +3300,8 @@
       "延迟退休"
     ],
     "next": "延迟退休",
-    "filename": "抚养比-赡养率-final.html"
+    "filename": "抚养比-赡养率-final.html",
+    "file": "抚养比 _ 赡养率.html"
   },
   {
     "id": 187,
@@ -3118,7 +3321,8 @@
       "抚养比/赡养率"
     ],
     "next": "教育金",
-    "filename": "延迟退休-final.html"
+    "filename": "延迟退休-final.html",
+    "file": "延迟退休.html"
   },
   {
     "id": 188,
@@ -3139,7 +3343,8 @@
       "抚养比-赡养率"
     ],
     "next": "以房养老（倒按揭）",
-    "filename": "教育金-final.html"
+    "filename": "教育金-final.html",
+    "file": "教育金（规划）.html"
   },
   {
     "id": 189,
@@ -3160,7 +3365,8 @@
       "遗产税"
     ],
     "next": "遗产税",
-    "filename": "以房养老-final.html"
+    "filename": "以房养老-final.html",
+    "file": "以房养老（倒按揭）.html"
   },
   {
     "id": 190,
@@ -3181,7 +3387,8 @@
       "教育金"
     ],
     "next": "消费主义陷阱",
-    "filename": "遗产税-final.html"
+    "filename": "遗产税-final.html",
+    "file": "遗产税（国内暂无，富人会考虑）.html"
   },
   {
     "id": 191,
@@ -3202,7 +3409,8 @@
       "匮乏感"
     ],
     "next": "面子消费",
-    "filename": "消费主义陷阱-final.html"
+    "filename": "消费主义陷阱-final.html",
+    "file": "消费主义陷阱.html"
   },
   {
     "id": 192,
@@ -3223,7 +3431,8 @@
       "信息不对称"
     ],
     "next": "棘轮效应",
-    "filename": "面子消费-final.html"
+    "filename": "面子消费-final.html",
+    "file": "面子消费（社交货币）.html"
   },
   {
     "id": 193,
@@ -3243,7 +3452,8 @@
       "匮乏感/稀缺心态"
     ],
     "next": "延迟满足",
-    "filename": "棘轮效应-final.html"
+    "filename": "棘轮效应-final.html",
+    "file": "棘轮效应（由俭入奢易）.html"
   },
   {
     "id": 194,
@@ -3263,11 +3473,12 @@
       "稀缺心态"
     ],
     "next": "匮乏感 / 稀缺心态",
-    "filename": "延迟满足-final.html"
+    "filename": "延迟满足-final.html",
+    "file": "延迟满足（棉花糖实验）.html"
   },
   {
     "id": 195,
-    "slug": "匮乏感 _ 稀缺心态（越穷越短视）",
+    "slug": "匮乏感 / 稀缺心态（越穷越短视）",
     "title": "匮乏感 / 稀缺心态（越穷越短视）",
     "chapter": "第二十篇：消费心理与财富品格",
     "card_titles": [
@@ -3284,7 +3495,8 @@
       "能力圈"
     ],
     "next": "能力圈",
-    "filename": "匮乏感_稀缺心态-final.html"
+    "filename": "匮乏感_稀缺心态-final.html",
+    "file": "匮乏感 _ 稀缺心态（越穷越短视）.html"
   },
   {
     "id": 196,
@@ -3304,7 +3516,8 @@
       "棘轮效应"
     ],
     "next": "护城河",
-    "filename": "能力圈-final.html"
+    "filename": "能力圈-final.html",
+    "file": "能力圈（只投你懂的东西）.html"
   },
   {
     "id": 197,
@@ -3325,7 +3538,8 @@
       "安全边际"
     ],
     "next": "信息不对称",
-    "filename": "护城河-final.html"
+    "filename": "护城河-final.html",
+    "file": "护城河（好公司持续赚钱的壁垒）.html"
   },
   {
     "id": 198,
@@ -3347,7 +3561,8 @@
       "稀缺心态"
     ],
     "next": "羊群效应",
-    "filename": "信息不对称-final.html"
+    "filename": "信息不对称-final.html",
+    "file": "信息不对称（凭什么是你先亏）.html"
   },
   {
     "id": 199,
@@ -3367,7 +3582,8 @@
       "逆向思维"
     ],
     "next": "锚定效应",
-    "filename": "羊群效应-final.html"
+    "filename": "羊群效应-final.html",
+    "file": "羊群效应（跟风）.html"
   },
   {
     "id": 200,
@@ -3386,7 +3602,8 @@
       "损失厌恶"
     ],
     "next": "处置效应",
-    "filename": "锚定效应-final.html"
+    "filename": "锚定效应-final.html",
+    "file": "锚定效应（被成本价“焊死”）.html"
   },
   {
     "id": 201,
@@ -3407,7 +3624,8 @@
       "沉没成本"
     ],
     "next": "确认偏误",
-    "filename": "处置效应-final.html"
+    "filename": "处置效应-final.html",
+    "file": "处置效应（卖盈持亏）.html"
   },
   {
     "id": 202,
@@ -3428,7 +3646,8 @@
       "损失厌恶"
     ],
     "next": "损失厌恶",
-    "filename": "确认偏误-final.html"
+    "filename": "确认偏误-final.html",
+    "file": "确认偏误（只看自己想看的）.html"
   },
   {
     "id": 203,
@@ -3449,7 +3668,8 @@
       "恐惧"
     ],
     "next": "过度自信",
-    "filename": "损失厌恶-final.html"
+    "filename": "损失厌恶-final.html",
+    "file": "损失厌恶（亏1块的痛 _ 赚1块的乐）.html"
   },
   {
     "id": 204,
@@ -3471,7 +3691,8 @@
       "恐惧"
     ],
     "next": "处置效应",
-    "filename": "过度自信-final.html"
+    "filename": "过度自信-final.html",
+    "file": "过度自信（频繁交易）.html"
   },
   {
     "id": 205,
@@ -3492,7 +3713,8 @@
       "过度自信"
     ],
     "next": "逆向思维",
-    "filename": "从众心理-final.html"
+    "filename": "从众心理-final.html",
+    "file": "从众心理.html"
   },
   {
     "id": 206,
@@ -3509,11 +3731,13 @@
       "羊群效应",
       "从众心理",
       "损失厌恶",
+      "FOMO",
       "贪婪",
       "恐惧"
     ],
     "next": "贪婪 vs 恐惧",
-    "filename": "逆向思维-final.html"
+    "filename": "逆向思维-final.html",
+    "file": "逆向思维（别人恐惧我贪婪）.html"
   },
   {
     "id": 207,
@@ -3532,7 +3756,8 @@
       "羊群效应"
     ],
     "next": "FOMO",
-    "filename": "贪婪 vs 恐惧-final.html"
+    "filename": "贪婪 vs 恐惧-final.html",
+    "file": "贪婪 vs 恐惧（市场两大驱动力）.html"
   },
   {
     "id": 208,
@@ -3554,7 +3779,8 @@
       "从众心理"
     ],
     "next": "庞氏骗局",
-    "filename": "FOMO-final.html"
+    "filename": "FOMO-final.html",
+    "file": "FOMO（害怕踏空）.html"
   },
   {
     "id": 209,
@@ -3574,7 +3800,8 @@
       "杀熟"
     ],
     "next": "非法集资",
-    "filename": "庞氏骗局-final.html"
+    "filename": "庞氏骗局-final.html",
+    "file": "庞氏骗局（借新还旧）.html"
   },
   {
     "id": 210,
@@ -3594,7 +3821,8 @@
       "杀熟"
     ],
     "next": "杀猪盘",
-    "filename": "非法集资-final.html"
+    "filename": "非法集资-final.html",
+    "file": "非法集资（高息揽储）.html"
   },
   {
     "id": 211,
@@ -3614,7 +3842,8 @@
       "杀熟"
     ],
     "next": "资金盘",
-    "filename": "杀猪盘-final.html"
+    "filename": "杀猪盘-final.html",
+    "file": "杀猪盘（情感+投资诈骗）.html"
   },
   {
     "id": 212,
@@ -3634,7 +3863,8 @@
       "杀熟"
     ],
     "next": "杀熟",
-    "filename": "资金盘-final.html"
+    "filename": "资金盘-final.html",
+    "file": "资金盘（传销式理财）.html"
   },
   {
     "id": 213,
@@ -3658,7 +3888,8 @@
       "才刚刚开始。"
     ],
     "next": "",
-    "filename": "杀熟-final.html"
+    "filename": "杀熟-final.html",
+    "file": "杀熟（熟人推荐最危险）.html"
   },
   {
     "id": 214,
@@ -3677,7 +3908,8 @@
       "MLF（中期借贷便利_麻辣粉）"
     ],
     "next": "LPR（贷款市场报价利率）",
-    "filename": "DR利率.html"
+    "filename": "DR利率.html",
+    "file": "DR利率.html"
   },
   {
     "id": 215,
@@ -3696,25 +3928,207 @@
       "国债（利率债）"
     ],
     "next": "国债（利率债）",
-    "filename": "大额存单.html"
-  },
-  {
-    "id": 216,
-    "slug": "汽车出口",
-    "title": "汽车出口",
-    "chapter": "第十一篇：宏观风向标",
-    "card_titles": [
-      "中国卖出去的，早就不只是衬衫换飞机",
-      "港口离港载重：一条看得见的外贸数据",
-      "对投资的三层意思：整车、零部件、航运",
-      "以后怎么盯这条线"
-    ],
-    "related": [
-      "CPI（居民消费价格指数）",
-      "PPI（工业生产者出厂价格指数）",
-      "PMI（采购经理指数，经济体温计）"
-    ],
-    "next": "CPI（居民消费价格指数）",
-    "filename": "汽车出口.html"
+    "filename": "大额存单.html",
+    "file": "大额存单.html"
   }
-]
+];
+(function () {
+  if (location.search.indexOf('random=1') !== -1) {
+    var rand = ALL_ENTRIES[Math.floor(Math.random() * ALL_ENTRIES.length)];
+    location.replace('terms/' + encodeURIComponent(rand.file));
+  }
+})();
+
+(function () {
+  var form = document.getElementById('hotSubscribeForm');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('hsEmail');
+    var msg = document.getElementById('hsMsg');
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var val = email.value.trim();
+    if (!val || !re.test(val)) {
+      msg.textContent = '邮箱格式不对';
+      msg.hidden = false;
+      return;
+    }
+    msg.textContent = '订阅中…';
+    msg.hidden = false;
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: val })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.ok) {
+          msg.textContent = '订阅成功，每天给你推热词';
+          email.value = '';
+        } else {
+          msg.textContent = d.error || '订阅失败，请稍后重试';
+        }
+      })
+      .catch(function () {
+        msg.textContent = '网络异常，请稍后重试';
+      });
+  });
+})();
+(function () {
+  var track = document.getElementById('hotTrack');
+  var dateEl = document.querySelector('.hot-date');
+  if (!track) return;
+
+  function renderItems(items) {
+    var html = '';
+    items.forEach(function (it) {
+      html += '<a class="hot-item" href="' + it.url + '">' +
+        '<span class="hot-term"><span class="hot-badge">HOT</span>' + it.title + '</span>' +
+        '<span class="hot-desc">' + it.desc + '</span></a>';
+    });
+    track.innerHTML = html;
+  }
+
+  function renderFallback() {
+    // 兜底：从词条库取前 3 条经典词条作为默认展示
+    if (typeof ALL_ENTRIES !== 'undefined' && ALL_ENTRIES.length) {
+      var defaults = ALL_ENTRIES.slice(0, 3);
+      var html = '';
+      defaults.forEach(function (e) {
+        html += '<a class="hot-item" href="terms/' + encodeURIComponent(e.title) + '.html">' +
+          '<span class="hot-term"><span class="hot-badge">HOT</span>' + e.title + '</span>' +
+          '<span class="hot-desc">今日暂无热词，点开复习这条经典词条。</span></a>';
+      });
+      track.innerHTML = html;
+    }
+  }
+
+  function startCarousel() {
+    var items = track.querySelectorAll('.hot-item');
+    if (items.length < 2) return;
+    var step = items[0].offsetHeight;
+    var idx = 0;
+    setInterval(function () {
+      idx++;
+      track.style.transform = 'translateY(-' + (idx * step) + 'px)';
+      if (idx >= items.length - 1) {
+        setTimeout(function () {
+          track.style.transition = 'none';
+          track.style.transform = 'translateY(0)';
+          idx = 0;
+          setTimeout(function () { track.style.transition = 'transform 0.5s ease'; }, 30);
+        }, 500);
+      }
+    }, 3500);
+  }
+
+  fetch('/api/daily-hot')
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d && d.ok && d.items && d.items.length) {
+        if (dateEl && d.date) dateEl.textContent = d.date;
+        renderItems(d.items);
+      } else {
+        renderFallback();
+      }
+      startCarousel();
+    })
+    .catch(function () {
+      renderFallback();
+      startCarousel();
+    });
+})();
+var CHAPTER_ORDER = ["第一篇：钱的本质", "第二篇：个人财务底盘", "第三篇：风险护城河", "第四篇：投资武器库 · 股票篇", "第五篇：投资武器库 · 债券与固收篇", "第六篇：投资武器库 · 基金篇", "第七篇：投资武器库 · 其他类", "第八篇：读懂指标 · 估值与业绩篇", "第九篇：读懂指标 · 市场情绪与风险篇", "第十篇：交易规则与摩擦成本", "第十一篇：宏观风向标", "第十二篇：宏观与周期", "第十三篇：衍生品与对冲", "第十四篇：策略与数学", "第十五篇：策略与数学 · 进阶", "第十六篇：金融市场黑话与交易场景", "第十七篇：日常支付与账户管理", "第十八篇：借贷与生活刚需", "第十九篇：人生账本与长期规划", "第二十篇：消费心理与财富品格", "第二十一篇：投资心理与行为陷阱", "第二十二篇：骗局与避坑指南"];
+
+(function() {
+  var mainContent = document.getElementById('mainContent');
+  var noResults = document.getElementById('noResults');
+  var searchBox = document.getElementById('searchBox');
+
+  // Group entries by chapter
+  var chapterGroups = {};
+  CHAPTER_ORDER.forEach(function(ch) { chapterGroups[ch] = []; });
+  ALL_ENTRIES.forEach(function(e) {
+    if (chapterGroups[e.chapter]) chapterGroups[e.chapter].push(e);
+  });
+
+  function buildAll() {
+    var html = '';
+    CHAPTER_ORDER.forEach(function(chName) {
+      var entries = chapterGroups[chName];
+      if (!entries) return;
+      html += '<section class="chapter-section" id="' + escapeHtml(chName) + '" data-chapter="' + escapeHtml(chName) + '">';
+      html += '  <div class="chapter-header" onclick="toggleChapter(this)">';
+      html += '    <div class="left"><span class="ch-name">' + escapeHtml(chName) + '</span><span class="ch-count">' + entries.length + ' 词条</span></div>';
+      html += '    <span class="arrow">▼</span>';
+      html += '  </div>';
+      html += '  <div class="entry-grid">';
+      entries.forEach(function(e) {
+        var hook = e.card_titles && e.card_titles.length > 0 ? e.card_titles[0] : '';
+        html += '    <a class="entry-card" href="terms/' + encodeURIComponent(e.file) + '" data-title="' + escapeHtml(e.title) + '">';
+        html += '      <div class="card-num">' + escapeHtml(String(e.id).padStart(2, '0')) + '</div>';
+        html += '      <div class="card-title">' + escapeHtml(e.title) + '</div>';
+        if (hook) html += '      <div class="card-hook">' + escapeHtml(hook) + '</div>';
+        html += '    </a>';
+      });
+      html += '  </div>';
+      html += '</section>';
+    });
+    mainContent.innerHTML = html;
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  buildAll();
+
+  // Chapter toggle
+  window.toggleChapter = function(header) {
+    header.classList.toggle('collapsed');
+    var grid = header.nextElementSibling;
+    grid.classList.toggle('collapsed');
+  };
+
+  // Search
+  searchBox.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    var sections = mainContent.querySelectorAll('.chapter-section');
+    var anyVisible = false;
+
+    sections.forEach(function(sec) {
+      var chName = sec.getAttribute('data-chapter').toLowerCase();
+      var cards = sec.querySelectorAll('.entry-card');
+      var chMatch = chName.indexOf(q) !== -1;
+      var cardVisible = 0;
+
+      cards.forEach(function(card) {
+        var title = (card.getAttribute('data-title') || '').toLowerCase();
+        if (!q || title.indexOf(q) !== -1 || chMatch) {
+          card.classList.remove('hidden');
+          cardVisible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (!q || cardVisible > 0 || chMatch) {
+        sec.classList.remove('hidden');
+        // auto-expand on search
+        var header = sec.querySelector('.chapter-header');
+        var grid = sec.querySelector('.entry-grid');
+        if (q && header.classList.contains('collapsed')) {
+          header.classList.remove('collapsed');
+          grid.classList.remove('collapsed');
+        }
+        if (cardVisible > 0) anyVisible = true;
+      } else {
+        sec.classList.add('hidden');
+      }
+    });
+
+    noResults.classList.toggle('show', !anyVisible && !!q);
+  });
+
+})();
