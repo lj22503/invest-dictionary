@@ -20,5 +20,16 @@
         }
       ]
     }
+  ],
+  "functions": {
+    "api/send-daily.js": {
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/send-daily",
+      "schedule": "0 9 * * *"
+    }
   ]
 }

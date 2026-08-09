@@ -23,3 +23,7 @@ node_modules/
 
 # Temp / verify screenshots (local only)
 web/verify/
+
+# Local verify screenshots & backups
+web/.verify*.png
+*.bak_*
