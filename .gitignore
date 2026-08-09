@@ -27,3 +27,4 @@ web/verify/
 # Local verify screenshots & backups
 web/.verify*.png
 *.bak_*
+ENV.txt

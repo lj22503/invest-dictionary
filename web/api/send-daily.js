@@ -52,6 +52,16 @@ export default async function handler(req) {
     });
   }
 
+  // 仅允许 Vercel Cron 触发（携带 CRON_SECRET）
+  const cronSecret = process.env.CRON_SECRET;
+  const auth = req.headers.get('authorization') || '';
+  if (!cronSecret || auth !== `Bearer ${cronSecret}`) {
+    return new Response(JSON.stringify({ error: 'unauthorized' }), {
+      status: 401,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+
   const apiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.FROM_EMAIL;
   if (!apiKey || !fromEmail) {
