@@ -9,30 +9,43 @@ export const config = {
 };
 
 // 每日热词邮件正文（HTML）
+// 风格：投资词典网站自有视觉（纸感米白底 + 朱砂红主色 + 墨色正文 + 衬线标题），
+// 排版参考：顶部导航 + 居中大标题 + 白色圆角卡片嵌热词列表 + 朱砂红圆角 CTA + 底部品牌信息
 function buildHtml(date, items, summary) {
   const list = items.map((it, i) => `
     <tr>
-      <td style="padding:14px 20px;border-bottom:1px solid #eee;font-size:15px;line-height:1.7;">
-        <div style="font-size:17px;font-weight:600;color:#111;">
-          <span style="display:inline-block;background:#e23;color:#fff;font-size:11px;padding:2px 7px;border-radius:3px;margin-right:8px;vertical-align:2px;">HOT</span>${escapeHtml(it.title)}
+      <td style="padding:16px 22px;border-bottom:1px solid #D9D4CC;font-size:15px;line-height:1.7;">
+        <div style="font-size:16px;font-weight:600;color:#2C2C2C;">
+          <span style="display:inline-block;background:#C43A31;color:#fff;font-size:11px;padding:3px 8px;border-radius:999px;margin-right:8px;vertical-align:2px;">HOT</span>${escapeHtml(it.title)}
         </div>
-        <div style="color:#666;margin-top:4px;">${escapeHtml(it.desc || '')}</div>
-        ${it.url ? `<div style="margin-top:6px;"><a href="${escapeHtml(it.url)}" style="color:#c00;text-decoration:none;font-size:14px;">查看词条详解 →</a></div>` : ''}
+        <div style="color:#5A5A5A;margin-top:5px;">${escapeHtml(it.desc || '')}</div>
+        ${it.url ? `<div style="margin-top:7px;"><a href="${escapeHtml(it.url)}" style="color:#C43A31;text-decoration:none;font-size:13px;font-weight:600;border-bottom:2px solid #C43A31;">查看词条详解 →</a></div>` : ''}
       </td>
     </tr>`).join('');
 
   return `
-  <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;max-width:600px;margin:0 auto;background:#fff;">
-    <div style="background:#111;color:#fff;padding:22px 24px;border-radius:8px 8px 0 0;">
-      <div style="font-size:20px;font-weight:700;">今日热词 · ${date}</div>
-      <div style="font-size:13px;color:#bbb;margin-top:4px;">说人话 · 不装逼 · 每天一篇</div>
+  <div style="font-family:'PingFang SC','Microsoft YaHei','Hiragino Sans GB',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:600px;margin:0 auto;background:#F5F2EC;border:1px solid #D9D4CC;border-radius:12px;overflow:hidden;">
+    <div style="background:#fff;padding:14px 24px;text-align:right;font-size:12px;color:#5A5A5A;border-bottom:1px solid #D9D4CC;">
+      <a href="https://dictionary.mangofolio.com" style="color:#C43A31;text-decoration:none;font-weight:600;">投资词典</a>
     </div>
-    <div style="border:1px solid #eee;border-top:none;border-radius:0 0 8px 8px;">
-      ${summary ? `<div style="padding:14px 20px;background:#faf7f3;color:#555;font-size:14px;line-height:1.7;border-bottom:1px solid #eee;">${escapeHtml(summary)}</div>` : ''}
-      <table style="width:100%;border-collapse:collapse;">${list}</table>
-      <div style="padding:16px 20px;font-size:13px;color:#999;line-height:1.7;">
-        你收到这封邮件，是因为在 <a href="https://dictionary.mangofolio.com" style="color:#c00;">投资词典</a> 订阅了每日热词。<br>
-        不想再收？<a href="https://dictionary.mangofolio.com/api/unsubscribe?email=__EMAIL__" style="color:#c00;">点此退订</a>
+    <div style="padding:36px 24px 10px;text-align:center;">
+      <div style="font-size:26px;font-weight:800;color:#2C2C2C;letter-spacing:1px;font-family:'Noto Serif SC','KaiTi','STKaiti',serif;">今日热词 · ${date}</div>
+      <div style="font-size:14px;color:#C43A31;margin-top:8px;font-weight:600;">说人话 · 不装逼 · 每天一篇</div>
+      ${summary ? `<div style="max-width:440px;margin:16px auto 0;font-size:14px;color:#5A5A5A;line-height:1.8;">${escapeHtml(summary)}</div>` : ''}
+    </div>
+    <div style="padding:20px 24px;">
+      <div style="background:#fff;border:1px solid #D9D4CC;border-radius:12px;padding:6px 8px;">
+        <table style="width:100%;border-collapse:collapse;">${list}</table>
+        <div style="padding:18px 22px;text-align:center;">
+          <a href="https://dictionary.mangofolio.com" style="display:inline-block;background:#C43A31;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:11px 26px;border-radius:999px;">查看全部词条</a>
+        </div>
+      </div>
+    </div>
+    <div style="padding:20px 24px 28px;text-align:center;font-size:12px;color:#8C867B;line-height:1.8;">
+      <div style="font-weight:600;color:#2C2C2C;">投资词典 · dictionary.mangofolio.com</div>
+      <div style="margin-top:4px;">你收到这封邮件，是因为订阅了投资词典每日热词。</div>
+      <div style="margin-top:8px;">
+        <a href="https://dictionary.mangofolio.com/api/unsubscribe?email=__EMAIL__" style="color:#C43A31;text-decoration:underline;">退订</a>
       </div>
     </div>
   </div>`;
