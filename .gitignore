@@ -28,3 +28,6 @@ web/verify/
 web/.verify*.png
 *.bak_*
 ENV.txt
+
+# Temp check scripts
+web/temp/
