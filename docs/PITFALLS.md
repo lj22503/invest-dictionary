@@ -106,6 +106,13 @@ AIGC:
 - **修复**：525 为临时状态，等待证书签发完成即可；如要消除 Proxy Detected 警告，将 Cloudflare 记录改为 DNS only（灰云）。
 - **预防**：绑定第三方代理时预知 Vercel 会提示 Proxy Detected；域名生效后先等 1-3 分钟再验证，避免误判 525 为失败。
 
+## 14. 热词词条页 pager/related 链接使用斜杠版 URL 导致 404
+
+- **现象**：主页热词「期限错配」「中签率」词条页内，pager-prev 与 related-links 第一个词条点击报 404（如 `%E6%96%B0%E8%82%A1%EF%BC%88IPO%20/%20%E6%89%93%E6%96%B0%EF%BC%89.html`），用户反馈"所有热词的第一个词都点不开"。
+- **根因**：词条页内链接（pager/related）用词条名直接编码生成，含 `/` 的词条名生成斜杠版 URL（`%20/%20`），而磁盘文件名是下划线版（`%20_%20`）；线上 308 重定向去 .html 后缀后无法匹配任何文件，最终 404。全站 234 处 terms 链接仅这 4 处断链，均集中在热词新词条页。
+- **修复**：将 `中签率.html`、`期限错配.html` 的 pager-prev 与 related-links 首词 href 从斜杠版改为下划线版；同时修正 `index.html` renderFallback 用 `e.title` 拼链接的隐患（改 `e.file`），避免兜底热词再踩同样的坑。
+- **预防**：新增含 `/`、`*`、`>` 词条时，页内所有链接（pager、related、canonical、og:url）必须以真实文件名（下划线版）编码；热词写入 KV 前用线上请求验证 url 返回 200；全量校验脚本（扫描 terms/ 链接与本地文件名一致性）在每次提交前运行。
+
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
 *（内容由AI生成，仅供参考）*

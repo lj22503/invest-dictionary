@@ -4549,7 +4549,7 @@ var ALL_ENTRIES = [
       var defaults = ALL_ENTRIES.slice(0, 3);
       var html = '';
       defaults.forEach(function (e) {
-        html += '<a class="hot-item" href="terms/' + encodeURIComponent(e.title) + '.html">' +
+        html += '<a class="hot-item" href="terms/' + encodeURIComponent(e.file) + '">' +
           '<span class="hot-term"><span class="hot-badge">HOT</span>' + e.title + '</span>' +
           '<span class="hot-desc">今日暂无热词，点开复习这条经典词条。</span></a>';
       });
