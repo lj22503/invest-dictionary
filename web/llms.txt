@@ -1,0 +1,22 @@
+# 投资词典 Invest Dictionary
+
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、222 个词条。
+> 网址：https://dictionary.mangofolio.com
+
+## 首页
+- [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
+
+## 核心词条
+- [定投（定期定额投资）](https://dictionary.mangofolio.com/terms/定投（定期定额投资）.html): 每月固定金额买入的投资方式，用纪律对抗贪婪和恐惧
+- [等额本金 vs 等额本息（提前还贷选哪个）](https://dictionary.mangofolio.com/terms/等额本金%20vs%20等额本息（提前还贷选哪个）.html): 两种房贷还款方式的区别与提前还贷选择
+- [IRR（内部收益率 _ 分期真实利率）](https://dictionary.mangofolio.com/terms/IRR（内部收益率%20_%20分期真实利率）.html): 现金流内部收益率，分期真实利率
+- [年化收益率（及年化复合收益率）](https://dictionary.mangofolio.com/terms/年化收益率（及年化复合收益率）.html): 投资收益的年化口径
+- [黄金（避险资产）](https://dictionary.mangofolio.com/terms/黄金（避险资产）.html): 黄金为何是避险资产
+- [货币基金（余额宝_零钱通）](https://dictionary.mangofolio.com/terms/货币基金（余额宝_零钱通）.html): 余额宝/零钱通背后的货币基金
+- [指数基金（宽基指数 vs 行业指数）](https://dictionary.mangofolio.com/terms/指数基金（宽基指数%20vs%20行业指数）.html): 指数基金分类与选择
+- [个人养老金账户（抵税新政）](https://dictionary.mangofolio.com/terms/个人养老金账户（抵税新政）.html): 个人养老金账户与抵税政策
+
+> 完整 222 词条列表见 https://dictionary.mangofolio.com/ （首页全量目录）
+
+## 相关站点
+- [财务工具箱](https://invest-tools.mangofolio.app): 复利、定投、房贷、个税等免费计算器
