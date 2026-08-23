@@ -10,7 +10,7 @@ license: MIT
 ## 定位
 
 把任何一个金融/投资概念，写成一个普通人 3 分钟能看懂、AI 和搜索引擎都能读懂的词条。
-本 Skill 沉淀自 Invest Dictionary（投资词典）项目 213 个词条的生成方法论。
+本 Skill 沉淀自 Invest Dictionary（投资词典）项目 238 个词条的生成方法论。
 
 仓库：https://github.com/lj22503/invest-dictionary
 在线词典：https://dictionary.mangofolio.com/
@@ -65,10 +65,10 @@ license: MIT
 
 ### 方式 B：HTML 词条页（用于直接发布到投资词典）
 
-- 复用仓库 `skill/invest-dictionary-generator/templates/term-page.html` 模板
+- 复用仓库 `skill/invest-dictionary-generator/templates/term-page.html` 模板（已按线上生产页 article.card 结构重建，勿再用旧 story-card 结构）
 - 头部元数据必填：`title`、`description`（一句话定义）、`canonical`（正式域名）、OG/Twitter Card、Schema.org `DefinedTerm` JSON-LD
-- 正文用故事卡结构（`.story-card`），样式复用模板内置纸感手账风格
-- 页尾加"上下篇导航"与"相关词条"链接
+- 正文用故事卡结构（`article.card`，含 `.card-title`/`.card-body`/`.card-quote`/`.card-number`/`.step-list`），样式复用模板内置纸感手账风格
+- 页尾加"上下篇导航"（term-pager）与"相关词条"（term-related，链接用归一化编码 URL）
 
 ## 命名规范（重要，易踩坑）
 
@@ -99,5 +99,5 @@ license: MIT
 ## 参考
 
 - 在线词典：https://dictionary.mangofolio.com/
-- 数据源：`web/dictionary.json`（213 词条、22 篇章）
+- 数据源：`web/dictionary.json`（238 词条、22 篇章）
 - 模板：`templates/term-page.html`、`templates/term-card.md`
