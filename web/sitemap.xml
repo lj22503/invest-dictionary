@@ -1360,4 +1360,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E6%B2%B9%E4%BB%B7%EF%BC%88%E5%8E%9F%E6%B2%B9%E4%BB%B7%E6%A0%BC%EF%BC%89.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
