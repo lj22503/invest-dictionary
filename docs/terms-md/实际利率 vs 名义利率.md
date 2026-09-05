@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_5ef679c4a15811f1a65b525400826444
+    ReservedCode1: cNH7QPXG4yX9rOi6b2FZFg/ErLfbAC1l4BUggSmSTghTZCT9GtFwBqcOlgqMpLXraK251pXOCVR57MnHPUjvQgG068LD7iRz4YN+c3cY2GqYhVOL5pecEv7bUYwYc6YI3tCk+uEitgtyuecuR0j+atpSL0dsZxg9QIONFhTNDN9rxsx6B9Z3LMAn3kg=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_5ef679c4a15811f1a65b525400826444
+    ReservedCode2: cNH7QPXG4yX9rOi6b2FZFg/ErLfbAC1l4BUggSmSTghTZCT9GtFwBqcOlgqMpLXraK251pXOCVR57MnHPUjvQgG068LD7iRz4YN+c3cY2GqYhVOL5pecEv7bUYwYc6YI3tCk+uEitgtyuecuR0j+atpSL0dsZxg9QIONFhTNDN9rxsx6B9Z3LMAn3kg=
+---
+
 # 实际利率 vs 名义利率
 
 > 名义利率是合同上写的利率，实际利率是扣掉通胀后你真正赚（或亏）的利率。
@@ -30,4 +41,5 @@
 ---
 
 **相关词条**：利率（基准利率）、通货膨胀（CPI）、购买力、负利率、72 法则
+*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*

@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_e17ac4e9a47f11f1abe1525400e6dd8f
+    ReservedCode1: 4WmILW4EM/K0fiSYakkToJSr/79ZuIp3a6NRggIgR4LgXLaQd/si76eIAOwrs2fv3PZ1GH1YG975ZCfdcjWL4HQHBKXit5zN6hB9JMBamRIZi4OBBBi7i3Twy5c6ZYjqOad+JAuV5jHbY/No07ubXgA/DQ46tDIId37TpNGbdnOwGJ/caXpEwyat6z4=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_e17ac4e9a47f11f1abe1525400e6dd8f
+    ReservedCode2: 4WmILW4EM/K0fiSYakkToJSr/79ZuIp3a6NRggIgR4LgXLaQd/si76eIAOwrs2fv3PZ1GH1YG975ZCfdcjWL4HQHBKXit5zN6hB9JMBamRIZi4OBBBi7i3Twy5c6ZYjqOad+JAuV5jHbY/No07ubXgA/DQ46tDIId37TpNGbdnOwGJ/caXpEwyat6z4=
+---
+
 # 返还型 vs 消费型保险
 
 > 返还型保险是没出事能把保费拿回来的贵保险，消费型保险是没出事钱就花掉、但保费便宜的保障。
@@ -43,3 +54,4 @@
 ---
 
 **相关词条**：[保险四大件（重疾险 / 医疗险 / 定期寿险 / 意外险）](<terms/保险四大件（重疾险 _ 医疗险 _ 定期寿险 _ 意外险）.html>)、[现金价值（退保能拿回多少）](<terms/现金价值（退保能拿回多少）.html>)、[年金险](<terms/年金险.html>)
+*（内容由AI生成，仅供参考）*
