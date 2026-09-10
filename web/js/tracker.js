@@ -92,6 +92,23 @@
       page: location.pathname
     });
     debouncedSave(events);
+    /* 上报到 Vercel KV（kv.rpush 接收 e/p/t/d 简化结构） */
+    try {
+      var entry = { e: eventName, p: location.pathname, t: Date.now() };
+      var d = {};
+      for (var key in merged) {
+        if (merged[key] !== undefined) d[key] = merged[key];
+      }
+      if (Object.keys(d).length) entry.d = d;
+      var body = JSON.stringify(entry);
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon('/api/events', new Blob([body], { type: 'application/json' }));
+      } else {
+        fetch('/api/events', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive: true });
+      }
+    } catch (e) {
+      /* 上报失败静默 */
+    }
   }
 
   /* === 公开 API === */
