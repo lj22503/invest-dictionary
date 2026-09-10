@@ -31,6 +31,8 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 
 纯静态 HTML/CSS/JS（无框架）；Schema.org DefinedTerm 结构化数据；Vercel 托管；Agent Skill（Markdown 方法论）。
 
+**埋点链路**：`web/js/tracker.js` 零依赖 SDK + `web/api/events.js` Edge function 走 `@vercel/kv`（与 5 站共享 `invest-dictionary-kv`，key 前缀 `evt:dictionary:`）；公共属性 page_referrer（同源）+ utm_5 透传；KV 还承担邮件订阅（subscribers set + subscriber:meta hash）与每日热词缓存（daily_hot）。
+
 ## 目录与约定
 
 - `web/` — 线上站点（index.html、terms/ 213 词条页、dictionary.json、sitemap.xml、robots.txt、vercel.json）
