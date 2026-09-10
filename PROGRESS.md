@@ -3,6 +3,27 @@
 > mangofolio 生态第 3 块 · 术语平权（听得懂）。213+ 中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
 
+## 2026-09-10 · 埋点 SDK 引入
+
+### 背景
+按 OPC OS 事实标准核对，invest-dictionary **此前 0 埋点**（Vercel Insights 只有自动 pageview，无自定义事件）。
+
+### 改动
+- `web/js/tracker.js`（新增）— 与 invest-tools 同源的零依赖 SDK
+  - 公共属性：page_referrer（同源）+ utm_5 透传
+  - 自动 page_view / landing_view / 滚动深度（首页）
+  - 公开 API：`window.track(name, params)` / `recordDuration` / `endDuration`
+  - 声明式 `[data-track]` + `[data-track-params]` 绑定
+- `web/index.html`：引入 `/js/tracker.js`（与 Vercel Insights 并存）
+
+### 不做（避免过度设计）
+- 业务元素具体 `[data-track]` 标记：留给后续按页面迭代（首页词条卡 / 搜索框 / 订阅按钮 / 跳转 / footer / 分享 / 热词轮播）
+- 词条详情页事件：terms/ 目录下文件多，按需逐个补
+
+### 验证
+- commit `625c430` push `lj22503/invest-dictionary` main 成功
+- 与 iAsk / invest-tools / invest-brain SDK 接口形态对齐
+
 ## 2026-08-12
 
 ### 每日热词持续产出
