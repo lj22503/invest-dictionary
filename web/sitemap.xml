@@ -1383,4 +1383,19 @@
 <url><loc>https://dictionary.mangofolio.com/terms/%E7%AE%97%E5%8A%9B%E7%BD%91.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://dictionary.mangofolio.com/terms/%E5%BC%BA%E5%88%B6%E9%80%80%E5%B8%82.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://dictionary.mangofolio.com/terms/%E6%95%B0%E6%8D%AE%E4%BA%A7%E6%9D%83.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E9%BB%84%E9%87%91ETF.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/AI%E6%B3%A1%E6%B2%AB.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E6%B8%85%E6%AC%A0.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
