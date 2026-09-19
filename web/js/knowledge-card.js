@@ -7,9 +7,21 @@
   if (window.__dictShareCardLoaded) return;
   window.__dictShareCardLoaded = true;
 
-  var W = 750;            // 画布宽度
-  var PAD = 60;           // 左右留白
-  var MAXW = W - PAD * 2; // 正文可用宽度
+  var W = 1242;            // 画布宽度（朋友圈封面标准）
+  var PAD = 90;            // 左右留白
+  var MAXW = W - PAD * 2; // 正文可用宽度 = 1062
+
+  var EYEBROW_FONT = 'bold 32px "Inter","PingFang SC","Microsoft YaHei","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif';
+  var TITLE_FONT_LG = 'bold 72px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif';
+  var TITLE_FONT_MD = 'bold 56px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif';
+  var ENTITLE_FONT = 'italic 36px "Fraunces","Noto Serif SC",serif';
+
+  var TITLE_LH = 64;       // 章节标题 48px 64 行高（48 * 1.33）
+  var BLOCK_LH = 70;       // 正文 38px 70 行高（38 * 1.85）
+  var QUOTE_LH = 60;       // 引用 36px 60 行高
+  var CARD_GAP = 56;       // 章节间距
+  var HEADING_TO_BODY = 28; // 章节标题 → 正文
+  var DIVIDER_GAP = 32;    // 分隔虚线 → 下一章节标题
 
   function getTermName() {
     var h1 = document.querySelector('h1.main-title, h1');
@@ -98,12 +110,12 @@
 
   // 计算某块内容的高度（用于预测量画布总高）
   function measureBlock(ctx, block, lh) {
-    ctx.font = '30px "PingFang SC","Microsoft YaHei",sans-serif';
+    ctx.font = '38px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif';
     if (block.type === 'ul') {
       var h = 0;
       block.items.forEach(function (it) {
-        h += wrapLines(ctx, '• ' + it, MAXW - 16).length * lh;
-        h += 6;
+        h += wrapLines(ctx, '· ' + it, MAXW - 16).length * lh;
+        h += 12;
       });
       return h;
     }
@@ -120,77 +132,74 @@
     var chapter = getChapter();
     var cards = collectCards();
 
-    var H_HEAD = 330;              // 头部区域高度（品牌+标题+分割线）
+    var H_HEAD = 280;              // 头部区域高度（eyebrow + 标题 + 橙条）
     var FOOT_H = 170;              // 底部区域高度
     var MIN_H = 1000;
 
     // ---- 第一遍：测量总高度 ----
     var ctx0 = document.createElement('canvas').getContext('2d');
-    ctx0.font = '34px "PingFang SC","Microsoft YaHei",sans-serif';
-    var titleFont = ctx0.measureText(name).width > MAXW ? 'bold 44px "PingFang SC","Microsoft YaHei",sans-serif' : 'bold 56px "PingFang SC","Microsoft YaHei",sans-serif';
+    ctx0.font = TITLE_FONT_LG;
+    var titleFont = ctx0.measureText(name).width > MAXW ? TITLE_FONT_MD : TITLE_FONT_LG;
     var bodyH = 0;
-    var TITLE_LH = 64, BLOCK_LH = 48, QUOTE_LH = 46;
     cards.forEach(function (card) {
-      bodyH += 44; // 卡片间距
-      if (card.title) bodyH += measureTitle(ctx0, card.num + ' ' + card.title, 'bold 34px "PingFang SC","Microsoft YaHei",sans-serif', TITLE_LH);
-      bodyH += 14;
+      bodyH += CARD_GAP;
+      if (card.title) bodyH += measureTitle(ctx0, card.title, 'bold 48px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif', TITLE_LH);
+      bodyH += HEADING_TO_BODY;
       card.blocks.forEach(function (b) {
-        if (b.type === 'quote') bodyH += measureBlock(ctx0, b, QUOTE_LH) + 18;
+        if (b.type === 'quote') bodyH += measureBlock(ctx0, b, QUOTE_LH) + 24;
         else bodyH += measureBlock(ctx0, b, BLOCK_LH);
       });
+      bodyH += DIVIDER_GAP; // 章节间分隔虚线 + 间距
     });
-    var H = Math.max(MIN_H, H_HEAD + bodyH + FOOT_H);
+    var H = Math.max(1500, H_HEAD + bodyH + FOOT_H);
 
     // ---- 第二遍：正式绘制 ----
     var canvas = document.createElement('canvas');
     canvas.width = W; canvas.height = H;
     var ctx = canvas.getContext('2d');
 
-    // 背景
-    ctx.fillStyle = '#f5efe0';
+    // 背景（纯白）
+    ctx.fillStyle = '#FFFFFF';
     ctx.fillRect(0, 0, W, H);
-    ctx.strokeStyle = '#c43a31';
-    ctx.lineWidth = 6;
-    ctx.strokeRect(18, 18, W - 36, H - 36);
 
     var y = 0;
 
-    // 品牌
-    y += 110;
-    ctx.font = 'bold 34px "PingFang SC","Microsoft YaHei",sans-serif';
-    ctx.fillStyle = '#c43a31';
+    // Eyebrow 眉题
+    y += 70;
+    ctx.font = EYEBROW_FONT;
+    ctx.fillStyle = '#F97316';
     ctx.textAlign = 'left';
-    ctx.fillText('投资词典 Invest Dictionary', PAD, y);
+    ctx.fillText('MANGOFOLIO · 投资词典', PAD, y);
 
-    // 术语名
-    y += 120;
+    // 主标题（Noto Serif SC 72px 900）
+    y += 80;
     ctx.font = titleFont;
-    ctx.fillStyle = '#2c2c2c';
-    ctx.fillText(name, PAD, y);
-    y += 16;
-    if (chapter) {
-      ctx.font = '26px "PingFang SC","Microsoft YaHei",sans-serif';
-      ctx.fillStyle = '#8b8b8b';
-      ctx.fillText(chapter, PAD, y + 20);
-      y += 48;
-    }
+    ctx.fillStyle = '#241610';
+    var titleLines = wrapLines(ctx, name, MAXW);
+    titleLines.forEach(function (ln) {
+      ctx.fillText(ln, PAD, y);
+      y += 80;
+    });
 
-    // 分割线
-    y += 20;
-    ctx.strokeStyle = '#d9d4cc';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(PAD, y);
-    ctx.lineTo(W - PAD, y);
-    ctx.stroke();
+    // En-title（Fraunces italic 橙）
+    y += 8;
+    var enTitle = 'Invest Dictionary · ' + (chapter || '14-day reverse repo');
+    ctx.font = ENTITLE_FONT;
+    ctx.fillStyle = '#F97316';
+    ctx.fillText(enTitle, PAD, y);
+
+    // 2px 橙条 80% 宽
+    y += 24;
+    ctx.fillStyle = '#F97316';
+    ctx.fillRect(PAD, y, MAXW * 0.8, 2);
 
     // 正文卡片
     y += 60;
     cards.forEach(function (card) {
       y += 44;
       if (card.title) {
-        ctx.font = 'bold 34px "PingFang SC","Microsoft YaHei",sans-serif';
-        ctx.fillStyle = '#c43a31';
+        ctx.font = 'bold 34px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+        ctx.fillStyle = '#E05E0A';
         var titleLines = wrapLines(ctx, card.num + ' ' + card.title, MAXW);
         titleLines.forEach(function (ln) {
           ctx.fillText(ln, PAD, y);
@@ -200,31 +209,31 @@
       }
       card.blocks.forEach(function (b) {
         if (b.type === 'quote') {
-          // 一句话：左红竖线 + 红字
+          // 一句话：左橙竖线 + 深橙字
           y += 10;
-          ctx.strokeStyle = '#c43a31';
+          ctx.strokeStyle = '#F97316';
           ctx.lineWidth = 4;
           ctx.beginPath();
           ctx.moveTo(PAD, y - 8);
           ctx.lineTo(PAD, y + 8);
           ctx.stroke();
-          ctx.font = 'bold 30px "PingFang SC","Microsoft YaHei",sans-serif';
-          ctx.fillStyle = '#c43a31';
+          ctx.font = 'bold 30px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+          ctx.fillStyle = '#E05E0A';
           var qLines = wrapLines(ctx, b.text, MAXW - 12);
           var qStart = y;
           qLines.forEach(function (ln) {
             ctx.fillText(ln, PAD + 18, y);
             y += QUOTE_LH;
           });
-          // 红竖线拉长到引语底部
+          // 橙竖线拉长到引语底部
           ctx.beginPath();
           ctx.moveTo(PAD, qStart - 12);
           ctx.lineTo(PAD, y - QUOTE_LH + 10);
           ctx.stroke();
           y += 8;
         } else if (b.type === 'ul') {
-          ctx.font = '30px "PingFang SC","Microsoft YaHei",sans-serif';
-          ctx.fillStyle = '#3a3a3a';
+          ctx.font = '30px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+          ctx.fillStyle = '#3A332C';
           b.items.forEach(function (it) {
             var ls = wrapLines(ctx, '• ' + it, MAXW - 16);
             ls.forEach(function (ln) {
@@ -234,8 +243,8 @@
             y += 4;
           });
         } else {
-          ctx.font = '30px "PingFang SC","Microsoft YaHei",sans-serif';
-          ctx.fillStyle = '#3a3a3a';
+          ctx.font = '30px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+          ctx.fillStyle = '#3A332C';
           var ps = wrapLines(ctx, b.text, MAXW);
           ps.forEach(function (ln) {
             ctx.fillText(ln, PAD, y);
@@ -245,10 +254,10 @@
       });
     });
 
-    // 底部
+    // 底部（暖灰副标）
     y = H - FOOT_H + 50;
-    ctx.font = '26px "PingFang SC","Microsoft YaHei",sans-serif';
-    ctx.fillStyle = '#8b8b8b';
+    ctx.font = '26px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+    ctx.fillStyle = '#8A7D70';
     ctx.fillText('https://dictionary.mangofolio.com', PAD, y);
     ctx.fillText('内容仅供学习参考，不构成投资建议', PAD, y + 50);
     return canvas;
