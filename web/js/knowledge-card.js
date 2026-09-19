@@ -265,12 +265,14 @@
       });
     });
 
-    // 底部（暖灰 URL + 副标）
-    y = H - FOOT_H + 50;
+    // 底部（暖灰 URL + 副标，距底边 40px 留白）
+    y = H - 40;
     ctx.font = '32px "Inter","PingFang SC","Microsoft YaHei","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif';
     ctx.fillStyle = '#8A7D70';
-    ctx.fillText('https://dictionary.mangofolio.com', PAD, y);
-    ctx.fillText('内容仅供学习参考，不构成投资建议', PAD, y + 50);
+    ctx.textAlign = 'right';
+    ctx.fillText('https://dictionary.mangofolio.com', W - PAD, y - 50);
+    ctx.fillText('内容仅供学习参考，不构成投资建议', W - PAD, y);
+    ctx.textAlign = 'left';
     return canvas;
   }
 
