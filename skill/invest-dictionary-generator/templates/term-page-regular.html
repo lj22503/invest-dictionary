@@ -59,10 +59,7 @@
   }
 
   body {
-    background: #f5efe0;
-    background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+    background: var(--bg-paper);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -70,12 +67,7 @@
     justify-content: flex-start;
     padding: 2rem 1rem 4rem;
     font-family:
-      "KaiTi", "楷体", "STKaiti",
-      "FangSong", "仿宋", "STFangsong",
-      "Noto Serif SC", "Source Han Serif SC",
-      "Songti SC", "宋体", "SimSun",
-      "PingFang SC", "Microsoft YaHei",
-      serif;
+      var(--mf-fonts-sans), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
     color: #3a3a3a;
     line-height: 1.9;
     letter-spacing: 0.02em;
@@ -521,13 +513,13 @@ body.term-page {
 <style>
   /* ===== InvestBuddy 主题变量 ===== */
   :root {
-    --bg-paper: #F5F2EC;
-    --accent: #C43A31;
-    --accent-hover: #A33028;
-    --ink: #2C2C2C;
-    --ink-light: #5A4A3A;
-    --border-dashed: #c4b5a0;
-    --card-bg: #faf6ee;
+    --bg-paper: var(--mf-colors-background);
+    --accent: var(--mf-colors-text-link);
+    --accent-hover: var(--mf-colors-text-link-hover);
+    --ink: var(--mf-colors-text);
+    --ink-light: var(--mf-colors-text-weak);
+    --border-dashed: var(--mf-colors-border-weak);
+    --card-bg: var(--mf-colors-background-surface);
   }
 
   /* ===== 外层包裹 ===== */
@@ -778,7 +770,8 @@ body.term-page {
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#c43a31">
+<meta name="theme-color" content="#F97316">
+<link rel="stylesheet" href="../css/mangofolio-tokens-v09.css">
 </head>
 <body class="term-page">
 
