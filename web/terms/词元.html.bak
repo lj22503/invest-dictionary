@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>词元是什么意思？国家数据局力推的新商业模式，数据要素按次计价 - 投资词典</title>
+<meta name="description" content="2026数博会年度主题"词元"：国家数据局提出研究词元增值订阅、按效付费等商业模式，把数据要素变成可计价、可交易的新资产。">
+<meta name="keywords" content="词元, 数据要素, 数据产业, 数博会, 按效付费, 数字资产">
+<link rel="canonical" href="https://dictionary.mangofolio.com/terms/%E8%AF%8D%E5%85%83.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="词元 - 投资词典 · Invest Dictionary">
+<meta property="og:description" content="2026数博会年度主题"词元"：国家数据局提出研究词元增值订阅、按效付费等商业模式，把数据要素变成可计价、可交易的新资产。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dictionary.mangofolio.com/terms/%E8%AF%8D%E5%85%83.html">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="词元 - 投资词典 · Invest Dictionary">
+<meta name="twitter:description" content="2026数博会年度主题"词元"：国家数据局提出研究词元增值订阅、按效付费等商业模式，把数据要素变成可计价、可交易的新资产。">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "词元",
+  "description": "2026数博会年度主题"词元"：国家数据局提出研究词元增值订阅、按效付费等商业模式，把数据要素变成可计价、可交易的新资产。",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "投资词典 · Invest Dictionary"
+  },
+  "termCode": "hot-20260831-02",
+  "url": "https://dictionary.mangofolio.com/terms/%E8%AF%8D%E5%85%83.html"
+}
+</script>
+<style>
+/* ===== Reset & Base ===== */
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #f5efe0;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem 4rem;
+    font-family:
+      "KaiTi", "楷体", "STKaiti",
+      "FangSong", "仿宋", "STFangsong",
+      "Noto Serif SC", "Source Han Serif SC",
+      "Songti SC", "宋体", "SimSun",
+      "PingFang SC", "Microsoft YaHei",
+      serif;
+    color: #3a3a3a;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Paper Sheet ===== */
+  .paper {
+    max-width: 720px;
+    width: 100%;
+    background: #faf6ee;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 27px,
+        rgba(180,155,120,0.06) 27px,
+        rgba(180,155,120,0.06) 28px
+      );
+    border: 1.5px dashed #c4b5a0;
+    border-radius: 4px 10px 6px 9px;
+    padding: 3rem 2.5rem 2.5rem;
+    box-shadow:
+      2px 3px 0 rgba(60,45,25,0.06),
+      5px 7px 14px rgba(60,45,25,0.10),
+      inset 0 0 80px rgba(230,215,190,0.18);
+    position: relative;
+    overflow: visible;
+  }
+
+  .paper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 70px;
+    height: 28px;
+    background: rgba(220,205,175,0.55);
+    border: 1px dashed #c4b5a0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  /* ===== Header Area ===== */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.8rem;
+    position: relative;
+  }
+
+  .title-wrap {
+    flex: 1;
+  }
+
+  .main-title {
+    font-family: "KaiTi", "楷体", "STKaiti", "FangSong", "仿宋", serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: #3a3a3a;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.35em;
+    letter-spacing: 0.15em;
+  }
+
+  .main-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #e8784a 0px,
+        #e8784a 4px,
+        transparent 4px,
+        transparent 10px,
+        #e8784a 10px,
+        #e8784a 12px,
+        transparent 12px,
+        transparent 18px
+      );
+    border-radius: 2px;
+    opacity: 0.75;
+  }
+
+  .subtitle {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #8b7a65;
+    letter-spacing: 0.05em;
+    font-style: italic;
+  }
+
+  /* ===== Card Divider ===== */
+  .card-divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-divider::before {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 3px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #c4b5a0 0px,
+        #c4b5a0 6px,
+        transparent 6px,
+        transparent 16px,
+        #c4b5a0 16px,
+        #c4b5a0 22px,
+        transparent 22px,
+        transparent 36px
+      );
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  .card-divider::after {
+    content: '✂';
+    position: absolute;
+    font-size: 0.8rem;
+    color: #b8a58e;
+    opacity: 0.5;
+    top: -4px;
+    right: 12%;
+    transform: rotate(10deg);
+  }
+
+  /* ===== Cards ===== */
+  .card {
+    position: relative;
+    padding: 1.8rem 1.5rem 2rem;
+    margin-bottom: 0.6rem;
+    border: 1.5px dashed #c4b5a0;
+    border-radius: 6px 14px 8px 11px;
+    background: #fdfaf4;
+    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+  }
+
+  .card-number {
+    position: absolute;
+    top: -18px;
+    left: -12px;
+    width: 38px;
+    height: 38px;
+    border: 2px dashed #c4b5a0;
+    border-radius: 48% 52% 50% 50% / 45% 55% 52% 48%;
+    background: #faf6ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "KaiTi", "楷体", "STKaiti", serif;
+    font-size: 1.1rem;
+    color: #6b5e4e;
+    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    user-select: none;
+  }
+
+  .card-title {
+    font-family: "KaiTi", "楷体", "STKaiti", "FangSong", "仿宋", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #3a3a3a;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.45em;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.08em;
+  }
+
+  .card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #d4745c 0px,
+        #d4745c 3px,
+        transparent 3px,
+        transparent 7px,
+        #d4745c 7px,
+        #d4745c 10px,
+        transparent 10px,
+        transparent 14px
+      );
+    border-radius: 1px;
+    opacity: 0.65;
+  }
+
+  .card-body {
+    font-size: 0.95rem;
+    color: #4a4035;
+    line-height: 2.1;
+    margin-bottom: 1rem;
+  }
+
+  .card-body p {
+    margin-bottom: 0.7rem;
+  }
+
+  .card-body .highlight {
+    position: relative;
+    display: inline;
+    padding: 0 0.15em;
+  }
+
+  .card-body .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(232,120,74,0.18);
+    z-index: -1;
+    border-radius: 2px;
+  }
+
+  .card-body .tag {
+    display: inline-block;
+    background: rgba(232,120,74,0.10);
+    color: #8b5040;
+    padding: 0.1em 0.5em;
+    border-radius: 3px 6px 4px 5px;
+    border: 1px dashed rgba(232,120,74,0.30);
+    font-size: 0.88rem;
+    margin: 0 0.1em;
+  }
+
+  .step-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .step-list li {
+    position: relative;
+    padding-left: 1.8em;
+    margin-bottom: 0.7rem;
+  }
+
+  .step-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 8px;
+    height: 8px;
+    background: #e8784a;
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+  }
+
+  .card-quote {
+    border-left: 3px dashed #d4745c;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #6b5040;
+    font-style: italic;
+    font-size: 0.92rem;
+  }
+
+  /* ===== Footer Area ===== */
+  .footer-area {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed #c4b5a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .footer-sign {
+    background: #faf6ee;
+    border: 1.5px dashed #c4b5a0;
+    border-radius: 3px 10px 5px 8px;
+    padding: 0.6rem 1.2rem;
+    font-family: "KaiTi", "楷体", "STKaiti", serif;
+    font-size: 1rem;
+    color: #5a4a3a;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-sign .arrow {
+    font-size: 1.3rem;
+    color: #e8784a;
+  }
+
+  .footer-dash {
+    width: 60%;
+    height: 1px;
+    border-top: 1px dashed #c4b5a0;
+    margin: 0.3rem 0;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    html { font-size: 15px; }
+
+    .paper {
+      padding: 2rem 1.2rem 1.8rem;
+      border-radius: 3px 8px 5px 7px;
+    }
+
+    .main-title {
+      font-size: 2.4rem;
+    }
+
+    .card {
+      padding: 1.5rem 1rem 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+    }
+
+    .card-number {
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+      top: -15px;
+      left: -8px;
+    }
+
+    .card-body {
+      font-size: 0.88rem;
+      line-height: 1.9;
+    }
+
+    .footer-sign {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.9rem;
+    }
+
+    .card-divider::after {
+      right: 5%;
+    }
+  }
+
+/* ===== 统一导航头部 ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(245,242,236,0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #D9D4CC;
+}
+.site-header .brand {
+  font-family: "Noto Serif SC", "KaiTi", "STKaiti", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.site-header .brand .en {
+  font-size: 0.72rem;
+  color: #C43A31;
+  letter-spacing: 0.14em;
+  font-style: italic;
+  font-weight: 400;
+}
+.site-header nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.site-header nav a,
+.site-header nav button {
+  font-size: 0.88rem;
+  color: #5A5A5A;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.site-header nav a:hover,
+.site-header nav button:hover {
+  color: #C43A31;
+  border-bottom-color: #C43A31;
+}
+@media (max-width: 560px) {
+  .site-header { flex-direction: column; gap: 8px; padding: 12px 16px; }
+  .site-header nav { gap: 14px; }
+}
+
+/* ===== 详情页导航适配 ===== */
+body.term-page .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+body.term-page {
+  padding-top: 72px !important;
+}
+</style>
+<style>
+  /* ===== InvestBuddy 主题变量 ===== */
+  :root {
+    --bg-paper: #F5F2EC;
+    --accent: #C43A31;
+    --accent-hover: #A33028;
+    --ink: #2C2C2C;
+    --ink-light: #5A4A3A;
+    --border-dashed: #c4b5a0;
+    --card-bg: #faf6ee;
+  }
+
+  /* ===== 外层包裹 ===== */
+  body.term-page {
+    background: var(--bg-paper);
+    padding-top: 0;
+  }
+
+  /* ===== 面包屑 ===== */
+  .term-breadcrumb {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .term-breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .term-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  .term-breadcrumb .bc-sep {
+    margin: 0 0.4rem;
+    color: #b8a58e;
+  }
+  .term-breadcrumb .bc-current {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ===== 分享按钮区 ===== */
+  .share-bar {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto 1.2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .share-bar .share-label {
+    font-size: 0.82rem;
+    color: var(--ink-light);
+    margin-right: 0.3rem;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.85rem;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 4px 8px 5px 7px;
+    background: var(--card-bg);
+    color: var(--ink);
+    font-size: 0.82rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: "KaiTi", "楷体", serif;
+  }
+  .share-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+  }
+  .share-btn.wechat-btn {
+    position: relative;
+  }
+  .share-btn.wechat-btn .qr-popup {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 6px;
+    padding: 0.8rem;
+    box-shadow: 2px 3px 12px rgba(0,0,0,0.12);
+    z-index: 100;
+    text-align: center;
+  }
+  .share-btn.wechat-btn:hover .qr-popup {
+    display: block;
+  }
+  .share-btn.wechat-btn .qr-popup img {
+    width: 120px;
+    height: 120px;
+    background: #f0f0f0;
+    display: block;
+  }
+  .share-btn.wechat-btn .qr-popup span {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 0.3rem;
+  }
+  .copy-toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .copy-toast.show {
+    opacity: 1;
+  }
+
+  /* ===== 导航区 ===== */
+  .term-pager {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.8rem auto 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-family: "KaiTi", "楷体", "PingFang SC", sans-serif;
+  }
+  .term-pager a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 4px 8px 5px 7px;
+    background: var(--card-bg);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: all 0.2s ease;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .term-pager a:hover {
+    border-color: var(--accent);
+    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+  }
+  .term-pager .pager-disabled {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1.5px dashed #ddd;
+    border-radius: 4px 8px 5px 7px;
+    background: #f8f8f8;
+    color: #bbb;
+    font-size: 0.88rem;
+    cursor: default;
+  }
+
+  /* ===== 关联词条 ===== */
+  .term-related {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
+    padding: 1rem 1.5rem;
+    border: 1.5px dashed var(--border-dashed);
+    border-radius: 6px 10px 7px 8px;
+    background: var(--card-bg);
+    font-family: "KaiTi", "楷体", "PingFang SC", sans-serif;
+  }
+  .term-related h3 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    font-family: "KaiTi", "楷体", serif;
+  }
+  .related-links {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+  .related-links a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .related-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== 返回目录 ===== */
+  .term-back {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "KaiTi", "楷体", "PingFang SC", sans-serif;
+  }
+  .term-back a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .term-back a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== 底部间距 ===== */
+  .term-footer-spacer {
+    height: 3rem;
+  }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 600px) {
+    .share-bar {
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .share-btn {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.78rem;
+    }
+    .term-breadcrumb {
+      font-size: 0.78rem;
+    }
+    .term-pager {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .term-pager a, .term-pager .pager-disabled {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+<style>
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #c43a31; text-decoration: none; }
+    .mangofolio-nav a:hover { text-decoration: underline; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+  </style>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#c43a31">
+
+</head>
+<body class="term-page">
+
+<div class="copy-toast" id="copyToast">链接已复制</div>
+
+<nav class="term-breadcrumb" aria-label="面包屑导航">
+  <a href="../index.html">投资词典</a>
+  <span class="bc-sep">›</span>
+  <a href="../index.html#daily-hot">每日热词</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-current">限售股</span>
+</nav>
+
+<!-- 正文 -->
+<div class="paper">
+  <header class="header">
+    <div class="title-wrap">
+      <h1 class="main-title">限售股</h1>
+      <p class="subtitle">—— 理财字典 · 每日热词</p>
+    </div>
+  </header>
+      <article class="card">
+    <div class="card-number">①</div>
+    <h2 class="card-title">什么是限售股：被“锁住”的股票</h2>
+    <div class="card-body">
+<p>限售股，就是<span class="highlight">规定期限内不能在二级市场自由转让的股票</span>。</p>
+<p>常见来源：<span class="tag">IPO前的原始股东持股</span>、<span class="tag">定增获得的股份</span>、<span class="tag">股权激励授予的股票</span>。它们通常要锁定期满、公告解禁后，才能减持套现。</p>
+<p>限售股的意义是<span class="highlight">防止大股东上市就“跑路”</span>，把公司发展和股东利益绑在一起。</p>
+<div class="card-quote">一句话：规定时间不能卖的股票，就是限售股。</div>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+      <article class="card">
+    <div class="card-number">②</div>
+    <h2 class="card-title">限售股转让个税新规：20%税率，多退少补</h2>
+    <div class="card-body">
+<p>2026 年 8 月 28 日，财政部、税务总局、证监会发布《关于规范转让上市公司限售股个人所得税政策的公告》：<span class="highlight">个人转让上市公司限售股所得，按“财产转让所得”适用20%税率缴纳个税</span>。</p>
+<ul class="step-list"><li><strong>税率明确。按实际转让收入减实际成本计算应纳税额，多退少补。</strong></li><li><strong>清算申报。转让限售股次年6月30日前，向主管税务机关提供成本原值等资料办理清算。</strong></li><li><strong>影响范围。主要影响IPO前股东、定增对象、股权激励持有人等“有锁定期”的股东。</strong></li></ul>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+      <article class="card">
+    <div class="card-number">③</div>
+    <h2 class="card-title">跟你有什么关系</h2>
+    <div class="card-body">
+<ul class="step-list"><li><strong>持股人：如果你持有股权激励股票或参与定增，减持前先把税算清楚，避免被“20%个税”打乱计划。</strong></li><li><strong>普通股民：在二级市场买卖股票不适用这条政策，别被标题吓到；但解禁高峰期的抛压值得留意。</strong></li><li><strong>打工人视角：不少公司用股权激励留人，看懂限售和税负规则，才能评估手里的“纸面财富”到底值多少。</strong></li></ul>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+      <article class="card">
+    <div class="card-number">④</div>
+    <h2 class="card-title">以后怎么看</h2>
+    <div class="card-body">
+<ul class="step-list"><li><strong>看解禁日历。公司公告里的解禁时间、数量，是判断减持压力的重要参考。</strong></li><li><strong>看减持公告。大股东减持前后股价波动大，追高前先看是否有减持计划。</strong></li><li><strong>记住一句话。限售股是“带锁的股票”，解锁和税负都影响它最终值多少钱。</strong></li></ul>
+<p style="color:#8b7a65; margin-top:1rem;">记住：<span class="tag">拿到股权激励先别高兴太早，锁定期和税单都在后面。</span></p>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+</div>
+
+<nav class="term-pager"><span class="pager-disabled">← 无</span><a href="../index.html#daily-hot" class="pager-next" title="返回每日热词">每日热词 →</a></nav>
+
+<div class="term-related">
+  <h3>关联词条</h3>
+  <div class="related-links"><a href="https://dictionary.mangofolio.com/terms/%E9%85%8D%E5%94%AE%EF%BC%88%E6%96%B0%E8%82%A1%E9%85%8D%E5%94%AE%EF%BC%89.html">配售（新股配售）</a> · <a href="https://dictionary.mangofolio.com/terms/%E6%96%B0%E8%82%A1%EF%BC%88IPO%20_%20%E6%89%93%E6%96%B0%EF%BC%89.html">新股（IPO / 打新）</a></div>
+</div>
+<div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
+
+<div class="term-footer-spacer"></div>
+<div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
+
+<div class="term-footer-spacer"></div>
+<script>
+function copyPageUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  }).catch(function() {
+    // fallback
+    var ta = document.createElement('textarea');
+    ta.value = window.location.href;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  });
+}
+</script>
+
+<!-- Mangofolio 系列导航 -->
+<footer class="mangofolio-nav">
+  <style>
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #c43a31; text-decoration: none; }
+    .mangofolio-nav a:hover { text-decoration: underline; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+  </style><body class="term-page">
+
+<div class="copy-toast" id="copyToast">链接已复制</div>
+
+<nav class="term-breadcrumb" aria-label="面包屑导航">
+  <a href="../index.html">投资词典</a>
+  <span class="bc-sep">›</span>
+  <a href="../index.html#daily-hot">每日热词</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-current">词元</span>
+</nav>
+
+<!-- 正文 -->
+<div class="paper">
+  <header class="header">
+    <div class="title-wrap">
+      <h1 class="main-title">词元</h1>
+      <p class="subtitle">—— 理财字典 · 每日热词</p>
+    </div>
+  </header>
+      <article class="card">
+    <div class="card-number">①</div>
+    <h2 class="card-title">什么是词元：数据要素的"计量单位"</h2>
+    <div class="card-body">
+<p>词元，是2026中国国际大数据产业博览会的年度主题，指把<span class="highlight">数据按"词"（token）级拆分、计价、交易</span>的新模式。</p>
+<p>国家数据局在数博会上明确：要围绕国民经济重大场景，研究探索<span class="tag">词元增值订阅</span>、<span class="tag">按效付费</span>等商业模式。当前我国数据产业规模已超6万亿元，和AI高度相关的数据产品与服务占七成以上。</p>
+<div class="card-quote">一句话：数据正在被拆成"词"来卖，用多少付多少，按效果给钱。</div>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+
+      <article class="card">
+    <div class="card-number">②</div>
+    <h2 class="card-title">为什么重要：数据从"资源"变"资产"</h2>
+    <div class="card-body">
+<p>过去数据"沉睡"在机构手里，难以定价、难以交易。词元模式试图解决三件事：</p>
+<ul class="step-list">
+<li><strong>定价：把数据拆成可计量的最小单位，买卖双方有共同标尺。</strong></li>
+<li><strong>流通：订阅制+按效付费，让中小企业也能用得起高质量数据。</strong></li>
+<li><strong>激励：数据提供方按调用量获得收益，激活数据供给。</strong></li>
+</ul>
+<p>数据标注、AI训练、行业大模型等环节都将受益。</p>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+
+      <article class="card">
+    <div class="card-number">③</div>
+    <h2 class="card-title">跟你有什么关系</h2>
+    <div class="card-body">
+<ul class="step-list">
+<li><strong>生活更便利：更多高质量数据被激活，AI助手、医疗、交通等服务的精度会提升。</strong></li>
+<li><strong>就业机会：数据标注、数据交易、数据合规相关岗位需求上升。</strong></li>
+<li><strong>投资视角：数据要素概念是政策主线，相关上市公司和基金值得长期跟踪，但短期别追高。</strong></li>
+</ul>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+
+      <article class="card">
+    <div class="card-number">④</div>
+    <h2 class="card-title">以后怎么看</h2>
+    <div class="card-body">
+<ul class="step-list">
+<li><strong>看试点：32个城市数据标注先行先试、数据交易场所的落地节奏。</strong></li>
+<li><strong>看标准：词元如何定价、效果如何衡量，决定商业模式能否跑通。</strong></li>
+<li><strong>记住一句话：AI时代，数据是石油，词元就是它的"升和桶"。</strong></li>
+</ul>
+<p style="color:#8b7a65; margin-top:1rem;">记住：<span class="tag">国家在给数据"定度量衡"，词元经济开始落地。</span></p>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+
+  <div class="card-divider"></div>
+</div>
+
+<nav class="term-pager"><span class="pager-disabled">← 无</span><a href="../index.html#daily-hot" class="pager-next" title="返回每日热词">每日热词 →</a></nav>
+
+<div class="term-related">
+  <h3>关联词条</h3>
+  <div class="related-links"><a href="https://dictionary.mangofolio.com/terms/Token%E8%B4%B7.html">Token贷</a> · <a href="https://dictionary.mangofolio.com/terms/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html">人工智能</a> · <a href="https://dictionary.mangofolio.com/terms/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81.html">数字货币</a></div>
+</div>
+<div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
+
+<div class="term-footer-spacer"></div>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#c43a31">
+
+</head>
+<body class="term-page">
+
+<div class="copy-toast" id="copyToast">链接已复制</div>
+
+<nav class="term-breadcrumb" aria-label="面包屑导航">
+  <a href="../index.html">投资词典</a>
+  <span class="bc-sep">›</span>
+  <a href="../index.html#daily-hot">每日热词</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-current">限售股</span>
+</nav>
+
+<!-- 正文 -->
+<div class="paper">
+  <header class="header">
+    <div class="title-wrap">
+      <h1 class="main-title">限售股</h1>
+      <p class="subtitle">—— 理财字典 · 每日热词</p>
+    </div>
+  </header>
+      <article class="card">
+    <div class="card-number">①</div>
+    <h2 class="card-title">什么是限售股：被“锁住”的股票</h2>
+    <div class="card-body">
+<p>限售股，就是<span class="highlight">规定期限内不能在二级市场自由转让的股票</span>。</p>
+<p>常见来源：<span class="tag">IPO前的原始股东持股</span>、<span class="tag">定增获得的股份</span>、<span class="tag">股权激励授予的股票</span>。它们通常要锁定期满、公告解禁后，才能减持套现。</p>
+<p>限售股的意义是<span class="highlight">防止大股东上市就“跑路”</span>，把公司发展和股东利益绑在一起。</p>
+<div class="card-quote">一句话：规定时间不能卖的股票，就是限售股。</div>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+      <article class="card">
+    <div class="card-number">②</div>
+    <h2 class="card-title">限售股转让个税新规：20%税率，多退少补</h2>
+    <div class="card-body">
+<p>2026 年 8 月 28 日，财政部、税务总局、证监会发布《关于规范转让上市公司限售股个人所得税政策的公告》：<span class="highlight">个人转让上市公司限售股所得，按“财产转让所得”适用20%税率缴纳个税</span>。</p>
+<ul class="step-list"><li><strong>税率明确。按实际转让收入减实际成本计算应纳税额，多退少补。</strong></li><li><strong>清算申报。转让限售股次年6月30日前，向主管税务机关提供成本原值等资料办理清算。</strong></li><li><strong>影响范围。主要影响IPO前股东、定增对象、股权激励持有人等“有锁定期”的股东。</strong></li></ul>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+      <article class="card">
+    <div class="card-number">③</div>
+    <h2 class="card-title">跟你有什么关系</h2>
+    <div class="card-body">
+<ul class="step-list"><li><strong>持股人：如果你持有股权激励股票或参与定增，减持前先把税算清楚，避免被“20%个税”打乱计划。</strong></li><li><strong>普通股民：在二级市场买卖股票不适用这条政策，别被标题吓到；但解禁高峰期的抛压值得留意。</strong></li><li><strong>打工人视角：不少公司用股权激励留人，看懂限售和税负规则，才能评估手里的“纸面财富”到底值多少。</strong></li></ul>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+      <article class="card">
+    <div class="card-number">④</div>
+    <h2 class="card-title">以后怎么看</h2>
+    <div class="card-body">
+<ul class="step-list"><li><strong>看解禁日历。公司公告里的解禁时间、数量，是判断减持压力的重要参考。</strong></li><li><strong>看减持公告。大股东减持前后股价波动大，追高前先看是否有减持计划。</strong></li><li><strong>记住一句话。限售股是“带锁的股票”，解锁和税负都影响它最终值多少钱。</strong></li></ul>
+<p style="color:#8b7a65; margin-top:1rem;">记住：<span class="tag">拿到股权激励先别高兴太早，锁定期和税单都在后面。</span></p>
+    </div>
+  </article>
+  <div class="card-divider"></div>
+</div>
+
+<nav class="term-pager"><span class="pager-disabled">← 无</span><a href="../index.html#daily-hot" class="pager-next" title="返回每日热词">每日热词 →</a></nav>
+
+<div class="term-related">
+  <h3>关联词条</h3>
+  <div class="related-links"><a href="https://dictionary.mangofolio.com/terms/%E9%85%8D%E5%94%AE%EF%BC%88%E6%96%B0%E8%82%A1%E9%85%8D%E5%94%AE%EF%BC%89.html">配售（新股配售）</a> · <a href="https://dictionary.mangofolio.com/terms/%E6%96%B0%E8%82%A1%EF%BC%88IPO%20_%20%E6%89%93%E6%96%B0%EF%BC%89.html">新股（IPO / 打新）</a></div>
+</div>
+<div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
+
+<div class="term-footer-spacer"></div>
+<div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
+
+<div class="term-footer-spacer"></div>
+<script>
+function copyPageUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  }).catch(function() {
+    // fallback
+    var ta = document.createElement('textarea');
+    ta.value = window.location.href;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  });
+}
+</script>
+
+<!-- Mangofolio 系列导航 -->
+<footer class="mangofolio-nav">
+  <style>
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #c43a31; text-decoration: none; }
+    .mangofolio-nav a:hover { text-decoration: underline; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+  </style>
+  <span class="mf-label">Mangofolio 系列</span>
+  <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
+  <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
+  <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
+  <a href="https://view.mangofolio.com">市场观察 View</a>
+  <a href="https://invest-tools.mangofolio.app" style="color:#c43a31;">财务工具箱 FinTools</a>
+  <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
+</footer>
+
+<script src="../js/knowledge-card.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})}</script>
+</body>
+</html>
+
