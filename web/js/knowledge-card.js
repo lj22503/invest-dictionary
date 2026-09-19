@@ -265,9 +265,9 @@
       });
     });
 
-    // 底部（暖灰副标）
+    // 底部（暖灰 URL + 副标）
     y = H - FOOT_H + 50;
-    ctx.font = '26px "Inter","PingFang SC","Microsoft YaHei","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif';
+    ctx.font = '32px "Inter","PingFang SC","Microsoft YaHei","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif';
     ctx.fillStyle = '#8A7D70';
     ctx.fillText('https://dictionary.mangofolio.com', PAD, y);
     ctx.fillText('内容仅供学习参考，不构成投资建议', PAD, y + 50);
