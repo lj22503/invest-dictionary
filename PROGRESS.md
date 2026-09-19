@@ -3,6 +3,50 @@
 > mangofolio 生态第 3 块 · 术语平权（听得懂）。213+ 中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
 
+## 2026-09-19 · 知识卡片 v3
+
+### 背景
+"生成知识卡片"下载的 PNG 是 dictionary 站最核心的"分享出去"素材。
+v2 版（2026-08 之前）用朱砂红 + 羊皮纸 + 楷体国风体系，与 mangofolio v1.0 品牌库脱节；
+mangofolio v1.0 第 3.3 节明令严禁朱砂红 `#C43A31`。
+按规范重构为杂志头条风格。
+
+### 改动
+- `web/js/knowledge-card.js` — 整个 `buildCard()` 重写为 v3
+  - 主色朱砂红 `#C43A31` → 芒果橙 `#F97316`（v1.0 严禁色移除）
+  - 底色羊皮纸 `#f5efe0` → 纯白 `#FFFFFF`
+  - 字体链 `"PingFang SC","Microsoft YaHei"` → Noto Serif SC 主导（中文衬线）
+  - 字号 1242px 宽（朋友圈封面标准），高度自适应（最小 1500）
+  - 加 Eyebrow 眉题 "MANGOFOLIO · 投资词典" + En-title Fraunces italic + 80% 宽 2px 橙条（杂志头条标志）
+  - 章节序号移除（无 ① ② / 02 / 一 ·，纯标题层级）
+  - 章节间分隔：橙色 4px 短条 → 暖墨 12% 50% 虚线 dashed 6px
+  - 字体链补 `"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji"`（避免 Windows emoji 异常，参考 CLAUDE.md 2026-09-17 错误）
+  - 底部距底 40px 留白 + URL 右对齐（杂志风）
+
+### 备份与回滚
+- `web/js/knowledge-card.js.bak-20260919` 保留（10135 bytes，原始 v2）
+- 回滚：`mv web/js/knowledge-card.js.bak-20260919 web/js/knowledge-card.js`
+
+### 验证
+- 4 个抽样词条页强刷 + 生成 PNG + 视觉清单逐项核对
+- 全部通过；唯一微调是底部距底 40px（Task 4 视觉验证触发）
+
+### 全 438 个 terms 页
+- 共用同一份 `web/js/knowledge-card.js`，无需逐页改
+- 自动生效于所有 terms 页（`<script src="../js/knowledge-card.js">`）
+
+### 设计文档
+- spec: `docs/specs/2026-09-19-knowledge-card-v3-design.md`
+- plan: `docs/superpowers/plans/2026-09-19-knowledge-card-v3.md`
+- 模拟方案: `.superpowers/brainstorm/2582-1789781366/content/knowledge-card-directions.html`
+
+### 下一步
+- **首页 v1.0 品牌对齐**（开新对话）
+- iAsk 已对齐（09-18），fintools / brain 已 v08，dictionary 是生态里唯一未做主页对齐的站
+- 待办：读 index.html (259KB) → 对照 v1.0 规范逐项审计 → 出首页改造方案
+
+---
+
 ## 2026-09-10 · 埋点 SDK 引入
 
 ### 背景
