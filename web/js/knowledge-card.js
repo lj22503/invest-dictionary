@@ -133,7 +133,7 @@
     var cards = collectCards();
 
     var H_HEAD = 280;              // 头部区域高度（eyebrow + 标题 + 橙条）
-    var FOOT_H = 170;              // 底部区域高度
+    var FOOT_H = 100;              // 底部区域高度
     var MIN_H = 1000;
 
     // ---- 第一遍：测量总高度 ----
@@ -194,56 +194,67 @@
     ctx.fillRect(PAD, y, MAXW * 0.8, 2);
 
     // 正文卡片
-    y += 60;
-    cards.forEach(function (card) {
-      y += 44;
+    y += 80;
+    cards.forEach(function (card, idx) {
+      if (idx > 0) {
+        // 章节间分隔虚线（暖墨 12% 50% 宽）
+        ctx.strokeStyle = 'rgba(36,22,16,0.12)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([6, 6]);
+        ctx.beginPath();
+        ctx.moveTo(PAD + MAXW * 0.25, y - DIVIDER_GAP / 2);
+        ctx.lineTo(PAD + MAXW * 0.75, y - DIVIDER_GAP / 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+      y += CARD_GAP;
       if (card.title) {
-        ctx.font = 'bold 34px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
-        ctx.fillStyle = '#E05E0A';
-        var titleLines = wrapLines(ctx, card.num + ' ' + card.title, MAXW);
+        ctx.font = 'bold 48px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif';
+        ctx.fillStyle = '#241610';
+        var titleLines = wrapLines(ctx, card.title, MAXW);
         titleLines.forEach(function (ln) {
           ctx.fillText(ln, PAD, y);
           y += TITLE_LH;
         });
-        y += 8;
+        y += HEADING_TO_BODY;
       }
       card.blocks.forEach(function (b) {
         if (b.type === 'quote') {
-          // 一句话：左橙竖线 + 深橙字
+          // 引用条：2px 橙左边 + italic 13px 暖墨
           y += 10;
-          ctx.strokeStyle = '#F97316';
-          ctx.lineWidth = 4;
+          ctx.strokeStyle = 'rgba(249,115,22,0.40)';
+          ctx.lineWidth = 2;
           ctx.beginPath();
-          ctx.moveTo(PAD, y - 8);
-          ctx.lineTo(PAD, y + 8);
+          ctx.moveTo(PAD + 14, y - 8);
+          ctx.lineTo(PAD + 14, y + 10);
           ctx.stroke();
-          ctx.font = 'bold 30px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
-          ctx.fillStyle = '#E05E0A';
-          var qLines = wrapLines(ctx, b.text, MAXW - 12);
+          ctx.font = 'italic 36px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif';
+          ctx.fillStyle = '#3A332C';
+          var qLines = wrapLines(ctx, b.text, MAXW - 32);
           var qStart = y;
           qLines.forEach(function (ln) {
-            ctx.fillText(ln, PAD + 18, y);
+            ctx.fillText(ln, PAD + 36, y);
             y += QUOTE_LH;
           });
-          // 橙竖线拉长到引语底部
+          // 引用条左边竖线拉长
           ctx.beginPath();
-          ctx.moveTo(PAD, qStart - 12);
-          ctx.lineTo(PAD, y - QUOTE_LH + 10);
+          ctx.moveTo(PAD + 14, qStart - 12);
+          ctx.lineTo(PAD + 14, y - QUOTE_LH + 14);
           ctx.stroke();
-          y += 8;
+          y += 20;
         } else if (b.type === 'ul') {
-          ctx.font = '30px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+          ctx.font = '38px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif';
           ctx.fillStyle = '#3A332C';
           b.items.forEach(function (it) {
-            var ls = wrapLines(ctx, '• ' + it, MAXW - 16);
+            var ls = wrapLines(ctx, '· ' + it, MAXW - 16);
             ls.forEach(function (ln) {
               ctx.fillText(ln, PAD + 16, y);
               y += BLOCK_LH;
             });
-            y += 4;
+            y += 8;
           });
         } else {
-          ctx.font = '30px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+          ctx.font = '38px "Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif';
           ctx.fillStyle = '#3A332C';
           var ps = wrapLines(ctx, b.text, MAXW);
           ps.forEach(function (ln) {
@@ -256,7 +267,7 @@
 
     // 底部（暖灰副标）
     y = H - FOOT_H + 50;
-    ctx.font = '26px "Inter","PingFang SC","Microsoft YaHei",sans-serif';
+    ctx.font = '26px "Inter","PingFang SC","Microsoft YaHei","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif';
     ctx.fillStyle = '#8A7D70';
     ctx.fillText('https://dictionary.mangofolio.com', PAD, y);
     ctx.fillText('内容仅供学习参考，不构成投资建议', PAD, y + 50);
