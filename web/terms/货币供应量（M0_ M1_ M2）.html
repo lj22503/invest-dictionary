@@ -59,10 +59,7 @@
   }
 
   body {
-    background: #FFFFFF;
-    background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
+    background: var(--bg-paper);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -70,11 +67,8 @@
     justify-content: flex-start;
     padding: 2rem 1rem 4rem;
     font-family:
-      "Noto Serif SC", "Source Han Serif SC",
-      "Songti SC", "宋体", "SimSun",
-      "PingFang SC", "Microsoft YaHei",
-      serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-    color: #3A332C;
+      var(--mf-fonts-sans), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    color: var(--ink);
     line-height: 1.9;
     letter-spacing: 0.02em;
     -webkit-font-smoothing: antialiased;
@@ -84,22 +78,14 @@
   .paper {
     max-width: 720px;
     width: 100%;
-    background: #FFFFFF;
-    background-image:
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 27px,
-        rgba(0,0,0,0) 27px,
-        rgba(0,0,0,0) 28px
-      );
-    border: 1.5px dashed rgba(36,22,16,0.10);
+    background: var(--bg-paper);
+    border: 1.5px dashed var(--border-dashed);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(36,22,16,0.06),
-      5px 7px 14px rgba(36,22,16,0.10),
-      inset 0 0 80px rgba(0,0,0,0);
+      2px 3px 0 rgba(36,22,16,.04),
+      5px 7px 14px rgba(36,22,16,.08),
+      inset 0 0 80px rgba(36,22,16,.02);
     position: relative;
     overflow: visible;
   }
@@ -112,10 +98,10 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(0,0,0,0);
-    border: 1px dashed rgba(36,22,16,0.10);
+    background: var(--card-bg);
+    border: 1px dashed var(--border-dashed);
     border-radius: 2px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 2px rgba(36,22,16,.04);
   }
 
   /* ===== Header Area ===== */
@@ -132,10 +118,10 @@
   }
 
   .main-title {
-    font-family: serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
     font-size: 3.2rem;
     font-weight: 400;
-    color: #3A332C;
+    color: var(--ink);
     line-height: 1.2;
     position: relative;
     display: inline-block;
@@ -153,12 +139,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #F97316 0px,
-        #F97316 4px,
+        var(--accent) 0px,
+        var(--accent) 4px,
         transparent 4px,
         transparent 10px,
-        #F97316 10px,
-        #F97316 12px,
+        var(--accent) 10px,
+        var(--accent) 12px,
         transparent 12px,
         transparent 18px
       );
@@ -169,7 +155,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8A7D70;
+    color: var(--ink-light);
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -193,12 +179,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        rgba(36,22,16,0.10) 0px,
-        rgba(36,22,16,0.10) 6px,
+        var(--border-dashed) 0px,
+        var(--border-dashed) 6px,
         transparent 6px,
         transparent 16px,
-        rgba(36,22,16,0.10) 16px,
-        rgba(36,22,16,0.10) 22px,
+        var(--border-dashed) 16px,
+        var(--border-dashed) 22px,
         transparent 22px,
         transparent 36px
       );
@@ -210,7 +196,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #8A7D70;
+    color: var(--ink-light);
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -222,15 +208,15 @@
     position: relative;
     padding: 1.8rem 1.5rem 2rem;
     margin-bottom: 0.6rem;
-    border: 1.5px dashed rgba(36,22,16,0.10);
+    border: 1.5px dashed var(--border-dashed);
     border-radius: 6px 14px 8px 11px;
-    background: #FFFFFF;
-    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
+    background: var(--card-bg);
+    box-shadow: 1px 2px 0 rgba(36,22,16,.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,.08);
   }
 
   .card-number {
@@ -239,24 +225,24 @@
     left: -12px;
     width: 38px;
     height: 38px;
-    border: 2px dashed rgba(36,22,16,0.10);
+    border: 2px dashed var(--border-dashed);
     border-radius: 48% 52% 50% 50% / 45% 55% 52% 48%;
-    background: #FFFFFF;
+    background: var(--card-bg);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
     font-size: 1.1rem;
-    color: #8A7D70;
-    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
+    color: var(--ink-light);
+    box-shadow: 1px 1px 0 rgba(36,22,16,.05);
     user-select: none;
   }
 
   .card-title {
-    font-family: serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
     font-size: 1.5rem;
     font-weight: 400;
-    color: #3A332C;
+    color: var(--ink);
     margin-bottom: 1.2rem;
     padding-bottom: 0.45em;
     display: inline-block;
@@ -274,12 +260,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #F97316 0px,
-        #F97316 3px,
+        var(--accent) 0px,
+        var(--accent) 3px,
         transparent 3px,
         transparent 7px,
-        #F97316 7px,
-        #F97316 10px,
+        var(--accent) 7px,
+        var(--accent) 10px,
         transparent 10px,
         transparent 14px
       );
@@ -289,7 +275,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #3A332C;
+    color: var(--ink);
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -319,7 +305,7 @@
   .card-body .tag {
     display: inline-block;
     background: rgba(249,115,22,0.10);
-    color: #8b5040;
+    color: var(--accent-hover);
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
     border: 1px dashed rgba(249,115,22,0.30);
@@ -345,17 +331,17 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #F97316;
+    background: var(--accent);
     border-radius: 50%;
     opacity: 0.7;
     box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   .card-quote {
-    border-left: 3px dashed #F97316;
+    border-left: 3px dashed var(--accent);
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #8A7D70;
+    color: var(--accent-hover);
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -364,7 +350,7 @@
   .footer-area {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
-    border-top: 2px dashed rgba(36,22,16,0.10);
+    border-top: 2px dashed var(--border-dashed);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,30 +360,30 @@
   }
 
   .footer-sign {
-    background: #FFFFFF;
-    border: 1.5px dashed rgba(36,22,16,0.10);
+    background: var(--card-bg);
+    border: 1.5px dashed var(--border-dashed);
     border-radius: 3px 10px 5px 8px;
     padding: 0.6rem 1.2rem;
-    font-family: serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
     font-size: 1rem;
-    color: #8A7D70;
+    color: var(--ink-light);
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,.05);
     width: 100%;
     justify-content: center;
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #F97316;
+    color: var(--accent);
   }
 
   .footer-dash {
     width: 60%;
     height: 1px;
-    border-top: 1px dashed rgba(36,22,16,0.10);
+    border-top: 1px dashed var(--border-dashed);
     margin: 0.3rem 0;
   }
 
@@ -454,15 +440,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 24px;
-  background: rgba(245,242,236,0.92);
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(36,22,16,0.10);
+  border-bottom: 1px solid var(--border-dashed);
 }
 .site-header .brand {
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   font-size: 1.15rem;
   font-weight: 700;
-  color: #3A332C;
+  color: var(--ink);
   text-decoration: none;
   letter-spacing: 0.04em;
   display: inline-flex;
@@ -471,7 +457,7 @@
 }
 .site-header .brand .en {
   font-size: 0.72rem;
-  color: #F97316;
+  color: var(--accent);
   letter-spacing: 0.14em;
   font-style: italic;
   font-weight: 400;
@@ -484,20 +470,20 @@
 .site-header nav a,
 .site-header nav button {
   font-size: 0.88rem;
-  color: #8A7D70;
+  color: var(--ink-light);
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
-  font-family: "PingFang SC", "Microsoft YaHei", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-sans), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   padding: 4px 2px;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
 }
 .site-header nav a:hover,
 .site-header nav button:hover {
-  color: #F97316;
-  border-bottom-color: #F97316;
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 @media (max-width: 560px) {
   .site-header { flex-direction: column; gap: 8px; padding: 12px 16px; }
@@ -519,13 +505,13 @@ body.term-page {
 <style>
   /* ===== InvestBuddy 主题变量 ===== */
   :root {
-    --bg-paper: #FFFFFF;
-    --accent: #F97316;
-    --accent-hover: #E05E0A;
-    --ink: #3A332C;
-    --ink-light: #8A7D70;
-    --border-dashed: rgba(36,22,16,0.10);
-    --card-bg: #FFFFFF;
+    --bg-paper: var(--mf-colors-background);
+    --accent: var(--mf-colors-text-link);
+    --accent-hover: var(--mf-colors-text-link-hover);
+    --ink: var(--mf-colors-text);
+    --ink-light: var(--mf-colors-text-weak);
+    --border-dashed: var(--mf-colors-border-weak);
+    --card-bg: var(--mf-colors-background-surface);
   }
 
   /* ===== 外层包裹 ===== */
@@ -542,7 +528,7 @@ body.term-page {
     padding: 0 1rem;
     font-size: 0.85rem;
     color: var(--ink-light);
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   }
   .term-breadcrumb a {
     color: var(--accent);
@@ -553,7 +539,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #8A7D70;
+    color: var(--ink-light);
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -569,7 +555,7 @@ body.term-page {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   }
   .share-bar .share-label {
     font-size: 0.82rem;
@@ -589,7 +575,7 @@ body.term-page {
     cursor: pointer;
     text-decoration: none;
     transition: all 0.2s ease;
-    font-family: serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   }
   .share-btn:hover {
     border-color: var(--accent);
@@ -619,13 +605,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #FFFFFF;
+    background: #f0f0f0;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #8A7D70;
+    color: #888;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -642,7 +628,7 @@ body.term-page {
     opacity: 0;
     transition: opacity 0.25s ease;
     pointer-events: none;
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   }
   .copy-toast.show {
     opacity: 1;
@@ -657,7 +643,7 @@ body.term-page {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    font-family: "PingFang SC", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "PingFang SC", sans-serif;
   }
   .term-pager a {
     display: inline-block;
@@ -681,10 +667,10 @@ body.term-page {
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed rgba(36,22,16,0.10);
+    border: 1.5px dashed #ddd;
     border-radius: 4px 8px 5px 7px;
-    background: #FFFFFF;
-    color: rgba(36,22,16,0.10);
+    background: #f8f8f8;
+    color: #bbb;
     font-size: 0.88rem;
     cursor: default;
   }
@@ -698,14 +684,14 @@ body.term-page {
     border: 1.5px dashed var(--border-dashed);
     border-radius: 6px 10px 7px 8px;
     background: var(--card-bg);
-    font-family: "PingFang SC", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "PingFang SC", sans-serif;
   }
   .term-related h3 {
     font-size: 0.95rem;
     font-weight: 400;
     color: var(--ink);
     margin-bottom: 0.5rem;
-    font-family: serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   }
   .related-links {
     font-size: 0.9rem;
@@ -727,7 +713,7 @@ body.term-page {
     margin: 1.5rem auto 0 auto;
     padding: 0 1rem;
     text-align: center;
-    font-family: "PingFang SC", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-family: var(--mf-fonts-display), "PingFang SC", sans-serif;
   }
   .term-back a {
     color: var(--accent);
@@ -767,16 +753,17 @@ body.term-page {
   }
 </style>
 <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
-    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: var(--accent); text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
   </style>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#F97316">
+<link rel="stylesheet" href="../css/mangofolio-tokens-v09.css">
 </head>
 <body class="term-page">
 
@@ -899,18 +886,18 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
-    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: var(--accent); text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
   <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
   <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
   <a href="https://view.mangofolio.com">市场观察 View</a>
-  <a href="https://invest-tools.mangofolio.app" style="color:#F97316;">财务工具箱 FinTools</a>
+  <a href="https://invest-tools.mangofolio.app" style="color: var(--accent);">财务工具箱 FinTools</a>
   <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
 </footer>
 
