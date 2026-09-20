@@ -98,6 +98,42 @@
 
 - Git 操作 PowerShell（CLAUDE.md 2026-06-11 错误避坑）
 - Git push 用 SSH 443（CLAUDE.md `ssh-22-blocked-use-443`）
+
+---
+
+## 8. Wave 1 · 色系主线 ✅（2026-09-19 → 2026-09-20 完成）
+
+### 范围
+全站 449 个 terms + index.html + manifest + 2 份 cron 模板 → mangofolio v1.0 色系（纯白底 / 芒果橙电压色 / 暖墨正文 / 0 楷体 / 0 老国风 / 0 朱砂红）。
+
+### Commits（5 个 wave 1 commits + 之前 3 个 housekeeping = 8 ahead origin/main）
+- `d87a66e` Task 6 redo：扩 sed ~40 模式覆盖米色 rgba / 楷体 / 老国风橙 / 朱砂红 rgba / 米色卡面 / 米色文字；`scripts/brand-sweep.pl` 沉淀
+- `0122524` Task 7 redo：manifest + index.html 全站扩 sweep（amend 自 `07bcd62`）
+- `5ba03ed` Task 8 cron verify：one-shot 渲染 term-page-regular.html × 2 placeholder，验证产物 grep = 0 残留
+- (待) Task 9 Wave 1 收尾：PROGRESS + HANDOFF + PITFALLS
+
+之前已有 commits（不算 wave 1 新增）：
+- `0e07e95` Task 6 first cut：plan 14 模式（范围不全，已被 d87a66e 扩展覆盖）
+- `07bcd62` Task 7 first cut：manifest + index.html sweep（已被 0122524 扩展覆盖）
+
+### 验证（终验 grep = 0）
+- 朱砂红 hex + rgba
+- 米色 rgba（5 类）
+- 老国风橙 hex + rgba
+- 楷体 / 仿宋 / KaiTi / FangSong（含 HTML-encoded inline style 残段）
+- theme-color 全站 `#F97316`
+
+### 沉淀
+- `scripts/brand-sweep.pl`（永久）— v1.0 brand sweep 工具，支持单/递归扫
+
+### 下一步（Wave 2/3 · Tasks 10-17）
+- Wave 2：Google Fonts + emoji 字体链 + 卡面 16px 圆角 + footer 重做
+- Wave 3：暗色模式 + 涨红跌绿工具类 + 终验
+
+### 教训（详见 PITFALLS.md #17-19）
+- plan 14 sed 模式漏米色 rgba + 楷体字面 + 老国风橙；agent 不能信 plan 拍板的"grep = 0"，必须实际浏览器验证
+- Windows perl 中文 regex 要用 `\x{}` unicode codepoint + `<:encoding(UTF-8)`
+- inline `style="..."` 里 CSS 引号用 `&quot;` HTML encode，sweep 要双层处理
 - 字体链必含 `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"`（CLAUDE.md 2026-09-17 错误避坑）
 - emoji 显示需要 Windows 11 Segoe UI Emoji（CLAUDE.md 2026-09-17 错误避坑）
 

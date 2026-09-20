@@ -22,6 +22,37 @@ AIGC:
 - **修复**：建立 id → 真实文件名映射表（`entry_file_map.json`），所有链接（相关词条、首页卡片、pager）统一用映射后的文件名。
 - **预防**：新增词条时必须用归一化 slug 命名（`/`、`*`、`>` → `_`），相关词条 href 禁止直接用标题。
 
+## 17. plan sed 模式太窄导致 wave 1 "完成"假象（2026-09-20）
+
+- **现象**：plan Task 6 sed 14 模式只覆盖 #C43A31 / #f5efe0 / KaiTi 字面，**漏了米色 rgba（5 类）/ 老国风橙 hex+rgba / 朱砂红 rgba / 米色卡面 #fdfaf4 / 米色文字 #4a4035 等**。Task 7 sweep 也只补 index.html #C43A31 残留，没扩到米色/楷体/老国风。grep 报"0 残留"但**用户浏览器看仍是老国风宣纸视觉**。
+- **根因**：plan 写"grep 朱砂红 = 0"作为验收，但 grep 模式不完整；agent 信 plan 拍板，没实际打开浏览器看视觉就 commit。
+- **修复**：Task 6 redo（`d87a66e`）+ Task 7 redo（`0122524`）扩到 ~40 模式，覆盖全部米色/老国风/朱砂红 rgba/楷体字面（含 HTML-encoded inline 残段）。grep 全 4 类残留 = 0 ✅
+- **预防**：
+  - 任何 sed 批量前先抽样 1 个文件用浏览器看视觉，再决定模式范围
+  - grep 验证不仅查 plan 列的"严禁色"，要查 rgba 等变体（plan 没列的不代表没漏）
+  - "完成"的最终标准是浏览器视觉一致，不是 grep = 0
+  - 用完美截图工具（如 Playwright）截图前/后对比，不靠肉眼
+
+## 18. Windows perl 中文 regex 不匹配（2026-09-20）
+
+- **现象**：perl regex `"[^"]*(?:楷体|仿宋)[^"]*"` 在 Windows + `<:raw` 读 UTF-8 文件时**不匹配**，残留 5259 处楷体字面。改用 `\x{6977}\x{4F53}` unicode codepoint 也不匹配。
+- **根因**：`<:raw` 把文件当 latin1 字节流读入，perl regex 编译时把 `\x{6977}` 当 latin1 codepoint（U+6977 = '横'），跟 UTF-8 字节序列不匹配。
+- **修复**：改 `<:encoding(UTF-8)` 读入，perl 自动 UTF-8 解码成内部 unicode 字符串，regex 才能正确匹配中文。脚本 `scripts/brand-sweep.pl` 已用此模式。
+- **预防**：
+  - Windows + perl 处理 UTF-8 文件必用 `<:encoding(UTF-8)` 或 `<:utf8`
+  - 中文 regex 用字面词要 `use utf8` + 文件 BOM/声明 utf-8
+  - 测试时写一段最小 repro 验证 regex 命中再批量（避免扫 449 文件跑 30s）
+
+## 19. inline style 属性里 CSS 引号用 `&quot;` HTML encode（2026-09-20）
+
+- **现象**：词条页底部 `ft-tool-link` 块的 inline style 用 `font-family:&quot;KaiTi&quot;,&quot;楷体&quot;,...`（HTML-encoded 引号），外层 regex `font-family\s*:\s*([^;]+?)` 抓到第一个 `;` 之前的段做替换，**`;KaiTi&quot;,&quot;楷体&quot;,...;` 残段留在后面**。9 处残留。
+- **根因**：CSS 在 inline `style=""` 属性里 `"` 必须 encode 成 `&quot;`（否则破坏 HTML 属性）；font-family 段被前次 sweep 拆开后，断尾的 `KaiTi&quot;,&quot;楷体&quot;,...` 变成 orphan CSS declaration（浏览器丢弃但源码残留）。
+- **修复**：sweep 脚本里加了 `KaiTi&quot;,&quot;楷体&quot;,&quot;PingFang SC&quot;,sans-serif` 这类固定 broken 模式的直接删 pattern。9 处残留清 0。
+- **预防**：
+  - sweep inline style 段时，把 `&quot;` 当 `"` 等价处理（解码后再匹配）
+  - 重写后的 chain 如果原段有 `&quot;`，重新 encode（保持 inline style 合法）
+  - 验证时不仅 grep 字面残留，要 grep 任何 inline `style="..."` 里的 font 字段
+
 ## 2. encodeURIComponent(slug) 产生 %2F 导致 ERR_INVALID_URL
 
 - **现象**：首页卡片点击含斜杠词条报 `ERR_INVALID_URL`（file:// 协议下）。

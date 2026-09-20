@@ -27,7 +27,12 @@ web/verify/
 # Local verify screenshots & backups
 web/.verify*.png
 *.bak_*
+*.bak-*
 ENV.txt
+
+# Task 6/7 debug scripts (one-off, never used again)
+task6-*.ps1
+task7-*.ps1
 
 # Temp check scripts
 web/temp/
