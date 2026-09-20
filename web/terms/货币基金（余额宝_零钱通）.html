@@ -93,8 +93,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -124,16 +124,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -147,7 +147,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -189,12 +189,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -205,7 +205,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -247,7 +247,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -261,13 +261,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   /* ===== Card Number Circle ===== */
@@ -285,8 +285,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -314,12 +314,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -330,7 +330,7 @@
   /* ===== Card Content ===== */
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -352,18 +352,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -387,18 +387,18 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   /* ===== Card Quote ===== */
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -426,12 +426,12 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
 
@@ -590,7 +590,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -631,7 +631,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -656,13 +656,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -713,15 +713,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -860,7 +860,7 @@ body.term-page {
         一个人去银行谈——"我想买张同业存单"——柜台笑出声："门槛<span class="highlight">100万</span>。"一亿个人一起去谈——银行咽了口唾沫："您想买多少？"
       </div>
       <p>你存进余额宝的每一块钱，都在替你跟银行说同一句话：<span class="tag">"别拿零售价糊弄我——我们人多。"</span></p>
-      <p style="font-size:0.85rem; color:#8b7a65;">货币基金的本质：一群散户凑钱买批发价的短期债券。它不是理财，它是帮你的闲钱争取一个公道利息。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">货币基金的本质：一群散户凑钱买批发价的短期债券。它不是理财，它是帮你的闲钱争取一个公道利息。</p>
     </div>
   </article>
 
@@ -878,7 +878,7 @@ body.term-page {
         6个月后，天弘基金从一片荒原变成中国最大。那个小会计还在往里存，8000变成了1万。后来她买了债券基金、买了一点点指数基金。但她永远记得余额宝告诉她的第一件事：<span class="highlight">你的闲钱，不该白白躺在那。</span>
       </div>
       <p>中国<span class="highlight">6亿</span>人理财启蒙的第一位老师，不是哪本书、不是哪个大V——就是每天早上的那几毛钱进账。</p>
-      <p style="color:#6b5e4e;">它不惊艳，但它确定。大江大河会断流，小溪只管流。</p>
+      <p style="color:#8A7D70;">它不惊艳，但它确定。大江大河会断流，小溪只管流。</p>
     </div>
   </article>
 
@@ -895,7 +895,7 @@ body.term-page {
         <li>划一条<span class="highlight">"零钱线"</span>——家庭月支出的3倍。线以上的钱，不是货币基金的对手盘。它的对手是债券基金、是指数基金、是你还没学会的更好的东西。</li>
         <li>把线以上的部分，转去买一样<span class="tag">"下一个台阶"</span>的东西——短债基金、国债逆回购，或者开始学指数基金怎么买。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">货币基金放零钱，够了。它不是终点，是基地。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">货币基金放零钱，够了。它不是终点，是基地。</p>
     </div>
   </article>
 
@@ -913,7 +913,7 @@ body.term-page {
         <span class="highlight">"还好我早就学会了别的。"</span>
       </div>
       <p>货币基金是理财路上的第一块跳板，不是终点站。它最好的归宿，不是让你永远待在这里，而是让你某天对它说一句：</p>
-      <p style="font-size:0.9rem; color:#8b7a65;">货币基金是理财地图上永远亮着的那盏灯——无论你在外面亏了多少、被市场捶了多少次，回到这盏灯下，钱还在，还在长。但它不是你的全部。它只想做你的基地，而不是你的家。</p>
+      <p style="font-size:0.9rem; color:#8A7D70;">货币基金是理财地图上永远亮着的那盏灯——无论你在外面亏了多少、被市场捶了多少次，回到这盏灯下，钱还在，还在长。但它不是你的全部。它只想做你的基地，而不是你的家。</p>
     </div>
   </article>
   <div class="card-divider"></div>
@@ -931,7 +931,7 @@ body.term-page {
       <div class="card-quote" style="margin-top:0.4rem;">A：不同用途。划一条"零钱线"=家庭月支出的3倍：线以下（随时要用的钱）放货币基金；线以上的钱，对手盘不该是货币基金，而是债券基金、指数基金——货币基金是理财路上的第一块跳板，不是终点站。</div>
       <p class="faq-q" style="margin-top:1.3rem;"><strong>Q：货币基金收益会变成零吗？</strong></p>
       <div class="card-quote" style="margin-top:0.4rem;">A：有可能。日本过去二十年货币基金收益率就是0——利率降到零它也跟着趴下。所以货币基金最好的归宿，是让你某天对它说：我学会了别的，但你永远是我亏钱后能回去的那盏灯。</div>
-      <p class="faq-meta" style="color:#8b7a65; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
+      <p class="faq-meta" style="color:#8A7D70; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
     </div>
   </article>
 
@@ -974,11 +974,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

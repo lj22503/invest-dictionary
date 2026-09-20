@@ -52,8 +52,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -83,16 +83,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -106,7 +106,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -148,12 +148,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -164,7 +164,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -208,13 +208,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   /* ===== Card Number Circle ===== */
@@ -232,8 +232,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -261,12 +261,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -277,7 +277,7 @@
   /* ===== Card Content ===== */
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -299,18 +299,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -334,18 +334,18 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   /* ===== Card Quote ===== */
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -373,7 +373,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
     width: 100%;
     flex-wrap: wrap;
   }
@@ -539,7 +539,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -580,7 +580,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -605,13 +605,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -662,15 +662,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -809,7 +809,7 @@ body.term-page {
         分水岭很简单：<span class="highlight">这笔钱借来之后，是帮你赚钱，还是帮你花钱？</span>
       </div>
       <p>借了4%利率的房贷，买了一套每月租金能覆盖月供的房子——这叫杠杆。分期买了新款手机，手机到手就贬值，你还了12期还是12期——这叫石头。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">不是欠钱可怕。是欠了钱买了一个会贬值的东西，才可怕。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">不是欠钱可怕。是欠了钱买了一个会贬值的东西，才可怕。</p>
     </div>
   </article>
 
@@ -826,7 +826,7 @@ body.term-page {
         不是朋友A比朋友B聪明。是朋友A借的钱<span class="highlight">变成了资产</span>，朋友B借的钱<span class="highlight">变成了消费</span>。
       </div>
       <p>两个人起点差不多，月薪都是1万出头。十年过去——一个多了一套房，一个多了一屁股债。</p>
-      <p style="color:#6b5e4e;">区别不在他们"借没借钱"，在钱<span class="tag">去了哪里</span>。</p>
+      <p style="color:#8A7D70;">区别不在他们"借没借钱"，在钱<span class="tag">去了哪里</span>。</p>
     </div>
   </article>
 
@@ -843,7 +843,7 @@ body.term-page {
         <li><strong>定目标</strong>：红色债务，12个月内清完。黄色债务，视现金流情况分批提前还。绿色债务，别急着还——你的理财收益可能比它还高。</li>
         <li><strong>紧急警告</strong>：信用卡按最低还款，年化利率约<span class="tag">18%</span>——在所有个人负债里排第一。哪怕分期手续费看起来只有几个点，算出来实际利率也在15%以上。这条蛇咬人最狠。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">还债的顺序不是按金额大小，是按利率高低。这是小学数学。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">还债的顺序不是按金额大小，是按利率高低。这是小学数学。</p>
     </div>
   </article>
 
@@ -862,7 +862,7 @@ body.term-page {
         这个问题的答案，决定了你财务自由的<span class="highlight">真正瓶颈</span>——是你的负债本身，还是你对负债的依赖。
       </div>
       <p>真正的财务自由，不是没有负债。是你的负债全是<span class="tag">别人替你付的</span>——房租帮你还房贷、生意帮你还经营贷、资产帮你还杠杆。所有坏债都清了，剩下的全是好债在替你打工。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">如果明天你所有的消费贷归零，你拿每个月多出来的那笔钱，去干什么？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">如果明天你所有的消费贷归零，你拿每个月多出来的那笔钱，去干什么？</p>
     </div>
   </article>
 </div>
@@ -904,11 +904,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

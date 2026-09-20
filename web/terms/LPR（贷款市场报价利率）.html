@@ -101,8 +101,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -132,16 +132,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -155,7 +155,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -197,12 +197,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -213,7 +213,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -255,7 +255,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -269,13 +269,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   /* ===== Card Number Circle ===== */
@@ -293,8 +293,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -322,12 +322,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -338,7 +338,7 @@
   /* ===== Card Content ===== */
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -360,18 +360,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -395,18 +395,18 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   /* ===== Card Quote ===== */
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -434,12 +434,12 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
 
@@ -598,7 +598,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -639,7 +639,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -664,13 +664,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -721,15 +721,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -869,7 +869,7 @@ body.term-page {
         LPR不是央行一口价，是18家银行各自的利益在纸面上博弈完以后，取了个<span class="highlight">"大家都别太难看的平均数"</span>。
       </div>
       <p>你以为你的房贷利率是央行定的——错。央行只定了"风向"，真正决定你月供的是18个银行行长的<span class="tag">利润焦虑</span>。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">LPR = MLF利率（央行定）+ 报价行平均加点（银行博弈）。你月供 = LPR + 个人加点（合同锁死）。三层叠加，你一个普通人，站在了货币政策链条的最末端。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">LPR = MLF利率（央行定）+ 报价行平均加点（银行博弈）。你月供 = LPR + 个人加点（合同锁死）。三层叠加，你一个普通人，站在了货币政策链条的最末端。</p>
     </div>
   </article>
 
@@ -887,7 +887,7 @@ body.term-page {
       </div>
       <p>最终，2019年8月20日，首次新LPR出炉——1年期4.25%，比旧版LPR低了6个基点，比贷款基准利率低了10个基点。降了，但降得不多。这是一个"让央行觉得在推进、让银行觉得还能活"的数字。</p>
       <p>从那天起，每个人办房贷的人都多了一个问题：</p>
-      <p style="color:#6b5e4e;">"我该选<span class="tag">固定利率</span>还是<span class="tag">LPR浮动</span>？"——这个看似简单的选择题，背后站着18家银行、央行和整个利率市场化改革的角力。</p>
+      <p style="color:#8A7D70;">"我该选<span class="tag">固定利率</span>还是<span class="tag">LPR浮动</span>？"——这个看似简单的选择题，背后站着18家银行、央行和整个利率市场化改革的角力。</p>
     </div>
   </article>
 
@@ -904,7 +904,7 @@ body.term-page {
         <li>查一下你的重定价日。如果LPR在上个月降了，但你的重定价日是明年1月1日——这意味着<span class="highlight">中间的几个月你都在"白还"</span>。</li>
         <li>问问其他银行：同样的房子、同样的收入，他们愿意给多少加点？如果少50个基点，30年能省多少？算清这笔账，再决定要不要转按揭。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">知道自己的加点，是看懂房贷的第一步。知道LPR怎么来的，是看懂中国经济的第二步。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">知道自己的加点，是看懂房贷的第一步。知道LPR怎么来的，是看懂中国经济的第二步。</p>
     </div>
   </article>
 
@@ -922,7 +922,7 @@ body.term-page {
       </div>
       <p>你不是在报"你心中真实的市场利率"。你是在报"一个安全的、不会被盯上的、又不太伤害自己利润的数字"。这就是LPR的全部秘密。</p>
       <p>LPR不是市场利率，是银行行长们的<span class="highlight">"安全报价"</span>。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">你每个月20号看到的那个数字，不是自由市场的价格发现，是18个聪明人在政策压力下的"最不坏选择"。</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">你每个月20号看到的那个数字，不是自由市场的价格发现，是18个聪明人在政策压力下的"最不坏选择"。</p>
     </div>
   </article>
   <div class="card-divider"></div>
@@ -942,7 +942,7 @@ body.term-page {
       <div class="card-quote" style="margin-top:0.4rem;">A：这是2019年LPR改革后每个房贷人的选择题。先打开房贷合同找三个数字：重定价日、加点BP、参考LPR期限（1年期还是5年期以上）。加100个基点就是1%，100万贷款一年多付1万。算清加点再决定。</div>
       <p class="faq-q" style="margin-top:1.3rem;"><strong>Q：LPR是怎么报价的？</strong></p>
       <div class="card-quote" style="margin-top:0.4rem;">A：18家报价行每月各自报一个数，去掉最高最低后取平均。每家行长报的是"安全的、不会被盯上的、又不太伤害自己利润的数字"——报高得罪央行，报低挤压自家利润。</div>
-      <p class="faq-meta" style="color:#8b7a65; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
+      <p class="faq-meta" style="color:#8A7D70; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
     </div>
   </article>
 
@@ -985,11 +985,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

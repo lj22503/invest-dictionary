@@ -100,8 +100,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -130,16 +130,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -152,7 +152,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -210,7 +210,7 @@
   .subtitle {
     margin-top: 0.8rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -250,7 +250,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -263,13 +263,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   .card-number {
@@ -286,8 +286,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -328,7 +328,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -381,7 +381,7 @@
     border-left: 3px dashed #c85a3a;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -433,7 +433,7 @@
     text-align: left;
     padding: 0.4rem 0.5rem;
     border-bottom: 1.5px dashed rgba(36,22,16,0.10);
-    color: #8b7a65;
+    color: #8A7D70;
     font-weight: normal;
     font-size: 0.85rem;
   }
@@ -476,7 +476,7 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -497,7 +497,7 @@
 
   .footer-sign .next-desc {
     font-size: 0.85rem;
-    color: #8b7a65;
+    color: #8A7D70;
     display: block;
     margin-top: 0.25rem;
     letter-spacing: 0.03em;
@@ -629,7 +629,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -670,7 +670,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -695,13 +695,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -752,15 +752,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -905,7 +905,7 @@ body.term-page {
       <div class="card-quote">
         日息万五的"万五"，翻译成人话：<span class="highlight">借一万，一年还一万一千八百二十五</span>。而且如果是利滚利（复利），实际年化超过<span class="warn">20%</span>——比房贷利率贵了整整六倍。
       </div>
-      <p style="font-size:0.85rem; color:#8b7a65;">"日息"不是利息单位，是利息的隐身衣。它把一根香肠切成365片，让你一片一片吃，不知道已经吃了一整根。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">"日息"不是利息单位，是利息的隐身衣。它把一根香肠切成365片，让你一片一片吃，不知道已经吃了一整根。</p>
     </div>
   </article>
 
@@ -924,7 +924,7 @@ body.term-page {
         12个月滚下来，他的真实利息不是1825块，是<span class="warn">将近2000块</span>。1万变成1万2。他借的每一块钱，一年都在为平台赚了两毛钱。
       </div>
       <p>更讽刺的是：如果他当初去银行申请一笔消费贷，年化利率可能只有<span class="tag">4%-6%</span>。同样的1万块，银行收他500块利息，网贷收他2000块。差了1500块——够他吃一个月的饭。</p>
-      <p style="color:#6b5e4e;">小张不是被高利率收割的。他是被"日息"这两个字收割的。利率本身没藏，<span class="highlight">藏的是那个"天"字在你大脑里触发的心理反应</span>——"一天才这么点，不是事儿"。</p>
+      <p style="color:#8A7D70;">小张不是被高利率收割的。他是被"日息"这两个字收割的。利率本身没藏，<span class="highlight">藏的是那个"天"字在你大脑里触发的心理反应</span>——"一天才这么点，不是事儿"。</p>
     </div>
   </article>
 
@@ -940,7 +940,7 @@ body.term-page {
         <li><span class="highlight">第二步：建一个"贵不贵"的参照系</span>。<br>房贷利率3.3%（你的锚定底价），国债收益率2.5%（无风险基准），信用卡分期年化13%-18%（中位线），网贷日息万五≈18%-20%（红线区）。超过国债收益率的每一分钱，都是你为"急用"付出的代价。超过了18%？<span class="tag">你在给平台打工</span>。</li>
         <li><span class="highlight">第三步：借钱之前先看"年化"，而不是"日息"。</span><br>监管已经要求所有贷款产品必须展示年化利率。找到它——通常在页面底部、灰色小字、不起眼的位置。它被放在那里不是偶然的，是A/B测试过的。你就偏要去找它。找到它之后，用第二步的参照系判断它。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">记住一个口诀：<strong>日息乘365，年化立现。月息乘12，再加一点是真实。</strong>月息1.5%的复利年化是19.56%，不是18%。这个"多加一点"就是复利的暗器。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">记住一个口诀：<strong>日息乘365，年化立现。月息乘12，再加一点是真实。</strong>月息1.5%的复利年化是19.56%，不是18%。这个"多加一点"就是复利的暗器。</p>
     </div>
   </article>
 
@@ -957,7 +957,7 @@ body.term-page {
       <div class="card-quote">
         同一件事——"借钱要付利息"——用日息表达和用年息表达，在你大脑里激活的脑区不一样。日息激活的是"小额无关紧要"回路，年息激活的是"成本评估"回路。这不是你的错，这是人类大脑的设计缺陷。但你知道了，这个缺陷就不再是缺陷——是你的武器。
       </div>
-      <p style="color:#8b7a65; font-size:0.9rem;">下次看到"日息万五"，你的第一反应应该是："年化18%+，比房贷贵六倍。"如果这句翻译已经成了你的本能反应——恭喜，你不再是那个被"天"字收割的人了。</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">下次看到"日息万五"，你的第一反应应该是："年化18%+，比房贷贵六倍。"如果这句翻译已经成了你的本能反应——恭喜，你不再是那个被"天"字收割的人了。</p>
     </div>
   </article>
   <div class="card-divider"></div>
@@ -977,7 +977,7 @@ body.term-page {
       <div class="card-quote" style="margin-top:0.4rem;">A：建参照系：房贷利率3.3%（锚定底价）、国债收益率2.5%（无风险基准）、信用卡分期年化13%-18%（中位线）、日息万五≈18%-20%（红线区）。监管要求所有贷款产品必须展示年化利率，通常在页面底部灰色小字，去找它。</div>
       <p class="faq-q" style="margin-top:1.3rem;"><strong>Q：日息万五借一万，一年到底还多少？</strong></p>
       <div class="card-quote" style="margin-top:0.4rem;">A：按单利是11825元（利息1825元）；按按月复利滚一年，真实利息将近2000元，1万变1万2。同样的钱走银行消费贷（年化4%-6%），利息只要约500元——差1500元。</div>
-      <p class="faq-meta" style="color:#8b7a65; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
+      <p class="faq-meta" style="color:#8A7D70; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
     </div>
   </article>
 
@@ -1025,11 +1025,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

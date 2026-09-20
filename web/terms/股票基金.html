@@ -52,8 +52,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -83,16 +83,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -106,7 +106,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -148,12 +148,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -164,7 +164,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -206,7 +206,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -220,13 +220,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   /* ===== Card Number Circle ===== */
@@ -244,8 +244,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -273,12 +273,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -289,7 +289,7 @@
   /* ===== Card Content ===== */
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -311,18 +311,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -346,18 +346,18 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   /* ===== Card Quote ===== */
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -385,12 +385,12 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
 
@@ -549,7 +549,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -590,7 +590,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -615,13 +615,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -672,15 +672,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -819,7 +819,7 @@ body.term-page {
         你以为买基金是<span class="highlight">"专业的事交给专业的人"</span>——但你连这个"专业的人"姓甚名谁、管过几年钱、在熊市里跌过多惨，一概不知。
       </div>
       <p>你把辛苦攒的几万块钱，交给一个素未谋面的陌生人。只因为他页面上的数字是红色的。这不是投资，这是<span class="tag">"翻牌子"</span>。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">你对自己的钱，敢不敢再多问一句？</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">你对自己的钱，敢不敢再多问一句？</p>
     </div>
   </article>
 
@@ -837,7 +837,7 @@ body.term-page {
         小王从来没亏在"选错基金"上。他亏在同一个模式：<span class="highlight">涨得最好的时候冲进去，跌到绝望的时候割出来。</span>这个模式循环了三次，他看了三遍"近一年收益+XX%"，每次都以为是机会，每次都站在山顶。
       </div>
       <p>晨星统计过：中国基民的实际到手收益，平均比基金净值本身的涨幅<span class="tag">低了约30%</span>。基金涨了，基民没赚到。差额去哪了？被你"高买低卖"的行为一口一口吃掉了。</p>
-      <p style="color:#6b5e4e;">基金帮你解决了"买什么股"的问题。但"什么时候买、什么时候卖"——这两道题，<span class="highlight">没有人能替你答</span>。</p>
+      <p style="color:#8A7D70;">基金帮你解决了"买什么股"的问题。但"什么时候买、什么时候卖"——这两道题，<span class="highlight">没有人能替你答</span>。</p>
     </div>
   </article>
 
@@ -853,7 +853,7 @@ body.term-page {
         <li><strong>查最大回撤。</strong>找到最近一次熊市（比如2022年），看这只基金跌了多少。如果跌了40%，问问自己：我扛得住吗？扛不住就别买。因为下一次熊市一定会来。</li>
         <li><strong>查前十大持仓。</strong>看看这只基金买了哪些公司的股票。你认不认这些公司？如果你连它买了什么都不想看，说明你根本不信任这笔投资——你只是在赌一个数字会继续变红。</li>
       </ul>
-      <p style="font-size:0.9rem; color:#8b7a65; margin-top:1rem;"><strong>最重要的第四步：</strong>定投，不要一把梭。把要投的钱分成12份，每月固定一天买一份。涨了买，跌了也买。把<span class="tag">"择时"</span>从你的决策清单里划掉。</p>
+      <p style="font-size:0.9rem; color:#8A7D70; margin-top:1rem;"><strong>最重要的第四步：</strong>定投，不要一把梭。把要投的钱分成12份，每月固定一天买一份。涨了买，跌了也买。把<span class="tag">"择时"</span>从你的决策清单里划掉。</p>
     </div>
   </article>
 
@@ -871,7 +871,7 @@ body.term-page {
         你凭什么认为——自己在手机上滑了五分钟基金排行榜，看了一个"近一年收益+58%"，<span class="highlight">就能选出那个万里挑一的、能持续打败市场的人？</span>
       </div>
       <p>你选的不是未来会涨的基金。你选的是"过去涨过的基金"。而"过去涨得好"和"未来涨得好"之间，不仅没有等号——均值回归告诉你，它们往往是相反的方向。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">下一次，在你点"买入"之前，先问自己：我是在投资，还是在为一种叫"暴富幻想"的情绪付费？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">下一次，在你点"买入"之前，先问自己：我是在投资，还是在为一种叫"暴富幻想"的情绪付费？</p>
     </div>
   </article>
 </div>
@@ -913,11 +913,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

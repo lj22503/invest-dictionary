@@ -51,8 +51,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,16 +81,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -103,7 +103,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -143,12 +143,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -159,7 +159,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -199,7 +199,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -212,13 +212,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   .card-number {
@@ -235,8 +235,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -262,12 +262,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -277,7 +277,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -299,18 +299,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -333,17 +333,17 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -366,7 +366,7 @@
     background: #FFFFFF;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 3px 10px 5px 8px;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1rem;
     color: #8A7D70;
@@ -374,7 +374,7 @@
 
   .footer-row .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
   .footer-divider {
@@ -537,7 +537,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -578,7 +578,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -603,13 +603,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -660,15 +660,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -808,7 +808,7 @@ body.term-page {
       <p>大股东是<span class="tag">"造桌子的人"</span>（公司创始人、家族、控股集团），他们决定菜单、定价格、想关店就关店。</p>
       <p>机构是<span class="tag">"包桌的VIP"</span>（基金、保险、外资），他们一次订十桌，老板不敢怠慢，但他们也有KPI——订不够数就被公司骂，被迫下单。</p>
       <p>散户是<span class="tag">"散客"</span>，老板不太在意你，但你随时可以抬腿就走——VIP做不到。</p>
-      <p style="color:#6b5e4e;">你想坐哪张桌子？</p>
+      <p style="color:#8A7D70;">你想坐哪张桌子？</p>
     </div>
   </article>
 
@@ -827,7 +827,7 @@ body.term-page {
         老张回家后想：<span class="highlight">"我是这公司的股东，怎么连问句话的权利都没有？"</span>
       </div>
       <p>他的问题——"公司到底在不在赚钱，钱都去哪了"——其实和大股东、机构关心的<span class="tag">"完全是同一件事"</span>。只是<span class="tag">"嗓门"</span>不同。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">散户的劣势不是"选错了股"，是"没声音"。而声音，是要靠<span class="highlight">研究</span>换来的。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">散户的劣势不是"选错了股"，是"没声音"。而声音，是要靠<span class="highlight">研究</span>换来的。</p>
     </div>
   </article>
 
@@ -843,7 +843,7 @@ body.term-page {
         <li><strong>看机构持仓变化</strong>：对比上一季度和这一季度的"机构持股比例"。如果机构在加仓，说明"VIP也在订这家店"；如果机构集体撤退，散户却蜂拥而入——这是<span class="highlight">"红海里裸泳"</span>的信号。</li>
         <li><strong>用散户的优势</strong>：①没有排名压力（不用被迫追涨杀跌）②没有持仓限制（想买多少买多少）③时间站在你这边（机构每个季度交成绩单，你不必）。把这三个优势变成策略：选好公司，长期持有，不看季度涨跌。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">做完后你就发现：<span class="tag">散户不是输在"小"，是输在"不用心"</span>。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">做完后你就发现：<span class="tag">散户不是输在"小"，是输在"不用心"</span>。</p>
     </div>
   </article>
 
@@ -861,8 +861,8 @@ body.term-page {
       <div class="card-quote">
         散户真正的价值，是<span class="highlight">"那个不按剧本走的人"</span>。机构是按谱弹琴的交响乐团，散户是角落里那个即兴吹口哨的人。交响乐团缺了口哨声，会少很多<span class="highlight">"生气"</span>。
       </div>
-      <p style="color:#8b7a65; font-size:0.9rem;">所以"去散户化"真的一定是好事吗？还是只是把一池鱼塘换成了一个养殖场？</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">鱼塘里有大有小，养殖场的鱼都长一样——哪种生态更健康？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">所以"去散户化"真的一定是好事吗？还是只是把一池鱼塘换成了一个养殖场？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">鱼塘里有大有小，养殖场的鱼都长一样——哪种生态更健康？</p>
     </div>
   </article>
 </div>
@@ -904,11 +904,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

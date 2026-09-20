@@ -101,8 +101,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -132,16 +132,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -155,7 +155,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -197,12 +197,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -213,7 +213,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -255,7 +255,7 @@
     content: '\002704';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -269,13 +269,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   /* ===== Card Number Circle ===== */
@@ -293,8 +293,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -322,12 +322,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -338,7 +338,7 @@
   /* ===== Card Content ===== */
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -360,18 +360,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -395,18 +395,18 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   /* ===== Card Quote ===== */
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -434,12 +434,12 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
 
@@ -598,7 +598,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -639,7 +639,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -664,13 +664,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -721,15 +721,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -869,7 +869,7 @@ body.term-page {
       </div>
       <p>这就是定投最反直觉的地方：在买入阶段，你最大的心愿不应该是涨，而应该是跌。越跌，你下个月的1000块买得越多。等市场回到原点，你不是回本——你是盈利。</p>
       <p>不需要预测明天涨跌。你只需要问自己一件事：<span class="highlight">十年后，比今天好吗？</span>如果答案是"好"，今天跌了就是好事。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">你已经知道了定投的原理——但十年后回头看，你最大的遗憾可能是"开始得太晚"，而不是"开始得太早"。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">你已经知道了定投的原理——但十年后回头看，你最大的遗憾可能是"开始得太晚"，而不是"开始得太早"。</p>
     </div>
   </article>
 
@@ -887,7 +887,7 @@ body.term-page {
       <div class="card-quote">
         张三赢的不是智商，是<span class="highlight">"认怂"</span>。他承认自己无法预测市场，于是把决策外包给了时间和规则。李四输的也不是运气，是<span class="highlight">"过度自信"</span>——他以为能战胜市场，最后被自己的聪明打败了。
       </div>
-      <p style="color:#6b5e4e;">这个世界上最贵的学费，就是"我以为我能判断高低"。张三没交这笔学费，李四交了一整个车库。</p>
+      <p style="color:#8A7D70;">这个世界上最贵的学费，就是"我以为我能判断高低"。张三没交这笔学费，李四交了一整个车库。</p>
     </div>
   </article>
 
@@ -906,7 +906,7 @@ body.term-page {
       </ul>
       <p style="margin-top:1rem;">现在打开支付宝或天天基金APP → 搜索 <span class="highlight">"510300"</span> → 点击"定投" → 输入金额、选择每月15号 → 确认。</p>
       <p>然后——<span class="tag">删掉股票APP</span>。至少删掉那个让你每天想看盘的东西。定投最美的地方是：你不需要知道今天的涨跌，你只需要相信十年后的中国。</p>
-      <p style="color:#6b5e4e; margin-top:1rem;">你现在要做的不是"选时机"，是"开始"。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">你现在要做的不是"选时机"，是"开始"。</p>
     </div>
   </article>
 
@@ -924,7 +924,7 @@ body.term-page {
       </div>
       <p>投资圈天天讲"战胜市场"。但定投告诉你：你不需要战胜任何人。你只需要战胜那个"总想在最低点买入，却总在最低点割肉"的自己。</p>
       <p>定投是穿越人性的装置。它把贪婪和恐惧这两个最大的敌人，关在一个叫"纪律"的笼子里。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">如果定投的本质是"跨时空雇佣自己"——你现在每个月给自己发了多少"未来工资"？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">如果定投的本质是"跨时空雇佣自己"——你现在每个月给自己发了多少"未来工资"？</p>
     </div>
   </article>
   <div class="card-divider"></div>
@@ -944,7 +944,7 @@ body.term-page {
       <div class="card-quote" style="margin-top:0.4rem;">A：三个数字：标的选沪深300指数基金（510300）；金额取月收入的10%，标准是"忘了也不心疼"；频率每月一次即可，每周一次不会明显提高收益但会增加72倍的操作和焦虑。</div>
       <p class="faq-q" style="margin-top:1.3rem;"><strong>Q：定投亏了怎么办？要不要停？</strong></p>
       <div class="card-quote" style="margin-top:0.4rem;">A：别停。张三最惨的时候账户浮亏37%，他连APP都没打开。定投是穿越人性的装置：它把贪婪和恐惧关在"纪律"的笼子里，你需要战胜的只有那个"总想在最低点买入、却总在最低点割肉"的自己。</div>
-      <p class="faq-meta" style="color:#8b7a65; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
+      <p class="faq-meta" style="color:#8A7D70; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
     </div>
   </article>
 
@@ -955,7 +955,7 @@ body.term-page {
 
 <nav class="term-pager"><a href="%E5%81%9A%E7%A9%BA%EF%BC%88%E6%B2%BD%E7%A9%BA_%E5%8D%96%E7%A9%BA%EF%BC%89.html" class="pager-prev" title="做空（沽空/卖空）">← 做空（沽空/卖空）</a><a href="%E5%BE%AE%E7%AC%91%E6%9B%B2%E7%BA%BF.html" class="pager-next" title="微笑曲线">微笑曲线 →</a></nav>
 
-<div class="ft-tool-link" style="max-width:720px;width:100%;margin:1rem auto 0;padding:0 1rem;font-family:&quot;KaiTi&quot;,&quot;楷体&quot;,&quot;PingFang SC&quot;,sans-serif;font-size:0.9rem;"><span style="color:#8b7a65;">想自己算算？</span> <a href="https://invest-tools.mangofolio.app/tools/dca.html" style="color:#F97316;text-decoration:none;">用 定投计算器 算一算 →</a></div>
+<div class="ft-tool-link" style="max-width:720px;width:100%;margin:1rem auto 0;padding:0 1rem;font-family:&quot;KaiTi&quot;,&quot;楷体&quot;,&quot;PingFang SC&quot;,sans-serif;font-size:0.9rem;"><span style="color:#8A7D70;">想自己算算？</span> <a href="https://invest-tools.mangofolio.app/tools/dca.html" style="color:#F97316;text-decoration:none;">用 定投计算器 算一算 →</a></div>
 <div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
 
 
@@ -988,11 +988,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

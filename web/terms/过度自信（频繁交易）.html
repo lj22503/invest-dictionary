@@ -52,8 +52,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -83,16 +83,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -106,7 +106,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -164,7 +164,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -175,8 +175,8 @@
     padding: 1.5rem 1.8rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
   }
 
   .opening-scene .scene-title {
@@ -189,7 +189,7 @@
 
   .opening-scene .dialogue {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
   }
 
@@ -219,7 +219,7 @@
 
   .epiphany-block .epiphany-label {
     font-size: 0.85rem;
-    color: #8b7a65;
+    color: #8A7D70;
     margin-bottom: 0.5rem;
     letter-spacing: 0.1em;
   }
@@ -285,7 +285,7 @@
     content: '\002702';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -299,13 +299,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   /* ===== Card Number Circle ===== */
@@ -323,8 +323,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -367,7 +367,7 @@
   /* ===== Card Content ===== */
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -445,7 +445,7 @@
     text-align: center;
     margin: 1.2rem 0;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.6;
     letter-spacing: 0.15em;
   }
@@ -473,7 +473,7 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
@@ -643,7 +643,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -684,7 +684,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -709,13 +709,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -766,15 +766,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -941,8 +941,8 @@ body.term-page {
     <div class="flip-sep">--- 翻过来看背面 ---</div>
 
     <div class="card-body">
-      <p style="color:#6b5e4e;">如果给你看一百个成功投资者的画像，你会发现一个共同点：他们说的最多的不是"我为什么对"，而是<span class="highlight">"我在什么情况下会错"</span>。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">你上一次认真想"我判断错了的话怎么办"——是什么时候？</p>
+      <p style="color:#8A7D70;">如果给你看一百个成功投资者的画像，你会发现一个共同点：他们说的最多的不是"我为什么对"，而是<span class="highlight">"我在什么情况下会错"</span>。</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">你上一次认真想"我判断错了的话怎么办"——是什么时候？</p>
     </div>
   </article>
 
@@ -965,8 +965,8 @@ body.term-page {
     <div class="flip-sep">--- 翻过来看背面 ---</div>
 
     <div class="card-body">
-      <p style="color:#6b5e4e;">想想你自己的交易记录：去年你卖掉的股票里，有多少只后来涨得比买回的那只好？</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">你当时卖它的理由——"涨到顶了""利好出尽了""资金要轮动了"——今天回头看，还成立吗？</p>
+      <p style="color:#8A7D70;">想想你自己的交易记录：去年你卖掉的股票里，有多少只后来涨得比买回的那只好？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">你当时卖它的理由——"涨到顶了""利好出尽了""资金要轮动了"——今天回头看，还成立吗？</p>
     </div>
   </article>
 
@@ -988,7 +988,7 @@ body.term-page {
     <div class="flip-sep">--- 翻过来看背面 ---</div>
 
     <div class="card-body">
-      <p style="color:#6b5e4e;">这四步，每一步都在对抗你的多巴胺。</p>
+      <p style="color:#8A7D70;">这四步，每一步都在对抗你的多巴胺。</p>
       <p>记录预测会让你看到自己错了多少次——<span class="highlight">没有人喜欢看这个</span>。反向证据让你不舒服——你在主动推翻自己的判断。仓位限制让你在"确定性机会"面前只能小口吃。持有期规则让你眼睁睁看别人赚快钱。</p>
       <p>所以做到这四步的人，不是因为他们更聪明。是因为他们<span class="highlight">更诚实</span>——对自己诚实。</p>
     </div>
@@ -1013,9 +1013,9 @@ body.term-page {
     <div class="flip-sep">--- 翻过来看背面 ---</div>
 
     <div class="card-body">
-      <p style="color:#6b5e4e;">自查一下：你今年换手率多少？你跟沪深300比，跑赢了多少？</p>
+      <p style="color:#8A7D70;">自查一下：你今年换手率多少？你跟沪深300比，跑赢了多少？</p>
       <p>如果跑赢了——把跑赢的部分减去多交的手续费，还赢吗？如果跑输了——这就是过度自信税。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">如果从今天开始，你把所有精力从"选到那只最好的股票"转移到"确保自己不被过度自信杀死"，你的收益率会不会变得更好？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">如果从今天开始，你把所有精力从"选到那只最好的股票"转移到"确保自己不被过度自信杀死"，你的收益率会不会变得更好？</p>
     </div>
   </article>
 </div>
@@ -1060,11 +1060,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

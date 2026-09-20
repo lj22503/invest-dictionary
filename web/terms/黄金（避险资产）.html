@@ -93,8 +93,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -124,16 +124,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -147,7 +147,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -205,7 +205,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -247,7 +247,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -261,13 +261,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   /* ===== Card Number Circle ===== */
@@ -285,8 +285,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -330,7 +330,7 @@
   /* ===== Card Content ===== */
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -398,7 +398,7 @@
     border-left: 3px dashed #c4953a;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -426,7 +426,7 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
@@ -590,7 +590,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -631,7 +631,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -656,13 +656,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -713,15 +713,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -860,7 +860,7 @@ body.term-page {
       <div class="card-quote">
         黄金是<span class="highlight">"物理信用"</span>。不依赖任何人的承诺，不依赖任何机构的背书，不依赖任何政府的担保。
       </div>
-      <p style="font-size:0.85rem; color:#8b7a65;">当所有"社会信用"都动摇的时候，只有"物理信用"还在。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">当所有"社会信用"都动摇的时候，只有"物理信用"还在。</p>
     </div>
   </article>
 
@@ -878,7 +878,7 @@ body.term-page {
         到2020年8月，黄金从$1,450涨到了<span class="highlight">$2,075</span>，创下历史新高。美股还在修复，黄金已经翻篇了。
       </div>
       <p>2022年2月俄乌冲突爆发，同样的事又演了一遍。短暂恐慌、集体抛售、然后抬头、创历史新高。</p>
-      <p style="color:#6b5e4e;">黄金不是你恐慌时"不跌"的东西。黄金是你恐慌过后，"唯一不需要救"的东西。</p>
+      <p style="color:#8A7D70;">黄金不是你恐慌时"不跌"的东西。黄金是你恐慌过后，"唯一不需要救"的东西。</p>
     </div>
   </article>
 
@@ -895,7 +895,7 @@ body.term-page {
         <li>从下个月开始，每月收入的5%拿出来买黄金——黄金ETF、积存金、或者实物金条。</li>
         <li>别问"现在金价高不高"。你买保险的时候问过"现在保费贵不贵"吗？</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">5%就够了。超过10%也没必要——灭火器买一两个就行，不需要把整个房子堆满。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">5%就够了。超过10%也没必要——灭火器买一两个就行，不需要把整个房子堆满。</p>
     </div>
   </article>
 
@@ -912,7 +912,7 @@ body.term-page {
       <div class="card-quote">
         你真正拥有的，不是你的余额，是你在<span class="highlight">"最坏情况下"</span>能拿出来换东西的那部分。
       </div>
-      <p style="color:#8b7a65; font-size:0.9rem;">如果世界照常运转，黄金是累赘。如果世界不照常运转，黄金是你唯一的护照。你准备给自己办一张吗？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">如果世界照常运转，黄金是累赘。如果世界不照常运转，黄金是你唯一的护照。你准备给自己办一张吗？</p>
     </div>
   </article>
   <div class="card-divider"></div>
@@ -930,7 +930,7 @@ body.term-page {
       <div class="card-quote" style="margin-top:0.4rem;">A：占可投资资产5%-10%即可：不到5%说明"灭火器"还没买；超过10%没必要。方式选黄金ETF、积存金或实物金条，每月收入的5%慢慢配，别问金价高不高——你买保险时不会问保费贵不贵。</div>
       <p class="faq-q" style="margin-top:1.3rem;"><strong>Q：金价大跌时黄金还避险吗？</strong></p>
       <div class="card-quote" style="margin-top:0.4rem;">A：2020年3月疫情时美股四次熔断，黄金也跌了12%——因为大家都在抢现金，任何能换成现金的资产都被抛售。但看接下来：2020年8月黄金从1450美元涨到2075美元创历史新高。黄金不是恐慌时"不跌"的东西，是恐慌过后"唯一不需要救"的东西。</div>
-      <p class="faq-meta" style="color:#8b7a65; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
+      <p class="faq-meta" style="color:#8A7D70; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
     </div>
   </article>
 
@@ -973,11 +973,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

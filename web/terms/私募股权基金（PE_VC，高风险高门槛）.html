@@ -51,8 +51,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,16 +81,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -103,7 +103,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -143,12 +143,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -159,7 +159,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -199,7 +199,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -212,13 +212,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   .card-number {
@@ -235,8 +235,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -262,12 +262,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -277,7 +277,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -299,18 +299,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -333,17 +333,17 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -370,12 +370,12 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
   @media (max-width: 600px) {
@@ -531,7 +531,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -572,7 +572,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -597,13 +597,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -654,15 +654,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -801,7 +801,7 @@ body.term-page {
         国家给PE/VC设了<span class="highlight">100万起投 + 500万身家</span>的门槛——这不是在拦你发财，是在保护你不被"合法的赌场"吞掉本金。
       </div>
       <p>你猜一个PE基金投的10个公司里，有几个真能赚钱？</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">答案是1到2个。剩下全是炮灰。但GP不会讲那些故事。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">答案是1到2个。剩下全是炮灰。但GP不会讲那些故事。</p>
     </div>
   </article>
 
@@ -818,7 +818,7 @@ body.term-page {
         但孙正义本人亏了多少？<span class="highlight">几乎没有</span>。愿景基金每年收2%管理费（总规模1000亿→每年入账20亿美元），赚了还抽20%分成。真正买单的是背后的LP——沙特主权基金、苹果、高通，还有<span class="highlight">你的养老金和保费</span>（这些钱通过社保基金、保险公司间接投进了PE/VC）。
       </div>
       <p>你从来没签过任何文件，但你的钱已经在PE/VC的赌桌上转了一圈了——只是赚了没你的份，亏了从你未来的养老金里扣。</p>
-      <p style="color:#6b5e4e;">这就叫<span class="tag">"风险社会化，收益私有化"</span>。</p>
+      <p style="color:#8A7D70;">这就叫<span class="tag">"风险社会化，收益私有化"</span>。</p>
     </div>
   </article>
 
@@ -830,12 +830,12 @@ body.term-page {
     <h2 class="card-title">三问自测：你够不够格碰PE/VC</h2>
     <div class="card-body">
       <ul class="step-list">
-        <li><strong>第一问：</strong>这笔钱锁5到10年不能用，会影响你的生活质量吗？<br><span style="color:#8b7a65;">如果答案是"会"——直接出局。</span></li>
-        <li><strong>第二问：</strong>这笔钱全部亏光，你会心疼到睡不着吗？<br><span style="color:#8b7a65;">如果答案是"会"——直接出局。</span></li>
-        <li><strong>第三问：</strong>你看得懂被投企业的业务吗？（不是听得懂故事，是看得懂商业模式和财务报表）<br><span style="color:#8b7a65;">如果答案是"看不懂"——直接出局。</span></li>
+        <li><strong>第一问：</strong>这笔钱锁5到10年不能用，会影响你的生活质量吗？<br><span style="color:#8A7D70;">如果答案是"会"——直接出局。</span></li>
+        <li><strong>第二问：</strong>这笔钱全部亏光，你会心疼到睡不着吗？<br><span style="color:#8A7D70;">如果答案是"会"——直接出局。</span></li>
+        <li><strong>第三问：</strong>你看得懂被投企业的业务吗？（不是听得懂故事，是看得懂商业模式和财务报表）<br><span style="color:#8A7D70;">如果答案是"看不懂"——直接出局。</span></li>
       </ul>
       <p style="margin-top:1rem;">三关全过？还有最后一关——你有<span class="tag">合格投资者认证</span>吗？没有？那这就是国家替你做的决定。</p>
-      <p style="color:#6b5e4e;">如果你真的想参与一级市场的收益，不如先买一份<span class="highlight">指数基金</span>——它间接覆盖了PE/VC投中且成功上市的那一批企业。门槛只需10块钱。</p>
+      <p style="color:#8A7D70;">如果你真的想参与一级市场的收益，不如先买一份<span class="highlight">指数基金</span>——它间接覆盖了PE/VC投中且成功上市的那一批企业。门槛只需10块钱。</p>
     </div>
   </article>
 
@@ -852,7 +852,7 @@ body.term-page {
         PE/VC不是骗局，但它是一张<span class="highlight">"先上车"</span>的票。这辆车在大多数人还没看到站牌的时候就已经开走了。等你看到它上了新闻，说明车已经到站，司机正在下车。
       </div>
       <p>普通人该焦虑的不是"我进不去PE"，而是"我凭什么能跑得比PE更早看到未来"。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">如果最好公司的股票在上市前就已经被人分完了——二级市场留给你的，是不是只剩鱼骨头？你今天要重新想想，你的财富增长到底该靠什么？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">如果最好公司的股票在上市前就已经被人分完了——二级市场留给你的，是不是只剩鱼骨头？你今天要重新想想，你的财富增长到底该靠什么？</p>
     </div>
   </article>
 </div>
@@ -894,11 +894,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

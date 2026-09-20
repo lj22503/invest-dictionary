@@ -51,8 +51,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,16 +81,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -103,7 +103,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -143,12 +143,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -159,7 +159,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -199,7 +199,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -212,13 +212,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   .card-number {
@@ -235,8 +235,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -262,12 +262,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -277,7 +277,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -299,18 +299,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -333,17 +333,17 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -369,14 +369,14 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
     width: 100%;
     justify-content: center;
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
   .footer-dash {
@@ -539,7 +539,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -580,7 +580,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -605,13 +605,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -662,15 +662,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -809,7 +809,7 @@ body.term-page {
         周期股的底部，不是"价格跌够了"，是<span class="highlight">所有看多的人先熬死了</span>。等熬死的人足够多，剩下的人才开始赚钱。等你从新闻上看到"大涨"，那些在底部熬了一年的人正准备把筹码倒给你。
       </div>
       <p>防御股呢？它从来不上头条。你打开长江电力的K线，像一条被熨斗烫过的直线，往右上角慢慢爬。无聊透顶。直到熊市来了，别人的账户腰斩，你的长江电力在涨——你才明白，<span class="tag">无聊是另一种性感</span>。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">周期股是冲浪——浪来的时候爽翻天，浪退的时候一嘴沙子。防御股是便利店——不暴利，但刮风下雨都有人进门买瓶水。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">周期股是冲浪——浪来的时候爽翻天，浪退的时候一嘴沙子。防御股是便利店——不暴利，但刮风下雨都有人进门买瓶水。</p>
     </div>
   </article>
 
@@ -826,10 +826,10 @@ body.term-page {
         那一年，所有曾经高喊"资源永不败"的人，要么销户，要么沦为了<span class="highlight">沉默的大多数</span>。
       </div>
       <p>但他们没有完全消失。2020年疫情后，全球大放水，铜价从35000涨到78000，紫金矿业两年涨了5倍。2021年"煤飞色舞"又回来了，那些在2008年套牢的人，有些人等了整整13年才解套——也有些人，在2015年抄底煤炭，又被腰斩一次，然后在2020年终于翻身。</p>
-      <p style="color:#6b5e4e;">周期股的问题从来不是"涨不涨"。它一定会涨。问题是——<span class="tag">你熬得到那一天吗？</span></p>
+      <p style="color:#8A7D70;">周期股的问题从来不是"涨不涨"。它一定会涨。问题是——<span class="tag">你熬得到那一天吗？</span></p>
       <p>再来看看防御股。2022年，沪深300跌了21%，创业板跌了29%。哀鸿遍野。但长江电力涨了将近20%，中国移动稳稳的，迈瑞医疗也没怎么动。买了防御股的人，那一年朋友圈异常安静——不是炫耀，是不需要安慰。</p>
       <p>但你别急着"我全买防御股"。2019-2020年大牛市，长江电力涨了不到10%，隔壁新能源翻了三四倍。买了防御股的人，那两年朋友圈也异常安静——这次是<span class="highlight">酸</span>的。手上拿着防御股，心里想着成长股，手里不动、心里翻江倒海。</p>
-      <p style="color:#6b5e4e;">投资里最痛苦的事，不是亏钱——是别人在赚钱的时候，你只能看着。</p>
+      <p style="color:#8A7D70;">投资里最痛苦的事，不是亏钱——是别人在赚钱的时候，你只能看着。</p>
     </div>
   </article>
 
@@ -845,7 +845,7 @@ body.term-page {
         <li><strong>第二件事：查一下现在的"经济体温"。</strong>百度"国家统计局PMI"，看这个数字。如果连续3个月在50以上且持续上升——经济在回暖，周期股值得关注。如果从高点回落跌破50——经济在降温，该多抱抱防御股了。PMI是周期股的免费天气预报，大部分人从来不看。</li>
         <li><strong>第三件事：做个压力测试。</strong>假设你现在所有周期股全部跌40%，你的总资产还剩多少？你还能正常生活吗？会不会被迫割肉？如果答案是"扛不住"，要么减仓周期股，要么加仓防御股。不要等到暴跌那天才做这道题——那天你根本没有理智算账。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">这三件事做完，你对"买什么"的困惑会减少80%。剩下的20%，是运气。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">这三件事做完，你对"买什么"的困惑会减少80%。剩下的20%，是运气。</p>
     </div>
   </article>
 
@@ -863,7 +863,7 @@ body.term-page {
       </div>
       <p>反过来，买周期股的人嘴上说"我赌拐点"，但大多数人是看到涨了才追进去——这时候拐点已经过了，你追的是后半段，利润最薄、风险最大。真正的周期股玩家，都是在行业最惨的时候进场，在所有人高喊"永远涨"的时候离场。</p>
       <p>所以比"买周期股还是买防御股"更重要的一个问题是——</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">当全世界都在嘲笑你的持仓"过时了""太保守了""赚不到钱了"，你还能坚持自己的判断吗？你坚持的到底是"理性判断"，还是"死要面子不肯认错"？你分得清这二者的区别吗？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">当全世界都在嘲笑你的持仓"过时了""太保守了""赚不到钱了"，你还能坚持自己的判断吗？你坚持的到底是"理性判断"，还是"死要面子不肯认错"？你分得清这二者的区别吗？</p>
     </div>
   </article>
 </div>
@@ -905,11 +905,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

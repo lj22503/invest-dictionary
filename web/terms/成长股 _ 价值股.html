@@ -51,8 +51,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,16 +81,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -103,7 +103,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -143,12 +143,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -159,7 +159,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -199,7 +199,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -212,13 +212,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   .card-number {
@@ -235,8 +235,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -262,12 +262,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -277,7 +277,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -299,18 +299,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -333,17 +333,17 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -369,14 +369,14 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
     width: 100%;
     justify-content: center;
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
   .footer-dash {
@@ -539,7 +539,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -580,7 +580,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -605,13 +605,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -662,15 +662,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -808,7 +808,7 @@ body.term-page {
         当你的买入理由不是"它值这么多"而是"<span class="highlight">有人会出更多</span>"，你做的不是投资，是击鼓传花。
       </div>
       <p>反过来想——那家做了三十年酱油的老厂，年利润五十亿，市值也是五百亿。市盈率才10倍，年年大笔分红。市场嫌它"没故事"、"没想象空间"。但人家酱缸里腌着的，是真金白银。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">成长股是赌未来，价值股是捡当下。但你分得清"赌"和"捡"的区别吗？</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">成长股是赌未来，价值股是捡当下。但你分得清"赌"和"捡"的区别吗？</p>
     </div>
   </article>
 
@@ -824,9 +824,9 @@ body.term-page {
         亚马逊是<span class="highlight">最极致的"成长股"</span>——它不把钱分给股东，它把每一分钱都变成未来更大的护城河。信的人暴富，不信的人一直在等"泡沫破裂"。
       </div>
       <p>但别急着"我也要买成长股"。亚马逊是万里挑一的幸存者。在它背后，死掉的"亚马逊模仿者"不计其数——那些也喊"先亏钱抢市场"的公司，99%都烧光了投资人的钱，然后消失了。</p>
-      <p style="color:#6b5e4e;">成长股的问题从来不是"增长好不好"，而是"<span class="tag">万一下个季度不增长了怎么办</span>"。当50倍PE的股票增速从40%掉到20%，它可以一天腰斩——PE从50杀到25，这叫"戴维斯双杀"。</p>
+      <p style="color:#8A7D70;">成长股的问题从来不是"增长好不好"，而是"<span class="tag">万一下个季度不增长了怎么办</span>"。当50倍PE的股票增速从40%掉到20%，它可以一天腰斩——PE从50杀到25，这叫"戴维斯双杀"。</p>
       <p>而价值股那边，也藏着另一种陷阱——你以为PE只有5倍是"被低估"，但真相可能是这家公司明年就要被淘汰，市场提前给它判了缓刑。这叫"价值陷阱"。</p>
-      <p style="color:#6b5e4e;">便宜不一定对，贵不一定错。关键是你有没有本事看出区别。</p>
+      <p style="color:#8A7D70;">便宜不一定对，贵不一定错。关键是你有没有本事看出区别。</p>
     </div>
   </article>
 
@@ -843,7 +843,7 @@ body.term-page {
         <li><strong>第二问：它的估值需要多快的增长来支撑？</strong>一只PE 80倍的股票，意味着市场假设它未来十年利润要翻十倍。老板自己敢说"十年翻十倍"吗？如果他都不敢，你为什么敢？</li>
         <li><strong>第三问：如果明天跌30%，你敢加仓还是想割肉？</strong>敢加仓，说明你真的"懂它值多少钱"——这是投资。想割肉，说明你只是"赌它会涨"——那是投机。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">答完这三问，你能看清自己在赌什么。大多数人不敢答。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">答完这三问，你能看清自己在赌什么。大多数人不敢答。</p>
     </div>
   </article>
 
@@ -860,7 +860,7 @@ body.term-page {
         真正的好投资，是<span class="highlight">"以价值的价格，买到了成长的引擎"</span>。你不需要选边站，你需要的是"合理价格买入好东西"。
       </div>
       <p>反过来，最惨的亏损往往来自两类人：一是花成长股的价格买了一支伪成长（故事讲得好、钱赚不到）；二是花价值股的价格买了一支价值陷阱（便宜是因为真的要完）。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">所以比选"成长还是价值"更重要的一个问题是——你分得清"梦想"和"幻觉"的区别吗？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">所以比选"成长还是价值"更重要的一个问题是——你分得清"梦想"和"幻觉"的区别吗？</p>
     </div>
   </article>
 </div>
@@ -902,11 +902,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

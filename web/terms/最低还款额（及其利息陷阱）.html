@@ -42,8 +42,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
     padding: 2rem 1rem 4rem;
     font-family: "KaiTi","楷体","STKaiti","FangSong","仿宋","STFangsong","Noto Serif SC","Source Han Serif SC","Songti SC","宋体","SimSun","PingFang SC","Microsoft YaHei",serif;
@@ -52,17 +52,17 @@
   .paper {
     max-width: 720px; width: 100%;
     background: #FFFFFF;
-    background-image: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(180,155,120,0.06) 27px, rgba(180,155,120,0.06) 28px);
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0) 27px, rgba(0,0,0,0) 28px);
     border: 1.5px dashed rgba(36,22,16,0.10); border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
-    box-shadow: 2px 3px 0 rgba(60,45,25,0.06), 5px 7px 14px rgba(60,45,25,0.10), inset 0 0 80px rgba(230,215,190,0.18);
+    box-shadow: 2px 3px 0 rgba(36,22,16,0.06), 5px 7px 14px rgba(36,22,16,0.10), inset 0 0 80px rgba(0,0,0,0);
     position: relative; overflow: visible;
   }
   .paper::before {
     content: ''; position: absolute; top: -10px; left: 50%;
     transform: translateX(-50%) rotate(-2deg);
     width: 70px; height: 28px;
-    background: rgba(220,205,175,0.55); border: 1px dashed rgba(36,22,16,0.10);
+    background: rgba(0,0,0,0); border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.04);
   }
   .header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.8rem; position: relative; }
@@ -75,10 +75,10 @@
   }
   .main-title::after {
     content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 6px;
-    background: repeating-linear-gradient(90deg, #e8784a 0px, #e8784a 4px, transparent 4px, transparent 10px, #e8784a 10px, #e8784a 12px, transparent 12px, transparent 18px);
+    background: repeating-linear-gradient(90deg, #F97316 0px, #F97316 4px, transparent 4px, transparent 10px, #F97316 10px, #F97316 12px, transparent 12px, transparent 18px);
     border-radius: 2px; opacity: 0.75;
   }
-  .subtitle { margin-top: 0.6rem; font-size: 0.9rem; color: #8b7a65; letter-spacing: 0.05em; font-style: italic; }
+  .subtitle { margin-top: 0.6rem; font-size: 0.9rem; color: #8A7D70; letter-spacing: 0.05em; font-style: italic; }
   .card-divider {
     text-align: center; margin: 2rem 0; position: relative;
     height: 16px; display: flex; align-items: center; justify-content: center;
@@ -90,21 +90,21 @@
   }
   .card-divider::after {
     content: '✂'; position: absolute; font-size: 0.8rem;
-    color: #b8a58e; opacity: 0.5; top: -4px; right: 12%; transform: rotate(10deg);
+    color: #8A7D70; opacity: 0.5; top: -4px; right: 12%; transform: rotate(10deg);
   }
   .card {
     position: relative; padding: 1.8rem 1.5rem 2rem; margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10); border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4; box-shadow: 1px 2px 0 rgba(60,45,25,0.04); transition: box-shadow 0.2s ease;
+    background: #FFFFFF; box-shadow: 1px 2px 0 rgba(36,22,16,0.04); transition: box-shadow 0.2s ease;
   }
-  .card:hover { box-shadow: 2px 3px 8px rgba(60,45,25,0.10); }
+  .card:hover { box-shadow: 2px 3px 8px rgba(36,22,16,0.10); }
   .card-number {
     position: absolute; top: -18px; left: -12px;
     width: 38px; height: 38px;
     border: 2px dashed rgba(36,22,16,0.10); border-radius: 48% 52% 50% 50% / 45% 55% 52% 48%;
     background: #FFFFFF; display: flex; align-items: center; justify-content: center;
     font-family: "KaiTi","楷体","STKaiti",serif; font-size: 1.1rem;
-    color: #6b5e4e; box-shadow: 1px 1px 0 rgba(60,45,25,0.05); user-select: none;
+    color: #8A7D70; box-shadow: 1px 1px 0 rgba(36,22,16,0.05); user-select: none;
   }
   .card-title {
     font-family: "KaiTi","楷体","STKaiti","FangSong","仿宋",serif;
@@ -114,20 +114,20 @@
   }
   .card-title::after {
     content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 4px;
-    background: repeating-linear-gradient(90deg, #d4745c 0px, #d4745c 3px, transparent 3px, transparent 7px, #d4745c 7px, #d4745c 10px, transparent 10px, transparent 14px);
+    background: repeating-linear-gradient(90deg, #F97316 0px, #F97316 3px, transparent 3px, transparent 7px, #F97316 7px, #F97316 10px, transparent 10px, transparent 14px);
     border-radius: 1px; opacity: 0.65;
   }
-  .card-body { font-size: 0.95rem; color: #4a4035; line-height: 2.1; margin-bottom: 1rem; }
+  .card-body { font-size: 0.95rem; color: #3A332C; line-height: 2.1; margin-bottom: 1rem; }
   .card-body p { margin-bottom: 0.7rem; }
   .card-body .highlight { position: relative; display: inline; padding: 0 0.15em; }
   .card-body .highlight::after {
     content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 8px;
-    background: rgba(232,120,74,0.18); z-index: -1; border-radius: 2px;
+    background: rgba(249,115,22,0.18); z-index: -1; border-radius: 2px;
   }
   .card-body .tag {
-    display: inline-block; background: rgba(232,120,74,0.10); color: #8b5040;
+    display: inline-block; background: rgba(249,115,22,0.10); color: #8b5040;
     padding: 0.1em 0.5em; border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30); font-size: 0.88rem; margin: 0 0.1em;
+    border: 1px dashed rgba(249,115,22,0.30); font-size: 0.88rem; margin: 0 0.1em;
   }
   .card-body .warn {
     display: inline-block; background: rgba(200,60,40,0.10); color: #a04030;
@@ -138,12 +138,12 @@
   .step-list li { position: relative; padding-left: 1.8em; margin-bottom: 0.7rem; }
   .step-list li::before {
     content: ''; position: absolute; left: 0; top: 0.55em;
-    width: 8px; height: 8px; background: #e8784a; border-radius: 50%;
-    opacity: 0.7; box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    width: 8px; height: 8px; background: #F97316; border-radius: 50%;
+    opacity: 0.7; box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
   .card-quote {
-    border-left: 3px dashed #d4745c; padding-left: 1rem;
-    margin: 1rem 0; color: #6b5040; font-style: italic; font-size: 0.92rem;
+    border-left: 3px dashed #F97316; padding-left: 1rem;
+    margin: 1rem 0; color: #8A7D70; font-style: italic; font-size: 0.92rem;
   }
   .num-box {
     display: inline-block; background: #FFFFFF; border: 1.5px dashed rgba(36,22,16,0.10);
@@ -162,9 +162,9 @@
     border-radius: 3px 10px 5px 8px; padding: 0.6rem 1.2rem;
     font-family: "KaiTi","楷体","STKaiti",serif; font-size: 1rem;
     color: #8A7D70; display: flex; align-items: center; gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
-  .footer-sign .arrow { font-size: 1.3rem; color: #e8784a; }
+  .footer-sign .arrow { font-size: 1.3rem; color: #F97316; }
   @media (max-width: 600px) {
     html { font-size: 15px; }
     .paper { padding: 2rem 1.2rem 1.8rem; border-radius: 3px 8px 5px 7px; }
@@ -287,7 +287,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -328,7 +328,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -353,13 +353,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -410,15 +410,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -557,7 +557,7 @@ body.term-page {
         这不是排版失误。这是<span class="highlight">全世界信用卡行业最成功的行为设计</span>：让你觉得"还863就够了"。而剩下的7769块，从消费那天起，每一天都在按<span class="warn">年化18.25%</span>滚利息。
       </div>
       <p>"最低还款"翻译成人话：<span class="tag">"请开始付利息吧"</span>。它不是"及格线"，是"利息收割的起跑枪"。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">你今天还的每一笔"最低还款"，都在给银行发加班费——而且是按复利发。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">你今天还的每一笔"最低还款"，都在给银行发加班费——而且是按复利发。</p>
     </div>
   </article>
 
@@ -575,7 +575,7 @@ body.term-page {
         12个月后，他这<span class="highlight">8632块</span>的原始账单变成了<span class="warn">超过11000块</span>。他没有逾期一次，征信上没有任何不良记录。但他每年多付了<span class="warn">2000多块利息</span>——银行每年从他一个人身上就赚了这么多。
       </div>
       <p>更可怕的是：很多银行的计息方式是<span class="tag">"全额计息"</span>。即使你还了863块，利息不是按7769算——是按8632算（全额），从消费日算到实际还款日。你还了的那863块，它也从消费日开始算利息，一直算到你还款那天，才把863块对应的利息减掉。</p>
-      <p style="color:#6b5e4e;">你没看错：你还了的钱，银行也在收利息。直到你"全额还清"那一刻，它才放手。</p>
+      <p style="color:#8A7D70;">你没看错：你还了的钱，银行也在收利息。直到你"全额还清"那一刻，它才放手。</p>
     </div>
   </article>
 
@@ -592,7 +592,7 @@ body.term-page {
         <li>如果缺口较大，<span class="tag">比较"账单分期"和"最低还款"的IRR</span>。有时分期的手续费年化反而低于最低还款的全额计息。虽然都不便宜，但要选代价更小的那个。</li>
         <li>如果只是现金流错配（比如工资晚几天发），用<span class="highlight">信用卡的"容时容差"服务</span>。多数银行有3天宽限期，在宽限期内全额还款，不算逾期、不触发全额计息。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">记住一条铁律：最低还款额不是还款方式，是利息产品的<strong>购买按钮</strong>。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">记住一条铁律：最低还款额不是还款方式，是利息产品的<strong>购买按钮</strong>。</p>
     </div>
   </article>
 
@@ -608,7 +608,7 @@ body.term-page {
       <div class="card-quote">
         你选了"最低还款"，银行就在后台给你打了一个标签：<span class="warn">"高价值客户"</span>。不是因为你信用好，是因为你开始交利息了。而你，还觉得自己"没逾期、没欠钱、一切正常"。
       </div>
-      <p style="color:#8b7a65; font-size:0.9rem;">如果银行最希望你做的那件事，刚好也是你最轻松就能做到的那件事——你觉得那件事对你的钱包好不好？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">如果银行最希望你做的那件事，刚好也是你最轻松就能做到的那件事——你觉得那件事对你的钱包好不好？</p>
     </div>
   </article>
 
@@ -655,11 +655,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

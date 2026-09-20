@@ -51,8 +51,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,16 +81,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -103,7 +103,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -143,12 +143,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -159,7 +159,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -199,7 +199,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -212,13 +212,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   .card-number {
@@ -235,8 +235,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -262,12 +262,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -277,7 +277,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -299,18 +299,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -333,17 +333,17 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -359,12 +359,12 @@
   .money-table th,
   .money-table td {
     padding: 0.5rem 0.7rem;
-    border-bottom: 1px dashed rgba(180,155,120,0.35);
+    border-bottom: 1px dashed rgba(0,0,0,0);
     text-align: left;
   }
 
   .money-table th {
-    color: #8b7a65;
+    color: #8A7D70;
     font-weight: 400;
     font-style: italic;
     font-size: 0.82rem;
@@ -404,10 +404,10 @@
     position: relative;
   }
 
-  .curve-bar .bar.y1 { height: 12px; background: rgba(180,155,120,0.25); }
-  .curve-bar .bar.y2 { height: 14px; background: rgba(180,155,120,0.28); }
-  .curve-bar .bar.y3 { height: 16px; background: rgba(180,155,120,0.32); }
-  .curve-bar .bar.y5 { height: 26px; background: rgba(180,155,120,0.40); }
+  .curve-bar .bar.y1 { height: 12px; background: rgba(0,0,0,0); }
+  .curve-bar .bar.y2 { height: 14px; background: rgba(0,0,0,0); }
+  .curve-bar .bar.y3 { height: 16px; background: rgba(0,0,0,0); }
+  .curve-bar .bar.y5 { height: 26px; background: rgba(0,0,0,0); }
   .curve-bar .bar.y10 { height: 50px; background: rgba(200,140,100,0.48); }
   .curve-bar .bar.y15 { height: 72px; background: rgba(200,120,80,0.60); }
   .curve-bar .bar.y20 { height: 100px; background: rgba(200,100,60,0.78); }
@@ -415,14 +415,14 @@
   .curve-bar .bar-label {
     margin-top: 0.3rem;
     font-size: 0.7rem;
-    color: #8b7a65;
+    color: #8A7D70;
   }
 
   .curve-bar .bar-value {
     position: absolute;
     top: -18px;
     font-size: 0.65rem;
-    color: #6b5e4e;
+    color: #8A7D70;
     white-space: nowrap;
   }
 
@@ -459,14 +459,14 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
     width: 100%;
     justify-content: center;
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
   @media (max-width: 600px) {
@@ -631,7 +631,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -672,7 +672,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -697,13 +697,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -754,15 +754,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -904,7 +904,7 @@ body.term-page {
         你不是在"存钱"。保费不是存款，退保不是取款——<span class="highlight">你是在结账</span>。保险公司的账本上，你那 3 万大部分已经被花掉了。
       </div>
       <p>代理人跟你说"又能保障又能存钱"的时候，没告诉你一件事——<span class="tag">你前面几年的钱，大头都付了佣金和管理费</span>。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">想想看：你那句"我买的保险"，到底是买了一件商品，还是开了一个账户？</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">想想看：你那句"我买的保险"，到底是买了一件商品，还是开了一个账户？</p>
     </div>
   </article>
 
@@ -932,7 +932,7 @@ body.term-page {
 
       <p>你请了一个保镖（保障）、一个管家（管理）、一个销售（代理人）——三年下来，工资已经发了。现在你辞退他们，能退你的<span class="highlight">只是还没花完的零头</span>。</p>
 
-      <p style="margin-top: 1.2rem; color:#6b5e4e;">现金价值不是一条直线——它是一棵"逆向的竹子"：</p>
+      <p style="margin-top: 1.2rem; color:#8A7D70;">现金价值不是一条直线——它是一棵"逆向的竹子"：</p>
 
       <div class="curve-bar">
         <div class="bar-wrap"><div class="bar y1"><span class="bar-value">1%</span></div><div class="bar-label">第1年</div></div>
@@ -943,7 +943,7 @@ body.term-page {
         <div class="bar-wrap"><div class="bar y15"><span class="bar-value">90%</span></div><div class="bar-label">第15年</div></div>
         <div class="bar-wrap"><div class="bar y20"><span class="bar-value">120%+</span></div><div class="bar-label">第20年</div></div>
       </div>
-      <p style="font-size:0.8rem; color:#8b7a65; text-align:center; margin-top:0.3rem;">现金价值占已缴保费的比例 · 典型增额寿险示意</p>
+      <p style="font-size:0.8rem; color:#8A7D70; text-align:center; margin-top:0.3rem;">现金价值占已缴保费的比例 · 典型增额寿险示意</p>
 
       <div class="card-quote">
         前四年像什么都没发生。但地下的根在长。问题是——<span class="highlight">你等得了那么久吗？</span>
@@ -963,7 +963,7 @@ body.term-page {
         <li><strong>画曲线。</strong>把现金价值表上的数字按年份连成一条线。问自己：这条线什么时候才超过我已交保费？如果超过 5 年——我能不能等到那天？如果不能，这张保单从一开始就不适合我。</li>
         <li><strong>做决定。</strong>如果保单已经过了"回本期"且你真的不需要这笔钱，留着。如果刚买一两年且现金流紧张——算一笔账：继续交 vs 退保止损，哪个更痛？记住：<span class="tag">沉没成本不是成本</span>，已经亏掉的钱不是继续交的理由。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">买保险之前做的第一件事：问代理人"第一年末现金价值是多少"——看他能不能在 3 秒内说出来。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">买保险之前做的第一件事：问代理人"第一年末现金价值是多少"——看他能不能在 3 秒内说出来。</p>
     </div>
   </article>
 
@@ -981,7 +981,7 @@ body.term-page {
       </div>
       <p>真正的问题不是"退保亏了多少"，而是：<span class="highlight">你当初是因为想买保障才买的，还是因为代理人告诉你"这比存银行划算"才买的？</span></p>
       <p>如果是前者，现金价值低是合理的——你买的是服务，服务已经享受了。如果是后者，你被"现金价值"这个词骗了——它叫"价值"，但你拿到手之前，它只是个<span class="tag">遥远的承诺</span>。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">你买的不是保单——你买的是一份对"未来自己"的赌注。你赌的是，20 年后的你，真的需要这笔钱以这种方式回来。</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">你买的不是保单——你买的是一份对"未来自己"的赌注。你赌的是，20 年后的你，真的需要这笔钱以这种方式回来。</p>
     </div>
   </article>
 </div>
@@ -1023,11 +1023,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

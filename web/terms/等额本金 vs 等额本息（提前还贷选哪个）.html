@@ -91,8 +91,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
     padding: 2rem 1rem 4rem;
     font-family: "KaiTi","楷体","STKaiti","FangSong","仿宋","STFangsong","Noto Serif SC","Source Han Serif SC","Songti SC","宋体","SimSun","PingFang SC","Microsoft YaHei",serif;
@@ -101,17 +101,17 @@
   .paper {
     max-width: 720px; width: 100%;
     background: #FFFFFF;
-    background-image: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(180,155,120,0.06) 27px, rgba(180,155,120,0.06) 28px);
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0) 27px, rgba(0,0,0,0) 28px);
     border: 1.5px dashed rgba(36,22,16,0.10); border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
-    box-shadow: 2px 3px 0 rgba(60,45,25,0.06), 5px 7px 14px rgba(60,45,25,0.10), inset 0 0 80px rgba(230,215,190,0.18);
+    box-shadow: 2px 3px 0 rgba(36,22,16,0.06), 5px 7px 14px rgba(36,22,16,0.10), inset 0 0 80px rgba(0,0,0,0);
     position: relative; overflow: visible;
   }
   .paper::before {
     content: ''; position: absolute; top: -10px; left: 50%;
     transform: translateX(-50%) rotate(-2deg);
     width: 70px; height: 28px;
-    background: rgba(220,205,175,0.55); border: 1px dashed rgba(36,22,16,0.10);
+    background: rgba(0,0,0,0); border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.04);
   }
   .header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.8rem; position: relative; }
@@ -127,7 +127,7 @@
     background: repeating-linear-gradient(90deg, #7a6aa0 0px, #7a6aa0 4px, transparent 4px, transparent 10px, #7a6aa0 10px, #7a6aa0 12px, transparent 12px, transparent 18px);
     border-radius: 2px; opacity: 0.75;
   }
-  .subtitle { margin-top: 0.6rem; font-size: 0.9rem; color: #8b7a65; letter-spacing: 0.05em; font-style: italic; }
+  .subtitle { margin-top: 0.6rem; font-size: 0.9rem; color: #8A7D70; letter-spacing: 0.05em; font-style: italic; }
   .card-divider {
     text-align: center; margin: 2rem 0; position: relative;
     height: 16px; display: flex; align-items: center; justify-content: center;
@@ -138,23 +138,23 @@
     border-radius: 2px; opacity: 0.7;
   }
   .card-divider::after {
-    content: '✂'; position: absolute; font-size: 0.8rem; color: #b8a58e;
+    content: '✂'; position: absolute; font-size: 0.8rem; color: #8A7D70;
     opacity: 0.5; top: -4px; right: 12%; transform: rotate(10deg);
   }
   .card {
     position: relative; padding: 1.8rem 1.5rem 2rem; margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10); border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4; box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF; box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
-  .card:hover { box-shadow: 2px 3px 8px rgba(60,45,25,0.10); }
+  .card:hover { box-shadow: 2px 3px 8px rgba(36,22,16,0.10); }
   .card-number {
     position: absolute; top: -18px; left: -12px;
     width: 38px; height: 38px;
     border: 2px dashed rgba(36,22,16,0.10); border-radius: 48% 52% 50% 50% / 45% 55% 52% 48%;
     background: #FFFFFF; display: flex; align-items: center; justify-content: center;
-    font-family: "KaiTi","楷体","STKaiti",serif; font-size: 1.1rem; color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05); user-select: none;
+    font-family: "KaiTi","楷体","STKaiti",serif; font-size: 1.1rem; color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05); user-select: none;
   }
   .card-title {
     font-family: "KaiTi","楷体","STKaiti","FangSong","仿宋",serif;
@@ -167,7 +167,7 @@
     background: repeating-linear-gradient(90deg, #7a6aa0 0px, #7a6aa0 3px, transparent 3px, transparent 7px, #7a6aa0 7px, #7a6aa0 10px, transparent 10px, transparent 14px);
     border-radius: 1px; opacity: 0.65;
   }
-  .card-body { font-size: 0.95rem; color: #4a4035; line-height: 2.1; margin-bottom: 1rem; }
+  .card-body { font-size: 0.95rem; color: #3A332C; line-height: 2.1; margin-bottom: 1rem; }
   .card-body p { margin-bottom: 0.7rem; }
   .card-body .highlight { position: relative; display: inline; padding: 0 0.15em; }
   .card-body .highlight::after {
@@ -212,7 +212,7 @@
     border-radius: 3px 10px 5px 8px; padding: 0.6rem 1.2rem;
     font-family: "KaiTi","楷体","STKaiti",serif; font-size: 1rem;
     color: #8A7D70; display: flex; align-items: center; gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
   .footer-sign .arrow { font-size: 1.3rem; color: #7a6aa0; }
   @media (max-width: 600px) {
@@ -337,7 +337,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -378,7 +378,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -403,13 +403,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -460,15 +460,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -606,7 +606,7 @@ body.term-page {
         但你可能不知道：同样贷100万、30年、利率3.6%——等额本息比等额本金<span class="highlight">多付9.5万利息</span>。一辆车的钱。
       </div>
       <p>为什么银行"推荐"等额本息？不是坑你——是它对双方都"顺"：你月供低，银行前期<span class="tag">多收利息</span>。只是"多收的利息"这一半，没人跟你细说。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">默认选项从来不是中立的。它是替你做的决定。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">默认选项从来不是中立的。它是替你做的决定。</p>
     </div>
   </article>
 
@@ -630,7 +630,7 @@ body.term-page {
       <div class="card-quote">
         更扎心的真相：等额本息的前10年，你还的钱里<span class="highlight">60%以上是利息</span>。还了10年，100万本金只还掉了20万。
       </div>
-      <p style="color:#6b5e4e;">这就是为什么很多人还了10年想提前还贷，一看剩余本金傻眼了——"我这10年都还了些什么？"</p>
+      <p style="color:#8A7D70;">这就是为什么很多人还了10年想提前还贷，一看剩余本金傻眼了——"我这10年都还了些什么？"</p>
     </div>
   </article>
 
@@ -647,7 +647,7 @@ body.term-page {
         <li><strong>问未来打算</strong>：准备10年内提前还贷？选<span class="tag">等额本金</span>——本金还得快，提前还贷时剩余本金更少，省的利息更多。打算安稳还满30年、拿多余的钱去投资？等额本息+低利率也是理性选择。</li>
         <li><strong>已经选了等额本息的别慌</strong>：大多数银行支持还款方式变更或部分提前还款。打客服电话问两件事——"能否变更还款方式"和"部分提前还贷后选择'减少月供'还是'缩短年限'"（选缩短年限省的利息多得多）。</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">记住一句话：<span class="highlight">收入在上坡路的人，适合走"下坡"的还款曲线</span>。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">记住一句话：<span class="highlight">收入在上坡路的人，适合走"下坡"的还款曲线</span>。</p>
     </div>
   </article>
 
@@ -664,7 +664,7 @@ body.term-page {
         这不是房贷独有的陷阱——最低还款额、分期付款、48期购车贷……<span class="highlight">所有"把大额掰碎"的金融产品，本质都是在把"利息"藏进"轻松"里</span>。
       </div>
       <p>月供低不等于成本低。恰恰相反——通常月供越"舒服"，你付的总价越高。</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">今晚的追问：你人生里还有多少选择，是因为"眼前轻松"，而付出了"总账更贵"的代价？</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">今晚的追问：你人生里还有多少选择，是因为"眼前轻松"，而付出了"总账更贵"的代价？</p>
     </div>
   </article>
   <div class="card-divider"></div>
@@ -684,7 +684,7 @@ body.term-page {
       <div class="card-quote" style="margin-top:0.4rem;">A：大多数银行支持还款方式变更或部分提前还款。打客服电话问两件事：能否变更还款方式；部分提前还贷后选"减少月供"还是"缩短年限"——选缩短年限省下的利息多得多。</div>
       <p class="faq-q" style="margin-top:1.3rem;"><strong>Q：为什么银行默认推荐等额本息？</strong></p>
       <div class="card-quote" style="margin-top:0.4rem;">A：超过95%的人选了等额本息。它对你顺（月供低）也对银行顺（前期多收利息）。默认选项从来不是中立的——月供越"舒服"，总账往往越贵，这是所有"把大额掰碎"的金融产品的共同逻辑。</div>
-      <p class="faq-meta" style="color:#8b7a65; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
+      <p class="faq-meta" style="color:#8A7D70; font-size:0.82rem; margin-top:1.4rem; padding-top:0.7rem; border-top:1px dashed rgba(36,22,16,0.10);">📅 更新日期：2026-08-11 · 数据来源：本词条内容整理自公开信息 · 仅供学习参考，不构成投资建议</p>
     </div>
   </article>
 
@@ -698,7 +698,7 @@ body.term-page {
 
 <nav class="term-pager"><a href="%E6%88%BF%E8%B4%B7%E5%88%A9%E7%8E%87%E9%87%8D%E5%AE%9A%E4%BB%B7%E6%97%A5.html" class="pager-prev" title="房贷利率重定价日">← 房贷利率重定价日</a><a href="%E6%8F%90%E5%89%8D%E8%BF%98%E8%B4%B7%EF%BC%88%E8%BF%9D%E7%BA%A6%E9%87%91%20_%20%E5%88%92%E7%AE%97%E5%90%97%EF%BC%89.html" class="pager-next" title="提前还贷（违约金 / 划算吗）">提前还贷（违约金 / 划算吗） →</a></nav>
 
-<div class="ft-tool-link" style="max-width:720px;width:100%;margin:1rem auto 0;padding:0 1rem;font-family:&quot;KaiTi&quot;,&quot;楷体&quot;,&quot;PingFang SC&quot;,sans-serif;font-size:0.9rem;"><span style="color:#8b7a65;">想自己算算？</span> <a href="https://invest-tools.mangofolio.app/tools/mortgage.html" style="color:#F97316;text-decoration:none;">用 房贷计算器 算一算 →</a></div>
+<div class="ft-tool-link" style="max-width:720px;width:100%;margin:1rem auto 0;padding:0 1rem;font-family:&quot;KaiTi&quot;,&quot;楷体&quot;,&quot;PingFang SC&quot;,sans-serif;font-size:0.9rem;"><span style="color:#8A7D70;">想自己算算？</span> <a href="https://invest-tools.mangofolio.app/tools/mortgage.html" style="color:#F97316;text-decoration:none;">用 房贷计算器 算一算 →</a></div>
 <div class="term-back"><a href="../index.html">← 返回投资词典</a></div>
 
 
@@ -731,11 +731,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>

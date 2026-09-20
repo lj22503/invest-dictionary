@@ -52,8 +52,8 @@
   body {
     background: #FFFFFF;
     background-image:
-      radial-gradient(ellipse at 20% 10%, rgba(180,160,130,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(160,140,110,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(0,0,0,0) 0%, transparent 60%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -83,16 +83,16 @@
         0deg,
         transparent,
         transparent 27px,
-        rgba(180,155,120,0.06) 27px,
-        rgba(180,155,120,0.06) 28px
+        rgba(0,0,0,0) 27px,
+        rgba(0,0,0,0) 28px
       );
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 10px 6px 9px;
     padding: 3rem 2.5rem 2.5rem;
     box-shadow:
-      2px 3px 0 rgba(60,45,25,0.06),
-      5px 7px 14px rgba(60,45,25,0.10),
-      inset 0 0 80px rgba(230,215,190,0.18);
+      2px 3px 0 rgba(36,22,16,0.06),
+      5px 7px 14px rgba(36,22,16,0.10),
+      inset 0 0 80px rgba(0,0,0,0);
     position: relative;
     overflow: visible;
   }
@@ -105,7 +105,7 @@
     transform: translateX(-50%) rotate(-2deg);
     width: 70px;
     height: 28px;
-    background: rgba(220,205,175,0.55);
+    background: rgba(0,0,0,0);
     border: 1px dashed rgba(36,22,16,0.10);
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -146,12 +146,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #e8784a 0px,
-        #e8784a 4px,
+        #F97316 0px,
+        #F97316 4px,
         transparent 4px,
         transparent 10px,
-        #e8784a 10px,
-        #e8784a 12px,
+        #F97316 10px,
+        #F97316 12px,
         transparent 12px,
         transparent 18px
       );
@@ -162,7 +162,7 @@
   .subtitle {
     margin-top: 0.6rem;
     font-size: 0.9rem;
-    color: #8b7a65;
+    color: #8A7D70;
     letter-spacing: 0.05em;
     font-style: italic;
   }
@@ -203,7 +203,7 @@
     content: '✂';
     position: absolute;
     font-size: 0.8rem;
-    color: #b8a58e;
+    color: #8A7D70;
     opacity: 0.5;
     top: -4px;
     right: 12%;
@@ -217,13 +217,13 @@
     margin-bottom: 0.6rem;
     border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 6px 14px 8px 11px;
-    background: #fdfaf4;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.04);
+    background: #FFFFFF;
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.04);
     transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    box-shadow: 2px 3px 8px rgba(60,45,25,0.10);
+    box-shadow: 2px 3px 8px rgba(36,22,16,0.10);
   }
 
   .card-number {
@@ -240,8 +240,8 @@
     justify-content: center;
     font-family: "KaiTi", "楷体", "STKaiti", serif;
     font-size: 1.1rem;
-    color: #6b5e4e;
-    box-shadow: 1px 1px 0 rgba(60,45,25,0.05);
+    color: #8A7D70;
+    box-shadow: 1px 1px 0 rgba(36,22,16,0.05);
     user-select: none;
   }
 
@@ -267,12 +267,12 @@
     background:
       repeating-linear-gradient(
         90deg,
-        #d4745c 0px,
-        #d4745c 3px,
+        #F97316 0px,
+        #F97316 3px,
         transparent 3px,
         transparent 7px,
-        #d4745c 7px,
-        #d4745c 10px,
+        #F97316 7px,
+        #F97316 10px,
         transparent 10px,
         transparent 14px
       );
@@ -282,7 +282,7 @@
 
   .card-body {
     font-size: 0.95rem;
-    color: #4a4035;
+    color: #3A332C;
     line-height: 2.1;
     margin-bottom: 1rem;
   }
@@ -304,18 +304,18 @@
     bottom: 0;
     width: 100%;
     height: 8px;
-    background: rgba(232,120,74,0.18);
+    background: rgba(249,115,22,0.18);
     z-index: -1;
     border-radius: 2px;
   }
 
   .card-body .tag {
     display: inline-block;
-    background: rgba(232,120,74,0.10);
+    background: rgba(249,115,22,0.10);
     color: #8b5040;
     padding: 0.1em 0.5em;
     border-radius: 3px 6px 4px 5px;
-    border: 1px dashed rgba(232,120,74,0.30);
+    border: 1px dashed rgba(249,115,22,0.30);
     font-size: 0.88rem;
     margin: 0 0.1em;
   }
@@ -338,17 +338,17 @@
     top: 0.55em;
     width: 8px;
     height: 8px;
-    background: #e8784a;
+    background: #F97316;
     border-radius: 50%;
     opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(232,120,74,0.15);
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.15);
   }
 
   .card-quote {
-    border-left: 3px dashed #d4745c;
+    border-left: 3px dashed #F97316;
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #6b5040;
+    color: #8A7D70;
     font-style: italic;
     font-size: 0.92rem;
   }
@@ -376,12 +376,12 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    box-shadow: 1px 2px 0 rgba(60,45,25,0.05);
+    box-shadow: 1px 2px 0 rgba(36,22,16,0.05);
   }
 
   .footer-sign .arrow {
     font-size: 1.3rem;
-    color: #e8784a;
+    color: #F97316;
   }
 
   /* ===== Responsive ===== */
@@ -513,7 +513,7 @@ body.term-page {
   }
   .term-breadcrumb .bc-sep {
     margin: 0 0.4rem;
-    color: #b8a58e;
+    color: #8A7D70;
   }
   .term-breadcrumb .bc-current {
     color: var(--ink);
@@ -554,7 +554,7 @@ body.term-page {
   .share-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .share-btn.wechat-btn {
     position: relative;
@@ -579,13 +579,13 @@ body.term-page {
   .share-btn.wechat-btn .qr-popup img {
     width: 120px;
     height: 120px;
-    background: #f0f0f0;
+    background: #FFFFFF;
     display: block;
   }
   .share-btn.wechat-btn .qr-popup span {
     display: block;
     font-size: 0.7rem;
-    color: #888;
+    color: #8A7D70;
     margin-top: 0.3rem;
   }
   .copy-toast {
@@ -636,15 +636,15 @@ body.term-page {
   }
   .term-pager a:hover {
     border-color: var(--accent);
-    box-shadow: 0 1px 4px rgba(196,58,49,0.15);
+    box-shadow: 0 1px 4px rgba(249,115,22,0.15);
   }
   .term-pager .pager-disabled {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1.5px dashed #ddd;
+    border: 1.5px dashed rgba(36,22,16,0.10);
     border-radius: 4px 8px 5px 7px;
-    background: #f8f8f8;
-    color: #bbb;
+    background: #FFFFFF;
+    color: rgba(36,22,16,0.10);
     font-size: 0.88rem;
     cursor: default;
   }
@@ -783,7 +783,7 @@ body.term-page {
         遗产税就像一个<span class="highlight">从未出场的幽灵</span>。但它不上场，不等于它不存在。它活在所有富人的财富规划书里，活在每一次"这房子写谁名字"的犹豫里，活在"我走了以后他们怎么办"的失眠里。
       </div>
       <p>一个税种最强大的时候，不是它开征的那一天，而是<span class="tag">"人人都觉得它明天就开征"</span>的那一天。</p>
-      <p style="font-size:0.85rem; color:#8b7a65;">你为国家交了一辈子税，最后这一笔——遗产税——是你走后，社会来找你结的"总账"。</p>
+      <p style="font-size:0.85rem; color:#8A7D70;">你为国家交了一辈子税，最后这一笔——遗产税——是你走后，社会来找你结的"总账"。</p>
     </div>
   </article>
 
@@ -800,7 +800,7 @@ body.term-page {
         一个帝国的缔造者走了，继承人做的第一件事，不是"怎么经营"，而是<span class="highlight">"怎么交税"</span>。
       </div>
       <p>韩国不是个例。日本遗产税最高55%，美国联邦遗产税最高40%。你见过哪个地方的超级富豪不提前做遗产规划的？</p>
-      <p style="color:#6b5e4e;">中国现在没有遗产税。但十年前也没有房地产税。二十年前也没有个人所得税汇算清缴。税这个东西，永远不会<span class="tag">"突然出现"</span>——它只会在你还没准备好的时候，就已经在路上了。</p>
+      <p style="color:#8A7D70;">中国现在没有遗产税。但十年前也没有房地产税。二十年前也没有个人所得税汇算清缴。税这个东西，永远不会<span class="tag">"突然出现"</span>——它只会在你还没准备好的时候，就已经在路上了。</p>
     </div>
   </article>
 
@@ -816,7 +816,7 @@ body.term-page {
         <li><strong>查一下"身后事"预案。</strong>你的人寿保险受益人填对了吗？保单理赔款在现行法律下不属于遗产，可以<span class="tag">绕过遗产分割程序</span>，直接打到受益人账户。这是目前最合法的"避税"通道。</li>
         <li><strong>做一次家庭资产"继承人测试"。</strong>把所有资产列出来（房产、存款、股票、理财、公司股权），标清楚"持有人是谁""未来怎么过户"。如果你突然不在了，你的配偶或孩子能在30天内说清楚这些资产在哪、怎么取吗？</li>
       </ul>
-      <p style="color:#6b5e4e; margin-top:1rem;">遗产税还没来。但你今天的这半小时盘点，可能比攒十年钱都管用。</p>
+      <p style="color:#8A7D70; margin-top:1rem;">遗产税还没来。但你今天的这半小时盘点，可能比攒十年钱都管用。</p>
     </div>
   </article>
 
@@ -834,7 +834,7 @@ body.term-page {
         遗产税的本质，不是政府在抢你的钱。是你在世时欠社会的<span class="highlight">"最后一笔账"</span>。你享受了公共道路、教育资源、法治保护、市场红利——这些都不是免费的。你走的时候，社会来找你平账。
       </div>
       <p>换个角度：如果你知道死后要给社会交一大笔钱，你现在会不会更愿意<span class="highlight">活着的时候花掉一些</span>？或者提前把财富转换成"别人拿不走的"东西——比如孩子的教育、健康的身体、牢固的人脉？</p>
-      <p style="color:#8b7a65; font-size:0.9rem;">遗产税的幽灵不是来抢你钱的，是来提醒你：钱是带不走的。能带走的，只有你活过的痕迹。</p>
+      <p style="color:#8A7D70; font-size:0.9rem;">遗产税的幽灵不是来抢你钱的，是来提醒你：钱是带不走的。能带走的，只有你活过的痕迹。</p>
     </div>
   </article>
 </div>
@@ -879,11 +879,11 @@ function copyPageUrl() {
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #666; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #444; }
+    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #999; }
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
   </style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
