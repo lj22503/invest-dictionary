@@ -1,6 +1,6 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、461 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、472 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
@@ -16,7 +16,7 @@
 - [指数基金（宽基指数 vs 行业指数）](https://dictionary.mangofolio.com/terms/指数基金（宽基指数%20vs%20行业指数）.html): 指数基金分类与选择
 - [个人养老金账户（抵税新政）](https://dictionary.mangofolio.com/terms/个人养老金账户（抵税新政）.html): 个人养老金账户与抵税政策
 
-> 完整 461 词条列表见 https://dictionary.mangofolio.com/ （首页全量目录）
+> 完整 472 词条列表见 https://dictionary.mangofolio.com/ （首页全量目录）
 
 ## 相关站点
 - [财务工具箱](https://invest-tools.mangofolio.app): 复利、定投、房贷、个税等免费计算器
