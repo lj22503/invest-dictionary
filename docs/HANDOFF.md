@@ -63,9 +63,10 @@
 
 之前认为 `batch_fill_1000.py` 是 cron，但实际 cron 是 **Marvis `C:\Users\lj225\.marvis\schedules\11_1_0.yaml`**，直接按 `skill/invest-dictionary-generator/templates/term-page.html`（hot-word 模板）生成新词条。
 
-**Task 5 已改 term-page.html v1.0**——下次 cron 跑出来的就是 v1.0 体系。
+**Task 5 已改 term-page.html v1.0（仅 Wave 1 色系）**——字体链 / emoji 段 / 卡面圆角 / footer 重做（Wave 2）与暗色模式（Wave 3）**尚未进模板**。
 
-热词 cron（12_1_0.yaml）走 KV 推送路径，与本次改造无关。
+> **2026-09-20 更新（入口层修复后）**：两个 cron（`11_1_0.yaml` 词条线、`12_1_0.yaml` 热词线）的 prompt 均已写入【品牌视觉基准】+【产出前自检清单】，统一以 `web/terms/14天期逆回购.html` 为唯一基准页；`skill/invest-dictionary-generator/SKILL.md` 已升级 v1.1.0，同步品牌视觉硬约束与视觉自检清单（含删除"纸感手账风格"表述）。
+> **热词 cron 同样产出 HTML 页面，属于本次品牌视觉改造范围——本节此前"与改造无关"的判断已作废、不可再引用。** 模板层尚未同步，模板与基准页冲突时一律以基准页为准。
 
 ---
 

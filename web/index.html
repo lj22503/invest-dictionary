@@ -16,16 +16,17 @@
 <meta name="twitter:description" content="投资术语，说人话，不装逼。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700;900&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/mangofolio-tokens-v09.css">
 <style>
 :root {
   --paper: var(--mf-colors-background);
+  --accent: var(--mf-colors-text-link);
   --cinnabar: var(--mf-colors-text-link);
   --ink: var(--mf-colors-text);
   --ink-light: var(--mf-colors-text-weak);
   --border: var(--mf-colors-border-weak);
-  --card-bg: #FFFFFF;
+  --card-bg: var(--mf-colors-background-surface);
   --shadow: 0 2px 8px rgba(44,44,44,0.06);
   --shadow-hover: 0 4px 16px rgba(249,115,22,0.12);
 }
@@ -33,14 +34,14 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   background: var(--paper);
   color: var(--ink);
   line-height: 1.6;
   min-height: 100vh;
 }
 
-h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
+h1, h2, h3, h4 { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
 
 /* Hero */
 .hero {
@@ -58,7 +59,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   margin-bottom: 8px;
 }
 .hero .en-title {
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   font-size: 1.1rem;
   color: var(--cinnabar);
   letter-spacing: 0.15em;
@@ -85,14 +86,14 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   color: var(--ink);
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
-  font-family: "PingFang SC", "Microsoft YaHei", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
 }
 .hero input[type="search"]:focus {
   border-color: var(--cinnabar);
   box-shadow: 0 0 0 3px rgba(249,115,22,0.1);
 }
 .hero input[type="search"]::placeholder {
-  color: #B0A99E;
+  color: var(--mf-colors-text-placeholder);
 }
 
 /* Stats bar */
@@ -133,7 +134,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   gap: 12px;
 }
 .chapter-header .ch-name {
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -188,14 +189,14 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   transform: translateY(-2px);
 }
 .entry-card .card-num {
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   font-size: 0.78rem;
   color: var(--cinnabar);
   margin-bottom: 4px;
   font-weight: 700;
 }
 .entry-card .card-title {
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 6px;
@@ -257,10 +258,10 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   border-bottom: 1px solid rgba(36,22,16,0.10);
 }
 .site-header .brand {
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   font-size: 1.15rem;
   font-weight: 700;
-  color: #3A332C;
+  color: var(--ink-strong);
   text-decoration: none;
   letter-spacing: 0.04em;
   display: inline-flex;
@@ -269,7 +270,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
 }
 .site-header .brand .en {
   font-size: 0.72rem;
-  color: #F97316;
+  color: var(--accent);
   letter-spacing: 0.14em;
   font-style: italic;
   font-weight: 400;
@@ -282,20 +283,20 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
 .site-header nav a,
 .site-header nav button {
   font-size: 0.88rem;
-  color: #8A7D70;
+  color: var(--ink-light);
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
-  font-family: "PingFang SC", "Microsoft YaHei", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   padding: 4px 2px;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
 }
 .site-header nav a:hover,
 .site-header nav button:hover {
-  color: #F97316;
-  border-bottom-color: #F97316;
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 @media (max-width: 560px) {
   .site-header { flex-direction: column; gap: 8px; padding: 12px 16px; }
@@ -305,7 +306,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
 .hero-eyebrow {
   font-size: 0.85rem;
   letter-spacing: 0.3em;
-  color: #F97316;
+  color: var(--accent);
   margin-bottom: 18px;
 }
 .hero .subtitle {
@@ -326,16 +327,16 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   border-radius: 24px;
   font-size: 0.95rem;
   text-decoration: none;
-  border: 1.5px solid #F97316;
-  background: #F97316;
-  color: #fff;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--mf-colors-text-on-primary);
   cursor: pointer;
   transition: all 0.2s;
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
 }
 .hero-btn.ghost {
   background: transparent;
-  color: #F97316;
+  color: var(--accent);
 }
 .hero-btn:hover {
   box-shadow: 0 4px 14px rgba(249,115,22,0.25);
@@ -350,7 +351,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   padding: 28px 32px 24px;
   position: relative;
   z-index: 5;
-  background: #FFFFFF;
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -371,7 +372,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   flex-wrap: wrap;
 }
 .hot-title {
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   font-size: 1.25rem;
   font-weight: 900;
   color: var(--cinnabar);
@@ -399,7 +400,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   height: 74px;
   box-sizing: border-box;
   padding: 0 6px;
-  border-bottom: 1px dashed var(--border);
+  border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: var(--ink);
 }
@@ -418,7 +419,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
 }
 .hot-item .hot-term .hot-badge {
   font-size: 0.68rem;
-  color: #fff;
+  color: var(--mf-colors-text-on-primary);
   background: var(--cinnabar);
   border-radius: 4px;
   padding: 2px 6px;
@@ -439,7 +440,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
 .hot-subscribe {
   flex-shrink: 0;
   width: 320px;
-  border-left: 1px dashed var(--border);
+  border-left: 1px solid var(--border);
   padding-left: 32px;
 }
 .hot-subscribe .hs-form {
@@ -468,10 +469,10 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
   border: 1.5px solid var(--cinnabar);
   border-radius: 8px;
   background: var(--cinnabar);
-  color: #fff;
+  color: var(--mf-colors-text-on-primary);
   cursor: pointer;
   transition: background 0.2s ease;
-  font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   white-space: nowrap;
 }
 .hot-subscribe .hs-form button:hover {
@@ -485,7 +486,7 @@ h1, h2, h3, h4 { font-family: "Noto Serif SC", serif, "Segoe UI Emoji", "Apple C
 }
 @media (max-width: 900px) {
   .hot-section { flex-direction: column; gap: 20px; }
-  .hot-subscribe { width: 100%; border-left: none; border-top: 1px dashed var(--border); padding-left: 0; padding-top: 16px; }
+  .hot-subscribe { width: 100%; border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 16px; }
 }
 @media (max-width: 640px) {
   .hot-section { margin-top: 24px; padding: 20px 16px 18px; }
@@ -7299,39 +7300,40 @@ var ALL_ENTRIES = [
   },
   {
     "id": 352,
-    "slug": "核心一级资本（银行补血）",
-    "title": "核心一级资本（银行补血）",
+    "slug": "核心一级资本（银行的本钱）",
+    "title": "核心一级资本（银行的本钱）",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
-      "核心一级资本是什么：银行最扎实的“本钱”",
-      "为什么重要：本钱不够，银行才真的危险",
-      "怎么用 / 怎么看：注资对你意味着什么",
-      "常见坑 / 误区：把注资想反了"
+      "什么是核心一级资本：银行“自己兜底的钱”",
+      "为什么重要：本钱越薄，风险越容易外溢",
+      "怎么用 / 怎么看：三件事帮你读懂注资新闻",
+      "常见坑 / 误区：别把“注资”理解反了"
     ],
     "related": [
       "存款保险（50万赔付）",
-      "存款准备金",
-      "降准（存款准备金率下调）"
+      "买断式逆回购",
+      "降息 / 加息"
     ],
-    "next": "",
+    "next": "信用卡",
     "filename": "核心一级资本（银行的本钱）.html",
     "file": "核心一级资本（银行的本钱）.html"
   },
   {
     "id": 353,
-    "slug": "外汇储备",
-    "title": "外汇储备",
+    "slug": "信用卡",
+    "title": "信用卡",
     "chapter": "第十七篇：日常支付与账户管理",
     "card_titles": [
-      "外汇储备是什么：国家的“外汇家底”",
-      "为什么重要：日本一出手，全球利率跟着抖",
-      "怎么用 / 怎么看：普通人该关注什么",
-      "常见坑 / 误区：别把宏观新闻听成鬼故事"
+      "什么是信用卡：银行给的“先花后还”额度",
+      "为什么重要：断卡潮背后是消费信贷的降温",
+      "跟你有什么关系：三步自查你的信用卡",
+      "常见坑 / 误区：信用卡最容易被误解的三件事"
     ],
     "related": [
-      "黄金储备",
-      "外汇管制",
-      "黄金价格"
+      "花呗 / 借呗 / 白条",
+      "信用卡免息期（最长/最短）",
+      "信用卡分期手续费（实际IRR）",
+      "逾期 / 连三累六"
     ],
     "next": "",
     "filename": "信用卡.html",
@@ -7376,27 +7378,6 @@ var ALL_ENTRIES = [
     "next": "",
     "filename": "外汇储备.html",
     "file": "外汇储备.html"
-  },
-  {
-    "id": 354,
-    "slug": "信用卡",
-    "title": "信用卡",
-    "chapter": "第十七篇：日常支付与账户管理",
-    "card_titles": [
-      "信用卡是什么：先花银行的钱，到期再还",
-      "为什么重要：卡少了，征信反而更值钱",
-      "怎么用 / 怎么看：给自己的卡做一次体检",
-      "常见坑 / 误区：销卡不等于销户"
-    ],
-    "related": [
-      "信用卡账单日 / 还款日",
-      "信用卡免息期（最长/最短）",
-      "信用卡分期手续费（实际IRR）",
-      "征信报告"
-    ],
-    "next": "",
-    "filename": "信用卡.html",
-    "file": "信用卡.html"
   },
   {
     "id": 355,
@@ -7927,7 +7908,7 @@ var ALL_ENTRIES = [
     "id": 381,
     "slug": "AI泡沫",
     "title": "AI泡沫",
-    "chapter": "第九篇：读懂指标 · 市场情绪与风险",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
     "card_titles": [
       "AI 三巨头罕见一起喊“慢一点”",
       "AI 泡沫是什么意思",
@@ -9281,6 +9262,345 @@ var ALL_ENTRIES = [
     "next": "",
     "filename": "举牌.html",
     "file": "举牌.html"
+  },
+  {
+    "id": 447,
+    "slug": "货币供应量（M0_ M1_ M2）",
+    "title": "货币供应量（M0/M1/M2）",
+    "chapter": "第二篇：个人财务底盘",
+    "card_titles": [
+      "这是什么",
+      "为什么重要",
+      "怎么用 / 怎么看",
+      "常见坑 / 误区"
+    ],
+    "related": [
+      "通货膨胀",
+      "CPI",
+      "央行",
+      "货币政策",
+      "降准",
+      "降息"
+    ],
+    "next": "通货膨胀",
+    "filename": "货币供应量（M0_ M1_ M2）.html",
+    "file": "货币供应量（M0_ M1_ M2）.html"
+  },
+  {
+    "id": 448,
+    "slug": "地缘政治风险",
+    "title": "地缘政治风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "国家之间的摩擦，最后是你账户买单",
+      "为什么重要：先打价格，再打业绩",
+      "怎么用：先分清传导链",
+      "常见坑：把它当抄底信号"
+    ],
+    "related": [
+      "政策风险",
+      "市场风险",
+      "汇率风险",
+      "通胀风险",
+      "黑天鹅事件",
+      "黄金（避险资产）"
+    ],
+    "next": "估值风险",
+    "filename": "地缘政治风险.html",
+    "file": "地缘政治风险.html"
+  },
+  {
+    "id": 449,
+    "slug": "估值风险",
+    "title": "估值风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "好公司也会让你亏钱",
+      "为什么重要：买价决定回报",
+      "怎么用：先比历史，再比同类",
+      "常见坑：低估值不等于安全"
+    ],
+    "related": [
+      "市盈率（PE _ 滚动PE _ 静态PE）",
+      "市净率（PB）",
+      "安全边际",
+      "净资产收益率（ROE，巴菲特最爱的指标）",
+      "业绩暴雷",
+      "基本面分析"
+    ],
+    "next": "财务造假识别",
+    "filename": "估值风险.html",
+    "file": "估值风险.html"
+  },
+  {
+    "id": 450,
+    "slug": "财务造假识别",
+    "title": "财务造假识别",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "让报表互相打架，假账就藏不住",
+      "为什么重要：暴露一次，损失不可逆",
+      "怎么用：五个交叉验证",
+      "常见坑：只看净利润，不看钱从哪来"
+    ],
+    "related": [
+      "经营现金流（比净利润更真实）",
+      "扣非净利润（扣除非经常性损益）",
+      "预收款 _ 合同负债（未来收入的蓄水池）",
+      "商誉减值",
+      "业绩暴雷",
+      "基本面分析"
+    ],
+    "next": "业绩预告 / 业绩快报",
+    "filename": "财务造假识别.html",
+    "file": "财务造假识别.html"
+  },
+  {
+    "id": 451,
+    "slug": "业绩预告 _ 业绩快报",
+    "title": "业绩预告 / 业绩快报",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "业绩提前打招呼的两种方式",
+      "为什么重要：预期差就出在这里",
+      "怎么用：逐个数字对一遍",
+      "常见坑：把预增当成保证"
+    ],
+    "related": [
+      "业绩暴雷",
+      "扣非净利润（扣除非经常性损益）",
+      "净利润（归母净利润）",
+      "商誉减值",
+      "营收（营业收入）",
+      "基本面分析"
+    ],
+    "next": "市值配售",
+    "filename": "业绩预告 _ 业绩快报.html",
+    "file": "业绩预告 _ 业绩快报.html"
+  },
+  {
+    "id": 452,
+    "slug": "市值配售",
+    "title": "市值配售",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "打新先看你手里有多少股票",
+      "为什么重要：它改变了打新的成本",
+      "怎么用：按规则算额度",
+      "常见坑：为了打新买一堆股票"
+    ],
+    "related": [
+      "新股（IPO _ 打新）",
+      "中签率",
+      "配售（新股配售）",
+      "破发",
+      "注册制",
+      "市值 _ 总市值"
+    ],
+    "next": "次新股",
+    "filename": "市值配售.html",
+    "file": "市值配售.html"
+  },
+  {
+    "id": 453,
+    "slug": "次新股",
+    "title": "次新股",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "刚上市不久的那批股票",
+      "为什么重要：波动来自筹码结构",
+      "怎么用：先看解禁表，再看基本面",
+      "常见坑：把没有套牢盘当利好"
+    ],
+    "related": [
+      "新股（IPO _ 打新）",
+      "解禁",
+      "限售股",
+      "破发",
+      "换手率（活跃度指标）",
+      "题材股 _ 概念股"
+    ],
+    "next": "配股",
+    "filename": "次新股.html",
+    "file": "次新股.html"
+  },
+  {
+    "id": 454,
+    "slug": "配股",
+    "title": "配股",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "向老股东按比例要钱",
+      "为什么重要：它直接影响你的份额",
+      "怎么用：三步决定参不参与",
+      "常见坑：以为配股是白送"
+    ],
+    "related": [
+      "定增（定向增发）",
+      "除权 _ 除息",
+      "分红（派息 _ 送股 _ 转增）",
+      "高送转",
+      "股本 _ 流通盘（流通市值）",
+      "股权质押"
+    ],
+    "next": "股东减持",
+    "filename": "配股.html",
+    "file": "配股.html"
+  },
+  {
+    "id": 455,
+    "slug": "股东减持",
+    "title": "股东减持",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "内部人把股票卖了",
+      "为什么重要：它同时改变筹码与预期",
+      "怎么用：分清谁减、减多少、卖什么价",
+      "常见坑：把减持一律当利空"
+    ],
+    "related": [
+      "限售股",
+      "股权质押",
+      "回购（股票回购注销）",
+      "举牌",
+      "大股东 _ 机构投资者 _ 散户",
+      "解禁"
+    ],
+    "next": "增持",
+    "filename": "股东减持.html",
+    "file": "股东减持.html"
+  },
+  {
+    "id": 456,
+    "slug": "增持",
+    "title": "增持",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "自己人掏钱买自家股票",
+      "为什么重要：内部人比你更懂公司",
+      "怎么用：看说了，更要看做了",
+      "常见坑：把计划当已买"
+    ],
+    "related": [
+      "股东减持",
+      "回购（股票回购注销）",
+      "举牌",
+      "股权质押",
+      "大股东 _ 机构投资者 _ 散户",
+      "限售股"
+    ],
+    "next": "借壳上市",
+    "filename": "增持.html",
+    "file": "增持.html"
+  },
+  {
+    "id": 457,
+    "slug": "借壳上市",
+    "title": "借壳上市",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "买一个壳，把资产装进去",
+      "为什么重要：它同时改变两家公司的命运",
+      "怎么用：盯方案与承诺",
+      "常见坑：把壳当彩票"
+    ],
+    "related": [
+      "新股（IPO _ 打新）",
+      "ST股 _ST股（退市风险警示）",
+      "停牌 _ 退市",
+      "定增（定向增发）",
+      "换股吸收合并",
+      "商誉减值"
+    ],
+    "next": "中美经贸磋商",
+    "filename": "借壳上市.html",
+    "file": "借壳上市.html"
+  },
+  {
+    "id": 458,
+    "slug": "中美经贸磋商",
+    "title": "中美经贸磋商",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "谈判桌又摆开了：这次在纽约",
+      "为什么重要：三条线直通你的钱包",
+      "怎么看：四个观察点",
+      "常见坑：把传言当利好"
+    ],
+    "related": [
+      "关税（贸易壁垒）",
+      "汇率（人民币升值_贬值）",
+      "出口 _ 进口",
+      "贸易顺差"
+    ],
+    "next": "MLCC（多层陶瓷电容器）",
+    "filename": "中美经贸磋商.html",
+    "file": "中美经贸磋商.html"
+  },
+  {
+    "id": 459,
+    "slug": "MLCC（多层陶瓷电容器）",
+    "title": "MLCC（多层陶瓷电容器）",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "一颗小方块，为什么叫电子工业大米",
+      "为什么重要：AI 把小电容变成紧俏货",
+      "怎么看：三个指标",
+      "常见坑：把涨价当全行业利好"
+    ],
+    "related": [
+      "存储芯片（内存 _ 闪存）",
+      "CPO（共封装光学）",
+      "算力网",
+      "AI智能体"
+    ],
+    "next": "",
+    "filename": "MLCC（多层陶瓷电容器）.html",
+    "file": "MLCC（多层陶瓷电容器）.html"
+  },
+  {
+    "id": 460,
+    "slug": "资产 / 负债",
+    "title": "资产 / 负债",
+    "chapter": "第二篇：个人财务底盘",
+    "card_titles": [
+      "这是什么",
+      "为什么重要",
+      "怎么用 / 怎么看",
+      "常见坑 / 误区"
+    ],
+    "related": [
+      "净资产",
+      "资产负债表",
+      "被动收入",
+      "应急金",
+      "信用卡",
+      "房贷"
+    ],
+    "next": "净资产",
+    "filename": "资产 _ 负债.html",
+    "file": "资产 _ 负债.html"
+  },
+  {
+    "id": 461,
+    "slug": "集成电路（半导体）",
+    "title": "集成电路（半导体）",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "什么是集成电路：芯片的正式学名",
+      "为什么重要：利润暴增 18.5 倍意味着什么",
+      "怎么用：普通人怎么读懂半导体行情",
+      "常见坑：别把“利润暴增”当个股上涨理由"
+    ],
+    "related": [
+      "英伟达（NVIDIA）",
+      "MLCC（多层陶瓷电容器）",
+      "CPO（共封装光学）",
+      "Token贷"
+    ],
+    "next": "",
+    "filename": "集成电路（半导体）.html",
+    "file": "集成电路（半导体）.html"
   }
 ];
 var __entriesReady = false;
@@ -9521,18 +9841,18 @@ var CHAPTER_ORDER = ["第一篇：钱的本质", "第二篇：个人财务底盘
 <!-- Mangofolio 系列导航 -->
 <footer class="mangofolio-nav">
   <style>
-    .mangofolio-nav { border-top: 1px solid rgba(0,0,0,.08); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: #8A7D70; background: transparent; }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: #3A332C; }
-    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: #F97316; text-decoration: none; }
+    .mangofolio-nav { border-top: 1px solid var(--border-dashed); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: var(--ink-light); background: transparent; font-family: var(--mf-fonts-sans); }
+    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: var(--ink-strong); }
+    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: var(--accent); text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: #8A7D70; }
-  </style>
+    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: var(--ink-light); }
+</style>
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
   <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
   <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
   <a href="https://view.mangofolio.com">市场观察 View</a>
-  <a href="https://invest-tools.mangofolio.app" style="color:#F97316;">财务工具箱 FinTools</a>
+  <a href="https://invest-tools.mangofolio.app" style="color: var(--accent);">财务工具箱 FinTools</a>
   <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
 </footer>
 

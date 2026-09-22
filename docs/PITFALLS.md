@@ -144,6 +144,20 @@ AIGC:
 - **修复**：将 `中签率.html`、`期限错配.html` 的 pager-prev 与 related-links 首词 href 从斜杠版改为下划线版；同时修正 `index.html` renderFallback 用 `e.title` 拼链接的隐患（改 `e.file`），避免兜底热词再踩同样的坑。
 - **预防**：新增含 `/`、`*`、`>` 词条时，页内所有链接（pager、related、canonical、og:url）必须以真实文件名（下划线版）编码；热词写入 KV 前用线上请求验证 url 返回 200；全量校验脚本（扫描 terms/ 链接与本地文件名一致性）在每次提交前运行。
 
+## 15. 首页 hero 主按钮隐形（:root 缺 `--accent` 变量）
+
+- **现象**：v1.0 改造后首页 hero 主 CTA 白字落白底，按钮整体不可见（点击区域仍在）。
+- **根因**：`index.html` 的 `:root` 未定义 `--accent`，而按钮 `background: var(--accent)` 解析失败 → 背景缺失；`color` 仍是 token 里的白字，于是白底白字。
+- **修复**：`:root` 补 `--accent: var(--mf-colors-text-link);`（映射到芒果橙 #F97316），不写裸 hex。
+- **预防**：改 `:root` 时跑一遍"变量引用 vs 定义"清单；页面里所有 `var(--x)` 必须能在本页 `:root` 或 token CSS 中找到定义；品牌色一律走 token CSS，不在页内另起变量名。
+
+## 16. 下游图文线直接套网页品牌色，观感被否后回滚
+
+- **现象**：08-每日热词图文 `main.py` 的宣纸渐变底 `#F7F5F2→#EFEAE2` 被改为品牌暖白 `#FFFFFF→#FFF3EA`（README 同步改），用户看过成品后认为"之前的版本更好"。
+- **根因**：把网页端 v1.0 令牌直接套到图片产物上，未先确认该图文线是否属于本次品牌改造范围；图片场景的暖灰底观感与网页不同。
+- **修复**：从 `main.py.bak-step5-20260921` / `README.md.bak-step5-20260921` 回滚，回滚后 md5 与备份一致；回滚前把品牌色版另存 temp 以备对比。
+- **预防**：改下游图文 / 视频产物配色前，先确认这条线要不要纳入改造；改动前留一份带日期的备份；`docs/design-tokens.md` 已把该线标注为例外。
+
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
 *（内容由AI生成，仅供参考）*

@@ -55,6 +55,9 @@ def main():
     for e in old_entries:
         old_by_file.setdefault(e.get("file"), e)
     old_by_id = {e["id"]: e for e in old_entries}
+    # (id, file) 精确对：同一 id 出现多条（历史重复登记）时，仅凭 id 会取到“另一条”的展示字段，
+    # 导致首页显示名与被链接页面不一致（如 信用卡.html 显示成“外汇储备”）。
+    old_by_id_file = {(e["id"], e.get("file")): e for e in old_entries}
 
     # 3. 磁盘文件索引
     disk_files = {f for f in os.listdir(TERMS) if f.endswith(".html")}
@@ -81,7 +84,7 @@ def main():
     for e in djson:
         slug = e["slug"]
         fname = resolve_file(e)
-        old = old_by_id.get(e["id"]) or old_by_file.get(fname)
+        old = old_by_id_file.get((e["id"], fname)) or old_by_id.get(e["id"]) or old_by_file.get(fname)
         if fname is None:
             problems.append(f'id {e["id"]} {slug}: 无法定位磁盘文件')
             continue

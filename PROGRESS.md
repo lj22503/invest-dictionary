@@ -3,6 +3,32 @@
 > mangofolio 生态第 3 块 · 术语平权（听得懂）。213+ 中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
 
+## 2026-09-21 → 2026-09-22 · 品牌视觉 v1.0 全量落地（Wave 2 + 存量页 + 数据层 + 令牌集中化）
+
+### 背景
+Wave 1 只覆盖首页与模板；本阶段把 v1.0 推到入口层（Skill）、模板层、存量词条页、数据层，并补一份令牌速查文档收口"令牌散落多处、无唯一速查"的问题。
+
+### 各层落地
+| 层 | 改动 | 文件 |
+|---|---|---|
+| 入口层 | SKILL.md 写入品牌视觉硬约束 + 产出前自检清单；HANDOFF 修正会误导后续 agent 的旧结论 | `skill/invest-dictionary-generator/SKILL.md`、`docs/HANDOFF.md` |
+| 模板层 | 两个词条模板切 Token 体系：字体链补 emoji 段、圆角走 `--mf-radii-*`、页脚单次注入、内联硬编码色改 `:root` 变量 | `skill/.../templates/term-page.html`、`term-page-regular.html` |
+| 存量页 | `web/terms` 459 个词条页品牌 sweep（朱砂红 / 米色 rgba / 老国风橙 / 楷体字面清零）；删除 1 个重复页 `资产 _  负债.html` | `web/terms/*.html` |
+| 数据层 | 词条同步脚本修正；manifest 的 theme_color / background_color 切 v1.0 值 | `scripts/sync_all_entries.py`、`web/manifest.json`、`web/llms.txt` |
+| 首页 | 补 `:root --accent`，修复 hero 主按钮隐形 | `web/index.html` |
+| 令牌文档 | 新增集中速查 `docs/design-tokens.md` | `docs/design-tokens.md` |
+| 图文线 | 08-每日热词图文曾改品牌暖白底，**2026-09-22 按偏好回滚**为原暖灰宣纸底（`#F7F5F2→#EFEAE2`） | 仓库外 `D:\ANT\...\08-每日热词图文\main.py` |
+
+### 令牌文档（新增）
+`docs/design-tokens.md` 汇总：品牌基调 5 条、色彩（背景 / 文字 / 描边 / 图表 / 橙阶）、排版（字体栈 / 字号 / 字重）、间距尺寸圆角阴影、组件令牌、hero 令牌、暗色模式、落地对象与例外、落地自检清单。权威源仍为 `web/css/mangofolio-tokens-v09.css`。
+
+### 已知数据不一致（本次未修，待定）
+- `manifest.json` description 与 `llms.txt`（2 处）仍写 **461 个词条**，实际 `web/terms` 有 472 页
+- `dictionary.json` 473 条：**id 352 / 353 各重复一次**（两组不同词条撞号）；**「信用卡」条目重复**（同 slug 同 filename），去重后应为 472 条
+- 磁盘页与唯一 filename 双向差集为 0（页面本身无缺无多）
+
+---
+
 ## 2026-09-19 → 2026-09-20 · 首页品牌对齐 v1.0 · **Wave 1 ✅ 完成（9/9 tasks）**
 
 ### 背景
@@ -84,8 +110,9 @@ dictionary 是 mangofolio 生态里**唯一未对齐** v1.0 的站——iAsk / f
 
 ## 待办（下一步）
 
-- [ ] **Wave 1 push gate**（R3 — 等用户批 `git push origin main`）
-- [ ] docs/terms-md/ 10 cron housekeeping commit（下次单独做）
-- [ ] Wave 2 推进（字体 + 圆角 + footer）
+- [x] **Wave 1 push gate**（2026-09-22 放行，随本 commit 入库）
+- [x] docs/terms-md cron housekeeping commit（2026-09-22 单独 commit）
+- [x] Wave 2 推进（字体 + 圆角 + footer）
+- [ ] **数据一致性修正**：manifest / llms 计数 461 → 472；`dictionary.json` 去重「信用卡」+ 修正 id 352/353 撞号
 - [ ] Wave 3 推进（暗色 + 语义色）
 - [ ] neat-freak 6 面审计 + 终验
