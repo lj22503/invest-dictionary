@@ -11,11 +11,11 @@ AIGC:
 
 # AGENTS.md
 
-> 给接手本仓库的人类开发者与 AI Agent 的现役规则。最后更新：2026-08-01
+> 给接手本仓库的人类开发者与 AI Agent 的现役规则。最后更新：2026-09-22
 
 ## 项目一句话定位
 
-投资词典（Invest Dictionary）：213 个中文投资术语，说人话不装逼。独立项目，不并入 InvestBuddy。线上站：https://dictionary.mangofolio.com
+投资词典（Invest Dictionary）：472 个中文投资术语，说人话不装逼。独立项目，不并入 InvestBuddy。线上站：https://dictionary.mangofolio.com
 
 ## 怎么跑起来
 
@@ -35,19 +35,20 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 
 ## 目录与约定
 
-- `web/` — 线上站点（index.html、terms/ 213 词条页、dictionary.json、sitemap.xml、robots.txt、vercel.json）
+- `web/` — 线上站点（index.html、terms/ 472 词条页、dictionary.json、sitemap.xml、robots.txt、vercel.json）
 - `web/dictionary.json` — 词条唯一数据源（id/slug/chapter/description/related）
 - `skill/invest-dictionary-generator/` — 金融词条生成 Skill（SKILL.md + templates + examples）
-- `docs/` — PROJECT_GOALS.md（目标清单）、PITFALLS.md（坑点）
+- `docs/` — PROJECT_GOALS.md（目标清单）、PITFALLS.md（坑点）、design-tokens.md（令牌速查）、HANDOFF.md（接手说明）、BRAND_AUDIT_2026-09-19.md、superpowers/（spec 与 plan）
 - **slug 归一化**：词条名中 `/`、`*`、`>` 一律替换为 `_`（文件名）；所有链接（相关词条、首页卡片）必须用归一化文件名
-- **域名**：正式域名 dictionary.mangofolio.com；禁止 investbuddy.com 残留（canonical/og/sitemap/robots）
+- **域名**：正式域名 dictionary.mangofolio.com；禁止旧域名 `investbuddy.com` 残留。扫描范围含 canonical / og:url / sitemap / robots **及页内所有绝对 URL（社交分享、复制链接等）**；匹配模式用 `//investbuddy.com`，避免误伤合法子站 `investbuddy.mangofolio.com`
 - 词条质量标准：说人话（一句话定义）、有场景、讲坑点、能搜索
 
 ## 当前状态与下一步
 
-- 已推送 GitHub（main, a6d6f05），仓库 SEO 已配置（About + 20 Topics）
-- **待办**：Vercel 登录授权 → 部署 web/ → 绑定 dictionary.mangofolio.com → live 验证
-- 词条数据：213 条（页面声称条目数必须与 dictionary.json 一致）
+- 已推送 GitHub（main），仓库 SEO 已配置（About + 20 Topics）；线上站 https://dictionary.mangofolio.com 已上线并验证
+- 品牌视觉：mangofolio v1.0 全量落地（2026-09-22）；令牌权威源 `web/css/mangofolio-tokens-v09.css`，速查 `docs/design-tokens.md`
+- 词条数据：`web/terms` **472 页**；唯一数据源 `web/dictionary.json`；首页内嵌 `ALL_ENTRIES` 由 `scripts/sync_all_entries.py` 同步；`web/sitemap.xml` 由 `scripts/generate-sitemap.py` 生成 —— 三者条数必须一致（页面声称条目数同理）
+- **提交前必跑**：`python scripts/check-consistency.py`（计数一致性 / id·slug·filename 唯一性 / 页内断链 / sitemap 覆盖 / 旧域名残留 / ALL_ENTRIES 同步）
 *（内容由AI生成，仅供参考）*
 
 

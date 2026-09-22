@@ -12,7 +12,7 @@ GitHub 仓库：https://github.com/lj22503/invest-dictionary
 
 ### 1. 字典网页版本（Vercel 部署）
 - 部署域名：**dictionary.mangofolio.com**（Vercel）
-- 内容：首页 index.html + 213 个词条详情页 + sitemap.xml + robots.txt + dictionary.json
+- 内容：首页 index.html + 472 个词条详情页 + sitemap.xml + robots.txt + dictionary.json
 - 要求：可链接到 Mangofolio 系列其他网站：
   - InvestBrain
   - InvestBuddy
@@ -20,7 +20,7 @@ GitHub 仓库：https://github.com/lj22503/invest-dictionary
 - 注意：所有 canonical / sitemap / robots 中的旧域名（investbuddy.com）必须替换为 dictionary.mangofolio.com
 
 ### 2. 金融词条生成 Skill
-- 目标：将 213 个词条的生成方法论沉淀为可复用的 Agent Skill
+- 目标：将 472 个词条的生成方法论沉淀为可复用的 Agent Skill
 - 定位：开放给其他人使用、贡献词条（开源协作）
 - 内容：SKILL.md + 词条模板 + 示例
 

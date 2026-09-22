@@ -1,7 +1,31 @@
 # PROGRESS — invest-dictionary（投资词典）
 
-> mangofolio 生态第 3 块 · 术语平权（听得懂）。213+ 中文投资术语，"说人话不装逼"。
+> mangofolio 生态第 3 块 · 术语平权（听得懂）。472 个中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
+
+## 2026-09-22 · neat-freak 审计 + 一致性收尾（品牌 v1.0 push 后）
+
+### 修复（本轮）
+| # | 问题 | 修复 |
+|---|---|---|
+| 1 | 214 个词条页的微博分享链接仍指向旧域名 `investbuddy.com` | 全量替换为 `dictionary.mangofolio.com` + 写盘回读校验（残留 0） |
+| 2 | `manifest.json` / `llms.txt` 计数 `461` ≠ 实际 472 页 | 统一为 **472** |
+| 3 | `sitemap.xml` 仅 439 个词条 URL，缺 33 页 | `scripts/generate-sitemap.py` 同源重建 → 472 + 首页，双向差集 0 |
+| 4 | 页内断链 6 处（链接用了斜杠版文件名） | 改为下划线归一化文件名；复验断链 = 0 |
+| 5 | 首页内嵌 `ALL_ENTRIES` 461 ≠ dictionary 473（11 条搜不到） | `scripts/sync_all_entries.py` 同步 → 473，缺/多 = 0 |
+| 6 | 篇章名「第九篇…市场情绪与风险」与「…风险篇」并存（篇章数 23 ≠ 首页声称 22） | `dictionary.json` 统一为「…风险篇」→ 22 篇 |
+| 7 | 文档数字漂移（AGENTS / README / PROJECT_GOALS / HANDOFF / PROGRESS 写 213 · 461 · 旧 commit） | 统一为 472；HANDOFF 现役化、旧结论标注作废 |
+
+### 新增
+- `scripts/check-consistency.py` — 提交前门禁：计数一致性 / id·slug·filename 唯一性 / 页内断链 / sitemap 覆盖 / 旧域名残留 / ALL_ENTRIES 同步
+- `scripts/generate-sitemap.py` — sitemap 由 `dictionary.json` 同源生成（禁止手改）
+- `docs/PITFALLS.md` 新增 #20-#25（分享链接旧域名、批量空转、计数漂移、sitemap 脱节、ALL_ENTRIES 不同步、`.bak` 被跟踪）
+
+### 未修（待拍板）
+- `dictionary.json` 去重「信用卡」+ id 352/353 撞号（473 → 472）
+- 清理候选：tracked `.bak` 5 个、`docs/prod_*.md.md` 3 个、根目录 `task6-*.ps1` 6 个、磁盘 `.bak*` 492 个
+
+---
 
 ## 2026-09-21 → 2026-09-22 · 品牌视觉 v1.0 全量落地（Wave 2 + 存量页 + 数据层 + 令牌集中化）
 
@@ -22,10 +46,12 @@ Wave 1 只覆盖首页与模板；本阶段把 v1.0 推到入口层（Skill）�
 ### 令牌文档（新增）
 `docs/design-tokens.md` 汇总：品牌基调 5 条、色彩（背景 / 文字 / 描边 / 图表 / 橙阶）、排版（字体栈 / 字号 / 字重）、间距尺寸圆角阴影、组件令牌、hero 令牌、暗色模式、落地对象与例外、落地自检清单。权威源仍为 `web/css/mangofolio-tokens-v09.css`。
 
-### 已知数据不一致（本次未修，待定）
-- `manifest.json` description 与 `llms.txt`（2 处）仍写 **461 个词条**，实际 `web/terms` 有 472 页
-- `dictionary.json` 473 条：**id 352 / 353 各重复一次**（两组不同词条撞号）；**「信用卡」条目重复**（同 slug 同 filename），去重后应为 472 条
-- 磁盘页与唯一 filename 双向差集为 0（页面本身无缺无多）
+### 数据一致性（2026-09-22 neat-freak 收尾后）
+- ✅ 计数：`manifest.json`（1 处）、`llms.txt`（2 处）461 → **472**；首页内嵌 `ALL_ENTRIES` 461 → **473**（`scripts/sync_all_entries.py`）
+- ✅ `sitemap.xml` 重建：439 → **472** 词条 URL + 首页（补齐 33 页缺口）
+- ✅ 页内断链 6 处修复（斜杠版 → 下划线版）
+- ✅ 篇章笔误统一：「第九篇：读懂指标 · 市场情绪与风险」→「…风险篇」，篇章数 23 → **22**（与首页一致）
+- ⏳ **待批**：`dictionary.json` **473 条**含重复「信用卡」（同 slug 同 filename）+ **id 352/353 撞号**；去重后应为 **472** 条（删哪条需你拍板）
 
 ---
 
@@ -113,6 +139,8 @@ dictionary 是 mangofolio 生态里**唯一未对齐** v1.0 的站——iAsk / f
 - [x] **Wave 1 push gate**（2026-09-22 放行，随本 commit 入库）
 - [x] docs/terms-md cron housekeeping commit（2026-09-22 单独 commit）
 - [x] Wave 2 推进（字体 + 圆角 + footer）
-- [ ] **数据一致性修正**：manifest / llms 计数 461 → 472；`dictionary.json` 去重「信用卡」+ 修正 id 352/353 撞号
+- [x] **数据一致性修正**（2026-09-22）：manifest / llms 461 → 472；sitemap 补齐 33 页；断链 6 处；ALL_ENTRIES 同步 473；篇章笔误统一
+- [ ] **待拍板**：`dictionary.json` 去重「信用卡」+ 修正 id 352/353 撞号（473 → 472）
+- [ ] 清理候选（待批）：tracked `.bak` 5 个 / `docs/prod_*.md.md` 3 个 / `task6-*.ps1` 6 个 / 磁盘 `.bak*` 492 个
 - [ ] Wave 3 推进（暗色 + 语义色）
-- [ ] neat-freak 6 面审计 + 终验
+- [x] neat-freak 6 面审计 + 终验（2026-09-22）

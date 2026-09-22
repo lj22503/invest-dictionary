@@ -2,7 +2,7 @@
 
 # 投资词典 · Invest Dictionary
 
-**213 个投资术语，说人话，不装逼。**
+**472 个投资术语，说人话，不装逼。**
 
 一个面向普通人的**中文投资术语词典**（Chinese investment dictionary / financial glossary）。
 每一个词条都用"3 分钟能看懂"的方式解释：一句话定义 → 为什么重要 → 怎么用 → 常见坑。
@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/License-Apache--2.0-yellow?style=for-the-badge)](LICENSE)
 [![Skill](https://img.shields.io/badge/Agent_Skill-可复用-8b5040?style=for-the-badge)](skill/invest-dictionary-generator)
 
-**中文金融扫盲 · 说人话的投资科普 · 213 个理财必备术语 · 覆盖股票/基金/债券/保险/房产/宏观**
+**中文金融扫盲 · 说人话的投资科普 · 472 个理财必备术语 · 覆盖股票/基金/债券/保险/房产/宏观**
 
 </div>
 
@@ -31,7 +31,7 @@
 
 | 入口 | 地址 | 说明 |
 |------|------|------|
-| 🏠 投资词典（本项目） | https://dictionary.mangofolio.com | 213 个词条 · 22 个篇章 · 全文搜索 |
+| 🏠 投资词典（本项目） | https://dictionary.mangofolio.com | 472 个词条 · 22 个篇章 · 全文搜索 |
 | 🧠 投资大脑 InvestBrain | https://brain.mangofolio.com | 投资决策与行为分析 |
 | 🐻 投资伙伴 InvestBuddy | https://investbuddy.mangofolio.com | 投资人格测试与守护兽 |
 | 📊 市场观察 MangoView | https://view.mangofolio.com | 市场行情可视化 |
@@ -40,7 +40,7 @@
 
 ## 特性
 
-- 📚 **213 个词条**，覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章
+- 📚 **472 个词条**，覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章
 - 🗣️ **说人话**：每个词条 = 一句话定义 + 真实场景 + 实操步骤 + 常见坑
 - 🔍 **全文搜索**：输入关键词即时过滤，章节联动
 - 🌐 **SEO 就绪**：每个词条独立页面，含 Schema.org `DefinedTerm` 结构化数据、OG/Twitter Card、canonical、面包屑、上下篇导航
@@ -79,7 +79,7 @@ cp -r skill/invest-dictionary-generator ~/.claude/skills/
 invest-dictionary/
 ├── web/                          # 字典网页版（Vercel 静态部署）
 │   ├── index.html                # 首页：搜索 + 22 篇章词条卡片
-│   ├── terms/                    # 213 个词条独立页面
+│   ├── terms/                    # 472 个词条独立页面
 │   ├── dictionary.json           # 词条数据源（id/slug/title/related）
 │   ├── sitemap.xml / robots.txt  # SEO
 │   └── vercel.json               # 部署配置

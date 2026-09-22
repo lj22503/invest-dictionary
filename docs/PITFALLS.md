@@ -66,6 +66,7 @@ AIGC:
 - **根因**：词条页由 InvestBuddy 历史项目继承而来，域名未同步替换。
 - **修复**：全量批量替换 + 终验（残留文件数 = 0）。
 - **预防**：任何项目独立发布前，先扫 canonical/og:url/sitemap/robots 的域名残留。
+- **补注（2026-09-22）**：本次清理范围**未覆盖页内社交分享链接**——214 个词条页的微博分享 `url=` 仍指向旧域名，直到 neat-freak 全站扫描才暴露（见 #20）。"残留 = 0" 仅对 canonical/og/sitemap/robots 成立，**不等于全站无残留**。
 
 ## 4. 页面声称条目数与实际数据不一致
 
@@ -157,6 +158,48 @@ AIGC:
 - **根因**：把网页端 v1.0 令牌直接套到图片产物上，未先确认该图文线是否属于本次品牌改造范围；图片场景的暖灰底观感与网页不同。
 - **修复**：从 `main.py.bak-step5-20260921` / `README.md.bak-step5-20260921` 回滚，回滚后 md5 与备份一致；回滚前把品牌色版另存 temp 以备对比。
 - **预防**：改下游图文 / 视频产物配色前，先确认这条线要不要纳入改造；改动前留一份带日期的备份；`docs/design-tokens.md` 已把该线标注为例外。
+
+## 20. 社交分享链接旧域名漏网（2026-09-22）
+
+- **现象**：neat-freak 全站扫描发现 **214 个词条页**的微博分享链接 `service.weibo.com/share/share.php?url=…investbuddy.com/terms/…` 仍指向旧域名；而 #3 早已记"残留 = 0"。
+- **根因**：#3 的清理与校验模式只覆盖 canonical / og:url / sitemap / robots，**页内嵌入的绝对 URL（社交分享、复制链接）不在扫描口径内**；单点 grep 命中旧域名却不构成"清理完毕"的证据。
+- **修复**：214 页批量替换为 `dictionary.mangofolio.com`，写盘回读校验（0 失败），全站复查残留 = 0。
+- **预防**：域名残留扫描模式统一用 `//investbuddy.com`，覆盖**所有** HTML 属性中的绝对 URL；模式用 `//old-domain` 精确匹配，避免误伤合法子站 `investbuddy.mangofolio.com`；扫描口径写进 `scripts/check-consistency.py`。
+
+## 21. 批量补丁 stdout 报成功但实际空转（2026-09-22）
+
+- **现象**：批量替换脚本（perl / 正则）自称"成功 26 项"，实际因跨行匹配失效**一项都没改**，误判存量页已刷 token。
+- **根因**：仅凭 stdout 输出判定成功，未校验写盘后的文件真实内容。
+- **修复**：改为**写盘后强制回读**——重新读文件确认旧模式已消失、新模式存在，逐文件计数。
+- **预防**：批量补丁三件套 = 幂等 + 备份（`.bak-{step}-{date}`）+ 写盘回读校验；**禁止凭 stdout 判成功**。
+
+## 22. 计数多处人肉维护导致漂移（2026-09-22）
+
+- **现象**：`manifest.json`（1 处）、`llms.txt`（2 处）写 **461** 词条，`web/terms` 实际 **472** 页；`PROGRESS.md` / `design-tokens.md` 同样残留旧数字。461 的真实来源是首页内嵌 `ALL_ENTRIES` 的长度。
+- **根因**：同一事实在 4+ 处手写维护，扩充词条后没同步全部位置。
+- **修复**：三处统一改为 **472**（= `dictionary.json` 去重后条数 = `terms` 页数）；首页 `ALL_ENTRIES` 重新同步。
+- **预防**：条目数只认 `dictionary.json`，其余位置由脚本生成或由 `scripts/check-consistency.py` 校验；任何数字改动跑一次校验脚本。
+
+## 23. sitemap 与页数脱节（2026-09-22）
+
+- **现象**：`sitemap.xml` 只有 439 个词条 URL，磁盘 **472** 页——**33 个已发布词条页不在 sitemap**（SEO 收录缺失）。
+- **根因**：sitemap 在早期一次性手写/生成，后续扩词条（含热词 cron）没有增量更新机制。
+- **修复**：`scripts/generate-sitemap.py` 按 `dictionary.json` 顺序同源重建（保持原 `changefreq/priority` 规则），439 → 472 + 首页；回读校验覆盖 0 缺 0 多。
+- **预防**：sitemap 一律由脚本从数据源生成，禁止手改；发布前跑覆盖差集。
+
+## 24. 首页内嵌 ALL_ENTRIES 不同步导致新词条搜不到（2026-09-22）
+
+- **现象**：`index.html` 内嵌 `ALL_ENTRIES` 461 条，`dictionary.json` 473 条——**11 个新词条在首页搜索与目录里不可见**（含"中概股""上证指数""人形机器人"等）。
+- **根因**：首页搜索/目录渲染读的是内嵌静态数组，而非直接读 `dictionary.json`；新增词条后忘记跑同步脚本。
+- **修复**：跑 `python scripts/sync_all_entries.py`（473 条，自动备份 `web/temp/index.html.bak`），校验首页缺/多 = 0。
+- **预防**：新增或修改词条后**必须**跑同步脚本；`check-consistency.py` 已将该一致性纳入校验。
+
+## 25. 备份文件被 git 跟踪入库（2026-09-22）
+
+- **现象**：`web/terms/*.html.bak`（4 个）、`web/js/knowledge-card.js.bak-20260919` 已提交进版本库；磁盘上 `.bak*` 共 492 个（多数已被 `.gitignore` 忽略）。
+- **根因**：`.gitignore` 规则是后加的，**加规则不会让已跟踪文件自动脱管**；提交时只核对了 `git status`，未查 `git ls-files` 中的备份残留。
+- **修复**：已列入清理候选（待批，见 PROGRESS.md 待办）。
+- **预防**：提交前用 `git ls-files | Select-String '\.bak'` 核对备份残留；备份文件一律写入 `web/temp/`（已忽略）或仓库外。
 
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
