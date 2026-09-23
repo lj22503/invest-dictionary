@@ -2,12 +2,14 @@
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_25385af48d8611f1bfea525400e6dd8f
-    ReservedCode1: nrmtUC2eeoX4phKV9EyPVKWX2I5vtWP4ambbBNQzJUsfEL8TIsorg8w0lGOuL8f0PulBtuBmEtwEvAUs1weKXp1R2YU21g5w2KKol3vPmeprKLJLgGSVQbpGDNidpT+eXVHjcEnBTRqoNjahD7WBNtkCBnhc0kyYCHsVF1kvSvBaiRZDMe7TlZ5Y7cg=
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_3e37d843b66a11f18e4752540024e231
+    ReservedCode1: ZHvROtgCNoi1cPg8aR9pE4tjhY3Qz9jLqU1rE2UEp+Bi+n3LU0EoARVJ1yUcWB9BQZn3CPf8CKuMU5o8OxHOhpGDAOVNGwUsM/vo5SJujkQZRxW2PHC4ikkJJmlltcW0Gm6EyqcWURAJIzlp1Uj/oBnNABAz0NByWcL2jR5uwxwtgzqj0LJe58tSVWo=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_25385af48d8611f1bfea525400e6dd8f
-    ReservedCode2: nrmtUC2eeoX4phKV9EyPVKWX2I5vtWP4ambbBNQzJUsfEL8TIsorg8w0lGOuL8f0PulBtuBmEtwEvAUs1weKXp1R2YU21g5w2KKol3vPmeprKLJLgGSVQbpGDNidpT+eXVHjcEnBTRqoNjahD7WBNtkCBnhc0kyYCHsVF1kvSvBaiRZDMe7TlZ5Y7cg=
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_3e37d843b66a11f18e4752540024e231
+    ReservedCode2: ZHvROtgCNoi1cPg8aR9pE4tjhY3Qz9jLqU1rE2UEp+Bi+n3LU0EoARVJ1yUcWB9BQZn3CPf8CKuMU5o8OxHOhpGDAOVNGwUsM/vo5SJujkQZRxW2PHC4ikkJJmlltcW0Gm6EyqcWURAJIzlp1Uj/oBnNABAz0NByWcL2jR5uwxwtgzqj0LJe58tSVWo=
 ---
+
+
 
 # AGENTS.md
 
@@ -75,3 +77,4 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 2. **neat-freak 六面审计**：代码/运行态/文档/规则/记忆/工作区一致性（五态：verified-current/changed-and-verified/pending/out-of-scope/not-applicable），消除多真相并存
 3. **同步 GitHub**：commit（conventional commits + 提交前自查 4 问）+ push
 4. **更新 Obsidian 02-Projects**：项目上下文.md / 项目经验.md（衔接③）
+*（内容由AI生成，仅供参考）*

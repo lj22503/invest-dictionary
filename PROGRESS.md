@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_3fdeb632b66a11f190f9525400638852
+    ReservedCode1: bpRGsANTxD1bp3zXmn7RN558xOsfH9cbpjo3lIpvyR488ltBwuyoNWsqcg/UPhl4Lqlx0bVS67XibBb6AwvtQnQu0y/nrIElmKwm8wEF14dMCjYVm01wzDGb1JwNZVtP0jzAHZqYJB51avOhkaiVSFmdCKAFT9k6E3XzQoYpulFV6QEYlt403+KItEc=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_3fdeb632b66a11f190f9525400638852
+    ReservedCode2: bpRGsANTxD1bp3zXmn7RN558xOsfH9cbpjo3lIpvyR488ltBwuyoNWsqcg/UPhl4Lqlx0bVS67XibBb6AwvtQnQu0y/nrIElmKwm8wEF14dMCjYVm01wzDGb1JwNZVtP0jzAHZqYJB51avOhkaiVSFmdCKAFT9k6E3XzQoYpulFV6QEYlt403+KItEc=
+---
+
 # PROGRESS — invest-dictionary（投资词典）
 
 > mangofolio 生态第 3 块 · 术语平权（听得懂）。472 个中文投资术语，"说人话不装逼"。
@@ -144,3 +155,4 @@ dictionary 是 mangofolio 生态里**唯一未对齐** v1.0 的站——iAsk / f
 - [ ] 清理候选（待批）：tracked `.bak` 5 个 / `docs/prod_*.md.md` 3 个 / `task6-*.ps1` 6 个 / 磁盘 `.bak*` 492 个
 - [ ] Wave 3 推进（暗色 + 语义色）
 - [x] neat-freak 6 面审计 + 终验（2026-09-22）
+*（内容由AI生成，仅供参考）*

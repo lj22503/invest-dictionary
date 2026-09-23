@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_3f037635b66a11f190f9525400638852
+    ReservedCode1: XEx1/wvJAHED06BY0Yrua5ROVa4jLnzM4FvjIUogqLKt3UolCENmdQVIXjTBjgiM75eJhafAVxmuYMwurhaHc9Zqqqxs7vJbVxfOz2k/4UwPZkzwzPYs2Ga2jFJS+LwWYb3JD9f+8hZJVKsJh0omE026z3Y8Q50ekk1dRVmIhMmGTaEwrysX1r0DbHc=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_3f037635b66a11f190f9525400638852
+    ReservedCode2: XEx1/wvJAHED06BY0Yrua5ROVa4jLnzM4FvjIUogqLKt3UolCENmdQVIXjTBjgiM75eJhafAVxmuYMwurhaHc9Zqqqxs7vJbVxfOz2k/4UwPZkzwzPYs2Ga2jFJS+LwWYb3JD9f+8hZJVKsJh0omE026z3Y8Q50ekk1dRVmIhMmGTaEwrysX1r0DbHc=
+---
+
 # invest-dictionary 接手说明（**2026-09-22 更新 · 品牌视觉 v1.0 全量落地后**）
 
 > 这份说明是给**新开窗口接手 invest-dictionary 的 agent** 看的。读完这份文件 + PROGRESS.md + AGENTS.md 即可开始工作。
@@ -156,3 +167,4 @@
 
 *这份说明初写于 2026-09-20（源自 2026-09-19 首页 v1.0 对齐的中途断点）；2026-09-22 更新为 v1.0 全量落地后的现役状态。*
 *后续：Wave 3（暗色模式 + 语义色）→ `dictionary.json` 去重（待批）→ 终验。*
+*（内容由AI生成，仅供参考）*
