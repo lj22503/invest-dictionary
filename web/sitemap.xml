@@ -2445,4 +2445,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E8%B4%AD%E6%88%BF%E8%B4%B7%E6%AC%BE%E8%B4%B4%E6%81%AF.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/PSL%EF%BC%88%E6%8A%B5%E6%8A%BC%E8%A1%A5%E5%85%85%E8%B4%B7%E6%AC%BE%EF%BC%89.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
