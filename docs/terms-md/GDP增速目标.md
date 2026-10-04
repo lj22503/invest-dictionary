@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_3876f94ebf3c11f197eb525400393706
+    ReservedCode1: AC4BXQGDo04GfDQCB5S04AjeUtKThJyg3uOGjMFX46+8tFB9huTWU77yjzWj0o8tESUKe7QjaWbtpAwSITWIBaawHy0/OyByCQOl146r2YtZ13sdKKHuG2GEMx3vztaEsZ1EVSUYiDBgOutJG+nzZe0EX/I6bUKAk9V26SH+vnr3pTqlkivXX+YAjBE=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_3876f94ebf3c11f197eb525400393706
+    ReservedCode2: AC4BXQGDo04GfDQCB5S04AjeUtKThJyg3uOGjMFX46+8tFB9huTWU77yjzWj0o8tESUKe7QjaWbtpAwSITWIBaawHy0/OyByCQOl146r2YtZ13sdKKHuG2GEMx3vztaEsZ1EVSUYiDBgOutJG+nzZe0EX/I6bUKAk9V26SH+vnr3pTqlkivXX+YAjBE=
+---
+
 # GDP增速目标
 
 > 政府每年给经济定的"KPI"——GDP 增速目标既是预期管理，也是政策力度的锚。
@@ -30,3 +41,4 @@ GDP 增速目标是每年全国两会《政府工作报告》公布的当年经�
 ---
 
 **相关词条**：GDP（名义GDP vs 实际GDP）、经济周期（复苏 _ 繁荣 _ 衰退 _ 萧条）、固定资产投资、社零（社会消费品零售总额）
+*（内容由AI生成，仅供参考）*
