@@ -2,12 +2,14 @@
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_140e5a992086b613
-    ReservedCode1: TnyzbalHHuQHaBCMlEBXYCGHTUtPhvHmHKV4rB14RYdLWw1Bil2041de219jiJ4T8p9GiPx4ckd6wkiSyspQtA==
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_71d0d5c6c26011f1bc7f525400638852
+    ReservedCode1: MnOTMaCuGM3RuVaeWiJ9Yez0BZUBNHAFQ6s7ygNz8hRAVZDdJNpWTPQ0qH4uNXyFxH/ezzfKDGlMelA2v9f/YSMBpCfDcbpwR7kxC40VdmR8+eawR2Aeh2xT/kvIyT+Bfo7GO3AxGn/0k4CdZVl85G+zwMNXO7wH1ZBH4eLfmFEn6tcyUhDVLy2FzBU=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_140e5a992086b613
-    ReservedCode2: DDbr+ngS8Qsc4hwEP2xq9mcqSfXX2+pXSw3kxK+iSYbQPNHQEr5LLlzWMMSXDLnXu/bGu0qHdQkuIx99MA6ojw==
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_71d0d5c6c26011f1bc7f525400638852
+    ReservedCode2: MnOTMaCuGM3RuVaeWiJ9Yez0BZUBNHAFQ6s7ygNz8hRAVZDdJNpWTPQ0qH4uNXyFxH/ezzfKDGlMelA2v9f/YSMBpCfDcbpwR7kxC40VdmR8+eawR2Aeh2xT/kvIyT+Bfo7GO3AxGn/0k4CdZVl85G+zwMNXO7wH1ZBH4eLfmFEn6tcyUhDVLy2FzBU=
 ---
+
+
 # 做T
 
 > 做T是在T+1规则下，用手里已有的底仓“当天先买后卖”或“先卖后买”，一天内赚差价。
@@ -50,4 +52,5 @@ A 股实行 T+1：当天买入的股票，次日才能卖出。
 - **单边下跌还做T**：一路下跌一路接刀，成本越T越高。
 
 **相关词条**：T+0  /  T+1（何时能卖出）、佣金（手续费  /  最低5元）、止损（止损线）、集合竞价 vs 连续竞价（开盘价 / 收盘价怎么来的）
+*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*
