@@ -789,6 +789,14 @@ body.term-page {
   <span class="bc-current">存储芯片（内存 _ 闪存）</span>
 </nav>
 
+<!-- 分享 -->
+<div class="share-bar">
+  <span class="share-label">分享给朋友：</span>
+  <button class="share-btn" onclick="copyPageUrl()" type="button">复制链接</button>
+  <a class="share-btn" href="javascript:void(0)" onclick="shareToWeibo()" rel="noopener">微博</a>
+  <span class="share-btn wechat-btn" onclick="copyPageUrl()" role="button" tabindex="0">微信<span class="qr-popup"><span class="qr-popup-url"></span><span class="qr-popup-hint">复制链接发微信</span></span></span>
+</div>
+
 <!-- 正文 -->
 <div class="paper">
   <header class="header">
@@ -853,6 +861,11 @@ body.term-page {
 
 <div class="term-footer-spacer"></div>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var urlEl = document.querySelector('.qr-popup-url');
+  if (urlEl) urlEl.textContent = window.location.href;
+});
+
 function copyPageUrl() {
   navigator.clipboard.writeText(window.location.href).then(function() {
     var t = document.getElementById('copyToast');
@@ -872,6 +885,12 @@ function copyPageUrl() {
     t.classList.add('show');
     setTimeout(function() { t.classList.remove('show'); }, 2000);
   });
+}
+
+function shareToWeibo() {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  window.open('https://service.weibo.com/share/share.php?url=' + url + '&title=' + title, '_blank', 'noopener,width=600,height=500');
 }
 </script>
 
