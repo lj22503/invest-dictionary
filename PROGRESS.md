@@ -145,7 +145,80 @@ dictionary 是 mangofolio 生态里**唯一未对齐** v1.0 的站——iAsk / f
 ## 2026-08-12
 每日热词持续产出；一鱼多吃（T2-T7）落地；222 词条完成；邮箱订阅 E8。
 
-## 待办（下一步）
+## 2026-10-19 · 二期：概念串联 Skill 上线（投顾工作台）
+
+### 背景
+
+一期解决了"有 472 个词条，能逐个查"。但用户拿到一段复杂内容（央行数据、政策、事件、异动、财报、个人决策）时，仍然不知道怎么把多个词条**串成一条线**给客户 / 朋友讲清楚。
+
+二期把这个"组合应用"沉淀为可复用方法论——`invest-dictionary-concept-combinator` skill，让 AI 把一段复杂内容自动拆成 3-5 个核心词条，沿着因果链串成 6 屏叙事，输出客户能看懂的网页。
+
+### 定位
+
+不是 generator 的"另一个 skill"，而是 generator 的**姐妹 skill**：
+
+| Skill | 输入 | 输出 |
+|---|---|---|
+| `invest-dictionary-generator`（一期）| 一个词条名（"M1""剪刀差"）| 单个词条 markdown + HTML |
+| `invest-dictionary-concept-combinator`（二期）| 一段复杂内容（数据/事件/政策/异动/财报/决策）| 3-5 个词条串成的 6 屏叙事网页 |
+
+### 交付（这次）
+
+| 项 | 路径 |
+|---|---|
+| SKILL 方法论 | `skill/invest-dictionary-concept-combinator/SKILL.md` |
+| HTML 模板 | `skill/invest-dictionary-concept-combinator/templates/narrative-page.html` |
+| Markdown 草稿骨架 | `skill/invest-dictionary-concept-combinator/templates/narrative-outline.md` |
+| Q3 worked example | `skill/invest-dictionary-concept-combinator/examples/q3-2026.html` |
+| Q3 方法论回放 | `skill/invest-dictionary-concept-combinator/examples/q3-2026.md` |
+
+### 6 模板系统（S1-S6）
+
+| 模板 | 起点 | 核心动作 | 状态 |
+|---|---|---|---|
+| S1 宏观数据 | 数字 | 概念提取 3-5 | **完整 + Q3 worked example** |
+| S2 事件解读 | 反直觉事实 | 传导链 ≤4 步 | 骨架 |
+| S3 政策解读 | 政策与钱包连接点 | 逐条翻译 | 骨架 |
+| S4 市场异动 | 情绪降温 | 短因/长逻 + 历史对照 | 骨架 |
+| S5 公司财报 | 数字 vs 股价反差 | 预期差 + 利润质量 | 骨架 |
+| S6 个人决策 | 你妈说…你朋友说… | 变量拆解 3-4 个 | 骨架 |
+
+骨架内容已写齐（角色 / 输入 / 处理流程 / 六屏结构 / 质量标准 / 输出格式），worked example 待续。后续按用户需求逐模板补 worked example。
+
+### Spec 来源
+
+- 第一版（方法论雏形）：`docs/specs/概念组合应用.txt`（5000+ 行 LLM 对话残留里提炼）
+- 第二版（投顾定位）：`docs/specs/投顾写文工作台.txt`（3400+ 行 6 模板骨架）
+
+### 品牌视觉一致性
+
+Q3 HTML 示例 已 grep 验证（本地）：
+- 0 处 #C43A31 老朱砂红
+- 0 处老米色 rgba
+- 0 处老国风橙 #e8784a/#d4745c
+- 0 处楷体/仿宋/KaiTi/FangSong
+- 4 处 emoji 字体段（CSS variables 中）
+- border-radius 全用 var(--mf-radius-*) 引用，0 处硬编码
+- footer.mangofolio-nav 仅 1 处 <footer> 注入
+- UTF-8 round-trip clean
+
+### 下一步
+
+- 公众号续篇（基于 Q3 example 改写）—— 任务列表另列
+- 投顾工作台 HTML 工具（2000+ 行 form+iframe 生成器）—— 当前**不在范围**，按用户决定未来是否集成到 skill
+- S2-S6 各补 worked example —— 按用户决定逐个补
+- Wave 3（暗色 + 语义色）/ dictionary.json 去重 —— 一期遗留，与本期独立
+
+### 待批
+
+- 二期内容是否推 origin/master？push 会触发 Vercel 重新部署（注意：本次仅 skill/ 改动不部署 web/，但仍要确认是否推送）
+- Q3 worked example 是否直接 publish 到 `dictionary.mangofolio.com/narratives/q3-2026.html`？（需另开一个 web/ 提交流程，先不入库）
+
+---
+
+## 待办（一期遗留 + 二期新增）
+
+### 一期遗留（仍 pending）
 
 - [x] **Wave 1 push gate**（2026-09-22 放行，随本 commit 入库）
 - [x] docs/terms-md cron housekeeping commit（2026-09-22 单独 commit）
@@ -155,4 +228,17 @@ dictionary 是 mangofolio 生态里**唯一未对齐** v1.0 的站——iAsk / f
 - [ ] 清理候选（待批）：tracked `.bak` 5 个 / `docs/prod_*.md.md` 3 个 / `task6-*.ps1` 6 个 / 磁盘 `.bak*` 492 个
 - [ ] Wave 3 推进（暗色 + 语义色）
 - [x] neat-freak 6 面审计 + 终验（2026-09-22）
+
+### 二期新增（Concept Combinator 上线）
+
+- [x] SKILL.md 初稿（11 节，~860 行，6 模板架构）
+- [x] templates/narrative-page.html（v1.0 brand-token 兼容）
+- [x] templates/narrative-outline.md（Markdown 草稿骨架）
+- [x] examples/q3-2026.html（5 概念 + 6 屏 + ASCII 流程图 + 行动清单）
+- [x] examples/q3-2026.md（方法论三阶段回放）
+- [x] 本地验证（HTML 标签平衡 / UTF-8 round-trip / 品牌色 grep 全 OK）
+- [x] PROGRESS.md + HANDOFF.md 同步
+- [ ] git commit + push（等用户批）
+- [ ] 公众号续篇（基于 Q3 example）
+
 *（内容由AI生成，仅供参考）*

@@ -9,20 +9,42 @@ AIGC:
     ReservedCode2: XEx1/wvJAHED06BY0Yrua5ROVa4jLnzM4FvjIUogqLKt3UolCENmdQVIXjTBjgiM75eJhafAVxmuYMwurhaHc9Zqqqxs7vJbVxfOz2k/4UwPZkzwzPYs2Ga2jFJS+LwWYb3JD9f+8hZJVKsJh0omE026z3Y8Q50ekk1dRVmIhMmGTaEwrysX1r0DbHc=
 ---
 
-# invest-dictionary 接手说明（**2026-09-22 更新 · 品牌视觉 v1.0 全量落地后**）
+# invest-dictionary 接手说明（**2026-10-19 更新 · 二期 concept-combinator skill 上线后**）
 
 > 这份说明是给**新开窗口接手 invest-dictionary 的 agent** 看的。读完这份文件 + PROGRESS.md + AGENTS.md 即可开始工作。
+> 上次更新：2026-09-22（品牌视觉 v1.0 全量落地）。
 
 ---
 
-## 0. 现役状态（2026-09-22，先读这段）
+## 0. 现役状态（2026-10-19，先读这段）
 
+### 一期（已完成）
 - **品牌视觉 v1.0**：全量落地并已 push（入口层 / 模板层 / 存量 472 页 / 数据层 / 首页）。
 - **线上**：https://dictionary.mangofolio.com 已上线（Vercel，web/ 为根目录）。
 - **数据面**：`web/terms` 472 页；`dictionary.json` 唯一数据源；`sitemap.xml` 由 `scripts/generate-sitemap.py` 同源生成；首页 `ALL_ENTRIES` 由 `scripts/sync_all_entries.py` 同步。
-- **提交前必跑**：`python scripts/check-consistency.py`（见 AGENTS.md）。
-- **待你拍板**：① `dictionary.json` 去重「信用卡」+ id 352/353 撞号（473 → 472）；② 清理候选：tracked `.bak` 5 个、`docs/prod_*.md.md` 3 个、根目录 `task6-*.ps1` 6 个、磁盘 `.bak*` 492 个。
-- **下一步**：Wave 3（暗色模式 + 语义色）。
+
+### 二期（已完成 · 待 push）
+- **新增 Skill**：`skill/invest-dictionary-concept-combinator/`
+  - SKILL.md（11 节 / 6 模板架构 / 投顾工作台定位）
+  - templates/narrative-page.html（6 屏 HTML 模板，v1.0 brand-token 兼容）
+  - templates/narrative-outline.md（Markdown 草稿骨架）
+  - examples/q3-2026.md + .html（S1 宏观数据模板 + Q3 worked example）
+- **6 模板系统**：S1 宏观数据（完整 + Q3 示例）/ S2 事件解读（骨架）/ S3 政策解读（骨架）/ S4 市场异动（骨架）/ S5 公司财报（骨架）/ S6 个人决策（骨架）。
+- **不引入 web/ 改动**：本次新增全部在 `skill/` 下，**不会触发 Vercel 自动部署**。
+
+### 通用规约（继续生效）
+- 提交前必跑：`python scripts/check-consistency.py`（见 AGENTS.md）。
+- 品牌视觉硬约束：以 `web/terms/14天期逆回购.html` 为基准页；任何 HTML/JS 引入新模板必须对齐 v1.0 令牌（详见 `invest-dictionary-generator/SKILL.md §品牌视觉硬约束`）。
+
+### 一期遗留（仍 pending）
+- `dictionary.json` 去重「信用卡」+ id 352/353 撞号（473 → 472）。
+- 清理候选：tracked `.bak` 5 个、`docs/prod_*.md.md` 3 个、根目录 `task6-*.ps1` 6 个、磁盘 `.bak*` 492 个。
+- Wave 3（暗色模式 + 语义色）。
+
+### 二期 next（等用户决定）
+- 公众号续篇（基于 Q3 example 改写 → `D:\内容输出\02-内容产出\理财词典\公众号`）
+- S2-S6 各补 worked example（按需求逐个补）
+- 投顾工作台 HTML 工具（spec 投顾写文工作台.txt 中 2000+ 行 form+iframe 生成器，**当前不入 skill**，未来按用户决定是否集成）
 
 ---
 
@@ -165,6 +187,15 @@ AIGC:
 
 ---
 
-*这份说明初写于 2026-09-20（源自 2026-09-19 首页 v1.0 对齐的中途断点）；2026-09-22 更新为 v1.0 全量落地后的现役状态。*
-*后续：Wave 3（暗色模式 + 语义色）→ `dictionary.json` 去重（待批）→ 终验。*
+*这份说明初写于 2026-09-20（源自 2026-09-19 首页 v1.0 对齐的中途断点）；2026-09-22 更新为 v1.0 全量落地后的现役状态；2026-10-19 更新为二期 concept-combinator skill 上线后的现役状态。*
+
+*下次接手时请按这个顺序读：*
+1. `AGENTS.md` — 项目规则与提交规范
+2. `PROGRESS.md` — 一期 + 二期进度记录（看顶部「待办」段）
+3. 本文件 — 接手说明（一期现状 + 二期现状 + 遗留 pending）
+
+*下一步（按用户决定）*：
+- 二期：仓库 push（等用户批）→ 公众号续篇 → S2-S6 各补 worked example
+- 一期：Wave 3（暗色 + 语义色）→ `dictionary.json` 去重（待批）→ 终验
+
 *（内容由AI生成，仅供参考）*

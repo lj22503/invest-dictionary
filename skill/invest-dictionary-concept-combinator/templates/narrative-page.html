@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{NARRATIVE_TITLE}} · 投资词典概念串联</title>
+<meta name="description" content="{{NARRATIVE_DESCRIPTION}}">
+<meta property="og:title" content="{{NARRATIVE_TITLE}} · 概念串联">
+<meta property="og:description" content="{{NARRATIVE_DESCRIPTION}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dictionary.mangofolio.com/narratives/{{NARRATIVE_SLUG}}.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{NARRATIVE_TITLE}}",
+  "description": "{{NARRATIVE_DESCRIPTION}}",
+  "author": {"@type": "Organization", "name": "投资词典"},
+  "publisher": {"@type": "Organization", "name": "Mangofolio"},
+  "datePublished": "{{NARRATIVE_DATE}}"
+}
+</script>
+<style>
+/* ============================================================
+   design tokens (v1.0 mangofolio)
+   ============================================================ */
+:root {
+    --mf-bg: #FFFFFF;
+    --mf-bg-surface: #FFFFFF;
+    --mf-bg-surface-hover: #FFF3EA;
+    --mf-bg-neutral: #F7F5F2;
+    --mf-bg-primary: #F97316;
+    --mf-bg-primary-hover: #E05E0A;
+    --mf-bg-overlay: rgba(36,22,16,.72);
+    --mf-text: #3A332C;
+    --mf-text-strong: #241610;
+    --mf-text-weak: #8A7D70;
+    --mf-text-inverse: #FFFFFF;
+    --mf-text-link: #F97316;
+    --mf-text-link-hover: #E05E0A;
+    --mf-text-accent-mango: #E05E0A;
+    --mf-text-accent-caramel: #241610;
+    --mf-text-accent-indigo: #8A7D70;
+    --mf-border: rgba(36,22,16,.10);
+    --mf-border-weak: rgba(36,22,16,.10);
+    --mf-border-strong: #8A7D70;
+    --mf-border-focused: #F97316;
+    --mf-fonts-sans: "Inter", "Noto Serif SC", "Source Han Serif SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    --mf-fonts-ui: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    --mf-fonts-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    --mf-fonts-display-extended: "Fraunces", "Noto Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    --mf-fonts-mono: "SF Mono", "Cascadia Mono", Consolas, "JetBrains Mono", monospace, "Segoe UI Emoji";
+    --mf-radius-card: 16px;
+    --mf-radius-pill: 9999px;
+    --mf-radius-sm: 8px;
+}
+
+/* ============================================================
+   reset & base
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 17px; }
+body {
+    background: var(--mf-bg);
+    color: var(--mf-text);
+    font-family: var(--mf-fonts-sans);
+    line-height: 1.9;
+    letter-spacing: .01em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   layout
+   ============================================================ */
+.narr {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 28px 80px;
+}
+@media (max-width: 600px) {
+    .narr { padding: 32px 18px 60px; }
+}
+
+/* ============================================================
+   breadcrumb
+   ============================================================ */
+.crumb {
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    margin-bottom: 32px;
+}
+.crumb a {
+    color: var(--mf-text-weak);
+    text-decoration: none;
+    transition: color .15s;
+}
+.crumb a:hover { color: var(--mf-text-link); }
+.crumb-sep { margin: 0 8px; opacity: .6; }
+
+/* ============================================================
+   screen dividers
+   ============================================================ */
+.screen {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--mf-border);
+}
+.screen:last-child { border-bottom: none; }
+.screen-kicker {
+    font-family: var(--mf-fonts-ui);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--mf-text-accent-mango);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+/* ============================================================
+   screen 1: hero (钩子)
+   ============================================================ */
+.hero { padding-top: 0; }
+.hero-title {
+    font-family: var(--mf-fonts-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -.01em;
+    color: var(--mf-text-strong);
+    margin-bottom: 18px;
+    position: relative;
+}
+.hero-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--mf-text-link) 0,
+        var(--mf-text-link) 6px,
+        transparent 6px,
+        transparent 12px
+    );
+    margin-top: 22px;
+}
+.hero-sub {
+    font-size: 17px;
+    color: var(--mf-text-weak);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 580px;
+}
+.hero-meta {
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    margin-bottom: 14px;
+}
+.hero-meta strong { color: var(--mf-text); font-weight: 600; }
+.scroll-hint {
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    text-align: left;
+    margin-top: 24px;
+}
+
+/* ============================================================
+   screen 2: raw data (原始数据)
+   ============================================================ */
+.raw-details {
+    background: var(--mf-bg-neutral);
+    border: 1px solid var(--mf-border);
+    border-radius: var(--mf-radius-card);
+    padding: 0;
+    margin-top: 24px;
+}
+.raw-summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 18px 22px;
+    font-family: var(--mf-fonts-ui);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--mf-text-strong);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.raw-summary::-webkit-details-marker { display: none; }
+.raw-summary::after {
+    content: '▸';
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    transition: transform .2s;
+}
+.raw-details[open] > .raw-summary::after { transform: rotate(90deg); }
+.raw-body {
+    padding: 0 22px 22px;
+    border-top: 1px solid var(--mf-border);
+    margin-top: 0;
+    padding-top: 18px;
+}
+.raw-body h4 {
+    font-family: var(--mf-fonts-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--mf-text-strong);
+    margin: 18px 0 8px;
+}
+.raw-body h4:first-child { margin-top: 0; }
+.raw-body p {
+    font-size: 15px;
+    color: var(--mf-text);
+    margin-bottom: 8px;
+    line-height: 1.8;
+}
+.raw-body strong { color: var(--mf-text-strong); font-weight: 700; }
+.raw-note {
+    margin-top: 18px;
+    padding: 14px 18px;
+    background: var(--mf-bg);
+    border-left: 3px solid var(--mf-text-link);
+    border-radius: var(--mf-radius-sm);
+    font-size: 14px;
+    color: var(--mf-text-weak);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   screen 3: concept breakdown (概念拆解)
+   ============================================================ */
+.concept-card {
+    background: var(--mf-bg-surface);
+    border: 1px solid var(--mf-border);
+    border-radius: var(--mf-radius-card);
+    padding: 28px 26px;
+    margin-top: 18px;
+    transition: border-color .2s, box-shadow .2s;
+}
+.concept-card:hover {
+    border-color: rgba(249,115,22,.4);
+    box-shadow: 0 6px 24px rgba(249,115,22,.06);
+}
+.concept-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--mf-border);
+}
+.concept-index {
+    font-family: var(--mf-fonts-ui);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--mf-text-accent-mango);
+    font-weight: 700;
+}
+.concept-name {
+    font-family: var(--mf-fonts-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--mf-text-strong);
+}
+.concept-part { margin-bottom: 18px; }
+.concept-part:last-child { margin-bottom: 0; }
+.part-label {
+    display: inline-block;
+    font-family: var(--mf-fonts-ui);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--mf-text-weak);
+    background: var(--mf-bg-neutral);
+    padding: 3px 10px;
+    border-radius: var(--mf-radius-pill);
+    margin-bottom: 8px;
+}
+.concept-data {
+    background: var(--mf-bg-neutral);
+    padding: 12px 16px;
+    border-left: 3px solid var(--mf-text-link);
+    border-radius: var(--mf-radius-sm);
+    font-size: 15px;
+    color: var(--mf-text);
+    line-height: 1.7;
+}
+.concept-plain {
+    font-size: 15.5px;
+    color: var(--mf-text);
+    line-height: 1.85;
+}
+.concept-role {
+    font-family: var(--mf-fonts-display);
+    font-size: 16px;
+    color: var(--mf-text-accent-caramel);
+    font-style: italic;
+    line-height: 1.6;
+    padding-left: 14px;
+    border-left: 3px solid var(--mf-text-link);
+}
+.concept-action {
+    background: var(--mf-bg-surface-hover);
+    padding: 14px 18px;
+    border-radius: var(--mf-radius-sm);
+    font-size: 14px;
+    color: var(--mf-text-strong);
+    line-height: 1.7;
+}
+.concept-action::before {
+    content: '✅ ';
+    margin-right: 4px;
+}
+
+/* ============================================================
+   screen 4: framework (完整框架)
+   ============================================================ */
+.flow-ascii {
+    background: var(--mf-bg-neutral);
+    border: 1px solid var(--mf-border);
+    border-radius: var(--mf-radius-card);
+    padding: 24px;
+    font-family: var(--mf-fonts-mono);
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--mf-text-strong);
+    overflow-x: auto;
+    white-space: pre;
+    margin-top: 18px;
+}
+.framework-caption {
+    margin-top: 18px;
+    padding: 16px 20px;
+    background: var(--mf-bg-surface-hover);
+    border-left: 3px solid var(--mf-text-link);
+    border-radius: var(--mf-radius-sm);
+    font-family: var(--mf-fonts-display);
+    font-size: 16px;
+    color: var(--mf-text-strong);
+    line-height: 1.6;
+}
+
+/* ============================================================
+   screen 5: actions (行动清单)
+   ============================================================ */
+.action-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    font-size: 14.5px;
+}
+.action-table thead th {
+    background: var(--mf-bg-neutral);
+    font-family: var(--mf-fonts-ui);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--mf-text-weak);
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--mf-border-strong);
+}
+.action-table tbody td {
+    padding: 14px;
+    border-bottom: 1px solid var(--mf-border);
+    vertical-align: top;
+    line-height: 1.7;
+    color: var(--mf-text);
+}
+.action-table tbody tr:last-child td {
+    background: var(--mf-bg-surface-hover);
+    font-weight: 500;
+}
+.action-table tbody tr:last-child td:first-child {
+    color: var(--mf-text-strong);
+}
+
+/* ============================================================
+   screen 6: outro (收尾)
+   ============================================================ */
+.outro-lines {
+    margin-top: 24px;
+}
+.outro-lines p {
+    font-family: var(--mf-fonts-display);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--mf-text);
+    margin-bottom: 14px;
+}
+.outro-lines p.last {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--mf-text-strong);
+    margin-top: 28px;
+    padding-left: 18px;
+    border-left: 3px solid var(--mf-text-link);
+}
+.disclaimer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--mf-border);
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   footer (mangofolio 系列)
+   ============================================================ */
+footer.mangofolio-nav {
+    margin-top: 64px;
+    padding: 28px 24px;
+    background: var(--mf-bg-neutral);
+    border-radius: var(--mf-radius-card);
+    text-align: center;
+    font-family: var(--mf-fonts-ui);
+    font-size: 12.5px;
+    color: var(--mf-text-weak);
+}
+footer.mangofolio-nav .label {
+    font-weight: 600;
+    color: var(--mf-text-strong);
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+}
+footer.mangofolio-nav .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+footer.mangofolio-nav .links a {
+    color: var(--mf-text-link);
+    text-decoration: none;
+    transition: color .15s;
+}
+footer.mangofolio-nav .links a:hover { color: var(--mf-text-link-hover); }
+footer.mangofolio-nav .small {
+    margin-top: 14px;
+    font-size: 11px;
+    color: var(--mf-text-weak);
+    line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<main class="narr">
+
+<!-- 面包屑 -->
+<nav class="crumb">
+    <a href="https://dictionary.mangofolio.com">投资词典</a>
+    <span class="crumb-sep">›</span>
+    <a href="https://dictionary.mangofolio.com/narratives/">概念串联</a>
+    <span class="crumb-sep">›</span>
+    <span>{{NARRATIVE_TITLE}}</span>
+</nav>
+
+<!-- ============================================================
+     SCREEN 1 · 钩子
+     ============================================================ -->
+<section class="screen hero" id="screen-1">
+    <div class="hero-meta">
+        <strong>{{NARRATIVE_DATE}}</strong> · 来源：{{NARRATIVE_SOURCE}}
+    </div>
+    <div class="screen-kicker">{{NARRATIVE_KICKER}}</div>
+    <h1 class="hero-title">{{NARRATIVE_HOOK}}</h1>
+    <p class="hero-sub">{{NARRATIVE_SUBHOOK}}</p>
+    <div class="scroll-hint">{{NARRATIVE_SCROLL_HINT}}</div>
+</section>
+
+<!-- ============================================================
+     SCREEN 2 · 原始数据
+     ============================================================ -->
+<section class="screen" id="screen-2">
+    <div class="screen-kicker">02 · 原始数据</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">{{SCREEN2_TITLE}}</h2>
+    <details class="raw-details">
+        <summary class="raw-summary">{{SCREEN2_SUMMARY}}（点开查看原文）</summary>
+        <div class="raw-body">
+            {{SCREEN2_RAW_CONTENT}}
+        </div>
+    </details>
+    <div class="raw-note">
+        {{SCREEN2_NOTE}}
+    </div>
+</section>
+
+<!-- ============================================================
+     SCREEN 3 · 概念拆解
+     ============================================================ -->
+<section class="screen" id="screen-3">
+    <div class="screen-kicker">03 · 概念拆解</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">{{SCREEN3_TITLE}}</h2>
+    <p style="color: var(--mf-text-weak); margin: 14px 0 22px; font-size: 15px;">{{SCREEN3_INTRO}}</p>
+
+    <!-- 循环：每个概念一段 concept-card -->
+    <article class="concept-card">
+        <header class="concept-head">
+            <span class="concept-index">概念 01</span>
+            <h3 class="concept-name">{{CONCEPT1_NAME}}</h3>
+        </header>
+        <div class="concept-part">
+            <span class="part-label">原始数据</span>
+            <div class="concept-data">{{CONCEPT1_DATA}}</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">说人话</span>
+            <p class="concept-plain">{{CONCEPT1_PLAIN}}</p>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">在故事里的角色</span>
+            <div class="concept-role">{{CONCEPT1_ROLE}}</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">行动点</span>
+            <div class="concept-action">{{CONCEPT1_ACTION}}</div>
+        </div>
+    </article>
+
+    <!-- 重复 concept-card × 3-5 个 -->
+    <!-- 见 examples/q3-2026.html 完整示例 -->
+
+</section>
+
+<!-- ============================================================
+     SCREEN 4 · 完整框架
+     ============================================================ -->
+<section class="screen" id="screen-4">
+    <div class="screen-kicker">04 · 完整框架</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">{{SCREEN4_TITLE}}</h2>
+    <pre class="flow-ascii">{{SCREEN4_FLOW}}</pre>
+    <div class="framework-caption">{{SCREEN4_CAPTION}}</div>
+</section>
+
+<!-- ============================================================
+     SCREEN 5 · 行动清单
+     ============================================================ -->
+<section class="screen" id="screen-5">
+    <div class="screen-kicker">05 · 行动清单</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">{{SCREEN5_TITLE}}</h2>
+    <p style="color: var(--mf-text-weak); margin: 14px 0 8px; font-size: 15px;">{{SCREEN5_INTRO}}</p>
+
+    <table class="action-table">
+        <thead>
+            <tr>
+                <th style="width: 35%;">你的情况</th>
+                <th>建议</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>{{SITUATION_1}}</td><td>{{ADVICE_1}}</td></tr>
+            <tr><td>{{SITUATION_2}}</td><td>{{ADVICE_2}}</td></tr>
+            <tr><td>{{SITUATION_3}}</td><td>{{ADVICE_3}}</td></tr>
+            <tr><td>{{SITUATION_4}}</td><td>{{ADVICE_4}}</td></tr>
+            <tr><td>{{SITUATION_5}}</td><td>{{ADVICE_5}}</td></tr>
+            <tr><td>不确定</td><td>{{SITUATION_LAST}}</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================================================
+     SCREEN 6 · 收尾
+     ============================================================ -->
+<section class="screen" id="screen-6">
+    <div class="screen-kicker">06 · 收尾</div>
+    <div class="outro-lines">
+        <p>{{OUTRO_LINE_1}}</p>
+        <p>{{OUTRO_LINE_2}}</p>
+        <p>{{OUTRO_LINE_3}}</p>
+        <p class="last">{{OUTRO_LINE_LAST}}</p>
+    </div>
+    <div class="disclaimer">
+        本页内容为原创解读，所有内容由 AI 生成，仅供学习参考，不构成投资建议。<br>
+        数据来源：{{NARRATIVE_SOURCE}}
+    </div>
+</section>
+
+<!-- ============================================================
+     footer · mangofolio 系列
+     ============================================================ -->
+<footer class="mangofolio-nav">
+    <div class="label">Mangofolio 系列</div>
+    <div class="links">
+        <a href="https://dictionary.mangofolio.com">投资词典</a>
+        <a href="https://brain.mangofolio.com">投资大脑</a>
+        <a href="https://investbuddy.mangofolio.com">投资伙伴</a>
+        <a href="https://view.mangofolio.com">市场观察</a>
+        <a href="https://fintools.mangofolio.com">财务工具箱</a>
+    </div>
+    <div class="small">内容由 AI 生成，仅供学习参考，不构成投资建议</div>
+</footer>
+
+</main>
+
+</body>
+</html>

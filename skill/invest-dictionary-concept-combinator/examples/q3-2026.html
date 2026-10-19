@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>你存了更多钱，借了更少钱 · 2026 前三季度金融数据说人话版</title>
+<meta name="description" content="央行 2026 年前三季度金融统计数据逐条翻译：M1/M2、社融、住户存款贷款、同业拆借利率 — 拆成 5 个核心概念，一条从你的钱包到整个国家的叙事线。">
+<meta property="og:title" content="你存了更多钱，借了更少钱 · 2026 前三季度金融数据">
+<meta property="og:description" content="央行 Q3 数据说人话：5 个核心概念，一条从钱包到国家的线。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dictionary.mangofolio.com/narratives/q3-2026.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "你存了更多钱，借了更少钱 · 2026 前三季度金融数据说人话版",
+  "description": "央行 2026 年前三季度金融统计数据逐条翻译：M1/M2、社融、住户存款贷款、同业拆借利率 — 拆成 5 个核心概念，一条从你的钱包到整个国家的叙事线。",
+  "author": {"@type": "Organization", "name": "投资词典"},
+  "publisher": {"@type": "Organization", "name": "Mangofolio"},
+  "datePublished": "2026-10-19"
+}
+</script>
+<style>
+:root {
+    --mf-bg: #FFFFFF;
+    --mf-bg-surface: #FFFFFF;
+    --mf-bg-surface-hover: #FFF3EA;
+    --mf-bg-neutral: #F7F5F2;
+    --mf-bg-primary: #F97316;
+    --mf-bg-primary-hover: #E05E0A;
+    --mf-text: #3A332C;
+    --mf-text-strong: #241610;
+    --mf-text-weak: #8A7D70;
+    --mf-text-link: #F97316;
+    --mf-text-link-hover: #E05E0A;
+    --mf-text-accent-mango: #E05E0A;
+    --mf-text-accent-caramel: #241610;
+    --mf-border: rgba(36,22,16,.10);
+    --mf-border-strong: #8A7D70;
+    --mf-fonts-sans: "Inter", "Noto Serif SC", "Source Han Serif SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    --mf-fonts-ui: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    --mf-fonts-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    --mf-fonts-mono: "SF Mono", "Cascadia Mono", Consolas, "JetBrains Mono", monospace, "Segoe UI Emoji";
+    --mf-radius-card: 16px;
+    --mf-radius-pill: 9999px;
+    --mf-radius-sm: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 17px; }
+body {
+    background: var(--mf-bg);
+    color: var(--mf-text);
+    font-family: var(--mf-fonts-sans);
+    line-height: 1.9;
+    letter-spacing: .01em;
+    -webkit-font-smoothing: antialiased;
+}
+.narr { max-width: 720px; margin: 0 auto; padding: 56px 28px 80px; }
+@media (max-width: 600px) { .narr { padding: 32px 18px 60px; } }
+.crumb {
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    margin-bottom: 32px;
+}
+.crumb a { color: var(--mf-text-weak); text-decoration: none; transition: color .15s; }
+.crumb a:hover { color: var(--mf-text-link); }
+.crumb-sep { margin: 0 8px; opacity: .6; }
+.screen { padding: 64px 0; border-bottom: 1px solid var(--mf-border); }
+.screen:last-child { border-bottom: none; }
+.screen-kicker {
+    font-family: var(--mf-fonts-ui);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--mf-text-accent-mango);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.hero { padding-top: 0; }
+.hero-title {
+    font-family: var(--mf-fonts-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -.01em;
+    color: var(--mf-text-strong);
+    margin-bottom: 18px;
+}
+.hero-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--mf-text-link) 0, var(--mf-text-link) 6px, transparent 6px, transparent 12px);
+    margin-top: 22px;
+}
+.hero-sub {
+    font-size: 17px;
+    color: var(--mf-text-weak);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 580px;
+}
+.hero-meta {
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    margin-bottom: 14px;
+}
+.hero-meta strong { color: var(--mf-text); font-weight: 600; }
+.scroll-hint {
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    text-align: left;
+    margin-top: 24px;
+}
+.raw-details {
+    background: var(--mf-bg-neutral);
+    border: 1px solid var(--mf-border);
+    border-radius: var(--mf-radius-card);
+    margin-top: 24px;
+}
+.raw-summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 18px 22px;
+    font-family: var(--mf-fonts-ui);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--mf-text-strong);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.raw-summary::-webkit-details-marker { display: none; }
+.raw-summary::after {
+    content: '▸';
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    transition: transform .2s;
+}
+.raw-details[open] > .raw-summary::after { transform: rotate(90deg); }
+.raw-body {
+    padding: 18px 22px 22px;
+    border-top: 1px solid var(--mf-border);
+}
+.raw-body h4 {
+    font-family: var(--mf-fonts-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--mf-text-strong);
+    margin: 18px 0 8px;
+}
+.raw-body h4:first-child { margin-top: 0; }
+.raw-body p { font-size: 15px; color: var(--mf-text); margin-bottom: 8px; line-height: 1.8; }
+.raw-body strong { color: var(--mf-text-strong); font-weight: 700; }
+.raw-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 14px;
+    font-size: 13.5px;
+    font-family: var(--mf-fonts-ui);
+}
+.raw-table th, .raw-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--mf-border);
+    text-align: left;
+}
+.raw-table th { color: var(--mf-text-weak); font-weight: 600; }
+.raw-table td strong { color: var(--mf-text-strong); }
+.raw-note {
+    margin-top: 18px;
+    padding: 14px 18px;
+    background: var(--mf-bg);
+    border-left: 3px solid var(--mf-text-link);
+    border-radius: var(--mf-radius-sm);
+    font-size: 14px;
+    color: var(--mf-text-weak);
+    line-height: 1.7;
+}
+.concept-card {
+    background: var(--mf-bg-surface);
+    border: 1px solid var(--mf-border);
+    border-radius: var(--mf-radius-card);
+    padding: 28px 26px;
+    margin-top: 18px;
+    transition: border-color .2s, box-shadow .2s;
+}
+.concept-card:hover {
+    border-color: rgba(249,115,22,.4);
+    box-shadow: 0 6px 24px rgba(249,115,22,.06);
+}
+.concept-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--mf-border);
+}
+.concept-index {
+    font-family: var(--mf-fonts-ui);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--mf-text-accent-mango);
+    font-weight: 700;
+}
+.concept-name {
+    font-family: var(--mf-fonts-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--mf-text-strong);
+}
+.concept-part { margin-bottom: 18px; }
+.concept-part:last-child { margin-bottom: 0; }
+.part-label {
+    display: inline-block;
+    font-family: var(--mf-fonts-ui);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--mf-text-weak);
+    background: var(--mf-bg-neutral);
+    padding: 3px 10px;
+    border-radius: var(--mf-radius-pill);
+    margin-bottom: 8px;
+}
+.concept-data {
+    background: var(--mf-bg-neutral);
+    padding: 12px 16px;
+    border-left: 3px solid var(--mf-text-link);
+    border-radius: var(--mf-radius-sm);
+    font-size: 15px;
+    color: var(--mf-text);
+    line-height: 1.7;
+}
+.concept-plain {
+    font-size: 15.5px;
+    color: var(--mf-text);
+    line-height: 1.85;
+}
+.concept-plain .analogy {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: var(--mf-bg-surface-hover);
+    border-radius: var(--mf-radius-sm);
+    font-size: 14.5px;
+    color: var(--mf-text-strong);
+}
+.concept-role {
+    font-family: var(--mf-fonts-display);
+    font-size: 16px;
+    color: var(--mf-text-accent-caramel);
+    font-style: italic;
+    line-height: 1.6;
+    padding-left: 14px;
+    border-left: 3px solid var(--mf-text-link);
+}
+.concept-action {
+    background: var(--mf-bg-surface-hover);
+    padding: 14px 18px;
+    border-radius: var(--mf-radius-sm);
+    font-size: 14px;
+    color: var(--mf-text-strong);
+    line-height: 1.7;
+}
+.concept-action::before { content: '✅ '; margin-right: 4px; }
+.concept-action .step {
+    display: block;
+    margin-top: 4px;
+    padding-left: 18px;
+    position: relative;
+    font-size: 13.5px;
+}
+.concept-action .step::before {
+    content: '❶';
+    position: absolute;
+    left: 0;
+    color: var(--mf-text-accent-mango);
+    font-weight: 700;
+}
+.flow-ascii {
+    background: var(--mf-bg-neutral);
+    border: 1px solid var(--mf-border);
+    border-radius: var(--mf-radius-card);
+    padding: 24px;
+    font-family: var(--mf-fonts-mono);
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--mf-text-strong);
+    overflow-x: auto;
+    white-space: pre;
+    margin-top: 18px;
+}
+.framework-caption {
+    margin-top: 18px;
+    padding: 16px 20px;
+    background: var(--mf-bg-surface-hover);
+    border-left: 3px solid var(--mf-text-link);
+    border-radius: var(--mf-radius-sm);
+    font-family: var(--mf-fonts-display);
+    font-size: 16px;
+    color: var(--mf-text-strong);
+    line-height: 1.6;
+}
+.action-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    font-size: 14.5px;
+}
+.action-table thead th {
+    background: var(--mf-bg-neutral);
+    font-family: var(--mf-fonts-ui);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--mf-text-weak);
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--mf-border-strong);
+}
+.action-table tbody td {
+    padding: 14px;
+    border-bottom: 1px solid var(--mf-border);
+    vertical-align: top;
+    line-height: 1.7;
+    color: var(--mf-text);
+}
+.action-table tbody tr:last-child td {
+    background: var(--mf-bg-surface-hover);
+    font-weight: 500;
+}
+.action-table tbody tr:last-child td:first-child { color: var(--mf-text-strong); }
+.outro-lines { margin-top: 24px; }
+.outro-lines p {
+    font-family: var(--mf-fonts-display);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--mf-text);
+    margin-bottom: 14px;
+}
+.outro-lines p.last {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--mf-text-strong);
+    margin-top: 28px;
+    padding-left: 18px;
+    border-left: 3px solid var(--mf-text-link);
+}
+.disclaimer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--mf-border);
+    font-family: var(--mf-fonts-ui);
+    font-size: 12px;
+    color: var(--mf-text-weak);
+    text-align: center;
+    line-height: 1.6;
+}
+footer.mangofolio-nav {
+    margin-top: 64px;
+    padding: 28px 24px;
+    background: var(--mf-bg-neutral);
+    border-radius: var(--mf-radius-card);
+    text-align: center;
+    font-family: var(--mf-fonts-ui);
+    font-size: 12.5px;
+    color: var(--mf-text-weak);
+}
+footer.mangofolio-nav .label {
+    font-weight: 600;
+    color: var(--mf-text-strong);
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+}
+footer.mangofolio-nav .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+footer.mangofolio-nav .links a { color: var(--mf-text-link); text-decoration: none; }
+footer.mangofolio-nav .links a:hover { color: var(--mf-text-link-hover); }
+footer.mangofolio-nav .small {
+    margin-top: 14px;
+    font-size: 11px;
+    color: var(--mf-text-weak);
+}
+</style>
+</head>
+<body>
+
+<main class="narr">
+
+<nav class="crumb">
+    <a href="https://dictionary.mangofolio.com">投资词典</a>
+    <span class="crumb-sep">›</span>
+    <a href="https://dictionary.mangofolio.com/narratives/">概念串联</a>
+    <span class="crumb-sep">›</span>
+    <span>Q3 2026 金融数据说人话</span>
+</nav>
+
+<!-- ============================================================
+     SCREEN 1 · 钩子
+     ============================================================ -->
+<section class="screen hero" id="screen-1">
+    <div class="hero-meta">
+        <strong>2026-10-19</strong> · 来源：中国人民银行 · 国家金融监督管理总局
+    </div>
+    <div class="screen-kicker">2026 前三季度 · 金融数据解读</div>
+    <h1 class="hero-title">你存了更多钱，借了更少钱。整个国家都在"缩着过"。</h1>
+    <p class="hero-sub">央行刚发了 9 月和三季度的数据。网上到处都是「社融 7.1%」「M2 7.2%」的数字，但这些数字到底在说什么？这一页不是数据复述，是把它们翻译成你钱包里的故事。</p>
+    <div class="scroll-hint">↓ 往下看，从你的钱包开始</div>
+</section>
+
+<!-- ============================================================
+     SCREEN 2 · 原始数据
+     ============================================================ -->
+<section class="screen" id="screen-2">
+    <div class="screen-kicker">02 · 原始数据</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">央行说了什么？</h2>
+    <details class="raw-details">
+        <summary class="raw-summary">9 月 + 三季度关键数字（点开看完整央行原文）</summary>
+        <div class="raw-body">
+
+<h4>社融存量</h4>
+<p>2026 年 9 月末社会融资规模存量 <strong>468.17 万亿元</strong>，同比增长 <strong>7.1%</strong>。其中政府债券余额 105.23 万亿元，同比增长 13.7%，占比上升至 22.5%；企业债券余额 36.62 万亿元，同比增长 9.3%。实体经济人民币贷款余额 279.9 万亿元，同比增长 4.8%，占比下降至 59.8%。</p>
+
+<h4>前三季度社融增量</h4>
+<p>前三季度社融增量累计 <strong>27.46 万亿元</strong>，比上年同期少 2.63 万亿元。其中政府债券净融资 10.3 万亿元（少 1.16 万亿），实体经济人民币贷款 11.5 万亿元（少增 3.04 万亿），企业债券净融资 2.75 万亿元（多 1.18 万亿）。</p>
+
+<h4>货币供应量</h4>
+<p>9 月末 M2 余额 <strong>359.63 万亿元</strong>，同比增长 <strong>7.2%</strong>；M1 余额 <strong>116.76 万亿元</strong>，同比增长 <strong>3.2%</strong>；M0 余额 15.02 万亿元，同比增长 10.6%。M1 与 M2 增速差为 4 个百分点。</p>
+
+<h4>住户存贷款</h4>
+<p>9 月末住户存款余额约 100 万亿级别，前三季度增加 <strong>9.39 万亿元</strong>。住户贷款前三季度减少 <strong>1.03 万亿元</strong>（短期贷款减 1.14 万亿元、中长期贷款增 1062 亿元）。</p>
+
+<h4>银行间利率</h4>
+<p>9 月同业拆借加权平均利率 1.4%，质押式回购加权平均利率 1.4%；前三季度银行间人民币市场日均成交 9.21 万亿元，同比增长 7.6%。</p>
+
+        </div>
+    </details>
+    <div class="raw-note">
+        这些数字来自央行官方发布。你不必记住它们 —— 往下看，我们告诉你它们合在一起在说什么。
+    </div>
+</section>
+
+<!-- ============================================================
+     SCREEN 3 · 概念拆解
+     ============================================================ -->
+<section class="screen" id="screen-3">
+    <div class="screen-kicker">03 · 概念拆解</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">5 个核心概念，一条你的叙事线</h2>
+    <p style="color: var(--mf-text-weak); margin: 14px 0 22px; font-size: 15px;">按"从你的钱包到整个国家"的顺序读 —— 越往后，越宏观。</p>
+
+    <!-- 概念 01 · 住户贷款 -->
+    <article class="concept-card">
+        <header class="concept-head">
+            <span class="concept-index">概念 01</span>
+            <h3 class="concept-name">住户贷款</h3>
+        </header>
+        <div class="concept-part">
+            <span class="part-label">原始数据</span>
+            <div class="concept-data">前三季度住户贷款减少 <strong>1.03 万亿元</strong>。其中短期贷款减 1.14 万亿元（信用卡、消费贷在还），中长期贷款增 1062 亿元（房贷有，但少）。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">说人话</span>
+            <p class="concept-plain">住户贷款，就是你和邻居们从银行借的钱。短期的是刷信用卡、消费贷，几个月就还；中长期的就是房贷，一借二三十年。减少 1.03 万亿的意思是 —— 大家整体还的钱比借的钱多。不是不借，是借得少、还得多。<span class="analogy">💡 比喻：你身边的亲戚朋友，最近一年有没有买房？有没有分期刷信用卡？"好像……买房的不多。" —— 这就是这个数字在你生活里的样子。</span></p>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">在故事里的角色</span>
+            <div class="concept-role">这是叙事的**第一环（起因）**：你和邻居们都在"缩着过"——信心温度计的最低点。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">行动点</span>
+            <div class="concept-action">
+                打开你的银行 APP，看你的贷款情况：
+                <span class="step">短期（信用卡 / 消费贷）有多少？中长期（房贷）有多少？</span>
+                <span class="step">如果你最近也在还债、不敢借新钱 —— 你和全国数据是一致的。这时候**<strong>保住工作、留住现金</strong>**比什么都重要。</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- 概念 02 · 住户存款 -->
+    <article class="concept-card">
+        <header class="concept-head">
+            <span class="concept-index">概念 02</span>
+            <h3 class="concept-name">住户存款</h3>
+        </header>
+        <div class="concept-part">
+            <span class="part-label">原始数据</span>
+            <div class="concept-data">前三季度住户存款增加 <strong>9.39 万亿元</strong>，非银行业金融机构存款增 4.41 万亿元。9 月末人民币存款余额 349.45 万亿元，同比增长 7.5%。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">说人话</span>
+            <p class="concept-plain">你和你邻居们存银行的钱。前三季度多了 9.39 万亿，相当于每个月多存了 1 万亿。这不是在炫耀"我们有钱"，这恰恰说明 — 大家除了存银行，不知道该把钱放在哪儿。<span class="analogy">💡 比喻：你发了工资，第一件事是什么？转进余额宝、买理财、还是直接花掉？—— 现在大多数人选择：放银行。</span></p>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">在故事里的角色</span>
+            <div class="concept-role">叙事的**第二环**：大家不是没钱，是钱不敢花 / 不敢投，全堆在银行。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">行动点</span>
+            <div class="concept-action">
+                看你的存款结构：
+                <span class="step">活期（随时能花）有多少？定期 + 理财（暂时不动）有多少？</span>
+                <span class="step">如果你的 80% 都在定期 / 理财里，意味着你的"应急金"可能不够。先把 6 个月生活费留成活期或货币基金，剩下的再考虑。</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- 概念 03 · M1-M2剪刀差 -->
+    <article class="concept-card">
+        <header class="concept-head">
+            <span class="concept-index">概念 03</span>
+            <h3 class="concept-name">M1 - M2 剪刀差</h3>
+        </header>
+        <div class="concept-part">
+            <span class="part-label">原始数据</span>
+            <div class="concept-data">M2 同比增长 <strong>7.2%</strong>（余额 359.63 万亿），M1 同比增长 <strong>3.2%</strong>（余额 116.76 万亿）。两者增速差 4 个百分点。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">说人话</span>
+            <p class="concept-plain">M1 是你钱包里的活钱（现金 + 活期存款），随时能花。M2 是你钱包里所有的钱（M1 + 定期 + 理财 + 余额宝）。M2 增速 7.2%、M1 增速 3.2%，差了 4 个百分点。<span class="analogy">💡 比喻：把经济想象成一个水池。M1 = 管道里流动的水（随时能花）。M2 = 水库里所有的水（流动的 + 存着的）。M1 追不上 M2，说明水在往水库里流，不往管道里走 —— 钱在"沉淀"。</span></p>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">在故事里的角色</span>
+            <div class="concept-role">叙事的**第三环**：钱还在，但它在"睡觉"。经济里的"活钱"变少了，企业和居民对未来的消费 / 投资还在观望。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">行动点</span>
+            <div class="concept-action">当 M1 增速持续低于 M2，说明经济偏冷、大家偏保守。<span class="step">这时候 —— <strong>保住工作、留住现金、不盲目加杠杆</strong>是上策。</span><span class="step">当所有人都在存钱的时候，你手上有"活钱"，你就有了别人没有的**选择权**。</span></div>
+        </div>
+    </article>
+
+    <!-- 概念 04 · 社融 -->
+    <article class="concept-card">
+        <header class="concept-head">
+            <span class="concept-index">概念 04</span>
+            <h3 class="concept-name">社会融资规模（社融）</h3>
+        </header>
+        <div class="concept-part">
+            <span class="part-label">原始数据</span>
+            <div class="concept-data">9 月末社融存量 <strong>468.17 万亿元</strong>，同比增 7.1%。结构：政府债券余额 105.23 万亿、同比增 13.7%（占比 22.5%，上升 1.3 pct）；实体经济人民币贷款余额 279.9 万亿、同比增 4.8%（占比 59.8%，下降 1.3 pct）。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">说人话</span>
+            <p class="concept-plain">社融 = 整个经济（你 + 企业 + 政府）从金融体系一共借了多少钱。你买房借的 100 万、公司发的债、政府发的国债 —— 全算。<span class="analogy">💡 比喻：社融就像整个国家的"借钱总账"。总量告诉你整个经济借了多少钱；结构告诉你谁在借。总量 7.1% = 借得不温不火；结构上，**<strong>政府在拼命借</strong>**（+13.7%），**<strong>企业和居民借得少</strong>**（+4.8%）。</span></p>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">在故事里的角色</span>
+            <div class="concept-role">叙事的**第四环**：当老百姓不借钱、企业也不愿意借，只有政府在借 —— 是政府在撑经济。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">行动点</span>
+            <div class="concept-action">
+                政府开始"独自撑经济"，后面的剧情有两种走向：
+                <span class="step">如果钱流向基建 / 补贴 → 你身边的物价、就业会慢慢有反应。</span>
+                <span class="step">无论哪种走向 —— **<strong>别跟政策反向加杠杆</strong>**。你不知道政府能撑多久，但你知道普通人不能。</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- 概念 05 · 同业拆借利率 -->
+    <article class="concept-card">
+        <header class="concept-head">
+            <span class="concept-index">概念 05</span>
+            <h3 class="concept-name">同业拆借利率</h3>
+        </header>
+        <div class="concept-part">
+            <span class="part-label">原始数据</span>
+            <div class="concept-data">9 月同业拆借加权平均利率 <strong>1.4%</strong>（比上月高 0.02 个百分点，比上年同期低 0.05 个百分点）；质押式回购加权平均利率 1.4%；前三季度日均成交 9.21 万亿元，同比增长 7.6%。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">说人话</span>
+            <p class="concept-plain">同业拆借利率 = 银行之间互相借钱的"批发价"。9 月份 1.4%，比上月略高，但仍比上年同期低 —— 银行间的钱在变"略贵一点"，但整体仍便宜。<span class="analogy">💡 比喻：你去批发市场进货，进货价直接影响你店里的零售价。银行的"进货价"低，你的房贷、消费贷利率才有继续降的空间。反过来，一旦这个数字开始涨，你的月供可能也会涨。</span></p>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">在故事里的角色</span>
+            <div class="concept-role">叙事的**第五环**：央行手里最有力的工具——它决定**你的房贷**能不能继续降。</div>
+        </div>
+        <div class="concept-part">
+            <span class="part-label">行动点</span>
+            <div class="concept-action">
+                这个数字虽然在涨，但仍在低位：
+                <span class="step">关注 1 年期 LPR（每月 20 号左右公布）。它往下走，你的存量房贷利率就跟着降。</span>
+                <span class="step">如果有"转固定利率"的窗口期，**算一下你的利息总额**再决定 —— 不是所有"锁定"都是好事。</span>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<!-- ============================================================
+     SCREEN 4 · 完整框架
+     ============================================================ -->
+<section class="screen" id="screen-4">
+    <div class="screen-kicker">04 · 完整框架</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">从你的钱包到整个国家</h2>
+<pre class="flow-ascii">你的钱包
+   │
+   ├─ 你存了更多钱（住户存款 +9.39 万亿）
+   ├─ 你借了更少钱（住户贷款 -1.03 万亿）
+   ▼
+钱流进银行
+   │
+   ├─ 活钱变慢（M1 +3.2% 追不上 M2 +7.2%）
+   └─ 总钱还在增（M2 总量 359 万亿）
+   ▼
+央行和政府着急
+   │
+   ├─ 政府拼命借（社融里政府债券 +13.7%）
+   └─ 企业和居民不借（贷款 +4.8%）
+   ▼
+钱从政府流向基建 + 补贴
+   │
+   └─ 短期资金成本被压低（银行间利率 1.4%）
+   ▼
+对你意味着什么
+   │
+   ├─ 利率可能继续降（LPR ↓）
+   ├─ 别再加杠杆（已经有 1.03 万亿在缩）
+   └─ 保住现金流（活钱就是你的选择权）</pre>
+    <div class="framework-caption">所有的金融统计数据，最终都在回答同一个问题：**<strong>钱在哪里？它在干什么？它接下来会去哪里？</strong>** —— 这一组数字告诉我们：钱堆在银行里不敢动，央行用低利率"劝"它动，但还没人愿意动。</div>
+</section>
+
+<!-- ============================================================
+     SCREEN 5 · 行动清单
+     ============================================================ -->
+<section class="screen" id="screen-5">
+    <div class="screen-kicker">05 · 行动清单</div>
+    <h2 class="hero-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">听完别白听</h2>
+    <p style="color: var(--mf-text-weak); margin: 14px 0 8px; font-size: 15px;">按你的情况，对号入座 —— 最后一行是兜底，照顾"我不确定自己属于哪一类"。</p>
+
+    <table class="action-table">
+        <thead>
+            <tr>
+                <th style="width: 35%;">你的情况</th>
+                <th>建议</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>有房贷</td>
+                <td>每月看一眼 LPR 公告。如果降了，存量房贷在次年调整；如果是浮动利率，已经跟着降了。**别再追加杠杆**。</td>
+            </tr>
+            <tr>
+                <td>有存款</td>
+                <td>把 6 个月生活费留成活期或货币基金（随时能花）。剩下的如果定期利率 &lt; 2%，别再锁长期。</td>
+            </tr>
+            <tr>
+                <td>想买房</td>
+                <td>再等 3-6 个月。当前信号是"利率可能继续降"，没必要在政策底部抢。除非你是真刚需 —— 刚需不靠预测。</td>
+            </tr>
+            <tr>
+                <td>想投资</td>
+                <td>经济偏冷期，**别押单一资产**。股票、债券、现金各留一份。等 M1 增速上来，才是"活钱"回流的信号。</td>
+            </tr>
+            <tr>
+                <td>想借钱消费</td>
+                <td>全国住户贷款减少 1.03 万亿 —— 这是**集体在收缩**的信号。等收入稳住再考虑。</td>
+            </tr>
+            <tr>
+                <td>不确定</td>
+                <td>先做一件事：打开银行 APP，看你的**活钱**（M1）和**死钱**（M2）比例。活钱越多，你越有选择权。</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================================================
+     SCREEN 6 · 收尾
+     ============================================================ -->
+<section class="screen" id="screen-6">
+    <div class="screen-kicker">06 · 收尾</div>
+    <div class="outro-lines">
+        <p>你存了更多钱，借了更少钱。</p>
+        <p>整个国家都在"缩着过"。</p>
+        <p>但钱没有消失 ——</p>
+        <p>它只是在你看不见的地方，安静地堆着。</p>
+        <p>央行在想办法把"死钱"变"活钱"，</p>
+        <p>政府在想怎么让你敢花钱。</p>
+        <p>降息、降准、降 LPR —— 这些动作已经在路上了。</p>
+        <p class="last">你手上的活钱，就是你在这个信号到来之前，**最大的选择权**。</p>
+    </div>
+    <div class="disclaimer">
+        本页内容为原创解读，所有内容由 AI 生成，仅供学习参考，不构成投资建议。<br>
+        数据来源：中国人民银行 · 国家金融监督管理总局。当期数据为初步数。
+    </div>
+</section>
+
+<footer class="mangofolio-nav">
+    <div class="label">Mangofolio 系列</div>
+    <div class="links">
+        <a href="https://dictionary.mangofolio.com">投资词典</a>
+        <a href="https://brain.mangofolio.com">投资大脑</a>
+        <a href="https://investbuddy.mangofolio.com">投资伙伴</a>
+        <a href="https://view.mangofolio.com">市场观察</a>
+        <a href="https://fintools.mangofolio.com">财务工具箱</a>
+    </div>
+    <div class="small">内容由 AI 生成，仅供学习参考，不构成投资建议</div>
+</footer>
+
+</main>
+
+</body>
+</html>
