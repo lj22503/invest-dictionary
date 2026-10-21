@@ -1,0 +1,46 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 95cdf0bc728e4a558c5554db1e2d3254_fa812f4067b547d9a61119cb558b3c3c
+    ReservedCode1: nvnOxYp22SxwOrqfEVansSsm8/pXKZJkdHzYqXUrvYEzCjN2a2meuSnUUkOwnlPFnReaRdmy+khSa/ar/f40iBuumFbn5q+Yz0m6Sf+XWYxZLXX5dTJTG1UypqjxyLrzpItuzfo2W4/0iv86Dg0awrfK5xXPNFRHQBd0COQ2mhdFG9H2K6gI9EJLAJY=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 95cdf0bc728e4a558c5554db1e2d3254_fa812f4067b547d9a61119cb558b3c3c
+    ReservedCode2: nvnOxYp22SxwOrqfEVansSsm8/pXKZJkdHzYqXUrvYEzCjN2a2meuSnUUkOwnlPFnReaRdmy+khSa/ar/f40iBuumFbn5q+Yz0m6Sf+XWYxZLXX5dTJTG1UypqjxyLrzpItuzfo2W4/0iv86Dg0awrfK5xXPNFRHQBd0COQ2mhdFG9H2K6gI9EJLAJY=
+---
+
+# Gas 费
+
+> 在以太坊这类链上转账或操作时，付给网络矿工/验证者的“手续费”，网络越堵越贵。
+
+## 1. 这是什么
+
+Gas 费（燃料费）是区块链网络对每笔交易收取的手续费，支付给打包交易的矿工或验证者，防止网络被垃圾交易刷爆。用户操作时往往还要“预付”一笔 Gas 押金，用多少扣多少，多余的退回。
+
+费用由两部分决定：Gas 单价（当前网络拥堵程度）和 Gas 用量（操作复杂度）。简单转账便宜，复杂合约操作贵；网络拥堵时，同样的转账可能相差数倍甚至数十倍。
+
+## 2. 为什么重要
+
+Gas 费直接决定链上操作的真实成本：以太坊拥堵时，一笔普通转账可能高达几十美元，而买入/卖出/授权等复杂操作费用更高。
+
+对普通用户，它意味着三件事：一是小额转账可能“手续费比本金还贵”；二是低估 Gas 会导致交易卡死或失败，钱已扣、事没办成；三是它在 NFT、DeFi、跨链桥等场景里反复出现，是隐藏成本的大头。
+
+## 3. 怎么用
+
+- 避开高峰：工作日晚间/热门项目发售时段 Gas 高，周末或深夜费率通常较低。
+- 设置限额：钱包里手动设 Gas 单价上限，避免被网络波动“偷走”大额手续费。
+- 算清成本：小额转账前先算一笔，手续费超过转账金额 10% 就不值得走链上。
+- 关注二层网络：L2（如 Arbitrum、Optimism）费用常是主网的 1/10 到 1/100，适合高频小额操作。
+- 授权要谨慎：合约授权会锁定额度，事后记得撤销，避免后续被扣“无感”Gas。
+
+## 4. 常见坑
+
+- “免费空投、零 Gas”的站点常是钓鱼链接，领取空投反而会触发恶意授权。
+- Gas 单价填得过低，交易可能“卡住”几小时甚至几天，最终失败但不退全部费用。
+- 转账时只盯着“金额”，忽略“Gas 合计”，到手金额可能比想象少很多。
+- 中心化交易所内的转账一般不走链上 Gas（由平台承担），别把两套费用搞混。
+- 骗子常以“Gas 费不足需要充值”为由引导你向指定地址转币，正规操作不会要求你额外转账给个人地址。
+
+---
+
+**相关词条**：比特币（加密货币）、稳定币（USDT / USDC）、交易所（CEX / DEX）、反洗钱
