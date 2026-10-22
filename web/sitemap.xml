@@ -3910,4 +3910,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E7%9B%91%E7%AE%A1%E6%B2%99%E7%9B%92.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
