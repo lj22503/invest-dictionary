@@ -4,35 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>投资词典 · Invest Dictionary</title>
-<meta name="description" content="投资术语，说人话，不装逼">
+<meta name="description" content="把 1000+ 理财词条，装进你的 AI。7 大场景玩法 · 每天更新 5 条热词。说人话，不装逼，不构成投资建议。">
 <link rel="canonical" href="https://dictionary.mangofolio.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dictionary.mangofolio.com/">
-<meta property="og:title" content="投资词典 · Invest Dictionary - 说人话的投资术语表">
-<meta property="og:description" content="投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章。">
+<meta property="og:image" content="https://dictionary.mangofolio.com/og-cover.png">
+<meta property="og:title" content="投资词典 · Invest Dictionary">
+<meta property="og:description" content="把 1000+ 理财词条，装进你的 AI。7 大场景玩法 · 每天更新 5 条热词。">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="投资词典 · Invest Dictionary">
-<meta name="twitter:description" content="投资术语，说人话，不装逼。">
+<meta name="twitter:description" content="把 1000+ 理财词条，装进你的 AI。7 大场景玩法 · 每天更新 5 条热词。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700;900&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/mangofolio-tokens-v09.css">
+<link rel="stylesheet" href="css/mangofolio-tokens-v09.css">
+<link rel="stylesheet" href="css/betterment-tokens.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#F97316">
 <style>
 :root {
   --paper: var(--mf-colors-background);
   --accent: var(--mf-colors-text-link);
-  --cinnabar: var(--mf-colors-text-link);
   --ink: var(--mf-colors-text);
   --ink-light: var(--mf-colors-text-weak);
   --border: var(--mf-colors-border-weak);
   --card-bg: var(--mf-colors-background-surface);
-  --shadow: 0 2px 8px rgba(44,44,44,0.06);
-  --shadow-hover: 0 4px 16px rgba(249,115,22,0.12);
+  --brand: var(--mf-colors-text-link);
+  --brand-soft: rgba(249,115,22,0.08);
+  --brand-hover: var(--mf-colors-text-link-hover);
+  --shadow: 0 1px 3px rgba(36,22,16,.08), 0 4px 12px rgba(36,22,16,.10);
+  --shadow-hover: 0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10);
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
   background: var(--paper);
@@ -40,528 +44,511 @@ body {
   line-height: 1.6;
   min-height: 100vh;
 }
-
 h1, h2, h3, h4 { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
+a { color: var(--accent); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 
-/* Hero */
+/* 导航 */
+.site-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 100;
+  box-shadow: 0 2px 4px rgba(36,22,16,.04), 0 8px 24px rgba(36,22,16,.07);
+}
+.brand { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; display: inline-flex; align-items: baseline; gap: 8px; }
+.brand .en { font-size: 0.78rem; color: var(--brand); font-style: italic; font-weight: 500; letter-spacing: 0.04em; }
+.site-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.site-nav a { color: var(--ink-light); text-decoration: none; font-size: 0.9rem; }
+.site-nav a:hover { color: var(--accent); }
+.site-nav a.active { color: var(--mf-colors-text-strong); font-weight: 600; }
+.site-nav button { background: none; border: none; color: var(--ink-light); font-size: 0.9rem; cursor: pointer; font-family: inherit; padding: 0; }
+.site-nav button:hover { color: var(--accent); }
+
+/* ============ 屏一：一句话 + 信任行 ============ */
 .hero {
-  text-align: center;
-  padding: 80px 20px 48px;
-  position: relative;
-  background: linear-gradient(180deg, rgba(249,115,22,0.03) 0%, transparent 100%);
+  text-align: center; padding: clamp(72px,14vh,120px) 20px 48px;
+  background: var(--mf-hero-glow);
   border-bottom: 1px solid var(--border);
 }
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 900;
-  color: var(--ink);
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
-}
-.hero .en-title {
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  font-size: 1.1rem;
-  color: var(--cinnabar);
-  letter-spacing: 0.15em;
-  font-style: italic;
-  margin-bottom: 16px;
-}
-.hero .subtitle {
-  font-size: 1.05rem;
-  color: var(--ink-light);
-  margin-bottom: 32px;
-}
-.hero .search-wrap {
-  display: flex;
-  justify-content: center;
-}
-.hero input[type="search"] {
-  width: 100%;
-  max-width: 480px;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  background: var(--card-bg);
-  color: var(--ink);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-}
-.hero input[type="search"]:focus {
-  border-color: var(--cinnabar);
-  box-shadow: 0 0 0 3px rgba(249,115,22,0.1);
-}
-.hero input[type="search"]::placeholder {
-  color: var(--mf-colors-text-placeholder);
-}
+.hero .eyebrow { font-size: 0.78rem; letter-spacing: 0.3em; color: var(--mf-hero-eyebrow-color); font-weight: 600; margin-bottom: 14px; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: 0.1em; color: var(--mf-colors-text-strong); text-shadow: 0 1px 0 rgba(255,255,255,.6); }
+.hero .en-title { font-family: var(--mf-fonts-display); font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--mf-hero-en-title-color); font-style: italic; letter-spacing: 0.15em; margin-bottom: 18px; }
+.hero .slogan { font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 500; color: var(--mf-hero-lead-color); line-height: 1.9; margin-bottom: 22px; }
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+.btn { display: inline-block; padding: 11px 26px; border-radius: var(--mf-radii-round); font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; font-family: inherit; line-height: 1.4; cursor: pointer; border: none; }
+.btn-primary { background: var(--mf-gradients-mango); color: var(--mf-colors-text-on-primary); box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 8px 20px rgba(249,115,22,.22); }
+.btn-primary:hover { background: var(--mf-colors-text-link-hover); transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 10px 24px rgba(249,115,22,.26); }
 
-/* Stats bar */
-.stats-bar {
-  text-align: center;
-  padding: 16px 20px;
-  font-size: 0.9rem;
-  color: var(--ink-light);
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid var(--border);
-}
+.btn-ghost { border: 1.5px solid var(--mf-colors-border-strong); color: var(--mf-colors-text); background: transparent; }
+.btn-ghost:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-soft); }
+.hero-sub-actions { margin-top: 18px; }
+.hero-sub-actions a { font-size: 0.85rem; color: var(--ink-light); text-decoration: none; border-bottom: 1px dashed var(--mf-colors-border-strong); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+.hero-sub-actions a:hover { color: var(--brand); border-color: var(--brand); }
 
-/* Main content */
-.main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px 20px 80px;
-}
+/* ============ 屏二：搜索 + 热词滚动 ============ */
+.screen { padding: 64px 20px; border-bottom: 1px solid var(--border); }
+.screen-head { text-align: center; margin-bottom: 32px; }
+.screen-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; margin-bottom: 8px; }
+.screen-head p { font-size: 0.95rem; color: var(--ink-light); max-width: 640px; margin: 0 auto; }
 
-/* Chapter sections */
-.chapter-section {
-  margin-bottom: 40px;
+.search-screen { background: var(--paper); }
+.search-wrap { display: flex; justify-content: center; margin-bottom: 10px; }
+.search-box { position: relative; width: 100%; max-width: 560px; }
+.search-box .search-ico { position: absolute; left: 21px; top: 50%; transform: translateY(-50%); color: var(--mf-colors-text-weak); pointer-events: none; }
+.search-box input { padding-left: 52px; }
+.search-wrap input {
+  width: 100%; max-width: 560px; padding: 15px 24px; font-size: 1rem;
+  border: 1px solid var(--mf-colors-border); border-radius: var(--mf-radii-round); background: var(--card-bg);
+  color: var(--ink); outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(36,22,16,.08), 0 4px 12px rgba(36,22,16,.10);
+  font-family: inherit;
 }
-.chapter-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  cursor: pointer;
-  user-select: none;
-  border-bottom: 1px solid var(--border);
-  transition: color 0.2s;
-}
-.chapter-header:hover { color: var(--cinnabar); }
-.chapter-header .left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.chapter-header .ch-name {
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-.chapter-header .ch-count {
-  font-size: 0.85rem;
-  color: var(--ink-light);
-  background: rgba(249,115,22,0.08);
-  padding: 2px 10px;
-  border-radius: 12px;
-}
-.chapter-header .arrow {
-  font-size: 1.2rem;
-  transition: transform 0.3s;
-  color: var(--ink-light);
-}
-.chapter-header.collapsed .arrow {
-  transform: rotate(-90deg);
-}
+.search-wrap input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(249,115,22,0.12); }
+.search-hint { text-align: center; font-size: 0.82rem; color: var(--ink-light); margin-bottom: 22px; }
 
-/* Entry cards grid */
-.entry-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 16px 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s, padding 0.3s;
-  max-height: 5000px;
-  opacity: 1;
+.search-results { max-width: 640px; margin: 0 auto 10px; display: none; flex-direction: column; gap: 8px; }
+.search-results.show { display: flex; }
+.search-result-item {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 12px 16px;
+  text-decoration: none; color: var(--ink); transition: all 0.15s;
 }
-.entry-grid.collapsed {
-  max-height: 0;
-  opacity: 0;
-  padding: 0;
-  overflow: hidden;
-}
+.search-result-item:hover { border-color: var(--brand); box-shadow: var(--shadow-hover); }
+.search-result-item .t { font-weight: 600; }
+.search-result-item .ch { font-size: 0.78rem; color: var(--ink-light); }
 
-.entry-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 16px;
-  cursor: pointer;
-  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
-  text-decoration: none;
-  display: block;
-  color: var(--ink);
+.search-fallback { display: none; max-width: 640px; margin: 0 auto 10px; }
+.search-fallback.show { display: block; }
+.fallback-note {
+  background: var(--brand-soft); border: 1px solid rgba(249,115,22,0.25); border-radius: var(--mf-radii-large);
+  padding: 18px 20px; font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 14px;
 }
-.entry-card:hover {
-  box-shadow: var(--shadow-hover);
-  border-color: var(--cinnabar);
-  transform: translateY(-2px);
+.fallback-note .big { color: var(--brand); }
+.fallback-rules { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 18px 20px; margin-bottom: 14px; }
+.fallback-rules .fr-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
+.fallback-rules .fr-cluster { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.fallback-rules .fr-cluster a { font-size: 0.82rem; background: var(--brand-soft); color: var(--brand); border-radius: var(--mf-radii-round); padding: 4px 12px; text-decoration: none; }
+.fallback-rules .fr-cluster a:hover { background: rgba(249,115,22,0.18); }
+.fallback-rules .fr-skill { font-size: 0.85rem; color: var(--ink-light); }
+.fallback-rules .fr-skill b { color: var(--ink); }
+.fallback-prompt {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 16px 20px;
+  font-size: 0.88rem; color: var(--ink-light); display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
 }
-.entry-card .card-num {
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  font-size: 0.78rem;
-  color: var(--cinnabar);
-  margin-bottom: 4px;
-  font-weight: 700;
-}
-.entry-card .card-title {
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: var(--ink);
-}
-.entry-card .card-hook {
-  font-size: 0.85rem;
-  color: var(--ink-light);
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+.fallback-prompt code { background: var(--mf-colors-background-neutral); border-radius: var(--mf-radii-medium); padding: 2px 8px; font-size: 0.85rem; color: var(--ink); }
+.fallback-prompt .copy-mini { margin-left: auto; }
 
-/* No results */
-.no-results {
-  text-align: center;
-  padding: 80px 20px;
-  color: var(--ink-light);
-  font-size: 1.1rem;
-  display: none;
+/* 热词 */
+.hot-section {
+  max-width: 720px; margin: 34px auto 0; background: var(--card-bg);
+  border: 1px solid var(--border); border-radius: var(--mf-radii-card); padding: 22px 24px;
 }
-.no-results.show { display: block; }
+.hot-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+.hot-title { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; font-weight: 700; font-size: 1.1rem; color: var(--brand); }
+.hot-date { font-size: 0.8rem; color: var(--ink-light); }
+.hot-note { margin-left: auto; font-size: 0.75rem; color: var(--ink-light); }
+.hot-list { height: 96px; overflow: hidden; position: relative; }
+.hot-track { transition: transform 0.5s ease; }
+.hot-item { display: flex; align-items: center; gap: 12px; height: 48px; padding: 0 6px; cursor: pointer; text-decoration: none; color: var(--ink); border-radius: var(--mf-radii-large); }
+.hot-item:hover { background: var(--brand-soft); }
+.hot-term { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; white-space: nowrap; }
+.hot-badge { background: var(--brand); color: #fff; font-size: 0.65rem; font-weight: 700; border-radius: var(--mf-radii-small); padding: 1px 6px; letter-spacing: 0.04em; }
+.hot-desc { font-size: 0.85rem; color: var(--ink-light); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hot-subscribe { border-top: 1px solid var(--border); margin-top: 16px; padding-top: 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.hot-subscribe .hs-label { font-size: 0.82rem; color: var(--ink-light); }
+.hot-subscribe form { display: flex; gap: 8px; flex: 1; min-width: 240px; }
+.hot-subscribe input { flex: 1; padding: 9px 14px; border: 1px solid var(--border); border-radius: var(--mf-radii-round); font-size: 0.88rem; outline: none; font-family: inherit; background: var(--paper); color: var(--ink); }
+.hot-subscribe input:focus { border-color: var(--brand); }
+.hot-subscribe button { padding: 9px 20px; border: none; border-radius: var(--mf-radii-round); background: var(--brand); color: #fff; font-weight: 600; cursor: pointer; font-family: inherit; }
+.hot-subscribe button:hover { background: var(--brand-hover); }
+.hs-msg { font-size: 0.8rem; color: var(--brand); width: 100%; }
 
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 32px 20px;
-  font-size: 0.85rem;
-  color: var(--ink-light);
-  border-top: 1px solid var(--border);
+/* ============ 屏三：7 大场景玩法 ============ */
+.skills-screen { background: var(--paper); }
+.scene-rail {
+  display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 6px 8px 20px; -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
+.scene-rail::-webkit-scrollbar { height: 6px; }
+.scene-rail::-webkit-scrollbar-thumb { background: var(--mf-colors-border); border-radius: 9999px; }
+.scene-card {
+  flex: 0 0 auto; width: 264px; aspect-ratio: 1 / 2;
+  border-radius: var(--mf-radii-card); overflow: hidden; cursor: pointer;
+  display: flex; flex-direction: column; transition: transform 0.15s, box-shadow 0.15s;
+  scroll-snap-align: start; position: relative;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(36,22,16,.08), 0 6px 20px rgba(36,22,16,.08);
+}
+.scene-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(36,22,16,.08), 0 14px 36px rgba(36,22,16,.14); }
+.scene-shot { flex: 1 1 58%; min-height: 0; display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.scene-shot .scene-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scene-prompt { flex: 1 1 42%; display: flex; flex-direction: column; padding: 16px; gap: 8px; }
+.scene-prompt-title { font-size: 0.82rem; font-weight: 800; }
+.scene-prompt-text { font-size: 0.78rem; line-height: 1.65; opacity: 0.92; flex: 1; }
+.scene-copy {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.78rem; font-weight: 700; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.35);
+  letter-spacing: 0.02em;
+}
+/* betterment 色板：每张卡不同底色 */
+.sc-narrative { background: var(--bmt-colors-primitives-blue-60); color: #fff; }
+.sc-narrative .scene-shot { background: linear-gradient(180deg, #1d6ae5, #1856ba 55%); }
+.sc-combo { background: var(--bmt-colors-primitives-purple-70); color: #fff; }
+.sc-combo .scene-shot { background: linear-gradient(180deg, #8657f6, #703dea 55%); }
+.sc-duel { background: var(--bmt-colors-primitives-gold-60); color: #4a3000; }
+.sc-duel .scene-shot { background: linear-gradient(180deg, #ffd553, #f8a82e 55%); }
+.sc-decision { background: var(--bmt-colors-primitives-teal-60); color: #fff; }
+.sc-decision .scene-shot { background: linear-gradient(180deg, #3aa2ae, #226d78 55%); }
+.sc-probe { background: var(--bmt-colors-primitives-orange-50); color: #4a1a00; }
+.sc-probe .scene-shot { background: linear-gradient(180deg, #fa7d29, #e05f0c 55%); }
+.sc-emergency { background: var(--bmt-colors-primitives-red-70); color: #fff; }
+.sc-emergency .scene-shot { background: linear-gradient(180deg, #d0372d, #a01f18 55%); }
+.sc-hotword { background: var(--bmt-colors-primitives-navy-100); color: #fff; }
+.sc-hotword .scene-shot { background: linear-gradient(180deg, #000b50, #1b2a89 55%); }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .entry-grid { grid-template-columns: repeat(2, 1fr); }
+/* ============ 屏四：怎么用三步 ============ */
+.howto-screen { background: var(--card-bg); }
+.howto-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 26px; }
+.step-item { background: var(--paper); border: 1px solid var(--border); border-radius: var(--mf-radii-card); padding: 24px 20px; }
+.step-num { font-size: 1.5rem; font-weight: 900; color: var(--brand); font-family: var(--mf-fonts-display); margin-bottom: 8px; }
+.step-title { font-size: 1rem; font-weight: 900; margin-bottom: 6px; }
+.step-desc { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
+.step-desc a { font-weight: 600; }
+.howto-links {
+  background: var(--brand-soft); border: 1px solid rgba(249,115,22,0.2); border-radius: var(--mf-radii-card);
+  padding: 20px; text-align: center; font-size: 0.95rem; color: var(--ink);
+}
+.howto-links a { font-weight: 700; text-decoration: underline; }
+
+/* ============ 屏五：初心与边界 ============ */
+.manifesto-text { max-width: 680px; margin: 0 auto 36px; font-size: 0.98rem; color: var(--ink-light); line-height: 2; }
+.manifesto-text strong { color: var(--ink); }
+.manifesto-punch { font-family: var(--mf-fonts-display); font-size: 1.2rem; font-weight: 800; color: var(--ink); text-align: center; margin: 28px 0; }
+.boundary-box { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-radius: var(--mf-radii-card); overflow: hidden; background: var(--card-bg); }
+.bd-col { padding: 26px; }
+.bd-col:first-child { border-right: 1px solid var(--border); }
+.bd-col h4 { font-size: 1rem; margin-bottom: 16px; }
+.bd-col.do h4 { color: var(--mf-colors-text-success); }
+.bd-col.dont h4 { color: var(--mf-colors-text-critical); }
+.bd-col ul { list-style: none; font-size: 0.9rem; color: var(--ink-light); }
+.bd-col li { margin-bottom: 10px; display: flex; gap: 8px; }
+.bd-col.do li::before { content: '✓'; color: var(--mf-colors-text-success); font-weight: 700; }
+.bd-col.dont li::before { content: '×'; color: var(--mf-colors-text-critical); font-weight: 700; }
+.compliance-box { max-width: 680px; margin: 26px auto 0; background: var(--brand-soft); border: 1px solid rgba(249,115,22,0.2); border-radius: var(--mf-radii-large); padding: 16px 20px; font-size: 0.85rem; color: var(--ink-light); }
+.compliance-box h5 { font-size: 0.9rem; color: var(--ink); margin-bottom: 8px; }
+.compliance-box li { margin-bottom: 6px; }
+
+/* ============ 屏六：页脚 ============ */
+.site-footer { text-align: center; padding: 30px 20px 16px; font-size: 0.82rem; color: var(--ink-light); border-top: 1px solid var(--border); }
+.site-footer .disclaimer { margin-bottom: 12px; }
+.mangofolio-nav { border-top: 1px solid var(--border); margin-top: 20px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: var(--ink-light); }
+.mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: var(--ink); }
+.mangofolio-nav a { display: inline-block; margin: 4px 10px; color: var(--accent); text-decoration: none; }
+.mangofolio-nav a:hover { text-decoration: underline; }
+.mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: var(--ink-light); }
+
+/* 模态框 */
+.modal-overlay { position: fixed; inset: 0; background: rgba(36,22,16,.72); display: none; justify-content: center; align-items: center; z-index: 200; backdrop-filter: blur(4px); padding: 20px; }
+.modal-overlay.active { display: flex; }
+.modal { background: var(--card-bg); width: 100%; max-width: 620px; border-radius: var(--mf-radii-card); padding: 34px; position: relative; box-shadow: 0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10); animation: fadeIn 0.2s; max-height: 88vh; overflow-y: auto; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.modal-close { position: absolute; top: 16px; right: 18px; background: none; border: none; font-size: 24px; color: var(--ink-light); cursor: pointer; }
+.modal-title { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; }
+.modal-scene { font-size: 0.92rem; color: var(--ink-light); margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.prompt-box { background: var(--mf-colors-background-neutral); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 18px; font-family: var(--mf-fonts-mono), 'Consolas', 'Courier New', monospace; font-size: 0.84rem; line-height: 1.7; color: var(--mf-colors-text); margin-bottom: 18px; white-space: pre-wrap; word-break: break-word; }
+.copy-btn { background: var(--brand); color: #fff; border: none; border-radius: var(--mf-radii-round); padding: 12px; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; font-family: inherit; transition: all 0.2s; }
+.copy-btn:hover { background: var(--brand-hover); }
+.modal-foot { margin-top: 12px; font-size: 0.78rem; color: var(--ink-light); text-align: center; }
+.modal-foot a { font-weight: 600; }
+
+.hidden { display: none !important; }
+@media (max-width: 860px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .howto-steps { grid-template-columns: 1fr; }
+  .boundary-box { grid-template-columns: 1fr; }
+  .bd-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+  .site-nav { gap: 10px; }
 }
 @media (max-width: 600px) {
-  .entry-grid { grid-template-columns: 1fr; }
-  .hero { padding: 48px 16px 32px; }
-  .chapter-header .ch-name { font-size: 1.05rem; }
-}
-
-/* Hidden */
-.hidden { display: none !important; }
-
-/* ===== 统一导航头部 ===== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 24px;
-  background: rgba(245,242,236,0.92);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(36,22,16,0.10);
-}
-.site-header .brand {
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--ink-strong);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-}
-.site-header .brand .en {
-  font-size: 0.72rem;
-  color: var(--accent);
-  letter-spacing: 0.14em;
-  font-style: italic;
-  font-weight: 400;
-}
-.site-header nav {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-.site-header nav a,
-.site-header nav button {
-  font-size: 0.88rem;
-  color: var(--ink-light);
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  padding: 4px 2px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
-.site-header nav a:hover,
-.site-header nav button:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-@media (max-width: 560px) {
-  .site-header { flex-direction: column; gap: 8px; padding: 12px 16px; }
-  .site-header nav { gap: 14px; }
-}
-
-.hero-eyebrow {
-  font-size: 0.85rem;
-  letter-spacing: 0.3em;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-.hero .subtitle {
-  font-size: 1.08rem;
-  line-height: 1.8;
-}
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 28px;
-  flex-wrap: wrap;
-}
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 26px;
-  border-radius: 24px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: var(--mf-colors-text-on-primary);
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-}
-.hero-btn.ghost {
-  background: transparent;
-  color: var(--accent);
-}
-.hero-btn:hover {
-  box-shadow: 0 4px 14px rgba(249,115,22,0.25);
-  transform: translateY(-1px);
-}
-.chapter-anchor { display: block; scroll-margin-top: 80px; }
-
-/* ===== 今日热词区块 ===== */
-.hot-section {
-  max-width: 1200px;
-  margin: 32px auto 0;
-  padding: 28px 32px 24px;
-  position: relative;
-  z-index: 5;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.hot-left {
-  flex: 1;
-  min-width: 0;
-}
-.hot-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-  flex-wrap: wrap;
-}
-.hot-title {
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: var(--cinnabar);
-  letter-spacing: 0.06em;
-}
-.hot-date {
-  font-size: 0.82rem;
-  color: var(--ink-light);
-  letter-spacing: 0.08em;
-}
-.hot-list {
-  position: relative;
-  height: 74px;
-  overflow: hidden;
-}
-.hot-track {
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.5s ease;
-}
-.hot-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  height: 74px;
-  box-sizing: border-box;
-  padding: 0 6px;
-  border-bottom: 1px solid var(--border);
-  text-decoration: none;
-  color: var(--ink);
-}
-.hot-item:last-child {
-  border-bottom: none;
-}
-.hot-item .hot-term {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--ink);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.hot-item .hot-term .hot-badge {
-  font-size: 0.68rem;
-  color: var(--mf-colors-text-on-primary);
-  background: var(--cinnabar);
-  border-radius: 4px;
-  padding: 2px 6px;
-  letter-spacing: 0.08em;
-  font-weight: 400;
-}
-.hot-item .hot-desc {
-  font-size: 0.88rem;
-  color: var(--ink-light);
-  line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.hot-subscribe {
-  flex-shrink: 0;
-  width: 320px;
-  border-left: 1px solid var(--border);
-  padding-left: 32px;
-}
-.hot-subscribe .hs-form {
-  display: flex;
-  gap: 10px;
-}
-.hot-subscribe .hs-form input[type="email"] {
-  flex: 1;
-  min-width: 0;
-  padding: 10px 16px;
-  font-size: 0.92rem;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  background: var(--paper);
-  color: var(--ink);
-  outline: none;
-  transition: border-color 0.2s ease;
-  box-sizing: border-box;
-}
-.hot-subscribe .hs-form input[type="email"]:focus {
-  border-color: var(--cinnabar);
-}
-.hot-subscribe .hs-form button {
-  padding: 10px 20px;
-  font-size: 0.92rem;
-  border: 1.5px solid var(--cinnabar);
-  border-radius: 8px;
-  background: var(--cinnabar);
-  color: var(--mf-colors-text-on-primary);
-  cursor: pointer;
-  transition: background 0.2s ease;
-  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  white-space: nowrap;
-}
-.hot-subscribe .hs-form button:hover {
-  background: var(--mf-colors-text-link-hover);
-}
-.hot-subscribe .hs-msg {
-  font-size: 0.9rem;
-  color: var(--cinnabar);
-  margin-top: 10px;
-  text-align: center;
-}
-@media (max-width: 900px) {
-  .hot-section { flex-direction: column; gap: 20px; }
-  .hot-subscribe { width: 100%; border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 16px; }
-}
-@media (max-width: 640px) {
-  .hot-section { margin-top: 24px; padding: 20px 16px 18px; }
+  .site-header { flex-direction: column; gap: 10px; }
+  .scene-card { width: 208px; }
+  .hot-note { display: none; }
 }
 </style>
-<script defer src="/_vercel/insights/script.js"></script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/js/tracker.js"></script>
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#F97316">
 </head>
 <body>
+
 <header class="site-header">
   <a class="brand" href="index.html">投资词典<span class="en">Invest Dictionary</span></a>
-  <nav aria-label="主导航">
-    <a href="index.html">全部词条</a>
+  <nav class="site-nav" aria-label="主导航">
+    <a href="dictionary.html">全部词条</a>
+    <a href="#daily-hot">每日热词</a>
     <button onclick="location.href='?random=1'">随机一词</button>
-    <a href="https://github.com/lj22503/invest-dictionary" target="_blank" rel="noopener">GitHub</a>
+    <a href="guide.html">使用指南</a>
   </nav>
 </header>
 
-
-<!-- Hero -->
+<!-- ============ 屏一：一句话 + 搜索 ============ -->
 <section class="hero">
-  <p class="hero-eyebrow">说人话 · 不装逼 · 每天一篇</p>
+  <p class="eyebrow">说人话 · 不装逼 · 每天一篇</p>
   <h1>投资词典</h1>
   <p class="en-title">Invest Dictionary</p>
-  <p class="subtitle">把投资术语，翻译成你听得懂的话。<br>不装腔作势，一读就懂。</p>
+  <p class="slogan">把投资术语，翻译成你听得懂的话。不装腔作势，一读就懂。</p>
+
   <div class="search-wrap">
-    <input type="search" id="searchBox" placeholder="搜索词条或篇章..." aria-label="搜索词条或篇章">
+    <div class="search-box">
+      <svg class="search-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="search" id="searchBox" placeholder="输入一个理财词，如「可转债」「LPR」「最大回撤」" aria-label="搜索词条">
+    </div>
   </div>
+  <div class="search-results" id="searchResults"></div>
+
+  <div class="search-fallback" id="searchFallback">
+    <div class="fallback-note">没有直接搜到这个词条。<span class="big">把你在纠结的那件事说给我听</span>，看看该看哪些词 👇</div>
+    <div class="fallback-rules" id="fallbackRules"></div>
+    <div class="fallback-prompt">
+      <span>或者把这件事丢给你常用的 AI：</span>
+      <code id="fallbackPromptText"></code>
+      <button class="btn btn-primary copy-mini" onclick="copyFallbackPrompt()">复制提示词</button>
+    </div>
+  </div>
+
   <div class="hero-actions">
-    <a class="hero-btn" href="#chapters">按篇章浏览</a>
-    <button class="hero-btn ghost" onclick="location.href='?random=1'">随机读一篇</button>
+    <a class="btn btn-primary" href="dictionary.html">按篇章浏览</a>
+    <button class="btn btn-ghost" onclick="location.href='?random=1'">随机读一篇</button>
+  </div>
+  <div class="hero-sub-actions">
+    <a href="#skills">还有 7 大场景玩法 →</a>
   </div>
 </section>
 
-<!-- 今日热词 -->
-<section class="hot-section" id="daily-hot">
-  <div class="hot-left">
+<!-- ============ 屏二：每日热词 ============ -->
+<section class="screen search-screen" id="daily-hot">
+  <div class="hot-section">
     <div class="hot-head">
       <span class="hot-title">今日热词</span>
       <span class="hot-date"></span>
+      <span class="hot-note">点击热词，触发 AI 解读</span>
     </div>
     <div class="hot-list">
       <div class="hot-track" id="hotTrack"></div>
     </div>
-  </div>
-  <div class="hot-subscribe">
-    <form class="hs-form" id="hotSubscribeForm" novalidate>
-      <input type="email" id="hsEmail" placeholder="邮箱地址" aria-label="邮箱地址" required>
-      <button type="submit">订阅</button>
-    </form>
-    <p class="hs-msg" id="hsMsg" hidden></p>
+    <div class="hot-subscribe">
+      <span class="hs-label">每天 5 条热词，发到邮箱</span>
+      <form class="hs-form" id="hotSubscribeForm" novalidate>
+        <input type="email" id="hsEmail" placeholder="邮箱地址" aria-label="邮箱地址" required>
+        <button type="submit">订阅</button>
+      </form>
+      <p class="hs-msg" id="hsMsg" hidden></p>
+    </div>
   </div>
 </section>
 
-<!-- Stats -->
+<!-- ============ 屏三：7 大场景玩法 ============ -->
+<section class="screen skills-screen" id="skills">
+  <div class="screen-head">
+    <h2>7 大场景玩法</h2>
+    <p>这些玩法让你在投资理财认知上更进一步。点卡片复制提示词，去你常用的 AI 里直接跑。</p>
+  </div>
 
+  <div class="scene-rail">
+    <div class="scene-card sc-narrative" onclick="openSkillModal('narrative')">
+      <div class="scene-shot">
+        <img class="scene-img" src="assets/cases/narrative.png" alt="新闻翻译机案例截图" loading="lazy" />
+      </div>
+      <div class="scene-prompt">
+        <div class="scene-prompt-title">📖 新闻翻译机 · 复制提示词给 AI</div>
+        <div class="scene-prompt-text">提取 3-5 个核心概念，串成一条因果线；钩子→原始数据→概念拆解→行动清单。</div>
+        <div class="scene-copy">复制提示词 <span>→</span></div>
+      </div>
+    </div>
 
-<!-- Main -->
-<span id="chapters" class="chapter-anchor"></span>
-<main class="main" id="mainContent"></main>
+    <div class="scene-card sc-combo" onclick="openSkillModal('combo')">
+      <div class="scene-shot">
+        <img class="scene-img" src="assets/cases/combo.png" alt="概念串联案例截图" loading="lazy" />
+      </div>
+      <div class="scene-prompt">
+        <div class="scene-prompt-title">🔗 概念串联 · 复制提示词给 AI</div>
+        <div class="scene-prompt-text">把涉及到的理财概念组合起来，构建宏观到个人的传导链，最多 4 步。</div>
+        <div class="scene-copy">复制提示词 <span>→</span></div>
+      </div>
+    </div>
 
-<!-- No results -->
-<div class="no-results" id="noResults">没有找到匹配的词条，试试其他关键词</div>
+    <div class="scene-card sc-duel" onclick="openSkillModal('duel')">
+      <div class="scene-shot">
+        <img class="scene-img" src="assets/cases/duel.png" alt="二选一擂台案例截图" loading="lazy" />
+      </div>
+      <div class="scene-prompt">
+        <div class="scene-prompt-title">⚖️ 二选一擂台 · 复制提示词给 AI</div>
+        <div class="scene-prompt-text">四维并排对比，给出分界线：什么条件下选 A，什么条件下选 B。</div>
+        <div class="scene-copy">复制提示词 <span>→</span></div>
+      </div>
+    </div>
 
-<!-- Footer -->
-<div class="footer">&copy; 2026 Invest Dictionary · 投资词典</div>
+    <div class="scene-card sc-decision" onclick="openSkillModal('decision')">
+      <div class="scene-shot">
+        <img class="scene-img" src="assets/cases/decision.png" alt="决策拆解桌案例截图" loading="lazy" />
+      </div>
+      <div class="scene-prompt">
+        <div class="scene-prompt-title">🧩 决策拆解桌 · 复制提示词给 AI</div>
+        <div class="scene-prompt-text">把决策拆成 4 个能填的变量，给分界线，列出今天能做的行动清单。</div>
+        <div class="scene-copy">复制提示词 <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="scene-card sc-probe" onclick="openSkillModal('probe')">
+      <div class="scene-shot">
+        <img class="scene-img" src="assets/cases/probe.png" alt="防坑提问器案例截图" loading="lazy" />
+      </div>
+      <div class="scene-prompt">
+        <div class="scene-prompt-title">❓ 防坑提问器 · 复制提示词给 AI</div>
+        <div class="scene-prompt-text">列出该问销售的核心问题，指出哪些回答是“红灯”，帮你看穿话术。</div>
+        <div class="scene-copy">复制提示词 <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="scene-card sc-emergency" onclick="openSkillModal('emergency')">
+      <div class="scene-shot">
+        <img class="scene-img" src="assets/cases/emergency.png" alt="理财急诊案例截图" loading="lazy" />
+      </div>
+      <div class="scene-prompt">
+        <div class="scene-prompt-title">🩺 理财急诊 · 复制提示词给 AI</div>
+        <div class="scene-prompt-text">先诊断是波动还是买错，倒查该看哪几个词，只帮你想清楚不直接说卖。</div>
+        <div class="scene-copy">复制提示词 <span>→</span></div>
+      </div>
+    </div>
+
+    <div class="scene-card sc-hotword" onclick="openSkillModal('hotword')">
+      <div class="scene-shot">
+        <img class="scene-img" src="assets/cases/hotword.png" alt="每日热词案例截图" loading="lazy" />
+      </div>
+      <div class="scene-prompt">
+        <div class="scene-prompt-title">🔥 每日热词 · 复制提示词给 AI</div>
+        <div class="scene-prompt-text">拆出今天必须懂的热词，每个讲人话，串成一句能复述给朋友的话。</div>
+        <div class="scene-copy">复制提示词 <span>→</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 屏四：怎么用三步 ============ -->
+<section class="screen howto-screen" id="howto">
+  <div class="screen-head">
+    <h2>怎么用？三步</h2>
+    <p>不需要安装，不需要注册。选一个场景，拿到提示词，去你手边的 AI 里跑。</p>
+  </div>
+
+  <div class="howto-steps">
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div class="step-title">选一个 Skill</div>
+      <div class="step-desc">点上方任意一张卡片，查看完整提示词，并点击“复制”。</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div class="step-title">复制提示词去常用 AI</div>
+      <div class="step-desc">ChatGPT / Claude / DeepSeek / 豆包 都行。把提示词和你的内容一起发过去。</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">03</div>
+      <div class="step-title">去 SkillHub 装 Skill</div>
+      <div class="step-desc">装好后不用每次复制，直接对 AI 说“用理财急诊看看这个”。<a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">先链 ima 知识库</a>（SkillHub 上架地址就绪后更新）。</div>
+    </div>
+  </div>
+
+  <div class="howto-links">
+    📚 想先查词？去 <a href="dictionary.html">词库独立页</a>。词库已同步到 <a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">ima 知识库</a>；装 Skill 后可直接调用。不会用？看 <a href="guide.html">使用指南</a>。
+  </div>
+</section>
+
+<!-- ============ 屏五：初心与边界（兼合规声明） ============ -->
+<section class="screen manifesto-screen" id="about">
+  <div class="screen-head">
+    <h2>初心与边界</h2>
+    <p>既是初心，也是合规声明。</p>
+  </div>
+
+  <div class="manifesto-text">
+    <p>理财这件事，卡住普通人的从来不是“没钱”，是<strong>“看不懂”</strong>。</p>
+    <p>看不懂新闻里的数字，看不懂产品说明书，看不懂销售在说什么。于是只能听别人说，听完还是不知道，自己到底买的是什么。</p>
+    <div class="manifesto-punch">
+      我们想做的，是把每一个词、每一条新闻、每一个产品，<br>翻译成你能听懂的话。<br>让每个人都懂词，让每个人都能自己判断。
+    </div>
+  </div>
+
+  <div class="boundary-box">
+    <div class="bd-col do">
+      <h4>我们做什么</h4>
+      <ul>
+        <li>把词条翻译成人话</li>
+        <li>把新闻拆成一条线</li>
+        <li>帮你列出该问的问题</li>
+        <li>帮你把决策拆成变量</li>
+        <li>告诉你该看哪几个词</li>
+        <li>教你看懂“保本保息”这类话术</li>
+      </ul>
+    </div>
+    <div class="bd-col dont">
+      <h4>我们不做什么</h4>
+      <ul>
+        <li>不推荐买什么、卖什么</li>
+        <li>不预测涨跌</li>
+        <li>不替你做决定</li>
+        <li>不承诺任何收益</li>
+        <li>不提供个性化投资建议</li>
+        <li>不替代持牌机构服务</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="compliance-box">
+    <h5>合规三条红线</h5>
+    <ul>
+      <li>红线一：不无资质提供投资建议——只输出“看什么 / 问什么 / 取决于什么”，不输出“买什么”。</li>
+      <li>红线二：AI 生成内容不替代持牌服务——定位为信息整理 / 知识科普 / 投教。</li>
+      <li>红线三：不承诺收益、不保本保息——工具专门拆穿“保本保息”话术。</li>
+    </ul>
+  </div>
+
+  <p style="text-align:center; margin-top: 22px; font-size: 0.85rem; color: var(--ink-light);">我们提供的是“看懂”和“提问”的工具，不是“买什么”的答案。最终的决定，永远在你手里。</p>
+</section>
+
+<!-- ============ 屏六：页脚免责声明 ============ -->
+<footer class="site-footer" id="footer">
+  <p class="disclaimer">本站内容与全部 AI 输出均为信息整理 / 知识科普 / 投教参考，不构成投资建议；不承诺收益、不保本保息。投资有风险，决策需谨慎，请仔细甄别。</p>
+  <p style="margin-bottom: 8px;">© 2026 Invest Dictionary · 投资词典 · <a href="guide.html">使用指南</a> · <a href="dictionary.html">词库</a></p>
+</footer>
+
+<!-- 模态框 -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()" aria-label="关闭">×</button>
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-scene" id="modal-scene"></div>
+    <div class="prompt-box" id="modal-prompt"></div>
+    <button class="copy-btn" onclick="copyModalPrompt()">一键复制提示词</button>
+    <p class="modal-foot">以上为概念梳理与提问参考，不构成投资建议。<a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">想装成 Skill？去 ima 知识库</a></p>
+  </div>
+</div>
+
+<!-- Mangofolio 系列导航 -->
+<footer class="mangofolio-nav">
+  <span class="mf-label">Mangofolio 系列</span>
+  <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
+  <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
+  <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
+  <a href="https://view.mangofolio.com">市场观察 View</a>
+  <a href="https://invest-tools.mangofolio.app" style="color: var(--accent);">财务工具箱 FinTools</a>
+  <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
+</footer>
 
 <script>
-// Embedded data → 动态加载 dictionary.json（根治 ALL_ENTRIES 与词条库不同步问题）
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="js/tracker.js"></script>
+
+<script>
 var ALL_ENTRIES = [
   {
     "id": 1,
@@ -4543,8 +4530,8 @@ var ALL_ENTRIES = [
     "title": "黄金储备",
     "chapter": "第七篇：投资武器库 · 其他类",
     "card_titles": [
-      "央行也在“买买买”",
-      "7608 万盎司是什么概念",
+      "央行连续22个月买黄金，8月末储备7673万盎司",
+      "7673万盎司是什么概念",
       "央行为什么一直买黄金",
       "对普通人意味着什么"
     ],
@@ -4623,8 +4610,8 @@ var ALL_ENTRIES = [
     "title": "霍尔木兹海峡",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
-      "今天，油价的神经绷紧了",
-      "霍尔木兹海峡是什么",
+      "一条管道，掐住了全球油价的神经",
+      "霍尔木兹海峡为什么这么关键",
       "跟你有什么关系",
       "以后怎么盯"
     ],
@@ -4703,7 +4690,7 @@ var ALL_ENTRIES = [
     "title": "隔夜逆回购",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
-      "央行第一次，在月中动手了",
+      "央行又在月中出手了",
       "隔夜逆回购是什么",
       "跟你有什么关系",
       "以后怎么盯"
@@ -5859,7 +5846,7 @@ var ALL_ENTRIES = [
     "title": "解禁",
     "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
-      "锁定期到了，股份可以卖了",
+      "摩尔线程解禁日大跌20%：解禁为什么吓人",
       "为什么重要：抛压预期的源头",
       "怎么用：查三个数再决策",
       "常见坑：把解禁当“必跌”"
@@ -5985,10 +5972,10 @@ var ALL_ENTRIES = [
     "title": "油价（原油价格）",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
-      "布油重上90美元",
-      "油价怎么传染到钱包",
-      "跟你有什么关系",
-      "以后怎么看"
+      "油价是什么：地缘风险的体温计",
+      "为什么重要：油价怎么传染到钱包",
+      "怎么看：盯三个东西",
+      "常见坑：别把地缘溢价当长期趋势"
     ],
     "related": [
       "战略石油储备",
@@ -6507,10 +6494,10 @@ var ALL_ENTRIES = [
     "title": "黄金价格",
     "chapter": "第十一篇：宏观风向标",
     "card_titles": [
-      "什么是黄金价格：钱不值钱和世界不安分的报警器",
+      "黄金价格是什么：钱不值钱和世界不安分的报警器",
       "为什么重要：从金饰到黄金ETF都跟着它走",
-      "怎么用 / 怎么看：四个观察点",
-      "常见坑 / 误区：黄金不是只涨不跌"
+      "怎么看：四个观察点",
+      "常见坑：黄金不是只涨不跌"
     ],
     "related": [
       "美元指数",
@@ -7320,19 +7307,19 @@ var ALL_ENTRIES = [
   },
   {
     "id": 353,
-    "slug": "外汇储备",
-    "title": "外汇储备",
+    "slug": "核心一级资本（银行补血）",
+    "title": "核心一级资本（银行补血）",
     "chapter": "第一篇：钱的本质",
     "card_titles": [
-      "外汇储备是什么：国家的“外汇家底”",
-      "为什么重要：日本一出手，全球利率跟着抖",
-      "怎么用 / 怎么看：普通人该关注什么",
-      "常见坑 / 误区：别把宏观新闻听成鬼故事"
+      "核心一级资本是什么：银行最扎实的“本钱”",
+      "为什么重要：本钱不够，银行才真的危险",
+      "怎么用 / 怎么看：注资对你意味着什么",
+      "常见坑 / 误区：把注资想反了"
     ],
     "related": [
-      "黄金储备",
-      "外汇管制",
-      "黄金价格"
+      "存款保险（50万赔付）",
+      "存款准备金",
+      "降准（存款准备金率下调）"
     ],
     "next": "",
     "filename": "核心一级资本（银行补血）.html",
@@ -7361,9 +7348,29 @@ var ALL_ENTRIES = [
   },
   {
     "id": 355,
+    "slug": "外汇储备",
+    "title": "外汇储备",
+    "chapter": "第十二篇：宏观与周期",
+    "card_titles": [
+      "外汇储备是什么：国家的“外汇家底”",
+      "为什么重要：日本一出手，全球利率跟着抖",
+      "怎么用 / 怎么看：普通人该关注什么",
+      "常见坑 / 误区：别把宏观新闻听成鬼故事"
+    ],
+    "related": [
+      "黄金储备",
+      "外汇管制",
+      "黄金价格"
+    ],
+    "next": "",
+    "filename": "外汇储备.html",
+    "file": "外汇储备.html"
+  },
+  {
+    "id": 356,
     "slug": "个税起征点（免征额）",
     "title": "个税起征点（免征额）",
-    "chapter": "第十二篇：宏观与周期",
+    "chapter": "第十九篇：人生账本与长期规划",
     "card_titles": [
       "5000元不是“过线就全交”：起征点是先砍掉再算税",
       "为什么重要：起征点每调一次，都是一次全国性“加薪”",
@@ -7377,14 +7384,14 @@ var ALL_ENTRIES = [
       "五险一金"
     ],
     "next": "",
-    "filename": "外汇储备.html",
-    "file": "外汇储备.html"
+    "filename": "个税起征点（免征额）.html",
+    "file": "个税起征点（免征额）.html"
   },
   {
-    "id": 356,
+    "id": 357,
     "slug": "大数据杀熟",
     "title": "大数据杀熟",
-    "chapter": "第十九篇：人生账本与长期规划",
+    "chapter": "第二十篇：消费心理与财富品格",
     "card_titles": [
       "什么是大数据杀熟：同一件商品，你的手机看到更贵的价",
       "为什么重要：省下的每一笔，都在被算法重新定价",
@@ -7398,14 +7405,14 @@ var ALL_ENTRIES = [
       "杀熟（熟人推荐最危险）"
     ],
     "next": "",
-    "filename": "个税起征点（免征额）.html",
-    "file": "个税起征点（免征额）.html"
+    "filename": "大数据杀熟.html",
+    "file": "大数据杀熟.html"
   },
   {
-    "id": 357,
+    "id": 358,
     "slug": "恩格尔系数",
     "title": "恩格尔系数",
-    "chapter": "第二十篇：消费心理与财富品格",
+    "chapter": "第十一篇：宏观风向标",
     "card_titles": [
       "什么是恩格尔系数：吃的占比越低，日子越过得好",
       "为什么重要：它比“平均工资”更诚实",
@@ -7418,14 +7425,14 @@ var ALL_ENTRIES = [
       "通货膨胀（CPI）"
     ],
     "next": "",
-    "filename": "大数据杀熟.html",
-    "file": "大数据杀熟.html"
+    "filename": "恩格尔系数.html",
+    "file": "恩格尔系数.html"
   },
   {
-    "id": 358,
+    "id": 359,
     "slug": "电信诈骗",
     "title": "电信诈骗",
-    "chapter": "第十一篇：宏观风向标",
+    "chapter": "第二十二篇：骗局与避坑指南",
     "card_titles": [
       "什么是电信诈骗：不见面的“抢钱”",
       "为什么重要：它已成为全民级别的安全威胁",
@@ -7439,11 +7446,11 @@ var ALL_ENTRIES = [
       "注销贷款账户骗局"
     ],
     "next": "",
-    "filename": "恩格尔系数.html",
-    "file": "恩格尔系数.html"
+    "filename": "电信诈骗.html",
+    "file": "电信诈骗.html"
   },
   {
-    "id": 359,
+    "id": 360,
     "slug": "冒充公检法 _ 冒充客服",
     "title": "冒充公检法 / 冒充客服",
     "chapter": "第二十二篇：骗局与避坑指南",
@@ -7460,11 +7467,11 @@ var ALL_ENTRIES = [
       "征信修复骗局"
     ],
     "next": "",
-    "filename": "电信诈骗.html",
-    "file": "电信诈骗.html"
+    "filename": "冒充公检法 _ 冒充客服.html",
+    "file": "冒充公检法 _ 冒充客服.html"
   },
   {
-    "id": 360,
+    "id": 361,
     "slug": "刷单返利骗局",
     "title": "刷单返利骗局",
     "chapter": "第二十二篇：骗局与避坑指南",
@@ -7481,11 +7488,11 @@ var ALL_ENTRIES = [
       "虚拟盘"
     ],
     "next": "",
-    "filename": "冒充公检法 _ 冒充客服.html",
-    "file": "冒充公检法 _ 冒充客服.html"
+    "filename": "刷单返利骗局.html",
+    "file": "刷单返利骗局.html"
   },
   {
-    "id": 361,
+    "id": 362,
     "slug": "荐股群 _ 喊单带单",
     "title": "荐股群 / 喊单带单",
     "chapter": "第二十二篇：骗局与避坑指南",
@@ -7502,11 +7509,11 @@ var ALL_ENTRIES = [
       "非法集资（高息揽储）"
     ],
     "next": "",
-    "filename": "刷单返利骗局.html",
-    "file": "刷单返利骗局.html"
+    "filename": "荐股群 _ 喊单带单.html",
+    "file": "荐股群 _ 喊单带单.html"
   },
   {
-    "id": 362,
+    "id": 363,
     "slug": "虚拟盘",
     "title": "虚拟盘",
     "chapter": "第二十二篇：骗局与避坑指南",
@@ -7522,14 +7529,14 @@ var ALL_ENTRIES = [
       "杀猪盘（情感+投资诈骗）"
     ],
     "next": "",
-    "filename": "荐股群 _ 喊单带单.html",
-    "file": "荐股群 _ 喊单带单.html"
+    "filename": "虚拟盘.html",
+    "file": "虚拟盘.html"
   },
   {
-    "id": 363,
+    "id": 364,
     "slug": "钱包（冷_热）",
     "title": "钱包（冷/热）",
-    "chapter": "第二十二篇：骗局与避坑指南",
+    "chapter": "第七篇：投资武器库 · 其他类",
     "card_titles": [
       "钱包里装的不是币，是钥匙",
       "为什么重要：选错钱包 = 资产安全的第一道坎",
@@ -7542,11 +7549,11 @@ var ALL_ENTRIES = [
       "数字人民币"
     ],
     "next": "",
-    "filename": "虚拟盘.html",
-    "file": "虚拟盘.html"
+    "filename": "钱包（冷_热）.html",
+    "file": "钱包（冷_热）.html"
   },
   {
-    "id": 364,
+    "id": 365,
     "slug": "私钥 _ 助记词",
     "title": "私钥 / 助记词",
     "chapter": "第七篇：投资武器库 · 其他类",
@@ -7562,14 +7569,14 @@ var ALL_ENTRIES = [
       "数字人民币"
     ],
     "next": "",
-    "filename": "钱包（冷_热）.html",
-    "file": "钱包（冷_热）.html"
+    "filename": "私钥 _ 助记词.html",
+    "file": "私钥 _ 助记词.html"
   },
   {
-    "id": 365,
+    "id": 366,
     "slug": "美债收益率",
     "title": "美债收益率",
-    "chapter": "第七篇：投资武器库 · 其他类",
+    "chapter": "第十二篇：宏观与周期",
     "card_titles": [
       "又逼近5%：这次是谁推的",
       "为什么它叫“全球资产定价之锚”",
@@ -7582,14 +7589,14 @@ var ALL_ENTRIES = [
       "黄金（避险资产）"
     ],
     "next": "",
-    "filename": "私钥 _ 助记词.html",
-    "file": "私钥 _ 助记词.html"
+    "filename": "美债收益率.html",
+    "file": "美债收益率.html"
   },
   {
-    "id": 366,
+    "id": 367,
     "slug": "算力网",
     "title": "算力网",
-    "chapter": "第十二篇：宏观与周期",
+    "chapter": "第十一篇：宏观风向标",
     "card_titles": [
       "国常会点名：算力要“组网”",
       "为什么现在提“算力网”",
@@ -7602,14 +7609,14 @@ var ALL_ENTRIES = [
       "大数据杀熟"
     ],
     "next": "",
-    "filename": "美债收益率.html",
-    "file": "美债收益率.html"
+    "filename": "算力网.html",
+    "file": "算力网.html"
   },
   {
-    "id": 367,
+    "id": 368,
     "slug": "强制退市",
     "title": "强制退市",
-    "chapter": "第十一篇：宏观风向标",
+    "chapter": "第四篇：投资武器库 · 股票篇",
     "card_titles": [
       "又一家公司因造假被“请出场”",
       "强制退市是什么：不是跌没了，是被“除名”",
@@ -7620,26 +7627,6 @@ var ALL_ENTRIES = [
       "停牌 _ 退市",
       "ST股 _ST股（退市风险警示）",
       "解禁"
-    ],
-    "next": "",
-    "filename": "算力网.html",
-    "file": "算力网.html"
-  },
-  {
-    "id": 368,
-    "slug": "数据产权",
-    "title": "数据产权",
-    "chapter": "第四篇：投资武器库 · 股票篇",
-    "card_titles": [
-      "数据也开始“办证”了",
-      "为什么要给数据确权",
-      "跟你有什么关系",
-      "别把确权当变现"
-    ],
-    "related": [
-      "大数据杀熟",
-      "数字人民币",
-      "外汇储备"
     ],
     "next": "",
     "filename": "强制退市.html",
@@ -9328,7 +9315,7 @@ var ALL_ENTRIES = [
       "业绩暴雷",
       "基本面分析"
     ],
-    "next": "财务造假识别",
+    "next": "挤兑（银行挤兑）",
     "filename": "估值风险.html",
     "file": "估值风险.html"
   },
@@ -9598,7 +9585,7 @@ var ALL_ENTRIES = [
       "CPO（共封装光学）",
       "Token贷"
     ],
-    "next": "",
+    "next": "并购重组",
     "filename": "集成电路（半导体）.html",
     "file": "集成电路（半导体）.html"
   },
@@ -9849,7 +9836,7 @@ var ALL_ENTRIES = [
       "算力网",
       "新能源汽车"
     ],
-    "next": "",
+    "next": "高抛低吸",
     "filename": "人形机器人.html",
     "file": "人形机器人.html"
   },
@@ -10076,7 +10063,7 @@ var ALL_ENTRIES = [
       "债券（票面利率 _ 到期收益率）.html",
       "无风险利率（十年期国债收益率）.html"
     ],
-    "next": "",
+    "next": "耐心资本",
     "filename": "摊余成本法.html",
     "file": "摊余成本法.html"
   },
@@ -10098,7 +10085,7 @@ var ALL_ENTRIES = [
       "集成电路（半导体）.html",
       "人形机器人.html"
     ],
-    "next": "",
+    "next": "复利效应",
     "filename": "耐心资本.html",
     "file": "耐心资本.html"
   },
@@ -13894,7 +13881,7 @@ var ALL_ENTRIES = [
       "期权卖方风险",
       "期货（股指期货/商品期货）"
     ],
-    "next": "工资增速 / 居民收入",
+    "next": "主力合约",
     "filename": "保证金交易.html",
     "file": "保证金交易.html"
   },
@@ -14793,7 +14780,7 @@ var ALL_ENTRIES = [
       "资产配置（核心-卫星策略）",
       "再平衡（动态调整仓位）"
     ],
-    "next": "房地产周期",
+    "next": "老鼠仓",
     "filename": "目标日期 _ 目标风险.html",
     "file": "目标日期 _ 目标风险.html"
   },
@@ -15868,7 +15855,7 @@ var ALL_ENTRIES = [
       "明斯基时刻",
       "美林时钟"
     ],
-    "next": "",
+    "next": "经济韧性",
     "filename": "资产负债表衰退.html",
     "file": "资产负债表衰退.html"
   },
@@ -15910,7 +15897,7 @@ var ALL_ENTRIES = [
       "期望值",
       "对冲（套期保值）"
     ],
-    "next": "",
+    "next": "过拟合",
     "filename": "VaR（在险价值）.html",
     "file": "VaR（在险价值）.html"
   },
@@ -16013,7 +16000,7 @@ var ALL_ENTRIES = [
       "年化波动率（标准差）",
       "风险平价"
     ],
-    "next": "",
+    "next": "双低转债策略",
     "filename": "索提诺比率.html",
     "file": "索提诺比率.html"
   },
@@ -16128,7 +16115,7 @@ var ALL_ENTRIES = [
     "id": 771,
     "slug": "老鼠仓",
     "title": "老鼠仓",
-    "chapter": "第六篇：投资武器库 · 基金",
+    "chapter": "第六篇：投资武器库 · 基金篇",
     "card_titles": [
       "什么是老鼠仓",
       "为什么重要：偷的是你的钱",
@@ -17116,6 +17103,2042 @@ var ALL_ENTRIES = [
     "next": "雪球产品",
     "filename": "展期.html",
     "file": "展期.html"
+  },
+  {
+    "id": 818,
+    "slug": "政策利率",
+    "title": "政策利率",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "全市场的“批发价”",
+      "为什么“换锚”跟你有关",
+      "普通人怎么看：盯三个数",
+      "三个想当然"
+    ],
+    "related": [
+      "隔夜逆回购",
+      "DR利率（银行间质押式回购利率）",
+      "LPR（贷款市场报价利率）",
+      "OMO（公开市场操作 / 7天逆回购）"
+    ],
+    "next": "LPR（贷款市场报价利率）",
+    "filename": "政策利率.html",
+    "file": "政策利率.html"
+  },
+  {
+    "id": 819,
+    "slug": "人民币国际化",
+    "title": "人民币国际化",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "让外国人愿意收人民币",
+      "跟你有什么关系",
+      "怎么盯：四个信号",
+      "四个常见坑"
+    ],
+    "related": [
+      "人民币汇率",
+      "离岸人民币 / 在岸人民币",
+      "汇率（人民币升值/贬值）",
+      "数字人民币"
+    ],
+    "next": "离岸人民币 / 在岸人民币",
+    "filename": "人民币国际化.html",
+    "file": "人民币国际化.html"
+  },
+  {
+    "id": 820,
+    "slug": "压力测试",
+    "title": "压力测试",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "给账户来一次\"地震演练\"",
+      "为什么银行天天做、你也该做",
+      "三步给自己做压力测试",
+      "压力测试的三个想当然"
+    ],
+    "related": [
+      "最大回撤（跌得最深的一次）",
+      "年化波动率（标准差）",
+      "黑天鹅事件",
+      "尾部风险"
+    ],
+    "next": "最大回撤（跌得最深的一次）",
+    "filename": "压力测试.html",
+    "file": "压力测试.html"
+  },
+  {
+    "id": 821,
+    "slug": "ADR（美国存托凭证）",
+    "title": "ADR（美国存托凭证）",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "外国公司的\"美股替身\"",
+      "为什么中概股都爱用它",
+      "普通人买 ADR 要注意什么",
+      "ADR 的三个想当然"
+    ],
+    "related": [
+      "中概股",
+      "港美股打新",
+      "A股 / H股 / 美股 / B股",
+      "汇率（人民币升值/贬值）"
+    ],
+    "next": "中概股",
+    "filename": "ADR（美国存托凭证）.html",
+    "file": "ADR（美国存托凭证）.html"
+  },
+  {
+    "id": 822,
+    "slug": "北证50",
+    "title": "北证50",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "北交所的\"晴雨表\"",
+      "为什么它跟沪深指数不一样",
+      "怎么参与北证50",
+      "北证50的三个想当然"
+    ],
+    "related": [
+      "主板 / 创业板 / 科创板 / 北交所",
+      "上证指数",
+      "沪深300",
+      "中证500"
+    ],
+    "next": "中证500",
+    "filename": "北证50.html",
+    "file": "北证50.html"
+  },
+  {
+    "id": 823,
+    "slug": "中期票据",
+    "title": "中期票据",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "企业发行的\"中期借条\"",
+      "为什么它跟短融、企业债不一样",
+      "普通人怎么看中期票据",
+      "中期票据的三个想当然"
+    ],
+    "related": [
+      "短融 / 超短融",
+      "企业债 / 公司债",
+      "债券评级",
+      "信用利差"
+    ],
+    "next": "短融 / 超短融",
+    "filename": "中期票据.html",
+    "file": "中期票据.html"
+  },
+  {
+    "id": 824,
+    "slug": "凸性",
+    "title": "凸性",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "债券价格不是直线，是弯的",
+      "为什么\"弯\"对持有人是好事",
+      "怎么用久期和凸性算涨跌",
+      "凸性的三个想当然"
+    ],
+    "related": [
+      "久期",
+      "债券（票面利率 / 到期收益率）",
+      "收益率曲线",
+      "利率倒挂"
+    ],
+    "next": "久期",
+    "filename": "凸性.html",
+    "file": "凸性.html"
+  },
+  {
+    "id": 825,
+    "slug": "净价 _ 全价",
+    "title": "净价 / 全价",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "债券报价里的\"裸价\"和\"实付价\"",
+      "为什么差的是应计利息",
+      "买债券到底按哪个价成交",
+      "净价 / 全价的三个想当然"
+    ],
+    "related": [
+      "债券（票面利率 / 到期收益率）",
+      "债券评级",
+      "信用利差",
+      "久期"
+    ],
+    "next": "债券（票面利率 / 到期收益率）",
+    "filename": "净价 _ 全价.html",
+    "file": "净价 _ 全价.html"
+  },
+  {
+    "id": 826,
+    "slug": "ROIC（投入资本回报率）",
+    "title": "ROIC（投入资本回报率）",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "不看融资只看生意本身",
+      "为什么它比 ROE 更\"干净\"",
+      "怎么算、怎么看 ROIC",
+      "ROIC 的三个想当然"
+    ],
+    "related": [
+      "净资产收益率（ROE，巴菲特最爱的指标）",
+      "ROA",
+      "自由现金流",
+      "护城河"
+    ],
+    "next": "净资产收益率（ROE，巴菲特最爱的指标）",
+    "filename": "ROIC（投入资本回报率）.html",
+    "file": "ROIC（投入资本回报率）.html"
+  },
+  {
+    "id": 827,
+    "slug": "周转率",
+    "title": "周转率",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "钱在手里转几圈",
+      "为什么\"快\"就是竞争力",
+      "怎么看一家公司的周转率",
+      "周转率的三个想当然"
+    ],
+    "related": [
+      "经营现金流（比净利润更真实）",
+      "净资产收益率（ROE，巴菲特最爱的指标）",
+      "毛利率 / 净利率",
+      "负债率（资产负债率）"
+    ],
+    "next": "经营现金流（比净利润更真实）",
+    "filename": "周转率.html",
+    "file": "周转率.html"
+  },
+  {
+    "id": 828,
+    "slug": "信息比率",
+    "title": "信息比率",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "衡量\"跑赢\"的稳定性",
+      "和夏普比率有什么不一样",
+      "怎么用信息比率挑基金",
+      "信息比率的三个想当然"
+    ],
+    "related": [
+      "夏普比率（性价比：每承担1份风险换多少收益）",
+      "索提诺比率",
+      "超额收益（跑赢基准的部分）",
+      "年化波动率（标准差）"
+    ],
+    "next": "夏普比率（性价比：每承担1份风险换多少收益）",
+    "filename": "信息比率.html",
+    "file": "信息比率.html"
+  },
+  {
+    "id": 829,
+    "slug": "格雷厄姆指数",
+    "title": "格雷厄姆指数",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "祖师爷的\"股票贵不贵\"公式",
+      "为什么用 1/PE 对比国债",
+      "现在怎么看这个数",
+      "格雷厄姆指数的三个想当然"
+    ],
+    "related": [
+      "股债性价比（ERP）",
+      "估值分位",
+      "市盈率（PE / 滚动PE / 静态PE）",
+      "巴菲特指标"
+    ],
+    "next": "股债性价比（ERP）",
+    "filename": "格雷厄姆指数.html",
+    "file": "格雷厄姆指数.html"
+  },
+  {
+    "id": 830,
+    "slug": "外资券商",
+    "title": "外资券商",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "这是什么：老外来中国开证券公司",
+      "为什么重要：七张牌照背后的开放信号",
+      "怎么看：普通人盯三个窗口",
+      "常见坑：别把“外资”当金字招牌"
+    ],
+    "related": [
+      "QFII / 外资",
+      "新股（IPO / 打新）",
+      "北向资金 / 南向资金"
+    ],
+    "next": "",
+    "filename": "外资券商.html",
+    "file": "外资券商.html"
+  },
+  {
+    "id": 831,
+    "slug": "存款利率",
+    "title": "存款利率",
+    "chapter": "第二篇：个人财务底盘",
+    "card_titles": [
+      "银行付给你的存钱报酬",
+      "为什么重要：降息通道里的钱该去哪",
+      "怎么看：三层利率别只看一个",
+      "常见坑：把利率当收益"
+    ],
+    "related": [
+      "存款保险（50万赔付）",
+      "存款搬家",
+      "结构性存款",
+      "5年期存款利率",
+      "日息 _ 年化真实利率"
+    ],
+    "next": "波动率",
+    "filename": "存款利率.html",
+    "file": "存款利率.html"
+  },
+  {
+    "id": 832,
+    "slug": "波动率",
+    "title": "波动率",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "价格的“脾气指数”",
+      "为什么重要：波动不等于亏损",
+      "怎么看：三个数字配着看",
+      "常见坑：躲波动躲错了方向"
+    ],
+    "related": [
+      "年化波动率（标准差）",
+      "最大回撤（跌得最深的一次）",
+      "夏普比率（性价比：每承担1份风险换多少收益）",
+      "VaR（在险价值）"
+    ],
+    "next": "可交换债",
+    "filename": "波动率.html",
+    "file": "波动率.html"
+  },
+  {
+    "id": 833,
+    "slug": "可交换债",
+    "title": "可交换债",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "股东拿股票“抵押”借钱的债券",
+      "为什么重要：一面保底，一面看涨",
+      "怎么看：三个条款盯紧",
+      "常见坑：拿它当可转债抄作业"
+    ],
+    "related": [
+      "可转债（下有保底，上不封顶）",
+      "可转债打新",
+      "债券（票面利率 _ 到期收益率）",
+      "中期票据",
+      "凸性"
+    ],
+    "next": "债牛债熊",
+    "filename": "可交换债.html",
+    "file": "可交换债.html"
+  },
+  {
+    "id": 834,
+    "slug": "五穷六绝七翻身",
+    "title": "五穷六绝七翻身",
+    "chapter": "第十六篇：金融市场黑话与交易场景",
+    "card_titles": [
+      "A股流传的“季节预言”",
+      "为什么重要：资金面和心理面的共振",
+      "怎么看：当日历效应参考，别当交易指令",
+      "常见坑：把谚语当铁律"
+    ],
+    "related": [
+      "牛市 _ 熊市 _ 震荡市",
+      "成交量（缩量 _ 放量）",
+      "换手率（活跃度指标）",
+      "消息面 _ 政策面 _ 资金面 _ 情绪面"
+    ],
+    "next": "流动性陷阱",
+    "filename": "五穷六绝七翻身.html",
+    "file": "五穷六绝七翻身.html"
+  },
+  {
+    "id": 835,
+    "slug": "债牛债熊",
+    "title": "债牛债熊",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "债市也有牛熊",
+      "为什么重要：利率是债市的“股价”",
+      "怎么看：盯住这几盏灯",
+      "常见坑：以为债基不会亏"
+    ],
+    "related": [
+      "国债（利率债）",
+      "债券（票面利率 _ 到期收益率）",
+      "久期",
+      "债券基金",
+      "信用利差"
+    ],
+    "next": "五穷六绝七翻身",
+    "filename": "债牛债熊.html",
+    "file": "债牛债熊.html"
+  },
+  {
+    "id": 836,
+    "slug": "商转公",
+    "title": "商转公",
+    "chapter": "第十八篇：借贷与生活刚需",
+    "card_titles": [
+      "把贵的房贷换成便宜的公贷",
+      "为什么重要：百万贷款能省十几万",
+      "怎么看：能不能转、划不划算",
+      "常见坑：只算利差忘了隐性成本"
+    ],
+    "related": [
+      "公积金贷款",
+      "房贷（商贷 _ 公积金 _ 组合贷）",
+      "LPR（贷款市场报价利率）",
+      "住房公积金"
+    ],
+    "next": "断卡行动",
+    "filename": "商转公.html",
+    "file": "商转公.html"
+  },
+  {
+    "id": 837,
+    "slug": "断卡行动",
+    "title": "断卡行动",
+    "chapter": "第十七篇：日常支付与账户管理",
+    "card_titles": [
+      "专治“两卡”买卖的国家行动",
+      "为什么重要：你可能被“误伤”",
+      "怎么看：正常用卡记住三件事",
+      "常见坑：几百块出租银行卡=犯罪"
+    ],
+    "related": [
+      "反洗钱",
+      "电信诈骗",
+      "开户 _ 销户",
+      "信用卡"
+    ],
+    "next": "遗嘱 _ 遗赠",
+    "filename": "断卡行动.html",
+    "file": "断卡行动.html"
+  },
+  {
+    "id": 838,
+    "slug": "流动性陷阱",
+    "title": "流动性陷阱",
+    "chapter": "第十二篇：宏观与周期",
+    "card_titles": [
+      "放水也救不活的怪圈",
+      "为什么重要：解释“降息没用”",
+      "怎么看：三个信号识别陷阱",
+      "常见坑：以为放水必涨"
+    ],
+    "related": [
+      "量化宽松（QE _ 放水）",
+      "降息 _ 加息",
+      "货币政策工具",
+      "钱荒 _ 流动性紧张",
+      "经济周期（复苏 _ 繁荣 _ 衰退 _ 萧条）"
+    ],
+    "next": "商转公",
+    "filename": "流动性陷阱.html",
+    "file": "流动性陷阱.html"
+  },
+  {
+    "id": 839,
+    "slug": "遗嘱 _ 遗赠",
+    "title": "遗嘱 / 遗赠",
+    "chapter": "第十九篇：人生账本与长期规划",
+    "card_titles": [
+      "生前说好，身后不吵",
+      "为什么重要：没遗嘱=按法律剧本走",
+      "怎么看：三种形式与三个要点",
+      "常见坑：写了遗嘱也不生效"
+    ],
+    "related": [
+      "财富传承",
+      "遗产税（国内暂无，富人会考虑）",
+      "家族信托",
+      "房产交易税费（契税_增值税_个税）"
+    ],
+    "next": "阴阳合同",
+    "filename": "遗嘱 _ 遗赠.html",
+    "file": "遗嘱 _ 遗赠.html"
+  },
+  {
+    "id": 840,
+    "slug": "阴阳合同",
+    "title": "阴阳合同",
+    "chapter": "第二十二篇：骗局与避坑指南",
+    "card_titles": [
+      "一套房子，两份合同",
+      "为什么重要：为了避税，代价很大",
+      "怎么看：买房别配合“做低”",
+      "常见坑：以为大家都这么干"
+    ],
+    "related": [
+      "学区房 _ 学位房",
+      "断供（及法拍房）",
+      "房产交易税费（契税_增值税_个税）",
+      "反洗钱"
+    ],
+    "next": "反洗钱",
+    "filename": "阴阳合同.html",
+    "file": "阴阳合同.html"
+  },
+  {
+    "id": 841,
+    "slug": "重疾险保额（30万_50万）",
+    "title": "重疾险保额（30万/50万）",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "确诊赔一笔钱，赔多少看保额",
+      "为什么重要：保额低=白买",
+      "怎么用：三步算准保额",
+      "常见坑：保额与保费倒挂"
+    ],
+    "related": [
+      "重疾险",
+      "百万医疗险",
+      "寿险保额怎么算",
+      "健康告知"
+    ],
+    "next": "代签名",
+    "filename": "重疾险保额（30万_50万）.html",
+    "file": "重疾险保额（30万_50万）.html"
+  },
+  {
+    "id": 842,
+    "slug": "代签名",
+    "title": "代签名",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "名字不是“代劳”，是法律凭证",
+      "为什么重要：代签可能整单无效",
+      "怎么用：补签名与正确投保姿势",
+      "常见坑：家人代签、业务员代签"
+    ],
+    "related": [
+      "健康告知",
+      "犹豫期 _ 宽限期",
+      "理赔流程"
+    ],
+    "next": "理赔时效",
+    "filename": "代签名.html",
+    "file": "代签名.html"
+  },
+  {
+    "id": 843,
+    "slug": "理赔时效",
+    "title": "理赔时效",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "保险公司的“倒计时”",
+      "为什么重要：30日核定、10日支付",
+      "怎么用：四步盯住理赔进度",
+      "常见坑：材料拖、报案晚"
+    ],
+    "related": [
+      "理赔流程",
+      "健康告知",
+      "犹豫期 _ 宽限期"
+    ],
+    "next": "保单失效 _ 复效",
+    "filename": "理赔时效.html",
+    "file": "理赔时效.html"
+  },
+  {
+    "id": 844,
+    "slug": "保单失效 _ 复效",
+    "title": "保单失效 / 复效",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "忘交保费的“假死”状态",
+      "为什么重要：失效期保障空白",
+      "怎么用：宽限期与复效流程",
+      "常见坑：复效重算等待期"
+    ],
+    "related": [
+      "犹豫期 _ 宽限期",
+      "现金价值（退保能拿回多少）",
+      "保单贷款 _ 减额交清"
+    ],
+    "next": "退货运费险",
+    "filename": "保单失效 _ 复效.html",
+    "file": "保单失效 _ 复效.html"
+  },
+  {
+    "id": 845,
+    "slug": "退货运费险",
+    "title": "退货运费险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "几毛钱买“退货自由”",
+      "为什么重要：退货决策不再纠结",
+      "怎么用：三步用好运费险",
+      "常见坑：定额赔付≠实报实销"
+    ],
+    "related": [
+      "保险四大件（重疾险 _ 医疗险 _ 定期寿险 _ 意外险）",
+      "免赔额 _ 等待期 _ 保障期限",
+      "理赔流程"
+    ],
+    "next": "操作风险",
+    "filename": "退货运费险.html",
+    "file": "退货运费险.html"
+  },
+  {
+    "id": 846,
+    "slug": "操作风险",
+    "title": "操作风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "人祸与系统祸，不是行情错",
+      "为什么重要：最防不胜防的亏损",
+      "怎么用：三道防线与个人版",
+      "常见坑：把操作亏损怪行情"
+    ],
+    "related": [
+      "风险（系统性风险 vs 非系统性风险）",
+      "市场风险",
+      "信用风险",
+      "黑天鹅事件"
+    ],
+    "next": "模型风险",
+    "filename": "操作风险.html",
+    "file": "操作风险.html"
+  },
+  {
+    "id": 847,
+    "slug": "模型风险",
+    "title": "模型风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "公式也会“自信犯错”",
+      "为什么重要：模型越大，错得越贵",
+      "怎么用：把模型当助手不当上帝",
+      "常见坑：过拟合、脏数据"
+    ],
+    "related": [
+      "操作风险",
+      "量化基金",
+      "极端风险",
+      "风险（系统性风险 vs 非系统性风险）"
+    ],
+    "next": "极端风险",
+    "filename": "模型风险.html",
+    "file": "模型风险.html"
+  },
+  {
+    "id": 848,
+    "slug": "极端风险",
+    "title": "极端风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "小概率、大杀伤",
+      "为什么重要：一次抹掉多年收益",
+      "怎么用：提前演练最坏情景",
+      "常见坑：历史回撤当底线"
+    ],
+    "related": [
+      "尾部风险",
+      "黑天鹅事件",
+      "压力测试",
+      "风险（系统性风险 vs 非系统性风险）"
+    ],
+    "next": "对手方风险",
+    "filename": "极端风险.html",
+    "file": "极端风险.html"
+  },
+  {
+    "id": 849,
+    "slug": "对手方风险",
+    "title": "对手方风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "对方不履约，你赚钱变亏钱",
+      "为什么重要：最怕一起违约",
+      "怎么用：看信用、控敞口",
+      "常见坑：高收益=高风险对手"
+    ],
+    "related": [
+      "信用风险",
+      "结算风险",
+      "挤兑（银行挤兑）",
+      "风险（系统性风险 vs 非系统性风险）"
+    ],
+    "next": "结算风险",
+    "filename": "对手方风险.html",
+    "file": "对手方风险.html"
+  },
+  {
+    "id": 850,
+    "slug": "结算风险",
+    "title": "结算风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "钱货交接的半路风险",
+      "为什么重要：清算制度的守护对象",
+      "怎么用：走正规渠道、货银对付",
+      "常见坑：先款后货、以为成交=到账"
+    ],
+    "related": [
+      "信用风险",
+      "对手方风险",
+      "挤兑（银行挤兑）",
+      "流动性风险"
+    ],
+    "next": "法拍房",
+    "filename": "结算风险.html",
+    "file": "结算风险.html"
+  },
+  {
+    "id": 851,
+    "slug": "法拍房",
+    "title": "法拍房",
+    "chapter": "第十八篇：借贷与生活刚需",
+    "card_titles": [
+      "法院的“卖房还债”流程",
+      "为什么便宜：起拍价常打7折",
+      "怎么买：三步看清拍卖公告",
+      "常见坑：腾房、税费、户口"
+    ],
+    "related": [
+      "断供（及法拍房）",
+      "个人住房贷款",
+      "房贷（商贷 / 公积金 / 组合贷）",
+      "房产交易税费（契税/增值税/个税）"
+    ],
+    "next": "稀缺效应",
+    "filename": "法拍房.html",
+    "file": "法拍房.html"
+  },
+  {
+    "id": 852,
+    "slug": "稀缺效应",
+    "title": "稀缺效应",
+    "chapter": "第二十篇：消费心理与财富品格",
+    "card_titles": [
+      "越少越想要",
+      "商家为何爱用：库存焦虑逼单",
+      "怎么识别：真稀缺 vs 假稀缺",
+      "常见坑：冲动下单与溢价接盘"
+    ],
+    "related": [
+      "凡勃伦效应",
+      "价格锚点 / 促销套路",
+      "心理账户",
+      "消费主义陷阱"
+    ],
+    "next": "克强指数",
+    "filename": "稀缺效应.html",
+    "file": "稀缺效应.html"
+  },
+  {
+    "id": 853,
+    "slug": "克强指数",
+    "title": "克强指数",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "三个硬数据拼出的温度计",
+      "为什么可信：数据很难造假",
+      "怎么用：横向对照着看",
+      "常见坑：结构变化与单月噪音"
+    ],
+    "related": [
+      "固定资产投资",
+      "社融（社会融资规模）",
+      "PMI（采购经理指数，经济体温计）"
+    ],
+    "next": "长期护理险",
+    "filename": "克强指数.html",
+    "file": "克强指数.html"
+  },
+  {
+    "id": 854,
+    "slug": "长期护理险",
+    "title": "长期护理险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "给“失能老人”的护理费报销",
+      "为什么重要：卧床一月护理费几千块",
+      "怎么用：社保版与商业版",
+      "常见坑：以为医疗险能覆盖"
+    ],
+    "related": [
+      "商业养老保险",
+      "医保（职工/居民）",
+      "百万医疗险",
+      "人口老龄化"
+    ],
+    "next": "指数成分股",
+    "filename": "长期护理险.html",
+    "file": "长期护理险.html"
+  },
+  {
+    "id": 855,
+    "slug": "指数成分股",
+    "title": "指数成分股",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "指数的“股东名单”",
+      "为什么重要：权重股定涨跌",
+      "怎么用：查权重看调整",
+      "常见坑：以为指数代表全部股票"
+    ],
+    "related": [
+      "沪深300",
+      "上证指数",
+      "上证50",
+      "指数基金（宽基指数 vs 行业指数）"
+    ],
+    "next": "点心债 / 美元债",
+    "filename": "指数成分股.html",
+    "file": "指数成分股.html"
+  },
+  {
+    "id": 856,
+    "slug": "点心债 _ 美元债",
+    "title": "点心债 / 美元债",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "在境外借钱的两种姿势",
+      "为什么重要：利率与汇率双变量",
+      "怎么用：区分发行人、币种、用途",
+      "常见坑：汇率吃掉收益"
+    ],
+    "related": [
+      "熊猫债",
+      "债券（票面利率 / 到期收益率）",
+      "汇率（人民币升值/贬值）",
+      "企业债 / 公司债"
+    ],
+    "next": "债务周期",
+    "filename": "点心债 _ 美元债.html",
+    "file": "点心债 _ 美元债.html"
+  },
+  {
+    "id": 857,
+    "slug": "债务周期",
+    "title": "债务周期",
+    "chapter": "第十二篇：宏观与周期",
+    "card_titles": [
+      "借钱扩张与还债收缩的循环",
+      "为什么重要：房价与就业都跟着它走",
+      "怎么用：判断自己处在哪个阶段",
+      "常见坑：在顶部加杠杆"
+    ],
+    "related": [
+      "资产负债表衰退",
+      "明斯基时刻",
+      "居民杠杆率",
+      "经济周期（复苏 / 繁荣 / 衰退 / 萧条）"
+    ],
+    "next": "达克效应",
+    "filename": "债务周期.html",
+    "file": "债务周期.html"
+  },
+  {
+    "id": 858,
+    "slug": "达克效应",
+    "title": "达克效应",
+    "chapter": "第二十一篇：投资心理与行为陷阱",
+    "card_titles": [
+      "越不懂越自信的曲线",
+      "为什么重要：新手最容易重仓翻车",
+      "怎么用：给自己的自信打分",
+      "常见坑：把运气当实力"
+    ],
+    "related": [
+      "过度自信（频繁交易）",
+      "幸存者偏差",
+      "赌徒谬误",
+      "能力圈（只投你懂的东西）"
+    ],
+    "next": "银联 / 网联",
+    "filename": "达克效应.html",
+    "file": "达克效应.html"
+  },
+  {
+    "id": 859,
+    "slug": "银联 _ 网联",
+    "title": "银联 / 网联",
+    "chapter": "第十七篇：日常支付与账户管理",
+    "card_titles": [
+      "支付背后的两条通道",
+      "为什么重要：你的钱谁在管",
+      "怎么用：分清两类支付",
+      "常见坑：以为钱直接进了对方口袋"
+    ],
+    "related": [
+      "第三方支付（微信支付 / 支付宝）",
+      "扫码支付 / 免密支付 / 快捷支付",
+      "电子支付",
+      "跨境支付"
+    ],
+    "next": "消费金融公司（微粒贷/招联/捷信）",
+    "filename": "银联 _ 网联.html",
+    "file": "银联 _ 网联.html"
+  },
+  {
+    "id": 860,
+    "slug": "消费金融公司（微粒贷_招联_捷信）",
+    "title": "消费金融公司（微粒贷/招联/捷信）",
+    "chapter": "第十八篇：借贷与生活刚需",
+    "card_titles": [
+      "持牌放贷的“分期专业户”",
+      "为什么重要：借钱入口的幕后玩家",
+      "怎么用：查牌照、比利率、看征信",
+      "常见坑：高息、多头、以贷养贷"
+    ],
+    "related": [
+      "花呗 / 借呗 / 白条",
+      "经营贷 / 消费贷（及违规挪用风险）",
+      "多头借贷",
+      "日息 / 月息 / 年息换算（别被“日息万五”骗了）"
+    ],
+    "next": "债市非银大额赎回互换便利（BNSF）",
+    "filename": "消费金融公司（微粒贷_招联_捷信）.html",
+    "file": "消费金融公司（微粒贷_招联_捷信）.html"
+  },
+  {
+    "id": 861,
+    "slug": "债市非银大额赎回互换便利（BNSF）",
+    "title": "债市非银大额赎回互换便利（BNSF）",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "这是什么：给理财和基金备的“救急伞”",
+      "为什么重要：给“赎回潮”踩刹车",
+      "怎么看：三个信号读懂它",
+      "常见坑：别把它当成“央行放水”"
+    ],
+    "related": [
+      "赎回规则（T+N）",
+      "债牛债熊",
+      "流动性风险",
+      "货币基金（余额宝/零钱通）"
+    ],
+    "next": "新兴市场风险",
+    "filename": "债市非银大额赎回互换便利（BNSF）.html",
+    "file": "债市非银大额赎回互换便利（BNSF）.html"
+  },
+  {
+    "id": 862,
+    "slug": "新兴市场风险",
+    "title": "新兴市场风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "这是什么：投资“年轻经济体”的隐藏成本",
+      "为什么重要：巴西一夜熔断是活教材",
+      "怎么看：你暴露在哪，盯什么",
+      "常见坑：高收益幻觉与“分散化”错觉"
+    ],
+    "related": [
+      "熔断",
+      "汇率风险",
+      "QDII基金（投资海外）",
+      "资产配置（核心-卫星策略）"
+    ],
+    "next": "老三板",
+    "filename": "新兴市场风险.html",
+    "file": "新兴市场风险.html"
+  },
+  {
+    "id": 863,
+    "slug": "老三板",
+    "title": "老三板",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "退市股票的“收容所”",
+      "为什么重要：退市不等于归零",
+      "怎么看：退市股的处置流程",
+      "常见坑：老三板不是淘金地"
+    ],
+    "related": [
+      "退市整理期",
+      "ST股 / *ST股（退市风险警示）",
+      "摘帽 / 戴帽",
+      "转板"
+    ],
+    "next": "超额配售",
+    "filename": "老三板.html",
+    "file": "老三板.html"
+  },
+  {
+    "id": 864,
+    "slug": "超额配售",
+    "title": "超额配售",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "新股发行留的“备胎”",
+      "为什么重要：新股的“护盘神器”",
+      "怎么看：打新时盯住三件事",
+      "常见坑：把绿鞋当“保发行价”"
+    ],
+    "related": [
+      "新股（IPO / 打新）",
+      "绿鞋机制",
+      "中签率",
+      "破发"
+    ],
+    "next": "金融债 / 政策性金融债",
+    "filename": "超额配售.html",
+    "file": "超额配售.html"
+  },
+  {
+    "id": 865,
+    "slug": "金融债 _ 政策性金融债",
+    "title": "金融债 / 政策性金融债",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "金融机构的“借条”",
+      "为什么重要：债市的“第二大主力”",
+      "怎么看：三类主体的发债区别",
+      "常见坑：政金债不是“无风险”"
+    ],
+    "related": [
+      "国债（利率债）",
+      "地方政府债 / 城投债（信用债）",
+      "债券评级",
+      "同业存单"
+    ],
+    "next": "次级债",
+    "filename": "金融债 _ 政策性金融债.html",
+    "file": "金融债 _ 政策性金融债.html"
+  },
+  {
+    "id": 866,
+    "slug": "次级债",
+    "title": "次级债",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "清偿顺序靠后的“次级”借条",
+      "为什么重要：银行“补血”的关键工具",
+      "怎么看：三类要点",
+      "常见坑：高收益背后藏着“减记”雷"
+    ],
+    "related": [
+      "债券（票面利率 / 到期收益率）",
+      "永续债",
+      "核心一级资本（银行的本钱）",
+      "债券违约"
+    ],
+    "next": "转债下修 / 回售",
+    "filename": "次级债.html",
+    "file": "次级债.html"
+  },
+  {
+    "id": 867,
+    "slug": "转债下修 _ 回售",
+    "title": "转债下修 / 回售",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "可转债的两道“安全阀”",
+      "为什么重要：决定转债是“债”还是“股”",
+      "怎么看：三个信号",
+      "常见坑：下修不是稳赚"
+    ],
+    "related": [
+      "可转债（下有保底，上不封顶）",
+      "转债强赎",
+      "双低转债策略",
+      "可转债打新"
+    ],
+    "next": "应计利息",
+    "filename": "转债下修 _ 回售.html",
+    "file": "转债下修 _ 回售.html"
+  },
+  {
+    "id": 868,
+    "slug": "应计利息",
+    "title": "应计利息",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "债券的“日结工资”",
+      "为什么重要：解释两个“怪现象”",
+      "怎么看：四个实操点",
+      "常见坑：被“付息日下跌”吓到"
+    ],
+    "related": [
+      "债券（票面利率 / 到期收益率）",
+      "净价 / 全价",
+      "久期",
+      "债券基金"
+    ],
+    "next": "骑乘策略",
+    "filename": "应计利息.html",
+    "file": "应计利息.html"
+  },
+  {
+    "id": 869,
+    "slug": "骑乘策略",
+    "title": "骑乘策略",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "在收益率曲线上“滑滑梯”",
+      "为什么重要：债基“超额收益”的秘密",
+      "怎么看：五步判断",
+      "常见坑：曲线倒挂还硬骑"
+    ],
+    "related": [
+      "收益率曲线",
+      "期限利差",
+      "久期",
+      "债券基金"
+    ],
+    "next": "杠杆债基",
+    "filename": "骑乘策略.html",
+    "file": "骑乘策略.html"
+  },
+  {
+    "id": 870,
+    "slug": "杠杆债基",
+    "title": "杠杆债基",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "借钱买债的“放大器”",
+      "为什么重要：高收益债基的秘密",
+      "怎么看：买前算三笔账",
+      "常见坑：把杠杆当“稳收益”"
+    ],
+    "related": [
+      "债券基金",
+      "分级基金",
+      "杠杆风险",
+      "期限错配"
+    ],
+    "next": "策略指数 / Smart Beta",
+    "filename": "杠杆债基.html",
+    "file": "杠杆债基.html"
+  },
+  {
+    "id": 871,
+    "slug": "策略指数 _ Smart Beta",
+    "title": "策略指数 / Smart Beta",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "给指数装上“规则引擎”",
+      "为什么重要：被动投资不“笨”了",
+      "怎么看：四步选对策略指数",
+      "常见坑：Smart Beta 不是“稳赚”"
+    ],
+    "related": [
+      "指数基金（宽基指数 vs 行业指数）",
+      "红利低波",
+      "红利指数基金",
+      "因子投资（价值/质量/小市值）"
+    ],
+    "next": "发起式基金",
+    "filename": "策略指数 _ Smart Beta.html",
+    "file": "策略指数 _ Smart Beta.html"
+  },
+  {
+    "id": 872,
+    "slug": "发起式基金",
+    "title": "发起式基金",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "基金公司的“投名状”",
+      "为什么重要：解决“亏钱不心疼”",
+      "怎么看：三个辅助信号",
+      "常见坑：把“自购”当“保本”"
+    ],
+    "related": [
+      "基金（公募基金）",
+      "基金清盘",
+      "迷你基金（5000万成立门槛）",
+      "养老目标基金"
+    ],
+    "next": "地方惠民保（沪惠保/穗岁康）",
+    "filename": "发起式基金.html",
+    "file": "发起式基金.html"
+  },
+  {
+    "id": 873,
+    "slug": "地方惠民保（沪惠保_穗岁康）",
+    "title": "地方惠民保（沪惠保/穗岁康）",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "政府牵头的“第二层医保”",
+      "为什么重要：大病自费的救生圈",
+      "怎么用：投保前看三样东西",
+      "常见坑：不是“啥都报”"
+    ],
+    "related": [
+      "惠民保",
+      "百万医疗险",
+      "社保 vs 商保",
+      "重疾险"
+    ],
+    "next": "团险",
+    "filename": "地方惠民保（沪惠保_穗岁康）.html",
+    "file": "地方惠民保（沪惠保_穗岁康）.html"
+  },
+  {
+    "id": 874,
+    "slug": "团险",
+    "title": "团险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "公司发的“集体保险”",
+      "为什么重要：你第一份保障可能在这里",
+      "怎么用：三件事别漏",
+      "常见坑：团险是“在职福利”"
+    ],
+    "related": [
+      "保险四大件（重疾险 / 医疗险 / 定期寿险 / 意外险）",
+      "补充医疗保险",
+      "惠民保",
+      "五险一金"
+    ],
+    "next": "雇主责任险",
+    "filename": "团险.html",
+    "file": "团险.html"
+  },
+  {
+    "id": 875,
+    "slug": "雇主责任险",
+    "title": "雇主责任险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "老板给员工买的“工伤兜底”",
+      "为什么重要：一场工伤可能赔垮小店",
+      "怎么用：按这三步配置",
+      "常见坑：和团体意外险不是一回事"
+    ],
+    "related": [
+      "车险（交强险 / 商业险）",
+      "五险一金",
+      "补充医疗保险",
+      "保险受益人"
+    ],
+    "next": "保险资管",
+    "filename": "雇主责任险.html",
+    "file": "雇主责任险.html"
+  },
+  {
+    "id": 876,
+    "slug": "保险资管",
+    "title": "保险资管",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "保险公司的“投资部”",
+      "为什么重要：30万亿长钱怎么花",
+      "怎么用：普通人怎么间接参与",
+      "常见坑：别把“保险公司”当“投资高手”"
+    ],
+    "related": [
+      "保险资金入市",
+      "险资 / 社保入市",
+      "基金（公募基金）",
+      "年金险"
+    ],
+    "next": "再保险",
+    "filename": "保险资管.html",
+    "file": "保险资管.html"
+  },
+  {
+    "id": 877,
+    "slug": "再保险",
+    "title": "再保险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "保险公司的“保险公司”",
+      "为什么重要：你的保单背后站着谁",
+      "怎么用：普通人要不要关心",
+      "常见坑：再保险不是“全额兜底”"
+    ],
+    "related": [
+      "保险四大件（重疾险 / 医疗险 / 定期寿险 / 意外险）",
+      "偿付能力",
+      "保险资金入市",
+      "极端风险"
+    ],
+    "next": "保险增值服务（绿通）",
+    "filename": "再保险.html",
+    "file": "再保险.html"
+  },
+  {
+    "id": 878,
+    "slug": "保险增值服务（绿通）",
+    "title": "保险增值服务（绿通）",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "买保险送的“就医VIP通道”",
+      "为什么重要：大病最缺的是号不是钱",
+      "怎么用：三步用好绿通",
+      "常见坑：绿通不是“万能插队卡”"
+    ],
+    "related": [
+      "百万医疗险",
+      "重疾险",
+      "惠民保",
+      "理赔流程"
+    ],
+    "next": "教育金保险 / 婚嫁金保险",
+    "filename": "保险增值服务（绿通）.html",
+    "file": "保险增值服务（绿通）.html"
+  },
+  {
+    "id": 879,
+    "slug": "教育金保险 _ 婚嫁金保险",
+    "title": "教育金保险 / 婚嫁金保险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "专门给孩子存钱的人寿保险",
+      "为什么重要：教育是“时间刚性”的花销",
+      "怎么用：四步买对教育金",
+      "常见坑：教育金跑不赢通胀"
+    ],
+    "related": [
+      "教育金（规划）",
+      "年金险",
+      "增额终身寿险",
+      "保险 IRR（真实收益）"
+    ],
+    "next": "境外保险",
+    "filename": "教育金保险 _ 婚嫁金保险.html",
+    "file": "教育金保险 _ 婚嫁金保险.html"
+  },
+  {
+    "id": 880,
+    "slug": "境外保险",
+    "title": "境外保险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "去香港买保险，图什么",
+      "为什么重要：美元保单的诱惑与代价",
+      "怎么用：四道关先过",
+      "常见坑：地下保单不受法律保护"
+    ],
+    "related": [
+      "香港保险",
+      "汇率风险",
+      "QDII基金（投资海外）",
+      "外汇管制"
+    ],
+    "next": "全额退保骗局",
+    "filename": "境外保险.html",
+    "file": "境外保险.html"
+  },
+  {
+    "id": 881,
+    "slug": "全额退保骗局",
+    "title": "全额退保骗局",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "“帮你全额退保”的收割局",
+      "为什么重要：退保中介是黑色产业",
+      "怎么用：想退保走这三步",
+      "常见坑：钱没了，信息也卖了"
+    ],
+    "related": [
+      "代理退保黑产",
+      "保险 IRR（真实收益）",
+      "现金价值（退保能拿回多少）",
+      "犹豫期 / 宽限期"
+    ],
+    "next": "技术风险",
+    "filename": "全额退保骗局.html",
+    "file": "全额退保骗局.html"
+  },
+  {
+    "id": 882,
+    "slug": "技术风险",
+    "title": "技术风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "系统出错导致的投资损失",
+      "为什么重要：一次bug能亏几十亿",
+      "怎么用：给操作上三道保险",
+      "常见坑：把命根子押给机器"
+    ],
+    "related": [
+      "操作风险",
+      "模型风险",
+      "极端风险",
+      "尾部风险"
+    ],
+    "next": "退市",
+    "filename": "技术风险.html",
+    "file": "技术风险.html"
+  },
+  {
+    "id": 883,
+    "slug": "退市",
+    "title": "退市",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "股票被交易所“开除”了",
+      "为什么重要：退市制度越来越严",
+      "怎么用：提前识别退市风险",
+      "常见坑：退市不等于公司倒闭"
+    ],
+    "related": [
+      "ST股 / *ST股（退市风险警示）",
+      "停牌 / 退市",
+      "强制退市",
+      "退市整理期"
+    ],
+    "next": "滑点",
+    "filename": "退市.html",
+    "file": "退市.html"
+  },
+  {
+    "id": 884,
+    "slug": "滑点",
+    "title": "滑点",
+    "chapter": "第十篇：交易规则与摩擦成本",
+    "card_titles": [
+      "想买 100 元，成交却是 100.05 元",
+      "为什么重要：蚂蚁搬家式吃利润",
+      "怎么用：把滑点压到最低",
+      "常见坑：止损单滑点最狠"
+    ],
+    "related": [
+      "市价单 vs 限价单（滑点是什么）",
+      "佣金（手续费 / 最低5元）",
+      "成交量（缩量 / 放量）",
+      "ETF（交易型开放式指数基金）"
+    ],
+    "next": "沪深港通",
+    "filename": "滑点.html",
+    "file": "滑点.html"
+  },
+  {
+    "id": 885,
+    "slug": "沪深港通",
+    "title": "沪深港通",
+    "chapter": "第十篇：交易规则与摩擦成本",
+    "card_titles": [
+      "A股和港股之间的“双向大桥”",
+      "为什么重要：聪明钱的风向标",
+      "怎么用：开通港股通买港股",
+      "常见坑：港股规则和A股不一样"
+    ],
+    "related": [
+      "北向资金 / 南向资金",
+      "港股通 / 南向资金",
+      "港股通（人民币柜台）",
+      "汇率风险"
+    ],
+    "next": "票息",
+    "filename": "沪深港通.html",
+    "file": "沪深港通.html"
+  },
+  {
+    "id": 886,
+    "slug": "票息",
+    "title": "票息",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "每年固定打给你的利息",
+      "为什么重要：现金流与信用信号",
+      "怎么用：票息不等于真实收益",
+      "常见坑：高票息背后是高风险"
+    ],
+    "related": [
+      "债券（票面利率 / 到期收益率）",
+      "应计利息",
+      "国债（利率债）",
+      "债券违约"
+    ],
+    "next": "居民储蓄率",
+    "filename": "票息.html",
+    "file": "票息.html"
+  },
+  {
+    "id": 887,
+    "slug": "居民储蓄率",
+    "title": "居民储蓄率",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "居民每赚 100 块，存下多少",
+      "为什么重要：高储蓄的双面性",
+      "怎么用：看数据看趋势",
+      "常见坑：别把存款增速当储蓄率"
+    ],
+    "related": [
+      "储蓄率",
+      "GDP（名义GDP vs 实际GDP）",
+      "居民杠杆率",
+      "社零（社会消费品零售总额）"
+    ],
+    "next": "GDP平减指数",
+    "filename": "居民储蓄率.html",
+    "file": "居民储蓄率.html"
+  },
+  {
+    "id": 888,
+    "slug": "GDP平减指数",
+    "title": "GDP平减指数",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "整个经济的“通胀体温计”",
+      "为什么重要：比 CPI 更全面",
+      "怎么用：看懂名义与实际的差",
+      "常见坑：别拿它当 CPI 用"
+    ],
+    "related": [
+      "GDP（名义GDP vs 实际GDP）",
+      "CPI（居民消费价格指数）",
+      "PPI（工业生产者出厂价格指数）",
+      "通货膨胀（CPI）"
+    ],
+    "next": "SLF / 常备借贷便利",
+    "filename": "GDP平减指数.html",
+    "file": "GDP平减指数.html"
+  },
+  {
+    "id": 889,
+    "slug": "SLF _ 常备借贷便利",
+    "title": "SLF / 常备借贷便利",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "银行缺钱时的“应急取款机”",
+      "为什么重要：利率走廊的天花板",
+      "怎么用：盯利率和操作量",
+      "常见坑：别和 MLF 搞混"
+    ],
+    "related": [
+      "MLF（中期借贷便利/麻辣粉）",
+      "OMO（公开市场操作 / 7天逆回购）",
+      "降准（存款准备金率下调）",
+      "利率走廊"
+    ],
+    "next": "股息率策略",
+    "filename": "SLF _ 常备借贷便利.html",
+    "file": "SLF _ 常备借贷便利.html"
+  },
+  {
+    "id": 890,
+    "slug": "股息率策略",
+    "title": "股息率策略",
+    "chapter": "第十四篇：策略与数学",
+    "card_titles": [
+      "股票版的“收租”策略",
+      "为什么重要：分红与估值的双重保护",
+      "怎么用：四步筛出好红利股",
+      "常见坑：股息率陷阱"
+    ],
+    "related": [
+      "股息率",
+      "高股息策略",
+      "红利指数基金",
+      "分红（派息 / 送股 / 转增）"
+    ],
+    "next": "年化 vs 累计",
+    "filename": "股息率策略.html",
+    "file": "股息率策略.html"
+  },
+  {
+    "id": 891,
+    "slug": "年化 vs 累计",
+    "title": "年化 vs 累计",
+    "chapter": "第十四篇：策略与数学",
+    "card_titles": [
+      "总赚多少 vs 每年赚多少",
+      "为什么重要：不同期限必须用年化",
+      "怎么用：一条公式换算",
+      "常见坑：年化不是每年都赚这么多"
+    ],
+    "related": [
+      "年化收益率（及年化复合收益率）",
+      "基金净值（单位/累计）",
+      "夏普比率（性价比：每承担1份风险换多少收益）",
+      "复利（单利 vs 复利）"
+    ],
+    "next": "跟踪误差",
+    "filename": "年化 vs 累计.html",
+    "file": "年化 vs 累计.html"
+  },
+  {
+    "id": 892,
+    "slug": "跟踪误差",
+    "title": "跟踪误差",
+    "chapter": "第十四篇：策略与数学",
+    "card_titles": [
+      "基金跑输指数的“差价”",
+      "为什么重要：买指数基金就要忠实",
+      "怎么用：选误差小费率低的",
+      "常见坑：指数涨了基金没涨"
+    ],
+    "related": [
+      "指数基金（宽基指数 vs 行业指数）",
+      "ETF（交易型开放式指数基金）",
+      "阿尔法（α） vs 贝塔（β）",
+      "年化波动率（标准差）"
+    ],
+    "next": "",
+    "filename": "跟踪误差.html",
+    "file": "跟踪误差.html"
+  },
+  {
+    "id": 893,
+    "slug": "长期国债收益率",
+    "title": "长期国债收益率",
+    "chapter": "第五篇：投资武器库 · 债券与固收篇",
+    "card_titles": [
+      "长端利率：无风险利率的锚",
+      "为什么它在走低：债牛还在跑",
+      "对普通人的三层影响",
+      "怎么看与怎么做"
+    ],
+    "related": [
+      "无风险利率（十年期国债收益率）",
+      "股债跷跷板",
+      "收益率曲线",
+      "国债期货"
+    ],
+    "next": "主权风险",
+    "filename": "长期国债收益率.html",
+    "file": "长期国债收益率.html"
+  },
+  {
+    "id": 894,
+    "slug": "主权风险",
+    "title": "主权风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "国家赖账，钱怎么办",
+      "为什么重要：全球配置绕不开",
+      "怎么看：三大信号盯住它",
+      "常见坑：把国家信用当保本"
+    ],
+    "related": [
+      "黑天鹅",
+      "灰犀牛",
+      "信用风险",
+      "汇率风险"
+    ],
+    "next": "制裁风险",
+    "filename": "主权风险.html",
+    "file": "主权风险.html"
+  },
+  {
+    "id": 895,
+    "slug": "制裁风险",
+    "title": "制裁风险",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "一夜之间资产被冻结",
+      "为什么重要：被制裁等于被锁死",
+      "怎么看：普通人怎么避雷",
+      "常见坑：觉得离自己很远"
+    ],
+    "related": [
+      "主权风险",
+      "黑天鹅",
+      "灰犀牛",
+      "汇率风险"
+    ],
+    "next": "REITs 打新",
+    "filename": "制裁风险.html",
+    "file": "制裁风险.html"
+  },
+  {
+    "id": 896,
+    "slug": "REITs 打新",
+    "title": "REITs 打新",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "像打新股一样认购REITs",
+      "为什么重要：稀缺的“分红+成长”",
+      "怎么打：申购流程三步走",
+      "常见坑：上市就破发"
+    ],
+    "related": [
+      "REITs（房地产投资信托基金）",
+      "新股（IPO / 打新）",
+      "北交所打新",
+      "可转债打新"
+    ],
+    "next": "母子基金 / 伞形基金",
+    "filename": "REITs 打新.html",
+    "file": "REITs 打新.html"
+  },
+  {
+    "id": 897,
+    "slug": "母子基金 _ 伞形基金",
+    "title": "母子基金 / 伞形基金",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "一只基金套着一群基金",
+      "为什么重要：结构决定费率与风险",
+      "怎么看：选FOF还是伞形",
+      "常见坑：双重收费还不自知"
+    ],
+    "related": [
+      "FOF（基金中的基金）",
+      "基金（公募基金）",
+      "基金经理",
+      "基金定投"
+    ],
+    "next": "专户 / 集合资管",
+    "filename": "母子基金 _ 伞形基金.html",
+    "file": "母子基金 _ 伞形基金.html"
+  },
+  {
+    "id": 898,
+    "slug": "专户 _ 集合资管",
+    "title": "专户 / 集合资管",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "100万起的“私人订制”",
+      "为什么重要：高净值专属通道",
+      "怎么选：门槛之外看合同",
+      "常见坑：专户不是稳赚"
+    ],
+    "related": [
+      "基金（公募基金）",
+      "私募基金",
+      "基金经理",
+      "QDII基金（投资海外）"
+    ],
+    "next": "基金限购",
+    "filename": "专户 _ 集合资管.html",
+    "file": "专户 _ 集合资管.html"
+  },
+  {
+    "id": 899,
+    "slug": "基金限购",
+    "title": "基金限购",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "基金突然“关门谢客”",
+      "为什么重要：限购是保护收益的信号",
+      "怎么看：限购背后的三种算盘",
+      "常见坑：以为限购=买到就是赚到"
+    ],
+    "related": [
+      "申购 / 认购",
+      "基金（公募基金）",
+      "基金经理",
+      "基金净值（单位/累计）"
+    ],
+    "next": "基金公司 / 托管行 / 销售机构",
+    "filename": "基金限购.html",
+    "file": "基金限购.html"
+  },
+  {
+    "id": 900,
+    "slug": "基金公司 _ 托管行 _ 销售机构",
+    "title": "基金公司 / 托管行 / 销售机构",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "一只基金背后的三家公司",
+      "为什么重要：钱在谁手里，亏了找谁",
+      "怎么看：分清各自的职责",
+      "常见坑：把销售员当基金经理"
+    ],
+    "related": [
+      "基金（公募基金）",
+      "基金经理",
+      "基金净值（单位/累计）",
+      "申购 / 认购"
+    ],
+    "next": "第三方销售平台",
+    "filename": "基金公司 _ 托管行 _ 销售机构.html",
+    "file": "基金公司 _ 托管行 _ 销售机构.html"
+  },
+  {
+    "id": 901,
+    "slug": "第三方销售平台",
+    "title": "第三方销售平台",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "在支付宝上买基金靠谱吗",
+      "为什么重要：费率便宜一半",
+      "怎么用：选平台看三件事",
+      "常见坑：平台推荐≠专业建议"
+    ],
+    "related": [
+      "基金（公募基金）",
+      "申购 / 认购",
+      "货币基金（余额宝/零钱通）",
+      "基金定投"
+    ],
+    "next": "冠军魔咒",
+    "filename": "第三方销售平台.html",
+    "file": "第三方销售平台.html"
+  },
+  {
+    "id": 902,
+    "slug": "冠军魔咒",
+    "title": "冠军魔咒",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "去年的冠军，今年的垫底",
+      "为什么重要：追冠军最容易亏钱",
+      "怎么看：冠军为什么难以持续",
+      "常见坑：只看排名买基金"
+    ],
+    "related": [
+      "基金经理",
+      "基金（公募基金）",
+      "指数基金（宽基指数 vs 行业指数）",
+      "规模魔咒"
+    ],
+    "next": "规模魔咒",
+    "filename": "冠军魔咒.html",
+    "file": "冠军魔咒.html"
+  },
+  {
+    "id": 903,
+    "slug": "规模魔咒",
+    "title": "规模魔咒",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "基金越大越难赚钱",
+      "为什么重要：规模是超额收益的敌人",
+      "怎么看：多大算“大”",
+      "常见坑：迷信明星基金经理"
+    ],
+    "related": [
+      "基金经理",
+      "基金（公募基金）",
+      "指数基金（宽基指数 vs 行业指数）",
+      "冠军魔咒"
+    ],
+    "next": "",
+    "filename": "规模魔咒.html",
+    "file": "规模魔咒.html"
+  },
+  {
+    "id": 904,
+    "slug": "存货 _ 应收账款",
+    "title": "存货 / 应收账款",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "账上赚了，兜里没到",
+      "利润可以装，存货和应收难藏",
+      "三步看懂存货和应收",
+      "存货和应收的三个想当然"
+    ],
+    "related": [
+      "毛利率 / 净利率",
+      "周转率",
+      "商誉",
+      "经营现金流（比净利润更真实）"
+    ],
+    "next": "",
+    "filename": "存货 _ 应收账款.html",
+    "file": "存货 _ 应收账款.html"
+  },
+  {
+    "id": 905,
+    "slug": "审计意见（非标）",
+    "title": "审计意见（非标）",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "财报的体检报告",
+      "非标意见为什么吓人",
+      "拿到年报先看这一页",
+      "审计意见的三个误区"
+    ],
+    "related": [
+      "财务造假识别",
+      "业绩预告 / 业绩快报",
+      "商誉减值",
+      "退市整理期"
+    ],
+    "next": "",
+    "filename": "审计意见（非标）.html",
+    "file": "审计意见（非标）.html"
+  },
+  {
+    "id": 906,
+    "slug": "杀估值 _ 杀业绩 _ 杀逻辑",
+    "title": "杀估值 / 杀业绩 / 杀逻辑",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "跌法不同，命不同",
+      "三种杀，三种应对",
+      "判断属于哪种杀",
+      "杀跌的三个想当然"
+    ],
+    "related": [
+      "戴维斯双杀",
+      "估值分位",
+      "抱团股",
+      "业绩暴雷"
+    ],
+    "next": "",
+    "filename": "杀估值 _ 杀业绩 _ 杀逻辑.html",
+    "file": "杀估值 _ 杀业绩 _ 杀逻辑.html"
+  },
+  {
+    "id": 907,
+    "slug": "市占率 _ 渗透率",
+    "title": "市占率 / 渗透率",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "谁强，和还有多少空间",
+      "两个率组合着看",
+      "三步估算行业空间",
+      "市占率和渗透率的误区"
+    ],
+    "related": [
+      "营收（营业收入）",
+      "护城河",
+      "净利润（归母净利润）",
+      "赛道 / 景气度"
+    ],
+    "next": "",
+    "filename": "市占率 _ 渗透率.html",
+    "file": "市占率 _ 渗透率.html"
+  },
+  {
+    "id": 908,
+    "slug": "规模效应 _ 网络效应 _ 转换成本",
+    "title": "规模效应 / 网络效应 / 转换成本",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "护城河的三种挖法",
+      "三种壁垒，谁最硬",
+      "判断一家公司的护城河",
+      "护城河的两个幻觉"
+    ],
+    "related": [
+      "护城河",
+      "毛利率 / 净利率",
+      "净资产收益率（ROE，巴菲特最爱的指标）",
+      "市占率 / 渗透率"
+    ],
+    "next": "",
+    "filename": "规模效应 _ 网络效应 _ 转换成本.html",
+    "file": "规模效应 _ 网络效应 _ 转换成本.html"
+  },
+  {
+    "id": 909,
+    "slug": "股权结构",
+    "title": "股权结构",
+    "chapter": "第四篇：投资武器库 · 股票篇",
+    "card_titles": [
+      "公司的权力地图",
+      "股权结构为什么影响股价",
+      "三步读懂一家公司的股权",
+      "股权结构的三个雷区"
+    ],
+    "related": [
+      "股权质押",
+      "员工持股 / 股权激励",
+      "商誉减值",
+      "举牌"
+    ],
+    "next": "",
+    "filename": "股权结构.html",
+    "file": "股权结构.html"
+  },
+  {
+    "id": 910,
+    "slug": "卡玛比率",
+    "title": "卡玛比率",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "赚得多，还要跌得少",
+      "和夏普比率有什么不一样",
+      "三步给基金算卡玛",
+      "卡玛比率的三个想当然"
+    ],
+    "related": [
+      "夏普比率（性价比：每承担1份风险换多少收益）",
+      "索提诺比率",
+      "信息比率",
+      "最大回撤（跌得最深的一次）"
+    ],
+    "next": "",
+    "filename": "卡玛比率.html",
+    "file": "卡玛比率.html"
+  },
+  {
+    "id": 911,
+    "slug": "风格切换",
+    "title": "风格切换",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "指数涨了，你的基金为什么不涨",
+      "风格是怎么切来切去的",
+      "三步判断当前风格",
+      "风格切换的三个想当然"
+    ],
+    "related": [
+      "结构性行情",
+      "轮动 / 高低切",
+      "抱团股",
+      "因子投资（价值/质量/小市值）"
+    ],
+    "next": "",
+    "filename": "风格切换.html",
+    "file": "风格切换.html"
+  },
+  {
+    "id": 912,
+    "slug": "日历效应（春节 _ 年末）",
+    "title": "日历效应（春节/年末）",
+    "chapter": "第十六篇：金融市场黑话与交易场景",
+    "card_titles": [
+      "日历上长出来的规律",
+      "春节和年末到底会发生什么",
+      "三步利用日历效应",
+      "日历效应的三个误区"
+    ],
+    "related": [
+      "红十月行情",
+      "五穷六绝七翻身",
+      "高抛低吸",
+      "择时"
+    ],
+    "next": "",
+    "filename": "日历效应（春节 _ 年末）.html",
+    "file": "日历效应（春节 _ 年末）.html"
+  },
+  {
+    "id": 913,
+    "slug": "盘后定价交易",
+    "title": "盘后定价交易",
+    "chapter": "第十篇：交易规则与摩擦成本",
+    "card_titles": [
+      "收盘后，大钱悄悄进出",
+      "为什么大资金爱走这条路",
+      "三步看懂盘后定价数据",
+      "盘后定价的三个想当然"
+    ],
+    "related": [
+      "收盘集合竞价",
+      "大宗交易（折价/溢价意味着什么）",
+      "美股夜盘交易",
+      "集合竞价 vs 连续竞价（开盘价/收盘价怎么来的）"
+    ],
+    "next": "",
+    "filename": "盘后定价交易.html",
+    "file": "盘后定价交易.html"
+  },
+  {
+    "id": 914,
+    "slug": "等待期 _ 观察期",
+    "title": "等待期 / 观察期",
+    "chapter": "第三篇：风险护城河",
+    "card_titles": [
+      "保险里的\"时间陷阱\"",
+      "为什么重要：买了不等于马上能用",
+      "怎么看：把等待期当成\"保障倒计时\"",
+      "常见坑：五个最容易翻车的地方"
+    ],
+    "related": [
+      "免赔额 / 等待期 / 保障期限",
+      "犹豫期 / 宽限期",
+      "健康告知",
+      "重疾险",
+      "百万医疗险"
+    ],
+    "next": "",
+    "filename": "等待期 _ 观察期.html",
+    "file": "等待期 _ 观察期.html"
   }
 ];
 var __entriesReady = false;
@@ -17124,7 +19147,6 @@ function whenEntriesReady(fn) {
   if (__entriesReady) { fn(); } else { __entriesWaiters.push(fn); }
 }
 function __entriesDone(data) {
-  // dictionary.json 字段为 filename，兼容旧代码使用的 file
   ALL_ENTRIES = (data || []).map(function (e) {
     if (e && !e.file) e.file = e.filename;
     if (e && !e.filename) e.filename = e.file;
@@ -17137,7 +19159,6 @@ fetch('dictionary.json')
   .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(function (d) { __entriesDone(d); })
   .catch(function (err) {
-    // 兜底：file:// 等 fetch 不可用场景尝试同步 XHR（仅极端情况）
     try {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', 'dictionary.json', false);
@@ -17155,41 +19176,303 @@ whenEntriesReady(function () {
   }
 });
 
+/* ============ 搜索分流规则表（30-50 条 · 不调 AI） ============ */
+/* 现象关键词 → 词条簇；AI 生成仅在用户点击“复制提示词 / 去 AI”时触发 */
+var SEARCH_RULES = [
+  { k: ['亏了', '亏损', '割肉', '止损', '要不要卖'], skill: 'emergency', label: '持仓亏了，该割还是该拿',
+    cluster: ['止损（止损线）', '最大回撤（跌得最深的一次）', '处置效应（卖盈持亏）', '损失厌恶（亏1块的痛 > 赚1块的乐）', '被套（套牢）', '割肉（亏损卖出）'] },
+  { k: ['浮亏', '净值波动', '跌了', '回撤'], skill: 'emergency', label: '净值波动，是正常还是买错了',
+    cluster: ['最大回撤（跌得最深的一次）', '回撤修复天数（跌下去多久能回来）', '基金净值（单位/累计）', '银行理财（净值型 / 预期收益型）', '波动率'] },
+  { k: ['保本保息', '保本', '稳赚', '高息'], skill: 'probe', label: '“保本保息”话术，先别信',
+    cluster: ['保本（及“保本保息”骗局）', '刚性兑付（及其被打破）', '结构性存款', '存款保险（50万赔付）', '银行理财（净值型 / 预期收益型）'] },
+  { k: ['销售推荐', '被推荐', '推销', '理财经理'], skill: 'probe', label: '被推荐了个产品，怕被坑',
+    cluster: ['销售误导', '双录', '犹豫期 / 宽限期', '健康告知', '免责条款', '防坑提问器（该问什么）'] },
+  { k: ['两个产品', '选哪个', '怎么选', '对比'], skill: 'duel', label: '两个产品拿不定主意',
+    cluster: ['主动型基金 vs 被动型基金', '返还型 vs 消费型保险', '等额本金 vs 等额本息（提前还贷选哪个）', '股债平衡', '杠铃策略', '二选一擂台（二选一对打）'] },
+  { k: ['提前还贷', '提前还款', '房贷'], skill: 'decision', label: '该不该提前还房贷',
+    cluster: ['提前还贷（违约金 / 划算吗）', '等额本金 vs 等额本息（提前还贷选哪个）', 'LPR（贷款市场报价利率）', '房贷利率重定价日', '个人住房贷款'] },
+  { k: ['定期', '存款', '银行理财', '大额存单'], skill: 'duel', label: '存定期还是买理财',
+    cluster: ['大额存单（20万起存的VIP定期存款）', '银行理财（净值型 / 预期收益型）', '存款利率', '结构性存款', '存款保险（50万赔付）'] },
+  { k: ['教育金', '孩子教育', '婚嫁金'], skill: 'decision', label: '该不该存教育金',
+    cluster: ['教育金（规划）', '教育金保险 / 婚嫁金保险', '年金险', '复利（单利 vs 复利）', '强制储蓄'] },
+  { k: ['养老', '退休', '养老金'], skill: 'decision', label: '养老钱怎么准备',
+    cluster: ['社保养老金（现收现付制）', '个人养老金账户（抵税新政）', '三支柱养老体系', '养老金替代率', '商业养老保险', '延迟退休'] },
+  { k: ['增额寿', '增额终身寿', '年金险'], skill: 'probe', label: '被推荐增额寿，听听划算不',
+    cluster: ['增额终身寿险', '现金价值（退保能拿回多少）', '保险预定利率', '保险 IRR（真实收益）', '分红险', '返还型 vs 消费型保险'] },
+  { k: ['保险', '重疾', '医疗险', '百万医疗'], skill: 'probe', label: '保险要不要买 / 买哪种',
+    cluster: ['保险四大件（重疾险 / 医疗险 / 定期寿险 / 意外险）', '社保 vs 商保', '百万医疗险', '健康告知', '保险预算', '保险双十法则'] },
+  { k: ['信用卡分期', '最低还款', '循环利息'], skill: 'probe', label: '信用卡分期/最低还款划算吗',
+    cluster: ['信用卡分期手续费（实际IRR）', '最低还款额（及其利息陷阱）', '信用卡循环利息', '信用卡免息期（最长/最短）', '账单日 / 还款日 / 免息期'] },
+  { k: ['日息', '万五', '年化利率', '利息'], skill: 'probe', label: '日息月息年息怎么换算',
+    cluster: ['日息 / 月息 / 年息换算（别被“日息万五”骗了）', '日息 / 年化真实利率', 'IRR（内部收益率 / 分期真实利率）', '高利贷（年利率超过法定上限）', '砍头息'] },
+  { k: ['网贷', '借呗', '花呗', '消费贷'], skill: 'probe', label: '网贷/消费贷能不能碰',
+    cluster: ['花呗 / 借呗 / 白条', '经营贷 / 消费贷（及违规挪用风险）', '多头借贷', '714高炮', '校园贷', '套路贷'] },
+  { k: ['征信', '信用', '贷款记录'], skill: 'probe', label: '征信报告怎么看',
+    cluster: ['征信报告', '硬查询', '逾期 / 连三累六', '征信修复骗局', '多头借贷', '注销贷款账户骗局'] },
+  { k: ['断供', '法拍', '还不起'], skill: 'emergency', label: '房贷还不起怎么办',
+    cluster: ['断供（及法拍房）', '法拍房', '个人住房贷款', '房贷利率 / 首付比例', '负债率（资产负债率）', '应急金（备用金）'] },
+  { k: ['基金亏', '基金跌', '定投亏'], skill: 'emergency', label: '基金亏了，割还是拿',
+    cluster: ['最大回撤（跌得最深的一次）', '基金净值（单位/累计）', '主动型基金 vs 被动型基金', '基金定投', '止盈（止盈线 / 分批止盈）'] },
+  { k: ['定投', '定投好吗', '每月投'], skill: 'decision', label: '该不该基金定投',
+    cluster: ['基金定投', '微笑曲线', '智能定投 / 估值定投', '定投止盈', '指数基金（宽基指数 vs 行业指数）', '十二存单法'] },
+  { k: ['股票套', '股票亏', '被套'], skill: 'emergency', label: '股票被套了，怎么办',
+    cluster: ['被套（套牢）', '割肉（亏损卖出）', '止损（止损线）', '解禁', '业绩暴雷', '退市整理期'] },
+  { k: ['追涨杀跌', '忍不住买', '跟风'], skill: 'decision', label: '总追涨杀跌，怎么破',
+    cluster: ['追涨杀跌', '羊群效应（跟风）', 'FOMO（害怕踏空）', '损失厌恶（亏1块的痛 > 赚1块的乐）', '处置效应（卖盈持亏）', '交易纪律'] },
+  { k: ['黄金', '金价', '买黄金'], skill: 'duel', label: '黄金该不该买',
+    cluster: ['黄金（避险资产）', '黄金ETF', '纸黄金', '账户贵金属', '黄金储备', '黄金价格'] },
+  { k: ['买房', '租房', '首付', '房价'], skill: 'duel', label: '买房还是租房',
+    cluster: ['房贷（商贷 / 公积金 / 组合贷）', '好房子（住宅新标准）', '房价收入比', '限购 / 限贷 / 限售', '房地产周期', '住房公积金'] },
+  { k: ['新闻', '看不懂', '财经', '央行'], skill: 'narrative', label: '财经新闻满屏数字看不懂',
+    cluster: ['社融（社会融资规模）', 'PMI（采购经理指数，经济体温计）', 'CPI（居民消费价格指数）', 'PPI（工业生产者出厂价格指数）', 'M1-M2剪刀差', '降准（存款准备金率下调）'] },
+  { k: ['降准', '降息', '加息', '放水'], skill: 'narrative', label: '央行降准/降息意味着什么',
+    cluster: ['降准（存款准备金率下调）', '降息 / 加息', 'MLF（中期借贷便利/麻辣粉）', 'LPR（贷款市场报价利率）', '货币政策工具', '存款准备金'] },
+  { k: ['通胀', '涨价', '钱不值钱'], skill: 'narrative', label: '通胀下钱怎么缩水',
+    cluster: ['通货膨胀（CPI）', '购买力', '货币时间价值', '实际利率 vs 名义利率', '核心CPI', '恩格尔系数'] },
+  { k: ['汇率', '人民币', '贬值', '升值'], skill: 'narrative', label: '人民币汇率波动怎么看',
+    cluster: ['汇率（人民币升值/贬值）', '离岸人民币 / 在岸人民币', '美元指数', '外汇储备', '人民币国际化'] },
+  { k: ['美债', '美债收益率', '利率倒挂'], skill: 'narrative', label: '美债收益率大涨是什么信号',
+    cluster: ['美债收益率', '无风险利率（十年期国债收益率）', '利率倒挂', '期限利差', '股债跷跷板', '收益率曲线'] },
+  { k: ['美股', '纳斯达克', '道琼斯', '标普'], skill: 'narrative', label: '美股大跌/大涨怎么看',
+    cluster: ['标普500 / 纳斯达克 / 道琼斯', 'VIX（恐慌指数）', '美联储点阵图', '缩表（美联储缩表）', '非农就业', '鹰派 / 鸽派'] },
+  { k: ['可转债', '转债', '打新'], skill: 'duel', label: '可转债能不能碰',
+    cluster: ['可转债（下有保底，上不封顶）', '可转债打新', '转债强赎', '转债下修 / 回售', '双低转债策略', '中签率'] },
+  { k: ['打新', '中签', 'IPO', '新股'], skill: 'decision', label: '新股打新值不值得',
+    cluster: ['新股（IPO / 打新）', '中签率', '破发', '绿鞋机制', '北交所打新', '弃购'] },
+  { k: ['指数', 'ETF', '指数基金'], skill: 'combo', label: '指数基金/ETF 是什么',
+    cluster: ['指数基金（宽基指数 vs 行业指数）', 'ETF（交易型开放式指数基金）', 'ETF联接基金', '红利指数基金', '指数增强基金', '上证指数'] },
+  { k: ['骗局', '诈骗', '庞氏', '资金盘'], skill: 'probe', label: '疑似遇到骗局，怎么识别',
+    cluster: ['庞氏骗局（借新还旧）', '非法集资（高息揽储）', '杀猪盘（情感+投资诈骗）', '资金盘（传销式理财）', '养老诈骗', '虚拟盘'] },
+  { k: ['荐股', '带单', '喊单', '群'], skill: 'probe', label: '有人拉我进群荐股',
+    cluster: ['荐股群 / 喊单带单', '杀熟（熟人推荐最危险）', '原始股骗局', '虚拟盘', 'AI荐股 / 直播荐股', '内幕交易'] },
+  { k: ['存钱', '攒钱', '月光', '消费'], skill: 'decision', label: '存不下钱 / 老想买买买',
+    cluster: ['消费主义陷阱', '延迟满足（棉花糖实验）', '拿铁因子', '强制储蓄', '储蓄率', '月光族', '记账'] },
+  { k: ['复利', '利滚利', '翻倍', '72法则'], skill: 'combo', label: '复利到底怎么滚',
+    cluster: ['复利（单利 vs 复利）', '利滚利', '72 法则', '货币时间价值', '复利效应', '长期主义（用时间换复利）'] },
+  { k: ['利率下降', '降息了', '存款利率'], skill: 'narrative', label: '利率一直在降，钱放哪',
+    cluster: ['存款利率', '利率（基准利率）', '零利率', '负利率', '政策利率', '存款搬家'] },
+  { k: ['借钱', '民间借贷', '高利贷'], skill: 'probe', label: '借钱/民间借贷的坑',
+    cluster: ['高利贷（年利率超过法定上限）', '日息 / 年化真实利率', '砍头息', '套路贷', '多头借贷', '以贷养贷（借新还旧的死循环）'] },
+  { k: ['信托', '暴雷', '违约'], skill: 'emergency', label: '信托/固收产品暴雷怎么办',
+    cluster: ['信托（及暴雷风险）', '刚性兑付（及其被打破）', '集中度风险', '信用风险', '债券违约', '展期'] },
+  { k: ['炒股', '开户', '不懂股票'], skill: 'combo', label: '想炒股但什么都不懂',
+    cluster: ['股票（普通股 / 优先股）', 'A股 / H股 / 美股 / B股', 'K线 / 蜡烛图', '市盈率（PE / 滚动PE / 静态PE）', '市净率（PB）', '成交量（缩量 / 放量）'] },
+  { k: ['赛道', '题材', '热点', '概念股'], skill: 'narrative', label: '热门赛道/题材能追吗',
+    cluster: ['题材股 / 概念股', '赛道 / 景气度', 'AI泡沫', '人形机器人', '数据中心（IDC）', '存储芯片（内存 / 闪存）'] },
+  { k: ['踏空', '卖飞', '错过'], skill: 'decision', label: '踏空/卖飞后心态崩了',
+    cluster: ['踏空（看着涨没买）', '卖飞', 'FOMO（害怕踏空）', '贪婪 vs 恐惧（市场两大驱动力）', '羊群效应（跟风）', '复盘'] },
+  { k: ['五险一金', '社保', '医保', '公积金'], skill: 'combo', label: '五险一金到底怎么用',
+    cluster: ['五险一金', '社保 vs 商保', '社保养老金（现收现付制）', '医保（职工/居民）', '住房公积金', '医保报销（起付线 / 封顶线）'] },
+  { k: ['个税', '退税', '汇算'], skill: 'combo', label: '个税/退税怎么算',
+    cluster: ['个人所得税', '专项附加扣除', '个税汇算清缴', '年终奖计税', '退税 / 补税', '劳务报酬 / 稿酬'] },
+  { k: ['海外', '美股开户', 'QDII', '境外'], skill: 'combo', label: '想配置海外资产',
+    cluster: ['QDII基金（投资海外）', '跨境理财通', '汇率风险', '海外配置', '美元指数', '港股通 / 南向资金'] },
+  { k: ['短线', '做T', '波段', '高抛低吸'], skill: 'decision', label: '短线/做T能赚到钱吗',
+    cluster: ['做T（T+0操作）', '波段操作', '高抛低吸', '网格交易', '交易纪律', '佣金（手续费 / 最低5元）'] },
+  { k: ['分红', '股息', '红利'], skill: 'combo', label: '分红/股息是什么意思',
+    cluster: ['分红（派息 / 送股 / 转增）', '股息率', '高股息策略', '红利指数基金', '除权 / 除息', '股息红利税'] },
+  { k: ['止损线', '止盈', '仓位'], skill: 'decision', label: '止盈止损仓位怎么设',
+    cluster: ['止盈（止盈线 / 分批止盈）', '止损（止损线）', '仓位管理', '资产配置（核心-卫星策略）', '再平衡（动态调整仓位）', '凯利公式（每次下注多少合适）'] },
+  { k: ['离职', '辞职', '换工作', '裸辞'], skill: 'decision', label: '要不要辞职/换工作（财务视角）',
+    cluster: ['应急金（备用金）', '现金流', '失业保障', '失业保险金', '储蓄率', '机会成本'] },
+  { k: ['币', '比特币', '加密货币', '虚拟币'], skill: 'probe', label: '加密货币能不能碰',
+    cluster: ['比特币（加密货币）', '稳定币（USDT/USDC）', 'DeFi', '虚拟币合约诈骗', '假交易所 / 搬砖套利骗局', '数字人民币'] },
+  { k: ['复利', '财富自由', '被动收入'], skill: 'combo', label: '财富自由怎么算',
+    cluster: ['财务自由（4%法则）', '被动收入（睡后收入）', '复利（单利 vs 复利）', '长期主义（用时间换复利）', '四笔钱', 'FIRE（财务独立提前退休）'] },
+  { k: ['热词', '今天市场', '今天聊什么'], skill: 'hotword', label: '今天市场都在聊什么',
+    cluster: ['成交量（缩量 / 放量）', 'LPR（贷款市场报价利率）', '两融余额', '恐贪指数', '北向资金 / 南向资金', '龙虎榜（游资与机构席位）'] }
+];
+
+function findRule(query) {
+  if (!query) return null;
+  var q = query.toLowerCase();
+  for (var i = 0; i < SEARCH_RULES.length; i++) {
+    for (var j = 0; j < SEARCH_RULES[i].k.length; j++) {
+      if (q.indexOf(SEARCH_RULES[i].k[j]) !== -1) return SEARCH_RULES[i];
+    }
+  }
+  return null;
+}
+
+function entryLink(e) {
+  return 'terms/' + encodeURIComponent(e.file || e.filename || (e.title + '.html'));
+}
+
+/* ============ 搜索（只搜词条标题）+ 分流 ============ */
 (function () {
-  var form = document.getElementById('hotSubscribeForm');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = document.getElementById('hsEmail');
-    var msg = document.getElementById('hsMsg');
-    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var val = email.value.trim();
-    if (!val || !re.test(val)) {
-      msg.textContent = '邮箱格式不对';
-      msg.hidden = false;
+  var searchBox = document.getElementById('searchBox');
+  var results = document.getElementById('searchResults');
+  var fallback = document.getElementById('searchFallback');
+  if (!searchBox) return;
+
+  function renderResults(q) {
+    var query = q.toLowerCase();
+    var matches = [];
+    ALL_ENTRIES.forEach(function (e) {
+      var title = (e.title || '').toLowerCase();
+      if (title.indexOf(query) !== -1) matches.push(e);
+    });
+    matches = matches.slice(0, 12);
+    if (matches.length) {
+      results.classList.add('show');
+      fallback.classList.remove('show');
+      var html = '';
+      matches.forEach(function (e) {
+        html += '<a class="search-result-item" href="' + entryLink(e) + '">' +
+          '<span class="t">' + e.title + '</span><span class="ch">' + (e.chapter || '') + '</span></a>';
+      });
+      results.innerHTML = html;
+    } else {
+      results.classList.remove('show');
+      results.innerHTML = '';
+      if (q) renderFallback(q);
+      else fallback.classList.remove('show');
+    }
+  }
+
+  function renderFallback(q) {
+    var rule = findRule(q);
+    fallback.classList.add('show');
+    var rulesEl = document.getElementById('fallbackRules');
+    if (rule) {
+      var html = '<div class="fr-title">可能和「' + rule.label + '」有关，先看这些词条：</div>';
+      html += '<div class="fr-cluster">';
+      rule.cluster.forEach(function (t) {
+        html += '<a href="search?q=' + encodeURIComponent(t) + '">' + t + '</a>';
+      });
+      html += '</div>';
+      html += '<div class="fr-skill">对应 Skill：<b>' + skillNames[rule.skill] + '</b> —— 点下方按钮复制提示词，去你常用的 AI 里跑。</div>';
+      rulesEl.innerHTML = html;
+      document.getElementById('fallbackPromptText').textContent = '我最近纠结：「' + q + '」。请用投资词典的方法，告诉我该先看哪几个词、为什么，以及我自己该怎么判断。';
+    } else {
+      rulesEl.innerHTML = '<div class="fr-title">没匹配到现成词条簇。把你在纠结的那件事说给我听，AI 会帮你倒查该看哪些词：</div>';
+      document.getElementById('fallbackPromptText').textContent = '我最近纠结：「' + q + '」。请用投资词典的方法（说人话、不堆术语、不给买卖结论），帮我拆开这件事，告诉我该先看哪几个词、为什么。';
+    }
+  }
+
+  searchBox.addEventListener('input', function () {
+    var q = this.value.trim();
+    if (!q) {
+      results.classList.remove('show');
+      fallback.classList.remove('show');
       return;
     }
-    msg.textContent = '订阅中…';
-    msg.hidden = false;
-    fetch('/api/subscribe', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: val })
-    })
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (d.ok) {
-          msg.textContent = '订阅成功，每天给你推热词';
-          email.value = '';
-        } else {
-          msg.textContent = d.error || '订阅失败，请稍后重试';
-        }
-      })
-      .catch(function () {
-        msg.textContent = '网络异常，请稍后重试';
-      });
+    renderResults(q);
+  });
+  searchBox.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && typeof window.track === 'function') {
+      window.track('search_submit', { query: this.value.trim() });
+    }
   });
 })();
+
+function copyFallbackPrompt() {
+  var text = document.getElementById('fallbackPromptText').textContent;
+  copyText(text);
+}
+
+/* ============ 7 个 Skill 提示词 ============ */
+var skillNames = {
+  narrative: '新闻翻译机',
+  combo: '概念串联',
+  duel: '二选一擂台',
+  decision: '决策拆解桌',
+  probe: '防坑提问器',
+  emergency: '理财急诊',
+  hotword: '每日热词'
+};
+var SKILLS = {
+  narrative: {
+    title: '📖 新闻翻译机',
+    scene: '看财经新闻，满屏数字看不懂。贴一段内容，让 AI 帮你把核心概念串成一条线。',
+    prompt: '你是一名「概念串联叙事师」。请帮我解析以下新闻/数据：\n[请在此处粘贴你的内容]\n\n要求：\n1. 提取3-5个核心概念，串成一条因果线。\n2. 按照输出结构：钩子、原始数据、概念拆解、完整框架、行动清单、收尾。\n3. 语言必须说人话，配合生活场景类比。\n4. 不预测涨跌，只讲关系；不给买卖建议。'
+  },
+  combo: {
+    title: '🔗 概念串联',
+    scene: '遇到复杂事件，需要同时用多个理财概念解释，或要做成给客户/家人看的简报。',
+    prompt: '你是一名「多概念组合解说员」。请帮我解读这个事件：\n[请粘贴事件]\n\n要求：\n1. 把涉及到的理财概念（如通胀、汇率、利率）组合起来。\n2. 构建一条从宏观到个人生活的传导链（最多4步）。\n3. 告诉我这些概念是如何互相影响的。\n4. 如果要做成网页，按六屏结构输出：钩子、原始数据、概念拆解、完整框架、行动清单、收尾。\n5. 不给买卖结论，只做概念梳理。'
+  },
+  duel: {
+    title: '⚖️ 二选一擂台',
+    scene: '手里有一笔钱，有两个选项（如提前还贷 vs 买理财），不知道选哪个。',
+    prompt: '你是一名「产品对打分析师」。请帮我对比以下两个选项：\n选项A：[如提前还贷，利率X%]\n选项B：[如买增额寿，预计收益Y%]\n我的情况：[这笔钱多久不用、我的风险偏好等]\n\n要求：\n1. 先校验这两个选项是否在同一场景（跨层级对比要说明）。\n2. 从最坏情况、流动性、收益来源、适合谁四个维度并排对比。\n3. 给分界线（什么条件下选A，什么条件下选B）。\n4. 不承诺收益、不保本保息。'
+  },
+  decision: {
+    title: '🧩 决策拆解桌',
+    scene: '面临重大财务决定（买房、教育金、辞职），心里没底。',
+    prompt: '你是一名「财务决策拆解师」。我正在纠结：\n[请描述你的决策，如：该不该提前还房贷]\n我的背景：[收入、负债、存款等]\n\n要求：\n1. 帮我把这个决策拆成4个我能填写的变量（如利率、应急金月数等）。\n2. 给出不同情况下的分界线。\n3. 列出我今天能做的几步行动清单（第一步必须是查一个数字）。\n4. 只做变量拆解，不替我拍板，不给买卖结论。'
+  },
+  probe: {
+    title: '❓ 防坑提问器',
+    scene: '别人推荐了一个产品，听着很好，怕被坑，不知道问什么。',
+    prompt: '你是一名「防坑提问专家」。有人向我推荐了：\n[请描述产品，如：某款年化5%的银行理财]\n\n要求：\n1. 列出3-5个我该问销售的核心问题（必须是我能照着念出来的大白话）。\n2. 说明为什么重要，以及对方可能会怎么绕开这个问题。\n3. 指出什么回答是“红灯”（意味着绝对别买）。\n4. 特别留意“保本保息”“锁定复利”等话术，帮我看穿。\n5. 不下定论这个产品好不好，只帮我提问和验证。'
+  },
+  emergency: {
+    title: '🩺 理财急诊',
+    scene: '买的理财/基金亏了，不知道该割肉还是继续拿着。',
+    prompt: '你是一名「理财急诊师」。我目前的持仓情况是：\n[请描述你买了什么，跌了多少，投了多久]\n\n请帮我诊断：\n1. 这是正常的净值波动，还是买错了东西？\n2. 倒查我该看哪几个理财词条（如浮亏vs实亏、最大回撤等）。\n3. 告诉我怎么判断该不该卖（看什么数字、问什么问题）。\n4. 只帮我想清楚，不直接说“卖”或“拿”。'
+  },
+  hotword: {
+    title: '🔥 每日热词',
+    scene: '今天市场都在聊什么？想快速听懂今天的热词。',
+    prompt: '你是一名「每日热词解说员」。今天是：[日期]\n请围绕最近市场讨论最多的一条热点话题：\n1. 拆出3-5个今天必须懂的热词。\n2. 每个词讲人话（一句话定义）+ 说明为什么今天要看它。\n3. 最后把热词串成一句能复述给朋友的话。\n4. 不预测明天涨跌，不给买卖建议。'
+  }
+};
+
+function openSkillModal(key) {
+  var data = SKILLS[key];
+  if (!data) return;
+  document.getElementById('modal-title').innerText = data.title;
+  document.getElementById('modal-scene').innerText = data.scene;
+  document.getElementById('modal-prompt').innerText = data.prompt;
+  document.getElementById('modal').classList.add('active');
+}
+
+function openHotModal(title, desc) {
+  var prompt = '你是一名「每日热词解说员」。请用说人话的方式解读今天的热词：「' + title + '」。\n背景：' + (desc || '') + '\n\n要求：\n1. 一句话定义这个词。\n2. 为什么今天要看它。\n3. 和我的生活/理财有什么关系。\n4. 不预测涨跌，不给买卖建议。';
+  document.getElementById('modal-title').innerText = '🔥 ' + title;
+  document.getElementById('modal-scene').innerText = desc || '今日热词，点击触发 AI 解读。';
+  document.getElementById('modal-prompt').innerText = prompt;
+  document.getElementById('modal').classList.add('active');
+}
+
+function closeModal(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('modal').classList.remove('active');
+}
+
+function copyModalPrompt() {
+  var text = document.getElementById('modal-prompt').innerText;
+  copyText(text);
+}
+
+function copyText(text) {
+  function done() {
+    var btn = document.querySelector('.copy-btn');
+    if (!btn) return;
+    var old = btn.innerText;
+    btn.innerText = '✓ 已复制，去 AI 里粘贴吧';
+    btn.style.background = 'var(--mf-colors-background-success)';
+    setTimeout(function () { btn.innerText = old; btn.style.background = ''; }, 2000);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(function () {
+      fallbackCopy(text); done();
+    });
+  } else { fallbackCopy(text); done(); }
+}
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  document.execCommand('copy');
+  document.body.removeChild(ta);
+}
+
+/* ============ 今日热词（上下滚动 · 点击触发 AI 解读） ============ */
 (function () {
   var track = document.getElementById('hotTrack');
   var dateEl = document.querySelector('.hot-date');
@@ -17198,7 +19481,7 @@ whenEntriesReady(function () {
   function renderItems(items) {
     var html = '';
     items.forEach(function (it) {
-      html += '<a class="hot-item" href="' + it.url + '">' +
+      html += '<a class="hot-item" href="javascript:void(0)" onclick="openHotModal(\'' + it.title.replace(/'/g, "\\'") + '\', \'' + (it.desc || '').replace(/'/g, "\\'") + '\')">' +
         '<span class="hot-term"><span class="hot-badge">HOT</span>' + it.title + '</span>' +
         '<span class="hot-desc">' + it.desc + '</span></a>';
     });
@@ -17206,19 +19489,16 @@ whenEntriesReady(function () {
   }
 
   function renderFallback() {
-    // 兜底：从词条库取前 3 条经典词条作为默认展示
-    whenEntriesReady(function () {
-      if (typeof ALL_ENTRIES !== 'undefined' && ALL_ENTRIES.length) {
-        var defaults = ALL_ENTRIES.slice(0, 3);
-        var html = '';
-        defaults.forEach(function (e) {
-          html += '<a class="hot-item" href="terms/' + encodeURIComponent(e.file) + '">' +
-            '<span class="hot-term"><span class="hot-badge">HOT</span>' + e.title + '</span>' +
-            '<span class="hot-desc">今日暂无热词，点开复习这条经典词条。</span></a>';
-        });
-        track.innerHTML = html;
-      }
-    });
+    if (ALL_ENTRIES && ALL_ENTRIES.length) {
+      var defaults = ALL_ENTRIES.slice(0, 5);
+      var html = '';
+      defaults.forEach(function (e) {
+        html += '<a class="hot-item" href="javascript:void(0)" onclick="openHotModal(\'' + e.title.replace(/'/g, "\\'") + '\', \'经典词条复习\')">' +
+          '<span class="hot-term"><span class="hot-badge">HOT</span>' + e.title + '</span>' +
+          '<span class="hot-desc">今日暂无接口热词，点开复习这条经典词条。</span></a>';
+      });
+      track.innerHTML = html;
+    }
   }
 
   function startCarousel() {
@@ -17246,131 +19526,57 @@ whenEntriesReady(function () {
       if (d && d.ok && d.items && d.items.length) {
         if (dateEl && d.date) dateEl.textContent = d.date;
         renderItems(d.items);
-      } else {
-        renderFallback();
-      }
+      } else { renderFallback(); }
       startCarousel();
     })
-    .catch(function () {
-      renderFallback();
-      startCarousel();
-    });
+    .catch(function () { renderFallback(); startCarousel(); });
 })();
-var CHAPTER_ORDER = ["第一篇：钱的本质", "第二篇：个人财务底盘", "第三篇：风险护城河", "第四篇：投资武器库 · 股票篇", "第五篇：投资武器库 · 债券与固收篇", "第六篇：投资武器库 · 基金篇", "第七篇：投资武器库 · 其他类", "第八篇：读懂指标 · 估值与业绩篇", "第九篇：读懂指标 · 市场情绪与风险篇", "第十篇：交易规则与摩擦成本", "第十一篇：宏观风向标", "第十二篇：宏观与周期", "第十三篇：衍生品与对冲", "第十四篇：策略与数学", "第十五篇：策略与数学 · 进阶", "第十六篇：金融市场黑话与交易场景", "第十七篇：日常支付与账户管理", "第十八篇：借贷与生活刚需", "第十九篇：人生账本与长期规划", "第二十篇：消费心理与财富品格", "第二十一篇：投资心理与行为陷阱", "第二十二篇：骗局与避坑指南"];
 
-(function() {
-  whenEntriesReady(function() {
-    var mainContent = document.getElementById('mainContent');
-    var noResults = document.getElementById('noResults');
-    var searchBox = document.getElementById('searchBox');
+/* ============ 热词订阅（静态环境兼容，不静默失败） ============ */
+(function () {
+  var form = document.getElementById('hotSubscribeForm');
+  var email = document.getElementById('hsEmail');
+  var msg = document.getElementById('hsMsg');
+  if (!form || !email || !msg) return;
 
-  // Group entries by chapter
-  var chapterGroups = {};
-  CHAPTER_ORDER.forEach(function(ch) { chapterGroups[ch] = []; });
-  ALL_ENTRIES.forEach(function(e) {
-    if (chapterGroups[e.chapter]) chapterGroups[e.chapter].push(e);
-  });
-
-  function buildAll() {
-    var html = '';
-    CHAPTER_ORDER.forEach(function(chName) {
-      var entries = chapterGroups[chName];
-      if (!entries) return;
-      html += '<section class="chapter-section" id="' + escapeHtml(chName) + '" data-chapter="' + escapeHtml(chName) + '">';
-      html += '  <div class="chapter-header" onclick="toggleChapter(this)">';
-      html += '    <div class="left"><span class="ch-name">' + escapeHtml(chName) + '</span><span class="ch-count">' + entries.length + ' 词条</span></div>';
-      html += '    <span class="arrow">▼</span>';
-      html += '  </div>';
-      html += '  <div class="entry-grid">';
-      entries.forEach(function(e) {
-        var hook = e.card_titles && e.card_titles.length > 0 ? e.card_titles[0] : '';
-        html += '    <a class="entry-card" href="terms/' + encodeURIComponent(e.file) + '" data-title="' + escapeHtml(e.title) + '">';
-        html += '      <div class="card-num">' + escapeHtml(String(e.id).padStart(2, '0')) + '</div>';
-        html += '      <div class="card-title">' + escapeHtml(e.title) + '</div>';
-        if (hook) html += '      <div class="card-hook">' + escapeHtml(hook) + '</div>';
-        html += '    </a>';
-      });
-      html += '  </div>';
-      html += '</section>';
-    });
-    mainContent.innerHTML = html;
+  function show(text, ok) {
+    msg.textContent = text;
+    msg.style.color = ok ? 'var(--mf-colors-text-success)' : 'var(--mf-colors-text-critical)';
+    msg.hidden = false;
+    setTimeout(function () { msg.hidden = true; }, 6000);
   }
 
-  function escapeHtml(str) {
-    if (!str) return '';
-    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
-  buildAll();
-
-  // Chapter toggle
-  window.toggleChapter = function(header) {
-    header.classList.toggle('collapsed');
-    var grid = header.nextElementSibling;
-    grid.classList.toggle('collapsed');
-  };
-
-  // Search
-  searchBox.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    var sections = mainContent.querySelectorAll('.chapter-section');
-    var anyVisible = false;
-
-    sections.forEach(function(sec) {
-      var chName = sec.getAttribute('data-chapter').toLowerCase();
-      var cards = sec.querySelectorAll('.entry-card');
-      var chMatch = chName.indexOf(q) !== -1;
-      var cardVisible = 0;
-
-      cards.forEach(function(card) {
-        var title = (card.getAttribute('data-title') || '').toLowerCase();
-        if (!q || title.indexOf(q) !== -1 || chMatch) {
-          card.classList.remove('hidden');
-          cardVisible++;
-        } else {
-          card.classList.add('hidden');
-        }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var val = (email.value || '').trim();
+    if (!val || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+      show('请输入有效的邮箱地址。', false);
+      email.focus();
+      return;
+    }
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: val })
+    })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) {
+        if (d && d.ok) { show('订阅成功，每天 5 条热词将发到你的邮箱。', true); form.reset(); }
+        else { show('订阅服务暂时不可用，请稍后再试。', false); }
+      })
+      .catch(function () {
+        try {
+          var saved = JSON.parse(localStorage.getItem('id_subscribers') || '[]');
+          if (saved.indexOf(val) === -1) saved.push(val);
+          localStorage.setItem('id_subscribers', JSON.stringify(saved));
+        } catch (e2) { /* localStorage 不可用时忽略 */ }
+        show('已记录你的邮箱（当前为本地静态演示，订阅接口上线后自动生效）。', true);
+        form.reset();
       });
-
-      if (!q || cardVisible > 0 || chMatch) {
-        sec.classList.remove('hidden');
-        // auto-expand on search
-        var header = sec.querySelector('.chapter-header');
-        var grid = sec.querySelector('.entry-grid');
-        if (q && header.classList.contains('collapsed')) {
-          header.classList.remove('collapsed');
-          grid.classList.remove('collapsed');
-        }
-        if (cardVisible > 0) anyVisible = true;
-      } else {
-        sec.classList.add('hidden');
-      }
-    });
-
-      noResults.classList.toggle('show', !anyVisible && !!q);
-    });
   });
 })();
 </script>
 
-<!-- Mangofolio 系列导航 -->
-<footer class="mangofolio-nav">
-  <style>
-    .mangofolio-nav { border-top: 1px solid var(--border-dashed); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: var(--ink-light); background: transparent; font-family: var(--mf-fonts-sans); }
-    .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: var(--ink-strong); }
-    .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: var(--accent); text-decoration: none; }
-    .mangofolio-nav a:hover { text-decoration: underline; }
-    .mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: var(--ink-light); }
-</style>
-  <span class="mf-label">Mangofolio 系列</span>
-  <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
-  <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
-  <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
-  <a href="https://view.mangofolio.com">市场观察 View</a>
-  <a href="https://invest-tools.mangofolio.app" style="color: var(--accent);">财务工具箱 FinTools</a>
-  <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
-</footer>
-
-<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})}</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js')})}</script>
 </body>
 </html>

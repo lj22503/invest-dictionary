@@ -1,23 +1,876 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、817 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、914 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
 - [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
 
-## 核心词条
-- [定投（定期定额投资）](https://dictionary.mangofolio.com/terms/定投（定期定额投资）.html): 每月固定金额买入的投资方式，用纪律对抗贪婪和恐惧
-- [等额本金 vs 等额本息（提前还贷选哪个）](https://dictionary.mangofolio.com/terms/等额本金%20vs%20等额本息（提前还贷选哪个）.html): 两种房贷还款方式的区别与提前还贷选择
-- [IRR（内部收益率 _ 分期真实利率）](https://dictionary.mangofolio.com/terms/IRR（内部收益率%20_%20分期真实利率）.html): 现金流内部收益率，分期真实利率
-- [年化收益率（及年化复合收益率）](https://dictionary.mangofolio.com/terms/年化收益率（及年化复合收益率）.html): 投资收益的年化口径
-- [黄金（避险资产）](https://dictionary.mangofolio.com/terms/黄金（避险资产）.html): 黄金为何是避险资产
-- [货币基金（余额宝_零钱通）](https://dictionary.mangofolio.com/terms/货币基金（余额宝_零钱通）.html): 余额宝/零钱通背后的货币基金
-- [指数基金（宽基指数 vs 行业指数）](https://dictionary.mangofolio.com/terms/指数基金（宽基指数%20vs%20行业指数）.html): 指数基金分类与选择
-- [个人养老金账户（抵税新政）](https://dictionary.mangofolio.com/terms/个人养老金账户（抵税新政）.html): 个人养老金账户与抵税政策
-
-> 完整 817 词条列表见 https://dictionary.mangofolio.com/ （首页全量目录）
+## 词条（共 914 条）
+- [货币](https://dictionary.mangofolio.com/terms/货币.html): 你手里攥着的100块
+- [信用](https://dictionary.mangofolio.com/terms/信用.html): 全世界最贵的三个字
+- [M0 / M1 / M2（货币供应量）](https://dictionary.mangofolio.com/terms/M0%20_%20M1%20_%20M2（货币供应量）.html): 你家三个钱包，就是央行的小抄
+- [通货膨胀（CPI）](https://dictionary.mangofolio.com/terms/通货膨胀（CPI）.html): 不是东西贵了
+- [通货紧缩](https://dictionary.mangofolio.com/terms/通货紧缩.html): 东西越便宜，你越危险
+- [利率（基准利率）](https://dictionary.mangofolio.com/terms/利率（基准利率）.html): 利率不是数字，是"耐心"的价格
+- [无风险利率（十年期国债收益率）](https://dictionary.mangofolio.com/terms/无风险利率（十年期国债收益率）.html): 1.7% 决定一切
+- [负利率](https://dictionary.mangofolio.com/terms/负利率.html): 存钱还要倒贴
+- [购买力](https://dictionary.mangofolio.com/terms/购买力.html): 工资没变，日子越来越紧
+- [货币时间价值](https://dictionary.mangofolio.com/terms/货币时间价值.html): 你活期的钱，每天都在亏
+- [主动收入](https://dictionary.mangofolio.com/terms/主动收入.html): 你是在卖时间，不是在赚钱
+- [被动收入（睡后收入）](https://dictionary.mangofolio.com/terms/被动收入（睡后收入）.html): 你睡觉的时候，你的钱在干嘛？
+- [资产（金融资产 / 实物资产 / 无形资产）](https://dictionary.mangofolio.com/terms/资产（金融资产%20_%20实物资产%20_%20无形资产）.html): 你买回来的，不全是你的资产
+- [负债（良性负债 vs 恶性负债）](https://dictionary.mangofolio.com/terms/负债（良性负债%20vs%20恶性负债）.html): 负债不是脏话
+- [资产负债表](https://dictionary.mangofolio.com/terms/资产负债表.html): 你以为"有钱"和"真有钱"是一回事？
+- [收入支出表（现金流表）](https://dictionary.mangofolio.com/terms/收入支出表（现金流表）.html): 你的钱，不是花完的
+- [应急金（备用金）](https://dictionary.mangofolio.com/terms/应急金（备用金）.html): 你账上那笔"不赚钱"的钱
+- [负债率（资产负债率）](https://dictionary.mangofolio.com/terms/负债率（资产负债率）.html): 你算过吗？
+- [月供占收入比](https://dictionary.mangofolio.com/terms/月供占收入比.html): 月供不过半？你被骗了
+- [财务自由（4%法则）](https://dictionary.mangofolio.com/terms/财务自由（4%法则）.html): 你要的可能只有十分之一
+- [信用评分 / 征信](https://dictionary.mangofolio.com/terms/信用评分%20_%20征信.html): 全世界最贵的三个字
+- [拿铁因子](https://dictionary.mangofolio.com/terms/拿铁因子.html): 你昨天喝的不是28块的奶茶
+- [机会成本](https://dictionary.mangofolio.com/terms/机会成本.html): 免费的东西从不免费
+- [沉没成本](https://dictionary.mangofolio.com/terms/沉没成本.html): 你舍不得放手的，其实早就没了
+- [边际效用](https://dictionary.mangofolio.com/terms/边际效用.html): 你以为你需要"更多"
+- [风险（系统性风险 vs 非系统性风险）](https://dictionary.mangofolio.com/terms/风险（系统性风险%20vs%20非系统性风险）.html): 你买了十只基金，以为自己分散了
+- [保险四大件（重疾险 / 医疗险 / 定期寿险 / 意外险）](https://dictionary.mangofolio.com/terms/保险四大件（重疾险%20_%20医疗险%20_%20定期寿险%20_%20意外险）.html): 你买的保险，可能只买了"半边"
+- [年金险](https://dictionary.mangofolio.com/terms/年金险.html): 你以为你在存养老金
+- [增额终身寿险](https://dictionary.mangofolio.com/terms/增额终身寿险.html): 你买的不是保险，是一张"锁死20年"的存单
+- [现金价值（退保能拿回多少）](https://dictionary.mangofolio.com/terms/现金价值（退保能拿回多少）.html): 你交的不是存款
+- [免赔额 / 等待期 / 保障期限](https://dictionary.mangofolio.com/terms/免赔额%20_%20等待期%20_%20保障期限.html): 你买了保险，保险公司却不赔
+- [刚性兑付（及其被打破）](https://dictionary.mangofolio.com/terms/刚性兑付（及其被打破）.html): "保本"两个字，2018年之后就是违法的
+- [黑天鹅事件](https://dictionary.mangofolio.com/terms/黑天鹅事件.html): 你列的那张风险清单漏了一样东西
+- [灰犀牛事件](https://dictionary.mangofolio.com/terms/灰犀牛事件.html): 你吃过最大的亏
+- [安全边际](https://dictionary.mangofolio.com/terms/安全边际.html): 你开车敢贴着前车屁股跑吗
+- [止损（止损线）](https://dictionary.mangofolio.com/terms/止损（止损线）.html): "卖了就是真亏了"
+- [保本（及“保本保息”骗局）](https://dictionary.mangofolio.com/terms/保本（及“保本保息”骗局）.html): 你的10万块还在，但已经被偷了
+- [股票（普通股 / 优先股）](https://dictionary.mangofolio.com/terms/股票（普通股%20_%20优先股）.html): 你买的那串代码
+- [A股 / H股 / 美股 / B股](https://dictionary.mangofolio.com/terms/A股%20_%20H股%20_%20美股%20_%20B股.html): 你的股票，是哪国户口？
+- [主板 / 创业板 / 科创板 / 北交所](https://dictionary.mangofolio.com/terms/主板%20_%20创业板%20_%20科创板%20_%20北交所.html): 最好的公司，不一定在"最好"的板上
+- [蓝筹股 / 白马股](https://dictionary.mangofolio.com/terms/蓝筹股%20_%20白马股.html): 蓝筹这个标签，骗了三代股民
+- [成长股 / 价值股](https://dictionary.mangofolio.com/terms/成长股%20_%20价值股.html): 你买的不是"成长"
+- [周期股 / 防御股](https://dictionary.mangofolio.com/terms/周期股%20_%20防御股.html): 你看到"王者归来"的时候
+- [ST股 / *ST股（退市风险警示）](https://dictionary.mangofolio.com/terms/ST股%20_ST股（退市风险警示）.html): 你持仓前面多了两个字母
+- [新股（IPO / 打新）](https://dictionary.mangofolio.com/terms/新股（IPO%20_%20打新）.html): 新股上市第一天
+- [分红（派息 / 送股 / 转增）](https://dictionary.mangofolio.com/terms/分红（派息%20_%20送股%20_%20转增）.html): 你账户里多了500块
+- [除权 / 除息](https://dictionary.mangofolio.com/terms/除权%20_%20除息.html): 你账户绿了，但你没亏
+- [填权 / 贴权](https://dictionary.mangofolio.com/terms/填权%20_%20贴权.html): 分红那天股价跌了≠ 你亏了
+- [股息率](https://dictionary.mangofolio.com/terms/股息率.html): 5%的股息率比存银行香多了？
+- [股本 / 流通盘（流通市值）](https://dictionary.mangofolio.com/terms/股本%20_%20流通盘（流通市值）.html): 你买了1000股，占了多大的盘子？
+- [大股东 / 机构投资者 / 散户](https://dictionary.mangofolio.com/terms/大股东%20_%20机构投资者%20_%20散户.html): 你以为你是"韭菜"，其实你是"隐形大股东"
+- [回购（股票回购注销）](https://dictionary.mangofolio.com/terms/回购（股票回购注销）.html): 你以为100股就是100股？
+- [停牌 / 退市](https://dictionary.mangofolio.com/terms/停牌%20_%20退市.html): 关灯之后
+- [债券（票面利率 / 到期收益率）](https://dictionary.mangofolio.com/terms/债券（票面利率%20_%20到期收益率）.html): 你不是在理财，你是在放贷
+- [国债（利率债）](https://dictionary.mangofolio.com/terms/国债（利率债）.html): 最安全的投资，也可能让你亏得最沉默
+- [地方政府债 / 城投债（信用债）](https://dictionary.mangofolio.com/terms/地方政府债%20_%20城投债（信用债）.html): 你买的理财，最后都去了哪？
+- [企业债 / 公司债](https://dictionary.mangofolio.com/terms/企业债%20_%20公司债.html): 多出来的利息，是"不放心费"
+- [可转债（下有保底，上不封顶）](https://dictionary.mangofolio.com/terms/可转债（下有保底，上不封顶）.html): 亏了有底，赚了无顶
+- [固收+（稳健型产品）](https://dictionary.mangofolio.com/terms/固收+（稳健型产品）.html): 那个加号后面，到底加的是什么
+- [银行理财（净值型 / 预期收益型）](https://dictionary.mangofolio.com/terms/银行理财（净值型%20_%20预期收益型）.html): 你以为银行理财是存款
+- [基金（公募基金）](https://dictionary.mangofolio.com/terms/基金（公募基金）.html): 你从没打开过的那个"碗"
+- [货币基金（余额宝/零钱通）](https://dictionary.mangofolio.com/terms/货币基金（余额宝_零钱通）.html): 你那1283块的利息
+- [债券基金](https://dictionary.mangofolio.com/terms/债券基金.html): 你以为债券基金"永远涨"？
+- [混合基金](https://dictionary.mangofolio.com/terms/混合基金.html): 你的"混合基金"里，87%是股票
+- [股票基金](https://dictionary.mangofolio.com/terms/股票基金.html): 你买的那只基金，经理叫什么名字？
+- [指数基金（宽基指数 vs 行业指数）](https://dictionary.mangofolio.com/terms/指数基金（宽基指数%20vs%20行业指数）.html): 你买的指数基金，根本不需要基金经理
+- [ETF（交易型开放式指数基金）](https://dictionary.mangofolio.com/terms/ETF（交易型开放式指数基金）.html): 你付的那笔管理费，买到的可能是一张"盲猜券"
+- [ETF联接基金](https://dictionary.mangofolio.com/terms/ETF联接基金.html): 你以为你买的ETF
+- [LOF（上市开放式基金）](https://dictionary.mangofolio.com/terms/LOF（上市开放式基金）.html): 同一只基金，两张脸
+- [FOF（基金中的基金）](https://dictionary.mangofolio.com/terms/FOF（基金中的基金）.html): 一万多只基金，你选哪一只
+- [QDII基金（投资海外）](https://dictionary.mangofolio.com/terms/QDII基金（投资海外）.html): 你的钱，其实被困在一座岛上
+- [主动型基金 vs 被动型基金](https://dictionary.mangofolio.com/terms/主动型基金%20vs%20被动型基金.html): 你买的是"人"，还是"规则"？
+- [基金经理](https://dictionary.mangofolio.com/terms/基金经理.html): 你崇拜的那个"大神"
+- [REITs（房地产投资信托基金）](https://dictionary.mangofolio.com/terms/REITs（房地产投资信托基金）.html): 你每个月交的房租
+- [黄金（避险资产）](https://dictionary.mangofolio.com/terms/黄金（避险资产）.html): 一个不生利息的东西
+- [信托（及暴雷风险）](https://dictionary.mangofolio.com/terms/信托（及暴雷风险）.html): 你买过银行理财，就等于买过信托
+- [私募股权基金（PE/VC，高风险高门槛）](https://dictionary.mangofolio.com/terms/私募股权基金（PE_VC，高风险高门槛）.html): 你不是"玩家"，你是"燃料"
+- [数字人民币](https://dictionary.mangofolio.com/terms/数字人民币.html): 你微信里的5000块钱
+- [个人养老金账户（抵税新政）](https://dictionary.mangofolio.com/terms/个人养老金账户（抵税新政）.html): 你退休那天，社保只够吃食堂
+- [市盈率（PE / 滚动PE / 静态PE）](https://dictionary.mangofolio.com/terms/市盈率（PE%20_%20滚动PE%20_%20静态PE）.html): PE是橡皮尺
+- [市净率（PB）](https://dictionary.mangofolio.com/terms/市净率（PB）.html): 你花5000块买手机，会先看什么
+- [净资产收益率（ROE，巴菲特最爱的指标）](https://dictionary.mangofolio.com/terms/净资产收益率（ROE，巴菲特最爱的指标）.html): 你投的每一块钱，一年后生出多少钱？
+- [每股收益（EPS）](https://dictionary.mangofolio.com/terms/每股收益（EPS）.html): 不看 EPS 就买股票
+- [营收（营业收入）](https://dictionary.mangofolio.com/terms/营收（营业收入）.html): 财报第一行也会骗人
+- [净利润（归母净利润）](https://dictionary.mangofolio.com/terms/净利润（归母净利润）.html): 你看到的那行数字，可能是假的
+- [扣非净利润（扣除非经常性损益）](https://dictionary.mangofolio.com/terms/扣非净利润（扣除非经常性损益）.html): 别高兴太早，你看到的利润可能不是赚来的
+- [毛利率 / 净利率](https://dictionary.mangofolio.com/terms/毛利率%20_%20净利率.html): 毛利率68%的公司，为什么在亏钱
+- [经营现金流（比净利润更真实）](https://dictionary.mangofolio.com/terms/经营现金流（比净利润更真实）.html): 利润是算出来的梦
+- [资产负债率（公司负债水平）](https://dictionary.mangofolio.com/terms/资产负债率（公司负债水平）.html): 你买房贷了200万
+- [流动比率 / 速动比率（短期偿债能力）](https://dictionary.mangofolio.com/terms/流动比率%20_%20速动比率（短期偿债能力）.html): 账上趴着500万
+- [预收款 / 合同负债（未来收入的蓄水池）](https://dictionary.mangofolio.com/terms/预收款%20_%20合同负债（未来收入的蓄水池）.html): 你收了钱，不一定是你赚的
+- [成交量（缩量 / 放量）](https://dictionary.mangofolio.com/terms/成交量（缩量%20_%20放量）.html): 涨了5%，但你敢高兴吗？
+- [换手率（活跃度指标）](https://dictionary.mangofolio.com/terms/换手率（活跃度指标）.html): 一天换了30%的主人
+- [年化收益率（及年化复合收益率）](https://dictionary.mangofolio.com/terms/年化收益率（及年化复合收益率）.html): 那不是每年赚，那是平均时速
+- [持有期收益率](https://dictionary.mangofolio.com/terms/持有期收益率.html): 你从买入到卖出，实际赚了多少
+- [最大回撤（跌得最深的一次）](https://dictionary.mangofolio.com/terms/最大回撤（跌得最深的一次）.html): 这不是"最多亏多少"，这是你还能不能撑到天亮
+- [回撤修复天数（跌下去多久能回来）](https://dictionary.mangofolio.com/terms/回撤修复天数（跌下去多久能回来）.html): 跌了30%，等多久能回来？
+- [夏普比率（性价比：每承担1份风险换多少收益）](https://dictionary.mangofolio.com/terms/夏普比率（性价比：每承担1份风险换多少收益）.html): 赚了42%，凭什么不如赚25%的？
+- [一级市场 vs 二级市场](https://dictionary.mangofolio.com/terms/一级市场%20vs%20二级市场.html): 你买到的是"新股"，还是"别人的旧股"？
+- [集合竞价 vs 连续竞价（开盘价/收盘价怎么来的）](https://dictionary.mangofolio.com/terms/集合竞价%20vs%20连续竞价（开盘价_收盘价怎么来的）.html): 9:25 那一秒，你看到的是"共识"还是"剧本"？
+- [T+0 / T+1（何时能卖出）](https://dictionary.mangofolio.com/terms/T+0%20_%20T+1（何时能卖出）.html): 那个灰色的"卖出"按钮
+- [涨停板 / 跌停板](https://dictionary.mangofolio.com/terms/涨停板%20_%20跌停板.html): 一堵你绕不过去的墙
+- [市价单 vs 限价单（滑点是什么）](https://dictionary.mangofolio.com/terms/市价单%20vs%20限价单（滑点是什么）.html): 你以为点"买入"就是在"买"？
+- [融资 / 融券（加杠杆和做空）](https://dictionary.mangofolio.com/terms/融资%20_%20融券（加杠杆和做空）.html): 放大收益的按钮，也是粉碎本金的开关
+- [融资余额 / 融券余量（市场情绪温度计）](https://dictionary.mangofolio.com/terms/融资余额%20_%20融券余量（市场情绪温度计）.html): 1.8万亿，是你的援军，还是你的人质？
+- [保证金 / 维持保证金](https://dictionary.mangofolio.com/terms/保证金%20_%20维持保证金.html): 你以为它是你的安全垫
+- [爆仓 / 穿仓](https://dictionary.mangofolio.com/terms/爆仓%20_%20穿仓.html): 杠杆不是放大器
+- [大宗交易（折价/溢价意味着什么）](https://dictionary.mangofolio.com/terms/大宗交易（折价_溢价意味着什么）.html): 股市里最大的买卖，从来不走你的通道
+- [北上资金（沪深港通/聪明钱）](https://dictionary.mangofolio.com/terms/北上资金（沪深港通_聪明钱）.html): 你跟了50亿流入，第二天跌了
+- [龙虎榜（游资与机构席位）](https://dictionary.mangofolio.com/terms/龙虎榜（游资与机构席位）.html): 你以为是游资的底牌
+- [印花税](https://dictionary.mangofolio.com/terms/印花税.html): 你账户里藏着一根最细的针管
+- [佣金（手续费 / 最低5元）](https://dictionary.mangofolio.com/terms/佣金（手续费%20_%20最低5元）.html): 你每交易一次，就自动输了一次
+- [GDP（名义GDP vs 实际GDP）](https://dictionary.mangofolio.com/terms/GDP（名义GDP%20vs%20实际GDP）.html): GDP涨了，你更穷了——不是你错了
+- [CPI（居民消费价格指数）](https://dictionary.mangofolio.com/terms/CPI（居民消费价格指数）.html): 你外卖涨了19%，CPI说只涨了2.1%
+- [PPI（工业生产者出厂价格指数）](https://dictionary.mangofolio.com/terms/PPI（工业生产者出厂价格指数）.html): 你的烧烤人均涨了30块——PPI三个月前就给你写了预告信
+- [PMI（采购经理指数，经济体温计）](https://dictionary.mangofolio.com/terms/PMI（采购经理指数，经济体温计）.html): GDP是后视镜，PMI是挡风玻璃
+- [社融（社会融资规模）](https://dictionary.mangofolio.com/terms/社融（社会融资规模）.html): 3月社融数据一出，大盘秒涨2%
+- [社零（社会消费品零售总额）](https://dictionary.mangofolio.com/terms/社零（社会消费品零售总额）.html): 你每扫码一次，国家就记一笔账
+- [LPR（贷款市场报价利率）](https://dictionary.mangofolio.com/terms/LPR（贷款市场报价利率）.html): 你每个月的房贷多还300块
+- [MLF（中期借贷便利/麻辣粉）](https://dictionary.mangofolio.com/terms/MLF（中期借贷便利_麻辣粉）.html): 你每个月还的房贷
+- [OMO（公开市场操作 / 7天逆回购）](https://dictionary.mangofolio.com/terms/OMO（公开市场操作%20_%207天逆回购）.html): 每天早上9:20，央行在问全市场一句话
+- [SLF（常备借贷便利/酸辣粉）](https://dictionary.mangofolio.com/terms/SLF（常备借贷便利_酸辣粉）.html): 银行也会月底断粮
+- [降准（存款准备金率下调）](https://dictionary.mangofolio.com/terms/降准（存款准备金率下调）.html): 央行拧了一下阀门
+- [降息 / 加息](https://dictionary.mangofolio.com/terms/降息%20_%20加息.html): 你不是在赚工资
+- [量化宽松（QE / 放水）](https://dictionary.mangofolio.com/terms/量化宽松（QE%20_%20放水）.html): QE 不是在"救经济"
+- [缩表（美联储缩表）](https://dictionary.mangofolio.com/terms/缩表（美联储缩表）.html): 他们开始撕这张表了
+- [美联储点阵图](https://dictionary.mangofolio.com/terms/美联储点阵图.html): 一张没有任何约束力的投票结果
+- [经济周期（复苏 / 繁荣 / 衰退 / 萧条）](https://dictionary.mangofolio.com/terms/经济周期（复苏%20_%20繁荣%20_%20衰退%20_%20萧条）.html): 经济在呼吸，你感觉到了吗？
+- [财政赤字 / 赤字率（3%警戒线）](https://dictionary.mangofolio.com/terms/财政赤字%20_%20赤字率（3%警戒线）.html): 你每个月花呗的2000块
+- [专项债（地方基建的钱从哪来）](https://dictionary.mangofolio.com/terms/专项债（地方基建的钱从哪来）.html): 你老家那条新路
+- [汇率（人民币升值/贬值）](https://dictionary.mangofolio.com/terms/汇率（人民币升值_贬值）.html): 你工资涨了5%
+- [期货（股指期货/商品期货）](https://dictionary.mangofolio.com/terms/期货（股指期货_商品期货）.html): 你每天都在做期货
+- [期权（看涨期权 / 看跌期权）](https://dictionary.mangofolio.com/terms/期权（看涨期权%20_%20看跌期权）.html): 你花100块，买了一张"后悔权"
+- [权证（港股常见）](https://dictionary.mangofolio.com/terms/权证（港股常见）.html): 花一块钱买一个"未来十块买股票"的权利
+- [远期合约](https://dictionary.mangofolio.com/terms/远期合约.html): 交易所里跳动的数字，它爷爷叫"握手"
+- [对冲（Hedge / 套期保值）](https://dictionary.mangofolio.com/terms/对冲（Hedge%20_%20套期保值）.html): 你在投资还是在赌博？
+- [套利（无风险套利/价差套利）](https://dictionary.mangofolio.com/terms/套利（无风险套利_价差套利）.html): 你以为套利是"占便宜"？
+- [做空（沽空/卖空）](https://dictionary.mangofolio.com/terms/做空（沽空_卖空）.html): 赚钱可以不靠"买了等涨"
+- [定投（定期定额投资）](https://dictionary.mangofolio.com/terms/定投（定期定额投资）.html): 你每天盼涨，定投的人盼跌
+- [微笑曲线](https://dictionary.mangofolio.com/terms/微笑曲线.html): 你越亏越不敢买的那一刻——
+- [资产配置（核心-卫星策略）](https://dictionary.mangofolio.com/terms/资产配置（核心-卫星策略）.html): 你以为分散了？其实你在裸奔
+- [再平衡（动态调整仓位）](https://dictionary.mangofolio.com/terms/再平衡（动态调整仓位）.html): 你赚了钱，但你偏了
+- [止盈（止盈线 / 分批止盈）](https://dictionary.mangofolio.com/terms/止盈（止盈线%20_%20分批止盈）.html): 你账户里那串红色数字
+- [金字塔加仓 / 倒金字塔加仓](https://dictionary.mangofolio.com/terms/金字塔加仓%20_%20倒金字塔加仓.html): 你说你在抄底
+- [网格交易](https://dictionary.mangofolio.com/terms/网格交易.html): 有一种赚钱方法，专门奖励"猜不准"的人
+- [胜率 vs 赔率](https://dictionary.mangofolio.com/terms/胜率%20vs%20赔率.html): 你对9次，可能不如人家对1次
+- [阿尔法（α） vs 贝塔（β）](https://dictionary.mangofolio.com/terms/阿尔法（α）%20vs%20贝塔（β）.html): 电梯里的俯卧撑
+- [年化波动率（标准差）](https://dictionary.mangofolio.com/terms/年化波动率（标准差）.html): 颠簸不等于翻车
+- [相关性系数（资产同涨同跌还是跷跷板）](https://dictionary.mangofolio.com/terms/相关性系数（资产同涨同跌还是跷跷板）.html): 一只白酒，穿了五件马甲
+- [凯利公式（每次下注多少合适）](https://dictionary.mangofolio.com/terms/凯利公式（每次下注多少合适）.html): 全仓 = 数学上的自杀
+- [IRR（内部收益率 / 分期真实利率）](https://dictionary.mangofolio.com/terms/IRR（内部收益率%20_%20分期真实利率）.html): 月费率0.5% ≠ 年利率6%
+- [上车 / 下车](https://dictionary.mangofolio.com/terms/上车%20_%20下车.html): "快上车！"
+- [踏空（看着涨没买）](https://dictionary.mangofolio.com/terms/踏空（看着涨没买）.html): 那笔钱，从来就不是你的
+- [被套（套牢）](https://dictionary.mangofolio.com/terms/被套（套牢）.html): 亏了40%，需要涨67%才能回本
+- [割肉（亏损卖出）](https://dictionary.mangofolio.com/terms/割肉（亏损卖出）.html): 你割的不是肉
+- [抄底（接飞刀）](https://dictionary.mangofolio.com/terms/抄底（接飞刀）.html): 你在接住什么？
+- [逃顶](https://dictionary.mangofolio.com/terms/逃顶.html): 山顶上没人知道那是山顶
+- [接盘侠（高位接盘）](https://dictionary.mangofolio.com/terms/接盘侠（高位接盘）.html): "这只票看到50"
+- [国家队（证金 / 汇金 / 社保）](https://dictionary.mangofolio.com/terms/国家队（证金%20_%20汇金%20_%20社保）.html): 国家队来了——你应该高兴还是警惕？
+- [北向资金 / 南向资金](https://dictionary.mangofolio.com/terms/北向资金%20_%20南向资金.html): 你盯了一年的"北向资金"
+- [主力 / 庄家（操纵市场）](https://dictionary.mangofolio.com/terms/主力%20_%20庄家（操纵市场）.html): 你怕的那个"庄家"
+- [游资（热钱 / 短线资金）](https://dictionary.mangofolio.com/terms/游资（热钱%20_%20短线资金）.html): 你追过涨停板吗？
+- [韭菜（反复被收割的散户）](https://dictionary.mangofolio.com/terms/韭菜（反复被收割的散户）.html): 你不是韭菜
+- [去散户化](https://dictionary.mangofolio.com/terms/去散户化.html): 不是变笨了，是版本升级了
+- [拉高出货](https://dictionary.mangofolio.com/terms/拉高出货.html): "目标价50"——他成本多少？
+- [砸盘](https://dictionary.mangofolio.com/terms/砸盘.html): 跌停板上排队的买单
+- [护盘](https://dictionary.mangofolio.com/terms/护盘.html): 护盘不是慈善
+- [政策底 / 市场底（双底）](https://dictionary.mangofolio.com/terms/政策底%20_%20市场底（双底）.html): 两个底，从不重合
+- [第三方支付（微信支付 / 支付宝）](https://dictionary.mangofolio.com/terms/第三方支付（微信支付%20_%20支付宝）.html): 你扫码付了5块买包子
+- [扫码支付 / 免密支付 / 快捷支付](https://dictionary.mangofolio.com/terms/扫码支付%20_%20免密支付%20_%20快捷支付.html): 你这个月花了多少钱？
+- [零钱通 / 余额宝（货币基金包装）](https://dictionary.mangofolio.com/terms/零钱通%20_%20余额宝（货币基金包装）.html): 你每天打开看的那几毛钱，不是你在赚钱
+- [信用卡账单日 / 还款日](https://dictionary.mangofolio.com/terms/信用卡账单日%20_%20还款日.html): 信用卡晚还一天，利息从三十天前开始算
+- [信用卡免息期（最长/最短）](https://dictionary.mangofolio.com/terms/信用卡免息期（最长_最短）.html): 同一张信用卡，你用有时候能白借56天，有时候只有20天
+- [最低还款额（及其利息陷阱）](https://dictionary.mangofolio.com/terms/最低还款额（及其利息陷阱）.html): 账单上那个最大的数字，是银行最希望你选的
+- [信用卡分期手续费（实际IRR）](https://dictionary.mangofolio.com/terms/信用卡分期手续费（实际IRR）.html): "0利息"三个字，让你放下戒备
+- [自动续费陷阱](https://dictionary.mangofolio.com/terms/自动续费陷阱.html): 你手机里藏着一台自动印钞机
+- [房贷利率重定价日](https://dictionary.mangofolio.com/terms/房贷利率重定价日.html): LPR降了，你的月供为什么没变？
+- [等额本金 vs 等额本息（提前还贷选哪个）](https://dictionary.mangofolio.com/terms/等额本金%20vs%20等额本息（提前还贷选哪个）.html): 银行帮你默认勾选的那个选项
+- [提前还贷（违约金 / 划算吗）](https://dictionary.mangofolio.com/terms/提前还贷（违约金%20_%20划算吗）.html): 你攒了20万闲钱
+- [经营贷 / 消费贷（及违规挪用风险）](https://dictionary.mangofolio.com/terms/经营贷%20_%20消费贷（及违规挪用风险）.html): 省下的利息，是借来的幻觉
+- [日息 / 月息 / 年息换算（别被“日息万五”骗了）](https://dictionary.mangofolio.com/terms/日息%20_%20月息%20_%20年息换算（别被“日息万五”骗了）.html): "日息万五"听着像五分钱，但它的年利率是18.25%
+- [断供（及法拍房）](https://dictionary.mangofolio.com/terms/断供（及法拍房）.html): 你以为把房子还给银行就两清了？
+- [社保养老金（现收现付制）](https://dictionary.mangofolio.com/terms/社保养老金（现收现付制）.html): 你以为社保是你存的钱？
+- [个人账户养老金（累计制）](https://dictionary.mangofolio.com/terms/个人账户养老金（累计制）.html): 你的账户里，没有钱
+- [企业年金 / 职业年金](https://dictionary.mangofolio.com/terms/企业年金%20_%20职业年金.html): 你工资条上少掉的那一行
+- [抚养比 / 赡养率](https://dictionary.mangofolio.com/terms/抚养比%20_%20赡养率.html): 你一个人，在扛几个人？
+- [延迟退休](https://dictionary.mangofolio.com/terms/延迟退休.html): 你不是被国家"坑"了
+- [教育金（规划）](https://dictionary.mangofolio.com/terms/教育金（规划）.html): 你存的不是教育金
+- [以房养老（倒按揭）](https://dictionary.mangofolio.com/terms/以房养老（倒按揭）.html): 你的房子，是你的吗？
+- [遗产税（国内暂无，富人会考虑）](https://dictionary.mangofolio.com/terms/遗产税（国内暂无，富人会考虑）.html): 一个不存在的税
+- [消费主义陷阱](https://dictionary.mangofolio.com/terms/消费主义陷阱.html): 你以为你在选
+- [面子消费（社交货币）](https://dictionary.mangofolio.com/terms/面子消费（社交货币）.html): 你那辆分期买的宝马
+- [棘轮效应（由俭入奢易）](https://dictionary.mangofolio.com/terms/棘轮效应（由俭入奢易）.html): 你上个月的消费，是按哪一年的标准在花？
+- [延迟满足（棉花糖实验）](https://dictionary.mangofolio.com/terms/延迟满足（棉花糖实验）.html): 你正在抢未来的自己
+- [匮乏感 / 稀缺心态（越穷越短视）](https://dictionary.mangofolio.com/terms/匮乏感%20_%20稀缺心态（越穷越短视）.html): 你缺的不是钱
+- [能力圈（只投你懂的东西）](https://dictionary.mangofolio.com/terms/能力圈（只投你懂的东西）.html): 你觉得自己"什么都懂一点"
+- [护城河（好公司持续赚钱的壁垒）](https://dictionary.mangofolio.com/terms/护城河（好公司持续赚钱的壁垒）.html): 你买的那个公司，明天会不会被别人干趴下？
+- [信息不对称（凭什么是你先亏）](https://dictionary.mangofolio.com/terms/信息不对称（凭什么是你先亏）.html): 你在打一场不公平的游戏
+- [羊群效应（跟风）](https://dictionary.mangofolio.com/terms/羊群效应（跟风）.html): 你以为是你的决定
+- [锚定效应（被成本价“焊死”）](https://dictionary.mangofolio.com/terms/锚定效应（被成本价“焊死”）.html): 你账户里亏得最多的那只股票
+- [处置效应（卖盈持亏）](https://dictionary.mangofolio.com/terms/处置效应（卖盈持亏）.html): 你卖掉的每一只涨了的股票
+- [确认偏误（只看自己想看的）](https://dictionary.mangofolio.com/terms/确认偏误（只看自己想看的）.html): 你不是在研究——你在请律师
+- [损失厌恶（亏1块的痛 > 赚1块的乐）](https://dictionary.mangofolio.com/terms/损失厌恶（亏1块的痛%20_%20赚1块的乐）.html): 2.5倍的不公平
+- [过度自信（频繁交易）](https://dictionary.mangofolio.com/terms/过度自信（频繁交易）.html): 你觉得自己第几层？
+- [从众心理](https://dictionary.mangofolio.com/terms/从众心理.html): 你炒股亏钱，不是因为"不懂"
+- [逆向思维（别人恐惧我贪婪）](https://dictionary.mangofolio.com/terms/逆向思维（别人恐惧我贪婪）.html): 你以为你在"独立思考"
+- [贪婪 vs 恐惧（市场两大驱动力）](https://dictionary.mangofolio.com/terms/贪婪%20vs%20恐惧（市场两大驱动力）.html): 它们不是两种病，是同一种病
+- [FOMO（害怕踏空）](https://dictionary.mangofolio.com/terms/FOMO（害怕踏空）.html): 你以为在"上车"
+- [庞氏骗局（借新还旧）](https://dictionary.mangofolio.com/terms/庞氏骗局（借新还旧）.html): 月息8%，稳赚不赔
+- [非法集资（高息揽储）](https://dictionary.mangofolio.com/terms/非法集资（高息揽储）.html): 年化15%，保本保息
+- [杀猪盘（情感+投资诈骗）](https://dictionary.mangofolio.com/terms/杀猪盘（情感+投资诈骗）.html): 你以为在谈恋爱
+- [资金盘（传销式理财）](https://dictionary.mangofolio.com/terms/资金盘（传销式理财）.html): 你赚的第一笔利息，是你自己的本金
+- [杀熟（熟人推荐最危险）](https://dictionary.mangofolio.com/terms/杀熟（熟人推荐最危险）.html): 传单你不会接，熟人的话你全吞
+- [DR利率（银行间质押式回购利率）](https://dictionary.mangofolio.com/terms/DR利率.html): 你听过 LPR，但你听过 DR 吗
+- [大额存单（20万起存的VIP定期存款）](https://dictionary.mangofolio.com/terms/大额存单.html): 存款“越存越低”的年代，它突然回来了
+- [汽车出口](https://dictionary.mangofolio.com/terms/汽车出口.html): 中国卖出去的，早就不只是衬衫换飞机
+- [存款利率上调](https://dictionary.mangofolio.com/terms/存款利率上调.html): 存款利率“涨”了？先看清是谁在涨
+- [非农就业](https://dictionary.mangofolio.com/terms/非农就业.html): 每月一次的“美国就业成绩单”
+- [黄金储备](https://dictionary.mangofolio.com/terms/黄金储备.html): 央行连续22个月买黄金，8月末储备7673万盎司
+- [期限错配](https://dictionary.mangofolio.com/terms/期限错配.html): 你买的理财，正在上演一场“时间差”
+- [中签率](https://dictionary.mangofolio.com/terms/中签率.html): 万分之一点八，是什么概念
+- [战略石油储备](https://dictionary.mangofolio.com/terms/战略石油储备.html): 美国的“石油家底”跌破 3 亿桶
+- [霍尔木兹海峡](https://dictionary.mangofolio.com/terms/霍尔木兹海峡.html): 一条管道，掐住了全球油价的神经
+- [美国CPI](https://dictionary.mangofolio.com/terms/美国CPI.html): 今晚，全球都在等这个数字
+- [日元](https://dictionary.mangofolio.com/terms/日元.html): 日元一涨，全球市场抖三抖
+- [恒生科技指数](https://dictionary.mangofolio.com/terms/恒生科技指数.html): 港股科技今天怎么了
+- [隔夜逆回购](https://dictionary.mangofolio.com/terms/隔夜逆回购.html): 央行又在月中出手了
+- [公积金装修提取](https://dictionary.mangofolio.com/terms/公积金装修提取.html): 装修的钱，公积金也能掏了
+- [资本开支](https://dictionary.mangofolio.com/terms/资本开支.html): 腾讯一季度花了 527.8 亿
+- [买断式逆回购](https://dictionary.mangofolio.com/terms/买断式逆回购.html): 央行预告 9 月 7 日续作 5000 亿“长钱”
+- [5年期存款利率](https://dictionary.mangofolio.com/terms/5年期存款利率.html): 7 月存款利率：全员下降，只有 5 年期涨了
+- [DeepSeek API涨价](https://dictionary.mangofolio.com/terms/DeepSeek%20API涨价.html): DeepSeek 官宣涨价：最高涨 350%
+- [CPO（共封装光学）](https://dictionary.mangofolio.com/terms/CPO（共封装光学）.html): 英伟达官宣：CPO 交换机全面量产
+- [Token贷](https://dictionary.mangofolio.com/terms/Token贷.html): 全国首个算力"Token贷"落地广东
+- [贵州茅台（增收不增利）](https://dictionary.mangofolio.com/terms/贵州茅台（增收不增利）.html): 茅台半年报：营收涨了，利润却降了
+- [存款搬家](https://dictionary.mangofolio.com/terms/存款搬家.html): 央行7月数据：居民存款净减 6300 亿
+- [比特币（加密货币）](https://dictionary.mangofolio.com/terms/比特币（加密货币）.html): 一张没有央行的钱
+- [熊猫债](https://dictionary.mangofolio.com/terms/熊猫债.html): 熊猫债：境外机构在中国发的人民币债券
+- [配售（新股配售）](https://dictionary.mangofolio.com/terms/配售（新股配售）.html): 配售：公司“定向发新股换钱”
+- [关税（贸易壁垒）](https://dictionary.mangofolio.com/terms/关税（贸易壁垒）.html): 关税：进口商品的“过路费”
+- [复利（单利 vs 复利）](https://dictionary.mangofolio.com/terms/复利（单利%20vs%20复利）.html): 什么是复利：利息也能下崽
+- [72 法则](https://dictionary.mangofolio.com/terms/72%20法则.html): 什么是 72 法则：一口算翻倍
+- [存款保险（50万赔付）](https://dictionary.mangofolio.com/terms/存款保险（50万赔付）.html): 什么是存款保险：银行倒了也有人兜底
+- [电子支付](https://dictionary.mangofolio.com/terms/电子支付.html): 什么是电子支付：手机就是钱包
+- [记账](https://dictionary.mangofolio.com/terms/记账.html): 什么是记账：给钱流写流水账
+- [家庭预算（50/30/20）](https://dictionary.mangofolio.com/terms/家庭预算（50_30_20）.html): 什么是 50/30/20：一份钱三个口袋
+- [月光族](https://dictionary.mangofolio.com/terms/月光族.html): 什么是月光族：月初富翁月底穷光蛋
+- [FIRE（财务独立提前退休）](https://dictionary.mangofolio.com/terms/FIRE（财务独立提前退休）.html): 什么是 FIRE：攒够钱就提前退休
+- [社保 vs 商保](https://dictionary.mangofolio.com/terms/社保%20vs%20商保.html): 什么是社保 vs 商保：一个兜底一个补漏
+- [百万医疗险](https://dictionary.mangofolio.com/terms/百万医疗险.html): 什么是百万医疗险：几百块撬动几百万
+- [实际利率 vs 名义利率](https://dictionary.mangofolio.com/terms/实际利率%20vs%20名义利率.html): 什么是实际利率 vs 名义利率：一个账面数，一个真实数
+- [现金流](https://dictionary.mangofolio.com/terms/现金流.html): 什么是现金流：你的钱是活水还是死水
+- [数字货币](https://dictionary.mangofolio.com/terms/数字货币.html): 什么是数字货币：三类网络钱，别混为一谈
+- [货币乘数](https://dictionary.mangofolio.com/terms/货币乘数.html): 什么是货币乘数：100 块怎么变出好几倍钱
+- [基础货币 / 高能货币](https://dictionary.mangofolio.com/terms/基础货币%20_%20高能货币.html): 什么是基础货币：货币金字塔的地基
+- [存款准备金](https://dictionary.mangofolio.com/terms/存款准备金.html): 什么是存款准备金：银行的压箱底钱
+- [中央银行](https://dictionary.mangofolio.com/terms/中央银行.html): 什么是中央银行：金融体系的总管家
+- [货币政策工具](https://dictionary.mangofolio.com/terms/货币政策工具.html): 什么是货币政策工具：央行的十八般兵器
+- [恶性通胀](https://dictionary.mangofolio.com/terms/恶性通胀.html): 什么是恶性通胀：钱变废纸的极端状态
+- [通胀预期](https://dictionary.mangofolio.com/terms/通胀预期.html): 什么是通胀预期：对未来的物价剧本
+- [个人住房贷款](https://dictionary.mangofolio.com/terms/个人住房贷款.html): 什么是个人住房贷款：银行借钱给你买房
+- [现房销售](https://dictionary.mangofolio.com/terms/现房销售.html): 什么是现房销售：所见即所得
+- [限售股](https://dictionary.mangofolio.com/terms/限售股.html): 什么是限售股：被“锁住”的股票
+- [适度宽松货币政策](https://dictionary.mangofolio.com/terms/适度宽松货币政策.html): 什么是适度宽松：比稳健更积极、比放水更克制
+- [返还型 vs 消费型保险](https://dictionary.mangofolio.com/terms/返还型%20vs%20消费型保险.html): 返还型和消费型，差在钱去哪了
+- [犹豫期 / 宽限期](https://dictionary.mangofolio.com/terms/犹豫期%20_%20宽限期.html): 什么是犹豫期：买后悔药，10-20 天
+- [健康告知](https://dictionary.mangofolio.com/terms/健康告知.html): 什么是健康告知：投保时的“体检报告问答”
+- [分散化](https://dictionary.mangofolio.com/terms/分散化.html): 什么是分散化：鸡蛋分篮子装
+- [市场风险](https://dictionary.mangofolio.com/terms/市场风险.html): 什么是市场风险：大环境不好，全都跌
+- [通胀风险](https://dictionary.mangofolio.com/terms/通胀风险.html): 什么是通胀风险：钱在“变毛”
+- [杠杆风险](https://dictionary.mangofolio.com/terms/杠杆风险.html): 什么是杠杆风险：用别人的钱，放大你的输赢
+- [注册制](https://dictionary.mangofolio.com/terms/注册制.html): 什么是注册制：门槛从“严审”变“透明”
+- [可转债打新](https://dictionary.mangofolio.com/terms/可转债打新.html): 什么是可转债打新：申购新债，赚上市差价
+- [题材股 / 概念股](https://dictionary.mangofolio.com/terms/题材股%20_%20概念股.html): 什么是题材股：炒的是想象空间
+- [算力贷](https://dictionary.mangofolio.com/terms/算力贷.html): 什么是算力贷：AI企业的"流水贷"
+- [词元](https://dictionary.mangofolio.com/terms/词元.html): 什么是词元：数据要素的"计量单位"
+- [MSCI中国指数](https://dictionary.mangofolio.com/terms/MSCI中国指数.html): 什么是MSCI中国指数：外资的"购物清单"
+- [成品油调价](https://dictionary.mangofolio.com/terms/成品油调价.html): 什么是成品油调价：每10个工作日调一次
+- [重疾险](https://dictionary.mangofolio.com/terms/重疾险.html): 确诊就赔一笔钱，不是报销
+- [医疗险](https://dictionary.mangofolio.com/terms/医疗险.html): 报销型：花多少、报多少
+- [定期寿险](https://dictionary.mangofolio.com/terms/定期寿险.html): 责任险：倒下时替你还房贷
+- [高送转](https://dictionary.mangofolio.com/terms/高送转.html): 股份变多，钱包没变
+- [解禁](https://dictionary.mangofolio.com/terms/解禁.html): 摩尔线程解禁日大跌20%：解禁为什么吓人
+- [业绩暴雷](https://dictionary.mangofolio.com/terms/业绩暴雷.html): 预期是100分，成绩单只有30分
+- [标普500 / 纳斯达克 / 道琼斯](https://dictionary.mangofolio.com/terms/标普500%20_%20纳斯达克%20_%20道琼斯.html): 美股三巨头，各管一摊
+- [储蓄国债（凭证式/电子式）](https://dictionary.mangofolio.com/terms/储蓄国债（凭证式_电子式）.html): 国家跟你借钱，写张“最稳的欠条”
+- [国债逆回购](https://dictionary.mangofolio.com/terms/国债逆回购.html): 借钱给机构，国债做抵押
+- [基金净值（单位/累计）](https://dictionary.mangofolio.com/terms/基金净值（单位_累计）.html): 两个净值，别搞混
+- [油价（原油价格）](https://dictionary.mangofolio.com/terms/油价（原油价格）.html): 油价是什么：地缘风险的体温计
+- [利滚利](https://dictionary.mangofolio.com/terms/利滚利.html): 什么是利滚利：利息也能生利息
+- [钱荒 / 流动性紧张](https://dictionary.mangofolio.com/terms/钱荒%20_%20流动性紧张.html): 什么是钱荒：短期借钱突然变贵变难
+- [现金为王](https://dictionary.mangofolio.com/terms/现金为王.html): 什么是现金为王：留子弹比乱开枪更重要
+- [离岸人民币 / 在岸人民币](https://dictionary.mangofolio.com/terms/离岸人民币%20_%20在岸人民币.html): 什么是离岸/在岸：两个市场两种价格
+- [外汇管制](https://dictionary.mangofolio.com/terms/外汇管制.html): 什么是外汇管制：钱出境要过闸
+- [美元霸权 / 去美元化](https://dictionary.mangofolio.com/terms/美元霸权%20_%20去美元化.html): 什么是美元霸权：全球都在用美元
+- [副业收入](https://dictionary.mangofolio.com/terms/副业收入.html): 什么是副业收入：主业之外的第二桶金
+- [储蓄率](https://dictionary.mangofolio.com/terms/储蓄率.html): 什么是储蓄率：赚100块能留下多少
+- [强制储蓄](https://dictionary.mangofolio.com/terms/强制储蓄.html): 什么是强制储蓄：用规则帮自己存钱
+- [医疗储备](https://dictionary.mangofolio.com/terms/医疗储备.html): 什么是医疗储备：看病不慌的专项资金
+- [新能源汽车](https://dictionary.mangofolio.com/terms/新能源汽车.html): 8月电车成绩单：零跑再破10万辆蝉联销冠
+- [基金费用总纲](https://dictionary.mangofolio.com/terms/基金费用总纲.html): 什么是基金费用总纲：买基金到底要交哪些钱
+- [A类 / C类基金](https://dictionary.mangofolio.com/terms/A类%20_%20C类基金.html): 什么是A/C类：同一只基金两种收费方式
+- [场内 vs 场外](https://dictionary.mangofolio.com/terms/场内%20vs%20场外.html): 什么是场内场外：交易场所和对手方不同
+- [赎回规则（T+N）](https://dictionary.mangofolio.com/terms/赎回规则（T+N）.html): 什么是赎回规则：卖出基金要等几天到账
+- [市值 / 总市值](https://dictionary.mangofolio.com/terms/市值%20_%20总市值.html): 什么是市值：股价乘股本算出来的市场体重
+- [技术分析](https://dictionary.mangofolio.com/terms/技术分析.html): 什么是技术分析：靠价格和成交量的历史找规律
+- [K线 / 蜡烛图](https://dictionary.mangofolio.com/terms/K线%20_%20蜡烛图.html): 什么是K线：一根蜡烛记录四个价格
+- [均线（MA/金叉死叉）](https://dictionary.mangofolio.com/terms/均线（MA_金叉死叉）.html): 什么是均线：一段时间的平均成本线
+- [MACD](https://dictionary.mangofolio.com/terms/MACD.html): 什么是MACD：两条均线的差值曲线
+- [贸易顺差](https://dictionary.mangofolio.com/terms/贸易顺差.html): 什么是贸易顺差：出口大于进口
+- [出口 / 进口](https://dictionary.mangofolio.com/terms/出口%20_%20进口.html): 什么是出口 / 进口：一个在赚钱，一个在花钱
+- [失业率](https://dictionary.mangofolio.com/terms/失业率.html): 什么是失业率：想干活没活干的人有多少
+- [美元指数](https://dictionary.mangofolio.com/terms/美元指数.html): 什么是美元指数：美元的“团体赛成绩单”
+- [黄金价格](https://dictionary.mangofolio.com/terms/黄金价格.html): 黄金价格是什么：钱不值钱和世界不安分的报警器
+- [财政政策 vs 货币政策](https://dictionary.mangofolio.com/terms/财政政策%20vs%20货币政策.html): 什么是财政政策 / 货币政策：两只手，两套工具
+- [房价](https://dictionary.mangofolio.com/terms/房价.html): 什么是房价：一个商品，两种身份
+- [人口老龄化](https://dictionary.mangofolio.com/terms/人口老龄化.html): 什么是人口老龄化：老人变多、小孩变少
+- [美林时钟](https://dictionary.mangofolio.com/terms/美林时钟.html): 什么是美林时钟：经济也有四季
+- [滞胀](https://dictionary.mangofolio.com/terms/滞胀.html): 什么是滞胀：经济不增长，物价还飞涨
+- [牛市 / 熊市 / 震荡市](https://dictionary.mangofolio.com/terms/牛市%20_%20熊市%20_%20震荡市.html): 什么是牛市 / 熊市 / 震荡市：市场三种天气
+- [结构性行情](https://dictionary.mangofolio.com/terms/结构性行情.html): 什么是结构性行情：指数没动，局部在涨
+- [左侧交易 / 右侧交易](https://dictionary.mangofolio.com/terms/左侧交易%20_%20右侧交易.html): 什么是左侧和右侧：一个在拐点前埋伏，一个等信号再上车
+- [满仓 / 清仓 / 半仓](https://dictionary.mangofolio.com/terms/满仓%20_%20清仓%20_%20半仓.html): 什么是满仓清仓半仓：风险开关拧到几档
+- [建仓 / 加仓 / 减仓 / 调仓](https://dictionary.mangofolio.com/terms/建仓%20_%20加仓%20_%20减仓%20_%20调仓.html): 什么是这四个动作：买卖节奏的四个手势
+- [仓位管理](https://dictionary.mangofolio.com/terms/仓位管理.html): 什么是仓位管理：先想好能亏多少，再想能赚多少
+- [做T（T+0操作）](https://dictionary.mangofolio.com/terms/做T（T+0操作）.html): 什么是做T：用底仓做当天高抛低吸
+- [洗盘](https://dictionary.mangofolio.com/terms/洗盘.html): 什么是洗盘：拉升前的清场动作
+- [赛道 / 景气度](https://dictionary.mangofolio.com/terms/赛道%20_%20景气度.html): 什么是赛道和景气度：看坡长，也看雪况
+- [复盘](https://dictionary.mangofolio.com/terms/复盘.html): 什么是复盘：给自己的交易回放录像
+- [价值投资](https://dictionary.mangofolio.com/terms/价值投资.html): 什么是价值投资：打折买好货，耐心等升值
+- [合格投资者](https://dictionary.mangofolio.com/terms/合格投资者.html): 合格投资者是谁：有钱还不够，还得“懂风险”
+- [股债平衡](https://dictionary.mangofolio.com/terms/股债平衡.html): 什么是股债平衡：股票和债券按比例搭配的“跷跷板”打法
+- [心理账户](https://dictionary.mangofolio.com/terms/心理账户.html): 什么是心理账户：大脑给每笔钱都贴了“隐形标签”
+- [幸存者偏差](https://dictionary.mangofolio.com/terms/幸存者偏差.html): 什么是幸存者偏差：看不见的失败者才是大多数
+- [五险一金](https://dictionary.mangofolio.com/terms/五险一金.html): 什么是五险一金：工资条上被扣走的“人生保障包”
+- [医保（职工/居民）](https://dictionary.mangofolio.com/terms/医保（职工_居民）.html): 什么是医保：国家给的两套“看病报销资格”
+- [住房公积金](https://dictionary.mangofolio.com/terms/住房公积金.html): 什么是住房公积金：公司和你一起存的“买房专用金”
+- [公积金贷款](https://dictionary.mangofolio.com/terms/公积金贷款.html): 什么是公积金贷款：普通人能借到的最便宜的大额贷款
+- [个人所得税](https://dictionary.mangofolio.com/terms/个人所得税.html): 什么是个人所得税：到手的钱，先过一次“收费站”
+- [专项附加扣除](https://dictionary.mangofolio.com/terms/专项附加扣除.html): 什么是专项附加扣除：国家发的“税前减负清单”
+- [个税汇算清缴](https://dictionary.mangofolio.com/terms/个税汇算清缴.html): 什么是个税汇算清缴：一年一度的“多退少补”总清算
+- [花呗 / 借呗 / 白条](https://dictionary.mangofolio.com/terms/花呗%20_%20借呗%20_%20白条.html): 什么是花呗 / 借呗 / 白条：藏在支付按钮里的消费贷
+- [砍头息](https://dictionary.mangofolio.com/terms/砍头息.html): 什么是砍头息：借条上写 1 万，到手只有 8 千
+- [714高炮](https://dictionary.mangofolio.com/terms/714高炮.html): 什么是714高炮：借 1000 到账 700，7 天后要还 1000+
+- [套路贷](https://dictionary.mangofolio.com/terms/套路贷.html): 什么是套路贷：借 5 万，半年后房子没了
+- [校园贷](https://dictionary.mangofolio.com/terms/校园贷.html): 什么是校园贷：专挑学生下手的网贷
+- [多头借贷](https://dictionary.mangofolio.com/terms/多头借贷.html): 什么是多头借贷：同时在 5 家平台借钱的人
+- [征信报告](https://dictionary.mangofolio.com/terms/征信报告.html): 什么是征信报告：金融系统里你的“第二张身份证”
+- [逾期 / 连三累六](https://dictionary.mangofolio.com/terms/逾期%20_%20连三累六.html): 什么是逾期 / 连三累六：还款记录上的“红牌”
+- [征信修复骗局](https://dictionary.mangofolio.com/terms/征信修复骗局.html): 什么是征信修复骗局：骗子盯上“想洗白”的你
+- [注销贷款账户骗局](https://dictionary.mangofolio.com/terms/注销贷款账户骗局.html): 什么是注销贷款账户骗局：一个电话让你背上真贷款
+- [核心一级资本（银行的本钱）](https://dictionary.mangofolio.com/terms/核心一级资本（银行的本钱）.html): 什么是核心一级资本：银行“自己兜底的钱”
+- [核心一级资本（银行补血）](https://dictionary.mangofolio.com/terms/核心一级资本（银行补血）.html): 核心一级资本是什么：银行最扎实的“本钱”
+- [信用卡](https://dictionary.mangofolio.com/terms/信用卡.html): 什么是信用卡：银行给的“先花后还”额度
+- [外汇储备](https://dictionary.mangofolio.com/terms/外汇储备.html): 外汇储备是什么：国家的“外汇家底”
+- [个税起征点（免征额）](https://dictionary.mangofolio.com/terms/个税起征点（免征额）.html): 5000元不是“过线就全交”：起征点是先砍掉再算税
+- [大数据杀熟](https://dictionary.mangofolio.com/terms/大数据杀熟.html): 什么是大数据杀熟：同一件商品，你的手机看到更贵的价
+- [恩格尔系数](https://dictionary.mangofolio.com/terms/恩格尔系数.html): 什么是恩格尔系数：吃的占比越低，日子越过得好
+- [电信诈骗](https://dictionary.mangofolio.com/terms/电信诈骗.html): 什么是电信诈骗：不见面的“抢钱”
+- [冒充公检法 / 冒充客服](https://dictionary.mangofolio.com/terms/冒充公检法%20_%20冒充客服.html): 最吓人的剧本，最老套的套路
+- [刷单返利骗局](https://dictionary.mangofolio.com/terms/刷单返利骗局.html): 什么是刷单返利：用几十块鱼饵，钓你几千几万
+- [荐股群 / 喊单带单](https://dictionary.mangofolio.com/terms/荐股群%20_%20喊单带单.html): 热闹的“股神群”，大多只有你一个真人
+- [虚拟盘](https://dictionary.mangofolio.com/terms/虚拟盘.html): 一台“印钞机”，只印给你看
+- [钱包（冷/热）](https://dictionary.mangofolio.com/terms/钱包（冷_热）.html): 钱包里装的不是币，是钥匙
+- [私钥 / 助记词](https://dictionary.mangofolio.com/terms/私钥%20_%20助记词.html): 一串字符，掌管你的全部数字资产
+- [美债收益率](https://dictionary.mangofolio.com/terms/美债收益率.html): 又逼近5%：这次是谁推的
+- [算力网](https://dictionary.mangofolio.com/terms/算力网.html): 国常会点名：算力要“组网”
+- [强制退市](https://dictionary.mangofolio.com/terms/强制退市.html): 又一家公司因造假被“请出场”
+- [数据产权](https://dictionary.mangofolio.com/terms/数据产权.html): 数据也开始“办证”了
+- [零利率](https://dictionary.mangofolio.com/terms/零利率.html): 什么是零利率：利息归零，钱不再值“时间”
+- [净资产](https://dictionary.mangofolio.com/terms/净资产.html): 什么是净资产：把能卖的都卖了、债还了还剩多少
+- [4321法则](https://dictionary.mangofolio.com/terms/4321法则.html): 什么是 4321 法则：工资到手，先分四份
+- [四笔钱](https://dictionary.mangofolio.com/terms/四笔钱.html): 什么是四笔钱：给每一块钱安排岗位
+- [人生收支曲线](https://dictionary.mangofolio.com/terms/人生收支曲线.html): 什么是人生收支曲线：收入是一座山，支出是一条坡
+- [家庭资产年度体检](https://dictionary.mangofolio.com/terms/家庭资产年度体检.html): 什么是家庭资产年度体检：一年一次，给钱做全面检查
+- [保险预算](https://dictionary.mangofolio.com/terms/保险预算.html): 什么是保险预算：年收入的 5%-10% 买保障
+- [育儿成本](https://dictionary.mangofolio.com/terms/育儿成本.html): 什么是育儿成本：养到 18 岁平均 50 万起
+- [养老成本](https://dictionary.mangofolio.com/terms/养老成本.html): 什么是养老成本：退休后 25 年要花掉一大笔
+- [失业保障](https://dictionary.mangofolio.com/terms/失业保障.html): 什么是失业保障：失业后的三道防线
+- [黄金ETF](https://dictionary.mangofolio.com/terms/黄金ETF.html): 全球资金正借道 ETF 抢黄金
+- [AI泡沫](https://dictionary.mangofolio.com/terms/AI泡沫.html): AI 三巨头罕见一起喊“慢一点”
+- [清欠](https://dictionary.mangofolio.com/terms/清欠.html): 今天下午三点，五个部门一起谈“欠钱不还”
+- [直接融资](https://dictionary.mangofolio.com/terms/直接融资.html): 央行刚公布：企业借钱的通道换了一条
+- [换股吸收合并](https://dictionary.mangofolio.com/terms/换股吸收合并.html): 今天起，两家券商从 A 股“下班”了
+- [创新药出海](https://dictionary.mangofolio.com/terms/创新药出海.html): 1200 亿美元：卖药不如卖专利
+- [智能家居](https://dictionary.mangofolio.com/terms/智能家居.html): 八个部门一起出手，目标是你的家
+- [医保个人账户](https://dictionary.mangofolio.com/terms/医保个人账户.html): 医保卡里躺着的钱，今天起能打疫苗了
+- [原始股骗局](https://dictionary.mangofolio.com/terms/原始股骗局.html): 你以为捡到“上市前暴富”的门票？
+- [养老诈骗](https://dictionary.mangofolio.com/terms/养老诈骗.html): 披着“养老”外衣的钱包收割机
+- [债务雪球 / 雪崩还款法](https://dictionary.mangofolio.com/terms/债务雪球%20_%20雪崩还款法.html): 欠一堆债，先还哪笔？
+- [助学贷款](https://dictionary.mangofolio.com/terms/助学贷款.html): 国家给穷孩子的“免息读书钱”
+- [婚前财产 / 婚后共同财产](https://dictionary.mangofolio.com/terms/婚前财产%20_%20婚后共同财产.html): 婚前攒的是你的，婚后一起赚的才是两人的
+- [分红险](https://dictionary.mangofolio.com/terms/分红险.html): 有保障还能“分红”的保险
+- [万能险](https://dictionary.mangofolio.com/terms/万能险.html): 保险+账户，灵活还能滚息
+- [投连险](https://dictionary.mangofolio.com/terms/投连险.html): 保险壳子里的“基金”
+- [惠民保](https://dictionary.mangofolio.com/terms/惠民保.html): 政府指导的“平民百万医疗”
+- [流动性风险](https://dictionary.mangofolio.com/terms/流动性风险.html): 急用钱时，钱却拿不出来
+- [电子信息制造业](https://dictionary.mangofolio.com/terms/电子信息制造业.html): 9 月 15 日：两部门发文，给电子信息制造业定了十年目标
+- [时间换钱](https://dictionary.mangofolio.com/terms/时间换钱.html): 你的一天能卖几次？
+- [免责条款](https://dictionary.mangofolio.com/terms/免责条款.html): 保险公司拒赔，常靠这一条
+- [保险受益人](https://dictionary.mangofolio.com/terms/保险受益人.html): 理赔款到底给谁？
+- [理赔流程](https://dictionary.mangofolio.com/terms/理赔流程.html): 出险后，钱怎么到你手上
+- [保险双十法则](https://dictionary.mangofolio.com/terms/保险双十法则.html): 保额买多少、保费花多少，一个口诀
+- [保险预定利率](https://dictionary.mangofolio.com/terms/保险预定利率.html): 3.0% 预定利率，怎么影响你的保单
+- [保险 IRR（真实收益）](https://dictionary.mangofolio.com/terms/保险%20IRR（真实收益）.html): 业务员说的收益，可能骗了你
+- [车险（交强险 / 商业险）](https://dictionary.mangofolio.com/terms/车险（交强险%20_%20商业险）.html): 上路必买的保险，一年要花多少
+- [信用风险](https://dictionary.mangofolio.com/terms/信用风险.html): 借钱不还，风险由谁扛
+- [汇率风险](https://dictionary.mangofolio.com/terms/汇率风险.html): 人民币一升值，你的海外资产变了多少
+- [港股通（人民币柜台）](https://dictionary.mangofolio.com/terms/港股通（人民币柜台）.html): 9 月 16 日：香港首个五年规划，点名人民币柜台进港股通
+- [AI智能体](https://dictionary.mangofolio.com/terms/AI智能体.html): 9 月 16 日：华为《智能世界2035》，Token 消耗量要涨 10 万倍
+- [数据中心（IDC）](https://dictionary.mangofolio.com/terms/数据中心（IDC）.html): 9 月 16 日：全国数据中心用电量增超四成，算力用电将年均新增千亿度
+- [寿险保额怎么算](https://dictionary.mangofolio.com/terms/寿险保额怎么算.html): 保额 = 留给家里的那笔钱
+- [家财险](https://dictionary.mangofolio.com/terms/家财险.html): 给房子上的意外险
+- [补充医疗保险](https://dictionary.mangofolio.com/terms/补充医疗保险.html): 医保报完，剩下的它接着报
+- [商业养老保险](https://dictionary.mangofolio.com/terms/商业养老保险.html): 自己给自己发的第二份退休金
+- [养老目标基金](https://dictionary.mangofolio.com/terms/养老目标基金.html): 帮你管养老钱的基金组合
+- [香港保险](https://dictionary.mangofolio.com/terms/香港保险.html): 美元计价的另一套保单
+- [代理退保黑产](https://dictionary.mangofolio.com/terms/代理退保黑产.html): 「帮你全额退保」的中间商
+- [集中度风险](https://dictionary.mangofolio.com/terms/集中度风险.html): 鸡蛋放在一个篮子里
+- [利率风险](https://dictionary.mangofolio.com/terms/利率风险.html): 利率一涨，老债就不香了
+- [再投资风险](https://dictionary.mangofolio.com/terms/再投资风险.html): 到期的钱，买不到原来的利率
+- [14天期逆回购](https://dictionary.mangofolio.com/terms/14天期逆回购.html): 央行的跨节红包
+- [好房子（住宅新标准）](https://dictionary.mangofolio.com/terms/好房子（住宅新标准）.html): 层高3米、4楼装电梯
+- [富时中国A50指数](https://dictionary.mangofolio.com/terms/富时中国A50指数.html): 今天收盘后换样本股
+- [存储芯片（内存 / 闪存）](https://dictionary.mangofolio.com/terms/存储芯片（内存%20_%20闪存）.html): AI最紧的瓶颈
+- [涨跌幅限制](https://dictionary.mangofolio.com/terms/涨跌幅限制.html): 一天最多只能涨跌这么多
+- [基本面分析](https://dictionary.mangofolio.com/terms/基本面分析.html): 看的是生意，不是K线
+- [退税 / 补税](https://dictionary.mangofolio.com/terms/退税%20_%20补税.html): 一年一次的个税结算
+- [逆向选择](https://dictionary.mangofolio.com/terms/逆向选择.html): 谁最容易出事，谁最想上车
+- [新三板](https://dictionary.mangofolio.com/terms/新三板.html): 给中小企业的第三个市场
+- [核准制](https://dictionary.mangofolio.com/terms/核准制.html): 监管替你把关的上市制度
+- [破发](https://dictionary.mangofolio.com/terms/破发.html): 跌破发行价这件事
+- [大盘股 / 小盘股](https://dictionary.mangofolio.com/terms/大盘股%20_%20小盘股.html): 大块头和小个子
+- [龙头股](https://dictionary.mangofolio.com/terms/龙头股.html): 行业里的第一名
+- [妖股](https://dictionary.mangofolio.com/terms/妖股.html): 不讲道理的暴涨暴跌
+- [套息交易](https://dictionary.mangofolio.com/terms/套息交易.html): 借便宜钱，买高息货
+- [政策风险](https://dictionary.mangofolio.com/terms/政策风险.html): 规则被改写的风险
+- [经营风险](https://dictionary.mangofolio.com/terms/经营风险.html): 生意变难做的那种风险
+- [财务风险](https://dictionary.mangofolio.com/terms/财务风险.html): 还钱时间对不上的风险
+- [道德风险](https://dictionary.mangofolio.com/terms/道德风险.html): 不用自己承担后果的人
+- [摘帽 / 戴帽](https://dictionary.mangofolio.com/terms/摘帽%20_%20戴帽.html): 帽子是怎么戴上和摘掉的
+- [高股息策略](https://dictionary.mangofolio.com/terms/高股息策略.html): 靠分红赚钱的那类策略
+- [定增（定向增发）](https://dictionary.mangofolio.com/terms/定增（定向增发）.html): 只卖给少数人的增发
+- [股权质押](https://dictionary.mangofolio.com/terms/股权质押.html): 把股票当抵押品借钱
+- [商誉减值](https://dictionary.mangofolio.com/terms/商誉减值.html): 买贵了留下的记账差额
+- [举牌](https://dictionary.mangofolio.com/terms/举牌.html): 买到 5% 必须举手
+- [货币供应量（M0/M1/M2）](https://dictionary.mangofolio.com/terms/货币供应量（M0_%20M1_%20M2）.html): 这是什么
+- [地缘政治风险](https://dictionary.mangofolio.com/terms/地缘政治风险.html): 国家之间的摩擦，最后是你账户买单
+- [估值风险](https://dictionary.mangofolio.com/terms/估值风险.html): 好公司也会让你亏钱
+- [财务造假识别](https://dictionary.mangofolio.com/terms/财务造假识别.html): 让报表互相打架，假账就藏不住
+- [业绩预告 / 业绩快报](https://dictionary.mangofolio.com/terms/业绩预告%20_%20业绩快报.html): 业绩提前打招呼的两种方式
+- [市值配售](https://dictionary.mangofolio.com/terms/市值配售.html): 打新先看你手里有多少股票
+- [次新股](https://dictionary.mangofolio.com/terms/次新股.html): 刚上市不久的那批股票
+- [配股](https://dictionary.mangofolio.com/terms/配股.html): 向老股东按比例要钱
+- [股东减持](https://dictionary.mangofolio.com/terms/股东减持.html): 内部人把股票卖了
+- [增持](https://dictionary.mangofolio.com/terms/增持.html): 自己人掏钱买自家股票
+- [借壳上市](https://dictionary.mangofolio.com/terms/借壳上市.html): 买一个壳，把资产装进去
+- [中美经贸磋商](https://dictionary.mangofolio.com/terms/中美经贸磋商.html): 谈判桌又摆开了：这次在纽约
+- [MLCC（多层陶瓷电容器）](https://dictionary.mangofolio.com/terms/MLCC（多层陶瓷电容器）.html): 一颗小方块，为什么叫电子工业大米
+- [资产 / 负债](https://dictionary.mangofolio.com/terms/资产%20_%20负债.html): 这是什么
+- [集成电路（半导体）](https://dictionary.mangofolio.com/terms/集成电路（半导体）.html): 什么是集成电路：芯片的正式学名
+- [并购重组](https://dictionary.mangofolio.com/terms/并购重组.html): 这是什么：公司之间的买与卖
+- [要约收购](https://dictionary.mangofolio.com/terms/要约收购.html): 这是什么：明码标价的收购
+- [员工持股 / 股权激励](https://dictionary.mangofolio.com/terms/员工持股%20_%20股权激励.html): 这是什么：用股票发奖金
+- [退市整理期](https://dictionary.mangofolio.com/terms/退市整理期.html): 这是什么：退市前的最后交易窗口
+- [面值退市](https://dictionary.mangofolio.com/terms/面值退市.html): 这是什么：跌破一元就出局
+- [上证指数](https://dictionary.mangofolio.com/terms/上证指数.html): 这是什么：上交所的总成绩单
+- [沪深300](https://dictionary.mangofolio.com/terms/沪深300.html): 这是什么：300 只大块头的集合
+- [恒生指数](https://dictionary.mangofolio.com/terms/恒生指数.html): 这是什么：港股的主场指数
+- [中概股](https://dictionary.mangofolio.com/terms/中概股.html): 这是什么：中国公司在境外市场
+- [红筹股](https://dictionary.mangofolio.com/terms/红筹股.html): 这是什么：门在外面，家在里面
+- [人形机器人](https://dictionary.mangofolio.com/terms/人形机器人.html): 这是什么：长得像人、还会干活
+- [高抛低吸](https://dictionary.mangofolio.com/terms/高抛低吸.html): 这是什么：低买高卖的“手动版”
+- [波段操作](https://dictionary.mangofolio.com/terms/波段操作.html): 这是什么：把一段行情切成几段吃
+- [深证成指](https://dictionary.mangofolio.com/terms/深证成指.html): 这是什么：深交所挑出来的 500 只
+- [创业板指](https://dictionary.mangofolio.com/terms/创业板指.html): 这是什么：创业板里挑出的 100 只
+- [中证500](https://dictionary.mangofolio.com/terms/中证500.html): 这是什么：沪深300 之后的中盘 500 只
+- [中证1000](https://dictionary.mangofolio.com/terms/中证1000.html): 这是什么：更小的 1000 只
+- [转债强赎](https://dictionary.mangofolio.com/terms/转债强赎.html): 这是什么：公司按约定把转债收走
+- [期限利差](https://dictionary.mangofolio.com/terms/期限利差.html): 这是什么：长端减短端
+- [收益率曲线](https://dictionary.mangofolio.com/terms/收益率曲线.html): 这是什么：把不同期限的利率连成线
+- [摊余成本法](https://dictionary.mangofolio.com/terms/摊余成本法.html): 这是什么：把收益摊平到每一天
+- [耐心资本](https://dictionary.mangofolio.com/terms/耐心资本.html): 不催你交作业的那笔钱
+- [复利效应](https://dictionary.mangofolio.com/terms/复利效应.html): 利息也能生利息
+- [QFII / 外资](https://dictionary.mangofolio.com/terms/QFII%20_%20外资.html): 外资进 A 股的官方通道
+- [量化基金](https://dictionary.mangofolio.com/terms/量化基金.html): 用程序代替人脑炒股
+- [对冲基金](https://dictionary.mangofolio.com/terms/对冲基金.html): 目标是不管涨跌都赚钱
+- [茅指数 / 宁组合](https://dictionary.mangofolio.com/terms/茅指数%20_%20宁组合.html): A 股两派风格的名片
+- [中特估](https://dictionary.mangofolio.com/terms/中特估.html): 给央企国企重新定价
+- [债券评级](https://dictionary.mangofolio.com/terms/债券评级.html): 发债人的信用成绩单
+- [债券违约](https://dictionary.mangofolio.com/terms/债券违约.html): 到期还不上钱
+- [信用利差](https://dictionary.mangofolio.com/terms/信用利差.html): 多出来的风险溢价
+- [红利指数基金](https://dictionary.mangofolio.com/terms/红利指数基金.html): 专买高股息的一篮子股票
+- [台积电涨价（晶圆代工）](https://dictionary.mangofolio.com/terms/台积电涨价（晶圆代工）.html): 为什么全球芯片都要看它脸色
+- [鹰派 / 鸽派](https://dictionary.mangofolio.com/terms/鹰派%20_%20鸽派.html): 央行官员的两种“人设”
+- [人均GDP](https://dictionary.mangofolio.com/terms/人均GDP.html): 把全国的蛋糕，摊到每个人头上
+- [M1-M2剪刀差](https://dictionary.mangofolio.com/terms/M1-M2剪刀差.html): 活钱和死钱之间的距离
+- [猪周期](https://dictionary.mangofolio.com/terms/猪周期.html): 二师兄的过山车
+- [银行净息差](https://dictionary.mangofolio.com/terms/银行净息差.html): 银行赚钱的“利差生意”
+- [库存周期（基钦周期）](https://dictionary.mangofolio.com/terms/库存周期（基钦周期）.html): 企业仓库里的“呼吸节奏”
+- [软着陆 / 硬着陆](https://dictionary.mangofolio.com/terms/软着陆%20_%20硬着陆.html): 飞机降落的两种姿势
+- [明斯基时刻](https://dictionary.mangofolio.com/terms/明斯基时刻.html): 好日子过到头的那一刻
+- [顺周期 / 逆周期](https://dictionary.mangofolio.com/terms/顺周期%20_%20逆周期.html): 跟着经济风向走的行业
+- [核心CPI](https://dictionary.mangofolio.com/terms/核心CPI.html): 剔掉“爱闹脾气”的食品和能源
+- [均值回归](https://dictionary.mangofolio.com/terms/均值回归.html): 涨多了会跌，跌多了会涨
+- [保险资金入市](https://dictionary.mangofolio.com/terms/保险资金入市.html): 这是什么：保险公司把保费拿去做投资
+- [政策性金融工具](https://dictionary.mangofolio.com/terms/政策性金融工具.html): 这是什么：给重大项目补充资本金的“国家队资金”
+- [上证50](https://dictionary.mangofolio.com/terms/上证50.html): 这是什么：50 家巨头的打包合影
+- [利率倒挂](https://dictionary.mangofolio.com/terms/利率倒挂.html): 这是什么：长短利率的“倒立”
+- [同业存单](https://dictionary.mangofolio.com/terms/同业存单.html): 这是什么：银行间的“借条”
+- [结构性存款](https://dictionary.mangofolio.com/terms/结构性存款.html): 这是什么：存款里藏了个“期权”
+- [基金份额](https://dictionary.mangofolio.com/terms/基金份额.html): 这是什么：买基金买的是“份数”
+- [指数增强基金](https://dictionary.mangofolio.com/terms/指数增强基金.html): 这是什么：被动里掺点主动
+- [基金投顾](https://dictionary.mangofolio.com/terms/基金投顾.html): 这是什么：雇个专业管家管你的基金
+- [申购 / 认购](https://dictionary.mangofolio.com/terms/申购%20_%20认购.html): 这是什么：买基金的“预售”和“现售”
+- [基金清盘](https://dictionary.mangofolio.com/terms/基金清盘.html): 这是什么：基金“毕业解散”了
+- [破净](https://dictionary.mangofolio.com/terms/破净.html): 这是什么：价格比“家底”还便宜
+- [无感借贷](https://dictionary.mangofolio.com/terms/无感借贷.html): 这是什么：付款时“不知不觉”就开了贷款
+- [PEG](https://dictionary.mangofolio.com/terms/PEG.html): 这是什么：把估值和增速放在一起看
+- [KDJ / RSI](https://dictionary.mangofolio.com/terms/KDJ%20_%20RSI.html): 这是什么：两根“情绪温度计”
+- [VIX（恐慌指数）](https://dictionary.mangofolio.com/terms/VIX（恐慌指数）.html): 这是什么：市场情绪的“体温计”
+- [两融余额](https://dictionary.mangofolio.com/terms/两融余额.html): 这是什么：市场杠杆的水位计
+- [分时图](https://dictionary.mangofolio.com/terms/分时图.html): 这是什么：当天的逐分钟“心电图”
+- [内外盘](https://dictionary.mangofolio.com/terms/内外盘.html): 这是什么：主动买卖的力量对比
+- [估值分位](https://dictionary.mangofolio.com/terms/估值分位.html): 这是什么：估值的“历史坐标”
+- [戴维斯双杀](https://dictionary.mangofolio.com/terms/戴维斯双杀.html): 这是什么：业绩和估值一起往下杀
+- [交易时间](https://dictionary.mangofolio.com/terms/交易时间.html): 这是什么：各市场的“开门营业”钟点
+- [做市商](https://dictionary.mangofolio.com/terms/做市商.html): 这是什么：市场里的“专职报价员”
+- [人民币汇率](https://dictionary.mangofolio.com/terms/人民币汇率.html): 央行 10 月 8 日罕见系统阐述汇率立场
+- [基金定投](https://dictionary.mangofolio.com/terms/基金定投.html): 每月固定扣钱买基金，图什么？
+- [技术面分析](https://dictionary.mangofolio.com/terms/技术面分析.html): 看K线就能预测涨跌吗？
+- [被动投资](https://dictionary.mangofolio.com/terms/被动投资.html): 不选股、不择时，怎么赚钱？
+- [基本养老金](https://dictionary.mangofolio.com/terms/基本养老金.html): 退休后每月领的钱，到底从哪来？
+- [富时A50](https://dictionary.mangofolio.com/terms/富时A50.html): 50只A股龙头组成的“中国快照”是什么？
+- [陆股通](https://dictionary.mangofolio.com/terms/陆股通.html): 外资买A股，走的哪条“高速公路”？
+- [基金转换](https://dictionary.mangofolio.com/terms/基金转换.html): 换基金为什么要走“转换”不走赎回？
+- [智能定投 / 估值定投](https://dictionary.mangofolio.com/terms/智能定投%20_%20估值定投.html): 同样是定投，它凭什么更“聪明”？
+- [定投止盈](https://dictionary.mangofolio.com/terms/定投止盈.html): 定投赚了钱，什么时候落袋为安？
+- [LPR 重定价](https://dictionary.mangofolio.com/terms/LPR%20重定价.html): 你的房贷利率会自动变
+- [居民杠杆率](https://dictionary.mangofolio.com/terms/居民杠杆率.html): 衡量老百姓背了多少债
+- [康波周期](https://dictionary.mangofolio.com/terms/康波周期.html): 六十年一轮的“时代大周期”
+- [布林带 BOLL](https://dictionary.mangofolio.com/terms/布林带%20BOLL.html): 三根线围成的“波动通道”
+- [量比](https://dictionary.mangofolio.com/terms/量比.html): 今天到底放没放量？
+- [跳空缺口](https://dictionary.mangofolio.com/terms/跳空缺口.html): K线上留下的“价格真空带”
+- [股债性价比（ERP）](https://dictionary.mangofolio.com/terms/股债性价比（ERP）.html): 股票到底比债券便宜多少？
+- [杠铃策略](https://dictionary.mangofolio.com/terms/杠铃策略.html): 两头重、中间空的“杠铃”
+- [红利低波](https://dictionary.mangofolio.com/terms/红利低波.html): 高股息和低波动，两个都想要
+- [追涨杀跌](https://dictionary.mangofolio.com/terms/追涨杀跌.html): 散户亏钱的头号姿势
+- [购房贷款贴息](https://dictionary.mangofolio.com/terms/购房贷款贴息.html): 这是什么：国家帮你付一部分房贷利息
+- [PSL（抵押补充贷款）](https://dictionary.mangofolio.com/terms/PSL（抵押补充贷款）.html): 这是什么：政策性银行的“低成本弹药库”
+- [自由现金流](https://dictionary.mangofolio.com/terms/自由现金流.html): 赚的钱不是钱，留下的才是
+- [市销率（PS）](https://dictionary.mangofolio.com/terms/市销率（PS）.html): 还没赚钱的公司怎么估值
+- [久期](https://dictionary.mangofolio.com/terms/久期.html): 债券价格为什么忽上忽下
+- [国债期货](https://dictionary.mangofolio.com/terms/国债期货.html): 给利率上保险的工具
+- [雪球产品](https://dictionary.mangofolio.com/terms/雪球产品.html): 年化 15% 的温柔陷阱
+- [支撑位 / 压力位](https://dictionary.mangofolio.com/terms/支撑位%20_%20压力位.html): 为什么股价老在一条线上打转
+- [熔断](https://dictionary.mangofolio.com/terms/熔断.html): 跌到多少会全场停机
+- [择时](https://dictionary.mangofolio.com/terms/择时.html): 人人想做的事：买在最低点
+- [美联储利率决议](https://dictionary.mangofolio.com/terms/美联储利率决议.html): 全球市场的发令枪
+- [赌徒谬误](https://dictionary.mangofolio.com/terms/赌徒谬误.html): 连输五把，下把必赢？
+- [金本位 / 布雷顿森林体系](https://dictionary.mangofolio.com/terms/金本位%20_%20布雷顿森林体系.html): 钱=黄金，就这么简单
+- [法币](https://dictionary.mangofolio.com/terms/法币.html): 一张纸为什么能买东西
+- [铸币税](https://dictionary.mangofolio.com/terms/铸币税.html): 印钞的隐形收益
+- [特别提款权（SDR）](https://dictionary.mangofolio.com/terms/特别提款权SDR.html): IMF 的“纸黄金”
+- [超额准备金](https://dictionary.mangofolio.com/terms/超额准备金.html): 银行多存的那笔钱
+- [利率走廊](https://dictionary.mangofolio.com/terms/利率走廊.html): 市场利率的“天花板和地板”
+- [通胀目标制](https://dictionary.mangofolio.com/terms/通胀目标制.html): 央行的 KPI 制度
+- [再通胀](https://dictionary.mangofolio.com/terms/再通胀.html): 给经济“升温”
+- [资产泡沫](https://dictionary.mangofolio.com/terms/资产泡沫.html): 价格跑赢价值的游戏
+- [跨境汇款](https://dictionary.mangofolio.com/terms/跨境汇款.html): 跨国转钱的三种姿势
+- [封闭式基金](https://dictionary.mangofolio.com/terms/封闭式基金.html): 发行完就“关门”的基金
+- [开放式基金](https://dictionary.mangofolio.com/terms/开放式基金.html): 想买就买、想卖就卖的基金
+- [分级基金](https://dictionary.mangofolio.com/terms/分级基金.html): 一只基金，拆成“A吃利息+B加杠杆”
+- [证券私募（阳光私募）](https://dictionary.mangofolio.com/terms/证券私募（阳光私募）.html): 百万门槛的“私房基金”
+- [抱团股](https://dictionary.mangofolio.com/terms/抱团股.html): 机构抱团取暖的明星股
+- [财务分析](https://dictionary.mangofolio.com/terms/财务分析.html): 给公司做一次“全身体检”
+- [盘口 / 五档](https://dictionary.mangofolio.com/terms/盘口%20_%20五档.html): 买卖双方的实时报价单
+- [股债跷跷板](https://dictionary.mangofolio.com/terms/股债跷跷板.html): 两个水池，抢同一桶水
+- [开户 / 销户](https://dictionary.mangofolio.com/terms/开户%20_%20销户.html): 开户是办证，销户是退证
+- [银证转账](https://dictionary.mangofolio.com/terms/银证转账.html): 给股票账户充值和提现
+- [商誉](https://dictionary.mangofolio.com/terms/商誉.html): 多付的钱，记成了“商誉”
+- [戴维斯双击](https://dictionary.mangofolio.com/terms/戴维斯双击.html): 业绩和估值一起涨
+- [收盘集合竞价](https://dictionary.mangofolio.com/terms/收盘集合竞价.html): 收盘前 3 分钟的“最后撮合”
+- [科创门槛（50万/2年）](https://dictionary.mangofolio.com/terms/科创门槛（50万_2年）.html): 两道门：50 万 + 2 年
+- [收益凭证](https://dictionary.mangofolio.com/terms/收益凭证.html): 券商打的“欠条”
+- [场外期权](https://dictionary.mangofolio.com/terms/场外期权.html): 不在交易所挂牌的期权
+- [新增信贷](https://dictionary.mangofolio.com/terms/新增信贷.html): 这个月新借出去多少钱
+- [固定资产投资](https://dictionary.mangofolio.com/terms/固定资产投资.html): 全社会搞建设的钱
+- [GDP增速目标](https://dictionary.mangofolio.com/terms/GDP增速目标.html): 政府给经济定的 KPI
+- [基建投资](https://dictionary.mangofolio.com/terms/基建投资.html): 稳经济的压舱石
+- [以旧换新](https://dictionary.mangofolio.com/terms/以旧换新.html): 国家“贴钱”帮你换新
+- [粮价（全球食品价格）](https://dictionary.mangofolio.com/terms/粮价（全球食品价格）.html): 全球“菜篮子”价格指数
+- [法德国债利差](https://dictionary.mangofolio.com/terms/法德国债利差.html): 法德“借钱成本”的差距
+- [美股夜盘交易](https://dictionary.mangofolio.com/terms/美股夜盘交易.html): 美股也要开“夜市”了
+- [三方存管](https://dictionary.mangofolio.com/terms/三方存管.html): 炒股的钱放哪了
+- [平仓线 / 警戒线](https://dictionary.mangofolio.com/terms/平仓线%20_%20警戒线.html): 杠杆账户的两道红线
+- [恐贪指数](https://dictionary.mangofolio.com/terms/恐贪指数.html): 市场情绪的“体温计”
+- [交易纪律](https://dictionary.mangofolio.com/terms/交易纪律.html): 给交易上“规矩”
+- [慢牛 / 快牛 / 疯牛](https://dictionary.mangofolio.com/terms/慢牛%20_%20快牛%20_%20疯牛.html): 三种牛市节奏
+- [年终奖计税](https://dictionary.mangofolio.com/terms/年终奖计税.html): 年终奖的两种算法
+- [医保报销（起付线 / 封顶线）](https://dictionary.mangofolio.com/terms/医保报销（起付线%20_%20封顶线）.html): 报销三件套
+- [信用卡循环利息](https://dictionary.mangofolio.com/terms/信用卡循环利息.html): 没还清就开始计息
+- [智商税](https://dictionary.mangofolio.com/terms/智商税.html): 为“感觉”付费
+- [FaceTime / AI换脸诈骗](https://dictionary.mangofolio.com/terms/FaceTime%20_%20AI换脸诈骗.html): 新型“眼见为虚”诈骗
+- [撤单 / 废单](https://dictionary.mangofolio.com/terms/撤单%20_%20废单.html): 点单 vs 菜单上没有
+- [期权卖方风险](https://dictionary.mangofolio.com/terms/期权卖方风险.html): 收租生意的另一半账
+- [股指交割日](https://dictionary.mangofolio.com/terms/股指交割日.html): 每月第三个星期五
+- [供应链](https://dictionary.mangofolio.com/terms/供应链.html): 一台手机走完的链条
+- [供给侧改革](https://dictionary.mangofolio.com/terms/供给侧改革.html): 三去一降一补
+- [领先指标 / 同步指标 / 滞后指标](https://dictionary.mangofolio.com/terms/领先指标%20_%20同步指标%20_%20滞后指标.html): 信号灯、仪表盘、后视镜
+- [打板 / 连板 / 炸板 / 天地板](https://dictionary.mangofolio.com/terms/打板%20_%20连板%20_%20炸板%20_%20天地板.html): 涨停板上的黑话
+- [阴跌 / 急跌](https://dictionary.mangofolio.com/terms/阴跌%20_%20急跌.html): 温水煮青蛙与冷水泼头
+- [回测](https://dictionary.mangofolio.com/terms/回测.html): 驾校模拟器
+- [全天候策略](https://dictionary.mangofolio.com/terms/全天候策略.html): 四个季节都备好伞
+- [燃油附加费](https://dictionary.mangofolio.com/terms/燃油附加费.html): 机票里多出来的那一笔钱
+- [护城河](https://dictionary.mangofolio.com/terms/护城河.html): 挖不塌的护城河
+- [黑天鹅](https://dictionary.mangofolio.com/terms/黑天鹅.html): 预料之外，砸到头上
+- [房贷（商贷 / 公积金 / 组合贷）](https://dictionary.mangofolio.com/terms/房贷（商贷%20_%20公积金%20_%20组合贷）.html): 三种贷款，一张表看懂
+- [拉高 / 砸盘 / 护盘 / 洗盘](https://dictionary.mangofolio.com/terms/拉高%20_%20砸盘%20_%20护盘%20_%20洗盘.html): 主力的四张脸
+- [钱包助记词诈骗](https://dictionary.mangofolio.com/terms/钱包助记词诈骗.html): 一句话骗走全部币
+- [定增](https://dictionary.mangofolio.com/terms/定增.html): 上市公司打折批发股票
+- [做T](https://dictionary.mangofolio.com/terms/做T.html): 当天买卖的杂技
+- [大宗商品](https://dictionary.mangofolio.com/terms/大宗商品.html): 油、金、铜、大豆的统称
+- [养老金替代率](https://dictionary.mangofolio.com/terms/养老金替代率.html): 退休后还能领回几成工资
+- [险资 / 社保入市](https://dictionary.mangofolio.com/terms/险资%20_%20社保入市.html): 长线大资金进场买股票
+- [红十月行情](https://dictionary.mangofolio.com/terms/红十月行情.html): “红十月”是个统计规律
+- [保本（保本保息骗局）](https://dictionary.mangofolio.com/terms/保本（保本保息骗局）.html): 这是什么
+- [港股通 / 南向资金](https://dictionary.mangofolio.com/terms/港股通%20_%20南向资金.html): 这是什么
+- [主动 vs 被动](https://dictionary.mangofolio.com/terms/主动%20vs%20被动.html): 这是什么
+- [对冲（套期保值）](https://dictionary.mangofolio.com/terms/对冲（套期保值）.html): 这是什么
+- [账单日 / 还款日 / 免息期](https://dictionary.mangofolio.com/terms/账单日%20_%20还款日%20_%20免息期.html): 这是什么
+- [等额本息 vs 等额本金](https://dictionary.mangofolio.com/terms/等额本息%20vs%20等额本金.html): 这是什么
+- [日息 / 年化真实利率](https://dictionary.mangofolio.com/terms/日息%20_%20年化真实利率.html): 这是什么
+- [轮动 / 高低切](https://dictionary.mangofolio.com/terms/轮动%20_%20高低切.html): 这是什么
+- [期望值](https://dictionary.mangofolio.com/terms/期望值.html): 这是什么
+- [三支柱养老体系](https://dictionary.mangofolio.com/terms/三支柱养老体系.html): 这是什么
+- [特别国债](https://dictionary.mangofolio.com/terms/特别国债.html): 特别国债：专款专用的“国家借条”
+- [银行股](https://dictionary.mangofolio.com/terms/银行股.html): 银行股：A 股里的“压舱石”板块
+- [交易费用](https://dictionary.mangofolio.com/terms/交易费用.html): 买卖股票的过路费
+- [期指升贴水 / 基差](https://dictionary.mangofolio.com/terms/期指升贴水%20_%20基差.html): 今天和三个月后的价差
+- [CTA 策略](https://dictionary.mangofolio.com/terms/CTA%20策略.html): 让程序帮你追趋势
+- [市场中性策略](https://dictionary.mangofolio.com/terms/市场中性策略.html): 多空对赌，赚选股的钱
+- [空仓](https://dictionary.mangofolio.com/terms/空仓.html): 手里没股票，也是一种仓位
+- [轻仓 / 重仓](https://dictionary.mangofolio.com/terms/轻仓%20_%20重仓.html): 钱多钱少怎么分配，就是仓位
+- [卖飞](https://dictionary.mangofolio.com/terms/卖飞.html): 卖早了，看着它涨
+- [诱多 / 诱空](https://dictionary.mangofolio.com/terms/诱多%20_%20诱空.html): 一涨一跌，都是给你看的
+- [套牢盘 / 获利盘 / 抛压](https://dictionary.mangofolio.com/terms/套牢盘%20_%20获利盘%20_%20抛压.html): 三群人的筹码，决定了涨到哪
+- [股息红利税](https://dictionary.mangofolio.com/terms/股息红利税.html): 分红也要交税，但看你的持股时长
+- [超额收益（跑赢基准的部分）](https://dictionary.mangofolio.com/terms/超额收益（跑赢基准的部分）.html): 收益也能拆开看：大盘给的，和你自己赚的
+- [禀赋效应（我的东西更值钱）](https://dictionary.mangofolio.com/terms/禀赋效应（我的东西更值钱）.html): 杯子实验：为什么你的杯子更贵
+- [货币幻觉（名义 vs 实际）](https://dictionary.mangofolio.com/terms/货币幻觉（名义%20vs%20实际）.html): 涨薪5%，是赚了还是没赚？
+- [框架效应（换个说法，换个决定）](https://dictionary.mangofolio.com/terms/框架效应（换个说法，换个决定）.html): 医生说：存活率90%，还是死亡率10%？
+- [代表性偏差（以貌取股）](https://dictionary.mangofolio.com/terms/代表性偏差（以貌取股）.html): 邻居炒股暴富，我上我也行？
+- [长期主义（用时间换复利）](https://dictionary.mangofolio.com/terms/长期主义（用时间换复利）.html): 种树和摘果，你要哪种？
+- [成长投资（买的是明天的故事）](https://dictionary.mangofolio.com/terms/成长投资（买的是明天的故事）.html): 买成长股，还是买价值股？
+- [高利贷（年利率超过法定上限）](https://dictionary.mangofolio.com/terms/高利贷（年利率超过法定上限）.html): 法定红线：LPR的4倍
+- [以贷养贷（借新还旧的死循环）](https://dictionary.mangofolio.com/terms/以贷养贷（借新还旧的死循环）.html): 三张信用卡的接力赛
+- [房产税（持有环节的税）](https://dictionary.mangofolio.com/terms/房产税（持有环节的税）.html): 持有税和交易税，两回事
+- [跨境支付](https://dictionary.mangofolio.com/terms/跨境支付.html): 跨境支付是什么：钱的过海关
+- [房贷利率 / 首付比例](https://dictionary.mangofolio.com/terms/房贷利率%20_%20首付比例.html): 买房到底要掏多少钱
+- [停牌 / 复牌](https://dictionary.mangofolio.com/terms/停牌%20_%20复牌.html): 股票怎么突然不能买了
+- [个股 / ETF / 股指期权](https://dictionary.mangofolio.com/terms/个股%20_%20ETF%20_%20股指期权.html): 花小钱买“选择权”
+- [期权到期日 / 行权](https://dictionary.mangofolio.com/terms/期权到期日%20_%20行权.html): 期权为什么有时间限制
+- [保证金交易](https://dictionary.mangofolio.com/terms/保证金交易.html): 交押金也能做大生意
+- [工资增速 / 居民收入](https://dictionary.mangofolio.com/terms/工资增速%20_%20居民收入.html): 你的工资涨了吗
+- [过热](https://dictionary.mangofolio.com/terms/过热.html): 经济太热也是病
+- [双循环 / 内循环 / 外循环](https://dictionary.mangofolio.com/terms/双循环%20_%20内循环%20_%20外循环.html): 左手内需，右手外贸
+- [震仓](https://dictionary.mangofolio.com/terms/震仓.html): 主力为什么要把股价砸下去
+- [放量上涨 / 缩量下跌](https://dictionary.mangofolio.com/terms/放量上涨%20_%20缩量下跌.html): 量价关系：股市的呼吸
+- [新质生产力](https://dictionary.mangofolio.com/terms/新质生产力.html): 这是什么：用新科技造出新东西、跑出新效率
+- [迷你基金（5000万成立门槛）](https://dictionary.mangofolio.com/terms/迷你基金（5000万成立门槛）.html): 这是什么：基金的“出生证”更容易拿了
+- [深V / 反弹 / 反转 / 企稳](https://dictionary.mangofolio.com/terms/深V%20_%20反弹%20_%20反转%20_%20企稳.html): 跌出四种剧本，别都叫"反弹"
+- [投资体系 / 交易体系](https://dictionary.mangofolio.com/terms/投资体系%20_%20交易体系.html): 一个管"想"，一个管"做"
+- [选股](https://dictionary.mangofolio.com/terms/选股.html): 选的是"理由"，不是"代码"
+- [趋势投资](https://dictionary.mangofolio.com/terms/趋势投资.html): 跟着已经走出来的方向走
+- [因子投资（价值/质量/小市值）](https://dictionary.mangofolio.com/terms/因子投资（价值_质量_小市值）.html): 三种主流因子分别是什么
+- [社保缴费基数 / 缴费比例](https://dictionary.mangofolio.com/terms/社保缴费基数%20_%20缴费比例.html): 一个管"按多少算"，一个管"交百分之几"
+- [房产交易税费（契税/增值税/个税）](https://dictionary.mangofolio.com/terms/房产交易税费（契税_增值税_个税）.html): 三大税各是什么、谁来交
+- [呆账](https://dictionary.mangofolio.com/terms/呆账.html): 银行"放弃催收"不等于不用还
+- [账单分期](https://dictionary.mangofolio.com/terms/账单分期.html): 还不上时，把账单拆成几个月
+- [限购 / 限贷 / 限售](https://dictionary.mangofolio.com/terms/限购%20_%20限贷%20_%20限售.html): 三板斧各管哪件事
+- [出口退税率](https://dictionary.mangofolio.com/terms/出口退税率.html): 出口的“退税红包”缩水了
+- [银行中期分红](https://dictionary.mangofolio.com/terms/银行中期分红.html): 不等年报，年中就把利润分给你
+- [金融街论坛年会](https://dictionary.mangofolio.com/terms/金融街论坛年会.html): 金融监管层的“年度集体发布会”
+- [消息面 / 政策面 / 资金面 / 情绪面](https://dictionary.mangofolio.com/terms/消息面%20_%20政策面%20_%20资金面%20_%20情绪面.html): 四股力量决定涨跌
+- [买入持有](https://dictionary.mangofolio.com/terms/买入持有.html): 最朴素的赚钱方式
+- [指数化投资](https://dictionary.mangofolio.com/terms/指数化投资.html): 不选股，直接买一篮子
+- [后悔厌恶](https://dictionary.mangofolio.com/terms/后悔厌恶.html): 怕后悔，比怕亏钱更影响决策
+- [可得性偏差](https://dictionary.mangofolio.com/terms/可得性偏差.html): 记得住≠发生得多
+- [后见之明](https://dictionary.mangofolio.com/terms/后见之明.html): 事后谁都是股神
+- [大数定律](https://dictionary.mangofolio.com/terms/大数定律.html): 次数越多，越接近真实概率
+- [综合所得](https://dictionary.mangofolio.com/terms/综合所得.html): 四类收入合并算账
+- [生育津贴](https://dictionary.mangofolio.com/terms/生育津贴.html): 产假期间的“工资替身”
+- [微信分付](https://dictionary.mangofolio.com/terms/微信分付.html): 微信里的“先用后还”
+- [港口费（船舶港口费）](https://dictionary.mangofolio.com/terms/港口费（船舶港口费）.html): 船进港的“过路费”
+- [十二存单法](https://dictionary.mangofolio.com/terms/十二存单法.html): 钱是怎么被“焊死”的
+- [52周存钱法](https://dictionary.mangofolio.com/terms/52周存钱法.html): 每周多存10块的小游戏
+- [理财金字塔](https://dictionary.mangofolio.com/terms/理财金字塔.html): 钱该怎么分三层
+- [断舍离消费](https://dictionary.mangofolio.com/terms/断舍离消费.html): 扔东西也是在整理钱包
+- [剁手冷静期](https://dictionary.mangofolio.com/terms/剁手冷静期.html): 下单前先睡一觉
+- [彩礼 / 婚嫁金规划](https://dictionary.mangofolio.com/terms/彩礼%20_%20婚嫁金规划.html): 彩礼是家庭资产交接
+- [纸黄金](https://dictionary.mangofolio.com/terms/纸黄金.html): 看不见的金条
+- [账户贵金属](https://dictionary.mangofolio.com/terms/账户贵金属.html): 银行卡里的“金库”
+- [国际货币基金组织 IMF](https://dictionary.mangofolio.com/terms/国际货币基金组织%20IMF.html): 全球央行的“急救队”
+- [世界银行](https://dictionary.mangofolio.com/terms/世界银行.html): 全球的“扶贫银行”
+- [房价收入比](https://dictionary.mangofolio.com/terms/房价收入比.html): 房价的“压力测试”
+- [目标日期 / 目标风险](https://dictionary.mangofolio.com/terms/目标日期%20_%20目标风险.html): 养老投资的“自动驾驶”
+- [房地产周期](https://dictionary.mangofolio.com/terms/房地产周期.html): 楼市的“四季轮回”
+- [社保断缴影响（买房/摇号）](https://dictionary.mangofolio.com/terms/社保断缴影响（买房_摇号）.html): 断缴的“连锁反应”
+- [退休收入测算](https://dictionary.mangofolio.com/terms/退休收入测算.html): 退休后每月需要多少钱
+- [累进税率 / 速算扣除数](https://dictionary.mangofolio.com/terms/累进税率%20_%20速算扣除数.html): 收入的“分段计价”
+- [劳务报酬 / 稿酬](https://dictionary.mangofolio.com/terms/劳务报酬%20_%20稿酬.html): 副业收入的“特殊算法”
+- [车贷 / 装修贷](https://dictionary.mangofolio.com/terms/车贷%20_%20装修贷.html): 消费分期的“隐藏利率”
+- [信用卡积分 / 返现](https://dictionary.mangofolio.com/terms/信用卡积分%20_%20返现.html): 刷卡背后的“小恩小惠”
+- [老年理财陷阱](https://dictionary.mangofolio.com/terms/老年理财陷阱.html): 专盯“养老钱”的套路
+- [影响力六大原则（互惠/承诺/社会认同/权威/喜好/稀缺）](https://dictionary.mangofolio.com/terms/影响力六大原则（互惠%20_%20承诺%20_%20社会认同%20_%20权威%20_%20喜好%20_%20稀缺）.html): 六把“钩子”长什么样
+- [财富传承](https://dictionary.mangofolio.com/terms/财富传承.html): 把钱稳稳交给下一代
+- [个税 APP](https://dictionary.mangofolio.com/terms/个税%20APP.html): 报税这件事，手机上就能办
+- [通胀与养老](https://dictionary.mangofolio.com/terms/通胀与养老.html): 通胀是养老金最大的“小偷”
+- [医疗费用与养老](https://dictionary.mangofolio.com/terms/医疗费用与养老.html): 养老最大的变量是“看病”
+- [优惠券经济学](https://dictionary.mangofolio.com/terms/优惠券经济学.html): 一张券，商家为什么还赚钱
+- [共有产权房 / 保障房](https://dictionary.mangofolio.com/terms/共有产权房%20_%20保障房.html): 半买半租的“上车梯子”
+- [学区房 / 学位房](https://dictionary.mangofolio.com/terms/学区房%20_%20学位房.html): 房子绑着学位的“入场券”
+- [征信查询渠道](https://dictionary.mangofolio.com/terms/征信查询渠道.html): 你的信用档案去哪查
+- [跨境理财通](https://dictionary.mangofolio.com/terms/跨境理财通.html): 内地投资者出海买理财的“桥”
+- [绿鞋机制](https://dictionary.mangofolio.com/terms/绿鞋机制.html): 给新股“兜底”的隐形靴子
+- [科创50](https://dictionary.mangofolio.com/terms/科创50.html): 科创板里的“尖子班”
+- [永续债](https://dictionary.mangofolio.com/terms/永续债.html): 没有到期日的“永久借条”
+- [EV/EBITDA](https://dictionary.mangofolio.com/terms/EV_EBITDA.html): 买下整个公司要几年回本
+- [转融通](https://dictionary.mangofolio.com/terms/转融通.html): 做空链条的“上游水库”
+- [风险平价](https://dictionary.mangofolio.com/terms/风险平价.html): 让每种风险“出力均衡”
+- [授信额度](https://dictionary.mangofolio.com/terms/授信额度.html): 银行肯借你的“最高上限”
+- [反诈APP（96110）](https://dictionary.mangofolio.com/terms/反诈APP（96110）.html): 国家反诈中心的“数字门卫”
+- [DeFi](https://dictionary.mangofolio.com/terms/DeFi.html): 没有银行的“自助金融”
+- [稳定币（USDT/USDC）](https://dictionary.mangofolio.com/terms/稳定币（USDT_USDC）.html): 加密世界的“数字美元”
+- [沉没成本谬误](https://dictionary.mangofolio.com/terms/沉没成本谬误.html): 已经花掉的钱，别再拿它做决定
+- [区块链](https://dictionary.mangofolio.com/terms/区块链.html): 一本谁都能看、谁都改不了的公开账本
+- [NFT](https://dictionary.mangofolio.com/terms/NFT.html): 一张写在链上的数字“产权证”
+- [交易所（CEX/DEX）](https://dictionary.mangofolio.com/terms/交易所（CEX_DEX）.html): 买卖加密资产的“证券公司”
+- [挖矿](https://dictionary.mangofolio.com/terms/挖矿.html): 用算力换新币的记账比赛
+- [假交易所 / 搬砖套利骗局](https://dictionary.mangofolio.com/terms/假交易所%20_%20搬砖套利骗局.html): 套着交易所壳子的提款机
+- [刷流水 / 跑分](https://dictionary.mangofolio.com/terms/刷流水%20_%20跑分.html): 帮人转一下钱，就能拿佣金？
+- [信息茧房 / 回音室](https://dictionary.mangofolio.com/terms/信息茧房%20_%20回音室.html): 算法只喂你想看的，世界只剩一种声音
+- [海外配置](https://dictionary.mangofolio.com/terms/海外配置.html): 把一部分钱放到中国以外
+- [硬查询](https://dictionary.mangofolio.com/terms/硬查询.html): 借钱每查一次征信，都会留下脚印
+- [房地产投资](https://dictionary.mangofolio.com/terms/房地产投资.html): 把钱放进“房子”这门生意
+- [口红效应](https://dictionary.mangofolio.com/terms/口红效应.html): 经济越差，小件越火
+- [凡勃伦效应](https://dictionary.mangofolio.com/terms/凡勃伦效应.html): 越贵越好卖的反常逻辑
+- [平替](https://dictionary.mangofolio.com/terms/平替.html): 花更少的钱，买差不多的东西
+- [情绪价值 / 悦己消费](https://dictionary.mangofolio.com/terms/情绪价值%20_%20悦己消费.html): 花钱买“开心”
+- [多巴胺经济](https://dictionary.mangofolio.com/terms/多巴胺经济.html): 靠“即时快乐”赚钱的生意
+- [杀鸟盘](https://dictionary.mangofolio.com/terms/杀鸟盘.html): 刷单兼职的杀鸟剧本
+- [AI荐股 / 直播荐股](https://dictionary.mangofolio.com/terms/AI荐股%20_%20直播荐股.html): 披着 AI 外衣的荐股套路
+- [红头文件骗局](https://dictionary.mangofolio.com/terms/红头文件骗局.html): 伪造“国家项目”的红头文件
+- [以太坊](https://dictionary.mangofolio.com/terms/以太坊.html): 会“自动执行合同”的区块链
+- [超长期特别国债](https://dictionary.mangofolio.com/terms/超长期特别国债.html): 期限拉到 20/30/50 年的“国家借条”
+- [金饰消费](https://dictionary.mangofolio.com/terms/金饰消费.html): 买金不再只是“结婚三金”
+- [资产负债表衰退](https://dictionary.mangofolio.com/terms/资产负债表衰退.html): 什么是“企业集体躺平”？
+- [有效市场假说](https://dictionary.mangofolio.com/terms/有效市场假说.html): 价格早就把消息“吃干抹净”了
+- [VaR（在险价值）](https://dictionary.mangofolio.com/terms/VaR（在险价值）.html): 一天最多亏多少？先算这笔账
+- [反洗钱](https://dictionary.mangofolio.com/terms/反洗钱.html): 洗钱是什么？三步“洗白”流水线
+- [家族信托](https://dictionary.mangofolio.com/terms/家族信托.html): 把钱“锁”进保险箱，按规则发放
+- [医保异地就医](https://dictionary.mangofolio.com/terms/医保异地就医.html): 在外地看病，也能直接刷卡结算
+- [短融 / 超短融](https://dictionary.mangofolio.com/terms/短融%20_%20超短融.html): 大公司一年内要还的“借条”
+- [索提诺比率](https://dictionary.mangofolio.com/terms/索提诺比率.html): 只看“亏钱的风险”来衡量收益
+- [巴菲特指标](https://dictionary.mangofolio.com/terms/巴菲特指标.html): 股市总市值 ÷ GDP，一眼看贵贱
+- [日经225](https://dictionary.mangofolio.com/terms/日经225.html): 日本的“上证指数”，225 只代表股
+- [经济三季报](https://dictionary.mangofolio.com/terms/经济三季报.html): 三季报是什么：国家的季度成绩单
+- [内幕交易](https://dictionary.mangofolio.com/terms/内幕交易.html): 内幕交易是什么：用秘密信息炒股，犯法
+- [挤兑（银行挤兑）](https://dictionary.mangofolio.com/terms/挤兑（银行挤兑）.html): 为什么大家突然一起取钱
+- [老鼠仓](https://dictionary.mangofolio.com/terms/老鼠仓.html): 什么是老鼠仓
+- [主力合约](https://dictionary.mangofolio.com/terms/主力合约.html): 什么是主力合约
+- [交割月](https://dictionary.mangofolio.com/terms/交割月.html): 什么是交割月
+- [经济韧性](https://dictionary.mangofolio.com/terms/经济韧性.html): 什么是经济韧性
+- [朱格拉周期](https://dictionary.mangofolio.com/terms/朱格拉周期.html): 什么是朱格拉周期
+- [通胀交易 / 复苏交易](https://dictionary.mangofolio.com/terms/通胀交易%20_%20复苏交易.html): 什么是通胀交易与复苏交易
+- [双低转债策略](https://dictionary.mangofolio.com/terms/双低转债策略.html): 什么是双低转债策略
+- [动量策略](https://dictionary.mangofolio.com/terms/动量策略.html): 什么是动量策略
+- [过拟合](https://dictionary.mangofolio.com/terms/过拟合.html): 什么是过拟合
+- [主动ETF](https://dictionary.mangofolio.com/terms/主动ETF.html): 这是什么：带基金经理的 ETF
+- [国家数据集团](https://dictionary.mangofolio.com/terms/国家数据集团.html): 数据要素的“国家队”来了
+- [注销账户骗局](https://dictionary.mangofolio.com/terms/注销账户骗局.html): 骗子最爱用的剧本
+- [上岸](https://dictionary.mangofolio.com/terms/上岸.html): 什么是真正的上岸
+- [黑名单](https://dictionary.mangofolio.com/terms/黑名单.html): 三种名单别搞混
+- [公积金提取](https://dictionary.mangofolio.com/terms/公积金提取.html): 公积金不是死钱
+- [狄德罗效应 / 鸟笼效应](https://dictionary.mangofolio.com/terms/狄德罗效应%20_%20鸟笼效应.html): 效应从哪来
+- [价格锚点 / 促销套路](https://dictionary.mangofolio.com/terms/价格锚点%20_%20促销套路.html): 锚点怎么种下的
+- [中奖/退税/补贴诈骗](https://dictionary.mangofolio.com/terms/中奖%20_%20退税%20_%20补贴诈骗.html): 同一个钩子
+- [虚拟币合约诈骗](https://dictionary.mangofolio.com/terms/虚拟币合约诈骗.html): 骗局长什么样
+- [Gas 费](https://dictionary.mangofolio.com/terms/Gas费.html): Gas 费是什么
+- [纪念币 / 收藏品](https://dictionary.mangofolio.com/terms/纪念币%20_%20收藏品.html): 先分清两类
+- [失业保险金](https://dictionary.mangofolio.com/terms/失业保险金.html): 被裁员后的“保底工资”
+- [收入负债比](https://dictionary.mangofolio.com/terms/收入负债比.html): 每月收入有多少在还债
+- [趋势策略](https://dictionary.mangofolio.com/terms/趋势策略.html): 顺着趋势方向下注
+- [港美股打新](https://dictionary.mangofolio.com/terms/港美股打新.html): 在港股美股“抢新股”，规则完全不同
+- [偿付能力](https://dictionary.mangofolio.com/terms/偿付能力.html): 保险公司“还不起钱”会怎样
+- [旅游险 / 航延险](https://dictionary.mangofolio.com/terms/旅游险%20_%20航延险.html): 出门几天，花几十块买份“护身符”
+- [基金评级（晨星）](https://dictionary.mangofolio.com/terms/基金评级（晨星）.html): 第三方机构给基金“打分”
+- [尾部风险](https://dictionary.mangofolio.com/terms/尾部风险.html): 概率分布图两端隐藏的“刺客”
+- [数字藏品 / 数交所](https://dictionary.mangofolio.com/terms/数字藏品%20_%20数交所.html): 区块链上的“收藏品”与“正规柜台”
+- [比特币ETF（现货/期货）](https://dictionary.mangofolio.com/terms/比特币ETF（现货_期货）.html): 不用买币也能“投资比特币”
+- [监管沙盒](https://dictionary.mangofolio.com/terms/监管沙盒.html): 给新金融产品划的“试验田”
+- [啃老](https://dictionary.mangofolio.com/terms/啃老.html): 成年了还靠家里养，就是啃老
+- [双录](https://dictionary.mangofolio.com/terms/双录.html): 双录就是买保险时的“行车记录仪”
+- [销售误导](https://dictionary.mangofolio.com/terms/销售误导.html): 销售误导：把保险卖成“你没听过的版本”
+- [保单贷款 / 减额交清](https://dictionary.mangofolio.com/terms/保单贷款%20_%20减额交清.html): 两个“不退保”的救命按钮
+- [泡沫破裂](https://dictionary.mangofolio.com/terms/泡沫破裂.html): 气球吹得越大，戳破时摔得越狠
+- [转板](https://dictionary.mangofolio.com/terms/转板.html): 企业的“升学考试”：换个更大的考场
+- [北交所打新](https://dictionary.mangofolio.com/terms/北交所打新.html): 和主板打新完全不同的“现金申购”
+- [中盘股](https://dictionary.mangofolio.com/terms/中盘股.html): 市值排行里的“中间层”
+- [ROA](https://dictionary.mangofolio.com/terms/ROA.html): ROA：公司资产的“回报率体检”
+- [溢缴款](https://dictionary.mangofolio.com/terms/溢缴款.html): 多还的钱，卡在卡里的“死钱”
+- [微盘股](https://dictionary.mangofolio.com/terms/微盘股.html): 市值最小的那群股票
+- [弃购](https://dictionary.mangofolio.com/terms/弃购.html): 中签了却不去交钱
+- [筹码分布](https://dictionary.mangofolio.com/terms/筹码分布.html): 一张图看出钱在哪
+- [黄金分割 / 斐波那契](https://dictionary.mangofolio.com/terms/黄金分割%20_%20斐波那契.html): 用 0.618 画出的支撑压力
+- [展期](https://dictionary.mangofolio.com/terms/展期.html): 到期了，商量晚点还
+- [政策利率](https://dictionary.mangofolio.com/terms/政策利率.html): 全市场的“批发价”
+- [人民币国际化](https://dictionary.mangofolio.com/terms/人民币国际化.html): 让外国人愿意收人民币
+- [压力测试](https://dictionary.mangofolio.com/terms/压力测试.html): 给账户来一次"地震演练"
+- [ADR（美国存托凭证）](https://dictionary.mangofolio.com/terms/ADR（美国存托凭证）.html): 外国公司的"美股替身"
+- [北证50](https://dictionary.mangofolio.com/terms/北证50.html): 北交所的"晴雨表"
+- [中期票据](https://dictionary.mangofolio.com/terms/中期票据.html): 企业发行的"中期借条"
+- [凸性](https://dictionary.mangofolio.com/terms/凸性.html): 债券价格不是直线，是弯的
+- [净价 / 全价](https://dictionary.mangofolio.com/terms/净价%20_%20全价.html): 债券报价里的"裸价"和"实付价"
+- [ROIC（投入资本回报率）](https://dictionary.mangofolio.com/terms/ROIC（投入资本回报率）.html): 不看融资只看生意本身
+- [周转率](https://dictionary.mangofolio.com/terms/周转率.html): 钱在手里转几圈
+- [信息比率](https://dictionary.mangofolio.com/terms/信息比率.html): 衡量"跑赢"的稳定性
+- [格雷厄姆指数](https://dictionary.mangofolio.com/terms/格雷厄姆指数.html): 祖师爷的"股票贵不贵"公式
+- [外资券商](https://dictionary.mangofolio.com/terms/外资券商.html): 这是什么：老外来中国开证券公司
+- [存款利率](https://dictionary.mangofolio.com/terms/存款利率.html): 银行付给你的存钱报酬
+- [波动率](https://dictionary.mangofolio.com/terms/波动率.html): 价格的“脾气指数”
+- [可交换债](https://dictionary.mangofolio.com/terms/可交换债.html): 股东拿股票“抵押”借钱的债券
+- [五穷六绝七翻身](https://dictionary.mangofolio.com/terms/五穷六绝七翻身.html): A股流传的“季节预言”
+- [债牛债熊](https://dictionary.mangofolio.com/terms/债牛债熊.html): 债市也有牛熊
+- [商转公](https://dictionary.mangofolio.com/terms/商转公.html): 把贵的房贷换成便宜的公贷
+- [断卡行动](https://dictionary.mangofolio.com/terms/断卡行动.html): 专治“两卡”买卖的国家行动
+- [流动性陷阱](https://dictionary.mangofolio.com/terms/流动性陷阱.html): 放水也救不活的怪圈
+- [遗嘱 / 遗赠](https://dictionary.mangofolio.com/terms/遗嘱%20_%20遗赠.html): 生前说好，身后不吵
+- [阴阳合同](https://dictionary.mangofolio.com/terms/阴阳合同.html): 一套房子，两份合同
+- [重疾险保额（30万/50万）](https://dictionary.mangofolio.com/terms/重疾险保额（30万_50万）.html): 确诊赔一笔钱，赔多少看保额
+- [代签名](https://dictionary.mangofolio.com/terms/代签名.html): 名字不是“代劳”，是法律凭证
+- [理赔时效](https://dictionary.mangofolio.com/terms/理赔时效.html): 保险公司的“倒计时”
+- [保单失效 / 复效](https://dictionary.mangofolio.com/terms/保单失效%20_%20复效.html): 忘交保费的“假死”状态
+- [退货运费险](https://dictionary.mangofolio.com/terms/退货运费险.html): 几毛钱买“退货自由”
+- [操作风险](https://dictionary.mangofolio.com/terms/操作风险.html): 人祸与系统祸，不是行情错
+- [模型风险](https://dictionary.mangofolio.com/terms/模型风险.html): 公式也会“自信犯错”
+- [极端风险](https://dictionary.mangofolio.com/terms/极端风险.html): 小概率、大杀伤
+- [对手方风险](https://dictionary.mangofolio.com/terms/对手方风险.html): 对方不履约，你赚钱变亏钱
+- [结算风险](https://dictionary.mangofolio.com/terms/结算风险.html): 钱货交接的半路风险
+- [法拍房](https://dictionary.mangofolio.com/terms/法拍房.html): 法院的“卖房还债”流程
+- [稀缺效应](https://dictionary.mangofolio.com/terms/稀缺效应.html): 越少越想要
+- [克强指数](https://dictionary.mangofolio.com/terms/克强指数.html): 三个硬数据拼出的温度计
+- [长期护理险](https://dictionary.mangofolio.com/terms/长期护理险.html): 给“失能老人”的护理费报销
+- [指数成分股](https://dictionary.mangofolio.com/terms/指数成分股.html): 指数的“股东名单”
+- [点心债 / 美元债](https://dictionary.mangofolio.com/terms/点心债%20_%20美元债.html): 在境外借钱的两种姿势
+- [债务周期](https://dictionary.mangofolio.com/terms/债务周期.html): 借钱扩张与还债收缩的循环
+- [达克效应](https://dictionary.mangofolio.com/terms/达克效应.html): 越不懂越自信的曲线
+- [银联 / 网联](https://dictionary.mangofolio.com/terms/银联%20_%20网联.html): 支付背后的两条通道
+- [消费金融公司（微粒贷/招联/捷信）](https://dictionary.mangofolio.com/terms/消费金融公司（微粒贷_招联_捷信）.html): 持牌放贷的“分期专业户”
+- [债市非银大额赎回互换便利（BNSF）](https://dictionary.mangofolio.com/terms/债市非银大额赎回互换便利（BNSF）.html): 这是什么：给理财和基金备的“救急伞”
+- [新兴市场风险](https://dictionary.mangofolio.com/terms/新兴市场风险.html): 这是什么：投资“年轻经济体”的隐藏成本
 
 ## 相关站点
 - [财务工具箱](https://invest-tools.mangofolio.app): 复利、定投、房贷、个税等免费计算器
+
 （内容由AI生成，仅供参考）
