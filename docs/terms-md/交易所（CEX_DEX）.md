@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_8eb992c5c96e11f18e0e52540064ee0f
+    ReservedCode1: XrfJ6pAK9GBc08K1k+O8xMNIrBfs8uIz5as4A+9El2uTk2sa/K+7+JiIg1gbkMQyMkfC54GapwLRjRXZ/rWO+E0jJ5PqwSruOpdfwm3jtLo6rHG3DfHdmVeoW5nJ6zUcCpgqNKNVcQ1ca0OZUKVEyTeM6OY9rDz32o0ROm/QUt4mlPc0QV+Z95TmVOU=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_8eb992c5c96e11f18e0e52540064ee0f
+    ReservedCode2: XrfJ6pAK9GBc08K1k+O8xMNIrBfs8uIz5as4A+9El2uTk2sa/K+7+JiIg1gbkMQyMkfC54GapwLRjRXZ/rWO+E0jJ5PqwSruOpdfwm3jtLo6rHG3DfHdmVeoW5nJ6zUcCpgqNKNVcQ1ca0OZUKVEyTeM6OY9rDz32o0ROm/QUt4mlPc0QV+Z95TmVOU=
+---
+
 # 交易所（CEX/DEX）
 
 > 买卖加密货币的“证券公司”，分中心化（CEX）和去中心化（DEX）两种。
@@ -39,4 +50,5 @@ DEX（去中心化交易所，如 Uniswap）没有老板：你在链上直接跟
 ---
 
 **相关词条**：[DeFi](<terms/DeFi.html>)、[稳定币（USDT/USDC）](<terms/稳定币（USDT_USDC）.html>)、[比特币（加密货币）](<terms/比特币（加密货币）.html>)、[钱包（冷/热）](<terms/钱包（冷_热）.html>)、[私钥 / 助记词](<terms/私钥 _ 助记词.html>)
+*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*

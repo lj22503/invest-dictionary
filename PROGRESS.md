@@ -11,8 +11,40 @@ AIGC:
 
 # PROGRESS — invest-dictionary（投资词典）
 
-> mangofolio 生态第 3 块 · 术语平权（听得懂）。472 个中文投资术语，"说人话不装逼"。
+> mangofolio 生态第 3 块 · 术语平权（听得懂）。924 个中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
+
+## 2026-10-29 · M2 三页改版（首页 / 全部词条 / 使用指南）
+
+### 背景
+首页 M2 改版"做得太差"：六屏全是纯白底只靠 1px 分隔线，7 张场景卡直接套用 Betterment 原始色板（蓝/紫/金/青/红），还把外来令牌文件 `web/css/betterment-tokens.css` 引进站点（且 untracked，clone 后样式会塌）。
+
+### 本轮改动
+| 文件 | 改动 |
+|---|---|
+| `web/css/site.css`（新增） | 三页共用外壳：色带（`.band--base/paper/mango/grey/dark`）、容器、页头、页脚、区块头、按钮、卡片、侧边目录、代码块、移动端断点、reduced-motion |
+| `web/index.html` | 重写首屏：6 个色带（暖白 hero → 纸色热词 → 芒果 7 场景 → 白 三步 → 墨色初心 → 纸色页脚）；7 场景改 3 列网格 + 跨列 CTA（不再横向滚动藏 2 张）；删除外来色板；信任行数字改读 `ALL_ENTRIES` |
+| `web/dictionary.html` | 重做：mango 页头 + sticky 工具条 + 左「22 篇章」sticky 目录 + 右逐章交替底色；924 条两列网格；搜索高亮 / 章节筛选 / 折叠 / 滚动高亮 / `/` 聚焦 / URL 同步 `?q=` |
+| `web/guide.html` | 重做：mango 页头 + 白「先装 Skill」（三步 + 墨底命令块）+ 暖灰「8 个场景」（左 sticky 目录 + 右逐条：提示词一键复制 / 配套 Skill / 心法）+ 纸色「知识库入口 + 合规红线」 |
+| `docs/specs/三页改版设计规格.md`（新增） | 色带表 / 三页信息架构 / 组件清单 / 硬规则 / 验收标准 |
+| `docs/reference/betterment-tokens.css`（移动） | 外来参考包移出 `web/css/`，只作结构参考，不进站点 |
+
+### 数据 / 门禁修复
+- `ALL_ENTRIES` 914 → 924（`sync_all_entries.py`）：修掉首页 10 个新词条搜不到
+- `sitemap.xml` 914 → 924，并补 `/dictionary`、`/guide` 两个静态页（`generate-sitemap.py` 扩展后重建）
+- `manifest.json` 914 → 924；`llms.txt` 914 → 924，另补 62 条缺失词条 + 词库/指南入口
+- `check-consistency.py`：**10/10 PASS**（改前 6 PASS / 4 FAIL）
+
+### 验证
+- 三页 390px 真视口（iframe）横向溢出 = 0；三页页头/页脚同源一致（导航 5 项 + 随机一词）
+- 词库页：924 条、22 篇章、TOC 22 链接死锚点 0、搜索「可转债」命中 3 条、章节筛选后仅 1 章可见
+- 指南页：8 场景 / 8 条提示词原文一致 / 9 个复制按钮 / TOC 8 死锚点 0
+- 验收截图：`docs/review/2026-10-29/`
+
+### 下一步（待批）
+- **git commit + push 等老板拍板**：push 会触发 Vercel 重新部署，直接影响线上站
+- 概念关系链 P2 / ima 全量同步：仍按原计划后置
+
 
 ## 2026-09-22 · neat-freak 审计 + 一致性收尾（品牌 v1.0 push 后）
 

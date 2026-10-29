@@ -2,12 +2,14 @@
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_25693804d1a411f1b84e52540064ee0f
-    ReservedCode1: KppV4MfM/LWk1HpJq2POgcMVmTpz1CZICzxUt2HzvSkBky9zJoGvh+PPbTxB2lQPlmOrASUUSEz2udCzgtosheGO5HZ262VQDLdncW5VJwYBdIMA0FOqQSPdLwCKRYdaD6cmMf/XcGitqcttnwVAXxRtnq337QZa7dlzMc9sYlc297dw69Y1uXIJCUQ=
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_1d3e2b3dd20b11f1992e525400638852
+    ReservedCode1: xT3K2ju/qCqfaCfXUYnpvx/Iecq+EjA2rIKTL9l33Ky3IP9NgI5KZlpQOsdYJm3d5+79z15IDg5yj361oSrhPQUYXRER4oxyOfmKGl0AvfycXe967iJtirUyqtYeqCzfa7LIfWjus/CsZdFhzEN12YTK35bRCtj6w9f8N5MtJ1GJTxvW7AruDQwzRDk=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_25693804d1a411f1b84e52540064ee0f
-    ReservedCode2: KppV4MfM/LWk1HpJq2POgcMVmTpz1CZICzxUt2HzvSkBky9zJoGvh+PPbTxB2lQPlmOrASUUSEz2udCzgtosheGO5HZ262VQDLdncW5VJwYBdIMA0FOqQSPdLwCKRYdaD6cmMf/XcGitqcttnwVAXxRtnq337QZa7dlzMc9sYlc297dw69Y1uXIJCUQ=
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_1d3e2b3dd20b11f1992e525400638852
+    ReservedCode2: xT3K2ju/qCqfaCfXUYnpvx/Iecq+EjA2rIKTL9l33Ky3IP9NgI5KZlpQOsdYJm3d5+79z15IDg5yj361oSrhPQUYXRER4oxyOfmKGl0AvfycXe967iJtirUyqtYeqCzfa7LIfWjus/CsZdFhzEN12YTK35bRCtj6w9f8N5MtJ1GJTxvW7AruDQwzRDk=
 ---
+
+
 
 # 策略指数 / Smart Beta
 
@@ -39,4 +41,5 @@ AIGC:
 ---
 
 **相关词条**：指数基金（宽基指数 vs 行业指数）、红利低波、红利指数基金、因子投资（价值_质量_小市值）
+*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*

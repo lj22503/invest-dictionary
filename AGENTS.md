@@ -17,7 +17,7 @@ AIGC:
 
 ## 项目一句话定位
 
-投资词典（Invest Dictionary）：472 个中文投资术语，说人话不装逼。独立项目，不并入 InvestBuddy。线上站：https://dictionary.mangofolio.com
+投资词典（Invest Dictionary）：924 个中文投资术语，说人话不装逼。独立项目，不并入 InvestBuddy。线上站：https://dictionary.mangofolio.com
 
 ## 怎么跑起来
 
@@ -37,7 +37,9 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 
 ## 目录与约定
 
-- `web/` — 线上站点（index.html、terms/ 472 词条页、dictionary.json、sitemap.xml、robots.txt、vercel.json）
+- `web/` — 线上站点（`index.html` 首页、`dictionary.html` 全部词条、`guide.html` 使用指南、`terms/` 924 词条页、`dictionary.json`、`sitemap.xml`、`robots.txt`、`vercel.json`）
+- `web/css/mangofolio-tokens-v09.css` — 颜色/字体/间距/圆角**唯一令牌源**；`web/css/site.css` — 三页共用外壳（色带 `.band--*` / 页头 / 页脚 / 区块头 / 按钮 / 卡片 / 目录 / 代码块）。页面专属样式才写进各自 `<style>`，禁止三页各抄一份 header/footer
+- 三页设计口径见 `docs/specs/三页改版设计规格.md`（色带表 / 信息架构 / 硬规则 / 验收标准）；外来参考包只放 `docs/reference/`，**不进 web/**
 - `web/dictionary.json` — 词条唯一数据源（id/slug/chapter/description/related）
 - `skill/invest-dictionary-generator/` — 金融词条生成 Skill（SKILL.md + templates + examples）
 - `docs/` — PROJECT_GOALS.md（目标清单）、PITFALLS.md（坑点）、design-tokens.md（令牌速查）、HANDOFF.md（接手说明）、BRAND_AUDIT_2026-09-19.md、superpowers/（spec 与 plan）
@@ -49,7 +51,7 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 
 - 已推送 GitHub（main），仓库 SEO 已配置（About + 20 Topics）；线上站 https://dictionary.mangofolio.com 已上线并验证
 - 品牌视觉：mangofolio v1.0 全量落地（2026-09-22）；令牌权威源 `web/css/mangofolio-tokens-v09.css`，速查 `docs/design-tokens.md`
-- 词条数据：`web/terms` **472 页**；唯一数据源 `web/dictionary.json`；首页内嵌 `ALL_ENTRIES` 由 `scripts/sync_all_entries.py` 同步；`web/sitemap.xml` 由 `scripts/generate-sitemap.py` 生成 —— 三者条数必须一致（页面声称条目数同理）
+- 词条数据：`web/terms` **924 页**；唯一数据源 `web/dictionary.json`；首页内嵌 `ALL_ENTRIES` 由 `scripts/sync_all_entries.py` 同步；`web/sitemap.xml` 由 `scripts/generate-sitemap.py` 生成 —— 三者条数必须一致（页面声称条目数同理）
 - **提交前必跑**：`python scripts/check-consistency.py`（计数一致性 / id·slug·filename 唯一性 / 页内断链 / sitemap 覆盖 / 旧域名残留 / ALL_ENTRIES 同步）
 *（内容由AI生成，仅供参考）*
 

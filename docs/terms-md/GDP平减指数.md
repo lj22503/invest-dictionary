@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_b096391cd25b11f1b84e52540064ee0f
+    ReservedCode1: L4YprJR/j/iQvxa6pFGJMOTFTKvQV5XpAcbX+pOp6P6AEx22mdHCIXNVAaD/q34uPuhM/qZGQcsm544NEgOqQVOFcQj7c2ai6Ww7f5hbNoDzlm7HqsXSQLOaajlrYG+BP2roJNFggEKl/otKRLufzc9cbG3a2qxbSjEUGnnhJQON5S3fP8lQJiO54IM=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_b096391cd25b11f1b84e52540064ee0f
+    ReservedCode2: L4YprJR/j/iQvxa6pFGJMOTFTKvQV5XpAcbX+pOp6P6AEx22mdHCIXNVAaD/q34uPuhM/qZGQcsm544NEgOqQVOFcQj7c2ai6Ww7f5hbNoDzlm7HqsXSQLOaajlrYG+BP2roJNFggEKl/otKRLufzc9cbG3a2qxbSjEUGnnhJQON5S3fP8lQJiO54IM=
+---
+
 # GDP平减指数
 
 > 把名义GDP“挤掉”物价水分算出来的整体物价变化指标，比CPI覆盖范围更广，是观察通胀最全面的温度计。
@@ -29,3 +40,4 @@ GDP平减指数 = 名义GDP ÷ 实际GDP × 100。
 ---
 
 **相关词条**：GDP（名义GDP vs 实际GDP）、CPI（居民消费价格指数）、PPI（工业生产者出厂价格指数）、通货膨胀（CPI）
+*（内容由AI生成，仅供参考）*

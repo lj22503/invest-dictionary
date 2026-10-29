@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_b2854ea5d25b11f1b84e52540064ee0f
+    ReservedCode1: 3u//OVpb37v1i/8akLAHRMFXIuOWfs3fmHUgbgWI5yOdb7LkSMk6ZHuAi1P4YVU7FfMNB7YDCp8ib5Nm2mom4Qh3EVL/Fv1jjZS1qsLQM5ftwGvBKRBv8hiOR+j8kBGUDoUrkjVV6AmURHXXytz714idrg8Or6TxwpNNxaXwde5/K8kq3JCqzi/XQEQ=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_b2854ea5d25b11f1b84e52540064ee0f
+    ReservedCode2: 3u//OVpb37v1i/8akLAHRMFXIuOWfs3fmHUgbgWI5yOdb7LkSMk6ZHuAi1P4YVU7FfMNB7YDCp8ib5Nm2mom4Qh3EVL/Fv1jjZS1qsLQM5ftwGvBKRBv8hiOR+j8kBGUDoUrkjVV6AmURHXXytz714idrg8Or6TxwpNNxaXwde5/K8kq3JCqzi/XQEQ=
+---
+
 # 年化 vs 累计
 
 > 累计收益率是你总共赚了多少，年化收益率是折算成“每年平均赚多少”。比较不同期限的投资，必须用年化。
@@ -31,3 +42,4 @@ A 产品 3 年累计赚 30%；B 产品 1 年赚 10%；看累计，A 赢；看年
 ---
 
 **相关词条**：年化收益率（及年化复合收益率）、基金净值（单位/累计）、夏普比率（性价比：每承担1份风险换多少收益）、复利（单利 vs 复利）
+*（内容由AI生成，仅供参考）*

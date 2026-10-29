@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_8e0fa09ec96e11f18533525400638852
+    ReservedCode1: cGvaOOulAVD+tGg+I0wJ6wDiiyag9dJKp9Whs3b8PRJfVVTP/sN8doWtyUobe8bosrr4oCrgnDMv+XpErjMannLchYZBF/5RFDnAvN8IUewpErgj9KZiX3gdf04k2f1VWVQblH1LLFVtz+JFefqyApYWrQuUqVKBI2z7LWwgabhgBXEFAfuiI81HFfI=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_8e0fa09ec96e11f18533525400638852
+    ReservedCode2: cGvaOOulAVD+tGg+I0wJ6wDiiyag9dJKp9Whs3b8PRJfVVTP/sN8doWtyUobe8bosrr4oCrgnDMv+XpErjMannLchYZBF/5RFDnAvN8IUewpErgj9KZiX3gdf04k2f1VWVQblH1LLFVtz+JFefqyApYWrQuUqVKBI2z7LWwgabhgBXEFAfuiI81HFfI=
+---
+
 # NFT
 
 > 一张写在区块链上的“数字产权证”，证明某件数字东西归你。
@@ -39,4 +50,5 @@ NFT（非同质化代币）是一串存在区块链上的记录，对应某个�
 ---
 
 **相关词条**：[DeFi](<terms/DeFi.html>)、[稳定币（USDT/USDC）](<terms/稳定币（USDT_USDC）.html>)、[比特币（加密货币）](<terms/比特币（加密货币）.html>)、[数字人民币](<terms/数字人民币.html>)、[钱包（冷/热）](<terms/钱包（冷_热）.html>)
+*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*

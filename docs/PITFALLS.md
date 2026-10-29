@@ -203,6 +203,33 @@ AIGC:
 - **修复**：已列入清理候选（待批，见 PROGRESS.md 待办）。
 - **预防**：提交前用 `git ls-files | Select-String '\.bak'` 核对备份残留；备份文件一律写入 `web/temp/`（已忽略）或仓库外。
 
+## 26. 首页内嵌 ALL_ENTRIES 再次脱节（914 vs 924，2026-10-29）
+
+- **现象**：首页搜索漏掉最新 10 个词条（美股交易时间、双基金经理、基金经理变更、每股净资产…）。
+- **根因**：10-28/29 两批热词入库后只提交了词条页与登记，没跑 `sync_all_entries.py`；提交前也没跑门禁。
+- **修复**：跑同步脚本 → 924；`check-consistency.py` 10/10 PASS。
+- **预防**：每天热词入库后固定跑 `python scripts/check-consistency.py`，不看结果不提交。
+
+## 27. 改版把外来设计令牌引进站点（2026-10-29）
+
+- **现象**：首页引用 `css/betterment-tokens.css`（456 个 `--bmt-*` 变量 = Betterment 的蓝/金/青），7 张场景卡直接用 `--bmt-colors-primitives-blue-60` 等；该文件还是 untracked，clone 或部署后样式直接塌。
+- **根因**：把"参考网站"的令牌当成本站令牌。参考包只能借**结构**，不能借颜色。
+- **修复**：令牌统一回 `mangofolio-tokens-v09.css`；参考包移到 `docs/reference/`；新增 `web/css/site.css` 只放本项目色带与组件。
+- **预防**：`grep -r "--bmt-" web/` 必须为 0；新页面只允许引用 mangofolio 令牌。
+
+## 28. 移动端 1fr 网格被 min-content 撑破（2026-10-29）
+
+- **现象**：390px 下热词卡/场景卡横向溢出，整页 `scrollWidth` 591 > 390，文字看着像被裁。
+- **根因**：`grid-template-columns: 1fr` 的自动最小值是 min-content，卡里 `white-space: nowrap` 的文本把轨道撑宽；flex 子项同理（默认 `min-width:auto`）。
+- **修复**：移动端轨道改 `minmax(0, 1fr)`；热词项加 `min-width: 0`。
+- **预防**：含 nowrap 内容或长词的网格/弹性子项，一律 `minmax(0,1fr)` / `min-width:0`。
+
+## 29. headless 截图的手机视口不可信（2026-10-29）
+
+- **现象**：`msedge --headless --window-size=390,844` 截出来的图右侧全被裁，看起来像横向溢出；但 390 真视口探测 `scrollWidth=375`、溢出元素 0。
+- **根因**：Windows 下浏览器窗口有最小宽度（约 500px），`--window-size` 只是窗口尺寸，布局视口比截图宽。
+- **预防**：移动端校验用 iframe 真视口（`web/temp/mobile-view.html?page=&y=`）+ `--dump-dom` 打印 `scrollWidth` 与溢出元素清单，别只看截图。
+
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
 *（内容由AI生成，仅供参考）*

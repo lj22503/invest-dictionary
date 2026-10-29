@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_35651056d20911f1992e525400638852
+    ReservedCode1: xHT9+rjA0XdjGKHe/2/ebhI53K3f/SMVM/co+lmkt8O3pQxe8hAPfp74UF0oUCEX61uxXsz96mb2smC+4bPbs9GOSjYMz4UFcfmK/axUM812y1+lGyYPIomOjBeEv80lsASqQ0JoTsPtnKefbNeWdFkmaS582e2Y2+ARYC3XPiBjZmw4V1yzNpLCmPo=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_35651056d20911f1992e525400638852
+    ReservedCode2: xHT9+rjA0XdjGKHe/2/ebhI53K3f/SMVM/co+lmkt8O3pQxe8hAPfp74UF0oUCEX61uxXsz96mb2smC+4bPbs9GOSjYMz4UFcfmK/axUM812y1+lGyYPIomOjBeEv80lsASqQ0JoTsPtnKefbNeWdFkmaS582e2Y2+ARYC3XPiBjZmw4V1yzNpLCmPo=
+---
+
 <div align="center">
 
 # 投资词典 · Invest Dictionary
@@ -73,6 +84,24 @@ cp -r skill/invest-dictionary-generator ~/.claude/skills/
 
 之后对 Agent 说："用投资词典的方法写一个词条：**可转债**"，即可得到符合本词典风格的词条 Markdown 与 HTML 页面。
 
+### 场景使用说明（AI 用户）
+
+投资词典二期沉淀了 8 个 Skill，覆盖普通人最常见的 8 个理财场景。把场景提示词直接发给 AI（已加载对应 Skill 的 Claude / Agent），即可触发对应 Skill：
+
+| 场景 | 提示词示例（照着发） | 配套 Skill |
+|------|------|------|
+| **查词学词** | "用投资词典的方法写一个词条：**可转债**" | `invest-dictionary-generator`（单词条生成） |
+| **看新闻** | "帮我翻译这段新闻：**央行降准0.5个百分点，释放长期资金约1万亿**，说人话" | `combo-narrative`（新闻翻译机） |
+| **持仓亏了** | "**我买的理财亏了，要不要赶紧卖掉？**" | `symptom-lookup`（理财急诊 / 症状倒查） |
+| **产品对比** | "手里有 10 万，**存定期还是买银行理财？**" | `duel-compare`（二选一擂台） |
+| **重大决定** | "**我要不要提前还房贷？**" | `decision-mosaic`（决策拆解桌 / 决策拼图） |
+| **防坑提问** | "**增额终身寿险**，我该问销售什么问题？" | `question-probe`（防坑提问器 / 该问什么） |
+| **复杂事件** | "把这段做成网页：**央行降准后市场怎么看**，讲给客户听" | `invest-dictionary-concept-combinator`（概念串联） |
+| **今日热词** | "**今日热词**，今天市场都在聊什么？" | `daily-hotword`（每日热词） |
+
+> 💡 五个核心 Skill 的分工口诀：**看新闻找 combo-narrative，亏了找 symptom-lookup，纠结二选一找 duel-compare，纠结该不该找 decision-mosaic，面对产品找 question-probe**。
+> 所有 Skill 输出均为"概念梳理与提问参考"，不构成投资建议。
+
 ## 目录结构
 
 ```
@@ -84,13 +113,25 @@ invest-dictionary/
 │   ├── sitemap.xml / robots.txt  # SEO
 │   └── vercel.json               # 部署配置
 ├── skill/
-│   └── invest-dictionary-generator/   # 金融词条生成 Skill
-│       ├── SKILL.md              # 方法论 + 质量三原则 + 命名规范
-│       ├── templates/            # 词条 Markdown / HTML 模板
-│       └── examples/             # 示例词条
+│   ├── invest-dictionary-generator/   # 金融词条生成 Skill
+│   │   ├── SKILL.md              # 方法论 + 质量三原则 + 命名规范
+│   │   ├── templates/            # 词条 Markdown / HTML 模板
+│   │   └── examples/             # 示例词条
+│   ├── invest-dictionary-concept-combinator/   # 概念串联（原有 Skill，保留原名）
+│   │   ├── SKILL.md              # 6 屏叙事方法论（S1-S6 模板）
+│   │   ├── templates/            # 叙事大纲 / 页面模板
+│   │   └── examples/             # 示例叙事
+│   ├── symptom-lookup/           # 理财急诊（症状倒查）
+│   ├── combo-narrative/          # 新闻翻译机（概念串联轻量版）
+│   ├── duel-compare/             # 二选一擂台（二选一对打）
+│   ├── decision-mosaic/          # 决策拆解桌（决策拼图）
+│   ├── question-probe/           # 防坑提问器（该问什么）
+│   └── daily-hotword/            # 每日热词
 └── docs/
     ├── PROJECT_GOALS.md          # 项目目标记录
-    └── PITFALLS.md               # 已知坑点（开发排雷手册）
+    ├── PITFALLS.md               # 已知坑点（开发排雷手册）
+    └── specs/
+        └── 投资词典知识库使用指南.md  # 场景式使用指南（含 ima 链接）
 ```
 
 ## 贡献词条
@@ -124,3 +165,4 @@ invest-dictionary/
 ---
 
 **免责声明**：内容由 AI 生成，仅供学习参考，不构成投资建议。
+*（内容由AI生成，仅供参考）*
