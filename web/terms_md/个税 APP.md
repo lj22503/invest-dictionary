@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_04e45bfdc85e11f18569525400638852
+    ReservedCode1: oOM80zUa9/UH8IMh/MjZxkLNxKCNnINfiACxzFrvyCBgah/5S2rYjXwqI4tppSwA6/7xDxzH8NfpdwFuhh0HVAs7r5lsC+nHMHDGNa2VJTmrg2705F8BDVgpOuSGc680MfenTJvHZ6T9H0Jtq6KXz9aBuzJJchv01MEUlUm15L95kw1ogMlUP1NXK4g=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_04e45bfdc85e11f18569525400638852
+    ReservedCode2: oOM80zUa9/UH8IMh/MjZxkLNxKCNnINfiACxzFrvyCBgah/5S2rYjXwqI4tppSwA6/7xDxzH8NfpdwFuhh0HVAs7r5lsC+nHMHDGNa2VJTmrg2705F8BDVgpOuSGc680MfenTJvHZ6T9H0Jtq6KXz9aBuzJJchv01MEUlUm15L95kw1ogMlUP1NXK4g=
+---
+
 # 个税 APP
 
 > 个人所得税 APP 是官方报税入口，每年汇算清缴能退能补；多填一项专项附加扣除，可能就多退几千块。
@@ -47,3 +58,4 @@
 ---
 
 **相关词条**：个税汇算清缴、专项附加扣除、个税起征点（免征额）、退税 / 补税
+*（内容由AI生成，仅供参考）*

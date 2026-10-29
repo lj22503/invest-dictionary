@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>词库 · 投资词典</title>
+<meta name="description" content="投资词典完整词库：900+ 理财词条，按章节浏览，说人话不装逼。已同步 ima 知识库，支持 Skill 直接调用。">
+<link rel="canonical" href="https://dictionary.mangofolio.com/dictionary">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dictionary.mangofolio.com/dictionary">
+<meta property="og:title" content="词库 · 投资词典">
+<meta property="og:description" content="投资词典完整词库：900+ 理财词条，按章节浏览，说人话不装逼。">
+<meta property="og:locale" content="zh_CN">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700;900&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mangofolio-tokens-v09.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#F97316">
+<style>
+/* ============================================================
+   词库页（dictionary.html）页面级样式
+   —— 壳层（header / footer / band / wrap / sec-head / chip / toc / btn）
+      全部来自 css/site.css；这里只写本页特有的结构和排版。
+   —— 颜色只用 mangofolio 令牌，不写死色值。
+   ============================================================ */
+
+:root {
+  --dict-header-h: 66px;    /* header 实际高度，JS 量出后覆盖 */
+  --dict-toolbar-h: 100px;  /* 工具条实际高度，JS 量出后覆盖 */
+  --dict-rail: 252px;       /* 桌面端左侧章节目录宽度 */
+}
+
+[hidden] { display: none !important; }
+
+html {
+  scroll-padding-top: calc(var(--dict-header-h) + var(--dict-toolbar-h) + 20px);
+}
+
+mark {
+  padding: 0 2px;
+  border-radius: var(--mf-radii-small);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-strong);
+}
+
+.num { font-variant-numeric: tabular-nums; }
+
+kbd {
+  padding: 1px 5px;
+  border: 1px solid var(--mf-colors-border-strong);
+  border-radius: var(--mf-radii-small);
+  background: var(--mf-colors-background-surface);
+  font-family: var(--mf-fonts-mono), Consolas, monospace;
+  font-size: 0.78em;
+  line-height: 1.4;
+  color: var(--mf-colors-text);
+}
+
+/* ---------------- 页头：mango 色带 ---------------- */
+.dict-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.96fr);
+  gap: clamp(26px, 4vw, 56px);
+  align-items: end;
+}
+.dict-hero__eyebrow {
+  margin-bottom: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--mf-colors-text);
+}
+.dict-hero__title {
+  font-size: clamp(2.6rem, 5.4vw, 3.9rem);
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  line-height: 1.04;
+  color: var(--mf-colors-text-strong);
+}
+.dict-hero__en {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--mf-fonts-display-extended), Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1.06rem);
+  letter-spacing: 0.16em;
+  color: var(--mf-colors-text);
+  opacity: 0.72;
+}
+.dict-hero__lead {
+  margin-top: 16px;
+  max-width: 34ch;
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--mf-colors-text);
+}
+.dict-hero__lead b {
+  font-family: var(--mf-fonts-display), serif;
+  font-size: 1.3em;
+  font-weight: 900;
+  color: var(--mf-colors-text-accent-mango);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 大搜索框 */
+.dict-search { display: flex; flex-direction: column; gap: 10px; }
+.search-field { position: relative; display: flex; align-items: center; }
+.search-field__icon {
+  position: absolute;
+  left: 19px;
+  width: 19px;
+  height: 19px;
+  color: var(--mf-colors-text-weak);
+  pointer-events: none;
+}
+.search-field__input {
+  width: 100%;
+  height: 58px;
+  padding: 0 20px 0 50px;
+  font-family: var(--mf-fonts-ui);
+  font-size: 1rem;
+  color: var(--mf-colors-text);
+  background: var(--mf-colors-background-input);
+  border: 1px solid var(--mf-colors-border-strong);
+  border-radius: var(--mf-radii-round);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.search-field__input::placeholder { color: var(--mf-colors-text-placeholder); }
+.search-field__input:focus {
+  outline: none;
+  border-color: var(--mf-colors-border-focused);
+  box-shadow: 0 0 0 4px var(--mf-colors-background-warning);
+}
+.dict-search__hint {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--mf-colors-text);
+  opacity: 0.74;
+}
+.dict-search .note { font-size: 0.86rem; line-height: 1.7; }
+.dict-search .note a {
+  color: var(--mf-colors-text-strong);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--mf-colors-text-link);
+  text-underline-offset: 3px;
+}
+
+/* ---------------- 工具条：grey 色带（sticky） ---------------- */
+.dict-toolbar {
+  position: sticky;
+  top: var(--dict-header-h);
+  z-index: 98;
+  padding: 12px 0 10px;
+  border-bottom: 1px solid var(--mf-colors-border);
+}
+.dict-toolbar__inner { min-width: 0; }
+.dict-toolbar__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 18px;
+}
+.dict-toolbar__count {
+  font-size: 0.86rem;
+  color: var(--mf-colors-text);
+  font-variant-numeric: tabular-nums;
+}
+.dict-toolbar__count b { font-size: 1rem; font-weight: 700; color: var(--mf-colors-text-strong); }
+.dict-toolbar__actions { display: flex; gap: 8px; }
+.dict-toolbar .btn { padding: 6px 14px; font-size: 0.8rem; }
+
+.chip-rail {
+  margin-top: 10px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+.chip-rail::-webkit-scrollbar { height: 6px; }
+.chip-rail::-webkit-scrollbar-thumb {
+  background: var(--mf-colors-border-strong);
+  border-radius: var(--mf-radii-round);
+}
+.chip-rail .chips { flex-wrap: nowrap; }
+.dict-toolbar .chip {
+  -webkit-appearance: none;
+  appearance: none;
+  white-space: nowrap;
+  color: var(--mf-colors-text);
+}
+.dict-toolbar .chip .chip__no {
+  font-size: 0.72rem;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+.dict-toolbar .chip .chip__n { color: inherit; opacity: 0.8; }
+.dict-toolbar .chip.is-on {
+  border-color: var(--mf-colors-text-link);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-strong);
+}
+
+/* ---------------- 主体：base 色带 + 两栏 ---------------- */
+.dict-main { padding: clamp(26px, 3.4vw, 42px) 0 clamp(46px, 6vw, 76px); }
+.dict-main__grid {
+  display: grid;
+  grid-template-columns: var(--dict-rail) minmax(0, 1fr);
+  gap: clamp(22px, 3vw, 44px);
+  align-items: start;
+}
+.dict-main__grid.is-search { grid-template-columns: minmax(0, 1fr); }
+
+/* 左：章节目录 */
+.dict-toc {
+  top: calc(var(--dict-header-h) + var(--dict-toolbar-h) + 16px);
+  max-height: calc(100vh - var(--dict-header-h) - var(--dict-toolbar-h) - 32px);
+  padding: 14px 10px;
+}
+.dict-toc .toc__title { margin-bottom: 8px; }
+.dict-toc a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 8px;
+  padding: 5px 8px;
+}
+.dict-toc .toc__no { font-size: 0.72rem; opacity: 0.6; font-variant-numeric: tabular-nums; }
+.dict-toc .toc__name { min-width: 0; line-height: 1.45; overflow-wrap: anywhere; }
+.dict-toc .toc__n { margin-left: 0; color: inherit; opacity: 0.72; font-size: 0.74rem; }
+.dict-toc a:hover { color: var(--mf-colors-text-strong); background: var(--mf-colors-background-warning); }
+.dict-toc a.is-on {
+  color: var(--mf-colors-text-strong);
+  background: var(--mf-colors-background-warning);
+  font-weight: 600;
+}
+
+/* 右：章节区块（逐章交替 base / paper） */
+.chapter {
+  padding: 20px 24px 24px;
+  border-top: 1px solid var(--mf-colors-border);
+}
+.chapter[data-tone="paper"] { background: var(--mf-colors-background-neutral); }
+.chapter__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+}
+.chapter__id { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; min-width: 0; }
+.chapter__no {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  color: var(--mf-colors-text);
+  opacity: 0.62;
+}
+.chapter__title {
+  font-size: clamp(1.12rem, 1.7vw, 1.34rem);
+  letter-spacing: 0.02em;
+  color: var(--mf-colors-text-strong);
+  overflow-wrap: anywhere;
+}
+.chapter__head:hover .chapter__title { color: var(--mf-colors-text-accent-mango); }
+.chapter__count {
+  font-size: 0.78rem;
+  white-space: nowrap;
+  color: var(--mf-colors-text);
+  opacity: 0.62;
+}
+.chapter__fold {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 13px;
+  border: 1px solid var(--mf-colors-border-strong);
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-surface);
+  color: var(--mf-colors-text);
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.chapter__fold:hover {
+  border-color: var(--mf-colors-text-link);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-strong);
+}
+.chapter__body { margin-top: 12px; }
+.chapter.is-collapsed .chapter__body { display: none; }
+.chapter__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+/* 条目：序号 + 词名 + 一句话 */
+.term {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 8px 8px 9px;
+  border-top: 1px solid var(--mf-colors-border);
+  border-radius: var(--mf-radii-medium);
+  color: var(--mf-colors-text);
+}
+.term:hover,
+.term:focus-visible { background: var(--mf-colors-background-warning); color: var(--mf-colors-text); }
+.term__no {
+  padding-top: 1px;
+  font-size: 0.72rem;
+  line-height: 1.75;
+  color: var(--mf-colors-text);
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+.term__body { min-width: 0; }
+.term__name {
+  display: block;
+  font-size: 0.93rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--mf-colors-text-strong);
+  overflow-wrap: anywhere;
+}
+.term:hover .term__name,
+.term:focus-visible .term__name {
+  text-decoration: underline;
+  text-decoration-color: var(--mf-colors-text-link);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.term__desc {
+  display: block;
+  margin-top: 1px;
+  font-size: 0.79rem;
+  line-height: 1.55;
+  color: var(--mf-colors-text);
+  opacity: 0.82;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------------- 搜索结果 ---------------- */
+.dict-results__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--mf-colors-border);
+}
+.dict-results__title { font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--mf-colors-text-strong); }
+.dict-results__info { font-size: 0.85rem; color: var(--mf-colors-text); opacity: 0.76; }
+.dict-results__head .btn { margin-left: auto; }
+.dict-results__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0 22px;
+  margin-top: 12px;
+}
+.hit {
+  display: block;
+  padding: 10px 10px 11px;
+  border-top: 1px solid var(--mf-colors-border);
+  border-radius: var(--mf-radii-medium);
+  color: var(--mf-colors-text);
+}
+.hit:hover,
+.hit:focus-visible { background: var(--mf-colors-background-warning); color: var(--mf-colors-text); }
+.hit__top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.hit__name {
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--mf-colors-text-strong);
+  overflow-wrap: anywhere;
+}
+.hit:hover .hit__name,
+.hit:focus-visible .hit__name {
+  text-decoration: underline;
+  text-decoration-color: var(--mf-colors-text-link);
+  text-underline-offset: 3px;
+}
+.hit__ch { flex: 0 0 auto; font-size: 0.72rem; color: var(--mf-colors-text); opacity: 0.62; }
+.hit__desc {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.79rem;
+  line-height: 1.55;
+  color: var(--mf-colors-text);
+  opacity: 0.82;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 空态 / 加载态 */
+.empty { padding: 34px 0 10px; border-top: 1px solid var(--mf-colors-border); }
+.empty__title { font-size: 1.15rem; color: var(--mf-colors-text-strong); }
+.empty__hint {
+  margin-top: 8px;
+  max-width: 46ch;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--mf-colors-text);
+  opacity: 0.84;
+}
+.empty a,
+.dict-results a {
+  color: var(--mf-colors-text-strong);
+  text-decoration: underline;
+  text-decoration-color: var(--mf-colors-text-link);
+  text-underline-offset: 3px;
+}
+.state { padding: 40px 4px; font-size: 0.9rem; color: var(--mf-colors-text); opacity: 0.76; }
+.state--error { color: var(--mf-colors-text-critical); opacity: 1; }
+
+/* ---------------- 页脚链接对比度兜底（站内统一壳仍是 site.css） ---------------- */
+.site-footer a,
+.mangofolio-nav a {
+  color: var(--mf-colors-text);
+  text-decoration: underline;
+  text-decoration-color: var(--mf-colors-primitives-mango-500);
+  text-underline-offset: 3px;
+}
+.site-footer a:hover,
+.mangofolio-nav a:hover {
+  color: var(--mf-colors-text-strong);
+  text-decoration-color: var(--mf-colors-text-link);
+}
+.site-footer .disclaimer { max-width: 72ch; }
+
+/* ---------------- 响应式 ---------------- */
+@media (max-width: 1080px) {
+  :root { --dict-rail: 224px; }
+}
+
+@media (max-width: 900px) {
+  .dict-main__grid { grid-template-columns: minmax(0, 1fr); }
+  .dict-toc { display: none; }
+  .dict-hero { grid-template-columns: minmax(0, 1fr); gap: 26px; align-items: start; }
+  .dict-hero__lead { max-width: 52ch; }
+}
+
+@media (max-width: 720px) {
+  .chapter { padding: 18px 16px 20px; }
+  .chapter__grid { grid-template-columns: minmax(0, 1fr); }
+  .dict-main { padding-top: 20px; }
+  .dict-results__grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+
+@media (max-width: 660px) {
+  .dict-toolbar { position: static; }
+  html { scroll-padding-top: 88px; }
+  .dict-hero__title { letter-spacing: 0.04em; }
+  .search-field__input { height: 52px; font-size: 0.96rem; }
+  .dict-toolbar__row { gap: 8px 12px; }
+  .dict-toolbar__actions .btn { padding: 6px 12px; }
+  .chapter__head { align-items: flex-start; }
+  .chapter__fold { padding: 4px 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-field__input,
+  .chapter__fold { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到词条列表</a>
+
+<header class="site-header">
+  <a class="brand" href="index.html">投资词典<span class="brand-en">Invest Dictionary</span></a>
+  <nav class="site-nav" aria-label="主导航">
+    <a href="dictionary.html" class="is-active" aria-current="page">全部词条</a>
+    <a href="index.html#daily-hot">今日热词</a>
+    <a href="index.html#skills">7 个场景</a>
+    <a href="index.html#howto">怎么用</a>
+    <a href="guide.html">使用指南</a>
+    <a class="site-nav__cta" href="index.html?random=1">随机一词</a>
+  </nav>
+</header>
+
+<!-- 1. 页头：mango 色带 -->
+<section class="band band--mango band--tight">
+  <div class="wrap dict-hero">
+    <div class="dict-hero__main">
+      <p class="dict-hero__eyebrow">INVEST DICTIONARY · 全部词条</p>
+      <h1 class="dict-hero__title">词库</h1>
+      <span class="dict-hero__en">All Terms, Plain Words</span>
+      <p class="dict-hero__lead">
+        共 <b class="num" id="entryCount">--</b> 个词条，分 <b class="num" id="chapterCount">--</b> 个章节。
+        每个词条一句话说清，按章节翻或直接搜。
+      </p>
+    </div>
+    <div class="dict-hero__side dict-search">
+      <div class="search-field" role="search">
+        <svg class="search-field__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"></circle>
+          <path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+        <label class="sr-only" for="searchBox">搜索词条</label>
+        <input class="search-field__input" id="searchBox" type="search" autocomplete="off"
+               placeholder="搜词条，如「可转债」「LPR」「最大回撤」">
+      </div>
+      <p class="dict-search__hint">可搜词条名或一句话里的关键词；清空搜索框恢复全部。按 <kbd>/</kbd> 可直接聚焦。</p>
+      <p class="note">📚 词库已同步到 <a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84c3d4" target="_blank" rel="noopener">ima 知识库</a>，装 Skill 后可直接调用。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 工具条：grey 色带（sticky） -->
+<section class="band band--grey dict-toolbar" id="toolbar" aria-label="词条筛选工具条">
+  <div class="wrap dict-toolbar__inner">
+    <div class="dict-toolbar__row">
+      <p class="dict-toolbar__count" id="countNow" aria-live="polite">正在读取词条…</p>
+      <div class="dict-toolbar__actions">
+        <button class="btn btn--line" type="button" id="expandAll">全部展开</button>
+        <button class="btn btn--line" type="button" id="collapseAll">全部收起</button>
+      </div>
+    </div>
+    <div class="chip-rail">
+      <div class="chips" id="chapterChips" aria-label="按章节筛选"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 主体：base 色带，两栏（左章节目录 / 右章节区块） -->
+<main class="band band--base dict-main" id="main">
+  <div class="wrap dict-main__grid" id="mainGrid">
+
+    <aside class="toc dict-toc" id="toc" aria-label="章节目录">
+      <p class="toc__title">章节目录</p>
+      <nav id="tocList"></nav>
+    </aside>
+
+    <div class="dict-col">
+      <div id="chapters">
+        <p class="state" id="loadingState">正在加载词条…</p>
+      </div>
+      <noscript><p class="state">本页需要 JavaScript 才能按章节浏览；也可以直接回到 <a href="index.html">首页</a>。</p></noscript>
+
+      <div class="dict-results" id="results" hidden>
+        <div class="dict-results__head">
+          <h2 class="dict-results__title">搜索结果</h2>
+          <p class="dict-results__info" id="resultInfo" aria-live="polite"></p>
+          <button class="btn btn--line" type="button" id="clearSearch">清空搜索</button>
+        </div>
+        <div class="dict-results__grid" id="hits"></div>
+        <div class="empty" id="noResult" hidden>
+          <p class="empty__title">没有搜到 <span class="empty__q"></span></p>
+          <p class="empty__hint">词条名或一句话里有这个词才会出现。换个更短的关键词试试，或者 <a href="index.html">回首页</a> 用自然语言问。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- 4. 页脚 -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="disclaimer">本站内容与全部 AI 输出均为信息整理 / 知识科普 / 投教参考，不构成投资建议；不承诺收益、不保本保息。投资有风险，决策需谨慎。</p>
+    <p class="foot-links">
+      <a href="index.html">首页</a>
+      <a href="guide.html">使用指南</a>
+      <a href="index.html#daily-hot">每日热词</a>
+      <a href="index.html?random=1">随机一词</a>
+    </p>
+  </div>
+</footer>
+
+<footer class="mangofolio-nav">
+  <span class="mf-label">Mangofolio 系列</span>
+  <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
+  <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
+  <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
+  <a href="https://view.mangofolio.com">市场观察 View</a>
+  <a href="https://invest-tools.mangofolio.app">财务工具箱 FinTools</a>
+  <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var ALL_ENTRIES = [];
+  var CHAPTERS = [];        // [{ name, entries: [] }]，顺序 = JSON 首次出现顺序
+  var chapterNodes = [];    // [{ node, name, fold }]
+  var state = { query: '', chapter: '', collapsed: {} };
+  var el = {};
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function $(id) { return document.getElementById(id); }
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  /* 条目链接：真实文件名优先，不做 slug 猜测（与站内约定一致） */
+  function entryLink(e) {
+    return 'terms/' + encodeURIComponent(e.file || e.filename || (e.title + '.html'));
+  }
+
+  /* 一句话：优先用词条卡第一句，其次 description */
+  function oneLiner(e) {
+    if (e.card_titles && e.card_titles.length) return String(e.card_titles[0]);
+    return e.description ? String(e.description) : '';
+  }
+
+  function splitChapter(name) {
+    var s = String(name == null ? '' : name);
+    var i = s.indexOf('：');
+    if (i < 0) i = s.indexOf(':');
+    if (i <= 0) return { no: '', name: s };
+    return { no: s.slice(0, i), name: s.slice(i + 1).trim() || s };
+  }
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  function hl(text, q) {
+    var s = String(text == null ? '' : text);
+    if (!q) return esc(s);
+    var i = s.toLowerCase().indexOf(q.toLowerCase());
+    if (i < 0) return esc(s);
+    return esc(s.slice(0, i)) + '<mark>' + esc(s.slice(i, i + q.length)) + '</mark>' + esc(s.slice(i + q.length));
+  }
+
+  function cacheEls() {
+    el.search = $('searchBox');
+    el.entryCount = $('entryCount');
+    el.chapterCount = $('chapterCount');
+    el.toolbar = $('toolbar');
+    el.countNow = $('countNow');
+    el.chips = $('chapterChips');
+    el.expandAll = $('expandAll');
+    el.collapseAll = $('collapseAll');
+    el.grid = $('mainGrid');
+    el.toc = $('toc');
+    el.tocList = $('tocList');
+    el.chapters = $('chapters');
+    el.results = $('results');
+    el.hits = $('hits');
+    el.resultInfo = $('resultInfo');
+    el.noResult = $('noResult');
+    el.clearSearch = $('clearSearch');
+    el.header = document.querySelector('.site-header');
+  }
+
+  /* ---------------- 数据加载 ---------------- */
+  function load() {
+    fetch('dictionary.json')
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) { start(d || []); })
+      .catch(function (err) {
+        /* 原实现在此处用同步 XHR（async=false）兜底 —— 会冻结主线程，已移除 */
+        console.error('词条库加载失败', err);
+        el.chapters.innerHTML = '<p class="state state--error">词条库加载失败，请刷新重试；或直接打开 <a href="index.html">首页</a>。</p>';
+        el.countNow.textContent = '词条库加载失败';
+      });
+  }
+
+  function start(data) {
+    ALL_ENTRIES = data;
+    var map = {};
+    ALL_ENTRIES.forEach(function (e) {
+      var ch = e.chapter || '未分类';
+      if (!map[ch]) {
+        map[ch] = { name: ch, entries: [] };
+        CHAPTERS.push(map[ch]);
+      }
+      map[ch].entries.push(e);
+    });
+
+    el.entryCount.textContent = ALL_ENTRIES.length;
+    el.chapterCount.textContent = CHAPTERS.length;
+
+    buildToc();
+    buildChips();
+    buildChapters();
+    bindEvents();
+
+    var q = '';
+    try { q = new URLSearchParams(window.location.search).get('q') || ''; } catch (e) { q = ''; }
+    if (q.trim()) {
+      state.query = q.trim();
+      el.search.value = q.trim();
+    }
+
+    render();
+    measure();
+    initSpy();
+  }
+
+  /* ---------------- 构建 ---------------- */
+  function buildToc() {
+    var html = CHAPTERS.map(function (ch, i) {
+      var parts = splitChapter(ch.name);
+      return '<a href="#ch-' + (i + 1) + '" data-chapter="' + esc(ch.name) + '" data-target="ch-' + (i + 1) + '">' +
+        '<span class="toc__no">' + pad(i + 1) + '</span>' +
+        '<span class="toc__name">' + esc(parts.name) + '</span>' +
+        '<span class="toc__n">' + ch.entries.length + '</span>' +
+        '</a>';
+    }).join('');
+    el.tocList.innerHTML = html;
+  }
+
+  function buildChips() {
+    var html = '<button class="chip" type="button" data-chapter="">全部' +
+      '<span class="chip__n">' + ALL_ENTRIES.length + '</span></button>';
+    CHAPTERS.forEach(function (ch, i) {
+      var parts = splitChapter(ch.name);
+      html += '<button class="chip" type="button" data-chapter="' + esc(ch.name) + '">' +
+        '<span class="chip__no">' + pad(i + 1) + '</span>' +
+        esc(parts.name) +
+        '<span class="chip__n">' + ch.entries.length + '</span>' +
+        '</button>';
+    });
+    el.chips.innerHTML = html;
+  }
+
+  function termHtml(e, i) {
+    var desc = oneLiner(e);
+    return '<a class="term" href="' + esc(entryLink(e)) + '">' +
+      '<span class="term__no">' + pad(i + 1) + '</span>' +
+      '<span class="term__body">' +
+        '<span class="term__name">' + esc(e.title) + '</span>' +
+        (desc ? '<span class="term__desc">' + esc(desc) + '</span>' : '') +
+      '</span>' +
+      '</a>';
+  }
+
+  function buildChapters() {
+    var frag = document.createDocumentFragment();
+    CHAPTERS.forEach(function (ch, ci) {
+      var parts = splitChapter(ch.name);
+      var sec = document.createElement('section');
+      sec.className = 'chapter';
+      sec.id = 'ch-' + (ci + 1);
+      sec.setAttribute('data-chapter', ch.name);
+      sec.setAttribute('data-tone', ci % 2 === 0 ? 'base' : 'paper');
+
+      var head = document.createElement('div');
+      head.className = 'chapter__head';
+      head.innerHTML =
+        '<div class="chapter__id">' +
+          '<span class="chapter__no">' + esc(parts.no || pad(ci + 1)) + '</span>' +
+          '<h2 class="chapter__title">' + esc(parts.name) + '</h2>' +
+          '<span class="chapter__count">' + ch.entries.length + ' 条</span>' +
+        '</div>' +
+        '<button class="chapter__fold" type="button" aria-expanded="true" aria-controls="body-' + (ci + 1) + '">收起</button>';
+
+      var body = document.createElement('div');
+      body.className = 'chapter__body';
+      body.id = 'body-' + (ci + 1);
+      body.innerHTML = '<div class="chapter__grid">' + ch.entries.map(termHtml).join('') + '</div>';
+
+      sec.appendChild(head);
+      sec.appendChild(body);
+      frag.appendChild(sec);
+
+      chapterNodes.push({
+        node: sec,
+        name: ch.name,
+        fold: head.querySelector('.chapter__fold')
+      });
+
+      head.addEventListener('click', function () { toggleCollapse(ch.name); });
+    });
+
+    el.chapters.innerHTML = '';
+    el.chapters.appendChild(frag);
+  }
+
+  function bindEvents() {
+    el.chips.addEventListener('click', function (ev) {
+      var chip = ev.target.closest ? ev.target.closest('.chip') : null;
+      if (!chip) return;
+      state.chapter = chip.getAttribute('data-chapter') || '';
+      if (state.query) {
+        state.query = '';
+        el.search.value = '';
+      }
+      render();
+      scrollToList();
+    });
+
+    el.tocList.addEventListener('click', function (ev) {
+      var a = ev.target.closest ? ev.target.closest('a[data-target]') : null;
+      if (!a) return;
+      ev.preventDefault();
+      var target = document.getElementById(a.getAttribute('data-target'));
+      if (state.chapter) {
+        state.chapter = '';
+        render();
+      }
+      scrollToEl(target);
+    });
+
+    el.expandAll.addEventListener('click', function () {
+      state.collapsed = {};
+      renderChapters();
+    });
+
+    el.collapseAll.addEventListener('click', function () {
+      CHAPTERS.forEach(function (ch) { state.collapsed[ch.name] = true; });
+      renderChapters();
+    });
+
+    el.clearSearch.addEventListener('click', function () {
+      el.search.value = '';
+      state.query = '';
+      render();
+      el.search.focus();
+    });
+
+    var timer = null;
+    el.search.addEventListener('input', function () {
+      var v = el.search.value;
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(function () { state.query = v; render(); }, 90);
+    });
+
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key !== '/') return;
+      var tag = (document.activeElement && document.activeElement.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+      ev.preventDefault();
+      el.search.focus();
+      el.search.select();
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', measure);
+
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(measure);
+      if (el.header) ro.observe(el.header);
+      if (el.toolbar) ro.observe(el.toolbar);
+    }
+  }
+
+  /* ---------------- 渲染 ---------------- */
+  function render() {
+    var q = String(state.query || '').trim();
+    var searching = q.length > 0;
+
+    el.grid.classList.toggle('is-search', searching);
+    document.body.classList.toggle('is-searching', searching);
+
+    if (searching) {
+      renderSearch(q);
+    } else {
+      el.results.hidden = true;
+      el.chapters.hidden = false;
+      el.toc.hidden = false;
+      renderChapters();
+    }
+
+    syncUrl(q);
+    measure();
+  }
+
+  function renderChapters() {
+    var filtered = !!state.chapter;
+    var visible = ALL_ENTRIES.length;
+
+    chapterNodes.forEach(function (item) {
+      var isTarget = state.chapter === item.name;
+      item.node.hidden = filtered && !isTarget;
+      var collapsed = isTarget ? false : !!state.collapsed[item.name];
+      item.node.classList.toggle('is-collapsed', collapsed);
+      item.fold.textContent = collapsed ? '展开' : '收起';
+      item.fold.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    });
+
+    if (filtered) {
+      var found = CHAPTERS.filter(function (c) { return c.name === state.chapter; })[0];
+      visible = found ? found.entries.length : 0;
+    }
+
+    el.countNow.innerHTML = '<b class="num">' + visible + '</b> 条 · ' +
+      (filtered ? esc(splitChapter(state.chapter).name) : '全部章节');
+
+    Array.prototype.forEach.call(el.chips.children, function (chip) {
+      chip.classList.toggle('is-on', (chip.getAttribute('data-chapter') || '') === state.chapter);
+    });
+
+    markToc(filtered ? state.chapter : null);
+  }
+
+  function renderSearch(q) {
+    var ql = q.toLowerCase();
+    var titleHits = [];
+    var descHits = [];
+
+    ALL_ENTRIES.forEach(function (e) {
+      if (String(e.title || '').toLowerCase().indexOf(ql) !== -1) {
+        titleHits.push(e);
+        return;
+      }
+      if (oneLiner(e).toLowerCase().indexOf(ql) !== -1) descHits.push(e);
+    });
+
+    var hits = titleHits.concat(descHits);
+    var cap = 200;
+
+    el.chapters.hidden = true;
+    el.toc.hidden = true;
+    el.results.hidden = false;
+
+    el.hits.innerHTML = hits.slice(0, cap).map(function (e) {
+      var ch = splitChapter(e.chapter || '未分类');
+      var desc = oneLiner(e);
+      return '<a class="hit" href="' + esc(entryLink(e)) + '">' +
+        '<span class="hit__top">' +
+          '<span class="hit__name">' + hl(e.title, q) + '</span>' +
+          '<span class="hit__ch">' + esc(ch.no || ch.name) + '</span>' +
+        '</span>' +
+        (desc ? '<span class="hit__desc">' + hl(desc, q) + '</span>' : '') +
+        '</a>';
+    }).join('');
+
+    el.noResult.hidden = hits.length !== 0;
+    el.noResult.querySelector('.empty__q').textContent = '「' + q + '」';
+    el.resultInfo.textContent = hits.length
+      ? '找到 ' + hits.length + ' 条' + (hits.length > cap ? '，仅显示前 ' + cap + ' 条' : '')
+      : '';
+
+    el.countNow.innerHTML = '<b class="num">' + hits.length + '</b> 条 · 搜索「' + esc(q) + '」';
+
+    Array.prototype.forEach.call(el.chips.children, function (chip) {
+      chip.classList.toggle('is-on', (chip.getAttribute('data-chapter') || '') === '');
+    });
+
+    markToc(null);
+  }
+
+  function markToc(name) {
+    var links = el.tocList.querySelectorAll('a[data-chapter]');
+    for (var i = 0; i < links.length; i++) {
+      var on = name != null && links[i].getAttribute('data-chapter') === name;
+      links[i].classList.toggle('is-on', on);
+      if (on) links[i].setAttribute('aria-current', 'true');
+      else links[i].removeAttribute('aria-current');
+    }
+  }
+
+  function toggleCollapse(name) {
+    if (state.collapsed[name]) delete state.collapsed[name];
+    else state.collapsed[name] = true;
+    renderChapters();
+  }
+
+  /* ---------------- 滚动 / 测量 ---------------- */
+  function stickyToolbarHeight() {
+    if (!el.toolbar || !el.toc) return 0;
+    var pos = window.getComputedStyle(el.toolbar).position;
+    return pos === 'sticky' ? el.toolbar.offsetHeight : 0;
+  }
+
+  function headerOffset() {
+    var h = el.header ? el.header.offsetHeight : 66;
+    return h + stickyToolbarHeight() + 12;
+  }
+
+  function measure() {
+    if (el.header) document.documentElement.style.setProperty('--dict-header-h', el.header.offsetHeight + 'px');
+    if (el.toolbar) document.documentElement.style.setProperty('--dict-toolbar-h', el.toolbar.offsetHeight + 'px');
+  }
+
+  function scrollToEl(node) {
+    if (!node) return;
+    var top = node.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+    window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+
+  function scrollToList() {
+    scrollToEl(el.chapters);
+  }
+
+  var spyTick = false;
+  function onScroll() {
+    if (spyTick) return;
+    spyTick = true;
+    window.requestAnimationFrame(function () {
+      spyTick = false;
+      if (state.query || state.chapter) return;
+      var line = headerOffset() + 8;
+      var current = '';
+      chapterNodes.forEach(function (item) {
+        if (item.node.hidden) return;
+        if (item.node.getBoundingClientRect().top <= line) current = item.name;
+      });
+      markToc(current || (chapterNodes[0] ? chapterNodes[0].name : null));
+    });
+  }
+
+  function initSpy() {
+    onScroll();
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      document.fonts.ready.then(measure);
+    }
+    window.addEventListener('load', measure);
+  }
+
+  function syncUrl(q) {
+    if (!window.history || !window.history.replaceState) return;
+    try {
+      var u = new URL(window.location.href);
+      if (q) u.searchParams.set('q', q);
+      else u.searchParams.delete('q');
+      window.history.replaceState(null, '', u.pathname + (u.search || '') + (u.hash || ''));
+    } catch (err) { /* file:// 等场景忽略 */ }
+  }
+
+  /* ---------------- 启动 ---------------- */
+  cacheEls();
+  load();
+})();
+</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js')})}</script>
+<script defer src="js/tracker.js"></script>
+</body>
+</html>

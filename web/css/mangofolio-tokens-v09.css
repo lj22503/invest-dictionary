@@ -187,9 +187,13 @@
   --mf-colors-background-neutral-strongest: #3A332C;
   --mf-colors-background-neutral-strongest-hover: #241610;
   --mf-colors-background-neutral-strongest-active: #241610;
-  --mf-colors-background-primary: #F97316; /* [mango-600, mango-400] 主 CTA（电压色，不再铺底） */
-  --mf-colors-background-primary-hover: #E05E0A;
-  --mf-colors-background-primary-active: #E05E0A;
+  /* 电压橙 #F97316 = 品牌主色，色相 24.6deg（橙区），全程保留不得改色相。
+     对比度靠「换文字色」解决，不靠压暗底色：主 CTA 用芒果橙底 + 深墨字（5.46:1），
+     而不是把橙压成暗红。压暗保色相 = 棕橙；压暗又移色相 = 铁锈红（错误做法）。 */
+  --mf-colors-accent-decor: #F97316; /* 纯装饰：渐变/插画/角标等不承载文字的元素 */
+  --mf-colors-background-primary: #F97316; /* 品牌芒果橙，色相锁 24.6deg */
+  --mf-colors-background-primary-hover: #FB8B3D; /* 提亮档（深字按钮 hover 提亮，非压暗） */
+  --mf-colors-background-primary-active: #F08018;
   --mf-colors-background-primary-disabled: rgba(249,115,22,.40);
   --mf-colors-background-input: #FFFFFF; /* 输入框底 */
   --mf-colors-background-input-disabled: #EDE9E4;
@@ -215,24 +219,28 @@
   /* ---- Text 文字组（v0.6 正文换深墨）---- */
   --mf-colors-text: #3A332C; /* [espresso, cream] 正文（对比度 ≥7:1） */
   --mf-colors-text-strong: #241610; /* 强强调（更深墨） */
-  --mf-colors-text-weak: #8A7D70; /* 次级文字（灰 600） */
-  --mf-colors-text-disabled: #8A7D70;
+  --mf-colors-text-weak: #6E6357; /* 次级文字（灰 700）：原 #8A7D70 仅 4.00:1，改后 5.86:1 达 AA */
+  --mf-colors-text-disabled: #8A7D70; /* 禁用态不受 WCAG 对比度约束，保留原灰 */
   --mf-colors-text-inverse: #FFFFFF; /* 深底上的浅字 */
-  --mf-colors-text-on-primary: #FFFFFF; /* 主色上的文字 */
-  --mf-colors-text-on-primary-disabled: rgba(255,255,255,.40);
-  --mf-colors-text-link: #F97316; /* 链接（橙电压色深档，对比度 ≥7:1） */
-  --mf-colors-text-link-hover: #E05E0A;
-  --mf-colors-text-link-active: #E05E0A;
-  --mf-colors-text-link-secondary: #8A7D70; /* 次级链接（靛蓝冷锚点） */
-  --mf-colors-text-placeholder: #8A7D70;
-  --mf-colors-text-selected: #F97316;
+  --mf-colors-text-on-dark: #F2EDE7; /* 墨底正文（收编 site.css 原硬编码） */
+  --mf-colors-text-on-dark-weak: #B3A596; /* 墨底次级（收编 site.css 原硬编码） */
+  --mf-colors-text-on-primary: #2A2420; /* 芒果橙底上的深墨字：5.46:1 达 AA（白字仅 2.80:1 不可用） */
+  --mf-colors-text-on-primary-disabled: rgba(42,36,32,.45);
+  /* 文字档电压橙：色相锁 26deg（琥珀橙，仍是橙不是红），只降明度。
+     原 #F97316 作文字仅 2.80:1，令牌注释声称 ≥7:1 并不成立。 */
+  --mf-colors-text-link: #B45309; /* 5.02:1 达 AA */
+  --mf-colors-text-link-hover: #A9500B; /* 5.47:1 */
+  --mf-colors-text-link-active: #8F4A12; /* 6.65:1 */
+  --mf-colors-text-link-secondary: #6E6357; /* 次级链接 */
+  --mf-colors-text-placeholder: #6E6357;
+  --mf-colors-text-selected: #B45309;
   --mf-colors-text-critical: #B8221E; /* 涨/错误文字 */
   --mf-colors-text-critical-hover: rgba(184,34,30,.90);
   --mf-colors-text-critical-active: rgba(184,34,30,.85);
   --mf-colors-text-info: #8A7D70;
   --mf-colors-text-success: #11693D; /* 跌/成功文字 */
-  --mf-colors-text-warning: #E05E0A;
-  --mf-colors-text-accent-mango: #E05E0A; /* 电压橙（深档保对比） */
+  --mf-colors-text-warning: #B45309;
+  --mf-colors-text-accent-mango: #B45309; /* 电压橙文字档：色相 26deg，5.02:1 达 AA */
   --mf-colors-text-accent-caramel: #241610; /* 眉题/标签 */
   --mf-colors-text-accent-indigo: #8A7D70; /* 冷锚点 */
   --mf-colors-text-accent-blue: #8A7D70;
@@ -249,7 +257,7 @@
   --mf-colors-border-focused: #F97316; /* 聚焦态（橙 500 亮档） */
   --mf-colors-border-selected: #F97316;
   --mf-colors-border-critical: #B8221E;
-  --mf-colors-border-on-primary: #FFFFFF;
+  --mf-colors-border-on-primary: rgba(36,22,16,.32); /* 橙块在浅底上的描边，补 WCAG 1.4.11 边界 3:1（原白描边在橙上不可见） */
 
   /* ---- DataViz 图表组（v0.6 加入靛蓝冷色序列，橙收敛为 3 档电压色）---- */
   --mf-colors-dataviz-mango-1: #E05E0A;
@@ -472,6 +480,7 @@
   --mf-component-button-primary-bg-active: var(--mf-colors-background-primary-active);
   --mf-component-button-primary-bg-disabled: var(--mf-colors-background-primary-disabled);
   --mf-component-button-primary-text: var(--mf-colors-text-on-primary);
+  --mf-component-button-primary-border: var(--mf-colors-border-on-primary);
   --mf-component-button-primary-radius: var(--mf-radii-round);
   --mf-component-button-primary-shadow: var(--mf-shadows-button-primary);
   --mf-component-button-secondary-bg: var(--mf-colors-background-surface);

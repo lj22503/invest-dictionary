@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_f06da6b7c8a611f18e0e52540064ee0f
+    ReservedCode1: dtJqQEHuci+Ld3pruKZTuk3ywtfey4VOdymJE/Ms9A1bAhlhrJdIPQM87E3HLrGIuU0cFKvlZ1dEJ3sslLc9bjYc/luStiplG7TWSs4HWHzWUam0P0EkJ9F2xGx10jXdTiitoeBnefnGSGLHhJ0/vGKh3a1Lb10b9+g6J7rsDD+vUONWvd9olE7vMx4=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_f06da6b7c8a611f18e0e52540064ee0f
+    ReservedCode2: dtJqQEHuci+Ld3pruKZTuk3ywtfey4VOdymJE/Ms9A1bAhlhrJdIPQM87E3HLrGIuU0cFKvlZ1dEJ3sslLc9bjYc/luStiplG7TWSs4HWHzWUam0P0EkJ9F2xGx10jXdTiitoeBnefnGSGLHhJ0/vGKh3a1Lb10b9+g6J7rsDD+vUONWvd9olE7vMx4=
+---
+
 # 稳定币（USDT/USDC）
 
 > 稳定币 = 锚定法币（主要是美元）的加密货币。1 枚 USDT 或 USDC 约等于 1 美元，用储备资产或算法机制维持价格稳定。
@@ -35,3 +46,4 @@
 **相关词条**：比特币（加密货币）、DeFi、外汇储备
 
 **篇章**：第七篇：投资武器库 · 其他类
+*（内容由AI生成，仅供参考）*

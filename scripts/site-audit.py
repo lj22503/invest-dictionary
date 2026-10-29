@@ -1,0 +1,373 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+site-audit.py —— 静态站点体检（性能 / 品牌合规 / 无障碍 / SEO 骨架）
+
+把「人工看一遍」变成「一条命令跑完」，供 mangofolio 各子站复用。
+
+用法：
+    python scripts/site-audit.py                 # 默认体检 <repo>/web
+    python scripts/site-audit.py --root ../web   # 指定站点根目录
+    python scripts/site-audit.py --json          # 输出 JSON，便于接 CI
+    python scripts/site-audit.py --strict        # WARN 也算失败（CI 收紧时用）
+
+退出码：0 = 无 FAIL；1 = 存在 FAIL（--strict 下 WARN 也计入）
+
+检查维度：
+    perf   首屏体积 / 内联数据重复 / 同步 XHR / 外链字体 / 图片懒加载
+    brand  一票否决色 / 硬编码色值 / 装饰色与文字色混用
+    a11y   WCAG 对比度（按令牌实际计算）/ 图片 alt / lang / 跳转链接
+    seo    canonical / OG / viewport / title / 结构化数据
+    hygiene 备份文件随站部署 / 未预加载关键字体
+"""
+import argparse
+import json
+import os
+import re
+import sys
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
+
+# ---- 默认规则（可用 --config 覆盖）----
+DEFAULT_RULES = {
+    "forbidden_colors": ["#C43A31"],          # 朱砂红，出现即重做
+    "max_html_kb": 100,                        # 单页 HTML 体积上限
+    "max_inline_script_kb": 50,                # 内联脚本上限（超出多半是内联数据）
+    "cn_unreachable_hosts": [                  # 国内不可靠的外链
+        "fonts.googleapis.com",
+        "fonts.gstatic.com",
+    ],
+    "require_preload_fonts": True,
+    # 品牌主色「色相锚点」：修对比度只能降明度，不能移色相。
+    # 教训：为过 WCAG 把 #F97316(24.6deg 芒果橙) 压成 #C2410C(17.5deg) → 变铁锈红，品牌没了。
+    "brand_hue": {
+        "anchor": "#F97316",      # 基准色相 24.6deg（橙区）
+        # 非对称容差：色相往下走 = 变铁锈红，是真实的品牌事故方向，卡死 5deg；
+        # 往上走 = 偏金/琥珀，风险小，放宽到 12deg。
+        # 实测合法色分布 23.6~26.9deg，铁锈红 #C2410C 为 17.5deg（会被拦下）。
+        "tolerance_low": 5,       # 允许下探到 19.6deg
+        "tolerance_high": 12,     # 允许上探到 36.6deg
+        "watch_tokens": [         # 这些令牌必须留在橙区
+            "background-primary", "text-link", "text-accent-mango",
+            "accent-decor", "text-warning", "text-selected",
+            "border-focused", "border-selected",
+        ],
+    },
+}
+
+TEXT_EXTS = (".html", ".css", ".js", ".json", ".txt", ".xml")
+
+
+# ============================================================
+# WCAG 对比度
+# ============================================================
+def _lin(c):
+    c = c / 255.0
+    return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def _hue(hex_color):
+    """返回色相角度 0-360。用于检测品牌主色是否被「压成了别的颜色」。"""
+    import colorsys
+    h = hex_color.lstrip("#")
+    if len(h) == 3:
+        h = "".join(ch * 2 for ch in h)
+    r, g, b = [int(h[i:i + 2], 16) / 255.0 for i in (0, 2, 4)]
+    return colorsys.rgb_to_hls(r, g, b)[0] * 360
+
+
+def _lum(hex_color):
+    h = hex_color.lstrip("#")
+    if len(h) == 3:
+        h = "".join(ch * 2 for ch in h)
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return 0.2126 * _lin(r) + 0.7152 * _lin(g) + 0.0722 * _lin(b)
+
+
+def contrast(a, b):
+    la, lb = _lum(a), _lum(b)
+    hi, lo = max(la, lb), min(la, lb)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+def suggest_darker(hex_color, bg, target=4.5):
+    """按比例压暗，直到达到目标对比度。返回 None 表示压到黑也达不到。"""
+    h = hex_color.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    for step in range(1, 101):
+        f = 1 - step / 100.0
+        cand = "#%02X%02X%02X" % (int(r * f), int(g * f), int(b * f))
+        if contrast(cand, bg) >= target:
+            return cand
+    return None
+
+
+# ============================================================
+# 结果收集
+# ============================================================
+class Report:
+    def __init__(self):
+        self.items = []
+
+    def add(self, cat, level, name, detail="", fix=""):
+        self.items.append((cat, level, name, detail, fix))
+
+    @property
+    def fails(self):
+        return [i for i in self.items if i[1] == "FAIL"]
+
+    @property
+    def warns(self):
+        return [i for i in self.items if i[1] == "WARN"]
+
+    def render(self):
+        icons = {"PASS": "✓", "WARN": "!", "FAIL": "✗"}
+        cur = None
+        out = []
+        for cat, level, name, detail, fix in self.items:
+            if cat != cur:
+                cur = cat
+                out.append("\n[%s]" % cat.upper())
+            out.append("  %s %s %s" % (icons[level], name, ("  " + detail) if detail else ""))
+            if fix and level in ("WARN", "FAIL"):
+                out.append("      → %s" % fix)
+        return "\n".join(out)
+
+
+def walk_text_files(root):
+    for dirpath, _, filenames in os.walk(root):
+        if any(p in dirpath for p in (".git", "node_modules", ".vercel")):
+            continue
+        for n in filenames:
+            if n.endswith(TEXT_EXTS):
+                yield os.path.join(dirpath, n)
+
+
+def walk_all_files(root):
+    """备份文件后缀是 .html.bak-xxx，不匹配 TEXT_EXTS，必须单独全量扫。"""
+    for dirpath, _, filenames in os.walk(root):
+        if any(p in dirpath for p in (".git", "node_modules", ".vercel")):
+            continue
+        for n in filenames:
+            yield os.path.join(dirpath, n)
+
+
+# ============================================================
+# 各项检查
+# ============================================================
+def audit(root, rules, rep):
+    pages = [p for p in walk_text_files(root) if p.endswith(".html")]
+    css_files = [p for p in walk_text_files(root) if p.endswith(".css")]
+
+    # ---------- perf ----------
+    big = []
+    for p in pages:
+        size = os.path.getsize(p)
+        if size > rules["max_html_kb"] * 1024:
+            with open(p, encoding="utf-8", errors="replace") as f:
+                html = f.read()
+            inline = sum(len(m.group(1)) for m in re.finditer(r"<script[^>]*>(.*?)</script>", html, re.S))
+            big.append((os.path.relpath(p, root), size // 1024, inline // 1024,
+                        "内联脚本占 %dKB" % (inline // 1024) if inline > 50 * 1024 else ""))
+    if big:
+        rep.add("perf", "FAIL", "HTML 体积超 %dKB" % rules["max_html_kb"],
+                "; ".join("%s %dKB(%s)" % (n, s, d or "无大脚本") for n, s, i, d in big[:5]),
+                "把内联数据挪到外部 JSON 按需加载，或拆成「搜索索引 + 完整数据」")
+
+    # 内联数据与外部 JSON 重复
+    for name, _, inline_kb, _ in big:
+        p = os.path.join(root, name)
+        with open(p, encoding="utf-8", errors="replace") as f:
+            html = f.read()
+        for m in re.finditer(r"fetch\(\s*['\"]([^'\"]+\.json)['\"]", html):
+            jp = os.path.join(root, os.path.dirname(name), m.group(1))
+            if os.path.exists(jp):
+                jkb = os.path.getsize(jp) // 1024
+                rep.add("perf", "FAIL", "数据双重下载",
+                        "%s 内联 %dKB，同时又 fetch %s (%dKB)" % (name, inline_kb, m.group(1), jkb),
+                        "二者留其一；首页搜索通常只需轻量索引")
+
+    # 同步 XHR
+    sync_xhr = []
+    for p in pages:
+        with open(p, encoding="utf-8", errors="replace") as f:
+            t = f.read()
+        if re.search(r"\.open\([^)]*,\s*false\s*\)", t):
+            sync_xhr.append(os.path.relpath(p, root))
+    rep.add("perf", "FAIL" if sync_xhr else "PASS", "同步 XHR（阻塞主线程）",
+            "found=%d %s" % (len(sync_xhr), sync_xhr[:3]),
+            "改用 fetch/promise；失败兜底不要清空已有数据")
+
+    # 外链字体
+    bad_hosts = []
+    for p in pages:
+        with open(p, encoding="utf-8", errors="replace") as f:
+            t = f.read()
+        for h in rules["cn_unreachable_hosts"]:
+            if h in t:
+                bad_hosts.append((os.path.relpath(p, root), h))
+                break
+    rep.add("perf", "FAIL" if bad_hosts else "PASS", "外链字体（国内不可靠）",
+            "%d 个页面引用 %s" % (len(bad_hosts), sorted({h for _, h in bad_hosts})),
+            "自托管 + 中文字体子集化（font-spider / cn-fontsub），配系统字体栈兜底")
+
+    if rules.get("require_preload_fonts"):
+        nopreload = [os.path.relpath(p, root) for p in pages
+                     if "fonts.googleapis" in open(p, encoding="utf-8", errors="replace").read()
+                     and 'rel="preload"' not in open(p, encoding="utf-8", errors="replace").read()]
+        rep.add("perf", "WARN" if nopreload else "PASS", "关键字体未 preload",
+                "%d 个页面" % len(nopreload), "加 <link rel=preload as=font crossorigin>")
+
+    # ---------- brand ----------
+    for fc in rules["forbidden_colors"]:
+        hits = []
+        for p in walk_text_files(root):
+            with open(p, encoding="utf-8", errors="replace") as f:
+                if fc.lower() in f.read().lower():
+                    hits.append(os.path.relpath(p, root))
+        rep.add("brand", "FAIL" if hits else "PASS", "一票否决色 %s" % fc,
+                "found=%d %s" % (len(hits), hits[:3]), "移除该色，改用令牌")
+
+    hard = []
+    for p in css_files:
+        with open(p, encoding="utf-8", errors="replace") as f:
+            for i, line in enumerate(f, 1):
+                s = line.strip()
+                if s.startswith(("/*", "*", "//")):
+                    continue
+                # (?!--) 排除 CSS 自定义属性定义本身（令牌必须写死色值，那是唯一权威源）
+                if re.match(r"^(?!--)[a-z-]+\s*:\s*#[0-9a-fA-F]{3,6}\s*;", s):
+                    hard.append("%s:%d %s" % (os.path.relpath(p, root), i, s[:48]))
+    rep.add("brand", "FAIL" if hard else "PASS", "CSS 硬编码色值",
+            "found=%d %s" % (len(hard), hard[:3]), "全部替换为 --mf-colors-* 令牌")
+
+    # 主色色相漂移：对比度不达标时，正确解法是「换文字色」或「只降明度」，
+    # 而不是把橙压成红/棕。这条专门拦后者。
+    bh = rules.get("brand_hue") or {}
+    watch = bh.get("watch_tokens") or []
+    if watch:
+        anchor = bh.get("anchor", "#F97316")
+        tol = float(bh.get("tolerance", 6))
+        base = _hue(anchor)
+        lo = base - float(bh.get("tolerance_low", tol))
+        hi = base + float(bh.get("tolerance_high", tol))
+        drift = []
+        for p in css_files:
+            with open(p, encoding="utf-8", errors="replace") as f:
+                for i, line in enumerate(f, 1):
+                    m = re.match(r"^\s*--mf-colors-([a-z0-9-]+):\s*(#[0-9a-fA-F]{6})\s*;", line)
+                    if not m:
+                        continue
+                    name, val = m.group(1), m.group(2)
+                    if not any(name == t or name.startswith(t + "-") for t in watch):
+                        continue
+                    hu = _hue(val)
+                    if not (lo <= hu <= hi):
+                        drift.append("%s:%d %s=%s (%.1fdeg)" % (
+                            os.path.relpath(p, root), i, name, val, hu))
+        rep.add("brand", "FAIL" if drift else "PASS", "主色色相漂移",
+                "基准 %s=%.1fdeg，允许 %.1f~%.1fdeg；越界 %d 处 %s"
+                % (anchor, base, lo, hi, len(drift), drift[:3]),
+                "对比度不足时只降明度、或改文字色（橙底配深墨字），别移色相："
+                "色相<20deg 变铁锈红、>45deg 变土黄，都是丢品牌")
+
+    # ---------- a11y：按令牌实测对比度 ----------
+    tokens = {}
+    for p in css_files:
+        with open(p, encoding="utf-8", errors="replace") as f:
+            t = f.read()
+        for m in re.finditer(r"(--mf-colors-[a-z0-9-]+)\s*:\s*(#[0-9a-fA-F]{6})\s*;", t):
+            tokens.setdefault(m.group(1), m.group(2))
+
+    BG_KEYS = ["--mf-colors-background", "--mf-colors-background-surface",
+               "--mf-colors-background-neutral"]
+    bgs = [tokens[k] for k in BG_KEYS if k in tokens] or ["#FFFFFF"]
+    TEXT_KEYS = ["--mf-colors-text", "--mf-colors-text-weak", "--mf-colors-text-link",
+                 "--mf-colors-text-link-hover", "--mf-colors-text-accent-mango",
+                 "--mf-colors-text-placeholder", "--mf-colors-text-secondary"]
+    for k in TEXT_KEYS:
+        if k not in tokens:
+            continue
+        fg = tokens[k]
+        worst = min(contrast(fg, b) for b in bgs)
+        if worst < 4.5:
+            cand = suggest_darker(fg, bgs[0])
+            rep.add("a11y", "FAIL", "对比度 %s" % k,
+                    "%s 实测 %.2f:1（需 ≥4.5）" % (fg, worst),
+                    "改 %s（%.2f:1）；原色可留作纯装饰" % (cand, contrast(cand, bgs[0])) if cand else "需换更深色")
+        else:
+            rep.add("a11y", "PASS", "对比度 %s" % k, "%s %.2f:1" % (fg, worst))
+
+    onp = tokens.get("--mf-colors-text-on-primary", "#FFFFFF")
+    prim = tokens.get("--mf-colors-background-primary")
+    if prim:
+        c = contrast(onp, prim)
+        if c < 4.5:
+            cand = suggest_darker(prim, onp, target=4.5)
+            rep.add("a11y", "FAIL", "主按钮 文字/底色 对比度",
+                    "%s on %s = %.2f:1" % (onp, prim, c),
+                    "按钮底改 %s（%.2f:1）" % (cand, contrast(cand, onp)) if cand else "需换更深底")
+        else:
+            rep.add("a11y", "PASS", "主按钮 文字/底色 对比度", "%.2f:1" % c)
+
+    # ---------- seo 骨架 ----------
+    home = os.path.join(root, "index.html")
+    if os.path.exists(home):
+        with open(home, encoding="utf-8", errors="replace") as f:
+            h = f.read()
+        for name, ok in [("canonical", 'rel="canonical"' in h),
+                         ("og:title", 'property="og:title"' in h),
+                         ("viewport", 'name="viewport"' in h),
+                         ("html lang", re.search(r"<html[^>]+lang=", h) is not None)]:
+            rep.add("seo", "PASS" if ok else "FAIL", "首页 %s" % name)
+
+    # ---------- hygiene ----------
+    baks = [os.path.relpath(p, root) for p in walk_all_files(root) if ".bak" in os.path.basename(p)]
+    total = sum(os.path.getsize(os.path.join(root, b)) for b in baks) // 1024 // 1024
+    rep.add("hygiene", "FAIL" if baks else "PASS", "备份文件随站部署",
+            "%d 个 / %dMB" % (len(baks), total),
+            "加 .vercelignore 排除；已入库的用 git rm --cached 脱管")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    here = os.path.dirname(os.path.abspath(__file__))
+    ap.add_argument("--root", default=os.path.join(os.path.dirname(here), "web"))
+    ap.add_argument("--json", action="store_true")
+    ap.add_argument("--strict", action="store_true")
+    ap.add_argument("--config", help="JSON 文件，覆盖默认规则")
+    args = ap.parse_args()
+
+    root = os.path.abspath(args.root)
+    if not os.path.isdir(root):
+        print("目录不存在：%s" % root)
+        return 2
+
+    rules = dict(DEFAULT_RULES)
+    if args.config:
+        rules.update(json.load(open(args.config, encoding="utf-8")))
+
+    rep = Report()
+    audit(root, rules, rep)
+
+    if args.json:
+        print(json.dumps([{"cat": c, "level": l, "name": n, "detail": d, "fix": f}
+                          for c, l, n, d, f in rep.items], ensure_ascii=False, indent=2))
+    else:
+        print("站点体检：%s" % root)
+        print(rep.render())
+        n = len(rep.items)
+        print("\n合计 %d 项，PASS %d，WARN %d，FAIL %d"
+              % (n, n - len(rep.fails) - len(rep.warns), len(rep.warns), len(rep.fails)))
+        if rep.fails:
+            print("未通过：" + "；".join(i[2] for i in rep.fails))
+
+    bad = len(rep.fails) + (len(rep.warns) if args.strict else 0)
+    return 1 if bad else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

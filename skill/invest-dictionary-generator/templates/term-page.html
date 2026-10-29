@@ -13,6 +13,7 @@
 <meta property="og:description" content="央行首次在月中开展{{词条名}}，8月14日起连续4个交易日、每日不超6000亿元。这个工具怎么影响你的余额宝、零钱通收益？">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://dictionary.mangofolio.com/terms/{{编码URL}}.html">
+  <meta property="og:image" content="https://dictionary.mangofolio.com/og-cover.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
@@ -871,5 +872,17 @@ function copyPageUrl() {
 
 <script src="../js/knowledge-card.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})}</script>
+<script defer src="../js/tracker.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  if (typeof window.track !== 'function') return;
+  var word = document.title.replace(/\u4ec0\u4e48\u610f\u601d.*/, '').trim();
+  if (!word) {
+    var h1 = document.querySelector('h1.main-title, h1');
+    if (h1) word = h1.textContent.trim();
+  }
+  if (word) window.track('word_lookup', { word: word });
+});
+</script>
 </body>
 </html>

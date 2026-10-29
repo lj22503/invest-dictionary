@@ -1,0 +1,493 @@
+/**
+ * site.css —— 投资词典三页共用外壳（首页 / 全部词条 / 使用指南）
+ * 依赖：css/mangofolio-tokens-v09.css（唯一令牌源）
+ * 只放三页共用的东西：色带、容器、页头、页脚、区块头、按钮、卡片、目录、代码块。
+ * 页面专属样式写在各自的 <style> 里，禁止在三页里各抄一份 header/footer。
+ *
+ * 色带（每块内容一个底色，全部来自 mangofolio 令牌）：
+ *   .band--base   #FFFFFF  基础
+ *   .band--paper  #F7F5F2  中性纸
+ *   .band--mango  #FFF3EA  芒果浅底
+ *   .band--grey   #EDE9E4  暖灰
+ *   .band--dark   #241610  墨底（全站每页最多 1 个）
+ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--mf-colors-background);
+  color: var(--mf-colors-text);
+  font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-weight: 900;
+  line-height: 1.28;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+ul, ol { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--mf-colors-text-link);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+a:hover { color: var(--mf-colors-text-link-hover); }
+
+:focus-visible {
+  outline: 2px solid var(--mf-colors-border-focused);
+  outline-offset: 2px;
+  border-radius: var(--mf-radii-small);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px; top: -60px;
+  z-index: 300;
+  padding: 10px 16px;
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-primary);
+  color: var(--mf-colors-text-on-primary);
+  font-size: 0.9rem;
+}
+.skip-link:focus { top: 12px; }
+
+/* ============================================================
+ * 容器
+ * ============================================================ */
+.wrap {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ============================================================
+ * 色带
+ * ============================================================ */
+.band {
+  --band-ink: var(--mf-colors-text);
+  --band-ink-weak: var(--mf-colors-text-weak);
+  --band-line: var(--mf-colors-border);
+  --band-surface: var(--mf-colors-background-surface);
+  position: relative;
+  padding: clamp(56px, 7vw, 96px) 0;
+  background: var(--mf-colors-background);
+  color: var(--band-ink);
+}
+
+.band--base { background: var(--mf-colors-background); }
+.band--paper { background: var(--mf-colors-background-neutral); }
+.band--mango { background: var(--mf-colors-primitives-mango-050); }
+.band--grey { background: var(--mf-colors-primitives-grey-200); }
+
+.band--dark {
+  --band-ink: var(--mf-colors-text-on-dark);
+  --band-ink-weak: var(--mf-colors-text-on-dark-weak);
+  --band-line: rgba(255, 255, 255, 0.14);
+  --band-surface: rgba(255, 255, 255, 0.04);
+  background: var(--mf-colors-background-abyss);
+  color: var(--band-ink);
+}
+.band--dark h2,
+.band--dark h3 { color: var(--band-ink); }
+.band--dark a { color: var(--mf-colors-primitives-mango-400); }
+.band--dark a:hover { color: var(--mf-colors-text-link-hover); }
+
+.band--tight { padding: clamp(36px, 4vw, 56px) 0; }
+
+/* ============================================================
+ * 页头
+ * ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--mf-z-index-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 66px;
+  padding: 10px 28px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--mf-colors-border);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--mf-colors-text-strong);
+  white-space: nowrap;
+}
+.brand:hover { color: var(--mf-colors-text-strong); }
+.brand-en {
+  font-family: var(--mf-fonts-display-extended), Georgia, serif;
+  font-style: italic;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--mf-colors-text-link);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+.site-nav > a {
+  padding: 7px 11px;
+  border-radius: var(--mf-radii-round);
+  font-size: 0.87rem;
+  color: var(--mf-colors-text-weak);
+}
+.site-nav > a:hover {
+  color: var(--mf-colors-text-link);
+  background: var(--mf-colors-background-warning);
+}
+.site-nav > a.is-active {
+  color: var(--mf-colors-text-strong);
+  font-weight: 600;
+}
+.site-nav__cta {
+  margin-left: 6px;
+  padding: 7px 15px !important;
+  border: 1px solid var(--mf-colors-border-strong);
+  color: var(--mf-colors-text) !important;
+  font-size: 0.85rem !important;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+.site-nav__cta:hover {
+  border-color: var(--mf-colors-text-link);
+  color: var(--mf-colors-text-link) !important;
+  background: none !important;
+}
+
+/* ============================================================
+ * 区块头（左对齐 + 一条 hairline，三页统一）
+ * ============================================================ */
+.sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 32px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  margin-bottom: clamp(26px, 3.4vw, 40px);
+  border-top: 1px solid var(--band-line);
+}
+.sec-head__main { max-width: 640px; }
+.sec-head h2 {
+  font-size: clamp(1.55rem, 2.9vw, 2.1rem);
+  color: var(--band-ink);
+}
+.sec-head p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--band-ink-weak);
+  max-width: 62ch;
+}
+.sec-head__aside {
+  font-size: 0.86rem;
+  color: var(--band-ink-weak);
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+.sec-head__aside a { font-weight: 600; }
+
+/* ============================================================
+ * 按钮
+ * ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border: 1px solid transparent;
+  border-radius: var(--mf-radii-round);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.btn--primary {
+  background: var(--mf-colors-background-primary);
+  color: var(--mf-colors-text-on-primary);
+}
+.btn--primary:hover {
+  background: var(--mf-colors-background-primary-hover);
+  color: var(--mf-colors-text-on-primary);
+}
+.btn--line {
+  border-color: var(--mf-colors-border-strong);
+  background: transparent;
+  color: var(--band-ink);
+}
+.btn--line:hover {
+  border-color: var(--mf-colors-text-link);
+  color: var(--mf-colors-text-link);
+  background: transparent;
+}
+.band--dark .btn--line { border-color: rgba(255, 255, 255, 0.3); color: var(--band-ink); }
+.band--dark .btn--line:hover { border-color: var(--mf-colors-primitives-mango-400); color: var(--mf-colors-primitives-mango-400); }
+.btn--sm { padding: 8px 18px; font-size: 0.86rem; }
+
+/* ============================================================
+ * 卡片 / 汉字徽 / 提示块 / 代码块 / 标签
+ * ============================================================ */
+.card {
+  background: var(--band-surface);
+  border: 1px solid var(--band-line);
+  border-radius: var(--mf-radii-card);
+}
+.band--dark .card { backdrop-filter: none; }
+
+.kico {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  border-radius: 11px;
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-accent-mango);
+  font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.band--dark .kico {
+  background: rgba(249, 115, 22, 0.16);
+  color: var(--mf-colors-primitives-mango-400);
+}
+
+.note {
+  padding: 16px 18px;
+  border-radius: var(--mf-radii-large);
+  border: 1px solid rgba(249, 115, 22, 0.22);
+  background: var(--mf-colors-background-warning);
+  color: var(--band-ink);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+.note strong { color: var(--mf-colors-text-accent-mango); }
+
+.code-block {
+  margin: 0;
+  padding: 20px 22px;
+  border-radius: var(--mf-radii-large);
+  background: var(--mf-colors-background-abyss);
+  color: var(--mf-colors-text-on-dark);
+  font-family: var(--mf-fonts-mono), "Cascadia Mono", Consolas, monospace;
+  font-size: 0.81rem;
+  line-height: 1.95;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  border-radius: var(--mf-radii-round);
+  border: 1px solid var(--band-line);
+  background: var(--band-surface);
+  color: var(--band-ink-weak);
+  font-family: inherit;
+  font-size: 0.79rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+.chip:hover { border-color: var(--mf-colors-text-link); color: var(--mf-colors-text-link); }
+.chip.is-on {
+  border-color: var(--mf-colors-text-link);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-accent-mango);
+  font-weight: 600;
+}
+.chip__n { color: var(--band-ink-weak); font-variant-numeric: tabular-nums; }
+.chip.is-on .chip__n { color: inherit; opacity: 0.75; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+
+/* ============================================================
+ * 侧边目录（词库章节 / 指南场景）
+ * ============================================================ */
+.toc {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  max-height: calc(100vh - 112px);
+  overflow-y: auto;
+  padding: 16px 14px;
+  border-radius: var(--mf-radii-card);
+  border: 1px solid var(--band-line);
+  background: var(--band-surface);
+  scrollbar-width: thin;
+}
+.toc__title {
+  margin: 0 0 10px;
+  padding: 0 8px;
+  font-family: var(--mf-fonts-ui);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--band-ink-weak);
+}
+.toc a {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: var(--mf-radii-medium);
+  font-size: 0.845rem;
+  line-height: 1.5;
+  color: var(--band-ink-weak);
+}
+.toc a:hover { color: var(--mf-colors-text-link); background: var(--mf-colors-background-warning); }
+.toc a.is-on { color: var(--mf-colors-text-accent-mango); background: var(--mf-colors-background-warning); font-weight: 600; }
+.toc a .toc__n {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--band-ink-weak);
+  font-variant-numeric: tabular-nums;
+}
+.toc a.is-on .toc__n { color: inherit; opacity: 0.8; }
+
+/* ============================================================
+ * 页脚
+ * ============================================================ */
+.site-footer {
+  padding: 42px 0 30px;
+  background: var(--mf-colors-background-neutral);
+  border-top: 1px solid var(--mf-colors-border);
+  text-align: center;
+  color: var(--mf-colors-text-weak);
+  font-size: 0.82rem;
+}
+.site-footer .disclaimer {
+  max-width: 70ch;
+  margin: 0 auto 12px;
+  line-height: 1.85;
+}
+.site-footer .foot-links { display: flex; gap: 8px 18px; justify-content: center; flex-wrap: wrap; }
+
+.mangofolio-nav {
+  padding: 24px 24px 30px;
+  background: var(--mf-colors-background);
+  border-top: 1px solid var(--mf-colors-border);
+  text-align: center;
+  color: var(--mf-colors-text-weak);
+  font-size: 12.5px;
+  line-height: 1.9;
+}
+.mangofolio-nav .mf-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--mf-colors-text-strong);
+}
+.mangofolio-nav a {
+  display: inline-block;
+  margin: 3px 9px;
+  color: var(--mf-colors-text-link);
+}
+.mangofolio-nav a:hover { text-decoration: underline; }
+.mangofolio-nav .mf-note {
+  display: block;
+  margin-top: 10px;
+  font-size: 11.5px;
+  color: var(--mf-colors-text-weak);
+}
+
+/* ============================================================
+ * 响应式
+ * ============================================================ */
+@media (max-width: 900px) {
+  .wrap { padding: 0 20px; }
+  .site-header { padding: 10px 20px; }
+  .toc { position: static; max-height: none; }
+}
+
+@media (max-width: 660px) {
+  body { font-size: 15.5px; }
+  .wrap { padding: 0 16px; }
+  .site-header {
+    padding: 10px 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .site-nav { width: 100%; gap: 2px; }
+  /* 触控可达性：导航项点击区补到 44px（原 6px 8px 内边距远低于 WCAG 2.5.5 建议） */
+  .site-nav > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 6px 12px;
+    font-size: 0.84rem;
+  }
+  .site-nav__cta { margin-left: 0; min-height: 44px; }
+  .band { padding: 44px 0; }
+  .sec-head { padding-top: 14px; }
+  .sec-head__aside { white-space: normal; }
+  .brand { font-size: 1rem; }
+  .brand-en { font-size: 0.72rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

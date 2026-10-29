@@ -4,521 +4,918 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>投资词典 · Invest Dictionary</title>
-<meta name="description" content="把 1000+ 理财词条，装进你的 AI。7 大场景玩法 · 每天更新 5 条热词。说人话，不装逼，不构成投资建议。">
+<meta name="description" content="把 900+ 理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词 · 说人话不装逼，不构成投资建议。">
 <link rel="canonical" href="https://dictionary.mangofolio.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dictionary.mangofolio.com/">
 <meta property="og:image" content="https://dictionary.mangofolio.com/og-cover.png">
 <meta property="og:title" content="投资词典 · Invest Dictionary">
-<meta property="og:description" content="把 1000+ 理财词条，装进你的 AI。7 大场景玩法 · 每天更新 5 条热词。">
+<meta property="og:description" content="把 900+ 理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词。">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="投资词典 · Invest Dictionary">
-<meta name="twitter:description" content="把 1000+ 理财词条，装进你的 AI。7 大场景玩法 · 每天更新 5 条热词。">
+<meta name="twitter:description" content="把 900+ 理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700;900&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/mangofolio-tokens-v09.css">
-<link rel="stylesheet" href="css/betterment-tokens.css">
+<link rel="stylesheet" href="css/site.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#F97316">
 <style>
-:root {
-  --paper: var(--mf-colors-background);
-  --accent: var(--mf-colors-text-link);
-  --ink: var(--mf-colors-text);
-  --ink-light: var(--mf-colors-text-weak);
-  --border: var(--mf-colors-border-weak);
-  --card-bg: var(--mf-colors-background-surface);
-  --brand: var(--mf-colors-text-link);
-  --brand-soft: rgba(249,115,22,0.08);
-  --brand-hover: var(--mf-colors-text-link-hover);
-  --shadow: 0 1px 3px rgba(36,22,16,.08), 0 4px 12px rgba(36,22,16,.10);
-  --shadow-hover: 0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10);
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
-  background: var(--paper);
-  color: var(--ink);
-  line-height: 1.6;
-  min-height: 100vh;
-}
-h1, h2, h3, h4 { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
-a { color: var(--accent); }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+/* ============================================================
+ * 首页专属样式（共用外壳在 css/site.css）
+ * 色带顺序：hero(暖白) → 热词(纸) → 场景(芒果) → 三步(白) → 初心(墨) → 页脚(纸)
+ * ============================================================ */
 
-/* 导航 */
-.site-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 24px; border-bottom: 1px solid var(--border);
-  position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 100;
-  box-shadow: 0 2px 4px rgba(36,22,16,.04), 0 8px 24px rgba(36,22,16,.07);
-}
-.brand { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; display: inline-flex; align-items: baseline; gap: 8px; }
-.brand .en { font-size: 0.78rem; color: var(--brand); font-style: italic; font-weight: 500; letter-spacing: 0.04em; }
-.site-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
-.site-nav a { color: var(--ink-light); text-decoration: none; font-size: 0.9rem; }
-.site-nav a:hover { color: var(--accent); }
-.site-nav a.active { color: var(--mf-colors-text-strong); font-weight: 600; }
-.site-nav button { background: none; border: none; color: var(--ink-light); font-size: 0.9rem; cursor: pointer; font-family: inherit; padding: 0; }
-.site-nav button:hover { color: var(--accent); }
-
-/* ============ 屏一：一句话 + 信任行 ============ */
+/* ---------- 屏一：hero ---------- */
 .hero {
-  text-align: center; padding: clamp(72px,14vh,120px) 20px 48px;
-  background: var(--mf-hero-glow);
-  border-bottom: 1px solid var(--border);
+  padding: clamp(56px, 9vh, 108px) 0 clamp(48px, 7vh, 76px);
+  background: linear-gradient(180deg, var(--mf-colors-primitives-mango-050) 0%, var(--mf-colors-background) 64%);
+  text-align: center;
 }
-.hero .eyebrow { font-size: 0.78rem; letter-spacing: 0.3em; color: var(--mf-hero-eyebrow-color); font-weight: 600; margin-bottom: 14px; }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: 0.1em; color: var(--mf-colors-text-strong); text-shadow: 0 1px 0 rgba(255,255,255,.6); }
-.hero .en-title { font-family: var(--mf-fonts-display); font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--mf-hero-en-title-color); font-style: italic; letter-spacing: 0.15em; margin-bottom: 18px; }
-.hero .slogan { font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 500; color: var(--mf-hero-lead-color); line-height: 1.9; margin-bottom: 22px; }
-.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
-.btn { display: inline-block; padding: 11px 26px; border-radius: var(--mf-radii-round); font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; font-family: inherit; line-height: 1.4; cursor: pointer; border: none; }
-.btn-primary { background: var(--mf-gradients-mango); color: var(--mf-colors-text-on-primary); box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 8px 20px rgba(249,115,22,.22); }
-.btn-primary:hover { background: var(--mf-colors-text-link-hover); transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 10px 24px rgba(249,115,22,.26); }
+.hero__kicker {
+  font-family: var(--mf-fonts-ui);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: var(--mf-colors-text-accent-mango);
+  margin-bottom: 20px;
+}
+.hero__title {
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--mf-colors-text-strong);
+  text-indent: 0.12em;
+}
+.hero__en {
+  margin-top: 6px;
+  font-family: var(--mf-fonts-display-extended), Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.22rem);
+  letter-spacing: 0.16em;
+  /* 品牌规范 §2.1：en-title 应为 Fraunces italic + 橙。原用 accent-indigo（实为灰）不符规范 */
+  color: var(--mf-colors-text-link);
+}
+.hero__lead {
+  margin: 22px auto 0;
+  max-width: 34em;
+  font-size: clamp(0.98rem, 1.9vw, 1.12rem);
+  line-height: 1.9;
+  color: var(--mf-colors-text-weak);
+}
+.hero__lead b { color: var(--mf-colors-text-strong); font-weight: 700; }
 
-.btn-ghost { border: 1.5px solid var(--mf-colors-border-strong); color: var(--mf-colors-text); background: transparent; }
-.btn-ghost:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-soft); }
-.hero-sub-actions { margin-top: 18px; }
-.hero-sub-actions a { font-size: 0.85rem; color: var(--ink-light); text-decoration: none; border-bottom: 1px dashed var(--mf-colors-border-strong); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
-.hero-sub-actions a:hover { color: var(--brand); border-color: var(--brand); }
-
-/* ============ 屏二：搜索 + 热词滚动 ============ */
-.screen { padding: 64px 20px; border-bottom: 1px solid var(--border); }
-.screen-head { text-align: center; margin-bottom: 32px; }
-.screen-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; margin-bottom: 8px; }
-.screen-head p { font-size: 0.95rem; color: var(--ink-light); max-width: 640px; margin: 0 auto; }
-
-.search-screen { background: var(--paper); }
-.search-wrap { display: flex; justify-content: center; margin-bottom: 10px; }
-.search-box { position: relative; width: 100%; max-width: 560px; }
-.search-box .search-ico { position: absolute; left: 21px; top: 50%; transform: translateY(-50%); color: var(--mf-colors-text-weak); pointer-events: none; }
-.search-box input { padding-left: 52px; }
-.search-wrap input {
-  width: 100%; max-width: 560px; padding: 15px 24px; font-size: 1rem;
-  border: 1px solid var(--mf-colors-border); border-radius: var(--mf-radii-round); background: var(--card-bg);
-  color: var(--ink); outline: none; transition: border-color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 3px rgba(36,22,16,.08), 0 4px 12px rgba(36,22,16,.10);
+/* 搜索 */
+.hero__search { margin: 30px auto 0; max-width: 600px; }
+.search-box { position: relative; }
+.search-box svg {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mf-colors-text-weak);
+  pointer-events: none;
+}
+.search-box input {
+  width: 100%;
+  padding: 16px 24px 16px 54px;
+  border: 1px solid var(--mf-colors-border);
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-surface);
+  color: var(--mf-colors-text);
   font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  outline: none;
+  box-shadow: var(--mf-shadows-sm);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
 }
-.search-wrap input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(249,115,22,0.12); }
-.search-hint { text-align: center; font-size: 0.82rem; color: var(--ink-light); margin-bottom: 22px; }
-
-.search-results { max-width: 640px; margin: 0 auto 10px; display: none; flex-direction: column; gap: 8px; }
-.search-results.show { display: flex; }
-.search-result-item {
-  display: flex; justify-content: space-between; align-items: center; gap: 12px;
-  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 12px 16px;
-  text-decoration: none; color: var(--ink); transition: all 0.15s;
+.search-box input::placeholder { color: var(--mf-colors-text-placeholder); }
+.search-box input:focus {
+  border-color: var(--mf-colors-border-focused);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.14);
 }
-.search-result-item:hover { border-color: var(--brand); box-shadow: var(--shadow-hover); }
-.search-result-item .t { font-weight: 600; }
-.search-result-item .ch { font-size: 0.78rem; color: var(--ink-light); }
 
-.search-fallback { display: none; max-width: 640px; margin: 0 auto 10px; }
+.search-results,
+.search-fallback { display: none; margin-top: 14px; text-align: left; }
+.search-results.show,
 .search-fallback.show { display: block; }
+.search-results {
+  max-height: 340px;
+  overflow-y: auto;
+  padding: 6px;
+  border-radius: var(--mf-radii-large);
+  border: 1px solid var(--mf-colors-border);
+  background: var(--mf-colors-background-surface);
+  box-shadow: var(--mf-shadows-card);
+}
+.search-results.show { display: block; }
+.search-result-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--mf-radii-medium);
+  color: var(--mf-colors-text);
+  font-size: 0.94rem;
+}
+.search-result-item:hover { background: var(--mf-colors-background-warning); color: var(--mf-colors-text); }
+.search-result-item .t { font-weight: 600; }
+.search-result-item .ch { font-size: 0.76rem; color: var(--mf-colors-text-weak); white-space: nowrap; }
+
 .fallback-note {
-  background: var(--brand-soft); border: 1px solid rgba(249,115,22,0.25); border-radius: var(--mf-radii-large);
-  padding: 18px 20px; font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 14px;
+  padding: 14px 18px;
+  border-radius: var(--mf-radii-large);
+  border: 1px solid rgba(249, 115, 22, 0.22);
+  background: var(--mf-colors-background-warning);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--mf-colors-text-strong);
 }
-.fallback-note .big { color: var(--brand); }
-.fallback-rules { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 18px 20px; margin-bottom: 14px; }
-.fallback-rules .fr-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
-.fallback-rules .fr-cluster { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
-.fallback-rules .fr-cluster a { font-size: 0.82rem; background: var(--brand-soft); color: var(--brand); border-radius: var(--mf-radii-round); padding: 4px 12px; text-decoration: none; }
-.fallback-rules .fr-cluster a:hover { background: rgba(249,115,22,0.18); }
-.fallback-rules .fr-skill { font-size: 0.85rem; color: var(--ink-light); }
-.fallback-rules .fr-skill b { color: var(--ink); }
+.fallback-note .big { color: var(--mf-colors-text-accent-mango); }
+.fallback-rules {
+  margin-top: 10px;
+  padding: 16px 18px;
+  border-radius: var(--mf-radii-large);
+  border: 1px solid var(--mf-colors-border);
+  background: var(--mf-colors-background-surface);
+}
+.fallback-rules .fr-title { font-size: 0.88rem; font-weight: 700; margin-bottom: 10px; }
+.fallback-rules .fr-cluster { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
+.fallback-rules .fr-cluster a {
+  padding: 4px 12px;
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-warning);
+  font-size: 0.8rem;
+  color: var(--mf-colors-text-accent-mango);
+}
+.fallback-rules .fr-skill { font-size: 0.83rem; color: var(--mf-colors-text-weak); }
+.fallback-rules .fr-skill b { color: var(--mf-colors-text); }
 .fallback-prompt {
-  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 16px 20px;
-  font-size: 0.88rem; color: var(--ink-light); display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 14px 18px;
+  border-radius: var(--mf-radii-large);
+  border: 1px dashed var(--mf-colors-border-strong);
+  display: flex;
+  align-items: center;
+  gap: 10px 12px;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+  color: var(--mf-colors-text-weak);
 }
-.fallback-prompt code { background: var(--mf-colors-background-neutral); border-radius: var(--mf-radii-medium); padding: 2px 8px; font-size: 0.85rem; color: var(--ink); }
-.fallback-prompt .copy-mini { margin-left: auto; }
+.fallback-prompt code {
+  flex: 1 1 240px;
+  padding: 4px 10px;
+  border-radius: var(--mf-radii-medium);
+  background: var(--mf-colors-background-neutral);
+  color: var(--mf-colors-text);
+  font-family: var(--mf-fonts-mono), Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.fallback-prompt .btn { flex: 0 0 auto; }
 
-/* 热词 */
-.hot-section {
-  max-width: 720px; margin: 34px auto 0; background: var(--card-bg);
-  border: 1px solid var(--border); border-radius: var(--mf-radii-card); padding: 22px 24px;
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
 }
-.hot-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
-.hot-title { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; font-weight: 700; font-size: 1.1rem; color: var(--brand); }
-.hot-date { font-size: 0.8rem; color: var(--ink-light); }
-.hot-note { margin-left: auto; font-size: 0.75rem; color: var(--ink-light); }
-.hot-list { height: 96px; overflow: hidden; position: relative; }
+.hero__trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin: 30px auto 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.83rem;
+  color: var(--mf-colors-text-weak);
+}
+.hero__trust li { display: inline-flex; align-items: baseline; gap: 5px; }
+.hero__trust li + li::before {
+  content: "·";
+  margin: 0 12px;
+  color: var(--mf-colors-border-strong);
+}
+.hero__trust b {
+  font-family: var(--mf-fonts-display);
+  font-size: 0.98rem;
+  font-weight: 900;
+  color: var(--mf-colors-text-strong);
+}
+
+/* ---------- 屏二：今日热词 ---------- */
+.hot-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.hot-card {
+  padding: 20px 22px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.hot-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.hot-title {
+  font-family: var(--mf-fonts-display);
+  font-size: 1.02rem;
+  font-weight: 900;
+  color: var(--band-ink);
+}
+.hot-date { font-size: 0.78rem; color: var(--band-ink-weak); }
+.hot-note { margin-left: auto; font-size: 0.74rem; color: var(--band-ink-weak); }
+.hot-list {
+  height: 96px;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent);
+  mask-image: linear-gradient(180deg, #000 82%, transparent);
+}
 .hot-track { transition: transform 0.5s ease; }
-.hot-item { display: flex; align-items: center; gap: 12px; height: 48px; padding: 0 6px; cursor: pointer; text-decoration: none; color: var(--ink); border-radius: var(--mf-radii-large); }
-.hot-item:hover { background: var(--brand-soft); }
-.hot-term { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; white-space: nowrap; }
-.hot-badge { background: var(--brand); color: #fff; font-size: 0.65rem; font-weight: 700; border-radius: var(--mf-radii-small); padding: 1px 6px; letter-spacing: 0.04em; }
-.hot-desc { font-size: 0.85rem; color: var(--ink-light); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.hot-subscribe { border-top: 1px solid var(--border); margin-top: 16px; padding-top: 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.hot-subscribe .hs-label { font-size: 0.82rem; color: var(--ink-light); }
-.hot-subscribe form { display: flex; gap: 8px; flex: 1; min-width: 240px; }
-.hot-subscribe input { flex: 1; padding: 9px 14px; border: 1px solid var(--border); border-radius: var(--mf-radii-round); font-size: 0.88rem; outline: none; font-family: inherit; background: var(--paper); color: var(--ink); }
-.hot-subscribe input:focus { border-color: var(--brand); }
-.hot-subscribe button { padding: 9px 20px; border: none; border-radius: var(--mf-radii-round); background: var(--brand); color: #fff; font-weight: 600; cursor: pointer; font-family: inherit; }
-.hot-subscribe button:hover { background: var(--brand-hover); }
-.hs-msg { font-size: 0.8rem; color: var(--brand); width: 100%; }
-
-/* ============ 屏三：7 大场景玩法 ============ */
-.skills-screen { background: var(--paper); }
-.scene-rail {
-  display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
-  padding: 6px 8px 20px; -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+.hot-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  min-width: 0;
+  padding: 0 10px;
+  border-radius: var(--mf-radii-medium);
+  color: var(--band-ink);
+  font-size: 0.9rem;
 }
-.scene-rail::-webkit-scrollbar { height: 6px; }
-.scene-rail::-webkit-scrollbar-thumb { background: var(--mf-colors-border); border-radius: 9999px; }
+.hot-item:hover { background: var(--mf-colors-background-warning); color: var(--band-ink); }
+.hot-term {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.hot-badge {
+  padding: 1px 6px;
+  border-radius: var(--mf-radii-small);
+  background: var(--mf-colors-background-primary);
+  color: var(--mf-colors-text-on-primary);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.hot-desc {
+  min-width: 0;
+  font-size: 0.83rem;
+  color: var(--band-ink-weak);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hot-sub {
+  padding: 22px 24px;
+  border-radius: var(--mf-radii-card);
+  border: 1px solid var(--mf-colors-border);
+  background: var(--mf-colors-background-surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hot-sub h3 { font-size: 1.02rem; color: var(--band-ink); }
+.hot-sub > p {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  color: var(--band-ink-weak);
+  line-height: 1.75;
+}
+.hot-sub form { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.hot-sub input {
+  flex: 1 1 150px;
+  min-width: 0;
+  padding: 10px 16px;
+  border: 1px solid var(--mf-colors-border-input);
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-input);
+  color: var(--mf-colors-text);
+  font-family: inherit;
+  font-size: 0.88rem;
+  outline: none;
+}
+.hot-sub input:focus { border-color: var(--mf-colors-border-focused); }
+.hot-sub button {
+  flex: 0 0 auto;
+  padding: 10px 22px;
+  border: none;
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-primary);
+  color: var(--mf-colors-text-on-primary);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}
+.hot-sub button:hover { background: var(--mf-colors-background-primary-hover); }
+.hs-msg { margin-top: 10px; font-size: 0.8rem; color: var(--mf-colors-text-success); }
+.hot-sub__tip { font-size: 0.76rem !important; color: var(--mf-colors-text-weak) !important; }
+
+/* ---------- 屏三：7 大场景 ---------- */
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr; /* 跨行等高：让所有卡片（含跨列的 scene-more）拉平，CTA 才对得齐 */
+  gap: 18px;
+}
 .scene-card {
-  flex: 0 0 auto; width: 264px; aspect-ratio: 1 / 2;
-  border-radius: var(--mf-radii-card); overflow: hidden; cursor: pointer;
-  display: flex; flex-direction: column; transition: transform 0.15s, box-shadow 0.15s;
-  scroll-snap-align: start; position: relative;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 1px 3px rgba(36,22,16,.08), 0 6px 20px rgba(36,22,16,.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--mf-radii-card);
+  border: 1px solid var(--mf-colors-border);
+  background: var(--mf-colors-background-surface);
+  color: var(--mf-colors-text);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
-.scene-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(36,22,16,.08), 0 14px 36px rgba(36,22,16,.14); }
-.scene-shot { flex: 1 1 58%; min-height: 0; display: flex; flex-direction: column; padding: 0; overflow: hidden; }
-.scene-shot .scene-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.scene-prompt { flex: 1 1 42%; display: flex; flex-direction: column; padding: 16px; gap: 8px; }
-.scene-prompt-title { font-size: 0.82rem; font-weight: 800; }
-.scene-prompt-text { font-size: 0.78rem; line-height: 1.65; opacity: 0.92; flex: 1; }
-.scene-copy {
-  display: flex; justify-content: space-between; align-items: center;
-  font-size: 0.78rem; font-weight: 700; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.35);
-  letter-spacing: 0.02em;
+.scene-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: var(--mf-shadows-sm);
+  color: var(--mf-colors-text);
 }
-/* betterment 色板：每张卡不同底色 */
-.sc-narrative { background: var(--bmt-colors-primitives-blue-60); color: #fff; }
-.sc-narrative .scene-shot { background: linear-gradient(180deg, #1d6ae5, #1856ba 55%); }
-.sc-combo { background: var(--bmt-colors-primitives-purple-70); color: #fff; }
-.sc-combo .scene-shot { background: linear-gradient(180deg, #8657f6, #703dea 55%); }
-.sc-duel { background: var(--bmt-colors-primitives-gold-60); color: #4a3000; }
-.sc-duel .scene-shot { background: linear-gradient(180deg, #ffd553, #f8a82e 55%); }
-.sc-decision { background: var(--bmt-colors-primitives-teal-60); color: #fff; }
-.sc-decision .scene-shot { background: linear-gradient(180deg, #3aa2ae, #226d78 55%); }
-.sc-probe { background: var(--bmt-colors-primitives-orange-50); color: #4a1a00; }
-.sc-probe .scene-shot { background: linear-gradient(180deg, #fa7d29, #e05f0c 55%); }
-.sc-emergency { background: var(--bmt-colors-primitives-red-70); color: #fff; }
-.sc-emergency .scene-shot { background: linear-gradient(180deg, #d0372d, #a01f18 55%); }
-.sc-hotword { background: var(--bmt-colors-primitives-navy-100); color: #fff; }
-.sc-hotword .scene-shot { background: linear-gradient(180deg, #000b50, #1b2a89 55%); }
-
-/* ============ 屏四：怎么用三步 ============ */
-.howto-screen { background: var(--card-bg); }
-.howto-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 26px; }
-.step-item { background: var(--paper); border: 1px solid var(--border); border-radius: var(--mf-radii-card); padding: 24px 20px; }
-.step-num { font-size: 1.5rem; font-weight: 900; color: var(--brand); font-family: var(--mf-fonts-display); margin-bottom: 8px; }
-.step-title { font-size: 1rem; font-weight: 900; margin-bottom: 6px; }
-.step-desc { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
-.step-desc a { font-weight: 600; }
-.howto-links {
-  background: var(--brand-soft); border: 1px solid rgba(249,115,22,0.2); border-radius: var(--mf-radii-card);
-  padding: 20px; text-align: center; font-size: 0.95rem; color: var(--ink);
+.scene-shot {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--mf-colors-background-neutral);
+  border-bottom: 1px solid var(--mf-colors-border);
 }
-.howto-links a { font-weight: 700; text-decoration: underline; }
+.scene-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.scene-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px 18px;
+  flex: 1;
+}
+.scene-title { display: flex; align-items: center; gap: 10px; }
+.scene-title h3 {
+  font-size: 1.04rem;
+  font-weight: 900;
+  color: var(--mf-colors-text-strong);
+}
+.scene-desc {
+  font-size: 0.855rem;
+  line-height: 1.7;
+  color: var(--mf-colors-text-weak);
+  flex: 1;
+  /* 描述限 3 行：长短不一的文案不再把卡片撑成不同高度 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.scene-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid var(--mf-colors-border-weak);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--mf-colors-text-link);
+}
+.scene-more {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 26px 28px;
+  border-radius: var(--mf-radii-card);
+  border: 1px dashed var(--mf-colors-border-strong);
+  background: var(--mf-colors-background-surface);
+  color: var(--mf-colors-text);
+  transition: border-color 0.18s ease, background-color 0.18s ease;
+}
+.scene-more:hover {
+  border-color: var(--mf-colors-text-link);
+  background: var(--mf-colors-background-surface);
+  color: var(--mf-colors-text);
+}
+.scene-more h3 { font-size: 1.16rem; color: var(--mf-colors-text-strong); }
+.scene-more p { font-size: 0.875rem; line-height: 1.75; color: var(--mf-colors-text-weak); }
+.scene-more span { font-size: 0.85rem; font-weight: 700; color: var(--mf-colors-text-link); }
 
-/* ============ 屏五：初心与边界 ============ */
-.manifesto-text { max-width: 680px; margin: 0 auto 36px; font-size: 0.98rem; color: var(--ink-light); line-height: 2; }
-.manifesto-text strong { color: var(--ink); }
-.manifesto-punch { font-family: var(--mf-fonts-display); font-size: 1.2rem; font-weight: 800; color: var(--ink); text-align: center; margin: 28px 0; }
-.boundary-box { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-radius: var(--mf-radii-card); overflow: hidden; background: var(--card-bg); }
-.bd-col { padding: 26px; }
-.bd-col:first-child { border-right: 1px solid var(--border); }
-.bd-col h4 { font-size: 1rem; margin-bottom: 16px; }
-.bd-col.do h4 { color: var(--mf-colors-text-success); }
-.bd-col.dont h4 { color: var(--mf-colors-text-critical); }
-.bd-col ul { list-style: none; font-size: 0.9rem; color: var(--ink-light); }
-.bd-col li { margin-bottom: 10px; display: flex; gap: 8px; }
-.bd-col.do li::before { content: '✓'; color: var(--mf-colors-text-success); font-weight: 700; }
-.bd-col.dont li::before { content: '×'; color: var(--mf-colors-text-critical); font-weight: 700; }
-.compliance-box { max-width: 680px; margin: 26px auto 0; background: var(--brand-soft); border: 1px solid rgba(249,115,22,0.2); border-radius: var(--mf-radii-large); padding: 16px 20px; font-size: 0.85rem; color: var(--ink-light); }
-.compliance-box h5 { font-size: 0.9rem; color: var(--ink); margin-bottom: 8px; }
-.compliance-box li { margin-bottom: 6px; }
+/* ---------- 屏四：怎么用三步 ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  list-style: none;
+  counter-reset: none;
+}
+.step { padding-top: 18px; border-top: 1px solid var(--band-line); }
+.step__n {
+  display: block;
+  font-family: var(--mf-fonts-display);
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--mf-colors-text-accent-mango);
+  margin-bottom: 12px;
+}
+.step h3 { font-size: 1.06rem; margin-bottom: 8px; color: var(--band-ink); }
+.step p { font-size: 0.885rem; line-height: 1.8; color: var(--band-ink-weak); }
+.step p a { font-weight: 600; }
+.steps-foot {
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid var(--band-line);
+  font-size: 0.865rem;
+  line-height: 1.85;
+  color: var(--band-ink-weak);
+  max-width: 72ch;
+}
+.steps-foot b { color: var(--band-ink); }
 
-/* ============ 屏六：页脚 ============ */
-.site-footer { text-align: center; padding: 30px 20px 16px; font-size: 0.82rem; color: var(--ink-light); border-top: 1px solid var(--border); }
-.site-footer .disclaimer { margin-bottom: 12px; }
-.mangofolio-nav { border-top: 1px solid var(--border); margin-top: 20px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: var(--ink-light); }
-.mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: var(--ink); }
-.mangofolio-nav a { display: inline-block; margin: 4px 10px; color: var(--accent); text-decoration: none; }
-.mangofolio-nav a:hover { text-decoration: underline; }
-.mangofolio-nav .mf-note { display: block; margin-top: 8px; font-size: 12px; color: var(--ink-light); }
+/* ---------- 屏五：初心与边界（墨底，全页唯一深色带） ---------- */
+.about-copy { max-width: 62ch; }
+.about-copy p {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: var(--band-ink-weak);
+  margin-bottom: 14px;
+}
+.about-copy p strong { color: var(--band-ink); font-weight: 700; }
+.about-punch {
+  font-family: var(--mf-fonts-display) !important;
+  font-size: 1.24rem !important;
+  font-weight: 900;
+  line-height: 1.8 !important;
+  color: var(--band-ink) !important;
+  margin-top: 22px !important;
+  padding-top: 18px;
+  border-top: 1px solid var(--band-line);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 40px;
+  align-items: start;
+}
+.about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.about-col h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.98rem;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--band-line);
+}
+.about-col h3::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--mf-colors-primitives-mango-400);
+}
+.about-col--dont h3::before { background: rgba(255, 255, 255, 0.35); }
+.about-col ul { list-style: none; }
+.about-col li {
+  position: relative;
+  padding: 6px 0 6px 22px;
+  font-size: 0.885rem;
+  line-height: 1.7;
+  color: var(--band-ink-weak);
+}
+.about-col li::before {
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--mf-colors-primitives-mango-400);
+}
+.about-col--do li::before { content: "✓"; }
+.about-col--dont li::before { content: "×"; color: rgba(255, 255, 255, 0.4); }
+.about-compliance {
+  margin-top: 42px;
+  padding-top: 20px;
+  border-top: 1px solid var(--band-line);
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px 28px;
+}
+.about-compliance h4 {
+  font-family: var(--mf-fonts-ui);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--band-ink);
+}
+.about-compliance ul { list-style: none; font-size: 0.83rem; line-height: 1.9; color: var(--band-ink-weak); }
+.about-compliance li::before { content: "— "; color: rgba(255, 255, 255, 0.35); }
 
-/* 模态框 */
-.modal-overlay { position: fixed; inset: 0; background: rgba(36,22,16,.72); display: none; justify-content: center; align-items: center; z-index: 200; backdrop-filter: blur(4px); padding: 20px; }
+/* ---------- 弹窗 ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--mf-z-index-modal);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--mf-colors-background-overlay);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
 .modal-overlay.active { display: flex; }
-.modal { background: var(--card-bg); width: 100%; max-width: 620px; border-radius: var(--mf-radii-card); padding: 34px; position: relative; box-shadow: 0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10); animation: fadeIn 0.2s; max-height: 88vh; overflow-y: auto; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.modal-close { position: absolute; top: 16px; right: 18px; background: none; border: none; font-size: 24px; color: var(--ink-light); cursor: pointer; }
-.modal-title { font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; }
-.modal-scene { font-size: 0.92rem; color: var(--ink-light); margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-.prompt-box { background: var(--mf-colors-background-neutral); border: 1px solid var(--border); border-radius: var(--mf-radii-large); padding: 18px; font-family: var(--mf-fonts-mono), 'Consolas', 'Courier New', monospace; font-size: 0.84rem; line-height: 1.7; color: var(--mf-colors-text); margin-bottom: 18px; white-space: pre-wrap; word-break: break-word; }
-.copy-btn { background: var(--brand); color: #fff; border: none; border-radius: var(--mf-radii-round); padding: 12px; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; font-family: inherit; transition: all 0.2s; }
-.copy-btn:hover { background: var(--brand-hover); }
-.modal-foot { margin-top: 12px; font-size: 0.78rem; color: var(--ink-light); text-align: center; }
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  max-height: 86vh;
+  overflow-y: auto;
+  padding: 32px;
+  border-radius: var(--mf-radii-card);
+  background: var(--mf-colors-background-surface);
+  box-shadow: var(--mf-shadows-float);
+  animation: fadeIn 0.18s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-close {
+  position: absolute;
+  top: 14px; right: 16px;
+  width: 32px; height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--mf-colors-text-weak);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover { background: var(--mf-colors-background-neutral); color: var(--mf-colors-text); }
+.modal-title {
+  font-family: var(--mf-fonts-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--mf-colors-text-strong);
+  padding-right: 32px;
+}
+.modal-scene {
+  margin: 8px 0 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--mf-colors-border-weak);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--mf-colors-text-weak);
+}
+.prompt-box {
+  padding: 18px;
+  border-radius: var(--mf-radii-large);
+  border: 1px solid var(--mf-colors-border);
+  background: var(--mf-colors-background-neutral);
+  color: var(--mf-colors-text);
+  font-family: var(--mf-fonts-mono), Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.copy-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px;
+  border: none;
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-primary);
+  color: var(--mf-colors-text-on-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}
+.copy-btn:hover { background: var(--mf-colors-background-primary-hover); }
+.modal-foot {
+  margin-top: 12px;
+  font-size: 0.76rem;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--mf-colors-text-weak);
+}
 .modal-foot a { font-weight: 600; }
 
-.hidden { display: none !important; }
-@media (max-width: 860px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .howto-steps { grid-template-columns: 1fr; }
-  .boundary-box { grid-template-columns: 1fr; }
-  .bd-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
-  .site-nav { gap: 10px; }
+/* ---------- 响应式 ---------- */
+@media (max-width: 1000px) {
+  .scene-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .scene-more { grid-column: span 2; }
+  .about-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+@media (max-width: 820px) {
+  .hot-grid { grid-template-columns: minmax(0, 1fr); }
+  .steps { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .about-compliance { grid-template-columns: 1fr; gap: 10px; }
 }
 @media (max-width: 600px) {
-  .site-header { flex-direction: column; gap: 10px; }
-  .scene-card { width: 208px; }
-  .hot-note { display: none; }
+  .hero__trust { gap: 4px 16px; font-size: 0.78rem; }
+  .hero__trust li + li::before { content: none; margin: 0; }
+  .scene-grid { grid-template-columns: minmax(0, 1fr); }
+  .scene-more { grid-column: auto; }
+  .about-cols { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .modal { padding: 24px 20px; }
+  .about-punch { font-size: 1.08rem !important; }
 }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main">跳到正文</a>
+
 <header class="site-header">
-  <a class="brand" href="index.html">投资词典<span class="en">Invest Dictionary</span></a>
+  <a class="brand" href="index.html">投资词典<span class="brand-en">Invest Dictionary</span></a>
   <nav class="site-nav" aria-label="主导航">
     <a href="dictionary.html">全部词条</a>
-    <a href="#daily-hot">每日热词</a>
-    <button onclick="location.href='?random=1'">随机一词</button>
+    <a href="#daily-hot">今日热词</a>
+    <a href="#skills">7 个场景</a>
+    <a href="#howto">怎么用</a>
     <a href="guide.html">使用指南</a>
+    <a class="site-nav__cta" href="?random=1">随机一词</a>
   </nav>
 </header>
 
-<!-- ============ 屏一：一句话 + 搜索 ============ -->
-<section class="hero">
-  <p class="eyebrow">说人话 · 不装逼 · 每天一篇</p>
-  <h1>投资词典</h1>
-  <p class="en-title">Invest Dictionary</p>
-  <p class="slogan">把投资术语，翻译成你听得懂的话。不装腔作势，一读就懂。</p>
+<main id="main">
 
-  <div class="search-wrap">
-    <div class="search-box">
-      <svg class="search-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input type="search" id="searchBox" placeholder="输入一个理财词，如「可转债」「LPR」「最大回撤」" aria-label="搜索词条">
-    </div>
-  </div>
-  <div class="search-results" id="searchResults"></div>
+  <!-- ============ 屏一：一句话 + 搜索 ============ -->
+  <section class="band hero">
+    <div class="wrap">
+      <p class="hero__kicker">MANGOFOLIO · 投资词典</p>
+      <h1 class="hero__title">投资词典</h1>
+      <p class="hero__en">Invest Dictionary</p>
+      <p class="hero__lead">
+        把投资的词，翻译成人话。<br>
+        新闻里的数字、产品说明书、销售的话术 —— 一个词，三分钟看懂。
+      </p>
 
-  <div class="search-fallback" id="searchFallback">
-    <div class="fallback-note">没有直接搜到这个词条。<span class="big">把你在纠结的那件事说给我听</span>，看看该看哪些词 👇</div>
-    <div class="fallback-rules" id="fallbackRules"></div>
-    <div class="fallback-prompt">
-      <span>或者把这件事丢给你常用的 AI：</span>
-      <code id="fallbackPromptText"></code>
-      <button class="btn btn-primary copy-mini" onclick="copyFallbackPrompt()">复制提示词</button>
-    </div>
-  </div>
+      <div class="hero__search">
+        <div class="search-box">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="search" id="searchBox" placeholder="输入一个理财词，如「可转债」「LPR」「最大回撤」" aria-label="搜索词条" autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
 
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="dictionary.html">按篇章浏览</a>
-    <button class="btn btn-ghost" onclick="location.href='?random=1'">随机读一篇</button>
-  </div>
-  <div class="hero-sub-actions">
-    <a href="#skills">还有 7 大场景玩法 →</a>
-  </div>
-</section>
-
-<!-- ============ 屏二：每日热词 ============ -->
-<section class="screen search-screen" id="daily-hot">
-  <div class="hot-section">
-    <div class="hot-head">
-      <span class="hot-title">今日热词</span>
-      <span class="hot-date"></span>
-      <span class="hot-note">点击热词，触发 AI 解读</span>
-    </div>
-    <div class="hot-list">
-      <div class="hot-track" id="hotTrack"></div>
-    </div>
-    <div class="hot-subscribe">
-      <span class="hs-label">每天 5 条热词，发到邮箱</span>
-      <form class="hs-form" id="hotSubscribeForm" novalidate>
-        <input type="email" id="hsEmail" placeholder="邮箱地址" aria-label="邮箱地址" required>
-        <button type="submit">订阅</button>
-      </form>
-      <p class="hs-msg" id="hsMsg" hidden></p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 屏三：7 大场景玩法 ============ -->
-<section class="screen skills-screen" id="skills">
-  <div class="screen-head">
-    <h2>7 大场景玩法</h2>
-    <p>这些玩法让你在投资理财认知上更进一步。点卡片复制提示词，去你常用的 AI 里直接跑。</p>
-  </div>
-
-  <div class="scene-rail">
-    <div class="scene-card sc-narrative" onclick="openSkillModal('narrative')">
-      <div class="scene-shot">
-        <img class="scene-img" src="assets/cases/narrative.png" alt="新闻翻译机案例截图" loading="lazy" />
+        <div class="search-fallback" id="searchFallback">
+          <div class="fallback-note">没有直接搜到。<span class="big">把你在纠结的那件事说给我听</span>，看看该先看哪些词。</div>
+          <div class="fallback-rules" id="fallbackRules"></div>
+          <div class="fallback-prompt">
+            <span>或者把这件事丢给你常用的 AI：</span>
+            <code id="fallbackPromptText"></code>
+            <button class="btn btn--primary btn--sm" type="button" onclick="copyFallbackPrompt()">复制提示词</button>
+          </div>
+        </div>
       </div>
-      <div class="scene-prompt">
-        <div class="scene-prompt-title">📖 新闻翻译机 · 复制提示词给 AI</div>
-        <div class="scene-prompt-text">提取 3-5 个核心概念，串成一条因果线；钩子→原始数据→概念拆解→行动清单。</div>
-        <div class="scene-copy">复制提示词 <span>→</span></div>
-      </div>
-    </div>
 
-    <div class="scene-card sc-combo" onclick="openSkillModal('combo')">
-      <div class="scene-shot">
-        <img class="scene-img" src="assets/cases/combo.png" alt="概念串联案例截图" loading="lazy" />
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="dictionary.html">按篇章浏览词库</a>
+        <a class="btn btn--line" href="guide.html">照抄版使用指南</a>
       </div>
-      <div class="scene-prompt">
-        <div class="scene-prompt-title">🔗 概念串联 · 复制提示词给 AI</div>
-        <div class="scene-prompt-text">把涉及到的理财概念组合起来，构建宏观到个人的传导链，最多 4 步。</div>
-        <div class="scene-copy">复制提示词 <span>→</span></div>
-      </div>
-    </div>
 
-    <div class="scene-card sc-duel" onclick="openSkillModal('duel')">
-      <div class="scene-shot">
-        <img class="scene-img" src="assets/cases/duel.png" alt="二选一擂台案例截图" loading="lazy" />
-      </div>
-      <div class="scene-prompt">
-        <div class="scene-prompt-title">⚖️ 二选一擂台 · 复制提示词给 AI</div>
-        <div class="scene-prompt-text">四维并排对比，给出分界线：什么条件下选 A，什么条件下选 B。</div>
-        <div class="scene-copy">复制提示词 <span>→</span></div>
-      </div>
-    </div>
-
-    <div class="scene-card sc-decision" onclick="openSkillModal('decision')">
-      <div class="scene-shot">
-        <img class="scene-img" src="assets/cases/decision.png" alt="决策拆解桌案例截图" loading="lazy" />
-      </div>
-      <div class="scene-prompt">
-        <div class="scene-prompt-title">🧩 决策拆解桌 · 复制提示词给 AI</div>
-        <div class="scene-prompt-text">把决策拆成 4 个能填的变量，给分界线，列出今天能做的行动清单。</div>
-        <div class="scene-copy">复制提示词 <span>→</span></div>
-      </div>
-    </div>
-
-    <div class="scene-card sc-probe" onclick="openSkillModal('probe')">
-      <div class="scene-shot">
-        <img class="scene-img" src="assets/cases/probe.png" alt="防坑提问器案例截图" loading="lazy" />
-      </div>
-      <div class="scene-prompt">
-        <div class="scene-prompt-title">❓ 防坑提问器 · 复制提示词给 AI</div>
-        <div class="scene-prompt-text">列出该问销售的核心问题，指出哪些回答是“红灯”，帮你看穿话术。</div>
-        <div class="scene-copy">复制提示词 <span>→</span></div>
-      </div>
-    </div>
-
-    <div class="scene-card sc-emergency" onclick="openSkillModal('emergency')">
-      <div class="scene-shot">
-        <img class="scene-img" src="assets/cases/emergency.png" alt="理财急诊案例截图" loading="lazy" />
-      </div>
-      <div class="scene-prompt">
-        <div class="scene-prompt-title">🩺 理财急诊 · 复制提示词给 AI</div>
-        <div class="scene-prompt-text">先诊断是波动还是买错，倒查该看哪几个词，只帮你想清楚不直接说卖。</div>
-        <div class="scene-copy">复制提示词 <span>→</span></div>
-      </div>
-    </div>
-
-    <div class="scene-card sc-hotword" onclick="openSkillModal('hotword')">
-      <div class="scene-shot">
-        <img class="scene-img" src="assets/cases/hotword.png" alt="每日热词案例截图" loading="lazy" />
-      </div>
-      <div class="scene-prompt">
-        <div class="scene-prompt-title">🔥 每日热词 · 复制提示词给 AI</div>
-        <div class="scene-prompt-text">拆出今天必须懂的热词，每个讲人话，串成一句能复述给朋友的话。</div>
-        <div class="scene-copy">复制提示词 <span>→</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 屏四：怎么用三步 ============ -->
-<section class="screen howto-screen" id="howto">
-  <div class="screen-head">
-    <h2>怎么用？三步</h2>
-    <p>不需要安装，不需要注册。选一个场景，拿到提示词，去你手边的 AI 里跑。</p>
-  </div>
-
-  <div class="howto-steps">
-    <div class="step-item">
-      <div class="step-num">01</div>
-      <div class="step-title">选一个 Skill</div>
-      <div class="step-desc">点上方任意一张卡片，查看完整提示词，并点击“复制”。</div>
-    </div>
-    <div class="step-item">
-      <div class="step-num">02</div>
-      <div class="step-title">复制提示词去常用 AI</div>
-      <div class="step-desc">ChatGPT / Claude / DeepSeek / 豆包 都行。把提示词和你的内容一起发过去。</div>
-    </div>
-    <div class="step-item">
-      <div class="step-num">03</div>
-      <div class="step-title">去 SkillHub 装 Skill</div>
-      <div class="step-desc">装好后不用每次复制，直接对 AI 说“用理财急诊看看这个”。<a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">先链 ima 知识库</a>（SkillHub 上架地址就绪后更新）。</div>
-    </div>
-  </div>
-
-  <div class="howto-links">
-    📚 想先查词？去 <a href="dictionary.html">词库独立页</a>。词库已同步到 <a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">ima 知识库</a>；装 Skill 后可直接调用。不会用？看 <a href="guide.html">使用指南</a>。
-  </div>
-</section>
-
-<!-- ============ 屏五：初心与边界（兼合规声明） ============ -->
-<section class="screen manifesto-screen" id="about">
-  <div class="screen-head">
-    <h2>初心与边界</h2>
-    <p>既是初心，也是合规声明。</p>
-  </div>
-
-  <div class="manifesto-text">
-    <p>理财这件事，卡住普通人的从来不是“没钱”，是<strong>“看不懂”</strong>。</p>
-    <p>看不懂新闻里的数字，看不懂产品说明书，看不懂销售在说什么。于是只能听别人说，听完还是不知道，自己到底买的是什么。</p>
-    <div class="manifesto-punch">
-      我们想做的，是把每一个词、每一条新闻、每一个产品，<br>翻译成你能听懂的话。<br>让每个人都懂词，让每个人都能自己判断。
-    </div>
-  </div>
-
-  <div class="boundary-box">
-    <div class="bd-col do">
-      <h4>我们做什么</h4>
-      <ul>
-        <li>把词条翻译成人话</li>
-        <li>把新闻拆成一条线</li>
-        <li>帮你列出该问的问题</li>
-        <li>帮你把决策拆成变量</li>
-        <li>告诉你该看哪几个词</li>
-        <li>教你看懂“保本保息”这类话术</li>
+      <ul class="hero__trust">
+        <li><b id="statEntries">900+</b> 个词条</li>
+        <li><b>7</b> 个场景 Skill</li>
+        <li>每天 <b>5</b> 条热词</li>
+        <li>已同步 ima 知识库</li>
       </ul>
     </div>
-    <div class="bd-col dont">
-      <h4>我们不做什么</h4>
-      <ul>
-        <li>不推荐买什么、卖什么</li>
-        <li>不预测涨跌</li>
-        <li>不替你做决定</li>
-        <li>不承诺任何收益</li>
-        <li>不提供个性化投资建议</li>
-        <li>不替代持牌机构服务</li>
-      </ul>
+  </section>
+
+  <!-- ============ 屏二：今日热词 ============ -->
+  <section class="band band--paper" id="daily-hot">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head__main">
+          <h2>今日热词</h2>
+          <p>每天 5 条市场正在聊的词。点一下，把解读提示词复制到你的 AI 里。</p>
+        </div>
+        <div class="sec-head__aside"><a href="dictionary.html">全部词条 →</a></div>
+      </div>
+
+      <div class="hot-grid">
+        <div class="hot-card card">
+          <div class="hot-head">
+            <span class="hot-title">今天在聊什么</span>
+            <span class="hot-date"></span>
+            <span class="hot-note">点击热词 → 触发 AI 解读</span>
+          </div>
+          <div class="hot-list">
+            <div class="hot-track" id="hotTrack"></div>
+          </div>
+        </div>
+
+        <aside class="hot-sub">
+          <h3>每天 5 条热词，发到邮箱</h3>
+          <p>不用天天刷行情。把今天该懂的词发给你，三分钟看完。</p>
+          <form id="hotSubscribeForm" novalidate>
+            <input type="email" id="hsEmail" placeholder="你的邮箱地址" aria-label="邮箱地址" required>
+            <button type="submit">订阅</button>
+          </form>
+          <p class="hs-msg" id="hsMsg" hidden></p>
+          <p class="hot-sub__tip">每周最多 7 封，随时可退订。</p>
+        </aside>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="compliance-box">
-    <h5>合规三条红线</h5>
-    <ul>
-      <li>红线一：不无资质提供投资建议——只输出“看什么 / 问什么 / 取决于什么”，不输出“买什么”。</li>
-      <li>红线二：AI 生成内容不替代持牌服务——定位为信息整理 / 知识科普 / 投教。</li>
-      <li>红线三：不承诺收益、不保本保息——工具专门拆穿“保本保息”话术。</li>
-    </ul>
-  </div>
+  <!-- ============ 屏三：7 大场景 ============ -->
+  <section class="band band--mango" id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head__main">
+          <h2>7 个场景，对应 7 种搞不懂</h2>
+          <p>每个场景一个 Skill。点卡片看完整提示词，复制给你手边的 AI（ChatGPT / Claude / DeepSeek / 豆包都行）。</p>
+        </div>
+        <div class="sec-head__aside"><a href="guide.html">照着抄的用法 →</a></div>
+      </div>
 
-  <p style="text-align:center; margin-top: 22px; font-size: 0.85rem; color: var(--ink-light);">我们提供的是“看懂”和“提问”的工具，不是“买什么”的答案。最终的决定，永远在你手里。</p>
-</section>
+      <div class="scene-grid">
+        <a class="scene-card" href="#skills" onclick="openSkillModal('narrative');return false;">
+          <div class="scene-shot"><img src="assets/cases/narrative.png" alt="新闻翻译机输出示例" loading="lazy" width="360" height="270"></div>
+          <div class="scene-body">
+            <div class="scene-title"><span class="kico" aria-hidden="true">譯</span><h3>新闻翻译机</h3></div>
+            <p class="scene-desc">贴一段财经新闻，拆出 3-5 个核心概念，串成一条能讲清的因果线。</p>
+            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+          </div>
+        </a>
 
-<!-- ============ 屏六：页脚免责声明 ============ -->
-<footer class="site-footer" id="footer">
-  <p class="disclaimer">本站内容与全部 AI 输出均为信息整理 / 知识科普 / 投教参考，不构成投资建议；不承诺收益、不保本保息。投资有风险，决策需谨慎，请仔细甄别。</p>
-  <p style="margin-bottom: 8px;">© 2026 Invest Dictionary · 投资词典 · <a href="guide.html">使用指南</a> · <a href="dictionary.html">词库</a></p>
-</footer>
+        <a class="scene-card" href="#skills" onclick="openSkillModal('combo');return false;">
+          <div class="scene-shot"><img src="assets/cases/combo.png" alt="概念串联输出示例" loading="lazy" width="360" height="270"></div>
+          <div class="scene-body">
+            <div class="scene-title"><span class="kico" aria-hidden="true">串</span><h3>概念串联</h3></div>
+            <p class="scene-desc">一个复杂事件牵扯好几个概念，帮你搭一条从宏观到自家钱包的传导链。</p>
+            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+          </div>
+        </a>
+
+        <a class="scene-card" href="#skills" onclick="openSkillModal('duel');return false;">
+          <div class="scene-shot"><img src="assets/cases/duel.png" alt="二选一擂台输出示例" loading="lazy" width="360" height="270"></div>
+          <div class="scene-body">
+            <div class="scene-title"><span class="kico" aria-hidden="true">擂</span><h3>二选一擂台</h3></div>
+            <p class="scene-desc">提前还贷还是买理财？四维并排对比，给出「什么条件下选哪个」的分界线。</p>
+            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+          </div>
+        </a>
+
+        <a class="scene-card" href="#skills" onclick="openSkillModal('decision');return false;">
+          <div class="scene-shot"><img src="assets/cases/decision.png" alt="决策拆解桌输出示例" loading="lazy" width="360" height="270"></div>
+          <div class="scene-body">
+            <div class="scene-title"><span class="kico" aria-hidden="true">拆</span><h3>决策拆解桌</h3></div>
+            <p class="scene-desc">买房、教育金、要不要辞职——先把决策拆成能填的变量，再谈怎么选。</p>
+            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+          </div>
+        </a>
+
+        <a class="scene-card" href="#skills" onclick="openSkillModal('probe');return false;">
+          <div class="scene-shot"><img src="assets/cases/probe.png" alt="防坑提问器输出示例" loading="lazy" width="360" height="270"></div>
+          <div class="scene-body">
+            <div class="scene-title"><span class="kico" aria-hidden="true">問</span><h3>防坑提问器</h3></div>
+            <p class="scene-desc">有人推荐了个产品，听着很香。先列出你该问销售的问题，以及什么回答是红灯。</p>
+            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+          </div>
+        </a>
+
+        <a class="scene-card" href="#skills" onclick="openSkillModal('emergency');return false;">
+          <div class="scene-shot"><img src="assets/cases/emergency.png" alt="理财急诊输出示例" loading="lazy" width="360" height="270"></div>
+          <div class="scene-body">
+            <div class="scene-title"><span class="kico" aria-hidden="true">診</span><h3>理财急诊</h3></div>
+            <p class="scene-desc">买的理财亏了，割还是拿？先分清是正常波动还是买错了东西，再决定。</p>
+            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+          </div>
+        </a>
+
+        <a class="scene-card" href="#skills" onclick="openSkillModal('hotword');return false;">
+          <div class="scene-shot"><img src="assets/cases/hotword.png" alt="每日热词输出示例" loading="lazy" width="360" height="270"></div>
+          <div class="scene-body">
+            <div class="scene-title"><span class="kico" aria-hidden="true">熱</span><h3>每日热词</h3></div>
+            <p class="scene-desc">今天市场在聊什么？拆出必须懂的几个词，串成一句能复述给朋友的话。</p>
+            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+          </div>
+        </a>
+
+        <a class="scene-more" href="guide.html">
+          <h3>8 个场景的完整用法 →</h3>
+          <p>哪个场景配哪个 Skill、提示词怎么改、哪些问题不该问它——使用指南里全写好了。</p>
+          <span>打开使用指南</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 屏四：怎么用三步 ============ -->
+  <section class="band band--base" id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head__main">
+          <h2>怎么用？三步</h2>
+          <p>不用注册，不用装插件。选一个场景，复制提示词，扔给你正在用的 AI。</p>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__n">01</span>
+          <h3>选一个场景</h3>
+          <p>点上面任意一张卡，看到完整提示词。拿不准就先用「理财急诊」。</p>
+        </li>
+        <li class="step">
+          <span class="step__n">02</span>
+          <h3>复制提示词</h3>
+          <p>把提示词和你自己的情况一起发给 AI。它只帮你理清该看什么、该问什么。</p>
+        </li>
+        <li class="step">
+          <span class="step__n">03</span>
+          <h3>想装成 Skill</h3>
+          <p>装好之后不用每次复制。命令和目录写在 <a href="guide.html">使用指南</a> 里。</p>
+        </li>
+      </ol>
+
+      <p class="steps-foot">
+        想先查词就去 <a href="dictionary.html">词库</a>；想先把 Skill 装进 AI，看 <a href="guide.html">使用指南</a>。词库已经同步到
+        <a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">ima 知识库</a>，装好后可以直接调用（SkillHub 上架地址就绪后更新）。<b>不装 Skill 也能用</b>，只是输出不会严格走质量红线。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 屏五：初心与边界（兼合规声明） ============ -->
+  <section class="band band--dark" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head__main">
+          <h2>初心与边界</h2>
+          <p>既是初心，也是合规声明。</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>理财这件事，卡住普通人的从来不是「没钱」，是<strong>「看不懂」</strong>。</p>
+          <p>看不懂新闻里的数字，看不懂产品说明书，看不懂销售在说什么。于是只能听别人说，听完还是不知道自己买的是什么。</p>
+          <p class="about-punch">我们想做的，是把每个词、每条新闻、每个产品，翻译成你听得懂的话。</p>
+        </div>
+
+        <div class="about-cols">
+          <div class="about-col about-col--do">
+            <h3>我们做什么</h3>
+            <ul>
+              <li>把词条翻译成人话</li>
+              <li>把新闻拆成一条线</li>
+              <li>帮你列出该问的问题</li>
+              <li>帮你把决策拆成变量</li>
+              <li>告诉你该看哪几个词</li>
+              <li>教你看懂「保本保息」这类话术</li>
+            </ul>
+          </div>
+          <div class="about-col about-col--dont">
+            <h3>我们不做什么</h3>
+            <ul>
+              <li>不推荐买什么、卖什么</li>
+              <li>不预测涨跌</li>
+              <li>不替你做决定</li>
+              <li>不承诺任何收益</li>
+              <li>不提供个性化投资建议</li>
+              <li>不替代持牌机构服务</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-compliance">
+        <h4>合规三条红线</h4>
+        <ul>
+          <li>不无资质提供投资建议 —— 只输出「看什么 / 问什么 / 取决于什么」，不输出「买什么」。</li>
+          <li>AI 生成内容不替代持牌服务 —— 定位是信息整理、知识科普、投资者教育。</li>
+          <li>不承诺收益、不保本保息 —— 这套工具专门用来拆穿「保本保息」话术。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <!-- 模态框 -->
 <div class="modal-overlay" id="modal" onclick="closeModal(event)">
@@ -532,16 +929,35 @@ a { color: var(--accent); }
   </div>
 </div>
 
-<!-- Mangofolio 系列导航 -->
+<footer class="site-footer" id="footer">
+  <div class="wrap">
+    <p class="disclaimer">本站内容与全部 AI 输出均为信息整理 / 知识科普 / 投教参考，不构成投资建议；不承诺收益、不保本保息。投资有风险，决策需谨慎，请仔细甄别。</p>
+    <p class="foot-links">
+      <span>© 2026 Invest Dictionary · 投资词典</span>
+      <a href="guide.html">使用指南</a>
+      <a href="dictionary.html">词库</a>
+    </p>
+  </div>
+</footer>
+
 <footer class="mangofolio-nav">
   <span class="mf-label">Mangofolio 系列</span>
   <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
   <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
   <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
   <a href="https://view.mangofolio.com">市场观察 View</a>
-  <a href="https://invest-tools.mangofolio.app" style="color: var(--accent);">财务工具箱 FinTools</a>
+  <a href="https://invest-tools.mangofolio.app">财务工具箱 FinTools</a>
   <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var el = document.getElementById('statEntries');
+  if (el && typeof ALL_ENTRIES !== 'undefined' && ALL_ENTRIES.length) {
+    el.textContent = ALL_ENTRIES.length;
+  }
+});
+</script>
 
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -19139,6 +19555,216 @@ var ALL_ENTRIES = [
     "next": "",
     "filename": "等待期 _ 观察期.html",
     "file": "等待期 _ 观察期.html"
+  },
+  {
+    "id": 915,
+    "slug": "美股交易时间",
+    "title": "美股交易时间",
+    "chapter": "第十篇：交易规则与摩擦成本",
+    "card_titles": [
+      "美股的钟跟咱不一样",
+      "搞错时间的代价",
+      "三步掐准美股开盘",
+      "五个别踩的时差坑"
+    ],
+    "related": [
+      "美股夜盘交易",
+      "交易时间",
+      "A股 / H股 / 美股 / B股",
+      "港美股打新"
+    ],
+    "next": "双基金经理",
+    "filename": "美股交易时间.html",
+    "file": "美股交易时间.html"
+  },
+  {
+    "id": 916,
+    "slug": "双基金经理",
+    "title": "双基金经理",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "一只基金两个司机",
+      "双经理≠双保险",
+      "买前先分清分工",
+      "五个常见的误会"
+    ],
+    "related": [
+      "基金经理",
+      "主动型基金 vs 被动型基金",
+      "基金净值（单位/累计）",
+      "ETF（交易型开放式指数基金）"
+    ],
+    "next": "基金经理变更",
+    "filename": "双基金经理.html",
+    "file": "双基金经理.html"
+  },
+  {
+    "id": 917,
+    "slug": "基金经理变更",
+    "title": "基金经理变更",
+    "chapter": "第六篇：投资武器库 · 基金篇",
+    "card_titles": [
+      "你的钱换司机了",
+      "换人影响有多大",
+      "公告之后怎么办",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "基金经理",
+      "双基金经理",
+      "主动型基金 vs 被动型基金",
+      "基金定投"
+    ],
+    "next": "每股净资产",
+    "filename": "基金经理变更.html",
+    "file": "基金经理变更.html"
+  },
+  {
+    "id": 918,
+    "slug": "每股净资产",
+    "title": "每股净资产",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "一股背后有多少家底",
+      "为什么它是估值地基",
+      "三步用好这把尺",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "市净率（PB）",
+      "每股收益（EPS）",
+      "净资产收益率（ROE，巴菲特最爱的指标）",
+      "破净"
+    ],
+    "next": "管理层质量",
+    "filename": "每股净资产.html",
+    "file": "每股净资产.html"
+  },
+  {
+    "id": 919,
+    "slug": "管理层质量",
+    "title": "管理层质量",
+    "chapter": "第八篇：读懂指标 · 估值与业绩篇",
+    "card_titles": [
+      "买股票本质是买人",
+      "管理层决定天花板",
+      "四步给管理层打分",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "护城河",
+      "股权结构",
+      "商誉减值",
+      "毛利率 / 净利率"
+    ],
+    "next": "新增开户数",
+    "filename": "管理层质量.html",
+    "file": "管理层质量.html"
+  },
+  {
+    "id": 920,
+    "slug": "新增开户数",
+    "title": "新增开户数",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "多少人新进场",
+      "为什么它是情绪温度计",
+      "三步用它看市场",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "两融余额",
+      "换手率（活跃度指标）",
+      "融资余额 / 融券余量（市场情绪温度计）",
+      "消息面 / 政策面 / 资金面 / 情绪面"
+    ],
+    "next": "基金发行规模（情绪指标）",
+    "filename": "新增开户数.html",
+    "file": "新增开户数.html"
+  },
+  {
+    "id": 921,
+    "slug": "基金发行规模（情绪指标）",
+    "title": "基金发行规模（情绪指标）",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "新钱往哪跑",
+      "爆款基金=情绪钟",
+      "三步读懂发行数据",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "两融余额",
+      "换手率（活跃度指标）",
+      "融资余额 / 融券余量（市场情绪温度计）",
+      "新增开户数"
+    ],
+    "next": "破净率",
+    "filename": "基金发行规模（情绪指标）.html",
+    "file": "基金发行规模（情绪指标）.html"
+  },
+  {
+    "id": 922,
+    "slug": "破净率",
+    "title": "破净率",
+    "chapter": "第九篇：读懂指标 · 市场情绪与风险篇",
+    "card_titles": [
+      "多少股票跌破家底",
+      "为什么它是寒冷计",
+      "三步用破净率",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "破净",
+      "市净率（PB）",
+      "股息率",
+      "净资产收益率（ROE，巴菲特最爱的指标）"
+    ],
+    "next": "信用脉冲",
+    "filename": "破净率.html",
+    "file": "破净率.html"
+  },
+  {
+    "id": 923,
+    "slug": "信用脉冲",
+    "title": "信用脉冲",
+    "chapter": "第十一篇：宏观风向标",
+    "card_titles": [
+      "放水的加速度",
+      "为什么它领先半年",
+      "三步用好信用脉冲",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "社融（社会融资规模）",
+      "M1-M2剪刀差",
+      "货币供应量（M0/M1/M2）",
+      "银行净息差"
+    ],
+    "next": "隔夜委托",
+    "filename": "信用脉冲.html",
+    "file": "信用脉冲.html"
+  },
+  {
+    "id": 924,
+    "slug": "隔夜委托",
+    "title": "隔夜委托",
+    "chapter": "第十篇：交易规则与摩擦成本",
+    "card_titles": [
+      "提前排队抢开盘",
+      "为什么要挂隔夜单",
+      "五步用好隔夜委托",
+      "五个别踩的坑"
+    ],
+    "related": [
+      "集合竞价 vs 连续竞价（开盘价/收盘价怎么来的）",
+      "盘后定价交易",
+      "收盘集合竞价",
+      "涨停板 / 跌停板"
+    ],
+    "next": "",
+    "filename": "隔夜委托.html",
+    "file": "隔夜委托.html"
   }
 ];
 var __entriesReady = false;
@@ -19159,15 +19785,12 @@ fetch('dictionary.json')
   .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(function (d) { __entriesDone(d); })
   .catch(function (err) {
-    try {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'dictionary.json', false);
-      xhr.send(null);
-      __entriesDone(JSON.parse(xhr.responseText));
-    } catch (e2) {
-      console.error('词条库加载失败', err, e2);
-      __entriesDone([]);
-    }
+    /* 原实现在此处用同步 XHR（async=false）兜底 —— 会冻结主线程，已移除。
+       注意：不能再用 __entriesDone([])，否则网络失败时会把首页内嵌的 924 条
+       也清空，搜索直接变空。失败时保留内嵌词库，仅标记就绪。 */
+    console.error('dictionary.json 加载失败，沿用首页内嵌词库', err);
+    __entriesReady = true;
+    __entriesWaiters.splice(0).forEach(function (fn) { fn(); });
   });
 whenEntriesReady(function () {
   if (location.search.indexOf('random=1') !== -1) {

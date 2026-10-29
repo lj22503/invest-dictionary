@@ -38,7 +38,9 @@ def main():
             seen.add(fn)
             order.append(fn)
 
-    urls = [block(BASE + "/", "weekly", "1.0")]
+    urls = [block(BASE + "/", "weekly", "1.0"),
+            block(BASE + "/dictionary", "weekly", "0.9"),
+            block(BASE + "/guide", "monthly", "0.7")]
     for fn in order:
         urls.append(block(BASE + "/terms/" + quote(fn, safe=""), "monthly", "0.8"))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -51,7 +53,7 @@ def main():
     # 写盘回读校验
     back = open(SITEMAP, encoding="utf-8", errors="replace").read()
     n = back.count("<loc>")
-    ok = n == len(order) + 1
+    ok = n == len(order) + 3
     print(f"sitemap 重建：dictionary {len(items)} 条（去重 {len(order)}）-> loc {n} 条 -> {'OK' if ok else 'FAIL'}")
     return 0 if ok else 1
 

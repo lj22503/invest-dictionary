@@ -38,3 +38,8 @@ task7-*.ps1
 
 # Temp check scripts
 web/temp/
+
+# 脚本中间产物（可由脚本重新生成，无脚本依赖它们）
+temp_*.json
+*_dump.txt
+web/_existing_slugs.txt

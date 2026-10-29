@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_b56eb746c33511f1bc7f525400638852
+    ReservedCode1: XVjVbe7QuLFH4ORUR69224vApduTI0E+EeOSvoG4sYHIo4p7P9DGth/yv7m9FqyWnlACPDz91n1bMtfNn5KM50KAB9Xgf7f3ClkvOQVtCxUwiZQWY3egTeSCGCtvIB8XZR2FEYKeWmpBM5W/NL5f/zZFrfs39ysY9Q7hgh0aA01eUzYgsrRS9WiVoM0=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_b56eb746c33511f1bc7f525400638852
+    ReservedCode2: XVjVbe7QuLFH4ORUR69224vApduTI0E+EeOSvoG4sYHIo4p7P9DGth/yv7m9FqyWnlACPDz91n1bMtfNn5KM50KAB9Xgf7f3ClkvOQVtCxUwiZQWY3egTeSCGCtvIB8XZR2FEYKeWmpBM5W/NL5f/zZFrfs39ysY9Q7hgh0aA01eUzYgsrRS9WiVoM0=
+---
+
 # 主动 vs 被动
 
 **一句话定义：主动基金赌的是基金经理的本事，被动基金赌的是市场本身的长期上涨。**
@@ -36,3 +47,4 @@
 - **频繁切换**：牛市买主动、熊市换被动，两头挨打，不如一开始想清楚要哪种。
 
 > 一句话：被动是“买市场”，主动是“买人”；多数人高估了自己的识人能力，低估了费率的杀伤力。
+*（内容由AI生成，仅供参考）*

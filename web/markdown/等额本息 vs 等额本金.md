@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_b73b226bc33511f1a05452540064ee0f
+    ReservedCode1: pttnWk2vJwE8XhDZKGXm0Npq96GPl0zN0DK63pObgQKymn0Zkx9kA+6UYjR9veGwSESbudlIb4A1ObcBlPHHYfS38+g27ypMMwS3Wxs1Yhzeux8fkeLfy1K0Z5ZFf/Pt1f5Gilfry0Gykf1cvfIxKAX0/wbPSjQesNOEJQre8z96C6OggYQS0tABavQ=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_b73b226bc33511f1a05452540064ee0f
+    ReservedCode2: pttnWk2vJwE8XhDZKGXm0Npq96GPl0zN0DK63pObgQKymn0Zkx9kA+6UYjR9veGwSESbudlIb4A1ObcBlPHHYfS38+g27ypMMwS3Wxs1Yhzeux8fkeLfy1K0Z5ZFf/Pt1f5Gilfry0Gykf1cvfIxKAX0/wbPSjQesNOEJQre8z96C6OggYQS0tABavQ=
+---
+
 # 等额本息 vs 等额本金
 
 **一句话定义：等额本息每月还一样多、前期全是利息；等额本金每月越还越少、总利息省一大截。**
@@ -42,3 +53,4 @@
 - **把银行默认选项当最优**：销售默认推等额本息，你自己要主动问“两种方案分别多少、差多少利息”。
 
 > 一句话：等额本金省利息、等额本息省月供；选哪种，先看你的现金流扛不扛得住。
+*（内容由AI生成，仅供参考）*

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用指南 · 投资词典</title>
+<meta name="description" content="投资词典使用指南：8 个场景，每个场景一条提示词，配合对应 Skill，遇到理财问题直接问。说人话，不装逼，不构成投资建议。">
+<link rel="canonical" href="https://dictionary.mangofolio.com/guide">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dictionary.mangofolio.com/guide">
+<meta property="og:title" content="使用指南 · 投资词典">
+<meta property="og:description" content="投资词典使用指南：8 个场景，每个场景一条提示词，配合对应 Skill，遇到理财问题直接问。">
+<meta property="og:locale" content="zh_CN">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700;900&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mangofolio-tokens-v09.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#F97316">
+<style>
+/* ============================================================
+ * 使用指南页专属样式（外壳在 css/site.css，颜色只用 mangofolio 令牌）
+ * 色带顺序：mango 页头 → base 先装 Skill → grey 8 个场景 → paper 知识库/合规 → 页脚
+ * ============================================================ */
+
+/* ---------- 页头（mango 色带） ---------- */
+.guide-hero {
+  padding: clamp(48px, 6vw, 84px) 0 clamp(46px, 6vw, 74px);
+}
+.guide-hero__eyebrow {
+  margin-bottom: 14px;
+  font-size: var(--mf-font-sizes-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: var(--mf-colors-text-accent-mango);
+}
+.guide-hero h1 {
+  font-size: clamp(2.4rem, 5.6vw, 3.7rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: var(--mf-colors-text-strong);
+}
+.guide-hero__en {
+  margin-top: 4px;
+  font-family: var(--mf-fonts-display-extended), Georgia, serif;
+  font-style: italic;
+  font-size: clamp(0.98rem, 1.7vw, 1.15rem);
+  letter-spacing: 0.14em;
+  color: var(--mf-colors-text);
+}
+.guide-hero__sub {
+  margin-top: 20px;
+  max-width: 56ch;
+  font-size: clamp(0.98rem, 1.6vw, 1.1rem);
+  line-height: 1.9;
+  color: var(--mf-colors-text);
+}
+.guide-hero__slogan {
+  display: block;
+  margin-top: 18px;
+  padding: 13px 18px;
+  border: 1px solid var(--mf-colors-border);
+  border-radius: var(--mf-radii-card);
+  background: var(--mf-colors-background-surface);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--mf-colors-text-strong);
+}
+.guide-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+.guide-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 0;
+  margin-top: 26px;
+  list-style: none;
+  font-size: 0.84rem;
+  color: var(--mf-colors-text);
+}
+.guide-hero__facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.guide-hero__facts li + li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin-right: 12px;
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-text-accent-mango);
+}
+@media (max-width: 600px) {
+  .guide-hero__facts { gap: 4px 16px; }
+  .guide-hero__facts li + li::before { display: none; }
+}
+
+/* ---------- 先装 Skill（base 色带） ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+}
+.step {
+  padding: 22px 22px 24px;
+  border: 1px solid var(--band-line);
+  border-radius: var(--mf-radii-card);
+  background: var(--mf-colors-background-neutral);
+}
+.step__n {
+  display: block;
+  font-family: var(--mf-fonts-display), serif;
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--mf-colors-text-accent-mango);
+  font-variant-numeric: tabular-nums;
+}
+.step h3 {
+  margin: 12px 0 6px;
+  font-size: 1.05rem;
+  color: var(--mf-colors-text-strong);
+}
+.step p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--mf-colors-text);
+}
+.step p b { color: var(--mf-colors-text-strong); }
+
+.code-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.code-bar__label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--mf-colors-text);
+}
+.install-note { margin-top: 16px; }
+
+/* ---------- 一键复制按钮 ---------- */
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 15px;
+  border: 1px solid var(--mf-colors-border-strong);
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-surface);
+  color: var(--mf-colors-text-strong);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+.copy-btn:hover {
+  border-color: var(--mf-colors-text-accent-mango);
+  color: var(--mf-colors-text-accent-mango);
+}
+.copy-btn.is-done {
+  border-color: var(--mf-colors-text-success);
+  background: var(--mf-colors-background-success);
+  color: var(--mf-colors-text-success);
+}
+
+/* ---------- 8 个场景（grey 色带） ---------- */
+.guide-layout {
+  display: grid;
+  grid-template-columns: 252px minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: start;
+}
+.guide-toc a {
+  color: var(--mf-colors-text);
+}
+.guide-toc a .toc__n {
+  color: var(--mf-colors-text);
+  font-variant-numeric: tabular-nums;
+}
+.guide-toc a:hover,
+.guide-toc a:focus-visible {
+  color: var(--mf-colors-text-accent-mango);
+}
+.guide-toc a.is-on {
+  color: var(--mf-colors-text-strong);
+  background: var(--mf-colors-background-warning);
+  font-weight: 600;
+}
+.guide-toc a.is-on .toc__n { color: var(--mf-colors-text-accent-mango); }
+
+.scenes {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.scene {
+  min-width: 0;
+  padding: clamp(20px, 2.4vw, 28px);
+  border: 1px solid var(--band-line);
+  border-radius: var(--mf-radii-card);
+  background: var(--mf-colors-background-surface);
+  box-shadow: var(--mf-shadows-sm);
+  scroll-margin-top: 96px;
+}
+.scene__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.scene__num {
+  flex: 0 0 auto;
+  min-width: 2.1em;
+  font-family: var(--mf-fonts-display), serif;
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--mf-colors-text-accent-mango);
+  font-variant-numeric: tabular-nums;
+}
+.scene__headmain { min-width: 0; flex: 1 1 auto; }
+.scene__titlerow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.scene__titlerow h3 {
+  font-size: clamp(1.1rem, 1.9vw, 1.32rem);
+  color: var(--mf-colors-text-strong);
+}
+.scene__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 11px;
+  border: 1px solid var(--mf-colors-primitives-mango-300);
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-strong);
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+.scene__desc {
+  margin-top: 8px;
+  max-width: 62ch;
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: var(--mf-colors-text);
+}
+
+/* 提示词块：白卡里的浅橙底，一眼看出“这段是拿来复制的” */
+.prompt {
+  margin-top: 16px;
+  border: 1px solid var(--mf-colors-primitives-mango-300);
+  border-radius: var(--mf-radii-large);
+  background: var(--mf-colors-primitives-mango-050);
+  overflow: hidden;
+}
+.prompt__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px 8px 15px;
+  border-bottom: 1px solid var(--mf-colors-primitives-mango-300);
+  background: transparent;
+}
+.prompt__label {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--mf-colors-text-strong);
+}
+.prompt__label span {
+  margin-left: 6px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--mf-colors-text);
+}
+.prompt__text {
+  padding: 16px;
+  font-family: var(--mf-fonts-mono), "Cascadia Mono", Consolas, monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--mf-colors-text-strong);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.scene__skill {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--mf-colors-text);
+}
+.scene__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--mf-colors-text);
+  white-space: nowrap;
+}
+.scene__skill code {
+  padding: 2px 8px;
+  border-radius: var(--mf-radii-medium);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-strong);
+  font-family: var(--mf-fonts-mono), "Cascadia Mono", Consolas, monospace;
+  font-size: 0.84rem;
+}
+.scene__skill b { color: var(--mf-colors-text-strong); }
+
+.scene__heart {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--mf-colors-border);
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--mf-colors-text);
+}
+.scene__heart b { color: var(--mf-colors-text-strong); }
+.scene__heart code {
+  padding: 1px 6px;
+  border-radius: var(--mf-radii-small);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-strong);
+  font-family: var(--mf-fonts-mono), "Cascadia Mono", Consolas, monospace;
+  font-size: 0.84rem;
+}
+
+/* ---------- 知识库入口 / 合规（paper 色带） ---------- */
+.kb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.kb-card {
+  display: block;
+  padding: 24px 22px;
+  border: 1px solid var(--mf-colors-border);
+  border-radius: var(--mf-radii-card);
+  background: var(--mf-colors-background-surface);
+  box-shadow: var(--mf-shadows-sm);
+  color: var(--mf-colors-text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.kb-card:hover {
+  border-color: var(--mf-colors-border-strong);
+  color: var(--mf-colors-text);
+}
+.kb-card__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.kb-card h3 {
+  font-size: 1.1rem;
+  color: var(--mf-colors-text-strong);
+}
+.kb-card p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--mf-colors-text);
+}
+.kb-card__go {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--mf-colors-text-accent-mango);
+}
+
+.redlines {
+  margin-top: 26px;
+  padding: clamp(20px, 2.4vw, 28px);
+  border: 1px solid var(--mf-colors-border);
+  border-radius: var(--mf-radii-card);
+  background: var(--mf-colors-background-surface);
+}
+.redlines h3 {
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+  color: var(--mf-colors-text-strong);
+}
+.redlines ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: redline;
+  display: grid;
+  gap: 10px;
+}
+.redlines li {
+  position: relative;
+  padding-left: 34px;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--mf-colors-text);
+  counter-increment: redline;
+}
+.redlines li::before {
+  content: counter(redline);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--mf-radii-round);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-accent-mango);
+  font-family: var(--mf-fonts-ui);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+.redlines__note {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--mf-colors-border);
+  font-size: 0.85rem;
+  line-height: 1.85;
+  color: var(--mf-colors-text);
+}
+
+/* ---------- 页脚 ---------- */
+.site-footer .foot-copy { margin-top: 6px; }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 980px) {
+  .steps { grid-template-columns: 1fr; }
+  .guide-layout { grid-template-columns: 1fr; }
+  .guide-toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 14px;
+  }
+  .guide-toc .toc__title {
+    width: 100%;
+    margin: 0 0 2px;
+  }
+  .guide-toc a {
+    gap: 8px;
+    padding: 5px 12px;
+    border: 1px solid var(--band-line);
+    border-radius: var(--mf-radii-round);
+    font-size: 0.82rem;
+  }
+  .guide-toc a .toc__n { margin-left: 0; }
+  .guide-toc a.is-on { border-color: var(--mf-colors-primitives-mango-300); }
+  .kb-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 660px) {
+  .guide-hero__actions .btn { width: 100%; }
+  .scene__num { font-size: 1.85rem; min-width: 1.9em; }
+  .scene__head { gap: 10px; }
+  .prompt__bar { padding: 7px 8px 7px 12px; }
+  .prompt__text { padding: 13px 14px 15px; font-size: 0.94rem; }
+  .redlines li { padding-left: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn { transition: none; }
+}
+</style>
+</head>
+<body class="guide-page">
+
+<a class="skip-link" href="#main">跳到主内容</a>
+
+<header class="site-header">
+  <a class="brand" href="index.html">投资词典<span class="brand-en">Invest Dictionary</span></a>
+  <nav class="site-nav" aria-label="主导航">
+    <a href="dictionary.html">全部词条</a>
+    <a href="index.html#daily-hot">今日热词</a>
+    <a href="index.html#skills">7 个场景</a>
+    <a href="index.html#howto">怎么用</a>
+    <a href="guide.html" class="is-active" aria-current="page">使用指南</a>
+    <a class="site-nav__cta" href="index.html?random=1">随机一词</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ 色带 1 · mango 页头 ============ -->
+  <section class="band band--mango guide-hero">
+    <div class="wrap">
+      <p class="guide-hero__eyebrow">INVEST DICTIONARY · GUIDE</p>
+      <h1>使用指南</h1>
+      <p class="guide-hero__en">How to use it</p>
+      <p class="guide-hero__sub">900+ 理财词条，8 个场景。每个场景一条提示词，配合对应 Skill，遇到理财问题直接问。</p>
+      <p class="guide-hero__slogan">你遇到什么情况 → 照抄提示词发给 AI → 触发对应 Skill → 拿到人话版答案。</p>
+      <div class="guide-hero__actions">
+        <a class="btn btn--primary" href="#scenes">直接看 8 个场景</a>
+        <a class="btn btn--line" href="#install">先装 Skill</a>
+      </div>
+      <ul class="guide-hero__facts">
+        <li>900+ 理财词条</li>
+        <li>8 个场景</li>
+        <li>8 个 Skill</li>
+        <li>免费 · 不用注册</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 色带 2 · base 先装 Skill ============ -->
+  <section class="band band--base" id="install">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head__main">
+          <h2>先装 Skill，再问问题</h2>
+          <p>提示词要严格生效，先把 Skill 装进你的 AI 客户端（Claude / 各类 Agent）。装好后直接在 AI 里用；装到 <a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">ima 知识库</a> 后可直接调用（SkillHub 上架地址就绪后更新）。</p>
+        </div>
+        <div class="sec-head__aside">可选 · 约 5 分钟</div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step__n">01</span>
+          <h3>选场景</h3>
+          <p>对照下方 8 个场景，找到你现在遇到的问题。</p>
+        </div>
+        <div class="step">
+          <span class="step__n">02</span>
+          <h3>复制提示词</h3>
+          <p>把示例提示词发给你的 AI（ChatGPT / Claude / DeepSeek / 豆包 都行）。</p>
+        </div>
+        <div class="step">
+          <span class="step__n">03</span>
+          <h3>装 Skill（可选但推荐）</h3>
+          <p>按下方命令把 Skill 装进技能目录，输出严格走质量红线。</p>
+        </div>
+      </div>
+
+      <div class="code-bar">
+        <span class="code-bar__label">8 个 Skill 安装命令</span>
+        <button class="copy-btn" type="button" data-copy="installCmd" aria-label="复制安装命令">复制命令</button>
+      </div>
+      <pre class="code-block" id="installCmd"># 以 Claude Code 为例，把 skill 目录复制到你的技能目录
+cp -r skill/invest-dictionary-generator ~/.claude/skills/
+cp -r skill/invest-dictionary-concept-combinator ~/.claude/skills/
+cp -r skill/symptom-lookup ~/.claude/skills/
+cp -r skill/combo-narrative ~/.claude/skills/
+cp -r skill/duel-compare ~/.claude/skills/
+cp -r skill/decision-mosaic ~/.claude/skills/
+cp -r skill/question-probe ~/.claude/skills/
+cp -r skill/daily-hotword ~/.claude/skills/</pre>
+
+      <p class="note install-note"><b>不装 Skill 也能问</b>——AI 会按通用能力回答；装了 Skill 之后，输出会严格走“质量红线”：说人话、不堆术语、不给买卖结论、必须落到你的判断。</p>
+    </div>
+  </section>
+
+  <!-- ============ 色带 3 · grey 8 个场景 ============ -->
+  <section class="band band--grey" id="scenes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head__main">
+          <h2>8 个场景 · 照抄就能用</h2>
+          <p>以下提示词里带 <b>[…]</b> 的部分，替换成你自己的情况。</p>
+        </div>
+        <div class="sec-head__aside">8 个场景 · 8 个 Skill</div>
+      </div>
+
+      <div class="guide-layout">
+        <aside class="toc guide-toc" aria-label="场景目录">
+          <p class="toc__title">场景目录</p>
+          <a href="#s1"><span>查词学词</span><span class="toc__n">01</span></a>
+          <a href="#s2"><span>看新闻</span><span class="toc__n">02</span></a>
+          <a href="#s3"><span>持仓亏了</span><span class="toc__n">03</span></a>
+          <a href="#s4"><span>产品对比</span><span class="toc__n">04</span></a>
+          <a href="#s5"><span>重大决定</span><span class="toc__n">05</span></a>
+          <a href="#s6"><span>防坑提问</span><span class="toc__n">06</span></a>
+          <a href="#s7"><span>复杂事件</span><span class="toc__n">07</span></a>
+          <a href="#s8"><span>今日热词</span><span class="toc__n">08</span></a>
+        </aside>
+
+        <div class="scenes">
+
+          <!-- 场景一 -->
+          <article class="scene" id="s1">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">01</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>查词学词</h3>
+                  <span class="scene__tag">单个词条是什么</span>
+                </div>
+                <p class="scene__desc">看到“可转债”“M1”“最大回撤”这种词，想知道它的准确定义、为什么重要、怎么用、有什么坑。</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p1" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p1">用投资词典的方法写一个词条：可转债</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>invest-dictionary-generator</code>（单词条生成）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：只查一个词就用它。每个词条都是“一句话定义 → 为什么重要 → 怎么用 → 常见坑”四段式，3 分钟能看懂。</p>
+          </article>
+
+          <!-- 场景二 -->
+          <article class="scene" id="s2">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">02</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>看新闻</h3>
+                  <span class="scene__tag">一段新闻说人话</span>
+                </div>
+                <p class="scene__desc">刷到“央行降准释放 1 万亿”“CPI 又涨了”这类新闻，每个字都认识，连起来看不懂。</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p2" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p2">帮我翻译这段新闻：央行降准0.5个百分点，释放长期资金约1万亿，说人话</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>combo-narrative</code>（<b>新闻翻译机</b>）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：把新闻拆成几个核心概念 → 串成因果链 → 落到“对你意味着什么”。不预测涨跌，只讲关系。</p>
+          </article>
+
+          <!-- 场景三 -->
+          <article class="scene" id="s3">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">03</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>持仓亏了</h3>
+                  <span class="scene__tag">现象倒查</span>
+                </div>
+                <p class="scene__desc">理财亏了、被推荐了高息产品、听说黄金要涨，心里没底，不知道该看什么、该慌不该慌。</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p3" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p3">我买的理财亏了，要不要赶紧卖掉？</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>symptom-lookup</code>（<b>理财急诊</b> / 症状倒查）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：你说一句口语化的“症状”，它倒查出你最该看的 3-5 个词条，并告诉你先看哪一条。不给买卖结论，只帮你分清“是正常波动还是买错了”。</p>
+          </article>
+
+          <!-- 场景四 -->
+          <article class="scene" id="s4">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">04</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>产品对比</h3>
+                  <span class="scene__tag">二选一对打</span>
+                </div>
+                <p class="scene__desc">在“存定期还是买理财”“买房还是租房”之间纠结，两边都有销售说好话。</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p4" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p4">手里有 10 万，存定期还是买银行理财？</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>duel-compare</code>（<b>二选一擂台</b>）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：先校验两个选项是不是真的在同一个场景里对打，再按“最坏情况 / 流动性 / 收益来源 / 适合谁”四维并排看，最后给分界线和一个今天能算的试算。</p>
+          </article>
+
+          <!-- 场景五 -->
+          <article class="scene" id="s5">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">05</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>重大决定</h3>
+                  <span class="scene__tag">决策拼图</span>
+                </div>
+                <p class="scene__desc">面对“要不要提前还贷”“该不该存教育金”“该不该买增额寿”这种单边决策，不知道取决于什么。</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p5" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p5">我要不要提前还房贷？</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>decision-mosaic</code>（<b>决策拆解桌</b> / 决策拼图）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：把决策拆成“取决于哪几个变量” → 每个变量让你填一个数字 → 给分界线（什么条件倾向做、什么条件先别动）→ 给一个今天能做的清单。不替你做决定。</p>
+          </article>
+
+          <!-- 场景六 -->
+          <article class="scene" id="s6">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">06</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>防坑提问</h3>
+                  <span class="scene__tag">该问什么</span>
+                </div>
+                <p class="scene__desc">销售说“锁定 3% 复利”“保本保息”“过去三年年化 20%”，你听着心动，但不知道该怎么问、怕被绕进去。</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p6" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p6">增额终身寿险，我该问销售什么问题？</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>question-probe</code>（<b>防坑提问器</b> / 该问什么）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：输出你应该问销售的 3-5 个问题，每个问题配“为什么重要”和“对方可能怎么绕”，最后给红灯信号——什么回答意味着“别继续了”。</p>
+          </article>
+
+          <!-- 场景七 -->
+          <article class="scene" id="s7">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">07</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>复杂事件</h3>
+                  <span class="scene__tag">概念串联</span>
+                </div>
+                <p class="scene__desc">一段复杂的宏观数据 / 政策 / 财报要讲给别人听（客户、家人），或者你要发一份客户简报。</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p7" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p7">把这段做成网页：央行降准后市场怎么看，讲给客户听</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>invest-dictionary-concept-combinator</code>（<b>概念串联</b>）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：6 类内容（数据 / 事件 / 政策 / 异动 / 财报 / 个人决策）各有模板，拆成核心词条串成叙事线，输出 6 屏可发布网页。想快速听懂不求成品时，用 <code>combo-narrative</code>（新闻翻译机）即可。</p>
+          </article>
+
+          <!-- 场景八 -->
+          <article class="scene" id="s8">
+            <div class="scene__head">
+              <span class="scene__num" aria-hidden="true">08</span>
+              <div class="scene__headmain">
+                <div class="scene__titlerow">
+                  <h3>今日热词</h3>
+                  <span class="scene__tag">追热点</span>
+                </div>
+                <p class="scene__desc">今天市场都在聊什么？缩量、放量、LPR、创新高……这些词什么意思，怎么串成一件完整的事？</p>
+              </div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__bar">
+                <span class="prompt__label">提示词<span>PROMPT</span></span>
+                <button class="copy-btn" type="button" data-copy="p8" aria-label="复制本场景提示词">复制</button>
+              </div>
+              <div class="prompt__text" id="p8">今日热词，今天市场都在聊什么？</div>
+            </div>
+            <div class="scene__skill">
+              <span class="scene__label">配套 SKILL</span>
+              <span><code>daily-hotword</code>（<b>每日热词</b>）</span>
+            </div>
+            <p class="scene__heart"><b>心法</b>：围绕一条热点话题拆出 3-5 个今天必须懂的热词，每个词讲人话 + 说明为什么今天要看它，最后串成一句能复述给朋友的话。</p>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 色带 4 · paper 知识库入口 + 合规 ============ -->
+  <section class="band band--paper" id="library">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head__main">
+          <h2>知识库入口</h2>
+          <p>词条在站内查，提示词与 Skill 定义沉淀在 ima。</p>
+        </div>
+        <div class="sec-head__aside">两个入口</div>
+      </div>
+
+      <div class="kb-grid">
+        <a class="kb-card" href="dictionary.html">
+          <div class="kb-card__head">
+            <span class="kico" aria-hidden="true">词</span>
+            <h3>在线词库</h3>
+          </div>
+          <p>900+ 理财词条随时查，按章节浏览，说人话不装逼。</p>
+          <span class="kb-card__go">去看看 →</span>
+        </a>
+        <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">
+          <div class="kb-card__head">
+            <span class="kico" aria-hidden="true">库</span>
+            <h3>ima 知识库</h3>
+          </div>
+          <p>提示词与 Skill 定义沉淀进 ima，可复制、可传播、可照着改（SkillHub 上架地址就绪后更新）。</p>
+          <span class="kb-card__go">去 ima 打开 →</span>
+        </a>
+      </div>
+
+      <div class="redlines">
+        <h3>合规三条红线</h3>
+        <ol>
+          <li>红线一：不无资质提供投资建议——只输出“看什么 / 问什么 / 取决于什么”，不输出“买什么”。</li>
+          <li>红线二：AI 生成内容不替代持牌服务——定位为信息整理 / 知识科普 / 投教。</li>
+          <li>红线三：不承诺收益、不保本保息——工具专门拆穿“保本保息”话术。</li>
+        </ol>
+        <p class="redlines__note">免责声明：本指南及配套 Skill 的所有输出均为概念梳理与提问参考，由 AI 生成，不构成投资建议，请仔细甄别。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="disclaimer">本站内容与全部 AI 输出均为信息整理 / 知识科普 / 投教参考，不构成投资建议；不承诺收益、不保本保息。投资有风险，决策需谨慎，请仔细甄别。</p>
+    <p class="foot-links">
+      <a href="index.html">首页</a>
+      <a href="dictionary.html">全部词条</a>
+      <a href="guide.html">使用指南</a>
+      <a href="https://github.com/lj22503/invest-dictionary" target="_blank" rel="noopener">GitHub</a>
+    </p>
+    <p class="foot-copy">© 2026 Invest Dictionary · 投资词典</p>
+  </div>
+</footer>
+
+<footer class="mangofolio-nav">
+  <span class="mf-label">Mangofolio 系列</span>
+  <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
+  <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
+  <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
+  <a href="https://view.mangofolio.com">市场观察 View</a>
+  <a href="https://invest-tools.mangofolio.app">财务工具箱 FinTools</a>
+  <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
+</footer>
+
+<span class="sr-only" role="status" aria-live="polite" id="copyStatus"></span>
+
+<script>
+/* ---------- 一键复制：clipboard 优先，失败兜底 textarea + execCommand ---------- */
+(function () {
+  var status = document.getElementById('copyStatus');
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '-9999px';
+    ta.style.left = '-9999px';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    var ok = false;
+    try {
+      ta.select();
+      ta.setSelectionRange(0, text.length);
+      ok = document.execCommand('copy');
+    } catch (e) {
+      ok = false;
+    }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () {
+        return true;
+      }).catch(function () {
+        return fallbackCopy(text);
+      });
+    }
+    return Promise.resolve(fallbackCopy(text));
+  }
+
+  function readTarget(el) {
+    var text = el.textContent || '';
+    return text.replace(/^\n+/, '').replace(/\s+$/, '');
+  }
+
+  var buttons = document.querySelectorAll('.copy-btn[data-copy]');
+  Array.prototype.forEach.call(buttons, function (btn) {
+    var label = btn.textContent.trim();
+    var timer = null;
+
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-copy'));
+      if (!target) return;
+      var text = readTarget(target);
+
+      copyText(text).then(function (ok) {
+        btn.textContent = ok ? '已复制 ✓' : '复制失败';
+        btn.classList.toggle('is-done', ok);
+        if (status) status.textContent = ok ? '已复制到剪贴板' : '复制失败，请手动选中文本';
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(function () {
+          btn.textContent = label;
+          btn.classList.remove('is-done');
+        }, 1800);
+      });
+    });
+  });
+})();
+
+/* ---------- 场景目录：滚动高亮当前场景 ---------- */
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.guide-toc a[href^="#"]'));
+  if (!links.length) return;
+  var cards = links.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  var current = -1;
+  var ticking = false;
+
+  function update() {
+    var idx = 0;
+    for (var i = 0; i < cards.length; i++) {
+      if (!cards[i]) continue;
+      if (cards[i].getBoundingClientRect().top <= 140) idx = i;
+    }
+    if (idx === current) return;
+    current = idx;
+    links.forEach(function (a, i) {
+      var on = i === idx;
+      a.classList.toggle('is-on', on);
+      if (on) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
+    });
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { update(); ticking = false; });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+</script>
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js')})}</script>
+<script defer src="js/tracker.js"></script>
+</body>
+</html>

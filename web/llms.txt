@@ -1,12 +1,12 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、914 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、924 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
 - [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
 
-## 词条（共 914 条）
+## 词条（共 924 条）
 - [货币](https://dictionary.mangofolio.com/terms/货币.html): 你手里攥着的100块
 - [信用](https://dictionary.mangofolio.com/terms/信用.html): 全世界最贵的三个字
 - [M0 / M1 / M2（货币供应量）](https://dictionary.mangofolio.com/terms/M0%20_%20M1%20_%20M2（货币供应量）.html): 你家三个钱包，就是央行的小抄
@@ -869,6 +869,73 @@
 - [消费金融公司（微粒贷/招联/捷信）](https://dictionary.mangofolio.com/terms/消费金融公司（微粒贷_招联_捷信）.html): 持牌放贷的“分期专业户”
 - [债市非银大额赎回互换便利（BNSF）](https://dictionary.mangofolio.com/terms/债市非银大额赎回互换便利（BNSF）.html): 这是什么：给理财和基金备的“救急伞”
 - [新兴市场风险](https://dictionary.mangofolio.com/terms/新兴市场风险.html): 这是什么：投资“年轻经济体”的隐藏成本
+
+- [老三板](https://dictionary.mangofolio.com/terms/老三板.html): 退市股票的“收容所”
+- [超额配售](https://dictionary.mangofolio.com/terms/超额配售.html): 新股发行留的“备胎”
+- [金融债 / 政策性金融债](https://dictionary.mangofolio.com/terms/金融债%20_%20政策性金融债.html): 金融机构的“借条”
+- [次级债](https://dictionary.mangofolio.com/terms/次级债.html): 清偿顺序靠后的“次级”借条
+- [转债下修 / 回售](https://dictionary.mangofolio.com/terms/转债下修%20_%20回售.html): 可转债的两道“安全阀”
+- [应计利息](https://dictionary.mangofolio.com/terms/应计利息.html): 债券的“日结工资”
+- [骑乘策略](https://dictionary.mangofolio.com/terms/骑乘策略.html): 在收益率曲线上“滑滑梯”
+- [杠杆债基](https://dictionary.mangofolio.com/terms/杠杆债基.html): 借钱买债的“放大器”
+- [策略指数 / Smart Beta](https://dictionary.mangofolio.com/terms/策略指数%20_%20Smart%20Beta.html): 给指数装上“规则引擎”
+- [发起式基金](https://dictionary.mangofolio.com/terms/发起式基金.html): 基金公司的“投名状”
+- [地方惠民保（沪惠保/穗岁康）](https://dictionary.mangofolio.com/terms/地方惠民保（沪惠保_穗岁康）.html): 政府牵头的“第二层医保”
+- [团险](https://dictionary.mangofolio.com/terms/团险.html): 公司发的“集体保险”
+- [雇主责任险](https://dictionary.mangofolio.com/terms/雇主责任险.html): 老板给员工买的“工伤兜底”
+- [保险资管](https://dictionary.mangofolio.com/terms/保险资管.html): 保险公司的“投资部”
+- [再保险](https://dictionary.mangofolio.com/terms/再保险.html): 保险公司的“保险公司”
+- [保险增值服务（绿通）](https://dictionary.mangofolio.com/terms/保险增值服务（绿通）.html): 买保险送的“就医VIP通道”
+- [教育金保险 / 婚嫁金保险](https://dictionary.mangofolio.com/terms/教育金保险%20_%20婚嫁金保险.html): 专门给孩子存钱的人寿保险
+- [境外保险](https://dictionary.mangofolio.com/terms/境外保险.html): 去香港买保险，图什么
+- [全额退保骗局](https://dictionary.mangofolio.com/terms/全额退保骗局.html): “帮你全额退保”的收割局
+- [技术风险](https://dictionary.mangofolio.com/terms/技术风险.html): 系统出错导致的投资损失
+- [退市](https://dictionary.mangofolio.com/terms/退市.html): 股票被交易所“开除”了
+- [滑点](https://dictionary.mangofolio.com/terms/滑点.html): 想买 100 元，成交却是 100.05 元
+- [沪深港通](https://dictionary.mangofolio.com/terms/沪深港通.html): A股和港股之间的“双向大桥”
+- [票息](https://dictionary.mangofolio.com/terms/票息.html): 每年固定打给你的利息
+- [居民储蓄率](https://dictionary.mangofolio.com/terms/居民储蓄率.html): 居民每赚 100 块，存下多少
+- [GDP平减指数](https://dictionary.mangofolio.com/terms/GDP平减指数.html): 整个经济的“通胀体温计”
+- [SLF / 常备借贷便利](https://dictionary.mangofolio.com/terms/SLF%20_%20常备借贷便利.html): 银行缺钱时的“应急取款机”
+- [股息率策略](https://dictionary.mangofolio.com/terms/股息率策略.html): 股票版的“收租”策略
+- [年化 vs 累计](https://dictionary.mangofolio.com/terms/年化%20vs%20累计.html): 总赚多少 vs 每年赚多少
+- [跟踪误差](https://dictionary.mangofolio.com/terms/跟踪误差.html): 基金跑输指数的“差价”
+- [长期国债收益率](https://dictionary.mangofolio.com/terms/长期国债收益率.html): 长端利率：无风险利率的锚
+- [主权风险](https://dictionary.mangofolio.com/terms/主权风险.html): 国家赖账，钱怎么办
+- [制裁风险](https://dictionary.mangofolio.com/terms/制裁风险.html): 一夜之间资产被冻结
+- [REITs 打新](https://dictionary.mangofolio.com/terms/REITs%20打新.html): 像打新股一样认购REITs
+- [母子基金 / 伞形基金](https://dictionary.mangofolio.com/terms/母子基金%20_%20伞形基金.html): 一只基金套着一群基金
+- [专户 / 集合资管](https://dictionary.mangofolio.com/terms/专户%20_%20集合资管.html): 100万起的“私人订制”
+- [基金限购](https://dictionary.mangofolio.com/terms/基金限购.html): 基金突然“关门谢客”
+- [基金公司 / 托管行 / 销售机构](https://dictionary.mangofolio.com/terms/基金公司%20_%20托管行%20_%20销售机构.html): 一只基金背后的三家公司
+- [第三方销售平台](https://dictionary.mangofolio.com/terms/第三方销售平台.html): 在支付宝上买基金靠谱吗
+- [冠军魔咒](https://dictionary.mangofolio.com/terms/冠军魔咒.html): 去年的冠军，今年的垫底
+- [规模魔咒](https://dictionary.mangofolio.com/terms/规模魔咒.html): 基金越大越难赚钱
+- [存货 / 应收账款](https://dictionary.mangofolio.com/terms/存货%20_%20应收账款.html): 账上赚了，兜里没到
+- [审计意见（非标）](https://dictionary.mangofolio.com/terms/审计意见（非标）.html): 财报的体检报告
+- [杀估值 / 杀业绩 / 杀逻辑](https://dictionary.mangofolio.com/terms/杀估值%20_%20杀业绩%20_%20杀逻辑.html): 跌法不同，命不同
+- [市占率 / 渗透率](https://dictionary.mangofolio.com/terms/市占率%20_%20渗透率.html): 谁强，和还有多少空间
+- [规模效应 / 网络效应 / 转换成本](https://dictionary.mangofolio.com/terms/规模效应%20_%20网络效应%20_%20转换成本.html): 护城河的三种挖法
+- [股权结构](https://dictionary.mangofolio.com/terms/股权结构.html): 公司的权力地图
+- [卡玛比率](https://dictionary.mangofolio.com/terms/卡玛比率.html): 赚得多，还要跌得少
+- [风格切换](https://dictionary.mangofolio.com/terms/风格切换.html): 指数涨了，你的基金为什么不涨
+- [日历效应（春节/年末）](https://dictionary.mangofolio.com/terms/日历效应（春节%20_%20年末）.html): 日历上长出来的规律
+- [盘后定价交易](https://dictionary.mangofolio.com/terms/盘后定价交易.html): 收盘后，大钱悄悄进出
+- [等待期 / 观察期](https://dictionary.mangofolio.com/terms/等待期%20_%20观察期.html): 保险里的"时间陷阱"
+- [美股交易时间](https://dictionary.mangofolio.com/terms/美股交易时间.html): 美股的钟跟咱不一样
+- [双基金经理](https://dictionary.mangofolio.com/terms/双基金经理.html): 一只基金两个司机
+- [基金经理变更](https://dictionary.mangofolio.com/terms/基金经理变更.html): 你的钱换司机了
+- [每股净资产](https://dictionary.mangofolio.com/terms/每股净资产.html): 一股背后有多少家底
+- [管理层质量](https://dictionary.mangofolio.com/terms/管理层质量.html): 买股票本质是买人
+- [新增开户数](https://dictionary.mangofolio.com/terms/新增开户数.html): 多少人新进场
+- [基金发行规模（情绪指标）](https://dictionary.mangofolio.com/terms/基金发行规模（情绪指标）.html): 新钱往哪跑
+- [破净率](https://dictionary.mangofolio.com/terms/破净率.html): 多少股票跌破家底
+- [信用脉冲](https://dictionary.mangofolio.com/terms/信用脉冲.html): 放水的加速度
+- [隔夜委托](https://dictionary.mangofolio.com/terms/隔夜委托.html): 提前排队抢开盘
+
+## 词库与指南
+- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 924 个词条按篇章全部列出，支持搜索与章节筛选
+- [使用指南（8 个场景）](https://dictionary.mangofolio.com/guide): 8 个场景 × 提示词样例 × 对应 Skill，照抄就能用
 
 ## 相关站点
 - [财务工具箱](https://invest-tools.mangofolio.app): 复利、定投、房贷、个税等免费计算器
