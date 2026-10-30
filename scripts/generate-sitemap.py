@@ -40,9 +40,13 @@ def main():
 
     urls = [block(BASE + "/", "weekly", "1.0"),
             block(BASE + "/dictionary", "weekly", "0.9"),
-            block(BASE + "/guide", "monthly", "0.7")]
+            block(BASE + "/guide", "monthly", "0.7"),
+            block(BASE + "/privacy", "yearly", "0.2"),
+            block(BASE + "/terms-of-service", "yearly", "0.2")]
     for fn in order:
-        urls.append(block(BASE + "/terms/" + quote(fn, safe=""), "monthly", "0.8"))
+        # P0-1：cleanUrls:true 已生效，对外 URL 一律不带 .html
+        stem = fn[:-5] if fn.endswith(".html") else fn
+        urls.append(block(BASE + "/terms/" + quote(stem, safe=""), "monthly", "0.8"))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "".join(urls) + "</urlset>\n")
@@ -53,8 +57,8 @@ def main():
     # 写盘回读校验
     back = open(SITEMAP, encoding="utf-8", errors="replace").read()
     n = back.count("<loc>")
-    ok = n == len(order) + 3
-    print(f"sitemap 重建：dictionary {len(items)} 条（去重 {len(order)}）-> loc {n} 条 -> {'OK' if ok else 'FAIL'}")
+    ok = n == len(order) + 5
+    print(f"sitemap 重建：dictionary {len(items)} 条（去重 {len(order)}）-> loc {n} 条（含法律页） -> {'OK' if ok else 'FAIL'}")
     return 0 if ok else 1
 
 

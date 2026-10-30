@@ -62,7 +62,12 @@ def main():
             if h.startswith(("http", "#", "mailto", "javascript", "/", "..")) or "'" in h:
                 continue
             tg = unquote(h.split("#")[0].split("?")[0])
-            if tg.endswith(".html") and not os.path.exists(os.path.join(TERMS, tg)):
+            if not tg:
+                continue
+            # P0-1 后站内链接已去 .html 后缀：补回后缀再做存在性判断，
+            # 兼容带后缀与不带后缀两种写法
+            cand = tg if tg.endswith(".html") else tg + ".html"
+            if not os.path.exists(os.path.join(TERMS, cand)):
                 broken.append(f"{f} -> {tg}")
     check("页内相对链接无断链", not broken, f"broken={len(broken)} {broken[:3]}")
 

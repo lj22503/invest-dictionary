@@ -491,3 +491,155 @@ a:hover { color: var(--mf-colors-text-link-hover); }
     scroll-behavior: auto !important;
   }
 }
+
+/* ===== P0-2：首页「全部词条」静态目录 =====
+   静态输出保证爬虫可见；<details> 默认折叠不干扰阅读动线。
+   链接语法遵循全站去 .html 约定（vercel cleanUrls）。 */
+.terms-all {
+  margin-top: 8px;
+  border: 1px solid var(--mf-colors-border-weak, #ECE5D6);
+  border-radius: var(--mf-radii-card, 14px);
+  background: var(--mf-colors-background-surface, #FFFDF9);
+  overflow: hidden;
+}
+
+.terms-all > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 18px;
+  font-size: 0.92rem;
+  color: var(--mf-colors-text-weak, #6E6357);
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background .18s ease;
+}
+
+.terms-all > summary::-webkit-details-marker { display: none; }
+
+.terms-all > summary::before {
+  content: "▸";
+  color: var(--mf-colors-text-accent-mango, #B45309);
+  font-size: 0.9em;
+  transition: transform .18s ease;
+}
+
+.terms-all[open] > summary::before { transform: rotate(90deg); }
+.terms-all > summary:hover { background: var(--mf-colors-background-subtle, #FAF7F3); }
+
+.terms-group { padding: 12px 18px; border-top: 1px solid var(--mf-colors-border-weak, #ECE5D6); }
+
+.terms-group__title {
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--mf-colors-text-body, #3A332C);
+}
+
+.terms-group__n {
+  margin-left: 6px;
+  font-weight: 400;
+  font-size: 0.76rem;
+  color: var(--mf-colors-text-weak, #6E6357);
+}
+
+.terms-group__list {
+  font-size: 0.84rem;
+  line-height: 2.05;
+  color: var(--mf-colors-text-weak, #6E6357);
+}
+
+.terms-group__list a {
+  color: var(--mf-colors-text-link, #B45309);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.terms-group__list a:hover,
+.terms-group__list a:focus-visible {
+  border-bottom-color: currentColor;
+}
+
+/* ===== 法律页（隐私政策 / 用户协议）===== */
+.legal-hero { padding: 40px 0 8px; }
+.legal-hero__eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  letter-spacing: .16em;
+  font-weight: 600;
+  color: var(--mf-colors-text-accent-mango, #B45309);
+}
+.legal-hero__title {
+  margin: 0;
+  font-family: var(--mf-fonts-display, serif);
+  font-size: clamp(2rem, 4.6vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--mf-colors-text-strong, #241610);
+  letter-spacing: .02em;
+}
+.legal-hero__en {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--mf-fonts-display-extended, serif);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  letter-spacing: .12em;
+  color: var(--mf-colors-text-accent-mango, #B45309);
+}
+.legal-hero__lead {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  color: var(--mf-colors-text-weak, #6E6357);
+}
+
+.legal-doc { max-width: 760px; }
+.legal-body { font-size: 0.95rem; line-height: 1.85; color: var(--mf-colors-text-body, #3A332C); }
+
+.legal-lead {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--mf-colors-text-strong, #241610);
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--mf-colors-border-weak, #ECE5D6);
+  margin-bottom: 26px;
+}
+
+.legal-body h2 {
+  font-family: var(--mf-fonts-display, serif);
+  font-size: 1.28rem;
+  font-weight: 800;
+  margin: 30px 0 10px;
+  padding-left: 12px;
+  border-left: 4px solid var(--mf-colors-text-accent-mango, #B45309);
+  color: var(--mf-colors-text-strong, #241610);
+  line-height: 1.3;
+}
+
+.legal-body p { margin: 10px 0; }
+.legal-body ul { margin: 10px 0 10px 4px; padding-left: 22px; }
+.legal-body li { margin: 7px 0; }
+.legal-body li::marker { color: var(--mf-colors-text-accent-mango, #B45309); }
+.legal-body strong { color: var(--mf-colors-text-strong, #241610); }
+.legal-body a {
+  color: var(--mf-colors-text-link, #B45309);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.legal-note {
+  background: var(--mf-colors-background-surface, #FFFDF9);
+  border: 1px solid var(--mf-colors-border-weak, #ECE5D6);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+}
+
+.legal-emph {
+  font-weight: 800;
+  color: var(--mf-colors-text-accent-mango, #B45309);
+  letter-spacing: .02em;
+}

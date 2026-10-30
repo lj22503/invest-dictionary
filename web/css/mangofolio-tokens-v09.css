@@ -682,3 +682,12 @@
 @keyframes mf-accordion-up { 0% { height: var(--radix-accordion-content-height); } to { height: 0; } }
 @keyframes mf-shimmer-pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } to { opacity: 1; } }
 @keyframes mf-placeholder-chart-pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } to { opacity: 1; } }
+
+/* ===== P0-4：尚未创作的词条，降级为不可点击标记 =====
+   保留词面语义但不产生 404（死链对 SEO 与体验双输）。
+   虚线下划线 + 弱化色，传达「有计划但未上线」。 */
+.link-pending {
+  color: var(--mf-colors-text-weak, #6E6357);
+  border-bottom: 1px dashed var(--mf-colors-border-weak, #ECE5D6);
+  cursor: help;
+}

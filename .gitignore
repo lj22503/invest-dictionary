@@ -27,6 +27,7 @@ web/verify/
 # Local verify screenshots & backups
 web/.verify*.png
 web/.audit-*.png
+web/.v-*.png
 *.bak
 *.bak_*
 *.bak-*

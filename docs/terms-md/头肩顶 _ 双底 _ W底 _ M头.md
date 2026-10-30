@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1c835e55ba3b06878e6538b2edadf703_ec6cf8cad46011f19fe5525400638852
+    ReservedCode1: /9fxU4Cw70vnuxImwCvm7TVm7RJAcVmnRcbqs/3IDD2iqU3aDOyTRFQIMvlh5K2ck27wGENSzfE8UWY1N/Zm3YYjCVs9dzEFYE0ihIyWNM2LkQcO9cqnPFABngiDSUUz+iwvUA+eg7k948SmPLqL5hl0peOnkFESTt8GOzC57uo3eyXVEUQjePnM/c0=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1c835e55ba3b06878e6538b2edadf703_ec6cf8cad46011f19fe5525400638852
+    ReservedCode2: /9fxU4Cw70vnuxImwCvm7TVm7RJAcVmnRcbqs/3IDD2iqU3aDOyTRFQIMvlh5K2ck27wGENSzfE8UWY1N/Zm3YYjCVs9dzEFYE0ihIyWNM2LkQcO9cqnPFABngiDSUUz+iwvUA+eg7k948SmPLqL5hl0peOnkFESTt8GOzC57uo3eyXVEUQjePnM/c0=
+---
+
 # 头肩顶 / 双底 / W底 / M头
 
 > 四种经典反转形态——头肩顶、W底（双底）、M头（双顶），靠“颈线突破”确认方向。
@@ -41,3 +52,4 @@ W 底是散户最该认识的底部形态之一：右侧放量突破颈线，往
 ---
 
 **相关词条**：圆弧底（慢牛底部形态）、K线 / 蜡烛图、十字星 / 长上影 / 长下影（K线形态读法）、趋势线 / 颈线
+*（内容由AI生成，仅供参考）*
