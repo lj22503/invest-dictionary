@@ -1,16 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_30847867d20911f1992e525400638852
-    ReservedCode1: wCZwZTrANBT32dZoDlK7gZ+Ew5q2nYx9ymR8pxyQuiUUBGXVcOQ8n906XCiRUIRJSrjioTqof1EbD+hp4IJ4QIQ1IcmNdtPGzuWpLRgFcWTctM5Vl1NiN6vG5gbGNu1wvBRbZ0asfY6lnl+ZxIybNkU67HRFE5QHhIHKNno3spTjueytAFdYOcZB85k=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_30847867d20911f1992e525400638852
-    ReservedCode2: wCZwZTrANBT32dZoDlK7gZ+Ew5q2nYx9ymR8pxyQuiUUBGXVcOQ8n906XCiRUIRJSrjioTqof1EbD+hp4IJ4QIQ1IcmNdtPGzuWpLRgFcWTctM5Vl1NiN6vG5gbGNu1wvBRbZ0asfY6lnl+ZxIybNkU67HRFE5QHhIHKNno3spTjueytAFdYOcZB85k=
----
-
-
-
 # 决策拆解桌 · Decision Mosaic
 
 > **用户说出一个具体的财务决策，你输出"这个决策需要哪几个变量同时在场"，每个变量配一个该看的词条，给分界线（不给结论），再给一个可勾选的行动清单。**

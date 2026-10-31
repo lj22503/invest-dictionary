@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_3f037635b66a11f190f9525400638852
-    ReservedCode1: XEx1/wvJAHED06BY0Yrua5ROVa4jLnzM4FvjIUogqLKt3UolCENmdQVIXjTBjgiM75eJhafAVxmuYMwurhaHc9Zqqqxs7vJbVxfOz2k/4UwPZkzwzPYs2Ga2jFJS+LwWYb3JD9f+8hZJVKsJh0omE026z3Y8Q50ekk1dRVmIhMmGTaEwrysX1r0DbHc=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_3f037635b66a11f190f9525400638852
-    ReservedCode2: XEx1/wvJAHED06BY0Yrua5ROVa4jLnzM4FvjIUogqLKt3UolCENmdQVIXjTBjgiM75eJhafAVxmuYMwurhaHc9Zqqqxs7vJbVxfOz2k/4UwPZkzwzPYs2Ga2jFJS+LwWYb3JD9f+8hZJVKsJh0omE026z3Y8Q50ekk1dRVmIhMmGTaEwrysX1r0DbHc=
----
-
 # invest-dictionary 接手说明（**2026-10-19 更新 · 二期 concept-combinator skill 上线后**）
 
 > 这份说明是给**新开窗口接手 invest-dictionary 的 agent** 看的。读完这份文件 + PROGRESS.md + AGENTS.md 即可开始工作。

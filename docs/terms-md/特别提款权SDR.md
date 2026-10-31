@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: ea726bfeba014e68878fb4e5aa0be152_08411c0c6da5460b96d173118ad35fe8
-    ReservedCode1: 72Jmz/51Uf0aFcoApI8fPd/la+1gBinMfdakbEghkesQLScd+i6vFgM1CwK6lDa/jojfoS3GN4XETuSTtdXvIPThXHOSXWS1TeHQpW91Z7M/fZlOS13sdtNDPfZ7X6YM
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: ea726bfeba014e68878fb4e5aa0be152_08411c0c6da5460b96d173118ad35fe8
-    ReservedCode2: E7I7P28LQrQkuRCLPn97+j76nIc2V5lznVitlJMA4zq6+mdVlAlTwXyM6DkbEaMlpwVVtWvrRC56Qdx9Se7VMqCSN7TgkvvzqeyK7SVE3YgXilQ32uOqtHF5dZSM6fSg
----
-
 # 特别提款权（SDR）
 
 > 特别提款权（SDR）是 IMF 发的“纸黄金”：不印钞票，只做记账，是各国央行的补充储备资产，也是国际货币的“参考篮”。

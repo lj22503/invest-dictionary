@@ -1,16 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_3e37d843b66a11f18e4752540024e231
-    ReservedCode1: ZHvROtgCNoi1cPg8aR9pE4tjhY3Qz9jLqU1rE2UEp+Bi+n3LU0EoARVJ1yUcWB9BQZn3CPf8CKuMU5o8OxHOhpGDAOVNGwUsM/vo5SJujkQZRxW2PHC4ikkJJmlltcW0Gm6EyqcWURAJIzlp1Uj/oBnNABAz0NByWcL2jR5uwxwtgzqj0LJe58tSVWo=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_3e37d843b66a11f18e4752540024e231
-    ReservedCode2: ZHvROtgCNoi1cPg8aR9pE4tjhY3Qz9jLqU1rE2UEp+Bi+n3LU0EoARVJ1yUcWB9BQZn3CPf8CKuMU5o8OxHOhpGDAOVNGwUsM/vo5SJujkQZRxW2PHC4ikkJJmlltcW0Gm6EyqcWURAJIzlp1Uj/oBnNABAz0NByWcL2jR5uwxwtgzqj0LJe58tSVWo=
----
-
-
-
 # AGENTS.md
 
 > 给接手本仓库的人类开发者与 AI Agent 的现役规则。最后更新：2026-10-31
@@ -88,6 +75,8 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 - **提交前必跑（两条命令，缺一不可）**：
   1. `python scripts/check-consistency.py` —— 一致性门禁 10 项（计数一致性 / id·slug·filename 唯一性 / 页内断链 / sitemap 双向覆盖 / 旧域名残留 / ALL_ENTRIES 同步）
   2. `python scripts/site-audit.py` —— 站点体检 26 项，其中 **backfill 维度 5 项必须全绿**（见下）
+
+- **AIGC 元数据头一律不要**：外部内容生成器会在 md 头部注入 `AIGC / ProduceID / ReservedCode` 的 YAML frontmatter（纯水印，带生产方 ID），会随词条扩充反复出现。发现即用 `python scripts/strip-aigc-metadata.py` 清除，`site-audit.py` 的 hygiene 维度已常驻检查
 *（内容由AI生成，仅供参考）*
 
 

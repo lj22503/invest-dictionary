@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_b1305d4fd25b11f1b84e52540064ee0f
-    ReservedCode1: /CTGHiqbFn6bntDUnhloruMAHgRQVDzj3fA6Q8J/nNKp9KW2tKTZFnxRqtdRsgyvuFPSIlsHdf/lVW8OQ3NO1n1gorswZayDof2wV5OlTTpPjudT/kfHAXe2yCi1h6riRtBnQq3tjzq7OyEBw/SpZU1PUgiCIYKCti2kJwKzqpU6lZWlqq47JzbnRUY=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_b1305d4fd25b11f1b84e52540064ee0f
-    ReservedCode2: /CTGHiqbFn6bntDUnhloruMAHgRQVDzj3fA6Q8J/nNKp9KW2tKTZFnxRqtdRsgyvuFPSIlsHdf/lVW8OQ3NO1n1gorswZayDof2wV5OlTTpPjudT/kfHAXe2yCi1h6riRtBnQq3tjzq7OyEBw/SpZU1PUgiCIYKCti2kJwKzqpU6lZWlqq47JzbnRUY=
----
-
 # SLF / 常备借贷便利
 
 > 央行的“应急取款机”：银行临时缺钱时，按固定利率拿合格抵押品向央行借短钱，也是利率走廊的上限。

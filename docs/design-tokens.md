@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_597daf73b65211f1bcef52540024e231
-    ReservedCode1: hehuwTFhHcXg8Ymm4Sp9mV7MGAfl2mEPKtjSLYHi0/ecWvOAG5q6TXKHgJLc9IgUDInDccpD83fPhDB7Uf64JcN5HuM2R5wLrHvLDs+7G1GNY+meTjWyI2/jV7lEkF8NpoyerZ3NQz0Sz/7SImqWv8oMW+Fq/bEN2y3jO1uBRIOGGQ7I+ELUFfQ8vNI=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_597daf73b65211f1bcef52540024e231
-    ReservedCode2: hehuwTFhHcXg8Ymm4Sp9mV7MGAfl2mEPKtjSLYHi0/ecWvOAG5q6TXKHgJLc9IgUDInDccpD83fPhDB7Uf64JcN5HuM2R5wLrHvLDs+7G1GNY+meTjWyI2/jV7lEkF8NpoyerZ3NQz0Sz/7SImqWv8oMW+Fq/bEN2y3jO1uBRIOGGQ7I+ELUFfQ8vNI=
----
-
 # Mangofolio 设计令牌速查（invest-dictionary）
 
 > **权威源**：`web/css/mangofolio-tokens-v09.css`（文件名 v09，内部版本注释为 v0.6 系列，实测值以该 CSS 为准）

@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_c143a5d7a7a311f1b87f525400461939
-    ReservedCode1: qi7yaGdLwM62TqMJyuYIsfINnSikxBxHt2VNf7HjPjuoc0cVuKpPHB0705zZdyvkFqd5m1JkU0gu5oqrh+ylPUL9pKu8+masQTip/KhZ9XewZJPEloCToZa0tTSyXLMJhUSbIUVM1tC/g4PO9l0WwvKUkUvo0pIGMNrGNUW86a7KfDaJDuTEIRhY9CM=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_c143a5d7a7a311f1b87f525400461939
-    ReservedCode2: qi7yaGdLwM62TqMJyuYIsfINnSikxBxHt2VNf7HjPjuoc0cVuKpPHB0705zZdyvkFqd5m1JkU0gu5oqrh+ylPUL9pKu8+masQTip/KhZ9XewZJPEloCToZa0tTSyXLMJhUSbIUVM1tC/g4PO9l0WwvKUkUvo0pIGMNrGNUW86a7KfDaJDuTEIRhY9CM=
----
-
 # 财政政策 vs 货币政策
 
 > 财政政策是政府用收税和花钱调节经济，货币政策是央行用利率和货币量调节经济，两者是国家调控的两只手。

@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_1faee31dc3f411f1a08152540064ee0f
-    ReservedCode1: QXq5EWFJi9Lgo7/bqI6PRdnZUPR2hdBz7uqLpacjps15WcxcvDOp40ISdphBe+FDyY7QUaFJiaas/caJH62awDhFp3jzG5521zG/SvA/qJKNFJJZYAlmZVUoEnkUmFSVUH2eFAtkad4d+bSDlAlK7bSBCmNu861imrmSXG4NCJgVgHr4CsIWJE8yq2k=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_1faee31dc3f411f1a08152540064ee0f
-    ReservedCode2: QXq5EWFJi9Lgo7/bqI6PRdnZUPR2hdBz7uqLpacjps15WcxcvDOp40ISdphBe+FDyY7QUaFJiaas/caJH62awDhFp3jzG5521zG/SvA/qJKNFJJZYAlmZVUoEnkUmFSVUH2eFAtkad4d+bSDlAlK7bSBCmNu861imrmSXG4NCJgVgHr4CsIWJE8yq2k=
----
-
 # CTA 策略
 
 > 让程序跟着趋势自动买卖期货的基金策略，俗称"管理期货"，专门赚"大行情"的钱。

@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_3bf10cc0d28f11f1b84e52540064ee0f
-    ReservedCode1: Wl7becrd5nS+ZG58pIKjVI+PNL+1E9DEyFcU1ZB9dqLG5Am9QiUrFHvO0iVR5gHGQqKbzITIRdxPvA4NqmcbXCczQ73PUmLF3pfr8h0DBtfQNv5lUjBGYZ2hEis34px0P1L//5uNUiE40SLYODq0P6/AaNrbh+dfIjo8Xj8exI5nv6yQWh5E5YnCG9g=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_3bf10cc0d28f11f1b84e52540064ee0f
-    ReservedCode2: Wl7becrd5nS+ZG58pIKjVI+PNL+1E9DEyFcU1ZB9dqLG5Am9QiUrFHvO0iVR5gHGQqKbzITIRdxPvA4NqmcbXCczQ73PUmLF3pfr8h0DBtfQNv5lUjBGYZ2hEis34px0P1L//5uNUiE40SLYODq0P6/AaNrbh+dfIjo8Xj8exI5nv6yQWh5E5YnCG9g=
----
-
 # REITs 打新
 
 > 像打新股一样认购新发行的公募 REITs，赚上市首日的折溢价和长期分红。
@@ -40,5 +29,4 @@ REITs 上市首日普遍有溢价，早期部分首日涨 10%-30%，**打中等�
 ---
 
 **相关词条**：REITs（房地产投资信托基金）、新股（IPO / 打新）、北交所打新、可转债打新
-*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*

@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_b096391cd25b11f1b84e52540064ee0f
-    ReservedCode1: L4YprJR/j/iQvxa6pFGJMOTFTKvQV5XpAcbX+pOp6P6AEx22mdHCIXNVAaD/q34uPuhM/qZGQcsm544NEgOqQVOFcQj7c2ai6Ww7f5hbNoDzlm7HqsXSQLOaajlrYG+BP2roJNFggEKl/otKRLufzc9cbG3a2qxbSjEUGnnhJQON5S3fP8lQJiO54IM=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_b096391cd25b11f1b84e52540064ee0f
-    ReservedCode2: L4YprJR/j/iQvxa6pFGJMOTFTKvQV5XpAcbX+pOp6P6AEx22mdHCIXNVAaD/q34uPuhM/qZGQcsm544NEgOqQVOFcQj7c2ai6Ww7f5hbNoDzlm7HqsXSQLOaajlrYG+BP2roJNFggEKl/otKRLufzc9cbG3a2qxbSjEUGnnhJQON5S3fP8lQJiO54IM=
----
-
 # GDP平减指数
 
 > 把名义GDP“挤掉”物价水分算出来的整体物价变化指标，比CPI覆盖范围更广，是观察通胀最全面的温度计。

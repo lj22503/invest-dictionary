@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_eb56297fcb0811f18e0e52540064ee0f
-    ReservedCode1: f/c5QcnX5At/7fZaiy8GMr2LN8/WUApUnIyX710bHvwmx8mmprxYorK2cgT6vXrFgD8yBT/jdWN4GhX+sSwDyJAT3UZmnmtpw49m2fSH2TLZIx49izoB2K7oO2m24VyXzYkFXGg2RvVXGam8xrjQOvZc2I+0imrZEg4w1E342Uqjhmd/1Qsv1QQF6Fw=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_eb56297fcb0811f18e0e52540064ee0f
-    ReservedCode2: f/c5QcnX5At/7fZaiy8GMr2LN8/WUApUnIyX710bHvwmx8mmprxYorK2cgT6vXrFgD8yBT/jdWN4GhX+sSwDyJAT3UZmnmtpw49m2fSH2TLZIx49izoB2K7oO2m24VyXzYkFXGg2RvVXGam8xrjQOvZc2I+0imrZEg4w1E342Uqjhmd/1Qsv1QQF6Fw=
----
-
 # VaR（在险价值）（Value at Risk）
 
 > 正常情况下，你一天最多可能亏多少钱（比如 95% 概率亏不超过 5%）。

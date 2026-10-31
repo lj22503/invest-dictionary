@@ -1,16 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_2dea6850d20911f1992e525400638852
-    ReservedCode1: MgxykmABYv9/qPKuWP1tdx8JiRbKRQkJ5FDPZHLVoK6cY9izFNi08pFXhMEIj3o2YDwsD7Z/eedLfjXBbN0Ayk/nbXkGA5rgUcRV+X2zghD3IPqxVeWwuq8/1UQb2Mll7i9vfBbyKQugEw5Uzr9jFIgD3kpzK+gOOxyJv1PJzlixUujaY0Q7uhHkQ7U=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_2dea6850d20911f1992e525400638852
-    ReservedCode2: MgxykmABYv9/qPKuWP1tdx8JiRbKRQkJ5FDPZHLVoK6cY9izFNi08pFXhMEIj3o2YDwsD7Z/eedLfjXBbN0Ayk/nbXkGA5rgUcRV+X2zghD3IPqxVeWwuq8/1UQb2Mll7i9vfBbyKQugEw5Uzr9jFIgD3kpzK+gOOxyJv1PJzlixUujaY0Q7uhHkQ7U=
----
-
-
-
 # 新闻翻译机 · Combo Narrative
 
 > **用户扔来一段看不懂的新闻，你把里面的多个概念识别出来，串成一条从"现象"到"对你意味着什么"的叙事线，用普通人能懂的话讲出来。**

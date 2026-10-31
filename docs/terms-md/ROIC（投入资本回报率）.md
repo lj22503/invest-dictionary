@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_2d62e7b5cef111f1acb8525400638852
-    ReservedCode1: BRWgKfxzgzPEJ7l02jlmj41XziXzQ1ExUoR8BCcTyiU7Zly+VWXUAo/M6Ziuy67dDhOeCC2b3nrSAx+yY6FVVHdLmfFvWjGXmYXejU8a612VMEdJQgHKsAnFQH9bQ2OUL5dFpOHa17kqxwFK30on8Ieyn1ENNymtECcXMjTK1byXNz4IQ//jv5PbvIE=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_2d62e7b5cef111f1acb8525400638852
-    ReservedCode2: BRWgKfxzgzPEJ7l02jlmj41XziXzQ1ExUoR8BCcTyiU7Zly+VWXUAo/M6Ziuy67dDhOeCC2b3nrSAx+yY6FVVHdLmfFvWjGXmYXejU8a612VMEdJQgHKsAnFQH9bQ2OUL5dFpOHa17kqxwFK30on8Ieyn1ENNymtECcXMjTK1byXNz4IQ//jv5PbvIE=
----
-
 # ROIC（投入资本回报率）
 
 > ROIC = 公司把股东和债主的钱都算上，每投入 100 块能赚回多少，是衡量生意本身好坏的硬指标。

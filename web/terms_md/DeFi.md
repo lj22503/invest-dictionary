@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_ef913e93c8a611f18533525400638852
-    ReservedCode1: eJlHuZxmHcjheLMQLvnabIS+0h36CIfIKi3tv8x90e23lE2TvPbomGLEeGG5a8WqdJabVINysWP7PCMJazwjDTg3xoYCVsz/CJZoZFNdUo/QqK0kgAh5TCIW/93RehnZQl5J5q+TQovsIIvhSaoc4UdKmiWbv1AniLUmsh45j2sxoxgsbf1YsgI+d0w=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_ef913e93c8a611f18533525400638852
-    ReservedCode2: eJlHuZxmHcjheLMQLvnabIS+0h36CIfIKi3tv8x90e23lE2TvPbomGLEeGG5a8WqdJabVINysWP7PCMJazwjDTg3xoYCVsz/CJZoZFNdUo/QqK0kgAh5TCIW/93RehnZQl5J5q+TQovsIIvhSaoc4UdKmiWbv1AniLUmsh45j2sxoxgsbf1YsgI+d0w=
----
-
 # DeFi
 
 > DeFi（去中心化金融）= 用智能合约替代银行的金融服务。没有柜台、没有经理，借贷、存款、交易全在区块链上自动执行。

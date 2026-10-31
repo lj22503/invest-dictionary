@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: b225827515064464a83fa4166fe99715_f2f8407e4f604fb99bea5bf73ac48e76
-    ReservedCode1: OqoMhM5S8XFLUnZjDdYUK+Ie+GqIU3y3UUC1jxgRxjkM3dZaHPWQsVJB0kXIbswwTQwCDQzls2PG7d7YNVaJ4kNv5LoYWyC1h/B4ihilD3DuxPcsrqdlQpwfP83cSbF7vSDvcW8iHnL/aSChqh6WuXUdBW4ov/8M
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: b225827515064464a83fa4166fe99715_f2f8407e4f604fb99bea5bf73ac48e76
-    ReservedCode2: OqoMhM5S8XFLUnZjDdYUK+Ie+GqIU3y3UUC1jxgRxjkM3dZaHPWQsVJB0kXIbswwTQwCDQzls2PG7d7YNVaJ4kNv5LoYWyC1h/B4ihilD3DuxPcsrqdlQpwfP83cSbF7vSDvcW8iHnL/aSChqh6WuXUdBW4ov/8M
----
-
 # 做T（T+0操作）
 
 > 做T=利用手里的底仓，在当天先买后卖或先卖后买做差价，把持仓成本一点点做低的操作。

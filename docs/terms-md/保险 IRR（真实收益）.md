@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_4db74810b1d811f1ab3f52540024e231
-    ReservedCode1: NievyFWbn0U4iFIDUMwpwXc/LXUhO6HPojQfgCmZqunR8ERfd8GN6J+bDXKnw0y6taJPjxsTKp5gl7Ci+Yj3WwNCS1u0O0PRGMw7eOdPGw/gnvz2qjeN8PvFvn0BSUM4vUSKJ1u36YPKLJ0bnVr0od0LwEmRLuuunsqRONSGkifjag2wC/92NiI3T+Q=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_4db74810b1d811f1ab3f52540024e231
-    ReservedCode2: NievyFWbn0U4iFIDUMwpwXc/LXUhO6HPojQfgCmZqunR8ERfd8GN6J+bDXKnw0y6taJPjxsTKp5gl7Ci+Yj3WwNCS1u0O0PRGMw7eOdPGw/gnvz2qjeN8PvFvn0BSUM4vUSKJ1u36YPKLJ0bnVr0od0LwEmRLuuunsqRONSGkifjag2wC/92NiI3T+Q=
----
-
 # 保险 IRR（真实收益）
 
 > IRR 是算清保险"实际年化收益率"的照妖镜，业务员说的收益高不高，一算便知。

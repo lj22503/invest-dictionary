@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_0365873ac4bb11f1820a525400638852
-    ReservedCode1: nvhijgnqYLKAz+xAdP4eFVnFmuNiA3LL2d6jLjcEbrJ4YVee2ofBduPAu5kpiic3a8jtKj4g/aCbmF/Oqki8rFnYFp8WQlwXGN2G7hsThKlxWBLMa5H1M45PLzOHPu3Pn7JtCq/ovrrmJqCnkXYdyBc6GDyFwM+RMgKfxRai4sAXMEyqb1Hp+4/d/68=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_0365873ac4bb11f1820a525400638852
-    ReservedCode2: nvhijgnqYLKAz+xAdP4eFVnFmuNiA3LL2d6jLjcEbrJ4YVee2ofBduPAu5kpiic3a8jtKj4g/aCbmF/Oqki8rFnYFp8WQlwXGN2G7hsThKlxWBLMa5H1M45PLzOHPu3Pn7JtCq/ovrrmJqCnkXYdyBc6GDyFwM+RMgKfxRai4sAXMEyqb1Hp+4/d/68=
----
-
 # 货币幻觉（名义 vs 实际）
 
 > 看到工资涨了5%，却没发现物价也涨了5%——钱其实一点没变多。

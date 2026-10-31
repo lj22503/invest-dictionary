@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_00000000801c959b
-    ReservedCode1: V2iJy9qI6bTV2iJy9qI6bTV2iJy9qI6bTV2iJy9qI6bT748
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_00000000801c959b
-    ReservedCode2: V2iJy9qI6bTV2iJy9qI6bTV2iJy9qI6bT748
----
-
 # 比特币ETF（现货/期货）
 
 > 比特币 ETF 让你**不用注册交易所、不用保管私钥**，就能在传统券商账户里买入跟踪比特币价格的基金。现货 ETF 直接持有比特币，期货 ETF 持有的是比特币期货合约。

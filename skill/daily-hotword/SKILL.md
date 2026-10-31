@@ -1,16 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_343c9cb8d20911f1992e525400638852
-    ReservedCode1: BU7zH1TvF4o+n4R1PUJ4WR9pLmHuWFZ6BjXfxrGOMscchQxV8VfcMucfcN6Bwdzwa3Wdrgn3hGrsT/+QBukA7881/QfjPRfAb/HP1u+QgqJpjd+dyLZrht/ovPVNHGJ+Ne028zjPYDdZZ4M+OlA6oLDmxnZmVpg+s81kbzzbE+0l7Wcn+O617qKCbYM=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_343c9cb8d20911f1992e525400638852
-    ReservedCode2: BU7zH1TvF4o+n4R1PUJ4WR9pLmHuWFZ6BjXfxrGOMscchQxV8VfcMucfcN6Bwdzwa3Wdrgn3hGrsT/+QBukA7881/QfjPRfAb/HP1u+QgqJpjd+dyLZrht/ovPVNHGJ+Ne028zjPYDdZZ4M+OlA6oLDmxnZmVpg+s81kbzzbE+0l7Wcn+O617qKCbYM=
----
-
-
-
 # 每日热词 · Daily Hotword
 
 > **围绕一条今日热点话题，提取 3-5 个与话题强相关的词典热词，每个热词给一句话人话、在话题里扮演的角色、为什么今天要看它，最后串成一条话题解读。**

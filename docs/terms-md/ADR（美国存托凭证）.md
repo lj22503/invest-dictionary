@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_2a21caaacef111f19f8752540064ee0f
-    ReservedCode1: Bsj9K4DZV7KEWkP8ZpxrHl239x95e129Ixdi/N7rvPJHEnL6WUMyTg5fgWWDj1xWJGjezBhw7lsZEr4/b5p/G1h6y070yEigZjXra8N+pIMzJqXj61nlUqTD1Pzc9T7s+GAkA8tjYEWqjKxfTj1t6M5ABFAw0AVDjSHnb6AouNoeqqSFAW1eJY/wE2Y=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_2a21caaacef111f19f8752540064ee0f
-    ReservedCode2: Bsj9K4DZV7KEWkP8ZpxrHl239x95e129Ixdi/N7rvPJHEnL6WUMyTg5fgWWDj1xWJGjezBhw7lsZEr4/b5p/G1h6y070yEigZjXra8N+pIMzJqXj61nlUqTD1Pzc9T7s+GAkA8tjYEWqjKxfTj1t6M5ABFAw0AVDjSHnb6AouNoeqqSFAW1eJY/wE2Y=
----
-
 # ADR（美国存托凭证）
 
 > 外国公司想在美国上市，就先发行一种"股票替身"——这就是 ADR，美国存托凭证。

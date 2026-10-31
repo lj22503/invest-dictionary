@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_8128a8c2c59011f1a08152540064ee0f
-    ReservedCode1: UGOYH9FVQ6QJzLTkBKnBTdNgF+XPAY2wCHUaZm/fMuMHeTTSEPVSqfLNP9UPnBJRfBzxum7wEvfs719sdT405E+QaFJls5gkMfoK5I+U2Z7hfw2f7CSgO4M8dTN4BdeUfQ9+5ks+YI2ESDBMSy5+02kp/kp1gwEq1ckUFEVsepyq8gaN9cVK85///s0=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_8128a8c2c59011f1a08152540064ee0f
-    ReservedCode2: UGOYH9FVQ6QJzLTkBKnBTdNgF+XPAY2wCHUaZm/fMuMHeTTSEPVSqfLNP9UPnBJRfBzxum7wEvfs719sdT405E+QaFJls5gkMfoK5I+U2Z7hfw2f7CSgO4M8dTN4BdeUfQ9+5ks+YI2ESDBMSy5+02kp/kp1gwEq1ckUFEVsepyq8gaN9cVK85///s0=
----
-
 # 个股 / ETF / 股指期权
 
 > **期权 = 花一笔权利金，买一个“未来按约定价格买入或卖出某资产”的权利。** 按标的物分：个股期权（单只股票）、ETF 期权（一篮子股票）、股指期权（大盘指数）。

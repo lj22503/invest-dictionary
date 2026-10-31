@@ -1,16 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_2cb9d1d4d20911f1992e525400638852
-    ReservedCode1: d/1IRovhyxoXbMZIcFlunbc4o/SdvPhk5AP0K5Yrw7Z5flsjgMCdef1nhka3qSuAsalN/zCRy34ve00YgL5MGJdgwE6XbbWNJCBuCtuvvlXLoNDT1Jy2W3zPoEalbcyYkno6ZKF4ioRlUlrDguFYuTWQGbkH+sRc5Y3P7TVE9FafQoHRf+imafPMsQE=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_2cb9d1d4d20911f1992e525400638852
-    ReservedCode2: d/1IRovhyxoXbMZIcFlunbc4o/SdvPhk5AP0K5Yrw7Z5flsjgMCdef1nhka3qSuAsalN/zCRy34ve00YgL5MGJdgwE6XbbWNJCBuCtuvvlXLoNDT1Jy2W3zPoEalbcyYkno6ZKF4ioRlUlrDguFYuTWQGbkH+sRc5Y3P7TVE9FafQoHRf+imafPMsQE=
----
-
-
-
 # 理财急诊 · Symptom Lookup
 
 > **用户描述一个"症状"（理财亏了、被推荐高息产品、听说黄金要涨），你倒查出"该查的几个词条"，并告诉他最该先看哪一条。**

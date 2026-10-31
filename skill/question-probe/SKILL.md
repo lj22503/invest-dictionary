@@ -1,16 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_31ccf490d20911f1b84e52540064ee0f
-    ReservedCode1: B/HWIMH3dkRQnQux6v1CXuljSn7UntxVG+MPqK/xMj1Ax4c/cCfcaJRHGQm1kedOlQ8b1SKbPWkY/K78a5A+AV2nkyZTrVZH5kjDoKBPzng7hHttMGKu6NMYAdczwbBNbGMH+s5xexwRWCZbweG0ZifZOjL87OG7m0GI5Y56YrlbeEV05HoPe/Wlmmw=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_31ccf490d20911f1b84e52540064ee0f
-    ReservedCode2: B/HWIMH3dkRQnQux6v1CXuljSn7UntxVG+MPqK/xMj1Ax4c/cCfcaJRHGQm1kedOlQ8b1SKbPWkY/K78a5A+AV2nkyZTrVZH5kjDoKBPzng7hHttMGKu6NMYAdczwbBNbGMH+s5xexwRWCZbweG0ZifZOjL87OG7m0GI5Y56YrlbeEV05HoPe/Wlmmw=
----
-
-
-
 # 防坑提问器 · Question Probe
 
 > **用户给出一个产品名或概念，你输出"你应该问销售的 3-5 个问题"，每个问题配一句"为什么重要"和"对方可能的回避话术"。**

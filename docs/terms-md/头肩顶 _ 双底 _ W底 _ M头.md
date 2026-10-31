@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_ec6cf8cad46011f19fe5525400638852
-    ReservedCode1: /9fxU4Cw70vnuxImwCvm7TVm7RJAcVmnRcbqs/3IDD2iqU3aDOyTRFQIMvlh5K2ck27wGENSzfE8UWY1N/Zm3YYjCVs9dzEFYE0ihIyWNM2LkQcO9cqnPFABngiDSUUz+iwvUA+eg7k948SmPLqL5hl0peOnkFESTt8GOzC57uo3eyXVEUQjePnM/c0=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_ec6cf8cad46011f19fe5525400638852
-    ReservedCode2: /9fxU4Cw70vnuxImwCvm7TVm7RJAcVmnRcbqs/3IDD2iqU3aDOyTRFQIMvlh5K2ck27wGENSzfE8UWY1N/Zm3YYjCVs9dzEFYE0ihIyWNM2LkQcO9cqnPFABngiDSUUz+iwvUA+eg7k948SmPLqL5hl0peOnkFESTt8GOzC57uo3eyXVEUQjePnM/c0=
----
-
 # 头肩顶 / 双底 / W底 / M头
 
 > 四种经典反转形态——头肩顶、W底（双底）、M头（双顶），靠“颈线突破”确认方向。

@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_35651056d20911f1992e525400638852
-    ReservedCode1: xHT9+rjA0XdjGKHe/2/ebhI53K3f/SMVM/co+lmkt8O3pQxe8hAPfp74UF0oUCEX61uxXsz96mb2smC+4bPbs9GOSjYMz4UFcfmK/axUM812y1+lGyYPIomOjBeEv80lsASqQ0JoTsPtnKefbNeWdFkmaS582e2Y2+ARYC3XPiBjZmw4V1yzNpLCmPo=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_35651056d20911f1992e525400638852
-    ReservedCode2: xHT9+rjA0XdjGKHe/2/ebhI53K3f/SMVM/co+lmkt8O3pQxe8hAPfp74UF0oUCEX61uxXsz96mb2smC+4bPbs9GOSjYMz4UFcfmK/axUM812y1+lGyYPIomOjBeEv80lsASqQ0JoTsPtnKefbNeWdFkmaS582e2Y2+ARYC3XPiBjZmw4V1yzNpLCmPo=
----
-
 <div align="center">
 
 # 投资词典 · Invest Dictionary

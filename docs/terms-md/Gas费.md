@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 95cdf0bc728e4a558c5554db1e2d3254_fa812f4067b547d9a61119cb558b3c3c
-    ReservedCode1: nvnOxYp22SxwOrqfEVansSsm8/pXKZJkdHzYqXUrvYEzCjN2a2meuSnUUkOwnlPFnReaRdmy+khSa/ar/f40iBuumFbn5q+Yz0m6Sf+XWYxZLXX5dTJTG1UypqjxyLrzpItuzfo2W4/0iv86Dg0awrfK5xXPNFRHQBd0COQ2mhdFG9H2K6gI9EJLAJY=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 95cdf0bc728e4a558c5554db1e2d3254_fa812f4067b547d9a61119cb558b3c3c
-    ReservedCode2: nvnOxYp22SxwOrqfEVansSsm8/pXKZJkdHzYqXUrvYEzCjN2a2meuSnUUkOwnlPFnReaRdmy+khSa/ar/f40iBuumFbn5q+Yz0m6Sf+XWYxZLXX5dTJTG1UypqjxyLrzpItuzfo2W4/0iv86Dg0awrfK5xXPNFRHQBd0COQ2mhdFG9H2K6gI9EJLAJY=
----
-
 # Gas 费
 
 > 在以太坊这类链上转账或操作时，付给网络矿工/验证者的“手续费”，网络越堵越贵。

@@ -26,6 +26,7 @@ P0-1/P0-2 两个硬伤横跨一个半月纹丝不动。这一维把「调研结�
 让回填不再依赖人记得。
 """
 import argparse
+import fnmatch
 import json
 import os
 import re
@@ -177,6 +178,35 @@ def walk_all_files(root):
             continue
         for n in filenames:
             yield os.path.join(dirpath, n)
+
+
+def load_vercelignore(root):
+    """读 .vercelignore（站点根目录优先，其次仓库根），返回模式列表。"""
+    for cand in (os.path.join(root, ".vercelignore"), ".vercelignore"):
+        if os.path.isfile(cand):
+            with open(cand, encoding="utf-8", errors="replace") as f:
+                return [l.strip() for l in f
+                        if l.strip() and not l.strip().startswith("#")]
+    return []
+
+
+def ignore_match(rel, patterns):
+    """简化 gitignore 匹配：不含斜杠的模式匹配任意层的文件名/目录名；
+    含斜杠的按相对路径逐层匹配。够用即可——这里只判备份与调试产物。"""
+    rel = rel.replace("\\", "/")
+    parts = rel.split("/")
+    for raw in patterns:
+        p = raw[1:] if raw.startswith("/") else raw
+        p = p.rstrip("/")
+        if "/" not in p:                      # 纯名字模式：任意层
+            if any(fnmatch.fnmatch(seg, p) for seg in parts):
+                return True
+        else:                                 # 路径模式：本路径或任一祖先前缀
+            if fnmatch.fnmatch(rel, p):
+                return True
+            if any(fnmatch.fnmatch("/".join(parts[:i + 1]), p) for i in range(len(parts))):
+                return True
+    return False
 
 
 # ============================================================
@@ -453,11 +483,47 @@ def audit(root, rules, rep):
             "默认勾选违法、以注销账号替代撤回同意不成立")
 
     # ---------- hygiene ----------
-    baks = [os.path.relpath(p, root) for p in walk_all_files(root) if ".bak" in os.path.basename(p)]
+    # 判定口径：磁盘上有备份文件 ≠ 会被部署。只要 .vercelignore 全覆盖就不算问题
+    # （本地留着是给人回滚用的，删掉反而危险）。真正要报警的是「漏网」。
+    baks = [os.path.relpath(p, root) for p in walk_all_files(root)
+            if ".bak" in os.path.basename(p) or p.endswith(("~", ".orig", ".backup"))]
     total = sum(os.path.getsize(os.path.join(root, b)) for b in baks) // 1024 // 1024
-    rep.add("hygiene", "FAIL" if baks else "PASS", "备份文件随站部署",
-            "%d 个 / %dMB" % (len(baks), total),
-            "加 .vercelignore 排除；已入库的用 git rm --cached 脱管")
+    pats = load_vercelignore(root)
+    leaky = [b for b in baks if not ignore_match(b, pats)]
+    if not baks:
+        rep.add("hygiene", "PASS", "备份文件随站部署", "0 个", "")
+    elif leaky:
+        rep.add("hygiene", "FAIL", "备份文件随站部署",
+                "%d 个未被 .vercelignore 排除（磁盘共 %d 个 / %dMB）" % (len(leaky), len(baks), total),
+                "在站点根目录的 .vercelignore 补模式；样例：%s" % ", ".join(sorted(leaky)[:3]))
+    else:
+        rep.add("hygiene", "PASS", "备份文件随站部署",
+                "%d 个 / %dMB，已被 .vercelignore 全部排除" % (len(baks), total),
+                "磁盘上仍保留供本地回滚，但不上传；.vercelignore 失效或新增未覆盖的后缀时会自动转 FAIL")
+
+    # AIGC 元数据头：外部生成器会在 md 头部反复注入 AIGC/ProduceID/ReservedCode 块。
+    # 它是纯水印，无内容价值，还会把生产方 ID 带进仓库与线上产物。
+    # 2026-10-31 已全量清除 484 处（docs/ web/ skill/ 三个目录都中招），这里守住不再复发。
+    repo = os.path.dirname(os.path.abspath(root)) if os.path.basename(os.path.abspath(root)) == "web" \
+        else os.path.abspath(root)
+    aigc = []
+    for dirpath, _, filenames in os.walk(repo):
+        if any(p in dirpath for p in (".git", "node_modules", ".vercel")):
+            continue
+        for n in filenames:
+            if not n.endswith(".md"):
+                continue
+            p = os.path.join(dirpath, n)
+            try:
+                with open(p, encoding="utf-8", errors="replace") as f:
+                    head = f.read(1500)
+            except OSError:
+                continue
+            if re.search(r"^AIGC:", head, re.M) or "ContentProducer" in head:
+                aigc.append(os.path.relpath(p, repo))
+    rep.add("hygiene", "FAIL" if aigc else "PASS", "AIGC 元数据头残留",
+            "%d 个 md 文件" % len(aigc) if aigc else "0 个（已全量清除）",
+            "跑 scripts/strip-aigc-metadata.py 清除；这类块由外部生成器注入，会随词条扩充反复出现")
 
 
 def main():

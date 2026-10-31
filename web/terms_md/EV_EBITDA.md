@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_eb0e7d56c8a611f18e0e52540064ee0f
-    ReservedCode1: AdvN0FTd2LkOiQLqepN+2hfwexfeMwp6oOve4ETQzNf6jWGk5vhDjxJXS+Dog0jEw3RcGxu7lfRxTBcMswWux/JhtpMSsB4EZxI4SdgnspcxVLNawZrrA2C7u5YbCz2Sh5IuDWCA9Id6NtAkFLTwO5rkLcrfw1Xgk1KdNkiPbsfb+4R+8pVfCdXFVbU=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_eb0e7d56c8a611f18e0e52540064ee0f
-    ReservedCode2: AdvN0FTd2LkOiQLqepN+2hfwexfeMwp6oOve4ETQzNf6jWGk5vhDjxJXS+Dog0jEw3RcGxu7lfRxTBcMswWux/JhtpMSsB4EZxI4SdgnspcxVLNawZrrA2C7u5YbCz2Sh5IuDWCA9Id6NtAkFLTwO5rkLcrfw1Xgk1KdNkiPbsfb+4R+8pVfCdXFVbU=
----
-
 # EV/EBITDA
 
 > EV/EBITDA = 企业价值 ÷ 息税折旧摊销前利润。它回答一个问题：把公司整个买下来（含负债），要几年才能靠经营利润赚回来。

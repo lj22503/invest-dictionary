@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_e243b128c64a11f1820a525400638852
-    ReservedCode1: DBgz3blKIfUvRPky3ZgaUQoP3iqw+Tkrw0mXi8r/GMKePYsTyFXsW+P5FcAxv+UV0inqLzS/+tljxxoG/F/74+LxNkYA0TxbSIn6KmlHawYrsnexPhLkWVp66pjpH1YjfOJsda5ulZ7Y2yJ3O/TcGM9IeewOXL2e6MJzJzgCDEw0VmLnBcN8uvKZvPc=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_e243b128c64a11f1820a525400638852
-    ReservedCode2: DBgz3blKIfUvRPky3ZgaUQoP3iqw+Tkrw0mXi8r/GMKePYsTyFXsW+P5FcAxv+UV0inqLzS/+tljxxoG/F/74+LxNkYA0TxbSIn6KmlHawYrsnexPhLkWVp66pjpH1YjfOJsda5ulZ7Y2yJ3O/TcGM9IeewOXL2e6MJzJzgCDEw0VmLnBcN8uvKZvPc=
----
-
 # 深V / 反弹 / 反转 / 企稳
 
 > 跌下去之后市场怎么走，这四个词说的不是一回事：反弹是"喘口气"，反转是"换了方向"，企稳是"跌不动了"。

@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_af736ec1d3fd11f1a97752540064ee0f
-    ReservedCode1: dJv9ehIjz5FrAVIO+7tJBm+ktl8fxeuAUfIh2MPTrodAdKOPZ1LoCkZRmdrCcePNnUWWgqp+j0pF0aSVAxrK2LEtheW4ydVtHX4m6Xl1nfCOYYBHZgSu6y4v9nOXqv+OvhQgLVS/TwI2ONRx8FOT8ZvQCiXwA1mDM8q3UKnQIgSq+op1JzZMMwoyvaQ=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_af736ec1d3fd11f1a97752540064ee0f
-    ReservedCode2: dJv9ehIjz5FrAVIO+7tJBm+ktl8fxeuAUfIh2MPTrodAdKOPZ1LoCkZRmdrCcePNnUWWgqp+j0pF0aSVAxrK2LEtheW4ydVtHX4m6Xl1nfCOYYBHZgSu6y4v9nOXqv+OvhQgLVS/TwI2ONRx8FOT8ZvQCiXwA1mDM8q3UKnQIgSq+op1JzZMMwoyvaQ=
----
-
 # 商品 ETF
 
 > 不用开期货账户，像买股票一样，把黄金、原油、豆粕等一篮子大宗商品装进基金里。
@@ -53,5 +42,4 @@ AIGC:
 ---
 
 **相关词条**：黄金ETF、大宗商品、ETF（交易型开放式指数基金）、杠杆ETF、原油期货
-*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*

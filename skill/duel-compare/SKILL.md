@@ -1,16 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_2f308c26d20911f1992e525400638852
-    ReservedCode1: bw8DUQXH/IVEI0Jgu110XocecVZdR/XGEmtIy4QpSlHDEOi59mz357w/0Ny9Wl84QlGiAPJeYY5asrqjabtKBxUVQRn1NcdtGY1GwmVgWp84ZNj9lsBuIa6vMlLQHvMSiFD1QDYu5Ude8CkunDFY+q3JkgJ/EuJOawrZQq3gESl5DKbbwybyyIGJhBc=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_2f308c26d20911f1992e525400638852
-    ReservedCode2: bw8DUQXH/IVEI0Jgu110XocecVZdR/XGEmtIy4QpSlHDEOi59mz357w/0Ny9Wl84QlGiAPJeYY5asrqjabtKBxUVQRn1NcdtGY1GwmVgWp84ZNj9lsBuIa6vMlLQHvMSiFD1QDYu5Ude8CkunDFY+q3JkgJ/EuJOawrZQq3gESl5DKbbwybyyIGJhBc=
----
-
-
-
 # 二选一擂台 · Duel Compare
 
 > **用户给出一个"A 还是 B"的选择，你把两个选项放进同一个决策场景里，并排对比，给出"什么条件下选 A、什么条件下选 B、什么条件下两个都别选"的分界线。**
