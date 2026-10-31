@@ -27,9 +27,12 @@
     2. 全量删而非只删第一个：合并稿会在每条词条前各挂一个块，散落在正文中间。
        判定靠「--- 后紧跟 AIGC:」，正文的水平分隔线不会被误伤。
     3. 别顺手统一行尾：仓库是 CRLF，重写成 LF 会让 32 个文件产生纯噪声 diff。
-       正确做法是改完按 HEAD 的原行尾后缀补回去。
+       正确做法是拆行时先把每行末尾的 \r 摘掉，再用原行尾拼回去。
     4. 范围要全仓 os.walk，不能只扫 docs/ —— web/markdown、web/terms、
        web/terms_md、skill/ 里都有，且 web/ 下的是随站部署的。
+    5. 别无条件给文件补末尾换行：全仓约 103 个 md 本来就没有末尾换行，
+       `rstrip() + "\n"` 的写法会给它们每人制造一行噪声 diff。
+       必须记录并还原「原文末尾是否有换行」，没动过就原样返回。
 """
 import argparse
 import os
@@ -55,20 +58,31 @@ def iter_md(repo):
 
 
 def strip(text):
-    """返回 (新文本, 是否剥离了 frontmatter, 是否去掉了重复声明)。"""
-    new_text, n = BLOCK.subn("", text)
-    did_block = n > 0
-    if did_block:
-        text = new_text.lstrip("\ufeff").lstrip("\r\n")
+    """返回 (新文本, 剥离块数, 去重次数)。
 
-    lines = text.rstrip().split("\n")
-    did_dup = False
+    不可变更的约定：除了「删 AIGC 块」和「删重复免责声明」这两件事，
+    文件其余字节必须原样还回去 —— 尤其是行尾风格和末尾有没有换行，
+    否则一跑就是上百文件的噪声 diff。
+    """
+    new_text, n = BLOCK.subn("", text)
+    # 行尾风格看原文，不猜：CRLF 仓库就还用 CRLF 拼回去
+    nl = "\r\n" if "\r\n" in new_text else "\n"
+    new_text = new_text.lstrip("\ufeff").lstrip("\r\n")
+    # 记下「末尾本来有没有换行」，拼回去时要还原
+    ends_with_nl = new_text.endswith(("\n", "\r"))
+    lines = [l.rstrip("\r") for l in new_text.rstrip("\r\n").split("\n")]
+
+    dedup = 0
     while (len(lines) >= 2 and lines[-1].strip()
            and lines[-1].strip() == lines[-2].strip()
            and DISCLAIMER in lines[-1]):
         lines.pop()
-        did_dup = True
-    return "\n".join(lines) + "\n", n, did_dup
+        dedup += 1
+
+    out = nl.join(lines)
+    if ends_with_nl:
+        out += nl
+    return out, n, dedup
 
 
 def main():

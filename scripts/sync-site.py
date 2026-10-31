@@ -8,6 +8,7 @@ sync-site.py —— 站点衍生产物统一同步入口（一条命令跑完全
   本脚本把散落的步骤编排成一件事，遵循「唯一数据源 = web/dictionary.json」原则。
 
 执行顺序（有依赖：llms 依赖 index.html 的 ALL_ENTRIES，故 sync 必须最先）：
+  0. strip-aigc-metadata.py  清掉外部生成器注入的 AIGC 水印头（必须最先）
   1. sync_all_entries.py      dictionary.json -> index.html 内嵌 ALL_ENTRIES
   2. generate-sitemap.py      dictionary.json -> web/sitemap.xml    （去 .html）
   3. generate-llms.py         dictionary.json -> web/llms.txt       （去 .html）
@@ -26,6 +27,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPTS = os.path.join(ROOT, "scripts")
 
 STEPS = [
+    # 必须放最前：外部内容生成器会在 md 头部注入 AIGC 水印，后续步骤要把干净内容带上
+    ("strip-aigc-metadata.py", "清除 AIGC 元数据头 / 去重尾部声明"),
     ("sync_all_entries.py", "首页 ALL_ENTRIES 同步"),
     ("slim-inline-data.py", "首页/词典页内嵌数据瘦身 + 去重复下载"),
     (("fix-broken-links.py", "--apply"), "词条页相对链接断链修复"),
