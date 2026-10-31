@@ -293,12 +293,12 @@
   /* ================================================================
    * LAYER 3: TYPOGRAPHY（与 v0.5 一致，保留 Noto Serif SC 衬线标题优势）
    * ================================================================ */
-  --mf-fonts-body: "Inter";                                    /* 正文/数字字体 */
+  --mf-fonts-body: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif;   /* 正文/数字字体（已移除 Google Fonts 外链，必须有系统兜底） */
   --mf-fonts-display-name: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
   --mf-fonts-sans: "Inter", "Noto Serif SC", "Source Han Serif SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
   --mf-fonts-ui: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif;    /* UI 小栈：导航/面包屑/按钮（对齐基准页） */
   --mf-fonts-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
-  --mf-fonts-display-extended: "Fraunces", "Noto Serif SC", serif;
+  --mf-fonts-display-extended: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", Georgia, serif;
   --mf-fonts-mono: "Inter", "SF Mono", "Cascadia Mono", Consolas, monospace;
 
   --mf-font-sizes-25: 12px;     /* 辅助/角标 */

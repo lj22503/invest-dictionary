@@ -28,6 +28,8 @@ web/verify/
 web/.verify*.png
 web/.audit-*.png
 web/.v-*.png
+web/.vf-*.png
+web/.v-*.png
 *.bak
 *.bak_*
 *.bak-*

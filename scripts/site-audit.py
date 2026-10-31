@@ -41,7 +41,11 @@ except AttributeError:
 # ---- 默认规则（可用 --config 覆盖）----
 DEFAULT_RULES = {
     "forbidden_colors": ["#C43A31"],          # 朱砂红，出现即重做
-    "max_html_kb": 100,                        # 单页 HTML 体积上限
+    "max_html_kb": 100,                        # 普通单页 HTML 体积上限
+    # 全量词条目录页（首页/词典页）含 >=500 条服务端静态锚点——那是 P0-2 的 SEO 内链图，
+    # 必须内联，不能退。这类页面体积天然大，单独放宽；普通页仍按上面 100KB 卡。
+    "max_html_kb_dir_page": 600,               # 目录型页面体积上限（含全量静态锚点）
+    "dir_page_min_anchors": 500,               # 达到这个静态锚点数才认定为「目录型页面」
     "max_inline_script_kb": 50,                # 内联脚本上限（超出多半是内联数据）
     "cn_unreachable_hosts": [                  # 国内不可靠的外链
         "fonts.googleapis.com",
@@ -218,21 +222,33 @@ def audit(root, rules, rep):
 
     # ---------- perf ----------
     big = []
+    std_limit = rules["max_html_kb"] * 1024
+    dir_limit = rules.get("max_html_kb_dir_page", 600) * 1024
+    min_anchor = rules.get("dir_page_min_anchors", 500)
     for p in pages:
         size = os.path.getsize(p)
-        if size > rules["max_html_kb"] * 1024:
-            with open(p, encoding="utf-8", errors="replace") as f:
-                html = f.read()
-            inline = sum(len(m.group(1)) for m in re.finditer(r"<script[^>]*>(.*?)</script>", html, re.S))
+        if size <= std_limit:
+            continue
+        with open(p, encoding="utf-8", errors="replace") as f:
+            html = f.read()
+        inline = sum(len(m.group(1)) for m in re.finditer(r"<script[^>]*>(.*?)</script>", html, re.S))
+        # 判定是不是「全量词条目录页」：静态锚点够多才够格走放宽阈值
+        stripped = re.sub(r"<script\b.*?</script>", "", html, flags=re.S | re.I)
+        anchors = len(re.findall(r'href="(?:[^"]*/)?terms/[^"#?]+"', stripped))
+        limit = dir_limit if anchors >= min_anchor else std_limit
+        if size > limit:
             big.append((os.path.relpath(p, root), size // 1024, inline // 1024,
-                        "内联脚本占 %dKB" % (inline // 1024) if inline > 50 * 1024 else ""))
+                        "内联脚本占 %dKB" % (inline // 1024) if inline > 50 * 1024 else "",
+                        "目录页" if anchors >= min_anchor else "普通页"))
     if big:
-        rep.add("perf", "FAIL", "HTML 体积超 %dKB" % rules["max_html_kb"],
-                "; ".join("%s %dKB(%s)" % (n, s, d or "无大脚本") for n, s, i, d in big[:5]),
-                "把内联数据挪到外部 JSON 按需加载，或拆成「搜索索引 + 完整数据」")
+        rep.add("perf", "FAIL", "HTML 体积超标",
+                "; ".join("%s %dKB[%s]%s" % (n, s, t, ("(" + d + ")") if d else "")
+                          for n, s, i, d, t in big[:5]),
+                "普通页 %dKB / 目录页 %dKB；目录页的超额应来自静态锚点，不是内联数据"
+                % (rules["max_html_kb"], rules.get("max_html_kb_dir_page", 600)))
 
     # 内联数据与外部 JSON 重复
-    for name, _, inline_kb, _ in big:
+    for name, _, inline_kb, _, _ in big:
         p = os.path.join(root, name)
         with open(p, encoding="utf-8", errors="replace") as f:
             html = f.read()
