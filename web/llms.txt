@@ -1,12 +1,12 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1015 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1017 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
 - [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
 
-## 词条（共 1015 条）
+## 词条（共 1017 条）
 - [货币](https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81): 你手里攥着的100块
 - [信用](https://dictionary.mangofolio.com/terms/%E4%BF%A1%E7%94%A8): 全世界最贵的三个字
 - [M0 / M1 / M2（货币供应量）](https://dictionary.mangofolio.com/terms/M0%20_%20M1%20_%20M2%EF%BC%88%E8%B4%A7%E5%B8%81%E4%BE%9B%E5%BA%94%E9%87%8F%EF%BC%89): 你家三个钱包，就是央行的小抄
@@ -1022,9 +1022,11 @@
 - [子女教育 / 继续教育 / 大病医疗 / 房贷利息 / 房租 / 赡养老人 / 婴幼儿照护](https://dictionary.mangofolio.com/terms/%E5%AD%90%E5%A5%B3%E6%95%99%E8%82%B2%20_%20%E7%BB%A7%E7%BB%AD%E6%95%99%E8%82%B2%20_%20%E5%A4%A7%E7%97%85%E5%8C%BB%E7%96%97%20_%20%E6%88%BF%E8%B4%B7%E5%88%A9%E6%81%AF%20_%20%E6%88%BF%E7%A7%9F%20_%20%E8%B5%A1%E5%85%BB%E8%80%81%E4%BA%BA%20_%20%E5%A9%B4%E5%B9%BC%E5%84%BF%E7%85%A7%E6%8A%A4): 国家发的 7 张“税前减税券”
 - [CRS](https://dictionary.mangofolio.com/terms/CRS): 全球版的“账户互相查”协议
 - [FATCA](https://dictionary.mangofolio.com/terms/FATCA): 美国版的“全球查账令”
+- [七日年化收益率](https://dictionary.mangofolio.com/terms/%E4%B8%83%E6%97%A5%E5%B9%B4%E5%8C%96%E6%94%B6%E7%9B%8A%E7%8E%87): 这是什么
+- [业绩比较基准](https://dictionary.mangofolio.com/terms/%E4%B8%9A%E7%BB%A9%E6%AF%94%E8%BE%83%E5%9F%BA%E5%87%86): 这是什么
 
 ## 词库与指南
-- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1015 个词条按篇章全部列出，支持搜索与章节筛选
+- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1017 个词条按篇章全部列出，支持搜索与章节筛选
 - [使用指南（8 个场景）](https://dictionary.mangofolio.com/guide): 8 个场景 × 提示词样例 × 对应 Skill，照抄就能用
 - [隐私政策](https://dictionary.mangofolio.com/privacy): 信息收集与使用说明
 - [用户协议](https://dictionary.mangofolio.com/terms-of-service): 服务边界与不构成投资建议的约定

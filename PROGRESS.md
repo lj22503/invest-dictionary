@@ -1,7 +1,34 @@
 # PROGRESS — invest-dictionary（投资词典）
 
-> mangofolio 生态第 3 块 · 术语平权（听得懂）。924 个中文投资术语，"说人话不装逼"。
+> mangofolio 生态第 3 块 · 术语平权（听得懂）。1017 个中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
+
+## 2026-10-31 · 审计收口 + 词库缺口补齐（995 → 1017）+ 同步链路加固
+
+### 本轮改动
+| 文件 | 改动 |
+|---|---|
+| `web/dictionary.json` | 995 → 1015（每日热词两批扩充）→ 1017（补社媒内容线发现的缺口「七日年化收益率」「业绩比较基准」） |
+| `web/terms/七日年化收益率.html`（新增） | 第六篇：投资武器库 · 基金篇，4 卡（是什么/为什么重要/怎么用/常见坑） |
+| `web/terms/业绩比较基准.html`（新增） | 第五篇：投资武器库 · 债券与固收篇，4 卡 |
+| `scripts/add-term.py`（新增） | 手工补词条入口：以现网标准页为外壳做局部替换，避免重蹈旧生成器的绝对 URL + .html 后缀；含 related slug 存在性校验、dictionary.json 行尾保留 |
+| `scripts/strip-aigc-metadata.py` | 修「一跑多出 103 个噪声 diff」：记录并还原行尾与末尾换行；并排入 sync-site 链路第 0 步 |
+| `scripts/sync-site.py` | STEPS 扩为 7 步，把 AIGC 清理排在最前 |
+| `web/index.html` / `web/dictionary.html` / `sitemap.xml` / `llms.txt` / `manifest.json` | 全链路同步产物（`python scripts/sync-site.py` 一条命令） |
+
+### 守门状态
+- `check-consistency.py`：10/10 PASS（terms=1017 / manifest=1017 / llms=1017 / 断链 0 / sitemap 双向一致 / ALL_ENTRIES 同步）
+- `site-audit.py`：24/24 PASS，0 WARN 0 FAIL（perf / brand / a11y / seo / backfill 5/5 / hygiene 2/2）
+
+### 未完成（下一轮优先）
+1. **存量 31 页字面 `**` 未修**（详见 PITFALLS #32）：CRS/FATCA/鸵鸟效应/拖延症 等外部生成器产出的词条页，正文把 `**加粗**` 原样渲染；新补词条已规避，存量待批量修 + site-audit 补检查。
+2. **外部生成器仍活跃**：19:47 往 `docs/scenarios/场景-看新闻-20261030.md`、`docs/specs/信源抓取管线设计.md` 又注入了 AIGC 头（已清）。这两份文件本身是 untracked 外部产物，是否纳入本仓待确认。
+3. **社媒内容线**（`docs/投资词典_社媒内容线方案.md`）方案已齐（四周排期 + 首批 10+5 选题），尚未开写开排。
+
+### 卡点
+- 无代码卡点。外部生成器的注入行为只能事后清理，根治需要找到并停掉它的模板（不在本仓）。
+
+---
 
 ## 2026-10-29 · M2 三页改版（首页 / 全部词条 / 使用指南）
 
