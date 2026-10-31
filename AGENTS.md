@@ -4,7 +4,7 @@
 
 ## 项目一句话定位
 
-投资词典（Invest Dictionary）：995 个中文投资术语，说人话不装逼。独立项目，不并入 InvestBuddy。线上站：https://dictionary.mangofolio.com
+投资词典（Invest Dictionary）：1015 个中文投资术语（持续增长，以 `web/dictionary.json` 为准），说人话不装逼。独立项目，不并入 InvestBuddy。线上站：https://dictionary.mangofolio.com
 
 ## 怎么跑起来
 
@@ -24,7 +24,7 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 
 ## 目录与约定
 
-- `web/` — 线上站点（`index.html` 首页、`dictionary.html` 全部词条、`guide.html` 使用指南、`privacy.html` 隐私政策、`terms-of-service.html` 用户协议、`terms/` 995 词条页、`dictionary.json`、`sitemap.xml`、`llms.txt`、`robots.txt`、`vercel.json`）
+- `web/` — 线上站点（`index.html` 首页、`dictionary.html` 全部词条、`guide.html` 使用指南、`privacy.html` 隐私政策、`terms-of-service.html` 用户协议、`terms/` 1015 词条页、`dictionary.json`、`sitemap.xml`、`llms.txt`、`robots.txt`、`vercel.json`）
 - `web/css/mangofolio-tokens-v09.css` — 颜色/字体/间距/圆角**唯一令牌源**；`web/css/site.css` — 三页共用外壳（色带 `.band--*` / 页头 / 页脚 / 区块头 / 按钮 / 卡片 / 目录 / 代码块）。页面专属样式才写进各自 `<style>`，禁止三页各抄一份 header/footer
 - 三页设计口径见 `docs/specs/三页改版设计规格.md`（色带表 / 信息架构 / 硬规则 / 验收标准）；外来参考包只放 `docs/reference/`，**不进 web/**
 - `web/dictionary.json` — 词条唯一数据源（id/slug/chapter/description/related）
@@ -71,7 +71,8 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 
 - 已推送 GitHub（main），仓库 SEO 已配置（About + 20 Topics）；线上站 https://dictionary.mangofolio.com 已上线并验证
 - 品牌视觉：mangofolio v1.0 全量落地（2026-09-22）；令牌权威源 `web/css/mangofolio-tokens-v09.css`，速查 `docs/design-tokens.md`
-- 词条数据：`web/terms` **995 页**；唯一数据源 `web/dictionary.json`；首页内嵌 `ALL_ENTRIES` 由 `scripts/sync_all_entries.py` 同步；`web/sitemap.xml` 由 `scripts/generate-sitemap.py` 生成 —— 三者条数必须一致（页面声称条目数同理）
+- 词条数据：`web/terms` **1015 页**；唯一数据源 `web/dictionary.json`；首页/词典页内嵌 `ALL_ENTRIES` 由 `scripts/sync_all_entries.py` 同步；`web/sitemap.xml` 由 `scripts/generate-sitemap.py` 生成 —— 三者条数必须一致（页面声称条目数同理）
+- **新增/扩充词条后，只需一条命令**：`python scripts/sync-site.py`（同步 + 跑门禁）。它按顺序执行 6 步：ALL_ENTRIES 同步 → 内嵌数据瘦身去重复下载 → 断链修复 → sitemap 重建 → llms.txt 重建 → manifest 计数对齐，最后跑一致性门禁。**不要只跑其中某一步**，漏跑会让门禁从 10/10 掉到 5/10（2026-10-31 实测：cron 加了 20 条词条却只更新了 dictionary.json）
 - **提交前必跑（两条命令，缺一不可）**：
   1. `python scripts/check-consistency.py` —— 一致性门禁 10 项（计数一致性 / id·slug·filename 唯一性 / 页内断链 / sitemap 双向覆盖 / 旧域名残留 / ALL_ENTRIES 同步）
   2. `python scripts/site-audit.py` —— 站点体检 26 项，其中 **backfill 维度 5 项必须全绿**（见下）

@@ -88,14 +88,23 @@ def main():
         if fname is None:
             problems.append(f'id {e["id"]} {slug}: 无法定位磁盘文件')
             continue
+        # 取值策略：旧值优先（保留人工润色），但旧值缺失时回退到唯一数据源 dictionary.json。
+        # 注意：index.html 里的 ALL_ENTRIES 可能被 slim-inline-data.py 裁过
+        # （只留 id/title/chapter/card_titles[0]/file/filename，省 ~180KB），
+        # 所以不能假定 old 一定带 slug / related / next —— 早期版本正是栽在这里（KeyError: 'slug'）。
+        def pick(key, default=None):
+            if old and key in old and old[key] not in (None, "", []):
+                return old[key]
+            return e.get(key, default)
+
         item = {
             "id": e["id"],
-            "slug": (old or e)["slug"],
-            "title": (old or e)["title"],
-            "chapter": e.get("chapter", ""),
-            "card_titles": (old or e).get("card_titles", []),
-            "related": (old or e).get("related", []),
-            "next": (old or e).get("next", ""),
+            "slug": pick("slug", slug),
+            "title": pick("title", e.get("title", "")),
+            "chapter": pick("chapter", ""),
+            "card_titles": pick("card_titles", []),
+            "related": pick("related", []),
+            "next": pick("next", ""),
             "filename": fname,
             "file": fname,
         }

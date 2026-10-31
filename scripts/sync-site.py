@@ -27,17 +27,21 @@ SCRIPTS = os.path.join(ROOT, "scripts")
 
 STEPS = [
     ("sync_all_entries.py", "首页 ALL_ENTRIES 同步"),
+    ("slim-inline-data.py", "首页/词典页内嵌数据瘦身 + 去重复下载"),
+    (("fix-broken-links.py", "--apply"), "词条页相对链接断链修复"),
     ("generate-sitemap.py", "sitemap.xml 重建"),
     ("generate-llms.py", "llms.txt 重建"),
     ("update-manifest-count.py", "manifest.json 计数对齐"),
 ]
 
 
-def run(name, desc):
+def run(step, desc):
+    # step 可以是 "xxx.py"（无参）或 ("xxx.py", "--apply")（带参）
+    name, args = step if isinstance(step, tuple) else (step, ())
     print("\n" + "-" * 60)
-    print("[STEP] %s —— %s" % (name, desc))
+    print("[STEP] %s %s —— %s" % (name, " ".join(args), desc))
     print("-" * 60)
-    r = subprocess.run([sys.executable, os.path.join(SCRIPTS, name)],
+    r = subprocess.run([sys.executable, os.path.join(SCRIPTS, name)] + list(args),
                        cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
     out = (r.stdout or "") + (r.stderr or "")
     if out.strip():

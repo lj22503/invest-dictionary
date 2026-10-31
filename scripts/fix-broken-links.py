@@ -40,6 +40,18 @@ def load_map():
             continue
         resolve[x["slug"]] = stem
         resolve[stem] = stem
+
+    # 简名别名：正文里常把「过度自信（频繁交易）」简写成「过度自信」。
+    # 只在「该简名全库唯一」时建立别名，歧义的一律不建——宁可降级为纯文本，也不瞎指。
+    base_count = collections.Counter()
+    for stem in set(resolve.values()):
+        b = stem.split("（")[0].strip()
+        if b and b != stem:
+            base_count[b] += 1
+    alias = {b: s for s in set(resolve.values())
+             for b in [s.split("（")[0].strip()]
+             if b and b != s and base_count[b] == 1 and b not in resolve}
+    resolve.update(alias)
     return disk, resolve
 
 

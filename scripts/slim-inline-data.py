@@ -68,43 +68,52 @@ def must_search(pat, text, where, start=0):
     return m
 
 
+def replace_array(h, slim, where):
+    """把页面里的 ALL_ENTRIES 数组整个换掉。
+
+    幂等：无论当前是空数组 `[]`、完整数据还是已瘦身的索引，都能定位并替换，
+    因此本脚本可以在 sync-site.py 里每次都跑（不会因「已经瘦过」而报错退出）。
+    """
+    # 空数组（未经任何同步的初始态）
+    if "var ALL_ENTRIES = [];" in h:
+        i = h.find("var ALL_ENTRIES = [];")
+        return h[:i] + "var ALL_ENTRIES = " + slim + ";" + h[i + len("var ALL_ENTRIES = [];"):]
+    # 已有数据：数组以「换行 + ];」收尾（瘦身数据与完整数据都是这个形态）
+    m = must_search(r"var ALL_ENTRIES = \[.*?\n\];", h, where)
+    return h[:m.start()] + "var ALL_ENTRIES = " + slim + ";" + h[m.end():]
+
+
+def drop_fetch(h, block, where):
+    """删掉 fetch('dictionary.json') 块；已删过则原样返回（幂等的关键）。"""
+    i = h.find("fetch('dictionary.json')")
+    if i < 0:
+        return h, False
+    m = must_search(r"\r?\n[ \t]*\}\);", h, where + " fetch 块结束", i)
+    return h[:i] + block + h[m.end():], True
+
+
 def patch_index(slim):
     p = os.path.join(ROOT, "web", "index.html")
     h = open(p, encoding="utf-8", errors="replace").read()
 
-    # 1) 换掉内嵌大数组（数组与后面的 __entriesReady 之间可能有换行/CRLF）
-    m = must_search(r"var ALL_ENTRIES = \[.*?\];\s*var __entriesReady = false;",
-                    h, "index.html 数组")
-    new_arr = "var ALL_ENTRIES = " + slim + ";\nvar __entriesReady = false;"
-    h = h[:m.start()] + new_arr + h[m.end():]
-
-    # 2) 删掉 fetch 块（内嵌已是全量，再拉一次纯浪费；失败兜底逻辑一并失效）
-    i = must_find(h, "fetch('dictionary.json')", "index.html fetch")
-    m = must_search(r"\r?\n[ \t]*\}\);", h, "index.html fetch 块结束", i)
+    h = replace_array(h, slim, "index.html 数组")
     block = (
         "/* 内嵌词库已是全量（构建时由 dictionary.json 同步生成），不再 fetch ——\r\n"
         "   省一次 571KB 请求，也避免「先内嵌后覆盖」的双重下载。 */\r\n"
         "__entriesReady = true;\r\n"
         "__entriesWaiters.splice(0).forEach(function (fn) { fn(); });"
     )
-    h = h[:i] + block + h[m.end():]
+    h, did = drop_fetch(h, block, "index.html")
 
     open(p, "w", encoding="utf-8", newline="").write(h)
-    return p
+    return p, did
 
 
 def patch_dictionary(slim):
     p = os.path.join(ROOT, "web", "dictionary.html")
     h = open(p, encoding="utf-8", errors="replace").read()
 
-    # 1) 空数组 -> 内嵌精简索引
-    old = "var ALL_ENTRIES = [];"
-    i = must_find(h, old, "dictionary.html 空数组")
-    h = h[:i] + "var ALL_ENTRIES = " + slim + ";" + h[i + len(old):]
-
-    # 2) load() 里的 fetch -> 直接用内嵌数据
-    i = must_find(h, "fetch('dictionary.json')", "dictionary.html fetch")
-    m = must_search(r"\r?\n[ \t]*\}\);", h, "dictionary.html fetch 块结束", i)
+    h = replace_array(h, slim, "dictionary.html 数组")
     block = (
         "/* 内嵌精简索引已是全量（构建时由 dictionary.json 同步生成），不再 fetch ——\r\n"
         "       省一次 571KB 请求，也避免首屏白屏等网络。 */\r\n"
@@ -115,10 +124,10 @@ def patch_dictionary(slim):
         "      }\r\n"
         "      start(ALL_ENTRIES);"
     )
-    h = h[:i] + block + h[m.end():]
+    h, did = drop_fetch(h, block, "dictionary.html")
 
     open(p, "w", encoding="utf-8", newline="").write(h)
-    return p
+    return p, did
 
 
 def main():
@@ -133,8 +142,9 @@ def main():
         print("(dry run，未写盘)")
         return 0
 
-    for p in (patch_index(slim), patch_dictionary(slim)):
-        print("已改写:", os.path.relpath(p, ROOT), "→ %.0f KB" % (os.path.getsize(p) / 1024))
+    for p, dropped in (patch_index(slim), patch_dictionary(slim)):
+        print("已改写:", os.path.relpath(p, ROOT), "→ %.0f KB" % (os.path.getsize(p) / 1024),
+              "（本次删除 fetch）" if dropped else "（fetch 此前已删，幂等跳过）")
     return 0
 
 
