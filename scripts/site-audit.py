@@ -18,13 +18,19 @@ site-audit.py —— 静态站点体检（性能 / 品牌合规 / 无障碍 / SE
     brand  一票否决色 / 硬编码色值 / 装饰色与文字色混用
     a11y   WCAG 对比度（按令牌实际计算）/ 图片 alt / lang / 跳转链接
     seo    canonical / OG / viewport / title / 结构化数据
+    backfill 历史调研回填：URL .html 残留 / 首页静态内链 / sitemap·llms 覆盖率 / 合规页存在性
     hygiene 备份文件随站部署 / 未预加载关键字体
+
+backfill 维度的由来：9-10 月那批调研（仓库诊断/对标调研/备案清单）结论一直躺在 md 里，
+P0-1/P0-2 两个硬伤横跨一个半月纹丝不动。这一维把「调研结论」固化成「每次跑都会报警的检查」，
+让回填不再依赖人记得。
 """
 import argparse
 import json
 import os
 import re
 import sys
+from urllib.parse import unquote
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
@@ -56,9 +62,27 @@ DEFAULT_RULES = {
             "border-focused", "border-selected",
         ],
     },
+    # ---- backfill：历史调研结论的回填闸门 ----
+    "backfill": {
+        # 本站域名：只有这些域名下的 .html 才算残留（外站带 .html 是人家的事）
+        "own_hosts": ["dictionary.mangofolio.com"],
+        # P0-2：首页静态词条内链覆盖率下限。低于此值 = 爬虫拿不到内链图。
+        "min_static_entry_ratio": 0.95,
+        # 合规页：缺失即红线（最高法判例：词典属实用工具类，查词无须手机号）
+        "required_pages": ["privacy.html", "terms-of-service.html"],
+        # 必须进 sitemap 的顶层页（index 以站点根形式收录）
+        "core_pages": ["index.html", "dictionary.html", "guide.html"],
+    },
 }
 
 TEXT_EXTS = (".html", ".css", ".js", ".json", ".txt", ".xml")
+
+# P0-1 判定用：只找「本站」的 .html 后缀。
+# 误报源（都实测踩过）：
+#   ① CSS 注释里的基准页路径  web/terms/14天期逆回购.html
+#   ② JSON 数据字段          "filename": "货币.html"
+#   ③ 外站本来就带 .html      https://invest-tools.mangofolio.app/tools/xirr.html
+# 真漏网的反而是：分享链接 query 里二次编码的本站 URL（%2F 分隔），必须一并扫到。
 
 
 # ============================================================
@@ -323,6 +347,110 @@ def audit(root, rules, rep):
                          ("viewport", 'name="viewport"' in h),
                          ("html lang", re.search(r"<html[^>]+lang=", h) is not None)]:
             rep.add("seo", "PASS" if ok else "FAIL", "首页 %s" % name)
+
+    # ---------- backfill：历史调研结论回填 ----------
+    bf = rules.get("backfill") or {}
+    term_pages = [p for p in pages if os.sep + "terms" + os.sep in p]
+    n_terms = len(term_pages)
+    home = os.path.join(root, "index.html")
+    req_pages = bf.get("required_pages", [])
+    core_pages = bf.get("core_pages", [])
+
+    # P0-1：URL .html 后缀残留（每条多一跳 308，硬伤规模随词条数同步放大）
+    # 只认「URL 语境」：href / <loc> / JSON-LD 的 url·@id / og 的 content。
+    # 不扫全文——实测误报源：CSS 注释里的基准页路径、JSON 数据字段 "filename": "货币.html"。
+    own_hosts = bf.get("own_hosts", ["dictionary.mangofolio.com"])
+    url_html_res = []
+    for p in walk_text_files(root):
+        try:
+            with open(p, encoding="utf-8", errors="replace") as f:
+                t = f.read()
+        except OSError:
+            continue
+        hit = False
+        for host in own_hosts:
+            # 分隔符 (?:%2F|/) 兼容分享链接里二次编码的本站 URL
+            if re.search(re.escape(host) + r'(?:%2F|/)[^\s"\'&<>]*?\.html', t, re.I):
+                hit = True
+                break
+        if not hit:
+            # 站内相对路径（href / JSON-LD 的 url·@id），排除外站绝对 URL
+            if re.search(r'(?:href\s*=\s*|"(?:url|@id)"\s*:\s*)["\'](?!https?:)[^"\']*\.html', t, re.I):
+                hit = True
+        if hit:
+            url_html_res.append(os.path.relpath(p, root))
+    rep.add("backfill", "FAIL" if url_html_res else "PASS", "P0-1 URL 残留 .html 后缀",
+            "found=%d %s" % (len(url_html_res), sorted(url_html_res)[:3]),
+            "sitemap / canonical / og:url / JSON-LD / 相关词链接 / 分享链接 query 参数"
+            "统一去后缀（cleanUrls）；否则每条多一跳 308，且规模随词条数同步放大")
+
+    # P0-2：首页静态词条内链（爬虫能不能拿到内链图）
+    home_static, ratio = 0, 0.0
+    if os.path.exists(home):
+        with open(home, encoding="utf-8", errors="replace") as f:
+            h = f.read()
+        # 剥掉 <script>：JS 渲染出来的链接爬虫拿不到，不算数
+        stripped = re.sub(r"<script\b.*?</script>", "", h, flags=re.S | re.I)
+        # 路径可能是相对的（terms/xxx）也可能是绝对的（/terms/xxx），前导斜杠可选
+        home_static = len(set(re.findall(r'href="(?:[^"]*/)?terms/([^"#?]+)"', stripped)))
+        ratio = (home_static / n_terms) if n_terms else 0.0
+    minr = float(bf.get("min_static_entry_ratio", 0.95))
+    rep.add("backfill", "PASS" if ratio >= minr else "FAIL", "P0-2 首页静态词条内链",
+            "%d/%d 条（%.0f%%），下限 %.0f%%" % (home_static, n_terms, ratio * 100, minr * 100),
+            "首页词条目录必须服务端静态输出全量链接，JS 只做搜索增强；"
+            "否则全站词条页拿不到权重分发")
+
+    # sitemap 覆盖率
+    sm = os.path.join(root, "sitemap.xml")
+    if os.path.exists(sm):
+        with open(sm, encoding="utf-8", errors="replace") as f:
+            s = f.read()
+        locs = {unquote(m).strip().rstrip("/") for m in re.findall(r"<loc>([^<]+)</loc>", s)}
+        term_miss = [os.path.basename(p)[:-5] for p in term_pages
+                     if not any(l.endswith("/" + os.path.basename(p)[:-5]) for l in locs)]
+        other_miss = []
+        for pg in core_pages + req_pages:
+            stem = pg[:-5]
+            if stem == "index":
+                if not any(re.match(r"^https?://[^/]+/?$", l) for l in locs):
+                    other_miss.append(pg)
+            elif not any(l.endswith("/" + stem) for l in locs):
+                other_miss.append(pg)
+        total_miss = len(term_miss) + len(other_miss)
+        rep.add("backfill", "PASS" if total_miss == 0 else "FAIL", "sitemap 覆盖率",
+                "词条 %d/%d；主页面 %d/%d %s" % (
+                    n_terms - len(term_miss), n_terms,
+                    len(core_pages + req_pages) - len(other_miss), len(core_pages + req_pages),
+                    ("缺 %s" % (term_miss[:3] + other_miss)) if total_miss else ""),
+                "跑 scripts/generate-sitemap.py 重生成；漏收录 = 爬虫永远抓不到")
+
+    # llms.txt 覆盖率（必须解码后比对——百分号编码会让比对「假性全通过」）
+    ll = os.path.join(root, "llms.txt")
+    if os.path.exists(ll):
+        with open(ll, encoding="utf-8", errors="replace") as f:
+            t = f.read()
+        have = {unquote(m).rstrip("/") for m in re.findall(r"/terms/([^)\s]+)", t)}
+        ll_miss = [os.path.basename(p)[:-5] for p in term_pages
+                   if os.path.basename(p)[:-5] not in have]
+        rep.add("backfill", "PASS" if not ll_miss else "FAIL", "llms.txt 覆盖率",
+                "%d/%d %s" % (n_terms - len(ll_miss), n_terms, ll_miss[:3] if ll_miss else ""),
+                "按解码后比对（编码会让比对假性全通过）；跑 scripts/generate-llms.py 重生成")
+
+    # 隐私政策 / 用户协议：存在性 + footer 入口
+    missing = [r for r in req_pages if not os.path.exists(os.path.join(root, r))]
+    noentry = []
+    if not missing and os.path.exists(home):
+        with open(home, encoding="utf-8", errors="replace") as f:
+            h = f.read()
+        for r in req_pages:
+            if ('href="/%s"' % r[:-5]) not in h:
+                noentry.append("/" + r[:-5])
+    bad_legal = missing or noentry
+    rep.add("backfill", "PASS" if not bad_legal else "FAIL", "隐私政策 / 用户协议页",
+            ("缺失 %s" % missing if missing else "") +
+            ("；footer 无入口 %s" % noentry if noentry else "") or "存在且已挂 footer 入口",
+            "合规红线：最高法判例认定词典属实用工具类（查词无须手机号），"
+            "默认勾选违法、以注销账号替代撤回同意不成立")
 
     # ---------- hygiene ----------
     baks = [os.path.relpath(p, root) for p in walk_all_files(root) if ".bak" in os.path.basename(p)]
