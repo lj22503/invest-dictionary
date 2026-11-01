@@ -109,6 +109,11 @@
   box-shadow: var(--mf-shadows-card);
 }
 .search-results.show { display: block; }
+.search-hint {
+  padding: 8px 14px 6px;
+  font-size: 0.8rem;
+  color: var(--mf-colors-text-weak);
+}
 .search-result-item {
   display: flex;
   align-items: baseline;
@@ -123,16 +128,6 @@
 .search-result-item .t { font-weight: 600; }
 .search-result-item .ch { font-size: 0.76rem; color: var(--mf-colors-text-weak); white-space: nowrap; }
 
-.fallback-note {
-  padding: 14px 18px;
-  border-radius: var(--mf-radii-large);
-  border: 1px solid rgba(249, 115, 22, 0.22);
-  background: var(--mf-colors-background-warning);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--mf-colors-text-strong);
-}
-.fallback-note .big { color: var(--mf-colors-text-accent-mango); }
 .fallback-rules {
   margin-top: 10px;
   padding: 16px 18px;
@@ -151,30 +146,6 @@
 }
 .fallback-rules .fr-skill { font-size: 0.83rem; color: var(--mf-colors-text-weak); }
 .fallback-rules .fr-skill b { color: var(--mf-colors-text); }
-.fallback-prompt {
-  margin-top: 10px;
-  padding: 14px 18px;
-  border-radius: var(--mf-radii-large);
-  border: 1px dashed var(--mf-colors-border-strong);
-  display: flex;
-  align-items: center;
-  gap: 10px 12px;
-  flex-wrap: wrap;
-  font-size: 0.86rem;
-  color: var(--mf-colors-text-weak);
-}
-.fallback-prompt code {
-  flex: 1 1 240px;
-  padding: 4px 10px;
-  border-radius: var(--mf-radii-medium);
-  background: var(--mf-colors-background-neutral);
-  color: var(--mf-colors-text);
-  font-family: var(--mf-fonts-mono), Consolas, monospace;
-  font-size: 0.82rem;
-  line-height: 1.7;
-}
-.fallback-prompt .btn { flex: 0 0 auto; }
-
 .hero__actions {
   display: flex;
   justify-content: center;
@@ -678,13 +649,7 @@
         <div class="search-results" id="searchResults"></div>
 
         <div class="search-fallback" id="searchFallback">
-          <div class="fallback-note">没有直接搜到。<span class="big">把你在纠结的那件事说给我听</span>，看看该先看哪些词。</div>
           <div class="fallback-rules" id="fallbackRules"></div>
-          <div class="fallback-prompt">
-            <span>或者把这件事丢给你常用的 AI：</span>
-            <code id="fallbackPromptText"></code>
-            <button class="btn btn--primary btn--sm" type="button" onclick="copyFallbackPrompt()">复制提示词</button>
-          </div>
         </div>
       </div>
 
@@ -2127,7 +2092,28 @@ var ALL_ENTRIES = [
 {"id":1014,"title":"CRS","chapter":"第十九篇：人生账本与长期规划","card_titles":["全球版的“账户互相查”协议"],"file":"CRS.html","filename":"CRS.html"},
 {"id":1015,"title":"FATCA","chapter":"第十九篇：人生账本与长期规划","card_titles":["美国版的“全球查账令”"],"file":"FATCA.html","filename":"FATCA.html"},
 {"id":1016,"title":"七日年化收益率","chapter":"第六篇：投资武器库 · 基金篇","card_titles":["这是什么"],"file":"七日年化收益率.html","filename":"七日年化收益率.html"},
-{"id":1017,"title":"业绩比较基准","chapter":"第五篇：投资武器库 · 债券与固收篇","card_titles":["这是什么"],"file":"业绩比较基准.html","filename":"业绩比较基准.html"}
+{"id":1017,"title":"业绩比较基准","chapter":"第五篇：投资武器库 · 债券与固收篇","card_titles":["这是什么"],"file":"业绩比较基准.html","filename":"业绩比较基准.html"},
+{"id":1018,"title":"经营所得","chapter":"第十九篇：人生账本与长期规划","card_titles":["摆摊开店接单赚的钱，也要报税"],"file":"经营所得.html","filename":"经营所得.html"},
+{"id":1019,"title":"工伤赔偿","chapter":"第十九篇：人生账本与长期规划","card_titles":["上班受了伤，钱从哪来"],"file":"工伤赔偿.html","filename":"工伤赔偿.html"},
+{"id":1020,"title":"意定监护","chapter":"第十九篇：人生账本与长期规划","card_titles":["把“万一出事”的决定权，提前交给信任的人"],"file":"意定监护.html","filename":"意定监护.html"},
+{"id":1021,"title":"生前契约","chapter":"第十九篇：人生账本与长期规划","card_titles":["提前安排身后事，价格今天锁住"],"file":"生前契约.html","filename":"生前契约.html"},
+{"id":1022,"title":"资本利得税","chapter":"第十九篇：人生账本与长期规划","card_titles":["赚差价的钱，可能要交的税"],"file":"资本利得税.html","filename":"资本利得税.html"},
+{"id":1023,"title":"门诊统筹 / 住院报销","chapter":"第十九篇：人生账本与长期规划","card_titles":["门诊和住院，报销规则是两套"],"file":"门诊统筹 _ 住院报销.html","filename":"门诊统筹 _ 住院报销.html"},
+{"id":1024,"title":"慢性病报销","chapter":"第十九篇：人生账本与长期规划","card_titles":["高血压糖尿病，吃药也能报"],"file":"慢性病报销.html","filename":"慢性病报销.html"},
+{"id":1025,"title":"发票 / 报销","chapter":"第十九篇：人生账本与长期规划","card_titles":["发票是什么：报销的唯一凭证"],"file":"发票 _ 报销.html","filename":"发票 _ 报销.html"},
+{"id":1026,"title":"海外收入申报","chapter":"第十九篇：人生账本与长期规划","card_titles":["在国外赚的钱，国内也要申报"],"file":"海外收入申报.html","filename":"海外收入申报.html"},
+{"id":1027,"title":"现金分期","chapter":"第十七篇：日常支付与账户管理","card_titles":["把信用卡额度变成现金，按月还"],"file":"现金分期.html","filename":"现金分期.html"},
+{"id":1028,"title":"个人破产","chapter":"第十八篇：借贷与生活刚需","card_titles":["欠到还不起，法律给的出口"],"file":"个人破产.html","filename":"个人破产.html"},
+{"id":1029,"title":"债务重组","chapter":"第十八篇：借贷与生活刚需","card_titles":["跟债主重新谈条件"],"file":"债务重组.html","filename":"债务重组.html"},
+{"id":1030,"title":"价格歧视","chapter":"第二十篇：消费心理与财富品格","card_titles":["同一件东西，两个价"],"file":"价格歧视.html","filename":"价格歧视.html"},
+{"id":1031,"title":"碳排放权","chapter":"第七篇：投资武器库 · 其他类","card_titles":["排多少碳，要有“配额”"],"file":"碳排放权.html","filename":"碳排放权.html"},
+{"id":1032,"title":"土地增值税","chapter":"第十九篇：人生账本与长期规划","card_titles":["卖地卖房增值要交的税"],"file":"土地增值税.html","filename":"土地增值税.html"},
+{"id":1033,"title":"视同缴费年限","chapter":"第十九篇：人生账本与长期规划","card_titles":["没交过的年限，算你交过"],"file":"视同缴费年限.html","filename":"视同缴费年限.html"},
+{"id":1034,"title":"接力贷","chapter":"第十八篇：借贷与生活刚需","card_titles":["两代人一起还房贷"],"file":"接力贷.html","filename":"接力贷.html"},
+{"id":1035,"title":"长租公寓 / 租金贷","chapter":"第十八篇：借贷与生活刚需","card_titles":["租金贷：一次贷一年，按月还贷款"],"file":"长租公寓 _ 租金贷.html","filename":"长租公寓 _ 租金贷.html"},
+{"id":1036,"title":"网签 / 过户","chapter":"第十八篇：借贷与生活刚需","card_titles":["网签锁定房源，过户才换主人"],"file":"网签 _ 过户.html","filename":"网签 _ 过户.html"},
+{"id":1037,"title":"Ⅱ类户 / Ⅲ类户","chapter":"第十七篇：日常支付与账户管理","card_titles":["银行账户的三个等级"],"file":"Ⅱ类户 _ Ⅲ类户.html","filename":"Ⅱ类户 _ Ⅲ类户.html"},
+{"id":1038,"title":"千问（Qwen）","chapter":"第十一篇：宏观风向标","card_titles":["千问是什么：阿里的大模型上了苹果手机"],"file":"千问（Qwen）.html","filename":"千问（Qwen）.html"}
 ];
 var __entriesReady = false;
 var __entriesWaiters = [];
@@ -2300,31 +2286,70 @@ function entryLink(e) {
           '<span class="t">' + e.title + '</span><span class="ch">' + (e.chapter || '') + '</span></a>';
       });
       results.innerHTML = html;
-    } else {
-      results.classList.remove('show');
-      results.innerHTML = '';
-      if (q) renderFallback(q);
-      else fallback.classList.remove('show');
+      return;
     }
+
+    /* 二级匹配：用户常打成简写/缺字（「业绩基准」→「业绩比较基准」）。
+       用顺序子序列匹配补一层，命中就当候选词展示，不再弹提示块。 */
+    var near = q.length >= 2 ? nearMatches(q) : [];
+    if (near.length) {
+      results.classList.add('show');
+      fallback.classList.remove('show');
+      var html2 = '<div class="search-hint">没找到完全一样的，是不是想找：</div>';
+      near.forEach(function (e) {
+        html2 += '<a class="search-result-item" href="' + entryLink(e) + '">' +
+          '<span class="t">' + e.title + '</span><span class="ch">' + (e.chapter || '') + '</span></a>';
+      });
+      results.innerHTML = html2;
+      return;
+    }
+
+    results.classList.remove('show');
+    results.innerHTML = '';
+    if (q) renderFallback(q);
+    else fallback.classList.remove('show');
+  }
+
+  /* 顺序子序列匹配：query 的每个字按序出现在标题里就算命中。
+     按「跨度 + 标题长度」打分取最近的，最多 6 条。 */
+  function nearMatches(q) {
+    var chars = q.toLowerCase().split('');
+    var scored = [];
+    ALL_ENTRIES.forEach(function (e) {
+      var t = (e.title || '').toLowerCase();
+      if (!t) return;
+      var pos = 0, first = -1, last = -1;
+      for (var i = 0; i < chars.length; i++) {
+        var idx = t.indexOf(chars[i], pos);
+        if (idx === -1) return;
+        if (first === -1) first = idx;
+        last = idx;
+        pos = idx + 1;
+      }
+      scored.push([last - first + t.length * 0.01, e]);
+    });
+    scored.sort(function (a, b) { return a[0] - b[0]; });
+    return scored.slice(0, 6).map(function (x) { return x[1]; });
   }
 
   function renderFallback(q) {
     var rule = findRule(q);
-    fallback.classList.add('show');
     var rulesEl = document.getElementById('fallbackRules');
     if (rule) {
+      fallback.classList.add('show');
       var html = '<div class="fr-title">可能和「' + rule.label + '」有关，先看这些词条：</div>';
       html += '<div class="fr-cluster">';
       rule.cluster.forEach(function (t) {
         html += '<a href="search?q=' + encodeURIComponent(t) + '">' + t + '</a>';
       });
       html += '</div>';
-      html += '<div class="fr-skill">对应 Skill：<b>' + skillNames[rule.skill] + '</b> —— 点下方按钮复制提示词，去你常用的 AI 里跑。</div>';
+      html += '<div class="fr-skill">对应场景：<b>' + skillNames[rule.skill] + '</b></div>';
       rulesEl.innerHTML = html;
-      document.getElementById('fallbackPromptText').textContent = '我最近纠结：「' + q + '」。请用投资词典的方法，告诉我该先看哪几个词、为什么，以及我自己该怎么判断。';
     } else {
-      rulesEl.innerHTML = '<div class="fr-title">没匹配到现成词条簇。把你在纠结的那件事说给我听，AI 会帮你倒查该看哪些词：</div>';
-      document.getElementById('fallbackPromptText').textContent = '我最近纠结：「' + q + '」。请用投资词典的方法（说人话、不堆术语、不给买卖结论），帮我拆开这件事，告诉我该先看哪几个词、为什么。';
+      /* 没有词条簇也没有近似词：只留一行，不弹 AI 提示词（重复且挡视线） */
+      fallback.classList.add('show');
+      rulesEl.innerHTML = '<div class="fr-title">没找到「' + q.replace(/</g, '&lt;') +
+        '」。换个说法试试，或者直接去 <a href="/dictionary">全部词条</a> 按篇章翻。</div>';
     }
   }
 
@@ -2343,11 +2368,6 @@ function entryLink(e) {
     }
   });
 })();
-
-function copyFallbackPrompt() {
-  var text = document.getElementById('fallbackPromptText').textContent;
-  copyText(text);
-}
 
 /* ============ 7 个 Skill 提示词 ============ */
 var skillNames = {
