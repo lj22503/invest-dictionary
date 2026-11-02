@@ -2281,6 +2281,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E8%B4%A2%E6%8A%A5%EF%BC%88%E5%AD%A3%E6%8A%A5%20_%20%E4%B8%9A%E7%BB%A9%E6%8A%A5%E5%91%8A%EF%BC%89</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dictionary.mangofolio.com/terms/%E5%B8%82%E5%80%BC%E9%85%8D%E5%94%AE</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -5216,7 +5221,52 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dictionary.mangofolio.com/terms/%E8%B4%A2%E6%8A%A5%EF%BC%88%E5%AD%A3%E6%8A%A5%20_%20%E4%B8%9A%E7%BB%A9%E6%8A%A5%E5%91%8A%EF%BC%89</loc>
+    <loc>https://dictionary.mangofolio.com/terms/%E7%A4%BE%E4%BF%9D%E8%BD%AC%E7%A7%BB</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E5%8C%BB%E4%BF%9D%E6%96%AD%E7%BC%B4%20_%20%E8%A1%A5%E7%BC%B4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E5%8C%BB%E4%BF%9D%E5%85%B1%E6%B5%8E</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E5%A4%A7%E7%97%85%E5%8C%BB%E7%96%97%E6%95%91%E5%8A%A9</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E4%B8%A7%E8%91%AC%E8%B4%B9%20_%20%E6%8A%9A%E6%81%A4%E9%87%91</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E8%A1%A5%E5%85%85%E5%85%AC%E7%A7%AF%E9%87%91</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E4%BC%81%E4%B8%9A%E8%A1%A5%E5%85%85%E5%8C%BB%E7%96%97</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E7%A4%BE%E4%BF%9D%E5%B9%B6%E8%BD%A8</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E5%85%BB%E8%80%81%E9%87%91%E8%AE%A1%E5%8F%91%E6%9C%88%E6%95%B0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E7%A4%BE%E4%BF%9D%E5%8D%A1%20_%20%E5%8C%BB%E4%BF%9D%E7%A0%81</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

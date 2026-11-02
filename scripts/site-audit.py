@@ -394,6 +394,23 @@ def audit(root, rules, rep):
                          ("html lang", re.search(r"<html[^>]+lang=", h) is not None)]:
             rep.add("seo", "PASS" if ok else "FAIL", "首页 %s" % name)
 
+    # 词条页 meta description 非空（空值会退化 SERP 摘要与分享卡；cron 生成器偶发产出空页）
+    empty_desc = []
+    for p in pages:
+        if os.sep + "terms" + os.sep not in p or not p.endswith(".html"):
+            continue
+        try:
+            with open(p, encoding="utf-8", errors="replace") as f:
+                t = f.read(8000)
+        except OSError:
+            continue
+        m = re.search(r'<meta name="description" content="([^"]*)"', t)
+        if not m or len(m.group(1).strip()) < 20:
+            empty_desc.append(os.path.relpath(p, root))
+    rep.add("seo", "FAIL" if empty_desc else "PASS", "词条页 description 非空（≥20 字）",
+            "empty=%d %s" % (len(empty_desc), sorted(empty_desc)[:3]),
+            "从第一卡一句话导语回填 40–80 字（meta/og/twitter 三处同文案）")
+
     # ---------- backfill：历史调研结论回填 ----------
     bf = rules.get("backfill") or {}
     term_pages = [p for p in pages if os.sep + "terms" + os.sep in p]

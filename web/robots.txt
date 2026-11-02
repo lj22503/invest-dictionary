@@ -1,14 +1,44 @@
+# 投资词典 robots.txt —— 引用类与训练类 AI 爬虫均显式声明，便于日志统计与未来差异化控制
+
+# —— 搜索引擎 ——
 User-agent: Googlebot
 Allow: /
 User-agent: Bingbot
 Allow: /
+User-agent: Baiduspider
+Allow: /
+User-agent: Sogou spider
+Allow: /
+
+# —— AI 引用/搜索（GEO 核心通道，全放行）——
 User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
 Allow: /
 User-agent: ClaudeBot
 Allow: /
-User-agent: Baiduspider
+User-agent: PerplexityBot
 Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: CCBot
+Allow: /
+
+# —— 兜底 ——
 User-agent: *
 Disallow: /api/
 Disallow: /admin/
+
 Sitemap: https://dictionary.mangofolio.com/sitemap.xml
