@@ -252,6 +252,28 @@
 - **修复**：`write_dict()` 先读原文件记录行尾风格与「末尾是否有换行」，按原样写回。
 - **预防**：全站唯一数据源类文件（dictionary.json / index.html），任何程序化重写都必须保留原行尾约定，先 `git diff --numstat` 对账。
 
+## 35. 首页静态锚点冻结在旧条数：脚本没进同步链路（2026-11-02）
+
+- **现象**：词条已 1049 条，首页/词库页的服务端静态锚点只有 995 条，P0-2 覆盖率 94%（下限 95%）→ FAIL。
+- **根因**：`build-static-terms.py` 从来不在 `sync-site.py` 的 STEPS 里，静态块是「那时候跑过一次」的快照；cron 每天加词条，块里的条数就永远差一截。
+- **修复**：把它排进链路（紧随 sync_all_entries，必须在 slim 之前——它要读完整 ALL_ENTRIES 取副标题）。
+- **预防**：**凡是「产物依赖 dictionary.json」的脚本，都必须进 STEPS**。判断方法：跑完 `sync-site.py` 后 `git status` 应当只剩脚本自身改动；任何站点产物没被链路覆盖，都会以这种「慢慢漂移」的形式暴露。
+
+## 36. 盖章脚本用 mtime 当「最后更新」，自己把自己刷新成今天（2026-11-02）
+
+- **现象**：`stamp-freshness.py` 第一轮盖 1053 页，第二轮又改 816 页，日期全变成今天。
+- **根因**：脚本写文件 → mtime 变今天 → 下一轮读到的 mtime 就是今天 → 日期自引用漂移。跑几次全站日期就全等于「今天」，是彻头彻尾的假新鲜度。
+- **修复**：改用 **git 最后一次改动该文件的提交时间**（`git log --pretty=format:%ct --name-only` 一次取全库映射）；未入库新文件才回退 mtime；写盘后再 `os.utime` 把 mtime 还原，保证「跑脚本」本身不算一次内容更新。改完第二轮 0 改。
+- **预防**：凡是「从文件自身读状态、又写回该文件」的脚本，先问一句：我写这一下会不会改变我下次读到的东西？会，就必须先快照再还原。
+
+## 37. 连带踩坑：文件名带连字符不能当模块 import（2026-11-02）
+
+- **现象**：`generate-sitemap.py` 想复用 `stamp-freshness.py` 的日期口径，`sys.path.insert` 后 `from stamp_freshness import ...` 报 ModuleNotFoundError。
+- **根因**：脚本文件名用连字符（`stamp-freshness.py`），不是合法模块名。
+- **修复**：`importlib.util.spec_from_file_location` 按路径加载。
+- **预防**：脚本间复用逻辑，统一走按路径加载，别指望 `import`。
+
+---
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
 *（内容由AI生成，仅供参考）*

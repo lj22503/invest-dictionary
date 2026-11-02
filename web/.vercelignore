@@ -24,6 +24,24 @@
 /temp/
 /temp/**
 
+# md 源目录：全站页面零引用（grep 过 *.html / js / sw.js），但会被公开访问到。
+# 4.2MB 草稿与正文重复内容，既制造重复收录、又把未校订的草稿暴露出去。
+/terms_md/
+/terms_md/**
+/markdown/
+/markdown/**
+/fintools_md/
+/fintools_md/**
+/terms_md_test/
+/terms_md_test/**
+/skill_tmp/
+/skill_tmp/**
+
+# 建站过程留下的文本转储（slug / 标题清单）
+/_existing_slugs.txt
+/_titles_dump.txt
+/titles_dump.txt
+
 # 审计过程产物
 /.audit-*.png
 

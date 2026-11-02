@@ -1,7 +1,35 @@
 # PROGRESS — invest-dictionary（投资词典）
 
-> mangofolio 生态第 3 块 · 术语平权（听得懂）。1017 个中文投资术语，"说人话不装逼"。
+> mangofolio 生态第 3 块 · 术语平权（听得懂）。1049 个中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
+
+## 2026-11-02 · SEO/GEO 深度体检 + 四批修复（门禁 27 项）
+
+### 起因
+用户反馈首页搜不到时弹出三块重复提示（橙色横幅 + 词条簇卡 + AI 提示词框），并要求做一次 SEO / GEO 深度体检。
+
+### 本轮改动
+| 文件 | 改动 |
+|---|---|
+| `web/index.html` | 搜索未命中提示去重：删橙色横幅与「复制提示词」框，加**顺子串兜底匹配**（「业绩基准」→「业绩比较基准」） |
+| `docs/SEO_GEO深度体检报告_20261102.md`（新增） | 1044 URL 全量扫描 + 线上实测，P0×6 / P1×5，四批修复路线图 |
+| `web/terms/*.html`（204 页） | description 补齐：6 页空值手工写、198 页 <20 字用「一句话」金句回填；**28 页 JSON-LD 因引号未转义整块失效**已修复 |
+| `web/about.html`（新增） | E-E-A-T 信任页：我们是谁 / 三条编辑红线 / 来源与校订 / 免责 / 联系；AboutPage + Organization JSON-LD |
+| 五个主页面 | 补齐 JSON-LD（WebSite+Organization / CollectionPage+DefinedTermSet / WebPage），此前 0 个 |
+| `web/robots.txt` | 删 AI 水印行；补 AI 爬虫清单（OAI-SearchBot / PerplexityBot / Bytespider / Google-Extended 等 11 个） |
+| `web/404.html`（新增） | 三条出路 + 8 个高频词条链接，noindex |
+| `scripts/stamp-freshness.py`（新增） | 全站 dateModified + 可见「最后更新」；日期取 git 提交时间（坑 #36） |
+| `scripts/generate-sitemap.py` | sitemap 补 lastmod（与 dateModified 同口径），新增 /about |
+| `scripts/sync-site.py` | STEPS 扩到 8 步：接入 build-static-terms / normalize-urls / stamp-freshness |
+| `web/.vercelignore` | 排除 5 个零引用 md 源目录与 3 个转储文本（4MB 草稿不再随站部署） |
+
+### 门禁演进（调研回填闸门精神）
+新增 3 项检查，24 → 27 项：词条页 description 非空（≥20 字）、主页面 JSON-LD 存在性、工作文件随站部署。
+
+### 未完成
+- `www.dictionary.mangofolio.com` 无 DNS 解析（需域名侧配置，代码改不了）
+- 静态锚点体积：index/dictionary 靠「目录页阈值 600KB」豁免，真瘦身后需改路由
+- cron 在途批次：提交时磁盘 1053 页 vs dictionary.json 1049 条，落库后跑 sync-site.py 即恢复
 
 ## 2026-10-31 · 审计收口 + 词库缺口补齐（995 → 1017）+ 同步链路加固
 

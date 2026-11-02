@@ -76,7 +76,8 @@ DEFAULT_RULES = {
         # 合规页：缺失即红线（最高法判例：词典属实用工具类，查词无须手机号）
         "required_pages": ["privacy.html", "terms-of-service.html"],
         # 必须进 sitemap 的顶层页（index 以站点根形式收录）
-        "core_pages": ["index.html", "dictionary.html", "guide.html"],
+        # about.html 亦在内：理财属 YMYL，缺「关于/作者」页 = E-E-A-T 信任链断裂
+        "core_pages": ["index.html", "dictionary.html", "guide.html", "about.html"],
     },
 }
 
@@ -411,6 +412,35 @@ def audit(root, rules, rep):
             "empty=%d %s" % (len(empty_desc), sorted(empty_desc)[:3]),
             "从第一卡一句话导语回填 40–80 字（meta/og/twitter 三处同文案）")
 
+    # 主页面 JSON-LD 存在性（GEO entity 地基；词条页有 DefinedTerm，主页面长期为 0）
+    # 口径：必须有 @type 为 WebSite/Organization/CollectionPage/WebPage/AboutPage 之一的有效块
+    MAIN_TYPES = ("WebSite", "Organization", "CollectionPage", "WebPage", "AboutPage")
+    no_ld = []
+    for name in ["index.html", "dictionary.html", "guide.html", "about.html",
+                 "privacy.html", "terms-of-service.html"]:
+        p = os.path.join(root, name)
+        if not os.path.exists(p):
+            no_ld.append(name + "(缺页)")
+            continue
+        with open(p, encoding="utf-8", errors="replace") as f:
+            t = f.read()
+        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', t, re.S)
+        hit = False
+        for b in blocks:
+            try:
+                d = json.loads(b)
+            except Exception:
+                continue
+            items = d if isinstance(d, list) else [d]
+            for it in items:
+                if isinstance(it, dict) and it.get("@type") in MAIN_TYPES:
+                    hit = True
+        if not hit:
+            no_ld.append(name)
+    rep.add("seo", "FAIL" if no_ld else "PASS", "主页面 JSON-LD",
+            "%d/%d 有" % (6 - len(no_ld), 6) + (" 缺:" + ",".join(no_ld) if no_ld else ""),
+            "补 WebSite+Organization（首页）/CollectionPage+DefinedTermSet（词库页）/AboutPage（关于页）")
+
     # ---------- backfill：历史调研结论回填 ----------
     bf = rules.get("backfill") or {}
     term_pages = [p for p in pages if os.sep + "terms" + os.sep in p]
@@ -533,6 +563,30 @@ def audit(root, rules, rep):
         rep.add("hygiene", "PASS", "备份文件随站部署",
                 "%d 个 / %dMB，已被 .vercelignore 全部排除" % (len(baks), total),
                 "磁盘上仍保留供本地回滚，但不上传；.vercelignore 失效或新增未覆盖的后缀时会自动转 FAIL")
+
+    # 工作文件随站部署：md 源目录 / 临时目录 / 过程转储文本。
+    # 这些和备份不一样——它们不是回滚用的，是草稿，公开出去就是重复收录 + 暴露未校订内容。
+    # 口径同备份：只要 .vercelignore 覆盖就不报警（仓库里该留还得留）。
+    WORK_DIRS = ["terms_md", "markdown", "fintools_md", "terms_md_test", "skill_tmp", "temp"]
+    WORK_FILES = ["_existing_slugs.txt", "_titles_dump.txt", "titles_dump.txt"]
+    work = []
+    for d in WORK_DIRS:
+        p = os.path.join(root, d)
+        if os.path.isdir(p):
+            work.append(d + "/")
+    work += [f for f in WORK_FILES if os.path.exists(os.path.join(root, f))]
+    leaky_w = [w for w in work if not ignore_match(w, pats)]
+    wsize = 0
+    for d in WORK_DIRS:
+        p = os.path.join(root, d)
+        if os.path.isdir(p):
+            for dp, _, fns in os.walk(p):
+                wsize += sum(os.path.getsize(os.path.join(dp, f)) for f in fns)
+    wsize_mb = wsize // 1024 // 1024
+    rep.add("hygiene", "FAIL" if leaky_w else "PASS", "工作文件随站部署",
+            ("%s 未被 .vercelignore 排除" % ",".join(leaky_w)) if leaky_w
+            else "%d 项 / %dMB，已全部排除" % (len(work), wsize_mb),
+            "在 .vercelignore 加 /目录/ 与 /目录/** 两种写法（各解析实现不一致，只写一种会漏）")
 
     # AIGC 元数据头：外部生成器会在 md 头部反复注入 AIGC/ProduceID/ReservedCode 块。
     # 它是纯水印，无内容价值，还会把生产方 ID 带进仓库与线上产物。
