@@ -1,12 +1,12 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1049 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1083 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
 - [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
 
-## 词条（共 1049 条）
+## 词条（共 1083 条）
 - [货币](https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81): 你手里攥着的100块
 - [信用](https://dictionary.mangofolio.com/terms/%E4%BF%A1%E7%94%A8): 全世界最贵的三个字
 - [M0 / M1 / M2（货币供应量）](https://dictionary.mangofolio.com/terms/M0%20_%20M1%20_%20M2%EF%BC%88%E8%B4%A7%E5%B8%81%E4%BE%9B%E5%BA%94%E9%87%8F%EF%BC%89): 你家三个钱包，就是央行的小抄
@@ -1056,9 +1056,43 @@
 - [社保并轨](https://dictionary.mangofolio.com/terms/%E7%A4%BE%E4%BF%9D%E5%B9%B6%E8%BD%A8): 机关事业单位养老金并轨了
 - [养老金计发月数](https://dictionary.mangofolio.com/terms/%E5%85%BB%E8%80%81%E9%87%91%E8%AE%A1%E5%8F%91%E6%9C%88%E6%95%B0): 个人账户里的钱，按月领多少
 - [社保卡 / 医保码](https://dictionary.mangofolio.com/terms/%E7%A4%BE%E4%BF%9D%E5%8D%A1%20_%20%E5%8C%BB%E4%BF%9D%E7%A0%81): 一张卡 + 一个码，看病报销都在里面
+- [互助养老 / 抱团养老 / 候鸟养老](https://dictionary.mangofolio.com/terms/%E4%BA%92%E5%8A%A9%E5%85%BB%E8%80%81%20_%20%E6%8A%B1%E5%9B%A2%E5%85%BB%E8%80%81%20_%20%E5%80%99%E9%B8%9F%E5%85%BB%E8%80%81): 不靠子女，也能有人互相照应
+- [税延养老](https://dictionary.mangofolio.com/terms/%E7%A8%8E%E5%BB%B6%E5%85%BB%E8%80%81): 现在免税，领钱时再补
+- [赠与税](https://dictionary.mangofolio.com/terms/%E8%B5%A0%E4%B8%8E%E7%A8%8E): 白送也要交税？看情况
+- [长寿风险](https://dictionary.mangofolio.com/terms/%E9%95%BF%E5%AF%BF%E9%A3%8E%E9%99%A9): 活得久，也是一种财务风险
+- [二房东](https://dictionary.mangofolio.com/terms/%E4%BA%8C%E6%88%BF%E4%B8%9C): 租来的房子，还能再租出去？
+- [云闪付](https://dictionary.mangofolio.com/terms/%E4%BA%91%E9%97%AA%E4%BB%98): 银联官方“钱包”，一个 App 管多家卡
+- [央行征信 / 百行征信 / 朴道征信](https://dictionary.mangofolio.com/terms/%E5%A4%AE%E8%A1%8C%E5%BE%81%E4%BF%A1%20_%20%E7%99%BE%E8%A1%8C%E5%BE%81%E4%BF%A1%20_%20%E6%9C%B4%E9%81%93%E5%BE%81%E4%BF%A1): 你的信用档案，到底谁在管
+- [年费 / 睡眠卡](https://dictionary.mangofolio.com/terms/%E5%B9%B4%E8%B4%B9%20_%20%E7%9D%A1%E7%9C%A0%E5%8D%A1): 信用卡“白嫖”的隐藏成本
+- [满二唯一 / 满五唯一](https://dictionary.mangofolio.com/terms/%E6%BB%A1%E4%BA%8C%E5%94%AF%E4%B8%80%20_%20%E6%BB%A1%E4%BA%94%E5%94%AF%E4%B8%80): 卖房的“满二”“满五”省多少钱
+- [物业费 / 维修基金](https://dictionary.mangofolio.com/terms/%E7%89%A9%E4%B8%9A%E8%B4%B9%20_%20%E7%BB%B4%E4%BF%AE%E5%9F%BA%E9%87%91): 住进去之后，每月还有这笔钱
+- [NFC / 刷脸支付](https://dictionary.mangofolio.com/terms/NFC%20_%20%E5%88%B7%E8%84%B8%E6%94%AF%E4%BB%98): 让“掏手机”都省掉的两种支付
+- [养老规划五步法](https://dictionary.mangofolio.com/terms/%E5%85%BB%E8%80%81%E8%A7%84%E5%88%92%E4%BA%94%E6%AD%A5%E6%B3%95): 把养老从焦虑变成清单
+- [支付限额 / 大额转账](https://dictionary.mangofolio.com/terms/%E6%94%AF%E4%BB%98%E9%99%90%E9%A2%9D%20_%20%E5%A4%A7%E9%A2%9D%E8%BD%AC%E8%B4%A6): 账户上的“安全水龙头”
+- [立减金](https://dictionary.mangofolio.com/terms/%E7%AB%8B%E5%87%8F%E9%87%91): 银行“撒币”，你捡不捡？
+- [首付贷](https://dictionary.mangofolio.com/terms/%E9%A6%96%E4%BB%98%E8%B4%B7): 借钱付首付的“灰色生意”
+- [裸贷](https://dictionary.mangofolio.com/terms/%E8%A3%B8%E8%B4%B7): 用“隐私”当抵押的借款
+- [摇号买房](https://dictionary.mangofolio.com/terms/%E6%91%87%E5%8F%B7%E4%B9%B0%E6%88%BF): 楼市“抽签”怎么运作
+- [白户 / 花户](https://dictionary.mangofolio.com/terms/%E7%99%BD%E6%88%B7%20_%20%E8%8A%B1%E6%88%B7): 征信上的两种“不好看”
+- [征信异议申诉](https://dictionary.mangofolio.com/terms/%E5%BE%81%E4%BF%A1%E5%BC%82%E8%AE%AE%E7%94%B3%E8%AF%89): 给征信“改错”的正规入口
+- [大数据风控](https://dictionary.mangofolio.com/terms/%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%A3%8E%E6%8E%A7): 你手机里的“隐形评分卡”
+- [养老理财 / 养老储蓄](https://dictionary.mangofolio.com/terms/%E5%85%BB%E8%80%81%E7%90%86%E8%B4%A2%20_%20%E5%85%BB%E8%80%81%E5%82%A8%E8%93%84): 养老钱也有“专属存款和专属理财”
+- [老破小 / 次新房 / 笋盘](https://dictionary.mangofolio.com/terms/%E8%80%81%E7%A0%B4%E5%B0%8F%20_%20%E6%AC%A1%E6%96%B0%E6%88%BF%20_%20%E7%AC%8B%E7%9B%98): 二手房市场的三张“标签”
+- [报复性消费](https://dictionary.mangofolio.com/terms/%E6%8A%A5%E5%A4%8D%E6%80%A7%E6%B6%88%E8%B4%B9): 憋久了，钱包会“报复”
+- [补偿性消费](https://dictionary.mangofolio.com/terms/%E8%A1%A5%E5%81%BF%E6%80%A7%E6%B6%88%E8%B4%B9): 买的是东西，补的是心情
+- [即时满足](https://dictionary.mangofolio.com/terms/%E5%8D%B3%E6%97%B6%E6%BB%A1%E8%B6%B3): “想要”和“等得起”的拉锯战
+- [懒人经济 / 单身经济 / 银发经济 / 她经济 / 宠物经济 / 谷子经济](https://dictionary.mangofolio.com/terms/%E6%87%92%E4%BA%BA%E7%BB%8F%E6%B5%8E%20_%20%E5%8D%95%E8%BA%AB%E7%BB%8F%E6%B5%8E%20_%20%E9%93%B6%E5%8F%91%E7%BB%8F%E6%B5%8E%20_%20%E5%A5%B9%E7%BB%8F%E6%B5%8E%20_%20%E5%AE%A0%E7%89%A9%E7%BB%8F%E6%B5%8E%20_%20%E8%B0%B7%E5%AD%90%E7%BB%8F%E6%B5%8E): 六个人群，六个钱包
+- [奶头乐](https://dictionary.mangofolio.com/terms/%E5%A5%B6%E5%A4%B4%E4%B9%90): 让人“爽到停不下来”的东西
+- [杀鱼盘](https://dictionary.mangofolio.com/terms/%E6%9D%80%E9%B1%BC%E7%9B%98): 专钓“贪小便宜”的鱼
+- [声音克隆诈骗](https://dictionary.mangofolio.com/terms/%E5%A3%B0%E9%9F%B3%E5%85%8B%E9%9A%86%E8%AF%88%E9%AA%97): “妈，我出事了”——声音是真的，人是假的
+- [导师 / 托](https://dictionary.mangofolio.com/terms/%E5%AF%BC%E5%B8%88%20_%20%E6%89%98): 群里“老师”带单，群里“演员”赚钱
+- [股票回购增持再贷款](https://dictionary.mangofolio.com/terms/%E8%82%A1%E7%A5%A8%E5%9B%9E%E8%B4%AD%E5%A2%9E%E6%8C%81%E5%86%8D%E8%B4%B7%E6%AC%BE): 央行的回购弹药库
+- [互换便利（SFISF）](https://dictionary.mangofolio.com/terms/%E4%BA%92%E6%8D%A2%E4%BE%BF%E5%88%A9%EF%BC%88SFISF%EF%BC%89): 以券换券：央行的换血工具
+- [政策底 _ 市场底](https://dictionary.mangofolio.com/terms/%E6%94%BF%E7%AD%96%E5%BA%95%20_%20%E5%B8%82%E5%9C%BA%E5%BA%95): 政策底：跌到政府出手的位置
+- [AI算力](https://dictionary.mangofolio.com/terms/AI%E7%AE%97%E5%8A%9B): 算力：AI 的发动机
 
 ## 词库与指南
-- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1049 个词条按篇章全部列出，支持搜索与章节筛选
+- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1083 个词条按篇章全部列出，支持搜索与章节筛选
 - [使用指南（8 个场景）](https://dictionary.mangofolio.com/guide): 8 个场景 × 提示词样例 × 对应 Skill，照抄就能用
 - [隐私政策](https://dictionary.mangofolio.com/privacy): 信息收集与使用说明
 - [用户协议](https://dictionary.mangofolio.com/terms-of-service): 服务边界与不构成投资建议的约定

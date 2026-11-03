@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>投资词典 · Invest Dictionary</title>
-<meta name="description" content="把 900+ 理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词 · 说人话不装逼，不构成投资建议。">
+<meta name="description" content="把 1049 个理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词 · 说人话不装逼，不构成投资建议。">
 <link rel="canonical" href="https://dictionary.mangofolio.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dictionary.mangofolio.com/">
 <meta property="og:image" content="https://dictionary.mangofolio.com/og-cover.png">
 <meta property="og:title" content="投资词典 · Invest Dictionary">
-<meta property="og:description" content="把 900+ 理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词。">
+<meta property="og:description" content="把 1049 个理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词。">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="投资词典 · Invest Dictionary">
-<meta name="twitter:description" content="把 900+ 理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词。">
+<meta name="twitter:description" content="把 1049 个理财词条，装进你的 AI。7 个场景 Skill · 每天 5 条热词。">
 <link rel="stylesheet" href="css/mangofolio-tokens-v09.css">
 <link rel="stylesheet" href="css/site.css">
 <link rel="manifest" href="manifest.json">
@@ -27,17 +27,18 @@
 
 /* ---------- 屏一：hero ---------- */
 .hero {
-  padding: clamp(56px, 9vh, 108px) 0 clamp(48px, 7vh, 76px);
+  padding: clamp(52px, 8vh, 96px) 0 clamp(26px, 4vh, 44px);
   background: linear-gradient(180deg, var(--mf-colors-primitives-mango-050) 0%, var(--mf-colors-background) 64%);
   text-align: center;
 }
 .hero__kicker {
-  font-family: var(--mf-fonts-ui);
-  font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.32em;
+  font-family: var(--mf-fonts-display);
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
   color: var(--mf-colors-text-accent-mango);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .hero__title {
   font-size: clamp(2.6rem, 7vw, 4.4rem);
@@ -109,6 +110,110 @@
   box-shadow: var(--mf-shadows-card);
 }
 .search-results.show { display: block; }
+
+/* 大家都在搜（热搜榜）：两行 × 5，词能对上就直接进词条页 */
+.hero__trending {
+  margin: 16px auto 0;
+  max-width: 600px;
+  padding: 13px 18px 15px;
+  border: 1px solid var(--mf-colors-border);
+  border-radius: var(--mf-radii-card);
+  background: var(--mf-colors-background-surface);
+  text-align: left;
+}
+.trend-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+.trend-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--mf-colors-text-strong);
+}
+.trend-live {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mf-colors-background-primary);
+  animation: trendPulse 2.4s ease-out infinite;
+}
+@keyframes trendPulse {
+  0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(249, 115, 22, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+}
+.trend-meta { font-size: 0.74rem; color: var(--mf-colors-text-weak); }
+.trend-refresh {
+  margin-left: auto;
+  padding: 3px 12px;
+  border: 1px solid var(--mf-colors-border);
+  border-radius: 999px;
+  background: none;
+  color: var(--mf-colors-text-weak);
+  font-family: inherit;
+  font-size: 0.74rem;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+.trend-refresh:hover {
+  border-color: var(--mf-colors-text-accent-mango);
+  color: var(--mf-colors-text-accent-mango);
+  background: var(--mf-colors-primitives-mango-050);
+}
+.trend-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px 16px;
+}
+.trend-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  min-width: 0;
+  padding: 5px 2px;
+  border-radius: var(--mf-radii-medium);
+  color: var(--mf-colors-text);
+  font-size: 0.86rem;
+  text-decoration: none;
+}
+.trend-rank {
+  flex: 0 0 auto;
+  width: 1.1em;
+  font-family: var(--mf-fonts-mono);
+  font-size: 0.74rem;
+  color: var(--mf-colors-text-weak);
+  font-variant-numeric: tabular-nums;
+}
+.trend-list li:nth-child(-n+3) .trend-rank {
+  color: var(--mf-colors-text-accent-mango);
+  font-weight: 700;
+}
+.trend-word {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.trend-list a:hover .trend-word { color: var(--mf-colors-text-accent-mango); }
+.trend-tag {
+  flex: 0 0 auto;
+  padding: 0 5px;
+  border-radius: var(--mf-radii-small);
+  background: var(--mf-colors-background-warning);
+  color: var(--mf-colors-text-accent-mango);
+  font-size: 0.62rem;
+  line-height: 1.7;
+}
+@media (max-width: 760px) {
+  .trend-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero__trending { max-width: 560px; }
+}
 .search-hint {
   padding: 8px 14px 6px;
   font-size: 0.8rem;
@@ -297,96 +402,200 @@
 .hs-msg { margin-top: 10px; font-size: 0.8rem; color: var(--mf-colors-text-success); }
 .hot-sub__tip { font-size: 0.76rem !important; color: var(--mf-colors-text-weak) !important; }
 
-/* ---------- 屏三：7 大场景 ---------- */
-.scene-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: 1fr; /* 跨行等高：让所有卡片（含跨列的 scene-more）拉平，CTA 才对得齐 */
-  gap: 18px;
-}
-.scene-card {
+/* ---------- 屏三：7 大场景（一屏内切换 · 2s 自动轮播） ---------- */
+#skills { padding-top: clamp(44px, 5vw, 68px); padding-bottom: clamp(44px, 5vw, 68px); }
+
+.scene-tabs {
   display: flex;
-  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--mf-colors-border);
+  background: var(--mf-colors-background-surface);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.scene-tabs::-webkit-scrollbar { display: none; }
+.scene-tab {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--mf-colors-text-weak);
+  font-family: inherit;
+  font-size: 0.855rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.scene-tab:hover { color: var(--mf-colors-text); background: var(--mf-colors-background-neutral); }
+.scene-tab.is-on { background: var(--mf-colors-background-abyss); color: var(--mf-colors-text-inverse); }
+.scene-tab__ico {
+  font-family: var(--mf-fonts-display);
+  font-size: 0.92rem;
+  line-height: 1;
+  opacity: 0.75;
+}
+.scene-tab.is-on .scene-tab__ico { color: var(--mf-colors-primitives-mango-400); opacity: 1; }
+.scene-tab:focus-visible { outline: 2px solid var(--mf-colors-border-focused); outline-offset: 2px; }
+
+.scene-stage { display: grid; margin-top: 22px; }
+.scene-pane {
+  display: none;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+}
+.scene-pane.is-on { display: grid; animation: paneIn 0.3s ease both; }
+@keyframes paneIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.scene-copy { min-width: 0; text-align: left; }
+.scene-eyebrow {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--mf-colors-text-accent-mango);
+}
+.scene-copy h3 {
+  margin-top: 10px;
+  font-size: clamp(1.36rem, 2.2vw, 1.78rem);
+  line-height: 1.34;
+  color: var(--mf-colors-text-strong);
+}
+.scene-lead {
+  margin-top: 12px;
+  max-width: 30em;
+  font-size: 0.94rem;
+  line-height: 1.85;
+  color: var(--mf-colors-text-weak);
+}
+.scene-points {
+  margin-top: 16px;
+  list-style: none;
+  display: grid;
+  gap: 7px;
+}
+.scene-points li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--mf-colors-text);
+}
+.scene-points li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--mf-colors-background-primary);
+}
+.scene-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.scene-figure {
+  margin: 0;
+  justify-self: end;
+  width: auto;
+  height: clamp(330px, 34vw, 440px);
+  aspect-ratio: 541 / 714; /* 跟案例截图同比例：卡面就是截图本身，不留灰边 */
   overflow: hidden;
   border-radius: var(--mf-radii-card);
   border: 1px solid var(--mf-colors-border);
-  background: var(--mf-colors-background-surface);
-  color: var(--mf-colors-text);
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
-}
-.scene-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(249, 115, 22, 0.4);
-  box-shadow: var(--mf-shadows-sm);
-  color: var(--mf-colors-text);
-}
-.scene-shot {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
   background: var(--mf-colors-background-neutral);
-  border-bottom: 1px solid var(--mf-colors-border);
+  box-shadow: var(--mf-shadows-card);
 }
-.scene-shot img {
+.scene-figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
 }
-.scene-body {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 16px 18px 18px;
-  flex: 1;
-}
-.scene-title { display: flex; align-items: center; gap: 10px; }
-.scene-title h3 {
-  font-size: 1.04rem;
-  font-weight: 900;
-  color: var(--mf-colors-text-strong);
-}
-.scene-desc {
-  font-size: 0.855rem;
-  line-height: 1.7;
-  color: var(--mf-colors-text-weak);
-  flex: 1;
-  /* 描述限 3 行：长短不一的文案不再把卡片撑成不同高度 */
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.scene-foot {
+
+.scene-rail {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  border-top: 1px solid var(--mf-colors-border-weak);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--mf-colors-text-link);
-}
-.scene-more {
-  grid-column: span 2;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  padding: 26px 28px;
-  border-radius: var(--mf-radii-card);
-  border: 1px dashed var(--mf-colors-border-strong);
-  background: var(--mf-colors-background-surface);
-  color: var(--mf-colors-text);
-  transition: border-color 0.18s ease, background-color 0.18s ease;
+  gap: 16px;
+  margin-top: 20px;
 }
-.scene-more:hover {
-  border-color: var(--mf-colors-text-link);
-  background: var(--mf-colors-background-surface);
-  color: var(--mf-colors-text);
+.scene-dots { display: flex; align-items: center; gap: 7px; }
+.scene-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--mf-colors-text-weak);
+  opacity: 0.35;
+  cursor: pointer;
+  transition: width 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
-.scene-more h3 { font-size: 1.16rem; color: var(--mf-colors-text-strong); }
-.scene-more p { font-size: 0.875rem; line-height: 1.75; color: var(--mf-colors-text-weak); }
-.scene-more span { font-size: 0.85rem; font-weight: 700; color: var(--mf-colors-text-link); }
+.scene-dot:hover { opacity: 0.7; }
+.scene-dot.is-on {
+  width: 22px;
+  border-radius: 999px;
+  background: var(--mf-colors-background-primary);
+  opacity: 1;
+}
+.scene-dot.is-on {
+  background: var(--mf-colors-background-neutral-active);
+  overflow: hidden;
+}
+.scene-dot.is-on::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: var(--mf-colors-background-primary);
+}
+.scene-dot.is-run::after { animation: sceneBar 2s linear forwards; }
+@keyframes sceneBar { from { width: 0; } to { width: 100%; } }
+.scene-slider.is-paused .scene-dot.is-run::after { animation-play-state: paused; }
+
+@media (max-width: 900px) {
+  .scene-pane {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .scene-figure {
+    justify-self: stretch;
+    width: 100%;
+    height: auto;
+    max-height: 430px;
+    order: -1;
+  }
+}
+@media (max-width: 600px) {
+  .scene-tab { padding: 8px 12px; font-size: 0.82rem; }
+  .scene-lead { font-size: 0.9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene-pane.is-on { animation: none; }
+  .scene-dot.is-run::after { animation: none; width: 100%; }
+  .trend-live { animation: none; }
+}
 
 /* ---------- 屏四：怎么用三步 ---------- */
 .steps {
@@ -610,6 +819,7 @@
   .modal { padding: 24px 20px; }
   .about-punch { font-size: 1.08rem !important; }
 }
+
 </style>
 
 <script type="application/ld+json">
@@ -686,11 +896,10 @@
   <!-- ============ 屏一：一句话 + 搜索 ============ -->
   <section class="band hero">
     <div class="wrap">
-      <p class="hero__kicker">MANGOFOLIO · 投资词典</p>
+      <p class="hero__kicker">把投资的词，翻译成人话</p>
       <h1 class="hero__title">投资词典</h1>
       <p class="hero__en">Invest Dictionary</p>
       <p class="hero__lead">
-        把投资的词，翻译成人话。<br>
         新闻里的数字、产品说明书、销售的话术 —— 一个词，三分钟看懂。
       </p>
 
@@ -706,13 +915,33 @@
         </div>
       </div>
 
+      <div class="hero__trending" aria-label="大家都在搜">
+        <div class="trend-head">
+          <span class="trend-title"><span class="trend-live" aria-hidden="true"></span>大家都在搜</span>
+          <span class="trend-meta" id="trendMeta">理财热词 · 每 10 分钟更新</span>
+          <button class="trend-refresh" type="button" id="trendRefresh">换一批</button>
+        </div>
+        <ol class="trend-list" id="trendList">
+          <li><a href="/?q=可转债"><span class="trend-rank">1</span><span class="trend-word">可转债</span></a></li>
+          <li><a href="/?q=LPR"><span class="trend-rank">2</span><span class="trend-word">LPR</span></a></li>
+          <li><a href="/?q=最大回撤"><span class="trend-rank">3</span><span class="trend-word">最大回撤</span></a></li>
+          <li><a href="/?q=国债逆回购"><span class="trend-rank">4</span><span class="trend-word">国债逆回购</span></a></li>
+          <li><a href="/?q=ETF"><span class="trend-rank">5</span><span class="trend-word">ETF</span></a></li>
+          <li><a href="/?q=美联储降息"><span class="trend-rank">6</span><span class="trend-word">美联储降息</span></a></li>
+          <li><a href="/?q=黄金"><span class="trend-rank">7</span><span class="trend-word">黄金</span></a></li>
+          <li><a href="/?q=存款利率"><span class="trend-rank">8</span><span class="trend-word">存款利率</span></a></li>
+          <li><a href="/?q=北交所打新"><span class="trend-rank">9</span><span class="trend-word">北交所打新</span></a></li>
+          <li><a href="/?q=化债"><span class="trend-rank">10</span><span class="trend-word">化债</span></a></li>
+        </ol>
+      </div>
+
       <div class="hero__actions">
         <a class="btn btn--primary" href="/dictionary">按篇章浏览词库</a>
         <a class="btn btn--line" href="/guide">照抄版使用指南</a>
       </div>
 
       <ul class="hero__trust">
-        <li><b id="statEntries">900+</b> 个词条</li>
+        <li><b id="statEntries">1049</b> 个词条</li>
         <li><b>7</b> 个场景 Skill</li>
         <li>每天 <b>5</b> 条热词</li>
         <li>已同步 ima 知识库</li>
@@ -720,7 +949,7 @@
     </div>
   </section>
 
-  <!-- ============ 屏二：今日热词 ============ -->
+  <!-- ============ 紧接首屏：今日热词 ============ -->
   <section class="band band--paper" id="daily-hot">
     <div class="wrap">
       <div class="sec-head">
@@ -763,80 +992,176 @@
       <div class="sec-head">
         <div class="sec-head__main">
           <h2>7 个场景，对应 7 种搞不懂</h2>
-          <p>每个场景一个 Skill。点卡片看完整提示词，复制给你手边的 AI（ChatGPT / Claude / DeepSeek / 豆包都行）。</p>
+          <p>每个场景一个 Skill。点标签切换，看完整效果和提示词，复制给你手边的 AI（ChatGPT / Claude / DeepSeek / 豆包都行）。</p>
         </div>
         <div class="sec-head__aside"><a href="/guide">照着抄的用法 →</a></div>
       </div>
 
-      <div class="scene-grid">
-        <a class="scene-card" href="#skills" onclick="openSkillModal('narrative');return false;">
-          <div class="scene-shot"><img src="assets/cases/narrative.png" alt="新闻翻译机输出示例" loading="lazy" width="360" height="270"></div>
-          <div class="scene-body">
-            <div class="scene-title"><span class="kico" aria-hidden="true">譯</span><h3>新闻翻译机</h3></div>
-            <p class="scene-desc">贴一段财经新闻，拆出 3-5 个核心概念，串成一条能讲清的因果线。</p>
-            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
-          </div>
-        </a>
+      <div class="scene-slider" id="sceneSlider">
+        <div class="scene-tabs" role="tablist" aria-label="7 个场景">
+        <button class="scene-tab is-on" type="button" role="tab" id="tab-0" aria-controls="pane-0" aria-selected="true" tabindex="0" data-i="0"><span class="scene-tab__ico" aria-hidden="true">譯</span>新闻翻译机</button>
+        <button class="scene-tab" type="button" role="tab" id="tab-1" aria-controls="pane-1" aria-selected="false" tabindex="-1" data-i="1"><span class="scene-tab__ico" aria-hidden="true">串</span>概念串联</button>
+        <button class="scene-tab" type="button" role="tab" id="tab-2" aria-controls="pane-2" aria-selected="false" tabindex="-1" data-i="2"><span class="scene-tab__ico" aria-hidden="true">擂</span>二选一擂台</button>
+        <button class="scene-tab" type="button" role="tab" id="tab-3" aria-controls="pane-3" aria-selected="false" tabindex="-1" data-i="3"><span class="scene-tab__ico" aria-hidden="true">拆</span>决策拆解桌</button>
+        <button class="scene-tab" type="button" role="tab" id="tab-4" aria-controls="pane-4" aria-selected="false" tabindex="-1" data-i="4"><span class="scene-tab__ico" aria-hidden="true">問</span>防坑提问器</button>
+        <button class="scene-tab" type="button" role="tab" id="tab-5" aria-controls="pane-5" aria-selected="false" tabindex="-1" data-i="5"><span class="scene-tab__ico" aria-hidden="true">診</span>理财急诊</button>
+        <button class="scene-tab" type="button" role="tab" id="tab-6" aria-controls="pane-6" aria-selected="false" tabindex="-1" data-i="6"><span class="scene-tab__ico" aria-hidden="true">熱</span>每日热词</button>
+        </div>
 
-        <a class="scene-card" href="#skills" onclick="openSkillModal('combo');return false;">
-          <div class="scene-shot"><img src="assets/cases/combo.png" alt="概念串联输出示例" loading="lazy" width="360" height="270"></div>
-          <div class="scene-body">
-            <div class="scene-title"><span class="kico" aria-hidden="true">串</span><h3>概念串联</h3></div>
-            <p class="scene-desc">一个复杂事件牵扯好几个概念，帮你搭一条从宏观到自家钱包的传导链。</p>
-            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+        <div class="scene-stage" id="sceneStage">
+        <div class="scene-pane is-on" id="pane-0" role="tabpanel" aria-labelledby="tab-0" data-key="narrative">
+          <div class="scene-copy">
+            <p class="scene-eyebrow">场景 01 · 看财经新闻</p>
+            <h3>满屏数字看不懂，先拆成一条线</h3>
+            <p class="scene-lead">贴一段新闻或研报，AI 先挑出 3-5 个核心概念，再按「钩子 → 原始数据 → 概念拆解 → 行动清单」串成一条因果线。</p>
+            <ul class="scene-points">
+              <li>提取核心概念，不堆术语</li>
+              <li>串成因果链，落到「对你意味着什么」</li>
+              <li>不预测涨跌，不给买卖建议</li>
+            </ul>
+            <div class="scene-actions">
+              <button class="btn btn--primary" type="button" onclick="openSkillModal('narrative')">复制这个提示词</button>
+              <a class="btn btn--line" href="/guide">看完整用法</a>
+            </div>
           </div>
-        </a>
+          <figure class="scene-figure">
+            <img src="assets/cases/narrative.png" alt="新闻翻译机输出示例：把一段新闻拆成核心概念与因果线" width="541" height="714" loading="eager">
+          </figure>
+        </div>
 
-        <a class="scene-card" href="#skills" onclick="openSkillModal('duel');return false;">
-          <div class="scene-shot"><img src="assets/cases/duel.png" alt="二选一擂台输出示例" loading="lazy" width="360" height="270"></div>
-          <div class="scene-body">
-            <div class="scene-title"><span class="kico" aria-hidden="true">擂</span><h3>二选一擂台</h3></div>
-            <p class="scene-desc">提前还贷还是买理财？四维并排对比，给出「什么条件下选哪个」的分界线。</p>
-            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+        <div class="scene-pane" id="pane-1" role="tabpanel" aria-labelledby="tab-1" data-key="combo" aria-hidden="true">
+          <div class="scene-copy">
+            <p class="scene-eyebrow">场景 02 · 复杂事件</p>
+            <h3>概念串不起来，搭一条传导链</h3>
+            <p class="scene-lead">热搜里的字都认识，连起来不懂。把涉及的概念摆好，从宏观一路推到你的钱包，最多四步。</p>
+            <ul class="scene-points">
+              <li>多概念组合，不是单点解释</li>
+              <li>宏观 → 行业 → 个人，链条讲得清</li>
+              <li>适合讲给客户、家人听</li>
+            </ul>
+            <div class="scene-actions">
+              <button class="btn btn--primary" type="button" onclick="openSkillModal('combo')">复制这个提示词</button>
+              <a class="btn btn--line" href="/guide">看完整用法</a>
+            </div>
           </div>
-        </a>
+          <figure class="scene-figure">
+            <img src="assets/cases/combo.png" alt="概念串联输出示例：从宏观事件推到个人钱包的传导链" width="541" height="714" loading="lazy">
+          </figure>
+        </div>
 
-        <a class="scene-card" href="#skills" onclick="openSkillModal('decision');return false;">
-          <div class="scene-shot"><img src="assets/cases/decision.png" alt="决策拆解桌输出示例" loading="lazy" width="360" height="270"></div>
-          <div class="scene-body">
-            <div class="scene-title"><span class="kico" aria-hidden="true">拆</span><h3>决策拆解桌</h3></div>
-            <p class="scene-desc">买房、教育金、要不要辞职——先把决策拆成能填的变量，再谈怎么选。</p>
-            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+        <div class="scene-pane" id="pane-2" role="tabpanel" aria-labelledby="tab-2" data-key="duel" aria-hidden="true">
+          <div class="scene-copy">
+            <p class="scene-eyebrow">场景 03 · 产品对比</p>
+            <h3>两个选项拿不定，先摆到一张桌上</h3>
+            <p class="scene-lead">提前还贷还是买理财？按「最坏情况 / 流动性 / 收益来源 / 适合谁」四维并排比，最后给一条分界线。</p>
+            <ul class="scene-points">
+              <li>先校验两个选项是不是同一层级</li>
+              <li>四维并排，不偏袒任何一方</li>
+              <li>给出「什么条件下选哪个」</li>
+            </ul>
+            <div class="scene-actions">
+              <button class="btn btn--primary" type="button" onclick="openSkillModal('duel')">复制这个提示词</button>
+              <a class="btn btn--line" href="/guide">看完整用法</a>
+            </div>
           </div>
-        </a>
+          <figure class="scene-figure">
+            <img src="assets/cases/duel.png" alt="二选一擂台输出示例：两个选项四维并排对比" width="541" height="714" loading="lazy">
+          </figure>
+        </div>
 
-        <a class="scene-card" href="#skills" onclick="openSkillModal('probe');return false;">
-          <div class="scene-shot"><img src="assets/cases/probe.png" alt="防坑提问器输出示例" loading="lazy" width="360" height="270"></div>
-          <div class="scene-body">
-            <div class="scene-title"><span class="kico" aria-hidden="true">問</span><h3>防坑提问器</h3></div>
-            <p class="scene-desc">有人推荐了个产品，听着很香。先列出你该问销售的问题，以及什么回答是红灯。</p>
-            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+        <div class="scene-pane" id="pane-3" role="tabpanel" aria-labelledby="tab-3" data-key="decision" aria-hidden="true">
+          <div class="scene-copy">
+            <p class="scene-eyebrow">场景 04 · 重大决定</p>
+            <h3>该不该做，先拆成能填的变量</h3>
+            <p class="scene-lead">买房、教育金、要不要辞职——把决定拆成几个能填数字的变量，每个变量告诉你倾向哪边。</p>
+            <ul class="scene-points">
+              <li>拆成 4 个可填的变量</li>
+              <li>给分界线，不替你拍板</li>
+              <li>最后一步是你今天就能查的一个数</li>
+            </ul>
+            <div class="scene-actions">
+              <button class="btn btn--primary" type="button" onclick="openSkillModal('decision')">复制这个提示词</button>
+              <a class="btn btn--line" href="/guide">看完整用法</a>
+            </div>
           </div>
-        </a>
+          <figure class="scene-figure">
+            <img src="assets/cases/decision.png" alt="决策拆解桌输出示例：把决定拆成可填的变量" width="541" height="714" loading="lazy">
+          </figure>
+        </div>
 
-        <a class="scene-card" href="#skills" onclick="openSkillModal('emergency');return false;">
-          <div class="scene-shot"><img src="assets/cases/emergency.png" alt="理财急诊输出示例" loading="lazy" width="360" height="270"></div>
-          <div class="scene-body">
-            <div class="scene-title"><span class="kico" aria-hidden="true">診</span><h3>理财急诊</h3></div>
-            <p class="scene-desc">买的理财亏了，割还是拿？先分清是正常波动还是买错了东西，再决定。</p>
-            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+        <div class="scene-pane" id="pane-4" role="tabpanel" aria-labelledby="tab-4" data-key="probe" aria-hidden="true">
+          <div class="scene-copy">
+            <p class="scene-eyebrow">场景 05 · 怕被坑</p>
+            <h3>别人推荐的，先问清这几句</h3>
+            <p class="scene-lead">销售说「锁定复利」「保本保息」，你听着心动又发虚。先把该问的问题列出来，再判断回答是不是红灯。</p>
+            <ul class="scene-points">
+              <li>3-5 个能照着念的问题</li>
+              <li>标明对方可能怎么绕过去</li>
+              <li>哪些回答是红灯，直接停</li>
+            </ul>
+            <div class="scene-actions">
+              <button class="btn btn--primary" type="button" onclick="openSkillModal('probe')">复制这个提示词</button>
+              <a class="btn btn--line" href="/guide">看完整用法</a>
+            </div>
           </div>
-        </a>
+          <figure class="scene-figure">
+            <img src="assets/cases/probe.png" alt="防坑提问器输出示例：列出该问销售的问题与红灯答案" width="541" height="714" loading="lazy">
+          </figure>
+        </div>
 
-        <a class="scene-card" href="#skills" onclick="openSkillModal('hotword');return false;">
-          <div class="scene-shot"><img src="assets/cases/hotword.png" alt="每日热词输出示例" loading="lazy" width="360" height="270"></div>
-          <div class="scene-body">
-            <div class="scene-title"><span class="kico" aria-hidden="true">熱</span><h3>每日热词</h3></div>
-            <p class="scene-desc">今天市场在聊什么？拆出必须懂的几个词，串成一句能复述给朋友的话。</p>
-            <div class="scene-foot"><span>复制提示词</span><span aria-hidden="true">→</span></div>
+        <div class="scene-pane" id="pane-5" role="tabpanel" aria-labelledby="tab-5" data-key="emergency" aria-hidden="true">
+          <div class="scene-copy">
+            <p class="scene-eyebrow">场景 06 · 持仓亏了</p>
+            <h3>亏了割还是拿，先分清是不是买错</h3>
+            <p class="scene-lead">净值一跌就慌。先看回撤、看你买的到底是什么，再决定动不动手——不是先看今天跌了几个点。</p>
+            <ul class="scene-points">
+              <li>先判断是正常波动还是买错</li>
+              <li>倒查该看的 3-5 个词条</li>
+              <li>只帮你想清楚，不替你决定</li>
+            </ul>
+            <div class="scene-actions">
+              <button class="btn btn--primary" type="button" onclick="openSkillModal('emergency')">复制这个提示词</button>
+              <a class="btn btn--line" href="/guide">看完整用法</a>
+            </div>
           </div>
-        </a>
+          <figure class="scene-figure">
+            <img src="assets/cases/emergency.png" alt="理财急诊输出示例：判断是波动还是买错" width="541" height="714" loading="lazy">
+          </figure>
+        </div>
 
-        <a class="scene-more" href="/guide">
-          <h3>8 个场景的完整用法 →</h3>
-          <p>哪个场景配哪个 Skill、提示词怎么改、哪些问题不该问它——使用指南里全写好了。</p>
-          <span>打开使用指南</span>
-        </a>
+        <div class="scene-pane" id="pane-6" role="tabpanel" aria-labelledby="tab-6" data-key="hotword" aria-hidden="true">
+          <div class="scene-copy">
+            <p class="scene-eyebrow">场景 07 · 追今天</p>
+            <h3>今天聊什么，串成一句能复述的话</h3>
+            <p class="scene-lead">一天五条热词，每条讲人话 + 为什么今天要看，最后串成一句你能讲给朋友听的完整话。</p>
+            <ul class="scene-points">
+              <li>每天 5 条，跟得上市场</li>
+              <li>每条一句话定义 + 为什么重要</li>
+              <li>不预测涨跌，只做翻译</li>
+            </ul>
+            <div class="scene-actions">
+              <button class="btn btn--primary" type="button" onclick="openSkillModal('hotword')">复制这个提示词</button>
+              <a class="btn btn--line" href="/guide">看完整用法</a>
+            </div>
+          </div>
+          <figure class="scene-figure">
+            <img src="assets/cases/hotword.png" alt="每日热词输出示例：把今天的热词串成一句话" width="541" height="714" loading="lazy">
+          </figure>
+        </div>
+        </div>
+
+        <div class="scene-rail">
+          <div class="scene-dots" id="sceneDots">
+          <button class="scene-dot is-on" type="button" data-i="0" aria-label="第 1 个场景：新闻翻译机"></button>
+          <button class="scene-dot" type="button" data-i="1" aria-label="第 2 个场景：概念串联"></button>
+          <button class="scene-dot" type="button" data-i="2" aria-label="第 3 个场景：二选一擂台"></button>
+          <button class="scene-dot" type="button" data-i="3" aria-label="第 4 个场景：决策拆解桌"></button>
+          <button class="scene-dot" type="button" data-i="4" aria-label="第 5 个场景：防坑提问器"></button>
+          <button class="scene-dot" type="button" data-i="5" aria-label="第 6 个场景：理财急诊"></button>
+          <button class="scene-dot" type="button" data-i="6" aria-label="第 7 个场景：每日热词"></button>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -2178,7 +2503,41 @@ var ALL_ENTRIES = [
 {"id":1045,"title":"企业补充医疗","chapter":"第十九篇：人生账本与长期规划","card_titles":["公司帮你多买的医疗报销"],"file":"企业补充医疗.html","filename":"企业补充医疗.html"},
 {"id":1046,"title":"社保并轨","chapter":"第十九篇：人生账本与长期规划","card_titles":["机关事业单位养老金并轨了"],"file":"社保并轨.html","filename":"社保并轨.html"},
 {"id":1047,"title":"养老金计发月数","chapter":"第十九篇：人生账本与长期规划","card_titles":["个人账户里的钱，按月领多少"],"file":"养老金计发月数.html","filename":"养老金计发月数.html"},
-{"id":1048,"title":"社保卡 / 医保码","chapter":"第十九篇：人生账本与长期规划","card_titles":["一张卡 + 一个码，看病报销都在里面"],"file":"社保卡 _ 医保码.html","filename":"社保卡 _ 医保码.html"}
+{"id":1048,"title":"社保卡 / 医保码","chapter":"第十九篇：人生账本与长期规划","card_titles":["一张卡 + 一个码，看病报销都在里面"],"file":"社保卡 _ 医保码.html","filename":"社保卡 _ 医保码.html"},
+{"id":1050,"title":"互助养老 / 抱团养老 / 候鸟养老","chapter":"第十九篇：人生账本与长期规划","card_titles":["不靠子女，也能有人互相照应"],"file":"互助养老 _ 抱团养老 _ 候鸟养老.html","filename":"互助养老 _ 抱团养老 _ 候鸟养老.html"},
+{"id":1051,"title":"税延养老","chapter":"第十九篇：人生账本与长期规划","card_titles":["现在免税，领钱时再补"],"file":"税延养老.html","filename":"税延养老.html"},
+{"id":1052,"title":"赠与税","chapter":"第十九篇：人生账本与长期规划","card_titles":["白送也要交税？看情况"],"file":"赠与税.html","filename":"赠与税.html"},
+{"id":1053,"title":"长寿风险","chapter":"第十九篇：人生账本与长期规划","card_titles":["活得久，也是一种财务风险"],"file":"长寿风险.html","filename":"长寿风险.html"},
+{"id":1054,"title":"二房东","chapter":"第十八篇：借贷与生活刚需","card_titles":["租来的房子，还能再租出去？"],"file":"二房东.html","filename":"二房东.html"},
+{"id":1055,"title":"云闪付","chapter":"第十七篇：日常支付与账户管理","card_titles":["银联官方“钱包”，一个 App 管多家卡"],"file":"云闪付.html","filename":"云闪付.html"},
+{"id":1056,"title":"央行征信 / 百行征信 / 朴道征信","chapter":"第十八篇：借贷与生活刚需","card_titles":["你的信用档案，到底谁在管"],"file":"央行征信 _ 百行征信 _ 朴道征信.html","filename":"央行征信 _ 百行征信 _ 朴道征信.html"},
+{"id":1057,"title":"年费 / 睡眠卡","chapter":"第十七篇：日常支付与账户管理","card_titles":["信用卡“白嫖”的隐藏成本"],"file":"年费 _ 睡眠卡.html","filename":"年费 _ 睡眠卡.html"},
+{"id":1058,"title":"满二唯一 / 满五唯一","chapter":"第十八篇：借贷与生活刚需","card_titles":["卖房的“满二”“满五”省多少钱"],"file":"满二唯一 _ 满五唯一.html","filename":"满二唯一 _ 满五唯一.html"},
+{"id":1059,"title":"物业费 / 维修基金","chapter":"第十八篇：借贷与生活刚需","card_titles":["住进去之后，每月还有这笔钱"],"file":"物业费 _ 维修基金.html","filename":"物业费 _ 维修基金.html"},
+{"id":1060,"title":"NFC / 刷脸支付","chapter":"第十七篇：日常支付与账户管理","card_titles":["让“掏手机”都省掉的两种支付"],"file":"NFC _ 刷脸支付.html","filename":"NFC _ 刷脸支付.html"},
+{"id":1061,"title":"养老规划五步法","chapter":"第十九篇：人生账本与长期规划","card_titles":["把养老从焦虑变成清单"],"file":"养老规划五步法.html","filename":"养老规划五步法.html"},
+{"id":1062,"title":"支付限额 / 大额转账","chapter":"第十七篇：日常支付与账户管理","card_titles":["账户上的“安全水龙头”"],"file":"支付限额 _ 大额转账.html","filename":"支付限额 _ 大额转账.html"},
+{"id":1063,"title":"立减金","chapter":"第十七篇：日常支付与账户管理","card_titles":["银行“撒币”，你捡不捡？"],"file":"立减金.html","filename":"立减金.html"},
+{"id":1064,"title":"首付贷","chapter":"第十八篇：借贷与生活刚需","card_titles":["借钱付首付的“灰色生意”"],"file":"首付贷.html","filename":"首付贷.html"},
+{"id":1065,"title":"裸贷","chapter":"第十八篇：借贷与生活刚需","card_titles":["用“隐私”当抵押的借款"],"file":"裸贷.html","filename":"裸贷.html"},
+{"id":1066,"title":"摇号买房","chapter":"第十八篇：借贷与生活刚需","card_titles":["楼市“抽签”怎么运作"],"file":"摇号买房.html","filename":"摇号买房.html"},
+{"id":1067,"title":"白户 / 花户","chapter":"第十八篇：借贷与生活刚需","card_titles":["征信上的两种“不好看”"],"file":"白户 _ 花户.html","filename":"白户 _ 花户.html"},
+{"id":1068,"title":"征信异议申诉","chapter":"第十八篇：借贷与生活刚需","card_titles":["给征信“改错”的正规入口"],"file":"征信异议申诉.html","filename":"征信异议申诉.html"},
+{"id":1069,"title":"大数据风控","chapter":"第十八篇：借贷与生活刚需","card_titles":["你手机里的“隐形评分卡”"],"file":"大数据风控.html","filename":"大数据风控.html"},
+{"id":1070,"title":"养老理财 / 养老储蓄","chapter":"第十九篇：人生账本与长期规划","card_titles":["养老钱也有“专属存款和专属理财”"],"file":"养老理财 _ 养老储蓄.html","filename":"养老理财 _ 养老储蓄.html"},
+{"id":1071,"title":"老破小 / 次新房 / 笋盘","chapter":"第十八篇：借贷与生活刚需","card_titles":["二手房市场的三张“标签”"],"file":"老破小 _ 次新房 _ 笋盘.html","filename":"老破小 _ 次新房 _ 笋盘.html"},
+{"id":1072,"title":"报复性消费","chapter":"第二十篇：消费心理与财富品格","card_titles":["憋久了，钱包会“报复”"],"file":"报复性消费.html","filename":"报复性消费.html"},
+{"id":1073,"title":"补偿性消费","chapter":"第二十篇：消费心理与财富品格","card_titles":["买的是东西，补的是心情"],"file":"补偿性消费.html","filename":"补偿性消费.html"},
+{"id":1074,"title":"即时满足","chapter":"第二十篇：消费心理与财富品格","card_titles":["“想要”和“等得起”的拉锯战"],"file":"即时满足.html","filename":"即时满足.html"},
+{"id":1075,"title":"懒人经济 / 单身经济 / 银发经济 / 她经济 / 宠物经济 / 谷子经济","chapter":"第二十篇：消费心理与财富品格","card_titles":["六个人群，六个钱包"],"file":"懒人经济 _ 单身经济 _ 银发经济 _ 她经济 _ 宠物经济 _ 谷子经济.html","filename":"懒人经济 _ 单身经济 _ 银发经济 _ 她经济 _ 宠物经济 _ 谷子经济.html"},
+{"id":1076,"title":"奶头乐","chapter":"第二十篇：消费心理与财富品格","card_titles":["让人“爽到停不下来”的东西"],"file":"奶头乐.html","filename":"奶头乐.html"},
+{"id":1077,"title":"杀鱼盘","chapter":"第二十二篇：骗局与避坑指南","card_titles":["专钓“贪小便宜”的鱼"],"file":"杀鱼盘.html","filename":"杀鱼盘.html"},
+{"id":1078,"title":"声音克隆诈骗","chapter":"第二十二篇：骗局与避坑指南","card_titles":["“妈，我出事了”——声音是真的，人是假的"],"file":"声音克隆诈骗.html","filename":"声音克隆诈骗.html"},
+{"id":1079,"title":"导师 / 托","chapter":"第二十二篇：骗局与避坑指南","card_titles":["群里“老师”带单，群里“演员”赚钱"],"file":"导师 _ 托.html","filename":"导师 _ 托.html"},
+{"id":1080,"title":"股票回购增持再贷款","chapter":"第四篇：投资武器库 · 股票篇","card_titles":["央行的回购弹药库"],"file":"股票回购增持再贷款.html","filename":"股票回购增持再贷款.html"},
+{"id":1081,"title":"互换便利（SFISF）","chapter":"第十一篇：宏观风向标","card_titles":["以券换券：央行的换血工具"],"file":"互换便利（SFISF）.html","filename":"互换便利（SFISF）.html"},
+{"id":1082,"title":"政策底 _ 市场底","chapter":"第十六篇：金融市场黑话与交易场景","card_titles":["政策底：跌到政府出手的位置"],"file":"政策底 _ 市场底.html","filename":"政策底 _ 市场底.html"},
+{"id":1083,"title":"AI算力","chapter":"第十一篇：宏观风向标","card_titles":["算力：AI 的发动机"],"file":"AI算力.html","filename":"AI算力.html"}
 ];
 var __entriesReady = false;
 var __entriesWaiters = [];
@@ -2324,7 +2683,10 @@ function findRule(query) {
 }
 
 function entryLink(e) {
-  return 'terms/' + encodeURIComponent(e.file || e.filename || (e.title + '.html'));
+  /* P0-1：站内链接一律 clean URL，词条文件名去掉 .html 后缀 */
+  var f = String(e.file || e.filename || (e.title + '.html'));
+  if (f.slice(-5) === '.html') f = f.slice(0, -5);
+  return 'terms/' + encodeURIComponent(f);
 }
 
 /* ============ 搜索（只搜词条标题）+ 分流 ============ */
@@ -2432,6 +2794,16 @@ function entryLink(e) {
       window.track('search_submit', { query: this.value.trim() });
     }
   });
+
+  /* 进页面时若带 ?q= 参数（如 FAQ 深链 / SearchAction），自动跑一次搜索 */
+  try {
+    var qp = new URLSearchParams(window.location.search).get('q');
+    if (qp) {
+      qp = qp.trim();
+      searchBox.value = qp;
+      renderResults(qp);
+    }
+  } catch (err) {}
 })();
 
 /* ============ 7 个 Skill 提示词 ============ */
@@ -2637,6 +3009,267 @@ function fallbackCopy(text) {
         form.reset();
       });
   });
+})();
+</script>
+
+<script>
+/* ============ 屏三：7 场景一屏轮播（2s 自动 + 定位 + 可暂停） ============ */
+(function () {
+  var slider = document.getElementById('sceneSlider');
+  if (!slider) return;
+  var tabs = [].slice.call(slider.querySelectorAll('.scene-tab'));
+  var panes = [].slice.call(slider.querySelectorAll('.scene-pane'));
+  var dots = [].slice.call(slider.querySelectorAll('.scene-dot'));
+  var stage = document.getElementById('sceneStage');
+  var bar = null; /* 当前激活圆点，负责跑 2s 进度填充 */
+  var n = panes.length;
+  if (!n) return;
+
+  var step = 2000;
+  var idx = 0;
+  var timer = null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function runBar() {
+    dots.forEach(function (d) { d.classList.remove('is-run'); });
+    bar = dots[idx] || null;
+    if (!bar) return;
+    void bar.offsetWidth;
+    bar.classList.add('is-run');
+  }
+
+  function show(i, byUser) {
+    idx = ((i % n) + n) % n;
+    tabs.forEach(function (t, k) {
+      var on = k === idx;
+      t.classList.toggle('is-on', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+    });
+    panes.forEach(function (p, k) {
+      var on = k === idx;
+      p.classList.toggle('is-on', on);
+      if (on) p.removeAttribute('aria-hidden');
+      else p.setAttribute('aria-hidden', 'true');
+    });
+    dots.forEach(function (d, k) { d.classList.toggle('is-on', k === idx); });
+    runBar();
+    /* 移动端标签条横向滚动：把当前标签带回可视区 */
+    var tl = slider.querySelector('[role="tablist"]');
+    var cur = tabs[idx];
+    if (tl && cur && tl.scrollWidth > tl.clientWidth + 4) {
+      var target = cur.offsetLeft - (tl.clientWidth - cur.offsetWidth) / 2;
+      target = Math.max(0, Math.min(target, tl.scrollWidth - tl.clientWidth));
+      if (typeof tl.scrollTo === 'function') {
+        tl.scrollTo({ left: target, behavior: reduce ? 'auto' : 'smooth' });
+      } else {
+        tl.scrollLeft = target;
+      }
+    }
+    if (byUser) start();
+  }
+
+  function start() {
+    if (reduce) return;
+    stop();
+    timer = setInterval(function () { show(idx + 1, false); }, step);
+  }
+  function stop() {
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+  function pause(on) {
+    slider.classList.toggle('is-paused', !!on);
+    if (on) stop();
+    else start();
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      show(parseInt(t.getAttribute('data-i'), 10) || 0, true);
+    });
+  });
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () {
+      show(parseInt(d.getAttribute('data-i'), 10) || 0, true);
+    });
+  });
+
+  /* 键盘：左右方向键 / Home / End */
+  var tablist = slider.querySelector('[role="tablist"]');
+  if (tablist) {
+    tablist.addEventListener('keydown', function (ev) {
+      var k = ev.key;
+      if (k !== 'ArrowRight' && k !== 'ArrowLeft' && k !== 'Home' && k !== 'End') return;
+      ev.preventDefault();
+      var next = k === 'ArrowRight' ? idx + 1 : k === 'ArrowLeft' ? idx - 1 : k === 'Home' ? 0 : n - 1;
+      show(next, true);
+      if (tabs[idx]) tabs[idx].focus();
+    });
+  }
+
+  /* 桌面悬停 / 键盘聚焦 / 切到后台 → 暂停 */
+  slider.addEventListener('mouseenter', function () { pause(true); });
+  slider.addEventListener('mouseleave', function () { pause(false); });
+  slider.addEventListener('focusin', function () { pause(true); });
+  slider.addEventListener('focusout', function () {
+    setTimeout(function () {
+      if (!slider.contains(document.activeElement)) pause(false);
+    }, 0);
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) stop(); else start();
+  });
+
+  /* 移动端左右滑 */
+  if (stage) {
+    var sx = 0, sy = 0, tracking = false;
+    stage.addEventListener('touchstart', function (ev) {
+      var t = ev.touches[0];
+      sx = t.clientX; sy = t.clientY; tracking = true;
+    }, { passive: true });
+    stage.addEventListener('touchend', function (ev) {
+      if (!tracking) return;
+      tracking = false;
+      var t = ev.changedTouches[0];
+      var dx = t.clientX - sx;
+      var dy = t.clientY - sy;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+        show(dx < 0 ? idx + 1 : idx - 1, true);
+      }
+    }, { passive: true });
+  }
+
+  show(0, false);
+  start();
+})();
+
+/* ============ 大家都在搜：/api/hot-search + 词条匹配 ============ */
+(function () {
+  var listEl = document.getElementById('trendList');
+  var metaEl = document.getElementById('trendMeta');
+  var refreshBtn = document.getElementById('trendRefresh');
+  if (!listEl) return;
+
+  /* 兜底词池：接口不可用（本地预览 / 抓取被挡）时也能换批 */
+  var POOL = [
+    '可转债', 'LPR', '最大回撤', '国债逆回购', 'ETF', '美联储降息', '黄金', '存款利率',
+    '北交所打新', '化债', '降准', 'CPI', '房贷利率', 'REITs', '红利指数', '美元指数',
+    '两融余额', '社融', 'VIX', '养老目标基金', '可转债打新', '股息率', '市盈率', '估值分位'
+  ];
+  var PER_PAGE = 10;
+  var live = [];
+  var page = 0;
+  var titleMap = null;
+
+  function buildMap() {
+    if (titleMap) return titleMap;
+    titleMap = {};
+    (typeof ALL_ENTRIES !== 'undefined' ? ALL_ENTRIES : []).forEach(function (e) {
+      if (e && e.title && !titleMap[e.title]) titleMap[e.title] = e;
+    });
+    return titleMap;
+  }
+
+  /* 词条标题去掉括注：「可转债（下有保底，上不封顶）」→「可转债」 */
+  function cleanTitle(t) {
+    return String(t || '').split(/[（(]/)[0].split(' / ')[0].split('/')[0].trim();
+  }
+
+  /* 热词 → 词条：去括注后 精确 → 热词含词条（取最长，最具体）→ 词条含热词（取最短） */
+  function matchEntry(word) {
+    var map = buildMap();
+    if (!word) return null;
+    if (map[word]) return map[word];
+    var same = null, wordHas = null, wordHasKey = '', hasWord = null, hasWordKey = '';
+    for (var t in map) {
+      if (!Object.prototype.hasOwnProperty.call(map, t)) continue;
+      var c = cleanTitle(t);
+      if (!c || c.length < 2) continue;
+      if (c === word) { same = map[t]; break; }
+      if (word.indexOf(c) !== -1 && c.length > wordHasKey.length) { wordHas = map[t]; wordHasKey = c; }
+      if (c.indexOf(word) !== -1 && (!hasWord || c.length < hasWordKey.length)) { hasWord = map[t]; hasWordKey = c; }
+    }
+    return same || wordHas || hasWord;
+  }
+
+  function linkOf(word) {
+    var e = matchEntry(word);
+    if (e) {
+      var href = entryLink(e).replace(/\.html$/, '');
+      return href.charAt(0) === '/' ? href : '/' + href;
+    }
+    return '/?q=' + encodeURIComponent(word);
+  }
+
+  function render(words) {
+    var html = '';
+    words.slice(0, PER_PAGE).forEach(function (w, i) {
+      var e = matchEntry(w);
+      html += '<li><a href="' + linkOf(w) + '"' + (e ? ' title="看词条：' + e.title + '"' : '') + '>' +
+        '<span class="trend-rank">' + (i + 1) + '</span>' +
+        '<span class="trend-word">' + w.replace(/</g, '&lt;') + '</span>' +
+        (i === 0 ? '<span class="trend-tag">热</span>' : '') +
+        '</a></li>';
+    });
+    listEl.innerHTML = html;
+  }
+
+  function currentPool() {
+    var seen = {};
+    var out = [];
+    live.concat(POOL).forEach(function (w) {
+      if (!w || seen[w]) return;
+      seen[w] = 1;
+      out.push(w);
+    });
+    return out;
+  }
+
+  function renderPage() {
+    var pool = currentPool();
+    if (!pool.length) return;
+    var start = (page * PER_PAGE) % pool.length;
+    var words = pool.slice(start, start + PER_PAGE);
+    if (words.length < PER_PAGE) words = words.concat(pool.slice(0, PER_PAGE - words.length));
+    render(words);
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', function () {
+      page += 1;
+      renderPage();
+    });
+  }
+
+  /* 首屏：把 HTML 里的静态兜底词也过一遍匹配，能对上词条就直接链到词条页 */
+  live = [].map.call(listEl.querySelectorAll('.trend-word'), function (el) {
+    return (el.textContent || '').trim();
+  }).filter(Boolean);
+  renderPage();
+
+  /* 拉接口：3 秒超时就放弃，页面静态兜底不受影响 */
+  var ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 3000);
+  fetch('/api/hot-search', ctl ? { signal: ctl.signal } : {})
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (d) {
+      clearTimeout(timer);
+      if (!d || !d.ok || !d.items || !d.items.length) return;
+      live = d.items.slice(0);
+      page = 0;
+      renderPage();
+      if (metaEl) {
+        var t = '';
+        try {
+          t = new Date(d.updatedAt).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+        } catch (e) { t = ''; }
+        metaEl.textContent = (d.source === 'live' ? '全网热榜' : '全网热榜 + 每日热词') + (t ? ' · ' + t + ' 更新' : '');
+      }
+    })
+    .catch(function () {
+      clearTimeout(timer);
+      if (metaEl) metaEl.textContent = '理财热词 · 每 10 分钟更新';
+    });
 })();
 </script>
 
