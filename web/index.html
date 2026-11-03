@@ -3268,7 +3268,7 @@ function fallbackCopy(text) {
     }
     (data.search || []).forEach(function (s) { add(s.w, 'search', s.n); });
     (data.hot || []).forEach(function (w) { add(w, 'hot', 0); });
-    (data.daily || []).forEach(function (w) { add(w, 'hot', 0); });
+    /* data.daily 是「今日热词」模块的内容，这里不再借用，避免同一屏重复出现同一批词 */
     POOL.forEach(function (w) { add(w, 'pool', 0); });
     return out;
   }
