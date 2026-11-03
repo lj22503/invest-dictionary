@@ -13,7 +13,7 @@ export const config = {
   runtime: 'edge'
 };
 
-const CACHE_KEY = 'hot_search:v4';
+const CACHE_KEY = 'hot_search:v5';
 const CACHE_TTL = 600; // 10 分钟
 const MAX_ITEMS = 12;
 
@@ -30,6 +30,15 @@ const FIN_PATTERN = new RegExp([
   '货币', '信贷', '社融', 'MLF', 'LPR', '降准', '降息', '加息', '化债', '城投',
   '专项债', '特别国债', '大宗', '铜价', '锂', '光伏', '芯片', '算力', '大模型',
   '经济', '消费', '出口', '贸易', '制裁', '风险'
+].join('|'));
+
+// 非财经领域热词（娱乐 / 体育 / 社会花边）：命中就丢，避免「女作家称AI写书赚百万美元」这种
+// 只是碰巧含「美元」的泛新闻混进理财热搜
+const NEG_PATTERN = new RegExp([
+  '明星', '演员', '歌手', '艺人', '作家', '导演', '剧组', '综艺', '电影', '电视剧', '演唱会',
+  '恋情', '结婚', '离婚', '出轨', '怀孕', '生娃', '去世', '病逝', '悼念',
+  '夺冠', '球队', '球员', '比分', '夺冠', '国足', '球赛',
+  '游戏', '手游', '主播', '网红', '减肥', '美食', '景区', '高考', '考生', '司机', '外卖'
 ].join('|'));
 
 // 热榜词尾巴上常见的角标，清掉以后才做词条匹配
@@ -54,6 +63,7 @@ function pick(list) {
     const s = clean(w);
     if (!s) continue;
     if (!FIN_PATTERN.test(s)) continue;
+    if (NEG_PATTERN.test(s)) continue;
     if (out.indexOf(s) === -1) out.push(s);
   }
   return out;
