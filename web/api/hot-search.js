@@ -13,7 +13,7 @@ export const config = {
   runtime: 'edge'
 };
 
-const CACHE_KEY = 'hot_search:v1';
+const CACHE_KEY = 'hot_search:v2';
 const CACHE_TTL = 600; // 10 分钟
 const MAX_ITEMS = 12;
 
@@ -41,7 +41,9 @@ function clean(word) {
     .replace(NOISE, '')
     .replace(/\s+/g, ' ')
     .trim();
-  if (s.length < 2 || s.length > 18) return '';
+  /* 热搜榜要的是「搜索词」，不是新闻标题：先在分隔符处截断，只留前半句 */
+  s = s.split(/[ 　|｜·:：，,、—–]/)[0].trim();
+  if (s.length < 2 || s.length > 12) return '';
   if (!/[\u4e00-\u9fa5A-Za-z]/.test(s)) return '';
   return s;
 }
@@ -165,6 +167,21 @@ export default async function handler(req) {
       if (w && !seen[w]) { seen[w] = 1; merged.push(w); }
     }
   }
+
+  /* 收口：同 2 字前缀只留最短那条（避免「A股 / A股羊字辈…」占屏），再短词优先 */
+  const shaped = [];
+  merged.forEach(function (w) {
+    var key = w.slice(0, 2);
+    var at = -1;
+    for (var i = 0; i < shaped.length; i++) {
+      if (shaped[i].slice(0, 2) === key) { at = i; break; }
+    }
+    if (at === -1) shaped.push(w);
+    else if (w.length < shaped[at].length) shaped[at] = w;
+  });
+  shaped.sort(function (a, b) { return a.length - b.length; });
+  merged.length = 0;
+  shaped.forEach(function (w) { merged.push(w); });
 
   const liveCount = merged.length;
   if (merged.length < 8) {
