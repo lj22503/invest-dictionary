@@ -210,6 +210,12 @@
   font-size: 0.62rem;
   line-height: 1.7;
 }
+.trend-count {
+  flex: 0 0 auto;
+  font-size: 0.68rem;
+  color: var(--mf-colors-text-weak);
+  font-variant-numeric: tabular-nums;
+}
 @media (max-width: 760px) {
   .trend-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero__trending { max-width: 560px; }
@@ -917,21 +923,21 @@
 
       <div class="hero__trending" aria-label="大家都在搜">
         <div class="trend-head">
-          <span class="trend-title"><span class="trend-live" aria-hidden="true"></span>大家都在搜</span>
-          <span class="trend-meta" id="trendMeta">理财热词 · 每 10 分钟更新</span>
+          <span class="trend-title"><span class="trend-live" aria-hidden="true"></span>大家在搜的词条</span>
+          <span class="trend-meta" id="trendMeta">站内搜索 + 全网热榜 · 点词直进词条</span>
           <button class="trend-refresh" type="button" id="trendRefresh">换一批</button>
         </div>
         <ol class="trend-list" id="trendList">
-          <li><a href="/?q=可转债"><span class="trend-rank">1</span><span class="trend-word">可转债</span></a></li>
-          <li><a href="/?q=LPR"><span class="trend-rank">2</span><span class="trend-word">LPR</span></a></li>
-          <li><a href="/?q=最大回撤"><span class="trend-rank">3</span><span class="trend-word">最大回撤</span></a></li>
-          <li><a href="/?q=国债逆回购"><span class="trend-rank">4</span><span class="trend-word">国债逆回购</span></a></li>
-          <li><a href="/?q=ETF"><span class="trend-rank">5</span><span class="trend-word">ETF</span></a></li>
-          <li><a href="/?q=美联储降息"><span class="trend-rank">6</span><span class="trend-word">美联储降息</span></a></li>
-          <li><a href="/?q=黄金"><span class="trend-rank">7</span><span class="trend-word">黄金</span></a></li>
-          <li><a href="/?q=存款利率"><span class="trend-rank">8</span><span class="trend-word">存款利率</span></a></li>
-          <li><a href="/?q=北交所打新"><span class="trend-rank">9</span><span class="trend-word">北交所打新</span></a></li>
-          <li><a href="/?q=化债"><span class="trend-rank">10</span><span class="trend-word">化债</span></a></li>
+          <li><a href="terms/%E5%8F%AF%E8%BD%AC%E5%80%BA%EF%BC%88%E4%B8%8B%E6%9C%89%E4%BF%9D%E5%BA%95%EF%BC%8C%E4%B8%8A%E4%B8%8D%E5%B0%81%E9%A1%B6%EF%BC%89"><span class="trend-rank">1</span><span class="trend-word">可转债</span></a></li>
+          <li><a href="terms/LPR%EF%BC%88%E8%B4%B7%E6%AC%BE%E5%B8%82%E5%9C%BA%E6%8A%A5%E4%BB%B7%E5%88%A9%E7%8E%87%EF%BC%89"><span class="trend-rank">2</span><span class="trend-word">LPR</span></a></li>
+          <li><a href="terms/%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4%EF%BC%88%E8%B7%8C%E5%BE%97%E6%9C%80%E6%B7%B1%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89"><span class="trend-rank">3</span><span class="trend-word">最大回撤</span></a></li>
+          <li><a href="terms/%E5%9B%BD%E5%80%BA%E9%80%86%E5%9B%9E%E8%B4%AD"><span class="trend-rank">4</span><span class="trend-word">国债逆回购</span></a></li>
+          <li><a href="terms/ETF%EF%BC%88%E4%BA%A4%E6%98%93%E5%9E%8B%E5%BC%80%E6%94%BE%E5%BC%8F%E6%8C%87%E6%95%B0%E5%9F%BA%E9%87%91%EF%BC%89"><span class="trend-rank">5</span><span class="trend-word">ETF</span></a></li>
+          <li><a href="terms/%E7%BE%8E%E8%81%94%E5%82%A8%E5%88%A9%E7%8E%87%E5%86%B3%E8%AE%AE"><span class="trend-rank">6</span><span class="trend-word">美联储</span></a></li>
+          <li><a href="terms/%E9%BB%84%E9%87%91%EF%BC%88%E9%81%BF%E9%99%A9%E8%B5%84%E4%BA%A7%EF%BC%89"><span class="trend-rank">7</span><span class="trend-word">黄金</span></a></li>
+          <li><a href="terms/%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87"><span class="trend-rank">8</span><span class="trend-word">存款利率</span></a></li>
+          <li><a href="terms/%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%91"><span class="trend-rank">9</span><span class="trend-word">住房公积金</span></a></li>
+          <li><a href="terms/%E5%8C%97%E4%BA%A4%E6%89%80%E6%89%93%E6%96%B0"><span class="trend-rank">10</span><span class="trend-word">北交所打新</span></a></li>
         </ol>
       </div>
 
@@ -955,7 +961,7 @@
       <div class="sec-head">
         <div class="sec-head__main">
           <h2>今日热词</h2>
-          <p>每天 5 条市场正在聊的词。点一下，把解读提示词复制到你的 AI 里。</p>
+          <p>每天 5 条市场事件，点开让 AI 讲人话。只想查一个词，用上面的搜索框或热搜。</p>
         </div>
         <div class="sec-head__aside"><a href="/dictionary">全部词条 →</a></div>
       </div>
@@ -3143,133 +3149,184 @@ function fallbackCopy(text) {
   start();
 })();
 
-/* ============ 大家都在搜：/api/hot-search + 词条匹配 ============ */
+/* ============ 大家在搜的词条：站内搜索 + 全网热榜 → 只展示能落到词条的 ============ */
 (function () {
   var listEl = document.getElementById('trendList');
   var metaEl = document.getElementById('trendMeta');
   var refreshBtn = document.getElementById('trendRefresh');
   if (!listEl) return;
 
-  /* 兜底词池：接口不可用（本地预览 / 抓取被挡）时也能换批 */
-  var POOL = [
-    '可转债', 'LPR', '最大回撤', '国债逆回购', 'ETF', '美联储降息', '黄金', '存款利率',
-    '北交所打新', '化债', '降准', 'CPI', '房贷利率', 'REITs', '红利指数', '美元指数',
-    '两融余额', '社融', 'VIX', '养老目标基金', '可转债打新', '股息率', '市盈率', '估值分位'
-  ];
   var PER_PAGE = 10;
-  var live = [];
-  var page = 0;
-  var titleMap = null;
+  /* 兜底池：全部是能查到词条的常见理财词，接口挂了也不会出现死链 */
+  var POOL = ['可转债', 'LPR', '最大回撤', '国债逆回购', 'ETF', '美联储', '黄金', '存款利率',
+    '住房公积金', '股息率', '市盈率', '可转债打新', '降准', 'CPI', 'REITs', '红利指数',
+    '美元指数', '两融余额', '社融', 'VIX', '养老目标基金', '估值分位', '基金定投', '复利'];
 
-  function buildMap() {
-    if (titleMap) return titleMap;
-    titleMap = {};
-    (typeof ALL_ENTRIES !== 'undefined' ? ALL_ENTRIES : []).forEach(function (e) {
-      if (e && e.title && !titleMap[e.title]) titleMap[e.title] = e;
-    });
-    return titleMap;
-  }
+  /* 常见热搜词 → 词条全名：自动匹配兜不住的词用这张表补（值必须是真实词条标题，找不到会自动跳过） */
+  var ALIAS = {
+    '养老金': '社保养老金（现收现付制）', '公积金': '住房公积金', '房贷': '个人住房贷款',
+    'A股': 'A股 / H股 / 美股 / B股', '打新': '新股（IPO / 打新）', '黄金': '黄金（避险资产）',
+    '原油': '油价（原油价格）', '汇率': '汇率（人民币升值/贬值）',
+    '降准': '降准（存款准备金率下调）', '降息': '降息 / 加息', '加息': '降息 / 加息',
+    '通胀': '通货膨胀（CPI）', '国债': '国债（利率债）', '债券': '债券（票面利率 / 到期收益率）',
+    '基金': '基金（公募基金）', 'ETF': 'ETF（交易型开放式指数基金）',
+    '可转债': '可转债（下有保底，上不封顶）', 'REITs': 'REITs（房地产投资信托基金）',
+    '楼市': '房价', '房价': '房价', '学区房': '学区房 / 学位房', '法拍房': '法拍房',
+    '化债': '专项债（地方基建的钱从哪来）', '城投': '地方政府债 / 城投债（信用债）',
+    '专项债': '专项债（地方基建的钱从哪来）', '创业板': '创业板指', '科创板': '科创50',
+    '沪深300': '沪深300', '上证指数': '上证指数', '港股': '港股通 / 南向资金',
+    '量化': '量化基金', '对冲': '对冲（套期保值）', '做空': '做空（沽空/卖空）',
+    '杠杆': '杠杆风险', '爆仓': '爆仓 / 穿仓', '止损': '止损（止损线）',
+    '回撤': '最大回撤（跌得最深的一次）', '定投': '基金定投', '复利': '复利（单利 vs 复利）',
+    '股息': '股息率', '分红': '分红（派息 / 送股 / 转增）', 'IPO': '新股（IPO / 打新）',
+    '关税': '关税（贸易壁垒）', '就业': '失业率', '失业': '失业保障',
+    '个税': '个人所得税', '退税': '退税 / 补税', '医保': '医保（职工/居民）',
+    '社保': '五险一金', '存款': '存款利率', '利率': '利率（基准利率）',
+    'LPR': 'LPR（贷款市场报价利率）', '美联储': '美联储利率决议', '央行': '中央银行',
+    '美元': '美元指数', '人民币': '人民币汇率', '比特币': '比特币（加密货币）',
+    '增额寿': '增额终身寿险', '年金': '年金险', '重疾': '重疾险', '车险': '车险（交强险 / 商业险）',
+    '国债逆回购': '国债逆回购', 'PMI': 'PMI（采购经理指数，经济体温计）', 'GDP': 'GDP（名义GDP vs 实际GDP）',
+    'CPI': 'CPI（居民消费价格指数）', 'PPI': 'PPI（工业生产者出厂价格指数）',
+    '社融': '社融（社会融资规模）', '存款准备金': '存款准备金', '汇率风险': '汇率风险'
+  };
+
+  var idx = null;
+  var items = [];
+  var page = 0;
 
   /* 词条标题去掉括注：「可转债（下有保底，上不封顶）」→「可转债」 */
   function cleanTitle(t) {
     return String(t || '').split(/[（(]/)[0].split(' / ')[0].split('/')[0].trim();
   }
 
-  /* 热词 → 词条：去括注后 精确 → 热词含词条（取最长，最具体）→ 词条含热词（取最短） */
-  function matchEntry(word) {
-    var map = buildMap();
+  function buildIndex() {
+    if (idx) return idx;
+    idx = { byTitle: {}, byClean: {} };
+    (typeof ALL_ENTRIES !== 'undefined' ? ALL_ENTRIES : []).forEach(function (e) {
+      if (!e || !e.title) return;
+      if (!idx.byTitle[e.title]) idx.byTitle[e.title] = e;
+      var c = cleanTitle(e.title);
+      if (c && !idx.byClean[c]) idx.byClean[c] = e;
+    });
+    return idx;
+  }
+
+  function aliasHit(word) {
+    if (ALIAS[word]) return { key: word, title: ALIAS[word] };
+    var best = '';
+    for (var k in ALIAS) {
+      if (!Object.prototype.hasOwnProperty.call(ALIAS, k)) continue;
+      if (k.length > best.length && word.indexOf(k) !== -1) best = k;
+    }
+    return best ? { key: best, title: ALIAS[best] } : null;
+  }
+
+  /* 任意输入词 → 词条：标题精确 → 去括注精确 → 别名 → 热词含词条（取最长）→ 词条含热词（取最短） */
+  function match(word) {
+    var ix = buildIndex();
     if (!word) return null;
-    if (map[word]) return map[word];
-    var same = null, wordHas = null, wordHasKey = '', hasWord = null, hasWordKey = '';
-    for (var t in map) {
-      if (!Object.prototype.hasOwnProperty.call(map, t)) continue;
+    var w = String(word).replace(/\s+/g, ' ').trim();
+    if (!w) return null;
+    if (ix.byTitle[w]) return { e: ix.byTitle[w], label: cleanTitle(w) };
+    if (ix.byClean[w]) return { e: ix.byClean[w], label: w };
+    var a = aliasHit(w);
+    if (a) {
+      var hit = ix.byTitle[a.title] || ix.byClean[cleanTitle(a.title)];
+      if (hit) return { e: hit, label: a.key };
+    }
+    var wordHas = null, wordHasKey = '', hasWord = null, hasWordKey = '';
+    for (var t in ix.byTitle) {
+      if (!Object.prototype.hasOwnProperty.call(ix.byTitle, t)) continue;
       var c = cleanTitle(t);
       if (!c || c.length < 2) continue;
-      if (c === word) { same = map[t]; break; }
-      if (word.indexOf(c) !== -1 && c.length > wordHasKey.length) { wordHas = map[t]; wordHasKey = c; }
-      if (c.indexOf(word) !== -1 && (!hasWord || c.length < hasWordKey.length)) { hasWord = map[t]; hasWordKey = c; }
+      if (w.indexOf(c) !== -1 && c.length > wordHasKey.length) { wordHas = ix.byTitle[t]; wordHasKey = c; }
+      if (c.indexOf(w) !== -1 && (!hasWord || c.length < hasWordKey.length)) { hasWord = ix.byTitle[t]; hasWordKey = c; }
     }
-    return same || wordHas || hasWord;
+    var e = wordHas || hasWord;
+    return e ? { e: e, label: cleanTitle(e.title) } : null;
   }
 
-  function linkOf(word) {
-    var e = matchEntry(word);
-    if (e) {
-      var href = entryLink(e).replace(/\.html$/, '');
-      return href.charAt(0) === '/' ? href : '/' + href;
+  /* 三路数据都先映射成词条；映射不上直接丢（这就是「点了没地方去」的根治） */
+  function collect(data) {
+    var out = [], seen = {};
+    function add(word, kind, n) {
+      var r = match(word);
+      if (!r || !r.e) return;
+      var key = r.e.title;
+      if (seen[key]) return;
+      seen[key] = 1;
+      out.push({
+        href: entryLink(r.e),
+        title: r.e.title,
+        label: r.label || cleanTitle(r.e.title),
+        kind: kind,
+        n: n || 0
+      });
     }
-    return '/?q=' + encodeURIComponent(word);
-  }
-
-  function render(words) {
-    var html = '';
-    words.slice(0, PER_PAGE).forEach(function (w, i) {
-      var e = matchEntry(w);
-      html += '<li><a href="' + linkOf(w) + '"' + (e ? ' title="看词条：' + e.title + '"' : '') + '>' +
-        '<span class="trend-rank">' + (i + 1) + '</span>' +
-        '<span class="trend-word">' + w.replace(/</g, '&lt;') + '</span>' +
-        (i === 0 ? '<span class="trend-tag">热</span>' : '') +
-        '</a></li>';
-    });
-    listEl.innerHTML = html;
-  }
-
-  function currentPool() {
-    var seen = {};
-    var out = [];
-    live.concat(POOL).forEach(function (w) {
-      if (!w || seen[w]) return;
-      seen[w] = 1;
-      out.push(w);
-    });
+    (data.search || []).forEach(function (s) { add(s.w, 'search', s.n); });
+    (data.hot || []).forEach(function (w) { add(w, 'hot', 0); });
+    (data.daily || []).forEach(function (w) { add(w, 'hot', 0); });
+    POOL.forEach(function (w) { add(w, 'pool', 0); });
     return out;
   }
 
-  function renderPage() {
-    var pool = currentPool();
-    if (!pool.length) return;
-    var start = (page * PER_PAGE) % pool.length;
-    var words = pool.slice(start, start + PER_PAGE);
-    if (words.length < PER_PAGE) words = words.concat(pool.slice(0, PER_PAGE - words.length));
-    render(words);
+  function render() {
+    var total = items.length;
+    if (!total) return;
+    var count = Math.min(PER_PAGE, total);
+    var html = '';
+    for (var i = 0; i < count; i++) {
+      var it = items[(page * PER_PAGE + i) % total];
+      html += '<li><a href="' + it.href + '" title="词条：' + it.title.replace(/"/g, '&quot;') + '">' +
+        '<span class="trend-rank">' + (i + 1) + '</span>' +
+        '<span class="trend-word">' + String(it.label).replace(/</g, '&lt;') + '</span>' +
+        (it.kind === 'hot' ? '<span class="trend-tag">热</span>' : '') +
+        (it.kind === 'search' && it.n >= 3 ? '<span class="trend-count">' + it.n + '</span>' : '') +
+        '</a></li>';
+    }
+    listEl.innerHTML = html;
   }
+
+  function setMeta(d) {
+    if (!metaEl) return;
+    var s = (d.search || []).length;
+    var h = (d.hot || []).length;
+    var bits = [];
+    if (s) bits.push('站内搜 ' + s + ' 词');
+    if (h) bits.push('全网热榜 ' + h + ' 条');
+    var t = '';
+    try {
+      t = new Date(d.updatedAt).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+    } catch (e) { t = ''; }
+    metaEl.textContent = (bits.length ? bits.join(' · ') : '词条热榜') + (t ? ' · ' + t + ' 更新' : '');
+  }
+
+  /* 首屏用兜底池先渲染（全部是词条链接），接口回来后再按真实热度重排 */
+  items = collect({});
+  render();
 
   if (refreshBtn) {
     refreshBtn.addEventListener('click', function () {
       page += 1;
-      renderPage();
+      render();
     });
   }
 
-  /* 首屏：把 HTML 里的静态兜底词也过一遍匹配，能对上词条就直接链到词条页 */
-  live = [].map.call(listEl.querySelectorAll('.trend-word'), function (el) {
-    return (el.textContent || '').trim();
-  }).filter(Boolean);
-  renderPage();
-
-  /* 拉接口：3 秒超时就放弃，页面静态兜底不受影响 */
   var ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
   var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 3000);
   fetch('/api/hot-search', ctl ? { signal: ctl.signal } : {})
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (d) {
       clearTimeout(timer);
-      if (!d || !d.ok || !d.items || !d.items.length) return;
-      live = d.items.slice(0);
+      if (!d || !d.ok) return;
+      var next = collect(d);
+      if (next.length < 4) return;   // 映射出来的太少，继续用兜底池
+      items = next;
       page = 0;
-      renderPage();
-      if (metaEl) {
-        var t = '';
-        try {
-          t = new Date(d.updatedAt).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
-        } catch (e) { t = ''; }
-        metaEl.textContent = (d.source === 'live' ? '全网热榜' : '全网热榜 + 每日热词') + (t ? ' · ' + t + ' 更新' : '');
-      }
+      render();
+      setMeta(d);
     })
-    .catch(function () {
-      clearTimeout(timer);
-      if (metaEl) metaEl.textContent = '理财热词 · 每 10 分钟更新';
-    });
+    .catch(function () { clearTimeout(timer); });
 })();
 </script>
 
