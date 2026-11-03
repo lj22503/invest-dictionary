@@ -200,6 +200,21 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* 超长词条名：在格子里来回滚（跑马灯），不再截断成「股票...」 */
+.trend-word.is-long {
+  text-overflow: clip;
+  animation: trendScroll var(--marquee-dur, 4s) ease-in-out infinite alternate;
+}
+@keyframes trendScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--marquee, 0px)); }
+}
+/* 悬停/聚焦时停住，方便看清 */
+.trend-list a:hover .trend-word.is-long,
+.trend-list a:focus-visible .trend-word.is-long { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .trend-word.is-long { animation: none; }
+}
 .trend-list a:hover .trend-word { color: var(--mf-colors-text-accent-mango); }
 .trend-tag {
   flex: 0 0 auto;
@@ -3273,6 +3288,23 @@ function fallbackCopy(text) {
     return out;
   }
 
+  /* 量一遍：放不下的词条名打上 is-long，用跑马灯在格子里滚 */
+  function markOverflow() {
+    var words = listEl.querySelectorAll('.trend-word');
+    for (var i = 0; i < words.length; i++) {
+      var el = words[i];
+      el.classList.remove('is-long');
+      el.style.removeProperty('--marquee');
+      el.style.removeProperty('--marquee-dur');
+      var over = el.scrollWidth - el.clientWidth;
+      if (over > 4) {
+        el.classList.add('is-long');
+        el.style.setProperty('--marquee', '-' + over + 'px');
+        el.style.setProperty('--marquee-dur', Math.max(3, over / 30).toFixed(1) + 's');
+      }
+    }
+  }
+
   function render() {
     var total = items.length;
     if (!total) return;
@@ -3288,6 +3320,7 @@ function fallbackCopy(text) {
         '</a></li>';
     }
     listEl.innerHTML = html;
+    markOverflow();
   }
 
   function setMeta(d) {
@@ -3307,6 +3340,16 @@ function fallbackCopy(text) {
   /* 首屏用兜底池先渲染（全部是词条链接），接口回来后再按真实热度重排 */
   items = collect({});
   render();
+
+  /* 字体加载完 / 窗口变化后宽度会变，重新量一次 */
+  if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+    document.fonts.ready.then(markOverflow).catch(function () {});
+  }
+  var rzTimer = null;
+  window.addEventListener('resize', function () {
+    if (rzTimer) clearTimeout(rzTimer);
+    rzTimer = setTimeout(markOverflow, 150);
+  });
 
   if (refreshBtn) {
     refreshBtn.addEventListener('click', function () {
