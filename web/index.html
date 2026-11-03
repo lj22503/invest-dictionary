@@ -210,6 +210,9 @@
   font-size: 0.62rem;
   line-height: 1.7;
 }
+/* 主次区分：热榜/站内搜来的用正常墨色，纯兜底池的压灰，不再塞「热」角标抢宽度 */
+.trend-list a.is-pool .trend-word { color: var(--mf-colors-text-weak); }
+.trend-list a.is-pool:hover .trend-word { color: var(--mf-colors-text-accent-mango); }
 .trend-count {
   flex: 0 0 auto;
   font-size: 0.68rem;
@@ -3277,10 +3280,10 @@ function fallbackCopy(text) {
     var html = '';
     for (var i = 0; i < count; i++) {
       var it = items[(page * PER_PAGE + i) % total];
-      html += '<li><a href="' + it.href + '" title="词条：' + it.title.replace(/"/g, '&quot;') + '">' +
+      html += '<li><a class="is-' + it.kind + '" href="' + it.href + '" title="词条：' +
+        it.title.replace(/"/g, '&quot;') + '">' +
         '<span class="trend-rank">' + (i + 1) + '</span>' +
         '<span class="trend-word">' + String(it.label).replace(/</g, '&lt;') + '</span>' +
-        (it.kind === 'hot' ? '<span class="trend-tag">热</span>' : '') +
         (it.kind === 'search' && it.n >= 3 ? '<span class="trend-count">' + it.n + '</span>' : '') +
         '</a></li>';
     }
