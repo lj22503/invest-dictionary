@@ -1,15 +1,15 @@
 ---
 title: "QDII基金"
-subtitle: "—— 理财字典 · 第六篇：投资武器库·基金篇"
+subtitle: "—— 投资词典 · 第六篇：投资武器库 · 基金篇 · 最后更新：2026-11-02"
 termCode: 71
-source: "https://dictionary.mangofolio.com/terms/QDII%E5%9F%BA%E9%87%91%EF%BC%88%E6%8A%95%E8%B5%84%E6%B5%B7%E5%A4%96%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/QDII%E5%9F%BA%E9%87%91%EF%BC%88%E6%8A%95%E8%B5%84%E6%B5%B7%E5%A4%96%EF%BC%89"
 tags:
   - QDII基金（投资海外）
 ---
 
 # QDII基金
 
-> —— 理财字典 · 第六篇：投资武器库·基金篇
+> —— 投资词典 · 第六篇：投资武器库 · 基金篇 · 最后更新：2026-11-02
 
 **定义**：你的钱，其实被困在一座岛上
 

@@ -1,8 +1,8 @@
 ---
 title: "存款利率上调"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260810-01
-source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87%E4%B8%8A%E8%B0%83.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87%E4%B8%8A%E8%B0%83"
 tags:
   - 存款利率上调
   - 中小银行
@@ -17,7 +17,7 @@ related:
 
 # 存款利率上调
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：8月上旬广东、湖北等地部分农商行、村镇银行逆势上调存款利率，最高33个基点。这是"局部补血"不是"全面反转"——多数银行仍在下调。
 

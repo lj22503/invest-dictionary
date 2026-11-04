@@ -1,8 +1,8 @@
 ---
 title: "买断式逆回购"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260814-01
-source: "https://dictionary.mangofolio.com/terms/%E4%B9%B0%E6%96%AD%E5%BC%8F%E9%80%86%E5%9B%9E%E8%B4%AD.html"
+source: "https://dictionary.mangofolio.com/terms/%E4%B9%B0%E6%96%AD%E5%BC%8F%E9%80%86%E5%9B%9E%E8%B4%AD"
 tags:
   - 买断式逆回购
   - 央行
@@ -18,7 +18,7 @@ related:
 
 # 买断式逆回购
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：央行预告9月7日开展5000亿元3个月期买断式逆回购、等量续作。这个“买断式”新工具怎么影响你的存款利率、理财和债基？
 

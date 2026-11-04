@@ -1,8 +1,8 @@
 ---
 title: "均线（MA/金叉死叉）"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-08
-source: "https://dictionary.mangofolio.com/terms/%E5%9D%87%E7%BA%BF%EF%BC%88MA_%E9%87%91%E5%8F%89%E6%AD%BB%E5%8F%89%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%9D%87%E7%BA%BF%EF%BC%88MA_%E9%87%91%E5%8F%89%E6%AD%BB%E5%8F%89%EF%BC%89"
 tags:
   - 均线（MA/金叉死叉）
   - 技术分析
@@ -19,7 +19,7 @@ related:
 
 # 均线（MA/金叉死叉）
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：均线是过去 N 天收盘价的平均值连线，代表一段时间内买入者的平均成本。
 

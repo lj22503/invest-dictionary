@@ -1,8 +1,8 @@
 ---
 title: "技术分析"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-06
-source: "https://dictionary.mangofolio.com/terms/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90"
 tags:
   - 技术分析
   - K线 / 蜡烛图
@@ -19,7 +19,7 @@ related:
 
 # 技术分析
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：技术分析=不看公司赚不赚钱，只看价格和成交量的历史图形，寻找未来涨跌的概率。
 

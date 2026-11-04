@@ -1,8 +1,8 @@
 ---
 title: "适度宽松货币政策"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260829-04
-source: "https://dictionary.mangofolio.com/terms/%E9%80%82%E5%BA%A6%E5%AE%BD%E6%9D%BE%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%80%82%E5%BA%A6%E5%AE%BD%E6%9D%BE%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96"
 tags:
   - 适度宽松货币政策
   - 理财
@@ -18,7 +18,7 @@ related:
 
 # 适度宽松货币政策
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：适度宽松货币政策，是央行对货币政策力度的定性描述：比“稳健”更积极，但强调“适度”，不是无限放水。
 

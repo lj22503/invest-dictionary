@@ -1,8 +1,8 @@
 ---
 title: "分散化"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-04
-source: "https://dictionary.mangofolio.com/terms/%E5%88%86%E6%95%A3%E5%8C%96.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%88%86%E6%95%A3%E5%8C%96"
 tags:
   - 分散化
   - 分散投资
@@ -17,7 +17,7 @@ related:
 
 # 分散化
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：别把所有钱押在一个篮子里——把资产分到不同品种，降低整体波动。
 

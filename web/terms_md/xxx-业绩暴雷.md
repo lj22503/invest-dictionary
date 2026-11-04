@@ -1,8 +1,8 @@
 ---
 title: "业绩暴雷"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-06
-source: "https://dictionary.mangofolio.com/terms/%E4%B8%9A%E7%BB%A9%E6%9A%B4%E9%9B%B7.html"
+source: "https://dictionary.mangofolio.com/terms/%E4%B8%9A%E7%BB%A9%E6%9A%B4%E9%9B%B7"
 tags:
   - 业绩暴雷
   - 业绩预告
@@ -18,7 +18,7 @@ related:
 
 # 业绩暴雷
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：公司业绩远低于市场预期，财报发布后股价大跌。识别业绩暴雷信号，避免踩中杀业绩的坑。
 

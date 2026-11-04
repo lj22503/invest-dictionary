@@ -1,8 +1,8 @@
 ---
 title: "滞胀"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-09
-source: "https://dictionary.mangofolio.com/terms/%E6%BB%9E%E8%83%80.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%BB%9E%E8%83%80"
 tags:
   - 滞胀
   - CPI（居民消费价格指数）
@@ -18,7 +18,7 @@ related:
 
 # 滞胀
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：滞胀=经济增长停滞甚至下滑、通胀却持续走高，两个坏消息同时出现的状态，是政策最头疼的局面。
 

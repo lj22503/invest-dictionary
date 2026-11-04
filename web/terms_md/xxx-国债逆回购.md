@@ -1,8 +1,8 @@
 ---
 title: "国债逆回购"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-09
-source: "https://dictionary.mangofolio.com/terms/%E5%9B%BD%E5%80%BA%E9%80%86%E5%9B%9E%E8%B4%AD.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%9B%BD%E5%80%BA%E9%80%86%E5%9B%9E%E8%B4%AD"
 tags:
   - 国债逆回购
   - 逆回购
@@ -18,7 +18,7 @@ related:
 
 # 国债逆回购
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：把闲钱借给金融机构、对方以国债质押，到期还本付息，节假日利率飙升，是假期理财神器。
 

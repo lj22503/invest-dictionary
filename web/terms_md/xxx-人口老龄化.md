@@ -1,8 +1,8 @@
 ---
 title: "人口老龄化"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-07
-source: "https://dictionary.mangofolio.com/terms/%E4%BA%BA%E5%8F%A3%E8%80%81%E9%BE%84%E5%8C%96.html"
+source: "https://dictionary.mangofolio.com/terms/%E4%BA%BA%E5%8F%A3%E8%80%81%E9%BE%84%E5%8C%96"
 tags:
   - 人口老龄化
   - 社保 vs 商保
@@ -18,7 +18,7 @@ related:
 
 # 人口老龄化
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：人口老龄化=老年人占总人口比例持续上升的过程，是影响未来几十年经济和资产的慢变量。
 

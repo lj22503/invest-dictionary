@@ -1,8 +1,8 @@
 ---
 title: "副业收入"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-10
-source: "https://dictionary.mangofolio.com/terms/%E5%89%AF%E4%B8%9A%E6%94%B6%E5%85%A5.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%89%AF%E4%B8%9A%E6%94%B6%E5%85%A5"
 tags:
   - 副业
   - 兼职
@@ -17,7 +17,7 @@ related:
 
 # 副业收入
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：主业之外赚的钱，是收入结构的第二根支柱，也是抗裁员的第一道缓冲。
 

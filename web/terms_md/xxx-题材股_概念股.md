@@ -1,8 +1,8 @@
 ---
 title: "题材股 / 概念股"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-10
-source: "https://dictionary.mangofolio.com/terms/%E9%A2%98%E6%9D%90%E8%82%A1%20_%20%E6%A6%82%E5%BF%B5%E8%82%A1.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%A2%98%E6%9D%90%E8%82%A1%20_%20%E6%A6%82%E5%BF%B5%E8%82%A1"
 tags:
   - 题材股
   - 概念股
@@ -17,7 +17,7 @@ related:
 
 # 题材股 / 概念股
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：靠热点话题被炒起来的股票，涨跌看故事和情绪，不只看业绩。
 

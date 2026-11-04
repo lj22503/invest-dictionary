@@ -1,8 +1,8 @@
 ---
 title: "贵州茅台（增收不增利）"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260815-03
-source: "https://dictionary.mangofolio.com/terms/%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88%E5%A2%9E%E6%94%B6%E4%B8%8D%E5%A2%9E%E5%88%A9%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88%E5%A2%9E%E6%94%B6%E4%B8%8D%E5%A2%9E%E5%88%A9%EF%BC%89"
 tags:
   - 贵州茅台
   - 增收不增利
@@ -17,7 +17,7 @@ related:
 
 # 贵州茅台（增收不增利）
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：贵州茅台2026半年报：营收907.03亿增1.47%，净利445.17亿降1.95%，增收不增利。i茅台直销收入402.64亿暴增274%，汇金证金退出前十大股东。
 

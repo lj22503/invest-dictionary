@@ -1,8 +1,8 @@
 ---
 title: "解禁"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-05
-source: "https://dictionary.mangofolio.com/terms/%E8%A7%A3%E7%A6%81.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%A7%A3%E7%A6%81"
 tags:
   - 解禁
   - 限售股
@@ -19,7 +19,7 @@ related:
 
 # 解禁
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：摩尔线程限售股解禁当日大跌约20%，9月科技次新股迎密集解禁。解禁=限售股到期可流通卖出，不等于马上卖，但需关注规模与成本。
 

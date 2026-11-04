@@ -1,6 +1,8 @@
 ---
 title: "强制储蓄"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260901-12
+source: "https://dictionary.mangofolio.com/terms/%E5%BC%BA%E5%88%B6%E5%82%A8%E8%93%84"
 tags:
   - 强制储蓄
   - 先存后花
@@ -15,7 +17,9 @@ related:
 
 # 强制储蓄
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：把钱"藏"起来不让手花掉，靠规则战胜人性。
 
 ## 什么是强制储蓄：用规则帮自己存钱
 

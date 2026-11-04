@@ -1,8 +1,8 @@
 ---
 title: "定期寿险"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-03
-source: "https://dictionary.mangofolio.com/terms/%E5%AE%9A%E6%9C%9F%E5%AF%BF%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%AE%9A%E6%9C%9F%E5%AF%BF%E9%99%A9"
 tags:
   - 定期寿险
   - 寿险
@@ -18,7 +18,7 @@ related:
 
 # 定期寿险
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：保障期内身故或全残就赔一笔钱给家人，保费便宜杠杆高，家庭经济支柱必备的责任险。
 

@@ -1,8 +1,8 @@
 ---
 title: "货币乘数"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-04
-source: "https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81%E4%B9%98%E6%95%B0.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81%E4%B9%98%E6%95%B0"
 tags:
   - 货币乘数
   - 存款准备金率
@@ -19,7 +19,7 @@ related:
 
 # 货币乘数
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：你存 100 块，银行放贷后别人再存、再贷，最后全社会能变出好几倍钱，这就是“乘数”。
 

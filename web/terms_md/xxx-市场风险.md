@@ -1,8 +1,8 @@
 ---
 title: "市场风险"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-05
-source: "https://dictionary.mangofolio.com/terms/%E5%B8%82%E5%9C%BA%E9%A3%8E%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%B8%82%E5%9C%BA%E9%A3%8E%E9%99%A9"
 tags:
   - 市场风险
   - 系统性风险
@@ -17,7 +17,7 @@ related:
 
 # 市场风险
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：整个市场一起跌、谁也躲不掉的风险，也叫系统性风险。
 

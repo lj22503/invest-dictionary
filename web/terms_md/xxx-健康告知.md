@@ -1,8 +1,8 @@
 ---
 title: "健康告知"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-03
-source: "https://dictionary.mangofolio.com/terms/%E5%81%A5%E5%BA%B7%E5%91%8A%E7%9F%A5.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%81%A5%E5%BA%B7%E5%91%8A%E7%9F%A5"
 tags:
   - 健康告知
   - 如实告知
@@ -17,7 +17,7 @@ related:
 
 # 健康告知
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：买保险前如实回答身体状况的问卷，问什么答什么，是决定能不能赔的关键。
 

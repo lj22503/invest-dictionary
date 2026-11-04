@@ -1,8 +1,8 @@
 ---
 title: "美林时钟"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-08
-source: "https://dictionary.mangofolio.com/terms/%E7%BE%8E%E6%9E%97%E6%97%B6%E9%92%9F.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%BE%8E%E6%9E%97%E6%97%B6%E9%92%9F"
 tags:
   - 美林时钟
   - 经济周期（复苏 / 繁荣 / 衰退 / 萧条）
@@ -18,7 +18,7 @@ related:
 
 # 美林时钟
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：美林时钟=按经济增长快慢和通胀高低把经济切成四个阶段，指导股票、债券、商品、现金轮动配置的框架。
 

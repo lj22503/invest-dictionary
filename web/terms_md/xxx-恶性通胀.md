@@ -1,8 +1,8 @@
 ---
 title: "恶性通胀"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-09
-source: "https://dictionary.mangofolio.com/terms/%E6%81%B6%E6%80%A7%E9%80%9A%E8%83%80.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%81%B6%E6%80%A7%E9%80%9A%E8%83%80"
 tags:
   - 恶性通胀
   - 通胀
@@ -20,7 +20,7 @@ related:
 
 # 恶性通胀
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：物价失控疯涨（每月涨幅超过 50%），钱迅速变废纸，存钱的人被“洗劫”。
 

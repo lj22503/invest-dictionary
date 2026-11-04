@@ -1,7 +1,7 @@
 ---
 title: "核心一级资本（银行补血）"
-subtitle: "—— 理财字典 · 第一篇：钱的本质"
-source: "https://dictionary.mangofolio.com/terms/%E6%A0%B8%E5%BF%83%E4%B8%80%E7%BA%A7%E8%B5%84%E6%9C%AC%EF%BC%88%E9%93%B6%E8%A1%8C%E8%A1%A5%E8%A1%80%EF%BC%89.html"
+subtitle: "—— 投资词典 · 第一篇：钱的本质 · 最后更新：2026-11-02"
+source: "https://dictionary.mangofolio.com/terms/%E6%A0%B8%E5%BF%83%E4%B8%80%E7%BA%A7%E8%B5%84%E6%9C%AC%EF%BC%88%E9%93%B6%E8%A1%8C%E8%A1%A5%E8%A1%80%EF%BC%89"
 tags:
   - 核心一级资本
   - 资本充足率
@@ -12,7 +12,7 @@ tags:
 
 # 核心一级资本（银行补血）
 
-> —— 理财字典 · 第一篇：钱的本质
+> —— 投资词典 · 第一篇：钱的本质 · 最后更新：2026-11-02
 
 **定义**：银行最扎实的自有本钱，用来吸收坏账、保证不倒闭；国家注资补的正是这项资本。
 

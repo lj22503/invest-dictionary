@@ -1,8 +1,8 @@
 ---
 title: "牛市 / 熊市 / 震荡市"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-10
-source: "https://dictionary.mangofolio.com/terms/%E7%89%9B%E5%B8%82%20_%20%E7%86%8A%E5%B8%82%20_%20%E9%9C%87%E8%8D%A1%E5%B8%82.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%89%9B%E5%B8%82%20_%20%E7%86%8A%E5%B8%82%20_%20%E9%9C%87%E8%8D%A1%E5%B8%82"
 tags:
   - 牛市 / 熊市 / 震荡市
   - 技术分析
@@ -18,7 +18,7 @@ related:
 
 # 牛市 / 熊市 / 震荡市
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：牛市=市场整体持续上涨，熊市=持续下跌，震荡市=在一个区间里来回拉锯没有方向。
 

@@ -1,8 +1,8 @@
 ---
 title: "MSCI中国指数"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-03
-source: "https://dictionary.mangofolio.com/terms/MSCI%E4%B8%AD%E5%9B%BD%E6%8C%87%E6%95%B0.html"
+source: "https://dictionary.mangofolio.com/terms/MSCI%E4%B8%AD%E5%9B%BD%E6%8C%87%E6%95%B0"
 tags:
   - MSCI
   - MSCI中国指数
@@ -18,7 +18,7 @@ related:
 
 # MSCI中国指数
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：MSCI中国指数8月31日收盘后调整生效，新纳入铜冠铜箔、风华高科、芯源微等31只A股和智谱、建滔集团2只港股。
 

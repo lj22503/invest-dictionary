@@ -1,8 +1,8 @@
 ---
 title: "储蓄国债（凭证式/电子式）"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-08
-source: "https://dictionary.mangofolio.com/terms/%E5%82%A8%E8%93%84%E5%9B%BD%E5%80%BA%EF%BC%88%E5%87%AD%E8%AF%81%E5%BC%8F_%E7%94%B5%E5%AD%90%E5%BC%8F%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%82%A8%E8%93%84%E5%9B%BD%E5%80%BA%EF%BC%88%E5%87%AD%E8%AF%81%E5%BC%8F_%E7%94%B5%E5%AD%90%E5%BC%8F%EF%BC%89"
 tags:
   - 储蓄国债
   - 凭证式
@@ -18,7 +18,7 @@ related:
 
 # 储蓄国债（凭证式/电子式）
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：国家信用背书的储蓄型国债：凭证式到期还本付息、电子式每年付息，100元起购，是老百姓的压舱石。
 

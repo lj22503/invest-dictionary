@@ -1,8 +1,8 @@
 ---
 title: "限售股"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260829-03
-source: "https://dictionary.mangofolio.com/terms/%E9%99%90%E5%94%AE%E8%82%A1.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%99%90%E5%94%AE%E8%82%A1"
 tags:
   - 限售股
   - 理财
@@ -15,7 +15,7 @@ related:
 
 # 限售股
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：限售股，就是规定期限内不能在二级市场自由转让的股票。
 

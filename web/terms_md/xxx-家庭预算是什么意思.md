@@ -1,8 +1,8 @@
 ---
 title: "家庭预算是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-06
-source: "https://dictionary.mangofolio.com/terms/%E5%AE%B6%E5%BA%AD%E9%A2%84%E7%AE%97%EF%BC%8850_30_20%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%AE%B6%E5%BA%AD%E9%A2%84%E7%AE%97%EF%BC%8850_30_20%EF%BC%89"
 tags:
   - 家庭预算
   - 50/30/20
@@ -19,7 +19,7 @@ related:
 
 # 家庭预算是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：把税后收入分成三份：50% 必要开支、30% 想要的开销、20% 储蓄和还债。简单好用的家庭资金分配法。
 

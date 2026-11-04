@@ -1,8 +1,8 @@
 ---
 title: "电子支付是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-04
-source: "https://dictionary.mangofolio.com/terms/%E7%94%B5%E5%AD%90%E6%94%AF%E4%BB%98.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%94%B5%E5%AD%90%E6%94%AF%E4%BB%98"
 tags:
   - 电子支付
   - 移动支付
@@ -18,7 +18,7 @@ related:
 
 # 电子支付是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：用手机代替钱包——扫码、刷脸、碰一碰就把钱付了。它背后是银行账户、支付平台和商户之间的数字记账。
 

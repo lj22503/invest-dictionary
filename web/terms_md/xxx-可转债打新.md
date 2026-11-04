@@ -1,8 +1,8 @@
 ---
 title: "可转债打新"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-09
-source: "https://dictionary.mangofolio.com/terms/%E5%8F%AF%E8%BD%AC%E5%80%BA%E6%89%93%E6%96%B0.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%8F%AF%E8%BD%AC%E5%80%BA%E6%89%93%E6%96%B0"
 tags:
   - 可转债打新
   - 可转债
@@ -17,7 +17,7 @@ related:
 
 # 可转债打新
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：申购新发行的可转债，中签后按 100 元面值买入，上市后通常小赚一笔。
 

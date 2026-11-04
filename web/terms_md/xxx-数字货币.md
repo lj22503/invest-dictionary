@@ -1,8 +1,8 @@
 ---
 title: "数字货币"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-03
-source: "https://dictionary.mangofolio.com/terms/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81"
 tags:
   - 数字货币
   - 数字人民币
@@ -18,7 +18,7 @@ related:
 
 # 数字货币
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：只活在网络里的钱，分三类：央行发行的、民间加密的、锚定法币的，性质完全不同。
 

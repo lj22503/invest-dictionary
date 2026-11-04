@@ -1,8 +1,8 @@
 ---
 title: "通胀预期"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-10
-source: "https://dictionary.mangofolio.com/terms/%E9%80%9A%E8%83%80%E9%A2%84%E6%9C%9F.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%80%9A%E8%83%80%E9%A2%84%E6%9C%9F"
 tags:
   - 通胀预期
   - 通胀
@@ -19,7 +19,7 @@ related:
 
 # 通胀预期
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：大家“觉得”未来物价会涨还是会跌——这个感觉本身会变成现实。
 

@@ -1,8 +1,8 @@
 ---
 title: "月光族是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-07
-source: "https://dictionary.mangofolio.com/terms/%E6%9C%88%E5%85%89%E6%97%8F.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%9C%88%E5%85%89%E6%97%8F"
 tags:
   - 月光族
   - 存钱
@@ -18,7 +18,7 @@ related:
 
 # 月光族是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：每月工资到手就花光、月底一毛不剩的人。月光不是收入问题，而是支出和储蓄顺序问题。
 

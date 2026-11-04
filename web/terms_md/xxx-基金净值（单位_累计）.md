@@ -1,8 +1,8 @@
 ---
 title: "基金净值（单位/累计）"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-10
-source: "https://dictionary.mangofolio.com/terms/%E5%9F%BA%E9%87%91%E5%87%80%E5%80%BC%EF%BC%88%E5%8D%95%E4%BD%8D_%E7%B4%AF%E8%AE%A1%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%9F%BA%E9%87%91%E5%87%80%E5%80%BC%EF%BC%88%E5%8D%95%E4%BD%8D_%E7%B4%AF%E8%AE%A1%EF%BC%89"
 tags:
   - 基金净值
   - 单位净值
@@ -18,7 +18,7 @@ related:
 
 # 基金净值（单位/累计）
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：基金净值分单位净值和累计净值：单位净值是申购赎回价，累计净值反映含分红的长期真实回报。
 

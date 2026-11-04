@@ -1,8 +1,8 @@
 ---
 title: "钱荒 / 流动性紧张"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-05
-source: "https://dictionary.mangofolio.com/terms/%E9%92%B1%E8%8D%92%20_%20%E6%B5%81%E5%8A%A8%E6%80%A7%E7%B4%A7%E5%BC%A0.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%92%B1%E8%8D%92%20_%20%E6%B5%81%E5%8A%A8%E6%80%A7%E7%B4%A7%E5%BC%A0"
 tags:
   - 钱荒
   - 流动性紧张
@@ -17,7 +17,7 @@ related:
 
 # 钱荒 / 流动性紧张
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：市场上短期缺钱、借钱变贵变难，是资金面紧张的信号。
 

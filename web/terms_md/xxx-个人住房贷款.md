@@ -1,8 +1,8 @@
 ---
 title: "个人住房贷款"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260829-01
-source: "https://dictionary.mangofolio.com/terms/%E4%B8%AA%E4%BA%BA%E4%BD%8F%E6%88%BF%E8%B4%B7%E6%AC%BE.html"
+source: "https://dictionary.mangofolio.com/terms/%E4%B8%AA%E4%BA%BA%E4%BD%8F%E6%88%BF%E8%B4%B7%E6%AC%BE"
 tags:
   - 个人住房贷款
   - 理财
@@ -17,7 +17,7 @@ related:
 
 # 个人住房贷款
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：个人住房贷款，就是银行借钱给你买房，房子作为抵押物，你按月还本付息。
 

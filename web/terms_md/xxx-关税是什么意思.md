@@ -1,8 +1,8 @@
 ---
 title: "关税是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260824-02
-source: "https://dictionary.mangofolio.com/terms/%E5%85%B3%E7%A8%8E%EF%BC%88%E8%B4%B8%E6%98%93%E5%A3%81%E5%9E%92%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%85%B3%E7%A8%8E%EF%BC%88%E8%B4%B8%E6%98%93%E5%A3%81%E5%9E%92%EF%BC%89"
 tags:
   - 关税
   - 贸易壁垒
@@ -17,7 +17,7 @@ related:
 
 # 关税是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：关税是一国政府对进口商品征收的税，相当于商品过境的“过路费”。2026年8月美加贸易谈判破裂，美国对部分加拿大商品加征50%关税，加拿大宣布200亿美元反制。关税如何影响你的钱包？
 

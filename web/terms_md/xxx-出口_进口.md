@@ -1,8 +1,8 @@
 ---
 title: "出口 / 进口"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-01
-source: "https://dictionary.mangofolio.com/terms/%E5%87%BA%E5%8F%A3%20_%20%E8%BF%9B%E5%8F%A3.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%87%BA%E5%8F%A3%20_%20%E8%BF%9B%E5%8F%A3"
 tags:
   - 出口 / 进口
   - 贸易顺差
@@ -18,7 +18,7 @@ related:
 
 # 出口 / 进口
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：出口=把商品和服务卖给外国人赚外汇，进口=向外国人买东西花钱，两者是国家对外贸易的两扇窗。
 

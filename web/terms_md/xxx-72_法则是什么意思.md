@@ -1,8 +1,8 @@
 ---
 title: "72 法则是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-02
-source: "https://dictionary.mangofolio.com/terms/72%20%E6%B3%95%E5%88%99.html"
+source: "https://dictionary.mangofolio.com/terms/72%20%E6%B3%95%E5%88%99"
 tags:
   - 72法则
   - 翻倍
@@ -18,7 +18,7 @@ related:
 
 # 72 法则是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：用 72 除以年化收益率，几秒钟算出你的本金翻倍需要多少年。它是理财规划中最实用的心算公式。
 

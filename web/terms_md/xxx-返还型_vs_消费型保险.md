@@ -1,8 +1,8 @@
 ---
 title: "返还型 vs 消费型保险"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-01
-source: "https://dictionary.mangofolio.com/terms/%E8%BF%94%E8%BF%98%E5%9E%8B%20vs%20%E6%B6%88%E8%B4%B9%E5%9E%8B%E4%BF%9D%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%BF%94%E8%BF%98%E5%9E%8B%20vs%20%E6%B6%88%E8%B4%B9%E5%9E%8B%E4%BF%9D%E9%99%A9"
 tags:
   - 返还型保险
   - 消费型保险
@@ -17,7 +17,7 @@ related:
 
 # 返还型 vs 消费型保险
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：返还型保险是没出事能把保费拿回来的贵保险，消费型保险是没出事钱就花掉、但保费便宜的保障。
 

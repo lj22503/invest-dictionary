@@ -1,8 +1,8 @@
 ---
 title: "离岸人民币 / 在岸人民币"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-07
-source: "https://dictionary.mangofolio.com/terms/%E7%A6%BB%E5%B2%B8%E4%BA%BA%E6%B0%91%E5%B8%81%20_%20%E5%9C%A8%E5%B2%B8%E4%BA%BA%E6%B0%91%E5%B8%81.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%A6%BB%E5%B2%B8%E4%BA%BA%E6%B0%91%E5%B8%81%20_%20%E5%9C%A8%E5%B2%B8%E4%BA%BA%E6%B0%91%E5%B8%81"
 tags:
   - 离岸人民币
   - 在岸人民币
@@ -17,7 +17,7 @@ related:
 
 # 离岸人民币 / 在岸人民币
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：同一个人民币，在境内和境外两个市场定价，汇率可以不一样。
 

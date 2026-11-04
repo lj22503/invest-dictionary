@@ -1,8 +1,8 @@
 ---
 title: "恒生科技指数"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260812-04
-source: "https://dictionary.mangofolio.com/terms/%E6%81%92%E7%94%9F%E7%A7%91%E6%8A%80%E6%8C%87%E6%95%B0.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%81%92%E7%94%9F%E7%A7%91%E6%8A%80%E6%8C%87%E6%95%B0"
 tags:
   - 恒生科技指数
   - 港股
@@ -18,7 +18,7 @@ related:
 
 # 恒生科技指数
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：恒生科技指数今日重挫，南向资金撤离，港股科技板块波动加大。恒生科技指数是腾讯、阿里、美团等港股科技龙头的风向标。
 

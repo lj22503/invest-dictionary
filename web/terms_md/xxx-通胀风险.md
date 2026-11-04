@@ -1,8 +1,8 @@
 ---
 title: "通胀风险"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-06
-source: "https://dictionary.mangofolio.com/terms/%E9%80%9A%E8%83%80%E9%A3%8E%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%80%9A%E8%83%80%E9%A3%8E%E9%99%A9"
 tags:
   - 通胀风险
   - 通货膨胀
@@ -17,7 +17,7 @@ related:
 
 # 通胀风险
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：钱放着不动，购买力被物价上涨悄悄吃掉的风险。
 

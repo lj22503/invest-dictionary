@@ -1,6 +1,8 @@
 ---
 title: "算力贷"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260831-01
+source: "https://dictionary.mangofolio.com/terms/%E7%AE%97%E5%8A%9B%E8%B4%B7"
 tags:
   - 算力贷
   - 算力贷款
@@ -16,7 +18,9 @@ related:
 
 # 算力贷
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：2026年8月多家银行推出"算力贷"，把AI企业的算力使用量变成贷款信用，银行风控逻辑从"看砖头"转向"看算力"。
 
 ## 什么是算力贷：AI企业的"流水贷"
 

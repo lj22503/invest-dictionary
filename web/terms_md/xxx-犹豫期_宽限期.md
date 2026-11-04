@@ -1,8 +1,8 @@
 ---
 title: "犹豫期 / 宽限期"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-02
-source: "https://dictionary.mangofolio.com/terms/%E7%8A%B9%E8%B1%AB%E6%9C%9F%20_%20%E5%AE%BD%E9%99%90%E6%9C%9F.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%8A%B9%E8%B1%AB%E6%9C%9F%20_%20%E5%AE%BD%E9%99%90%E6%9C%9F"
 tags:
   - 犹豫期
   - 宽限期
@@ -17,7 +17,7 @@ related:
 
 # 犹豫期 / 宽限期
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：犹豫期是买保险后反悔可全额退保的天数，宽限期是忘交保费还能继续享受保障的缓冲期。
 

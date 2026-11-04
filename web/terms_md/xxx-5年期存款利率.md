@@ -1,8 +1,8 @@
 ---
 title: "5年期存款利率"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260814-02
-source: "https://dictionary.mangofolio.com/terms/5%E5%B9%B4%E6%9C%9F%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87.html"
+source: "https://dictionary.mangofolio.com/terms/5%E5%B9%B4%E6%9C%9F%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87"
 tags:
   - 5年期存款利率
   - 存款利率
@@ -18,7 +18,7 @@ related:
 
 # 5年期存款利率
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：2026年7月各期限存款利率普降，唯独5年期逆势上涨0.7BP至1.560%。为什么？存钱到底选几年划算？
 

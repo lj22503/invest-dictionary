@@ -1,8 +1,8 @@
 ---
 title: "注册制"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-08
-source: "https://dictionary.mangofolio.com/terms/%E6%B3%A8%E5%86%8C%E5%88%B6.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%B3%A8%E5%86%8C%E5%88%B6"
 tags:
   - 注册制
   - IPO
@@ -17,7 +17,7 @@ related:
 
 # 注册制
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：公司上市从“审批把关”改为“信息披露+市场定价”，上市更容易，退市也更常态化。
 

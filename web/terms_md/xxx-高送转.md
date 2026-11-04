@@ -1,8 +1,8 @@
 ---
 title: "高送转"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-04
-source: "https://dictionary.mangofolio.com/terms/%E9%AB%98%E9%80%81%E8%BD%AC.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%AB%98%E9%80%81%E8%BD%AC"
 tags:
   - 高送转
   - 送股
@@ -18,7 +18,7 @@ related:
 
 # 高送转
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：上市公司大比例送红股或转增股本，股份变多但总市值不变，常被当利好炒作，本质是拆股。
 

@@ -1,8 +1,8 @@
 ---
 title: "记账是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-05
-source: "https://dictionary.mangofolio.com/terms/%E8%AE%B0%E8%B4%A6.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%AE%B0%E8%B4%A6"
 tags:
   - 记账
   - 理财
@@ -19,7 +19,7 @@ related:
 
 # 记账是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：把每一笔收入支出记下来，看清钱都去哪了。记账是理财的第一步，也是成本最低的一步。
 

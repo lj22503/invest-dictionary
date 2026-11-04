@@ -1,8 +1,8 @@
 ---
 title: "中签率"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260811-02
-source: "https://dictionary.mangofolio.com/terms/%E4%B8%AD%E7%AD%BE%E7%8E%87.html"
+source: "https://dictionary.mangofolio.com/terms/%E4%B8%AD%E7%AD%BE%E7%8E%87"
 tags:
   - 中签率
   - 打新
@@ -18,7 +18,7 @@ related:
 
 # 中签率
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：宇树科技科创板申购中签率仅0.018%，网上申购倍数8288倍。中签率越低，说明打新的人越多、中签越难。
 

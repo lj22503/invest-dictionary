@@ -1,15 +1,15 @@
 ---
 title: "ST股 / *ST股"
-subtitle: "—— 理财字典 · 第四篇：投资武器库 · 股票篇"
+subtitle: "—— 投资词典 · 第四篇：投资武器库 · 股票篇 · 最后更新：2026-11-02"
 termCode: 44
-source: "https://dictionary.mangofolio.com/terms/ST%E8%82%A1%20_ST%E8%82%A1%EF%BC%88%E9%80%80%E5%B8%82%E9%A3%8E%E9%99%A9%E8%AD%A6%E7%A4%BA%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/ST%E8%82%A1%20_ST%E8%82%A1%EF%BC%88%E9%80%80%E5%B8%82%E9%A3%8E%E9%99%A9%E8%AD%A6%E7%A4%BA%EF%BC%89"
 tags:
   - ST股 / *ST股（退市风险警示）
 ---
 
 # ST股 / *ST股
 
-> —— 理财字典 · 第四篇：投资武器库 · 股票篇
+> —— 投资词典 · 第四篇：投资武器库 · 股票篇 · 最后更新：2026-11-02
 
 **定义**：你持仓前面多了两个字母
 

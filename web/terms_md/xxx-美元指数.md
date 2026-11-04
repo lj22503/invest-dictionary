@@ -1,8 +1,8 @@
 ---
 title: "美元指数"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-03
-source: "https://dictionary.mangofolio.com/terms/%E7%BE%8E%E5%85%83%E6%8C%87%E6%95%B0.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%BE%8E%E5%85%83%E6%8C%87%E6%95%B0"
 tags:
   - 美元指数
   - 汇率（人民币升值/贬值）
@@ -18,7 +18,7 @@ related:
 
 # 美元指数
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：美元指数=衡量美元对一篮子主要货币整体强弱的数字，涨代表美元在变强。
 

@@ -1,8 +1,8 @@
 ---
 title: "DeepSeek API涨价"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260814-03
-source: "https://dictionary.mangofolio.com/terms/DeepSeek%20API%E6%B6%A8%E4%BB%B7.html"
+source: "https://dictionary.mangofolio.com/terms/DeepSeek%20API%E6%B6%A8%E4%BB%B7"
 tags:
   - DeepSeek
   - API涨价
@@ -18,7 +18,7 @@ related:
 
 # DeepSeek API涨价
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：DeepSeek官宣V4-Pro与调价方案：高峰时段输出最高27元/百万tokens，涨幅350%。AI服务为什么集体涨价？跟你有什么关系？
 

@@ -1,8 +1,8 @@
 ---
 title: "集成电路是什么意思？芯片产业链利润为何暴增"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260828-01
-source: "https://dictionary.mangofolio.com/terms/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%EF%BC%88%E5%8D%8A%E5%AF%BC%E4%BD%93%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%EF%BC%88%E5%8D%8A%E5%AF%BC%E4%BD%93%EF%BC%89"
 tags:
   - 集成电路
   - 半导体
@@ -11,7 +11,7 @@ tags:
   - 算力
   - AI芯片
 related:
-  - 英伟达（NVIDIA）
+  - 存储芯片（内存 / 闪存）
   - MLCC（多层陶瓷电容器）
   - CPO（共封装光学）
   - Token贷
@@ -19,7 +19,7 @@ related:
 
 # 集成电路是什么意思？芯片产业链利润为何暴增
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：1-7月集成电路行业利润同比增长18.5倍，拉动电子行业利润增长1.1倍；A股半导体产业链爆发。芯片到底在涨什么？
 
@@ -65,7 +65,7 @@ related:
 
 ## 关联词条
 
-- 英伟达（NVIDIA）
+- 存储芯片（内存 / 闪存）
 - MLCC（多层陶瓷电容器）
 - CPO（共封装光学）
 - Token贷

@@ -1,8 +1,8 @@
 ---
 title: "汽车出口"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260809-01
-source: "https://dictionary.mangofolio.com/terms/%E6%B1%BD%E8%BD%A6%E5%87%BA%E5%8F%A3.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%B1%BD%E8%BD%A6%E5%87%BA%E5%8F%A3"
 tags:
   - 汽车出口
   - 外贸
@@ -18,7 +18,7 @@ related:
 
 # 汽车出口
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：中国汽车出口为什么成了观察外贸的窗口，港口离港载重数据怎么读，对整车、零部件、航运投资意味着什么。
 

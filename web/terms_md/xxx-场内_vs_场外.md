@@ -1,8 +1,8 @@
 ---
 title: "场内 vs 场外"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-03
-source: "https://dictionary.mangofolio.com/terms/%E5%9C%BA%E5%86%85%20vs%20%E5%9C%BA%E5%A4%96.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%9C%BA%E5%86%85%20vs%20%E5%9C%BA%E5%A4%96"
 tags:
   - 场内 vs 场外
   - ETF（交易型开放式指数基金）
@@ -19,7 +19,7 @@ related:
 
 # 场内 vs 场外
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：场内=在股票软件里像买股票一样买基金；场外=在支付宝/银行等平台申购基金。
 

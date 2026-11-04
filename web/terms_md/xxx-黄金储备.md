@@ -1,8 +1,8 @@
 ---
 title: "黄金储备"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260810-03
-source: "https://dictionary.mangofolio.com/terms/%E9%BB%84%E9%87%91%E5%82%A8%E5%A4%87.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%BB%84%E9%87%91%E5%82%A8%E5%A4%87"
 tags:
   - 黄金储备
   - 央行购金
@@ -17,7 +17,7 @@ related:
 
 # 黄金储备
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：黄金储备是央行持有的黄金，国家的"压舱石"。中国央行连续22个月增持，8月末达7673万盎司（约2175吨），市值超3300亿美元。
 

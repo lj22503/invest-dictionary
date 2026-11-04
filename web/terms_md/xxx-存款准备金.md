@@ -1,8 +1,8 @@
 ---
 title: "存款准备金"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-06
-source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E5%87%86%E5%A4%87%E9%87%91.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E5%87%86%E5%A4%87%E9%87%91"
 tags:
   - 存款准备金
   - 存款准备金率
@@ -19,7 +19,7 @@ related:
 
 # 存款准备金
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：银行收了你 100 块存款，必须按比例“锁”在央行一部分，剩下的才能拿去放贷。
 

@@ -1,8 +1,8 @@
 ---
 title: "FIRE是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-08
-source: "https://dictionary.mangofolio.com/terms/FIRE%EF%BC%88%E8%B4%A2%E5%8A%A1%E7%8B%AC%E7%AB%8B%E6%8F%90%E5%89%8D%E9%80%80%E4%BC%91%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/FIRE%EF%BC%88%E8%B4%A2%E5%8A%A1%E7%8B%AC%E7%AB%8B%E6%8F%90%E5%89%8D%E9%80%80%E4%BC%91%EF%BC%89"
 tags:
   - FIRE
   - 财务独立
@@ -18,7 +18,7 @@ related:
 
 # FIRE是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：通过高储蓄率攒下年支出约 25 倍的钱，靠投资收益生活、提前退休的运动。核心是 4% 法则。
 

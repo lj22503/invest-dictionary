@@ -1,8 +1,8 @@
 ---
 title: "中央银行"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-07
-source: "https://dictionary.mangofolio.com/terms/%E4%B8%AD%E5%A4%AE%E9%93%B6%E8%A1%8C.html"
+source: "https://dictionary.mangofolio.com/terms/%E4%B8%AD%E5%A4%AE%E9%93%B6%E8%A1%8C"
 tags:
   - 中央银行
   - 央行
@@ -19,7 +19,7 @@ related:
 
 # 中央银行
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：管钱的“总行”：不办个人业务，专管货币发行、利率、银行体系和金融稳定。
 

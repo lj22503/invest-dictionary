@@ -1,8 +1,8 @@
 ---
 title: "大额存单"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260807-02
-source: "https://dictionary.mangofolio.com/terms/%E5%A4%A7%E9%A2%9D%E5%AD%98%E5%8D%95.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%A4%A7%E9%A2%9D%E5%AD%98%E5%8D%95"
 tags:
   - 大额存单
   - 定期存款
@@ -17,7 +17,7 @@ related:
 
 # 大额存单
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：大额存单是20万起步的"VIP定期存款"，利率比普通定存高、可转让、受存款保险保障（50万内本息安全）。8月四大行集体重启5年期大额存单。
 

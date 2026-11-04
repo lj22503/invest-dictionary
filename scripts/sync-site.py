@@ -50,8 +50,14 @@ STEPS = [
 
 
 def run(step, desc):
-    # step 可以是 "xxx.py"（无参）或 ("xxx.py", "--apply")（带参）
-    name, args = step if isinstance(step, tuple) else (step, ())
+    # step 可以是 "xxx.py"（无参）或 ("xxx.py", "--apply")（带参）。
+    # 注意：args 必须是 tuple；若把字符串 "--apply" 直接 list() 会拆成
+    # ['-','-','a','p','p','l','y']，脚本收不到 --apply 而静默变成 DRY-RUN。
+    if isinstance(step, tuple):
+        name = step[0]
+        args = tuple(step[1:])
+    else:
+        name, args = step, ()
     print("\n" + "-" * 60)
     print("[STEP] %s %s —— %s" % (name, " ".join(args), desc))
     print("-" * 60)

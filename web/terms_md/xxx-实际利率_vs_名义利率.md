@@ -1,8 +1,8 @@
 ---
 title: "实际利率 vs 名义利率"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-01
-source: "https://dictionary.mangofolio.com/terms/%E5%AE%9E%E9%99%85%E5%88%A9%E7%8E%87%20vs%20%E5%90%8D%E4%B9%89%E5%88%A9%E7%8E%87.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%AE%9E%E9%99%85%E5%88%A9%E7%8E%87%20vs%20%E5%90%8D%E4%B9%89%E5%88%A9%E7%8E%87"
 tags:
   - 实际利率
   - 名义利率
@@ -20,7 +20,7 @@ related:
 
 # 实际利率 vs 名义利率
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：名义利率是合同上写的利率，实际利率是扣掉通胀后你真正赚（或亏）的利率。
 

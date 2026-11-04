@@ -1,8 +1,8 @@
 ---
 title: "基础货币 / 高能货币"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-05
-source: "https://dictionary.mangofolio.com/terms/%E5%9F%BA%E7%A1%80%E8%B4%A7%E5%B8%81%20_%20%E9%AB%98%E8%83%BD%E8%B4%A7%E5%B8%81.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%9F%BA%E7%A1%80%E8%B4%A7%E5%B8%81%20_%20%E9%AB%98%E8%83%BD%E8%B4%A7%E5%B8%81"
 tags:
   - 基础货币
   - 高能货币
@@ -19,7 +19,7 @@ related:
 
 # 基础货币 / 高能货币
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：央行“印”出的最底层钱（现金+银行在央行的存款），是整个货币体系的种子。
 

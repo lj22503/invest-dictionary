@@ -1,8 +1,8 @@
 ---
 title: "成品油调价"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-04
-source: "https://dictionary.mangofolio.com/terms/%E6%88%90%E5%93%81%E6%B2%B9%E8%B0%83%E4%BB%B7.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%88%90%E5%93%81%E6%B2%B9%E8%B0%83%E4%BB%B7"
 tags:
   - 成品油调价
   - 油价
@@ -17,7 +17,7 @@ related:
 
 # 成品油调价
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：8月28日24时起国内汽柴油零售限价每吨分别上调375元、360元。成品油调价机制每10个工作日调整一次，直接关系你加油的成本。
 

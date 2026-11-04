@@ -1,6 +1,8 @@
 ---
 title: "词元"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260831-02
+source: "https://dictionary.mangofolio.com/terms/%E8%AF%8D%E5%85%83"
 tags:
   - 词元
   - 数据要素
@@ -15,7 +17,9 @@ related:
 
 # 词元
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：2026数博会年度主题"词元"：国家数据局提出研究词元增值订阅、按效付费等商业模式，把数据要素变成可计价、可交易的新资产。
 
 ## 什么是词元：数据要素的"计量单位"
 

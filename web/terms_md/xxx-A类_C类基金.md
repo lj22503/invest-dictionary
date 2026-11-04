@@ -1,8 +1,8 @@
 ---
 title: "A类 / C类基金"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-02
-source: "https://dictionary.mangofolio.com/terms/A%E7%B1%BB%20_%20C%E7%B1%BB%E5%9F%BA%E9%87%91.html"
+source: "https://dictionary.mangofolio.com/terms/A%E7%B1%BB%20_%20C%E7%B1%BB%E5%9F%BA%E9%87%91"
 tags:
   - A类 / C类基金
   - 基金（公募基金）
@@ -19,7 +19,7 @@ related:
 
 # A类 / C类基金
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：同一只基金分 A 类和 C 类，收费方式不同：长期买 A 类划算，短期进出买 C 类划算。
 

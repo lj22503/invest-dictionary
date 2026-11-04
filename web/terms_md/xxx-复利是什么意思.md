@@ -1,8 +1,8 @@
 ---
 title: "复利是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-01
-source: "https://dictionary.mangofolio.com/terms/%E5%A4%8D%E5%88%A9%EF%BC%88%E5%8D%95%E5%88%A9%20vs%20%E5%A4%8D%E5%88%A9%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%A4%8D%E5%88%A9%EF%BC%88%E5%8D%95%E5%88%A9%20vs%20%E5%A4%8D%E5%88%A9%EF%BC%89"
 tags:
   - 复利
   - 单利
@@ -19,7 +19,7 @@ related:
 
 # 复利是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：复利就是利滚利——本金产生的利息，下个周期也会继续产生利息。时间越长、收益越高，财富增长越快。理解复利，是理解理财的第一课。
 

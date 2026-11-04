@@ -1,8 +1,8 @@
 ---
 title: "存款保险是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-03
-source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%99%A9%EF%BC%8850%E4%B8%87%E8%B5%94%E4%BB%98%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%99%A9%EF%BC%8850%E4%B8%87%E8%B5%94%E4%BB%98%EF%BC%89"
 tags:
   - 存款保险
   - 50万
@@ -18,7 +18,7 @@ related:
 
 # 存款保险是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：银行万一破产，存款保险基金会在 50 万元以内帮你赔付存款本金和利息。同一家银行 50 万以内有国家制度兜底。
 

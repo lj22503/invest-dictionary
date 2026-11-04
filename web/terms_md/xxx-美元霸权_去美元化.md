@@ -1,6 +1,8 @@
 ---
 title: "美元霸权 / 去美元化"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260901-09
+source: "https://dictionary.mangofolio.com/terms/%E7%BE%8E%E5%85%83%E9%9C%B8%E6%9D%83%20_%20%E5%8E%BB%E7%BE%8E%E5%85%83%E5%8C%96"
 tags:
   - 美元霸权
   - 去美元化
@@ -15,7 +17,9 @@ related:
 
 # 美元霸权 / 去美元化
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：美元凭什么全球通用？现在又为什么有人想"绕开它"？
 
 ## 什么是美元霸权：全球都在用美元
 

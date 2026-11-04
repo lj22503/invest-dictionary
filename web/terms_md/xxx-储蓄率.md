@@ -1,8 +1,8 @@
 ---
 title: "储蓄率"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-11
-source: "https://dictionary.mangofolio.com/terms/%E5%82%A8%E8%93%84%E7%8E%87.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%82%A8%E8%93%84%E7%8E%87"
 tags:
   - 储蓄率
   - 存钱
@@ -17,7 +17,7 @@ related:
 
 # 储蓄率
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：收入里存下多少的比例，是家庭财务健康度最朴素的风向标。
 

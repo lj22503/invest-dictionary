@@ -1,15 +1,15 @@
 ---
 title: "REITs"
-subtitle: "—— 理财字典 · 第七篇：投资武器库 · 其他类"
+subtitle: "—— 投资词典 · 第七篇：投资武器库 · 其他类 · 最后更新：2026-11-02"
 termCode: 74
-source: "https://dictionary.mangofolio.com/terms/REITs%EF%BC%88%E6%88%BF%E5%9C%B0%E4%BA%A7%E6%8A%95%E8%B5%84%E4%BF%A1%E6%89%98%E5%9F%BA%E9%87%91%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/REITs%EF%BC%88%E6%88%BF%E5%9C%B0%E4%BA%A7%E6%8A%95%E8%B5%84%E4%BF%A1%E6%89%98%E5%9F%BA%E9%87%91%EF%BC%89"
 tags:
   - REITs（房地产投资信托基金）
 ---
 
 # REITs
 
-> —— 理财字典 · 第七篇：投资武器库 · 其他类
+> —— 投资词典 · 第七篇：投资武器库 · 其他类 · 最后更新：2026-11-02
 
 **定义**：你每个月交的房租
 

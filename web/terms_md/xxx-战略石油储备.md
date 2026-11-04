@@ -1,8 +1,8 @@
 ---
 title: "战略石油储备"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260811-03
-source: "https://dictionary.mangofolio.com/terms/%E6%88%98%E7%95%A5%E7%9F%B3%E6%B2%B9%E5%82%A8%E5%A4%87.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%88%98%E7%95%A5%E7%9F%B3%E6%B2%B9%E5%82%A8%E5%A4%87"
 tags:
   - 战略石油储备
   - 石油
@@ -18,7 +18,7 @@ related:
 
 # 战略石油储备
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：美国战略石油储备1983年来首次跌破3亿桶，国际油价盘中大涨超5%。战略石油储备是能源安全的缓冲垫，也牵动油价与通胀。
 

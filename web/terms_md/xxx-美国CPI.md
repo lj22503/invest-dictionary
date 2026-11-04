@@ -1,8 +1,8 @@
 ---
 title: "美国CPI"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260812-02
-source: "https://dictionary.mangofolio.com/terms/%E7%BE%8E%E5%9B%BDCPI.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%BE%8E%E5%9B%BDCPI"
 tags:
   - 美国CPI
   - 通胀
@@ -18,7 +18,7 @@ related:
 
 # 美国CPI
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：美国8月CPI本周公布，非农超预期后市场对美联储9月加息的押注升至约60%。CPI数据决定加息节奏，牵动全球股债汇与黄金价格。
 

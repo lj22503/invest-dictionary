@@ -1,8 +1,8 @@
 ---
 title: "存款搬家"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260817-03
-source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E6%90%AC%E5%AE%B6.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%AD%98%E6%AC%BE%E6%90%AC%E5%AE%B6"
 tags:
   - 存款搬家
   - 居民存款
@@ -18,7 +18,7 @@ related:
 
 # 存款搬家
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：央行7月数据显示居民存款净减少6300亿元，存款搬家放缓。存款搬家指居民把银行定期存款转向理财、基金、股市等更高收益资产，是观察居民风险偏好的重要窗口。
 

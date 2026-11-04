@@ -1,8 +1,8 @@
 ---
 title: "现房销售"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260829-02
-source: "https://dictionary.mangofolio.com/terms/%E7%8E%B0%E6%88%BF%E9%94%80%E5%94%AE.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%8E%B0%E6%88%BF%E9%94%80%E5%94%AE"
 tags:
   - 现房销售
   - 理财
@@ -15,7 +15,7 @@ related:
 
 # 现房销售
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：现房销售，就是房子已经建成、验收合格后再卖给你，你看的是实景，买下就能办证入住。
 

@@ -1,8 +1,8 @@
 ---
 title: "非农就业"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260810-02
-source: "https://dictionary.mangofolio.com/terms/%E9%9D%9E%E5%86%9C%E5%B0%B1%E4%B8%9A.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%9D%9E%E5%86%9C%E5%B0%B1%E4%B8%9A"
 tags:
   - 非农就业
   - 美国就业数据
@@ -17,7 +17,7 @@ related:
 
 # 非农就业
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：非农就业是美国劳工部每月发布的就业核心指标，判断美国经济冷暖和美联储政策的风向标。2026年9月公布的8月非农新增16.2万人远超预期，市场对9月加息押注升温。
 

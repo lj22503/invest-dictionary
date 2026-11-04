@@ -1,8 +1,8 @@
 ---
 title: "社保 vs 商保是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-09
-source: "https://dictionary.mangofolio.com/terms/%E7%A4%BE%E4%BF%9D%20vs%20%E5%95%86%E4%BF%9D.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%A4%BE%E4%BF%9D%20vs%20%E5%95%86%E4%BF%9D"
 tags:
   - 社保
   - 商保
@@ -17,7 +17,7 @@ related:
 
 # 社保 vs 商保是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：社保是国家强制的基本保障，商保是自愿购买的补充保障。两者互补，不是二选一。
 

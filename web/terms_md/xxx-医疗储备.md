@@ -1,8 +1,8 @@
 ---
 title: "医疗储备"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-13
-source: "https://dictionary.mangofolio.com/terms/%E5%8C%BB%E7%96%97%E5%82%A8%E5%A4%87.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%8C%BB%E7%96%97%E5%82%A8%E5%A4%87"
 tags:
   - 医疗储备
   - 医疗备用金
@@ -17,7 +17,7 @@ related:
 
 # 医疗储备
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：专门为看病花钱准备的专用资金，和应急金是两回事。
 

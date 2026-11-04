@@ -1,8 +1,8 @@
 ---
 title: "现金为王"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-06
-source: "https://dictionary.mangofolio.com/terms/%E7%8E%B0%E9%87%91%E4%B8%BA%E7%8E%8B.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%8E%B0%E9%87%91%E4%B8%BA%E7%8E%8B"
 tags:
   - 现金为王
   - 持币
@@ -17,7 +17,7 @@ related:
 
 # 现金为王
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：行情越差，手里留的现金越值钱——不亏就是赚。
 

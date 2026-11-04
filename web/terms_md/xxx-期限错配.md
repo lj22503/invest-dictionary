@@ -1,8 +1,8 @@
 ---
 title: "期限错配"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260811-01
-source: "https://dictionary.mangofolio.com/terms/%E6%9C%9F%E9%99%90%E9%94%99%E9%85%8D.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%9C%9F%E9%99%90%E9%94%99%E9%85%8D"
 tags:
   - 期限错配
   - 银行理财
@@ -17,7 +17,7 @@ related:
 
 # 期限错配
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：银行理财短期限产品规模增长过快触发监管提示：用短钱投长资产，一旦资金回流跟不上，就可能出现期限错配风险。
 

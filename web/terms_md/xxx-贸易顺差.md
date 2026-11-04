@@ -1,8 +1,8 @@
 ---
 title: "贸易顺差"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-10
-source: "https://dictionary.mangofolio.com/terms/%E8%B4%B8%E6%98%93%E9%A1%BA%E5%B7%AE.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%B4%B8%E6%98%93%E9%A1%BA%E5%B7%AE"
 tags:
   - 贸易顺差
   - GDP（名义GDP vs 实际GDP）
@@ -19,7 +19,7 @@ related:
 
 # 贸易顺差
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：贸易顺差=一个国家出口大于进口，说明卖出去比买进来多，能赚到外汇。
 

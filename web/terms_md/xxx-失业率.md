@@ -1,8 +1,8 @@
 ---
 title: "失业率"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-02
-source: "https://dictionary.mangofolio.com/terms/%E5%A4%B1%E4%B8%9A%E7%8E%87.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%A4%B1%E4%B8%9A%E7%8E%87"
 tags:
   - 失业率
   - 非农就业
@@ -18,7 +18,7 @@ related:
 
 # 失业率
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：失业率=正在找工作却没找到工作的人，占想工作人口的百分比，是衡量就业冷暖的核心指标。
 

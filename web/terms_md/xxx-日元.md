@@ -1,8 +1,8 @@
 ---
 title: "日元"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260812-03
-source: "https://dictionary.mangofolio.com/terms/%E6%97%A5%E5%85%83.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%97%A5%E5%85%83"
 tags:
   - 日元
   - 套息交易
@@ -18,7 +18,7 @@ related:
 
 # 日元
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：日元单日大幅升值，全球套息交易遭平仓，日经与亚太股市集体跳水。日元是国际套息交易的核心货币，牵动全球风险资产。
 

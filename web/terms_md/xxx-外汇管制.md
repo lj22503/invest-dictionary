@@ -1,8 +1,8 @@
 ---
 title: "外汇管制"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-08
-source: "https://dictionary.mangofolio.com/terms/%E5%A4%96%E6%B1%87%E7%AE%A1%E5%88%B6.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%A4%96%E6%B1%87%E7%AE%A1%E5%88%B6"
 tags:
   - 外汇管制
   - 换汇
@@ -17,7 +17,7 @@ related:
 
 # 外汇管制
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：国家管着钱进出境的闸门，换汇、汇款、出境带钱都有规矩。
 

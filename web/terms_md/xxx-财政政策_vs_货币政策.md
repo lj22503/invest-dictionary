@@ -1,8 +1,8 @@
 ---
 title: "财政政策 vs 货币政策"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-05
-source: "https://dictionary.mangofolio.com/terms/%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96%20vs%20%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96%20vs%20%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96"
 tags:
   - 财政政策 vs 货币政策
   - LPR（贷款市场报价利率）
@@ -18,7 +18,7 @@ related:
 
 # 财政政策 vs 货币政策
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：财政政策是政府用收税和花钱调节经济，货币政策是央行用利率和货币量调节经济，两者是国家调控的两只手。
 

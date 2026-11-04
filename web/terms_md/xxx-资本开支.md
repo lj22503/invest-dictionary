@@ -1,8 +1,8 @@
 ---
 title: "资本开支"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260813-04
-source: "https://dictionary.mangofolio.com/terms/%E8%B5%84%E6%9C%AC%E5%BC%80%E6%94%AF.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%B5%84%E6%9C%AC%E5%BC%80%E6%94%AF"
 tags:
   - 资本开支
   - Capex
@@ -18,7 +18,7 @@ related:
 
 # 资本开支
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：腾讯Q2资本开支527.8亿元、同比大增176%，AI算力投入把自由现金流转负。资本开支怎么读？对买基金的你意味着什么？
 

@@ -1,6 +1,8 @@
 ---
 title: "K线 / 蜡烛图"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260902-07
+source: "https://dictionary.mangofolio.com/terms/K%E7%BA%BF%20_%20%E8%9C%A1%E7%83%9B%E5%9B%BE"
 tags:
   - K线 / 蜡烛图
   - 技术分析
@@ -17,7 +19,9 @@ related:
 
 # K线 / 蜡烛图
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：K线一根蜡烛记录开盘、收盘、最高、最低四个价格，是所有股票软件的"最小语言"。
 
 ## 什么是K线：一根蜡烛记录四个价格
 

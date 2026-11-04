@@ -1,8 +1,8 @@
 ---
 title: "基金费用总纲"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-01
-source: "https://dictionary.mangofolio.com/terms/%E5%9F%BA%E9%87%91%E8%B4%B9%E7%94%A8%E6%80%BB%E7%BA%B2.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%9F%BA%E9%87%91%E8%B4%B9%E7%94%A8%E6%80%BB%E7%BA%B2"
 tags:
   - 基金费用总纲
   - 基金净值（单位/累计）
@@ -19,7 +19,7 @@ related:
 
 # 基金费用总纲
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：申购费、赎回费、管理费、托管费、销售服务费——买基金要交的 5 种钱，一次讲清。
 

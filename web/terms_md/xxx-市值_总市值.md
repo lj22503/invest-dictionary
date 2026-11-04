@@ -1,8 +1,8 @@
 ---
 title: "市值 / 总市值"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-05
-source: "https://dictionary.mangofolio.com/terms/%E5%B8%82%E5%80%BC%20_%20%E6%80%BB%E5%B8%82%E5%80%BC.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%B8%82%E5%80%BC%20_%20%E6%80%BB%E5%B8%82%E5%80%BC"
 tags:
   - 市值 / 总市值
   - 股本 / 流通盘（流通市值）
@@ -19,7 +19,7 @@ related:
 
 # 市值 / 总市值
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：市值=股价×股本，是市场给一家公司标的身价；总市值看整体，流通市值看真正能交易的盘子。
 

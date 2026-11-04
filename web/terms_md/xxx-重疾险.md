@@ -1,8 +1,8 @@
 ---
 title: "重疾险"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-01
-source: "https://dictionary.mangofolio.com/terms/%E9%87%8D%E7%96%BE%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%87%8D%E7%96%BE%E9%99%A9"
 tags:
   - 重疾险
   - 给付型保险
@@ -18,7 +18,7 @@ related:
 
 # 重疾险
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：确诊合同约定的重大疾病就一次性赔一笔钱的保险，保额自由支配，是家庭风险底仓的第一块砖。
 

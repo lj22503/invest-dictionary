@@ -1,6 +1,8 @@
 ---
 title: "CPO（共封装光学）"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260815-01
+source: "https://dictionary.mangofolio.com/terms/CPO%EF%BC%88%E5%85%B1%E5%B0%81%E8%A3%85%E5%85%89%E5%AD%A6%EF%BC%89"
 tags:
   - CPO
   - 共封装光学
@@ -16,7 +18,9 @@ related:
 
 # CPO（共封装光学）
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：英伟达CPO交换机全面量产，AI数据中心迈入"硅光时代"。CPO把光引擎封装进交换芯片，取代可插拔光模块，光通信概念股应声大涨。
 
 ## 英伟达官宣：CPO 交换机全面量产
 

@@ -1,8 +1,8 @@
 ---
 title: "赎回规则（T+N）"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-04
-source: "https://dictionary.mangofolio.com/terms/%E8%B5%8E%E5%9B%9E%E8%A7%84%E5%88%99%EF%BC%88T%2BN%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%B5%8E%E5%9B%9E%E8%A7%84%E5%88%99%EF%BC%88T%2BN%EF%BC%89"
 tags:
   - 赎回规则（T+N）
   - T+0 / T+1（何时能卖出）
@@ -19,7 +19,7 @@ related:
 
 # 赎回规则（T+N）
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：赎回基金不是马上到账，提交申请后要等 T+1 到 T+7 个工作日，货基最快、QDII 最慢。
 

@@ -1,8 +1,8 @@
 ---
 title: "房价"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260903-06
-source: "https://dictionary.mangofolio.com/terms/%E6%88%BF%E4%BB%B7.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%88%BF%E4%BB%B7"
 tags:
   - 房价
   - LPR（贷款市场报价利率）
@@ -18,7 +18,7 @@ related:
 
 # 房价
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：房价=一套房子的成交价格，它一半是居住品价格，一半是金融资产价格。
 

@@ -1,8 +1,8 @@
 ---
 title: "DR利率"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260807-01
-source: "https://dictionary.mangofolio.com/terms/DR%E5%88%A9%E7%8E%87.html"
+source: "https://dictionary.mangofolio.com/terms/DR%E5%88%A9%E7%8E%87"
 tags:
   - DR利率
   - DR001
@@ -18,7 +18,7 @@ related:
 
 # DR利率
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：银行互相借钱用的利率，以后你的贷款利率可能改看它，不再只看 LPR。
 

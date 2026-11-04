@@ -457,27 +457,53 @@ a:hover { color: var(--mf-colors-text-link-hover); }
 @media (max-width: 660px) {
   body { font-size: 15.5px; }
   .wrap { padding: 0 16px; }
+  /* 页头：品牌一行 + 导航单行横滑。原导航折成 2 行（每项 44px）把页头撑到 144px，首屏被吃掉 */
   .site-header {
-    padding: 10px 16px;
-    align-items: flex-start;
+    min-height: 0;
+    padding: 7px 16px 6px;
+    align-items: stretch;
     flex-direction: column;
-    gap: 6px;
+    gap: 2px;
   }
-  .site-nav { width: 100%; gap: 2px; }
-  /* 触控可达性：导航项点击区补到 44px（原 6px 8px 内边距远低于 WCAG 2.5.5 建议） */
+  .site-nav {
+    width: calc(100% + 32px);
+    margin: 0 -16px;
+    padding: 0 16px;
+    gap: 4px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
   .site-nav > a {
+    flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
-    padding: 6px 12px;
-    font-size: 0.84rem;
+    min-height: 38px;
+    padding: 5px 11px;
+    font-size: 0.82rem;
+    white-space: nowrap;
   }
-  .site-nav__cta { margin-left: 0; min-height: 44px; }
-  .band { padding: 44px 0; }
+  /* 横滑导航里把「随机一词」钉在右缘，始终可见 */
+  .site-nav__cta {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    margin-left: auto;
+    min-height: 38px;
+    padding: 5px 12px !important;
+    background: var(--mf-colors-background-surface);
+    box-shadow: -10px 0 10px -8px rgba(0, 0, 0, 0.18);
+  }
+  .brand { font-size: 0.98rem; line-height: 1.3; }
+  .brand-en { font-size: 0.7rem; }
+  .band { padding: 40px 0; }
   .sec-head { padding-top: 14px; }
   .sec-head__aside { white-space: normal; }
-  .brand { font-size: 1rem; }
-  .brand-en { font-size: 0.72rem; }
+  /* sticky 页头会盖住锚点目标，留出安全区 */
+  #daily-hot, #skills, #howto, #faq { scroll-margin-top: 84px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

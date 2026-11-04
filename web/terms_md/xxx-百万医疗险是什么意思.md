@@ -1,8 +1,8 @@
 ---
 title: "百万医疗险是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260825-10
-source: "https://dictionary.mangofolio.com/terms/%E7%99%BE%E4%B8%87%E5%8C%BB%E7%96%97%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%99%BE%E4%B8%87%E5%8C%BB%E7%96%97%E9%99%A9"
 tags:
   - 百万医疗险
   - 医疗险
@@ -18,7 +18,7 @@ related:
 
 # 百万医疗险是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：每年几百元保费、几百万报销额度，专管住院和手术大额医疗费的医疗险。普通人最该买的保险之一。
 

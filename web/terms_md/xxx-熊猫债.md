@@ -1,8 +1,8 @@
 ---
 title: "熊猫债"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260823-02
-source: "https://dictionary.mangofolio.com/terms/%E7%86%8A%E7%8C%AB%E5%80%BA.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%86%8A%E7%8C%AB%E5%80%BA"
 tags:
   - 熊猫债
   - 债券
@@ -17,7 +17,7 @@ related:
 
 # 熊猫债
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：熊猫债是境外机构在中国境内发行的人民币债券。2026年发行量创历史同期新高，年内累计2099.75亿元、同比增超73%。为什么这么火？跟你有什么关系？
 

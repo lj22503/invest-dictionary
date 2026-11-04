@@ -1,8 +1,8 @@
 ---
 title: "货币政策工具"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-08
-source: "https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7.html"
+source: "https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7"
 tags:
   - 货币政策工具
   - 降准
@@ -21,7 +21,7 @@ related:
 
 # 货币政策工具
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：央行调控经济的工具箱：降准、降息、逆回购、MLF、结构性工具，各有各的用法。
 

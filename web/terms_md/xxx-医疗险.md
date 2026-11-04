@@ -1,8 +1,8 @@
 ---
 title: "医疗险"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260831-02
-source: "https://dictionary.mangofolio.com/terms/%E5%8C%BB%E7%96%97%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%8C%BB%E7%96%97%E9%99%A9"
 tags:
   - 医疗险
   - 报销型保险
@@ -18,7 +18,7 @@ related:
 
 # 医疗险
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：报销型保险：看病花多少报多少，凭发票实报实销，百万医疗险就是其中最典型的一种。
 

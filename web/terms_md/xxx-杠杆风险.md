@@ -1,8 +1,8 @@
 ---
 title: "杠杆风险"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260830-07
-source: "https://dictionary.mangofolio.com/terms/%E6%9D%A0%E6%9D%86%E9%A3%8E%E9%99%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%9D%A0%E6%9D%86%E9%A3%8E%E9%99%A9"
 tags:
   - 杠杆风险
   - 融资融券
@@ -17,7 +17,7 @@ related:
 
 # 杠杆风险
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：借钱投资，赚了放大收益，亏了也放大亏损，甚至亏光本金倒欠钱。
 

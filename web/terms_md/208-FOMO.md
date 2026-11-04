@@ -1,8 +1,8 @@
 ---
 title: "FOMO"
-subtitle: "—— 理财字典 · 第二十一篇：投资心理与行为陷阱"
+subtitle: "—— 投资词典 · 第二十一篇：投资心理与行为陷阱 · 最后更新：2026-11-02"
 termCode: 208
-source: "https://dictionary.mangofolio.com/terms/FOMO%EF%BC%88%E5%AE%B3%E6%80%95%E8%B8%8F%E7%A9%BA%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/FOMO%EF%BC%88%E5%AE%B3%E6%80%95%E8%B8%8F%E7%A9%BA%EF%BC%89"
 tags:
   - FOMO（害怕踏空）
   - 羊群效应
@@ -20,7 +20,7 @@ related:
 
 # FOMO
 
-> —— 理财字典 · 第二十一篇：投资心理与行为陷阱
+> —— 投资词典 · 第二十一篇：投资心理与行为陷阱 · 最后更新：2026-11-02
 
 **定义**：你以为在"上车"
 

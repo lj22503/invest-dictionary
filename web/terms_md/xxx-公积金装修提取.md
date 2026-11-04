@@ -1,8 +1,8 @@
 ---
 title: "公积金装修提取"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260813-03
-source: "https://dictionary.mangofolio.com/terms/%E5%85%AC%E7%A7%AF%E9%87%91%E8%A3%85%E4%BF%AE%E6%8F%90%E5%8F%96.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%85%AC%E7%A7%AF%E9%87%91%E8%A3%85%E4%BF%AE%E6%8F%90%E5%8F%96"
 tags:
   - 住房公积金
   - 公积金提取
@@ -17,7 +17,7 @@ related:
 
 # 公积金装修提取
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：多地住房公积金装修提取政策密集出台，装修也能用公积金了？提取条件、流程和注意点一文说清。
 

@@ -1,6 +1,8 @@
 ---
 title: "Token贷"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260815-02
+source: "https://dictionary.mangofolio.com/terms/Token%E8%B4%B7"
 tags:
   - Token贷
   - 词元经济
@@ -15,7 +17,9 @@ related:
 
 # Token贷
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：广东上线全国首个算力"Token贷"，中国银行试单授信2800万。Token贷把AI企业的模型调用量变成贷款信用，"词元经济"金融创新落地。
 
 ## 全国首个算力"Token贷"落地广东
 

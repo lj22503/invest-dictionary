@@ -1,12 +1,12 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1083 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1113 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
 - [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
 
-## 词条（共 1083 条）
+## 词条（共 1113 条）
 - [货币](https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81): 你手里攥着的100块
 - [信用](https://dictionary.mangofolio.com/terms/%E4%BF%A1%E7%94%A8): 全世界最贵的三个字
 - [M0 / M1 / M2（货币供应量）](https://dictionary.mangofolio.com/terms/M0%20_%20M1%20_%20M2%EF%BC%88%E8%B4%A7%E5%B8%81%E4%BE%9B%E5%BA%94%E9%87%8F%EF%BC%89): 你家三个钱包，就是央行的小抄
@@ -1090,9 +1090,39 @@
 - [互换便利（SFISF）](https://dictionary.mangofolio.com/terms/%E4%BA%92%E6%8D%A2%E4%BE%BF%E5%88%A9%EF%BC%88SFISF%EF%BC%89): 以券换券：央行的换血工具
 - [政策底 _ 市场底](https://dictionary.mangofolio.com/terms/%E6%94%BF%E7%AD%96%E5%BA%95%20_%20%E5%B8%82%E5%9C%BA%E5%BA%95): 政策底：跌到政府出手的位置
 - [AI算力](https://dictionary.mangofolio.com/terms/AI%E7%AE%97%E5%8A%9B): 算力：AI 的发动机
+- [白皮书](https://dictionary.mangofolio.com/terms/%E7%99%BD%E7%9A%AE%E4%B9%A6): 一份“项目说明书”
+- [共识机制（PoW / PoS）](https://dictionary.mangofolio.com/terms/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6%EF%BC%88PoW%20_%20PoS%EF%BC%89): 区块链的“投票规则”
+- [分叉 / 减半](https://dictionary.mangofolio.com/terms/%E5%88%86%E5%8F%89%20_%20%E5%87%8F%E5%8D%8A): 两个容易混的词
+- [链上数据](https://dictionary.mangofolio.com/terms/%E9%93%BE%E4%B8%8A%E6%95%B0%E6%8D%AE): 链上即账本
+- [矿工费](https://dictionary.mangofolio.com/terms/%E7%9F%BF%E5%B7%A5%E8%B4%B9): 区块链的“快递费”
+- [矿难 / 显卡价格](https://dictionary.mangofolio.com/terms/%E7%9F%BF%E9%9A%BE%20_%20%E6%98%BE%E5%8D%A1%E4%BB%B7%E6%A0%BC): 挖矿与显卡
+- [借贷协议](https://dictionary.mangofolio.com/terms/%E5%80%9F%E8%B4%B7%E5%8D%8F%E8%AE%AE): 链上银行
+- [跨链桥](https://dictionary.mangofolio.com/terms/%E8%B7%A8%E9%93%BE%E6%A1%A5): 链与链之间的桥
+- [Layer2](https://dictionary.mangofolio.com/terms/Layer2): 主链的扩容层
+- [元宇宙 / Web3](https://dictionary.mangofolio.com/terms/%E5%85%83%E5%AE%87%E5%AE%99%20_%20Web3): 两个愿景
+- [Tokenomics / 代币经济](https://dictionary.mangofolio.com/terms/Tokenomics%20_%20%E4%BB%A3%E5%B8%81%E7%BB%8F%E6%B5%8E): 代币的“宪法”
+- [空投](https://dictionary.mangofolio.com/terms/%E7%A9%BA%E6%8A%95): 免费代币从哪来
+- [ICO / IDO / IEO](https://dictionary.mangofolio.com/terms/ICO%20_%20IDO%20_%20IEO): 三种募资
+- [灰度信托](https://dictionary.mangofolio.com/terms/%E7%81%B0%E5%BA%A6%E4%BF%A1%E6%89%98): 合规的“比特币盒子”
+- [加密税务](https://dictionary.mangofolio.com/terms/%E5%8A%A0%E5%AF%86%E7%A8%8E%E5%8A%A1): 加密也有税
+- [混币器 / 暗网风险](https://dictionary.mangofolio.com/terms/%E6%B7%B7%E5%B8%81%E5%99%A8%20_%20%E6%9A%97%E7%BD%91%E9%A3%8E%E9%99%A9): 什么是混币器
+- [勒索软件](https://dictionary.mangofolio.com/terms/%E5%8B%92%E7%B4%A2%E8%BD%AF%E4%BB%B6): 数字绑匪
+- [白银 / 铂金 / 钯金](https://dictionary.mangofolio.com/terms/%E7%99%BD%E9%93%B6%20_%20%E9%93%82%E9%87%91%20_%20%E9%92%AF%E9%87%91): 贵金属四兄弟
+- [保险金信托](https://dictionary.mangofolio.com/terms/%E4%BF%9D%E9%99%A9%E9%87%91%E4%BF%A1%E6%89%98): 组合拳
+- [慈善信托](https://dictionary.mangofolio.com/terms/%E6%85%88%E5%96%84%E4%BF%A1%E6%89%98): 定向的善意
+- [海外房产](https://dictionary.mangofolio.com/terms/%E6%B5%B7%E5%A4%96%E6%88%BF%E4%BA%A7): 全球置业诱惑
+- [ESG投资](https://dictionary.mangofolio.com/terms/ESG%E6%8A%95%E8%B5%84): 三把尺子
+- [低吸高抛](https://dictionary.mangofolio.com/terms/%E4%BD%8E%E5%90%B8%E9%AB%98%E6%8A%9B): 理想与落差
+- [放量 / 缩量](https://dictionary.mangofolio.com/terms/%E6%94%BE%E9%87%8F%20_%20%E7%BC%A9%E9%87%8F): 量是温度计
+- [胜率 / 赔率](https://dictionary.mangofolio.com/terms/%E8%83%9C%E7%8E%87%20_%20%E8%B5%94%E7%8E%87): 两个数字
+- [假币 / 假理财 / 假保单](https://dictionary.mangofolio.com/terms/%E5%81%87%E5%B8%81%20_%20%E5%81%87%E7%90%86%E8%B4%A2%20_%20%E5%81%87%E4%BF%9D%E5%8D%95): 三种“假货”
+- [婚恋诈骗](https://dictionary.mangofolio.com/terms/%E5%A9%9A%E6%81%8B%E8%AF%88%E9%AA%97): 感情陷阱
+- [招生诈骗](https://dictionary.mangofolio.com/terms/%E6%8B%9B%E7%94%9F%E8%AF%88%E9%AA%97): 骗局画像
+- [洗钱 / 帮信罪](https://dictionary.mangofolio.com/terms/%E6%B4%97%E9%92%B1%20_%20%E5%B8%AE%E4%BF%A1%E7%BD%AA): 两个罪名
+- [跟单软件 / EA](https://dictionary.mangofolio.com/terms/%E8%B7%9F%E5%8D%95%E8%BD%AF%E4%BB%B6%20_%20EA): 话术与套路
 
 ## 词库与指南
-- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1083 个词条按篇章全部列出，支持搜索与章节筛选
+- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1113 个词条按篇章全部列出，支持搜索与章节筛选
 - [使用指南（8 个场景）](https://dictionary.mangofolio.com/guide): 8 个场景 × 提示词样例 × 对应 Skill，照抄就能用
 - [隐私政策](https://dictionary.mangofolio.com/privacy): 信息收集与使用说明
 - [用户协议](https://dictionary.mangofolio.com/terms-of-service): 服务边界与不构成投资建议的约定

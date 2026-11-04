@@ -1,8 +1,8 @@
 ---
 title: "利滚利"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260901-04
-source: "https://dictionary.mangofolio.com/terms/%E5%88%A9%E6%BB%9A%E5%88%A9.html"
+source: "https://dictionary.mangofolio.com/terms/%E5%88%A9%E6%BB%9A%E5%88%A9"
 tags:
   - 利滚利
   - 复利
@@ -17,7 +17,7 @@ related:
 
 # 利滚利
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：利息也会生利息，欠债和存钱都逃不过的复利力量。
 

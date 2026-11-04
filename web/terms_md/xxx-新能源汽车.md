@@ -1,8 +1,8 @@
 ---
 title: "新能源汽车"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260902-05
-source: "https://dictionary.mangofolio.com/terms/%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6.html"
+source: "https://dictionary.mangofolio.com/terms/%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6"
 tags:
   - 新能源汽车
   - 电车销量
@@ -19,7 +19,7 @@ related:
 
 # 新能源汽车
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：8月电车成绩单出炉：零跑再破10万辆蝉联销冠，小鹏、理想反超蔚来，鸿蒙智行同比转负；蔚来Q2营收同比增69%。普通人买车、看产业、读财报都绕不开这条线。
 

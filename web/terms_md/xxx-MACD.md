@@ -1,6 +1,8 @@
 ---
 title: "MACD"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
+termCode: hot-20260902-09
+source: "https://dictionary.mangofolio.com/terms/MACD"
 tags:
   - MACD
   - 技术分析
@@ -17,7 +19,9 @@ related:
 
 # MACD
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
+
+**定义**：MACD 是"指数平滑异同移动平均线"，本质是用两条均线的差来捕捉趋势强弱和拐点。
 
 ## 什么是MACD：两条均线的差值曲线
 

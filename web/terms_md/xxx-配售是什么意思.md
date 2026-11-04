@@ -1,8 +1,8 @@
 ---
 title: "配售是什么意思"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260824-01
-source: "https://dictionary.mangofolio.com/terms/%E9%85%8D%E5%94%AE%EF%BC%88%E6%96%B0%E8%82%A1%E9%85%8D%E5%94%AE%EF%BC%89.html"
+source: "https://dictionary.mangofolio.com/terms/%E9%85%8D%E5%94%AE%EF%BC%88%E6%96%B0%E8%82%A1%E9%85%8D%E5%94%AE%EF%BC%89"
 tags:
   - 配售
   - 新股配售
@@ -17,7 +17,7 @@ related:
 
 # 配售是什么意思
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：配售是上市公司向特定投资者发行新股融资的方式，相当于“定向增发”。2026年8月阿里巴巴七年首次配售800亿港元新股、全部投入AI建设。为什么企业选择配售？跟你有什么关系？
 

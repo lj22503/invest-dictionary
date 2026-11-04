@@ -1,8 +1,8 @@
 ---
 title: "现金流"
-subtitle: "—— 理财字典 · 每日热词"
+subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: hot-20260826-02
-source: "https://dictionary.mangofolio.com/terms/%E7%8E%B0%E9%87%91%E6%B5%81.html"
+source: "https://dictionary.mangofolio.com/terms/%E7%8E%B0%E9%87%91%E6%B5%81"
 tags:
   - 现金流
   - 收入
@@ -19,7 +19,7 @@ related:
 
 # 现金流
 
-> —— 理财字典 · 每日热词
+> —— 投资词典 · Invest Dictionary · 最后更新：2026-11-02
 
 **定义**：钱进钱出的水流：收入是进水，支出是出水，结余决定你有没有“活水”。
 
