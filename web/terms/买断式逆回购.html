@@ -790,6 +790,13 @@ body.term-page {
   <span class="bc-current">买断式逆回购</span>
 </nav>
 
+<div class="share-bar">
+  <span class="share-label">分享给朋友：</span>
+  <button class="share-btn" onclick="copyPageUrl()" type="button">复制链接</button>
+  <a class="share-btn" href="javascript:void(0)" onclick="shareToWeibo()" rel="noopener">微博</a>
+  <span class="share-btn wechat-btn" onclick="copyPageUrl()" role="button" tabindex="0">微信<span class="qr-popup"><span class="qr-popup-url"></span><span class="qr-popup-hint">复制链接发微信</span></span></span>
+</div>
+
 <!-- 正文 -->
 <div class="paper">
   <header class="header">
@@ -867,7 +874,7 @@ body.term-page {
 <!-- ===== 这个词被用在哪些成品里（M2 新增） ===== -->
 <div class="term-products" id="termProducts">
   <style>
-    .term-products { max-width: 720px; width: 100%; margin: 1.5rem auto 0; padding: 1.4rem 1.2rem; background: var(--mf-colors-background-surface, #fffdf9); border: 1px solid var(--mf-colors-border-weak, #ece5d6); border-radius: 14px; font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
+    .term-products { max-width: 720px; width: 100%; margin: 1.5rem auto 0; padding: 1.4rem 1.2rem; background: var(--mf-colors-background-surface, #fffdf9); border: 1px solid var(--mf-colors-border-weak, #ece5d6); border-radius: 12px; font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
     .term-products h3 { font-size: 1.02rem; margin-bottom: 0.5rem; font-family: var(--mf-fonts-display); }
     .term-products .tp-lead { font-size: 0.85rem; color: var(--mf-colors-text-weak, #8a7f6f); margin-bottom: 0.9rem; line-height: 1.7; }
     .tp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.9rem; }
