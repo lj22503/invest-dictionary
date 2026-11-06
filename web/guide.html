@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -484,7 +484,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "dateModified": "2026-10-31",
+  "dateModified": "2026-11-02",
   "@type": "WebPage",
   "name": "使用指南 · 投资词典",
   "description": "三步用投资词典查词、对照、自查：说人话、不堆术语、不给买卖结论。",
@@ -501,7 +501,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "dateModified": "2026-10-31",
+  "dateModified": "2026-11-02",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
@@ -529,7 +529,7 @@
   <nav class="site-nav" aria-label="主导航">
     <a href="/dictionary">全部词条</a>
     <a href="/#daily-hot">今日热词</a>
-    <a href="/#skills">7 个场景</a>
+    <a href="/#skills">8 个场景</a>
     <a href="/#howto">怎么用</a>
     <a href="/guide" class="is-active" aria-current="page">使用指南</a>
     <a class="site-nav__cta" href="/?random=1">随机一词</a>
@@ -544,14 +544,14 @@
       <p class="guide-hero__eyebrow">INVEST DICTIONARY · GUIDE</p>
       <h1>使用指南</h1>
       <p class="guide-hero__en">How to use it</p>
-      <p class="guide-hero__sub">900+ 理财词条，8 个场景。每个场景一条提示词，配合对应 Skill，遇到理财问题直接问。</p>
+      <p class="guide-hero__sub">1113 个理财词条，8 个场景。每个场景一条提示词，配合对应 Skill，遇到理财问题直接问。</p>
       <p class="guide-hero__slogan">你遇到什么情况 → 照抄提示词发给 AI → 触发对应 Skill → 拿到人话版答案。</p>
       <div class="guide-hero__actions">
         <a class="btn btn--primary" href="#scenes">直接看 8 个场景</a>
         <a class="btn btn--line" href="#install">先装 Skill</a>
       </div>
       <ul class="guide-hero__facts">
-        <li>900+ 理财词条</li>
+        <li>1113 个理财词条</li>
         <li>8 个场景</li>
         <li>8 个 Skill</li>
         <li>免费 · 不用注册</li>
@@ -593,14 +593,14 @@
         <button class="copy-btn" type="button" data-copy="installCmd" aria-label="复制安装命令">复制命令</button>
       </div>
       <pre class="code-block" id="installCmd"># 以 Claude Code 为例，把 skill 目录复制到你的技能目录
-cp -r skill/invest-dictionary-generator ~/.claude/skills/
-cp -r skill/invest-dictionary-concept-combinator ~/.claude/skills/
-cp -r skill/symptom-lookup ~/.claude/skills/
-cp -r skill/combo-narrative ~/.claude/skills/
-cp -r skill/duel-compare ~/.claude/skills/
-cp -r skill/decision-mosaic ~/.claude/skills/
-cp -r skill/question-probe ~/.claude/skills/
-cp -r skill/daily-hotword ~/.claude/skills/</pre>
+cp -r skill/mangofolio-generator ~/.claude/skills/
+cp -r skill/mangofolio-concept-combinator ~/.claude/skills/
+cp -r skill/mangofolio-symptom-lookup ~/.claude/skills/
+cp -r skill/mangofolio-combo-narrative ~/.claude/skills/
+cp -r skill/mangofolio-duel-compare ~/.claude/skills/
+cp -r skill/mangofolio-decision-mosaic ~/.claude/skills/
+cp -r skill/mangofolio-question-probe ~/.claude/skills/
+cp -r skill/mangofolio-daily-hotword ~/.claude/skills/</pre>
 
       <p class="note install-note"><b>不装 Skill 也能问</b>——AI 会按通用能力回答；装了 Skill 之后，输出会严格走“质量红线”：说人话、不堆术语、不给买卖结论、必须落到你的判断。</p>
     </div>
@@ -653,7 +653,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>invest-dictionary-generator</code>（单词条生成）</span>
+              <span><code>mangofolio-generator</code>（单词条生成）</span>
             </div>
             <p class="scene__heart"><b>心法</b>：只查一个词就用它。每个词条都是“一句话定义 → 为什么重要 → 怎么用 → 常见坑”四段式，3 分钟能看懂。</p>
           </article>
@@ -679,7 +679,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>combo-narrative</code>（<b>新闻翻译机</b>）</span>
+              <span><code>mangofolio-combo-narrative</code>（<b>新闻翻译机</b>）</span>
             </div>
             <p class="scene__heart"><b>心法</b>：把新闻拆成几个核心概念 → 串成因果链 → 落到“对你意味着什么”。不预测涨跌，只讲关系。</p>
           </article>
@@ -705,7 +705,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>symptom-lookup</code>（<b>理财急诊</b> / 症状倒查）</span>
+              <span><code>mangofolio-symptom-lookup</code>（<b>理财急诊</b> / 症状倒查）</span>
             </div>
             <p class="scene__heart"><b>心法</b>：你说一句口语化的“症状”，它倒查出你最该看的 3-5 个词条，并告诉你先看哪一条。不给买卖结论，只帮你分清“是正常波动还是买错了”。</p>
           </article>
@@ -731,7 +731,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>duel-compare</code>（<b>二选一擂台</b>）</span>
+              <span><code>mangofolio-duel-compare</code>（<b>二选一擂台</b>）</span>
             </div>
             <p class="scene__heart"><b>心法</b>：先校验两个选项是不是真的在同一个场景里对打，再按“最坏情况 / 流动性 / 收益来源 / 适合谁”四维并排看，最后给分界线和一个今天能算的试算。</p>
           </article>
@@ -757,7 +757,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>decision-mosaic</code>（<b>决策拆解桌</b> / 决策拼图）</span>
+              <span><code>mangofolio-decision-mosaic</code>（<b>决策拆解桌</b> / 决策拼图）</span>
             </div>
             <p class="scene__heart"><b>心法</b>：把决策拆成“取决于哪几个变量” → 每个变量让你填一个数字 → 给分界线（什么条件倾向做、什么条件先别动）→ 给一个今天能做的清单。不替你做决定。</p>
           </article>
@@ -783,7 +783,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>question-probe</code>（<b>防坑提问器</b> / 该问什么）</span>
+              <span><code>mangofolio-question-probe</code>（<b>防坑提问器</b> / 该问什么）</span>
             </div>
             <p class="scene__heart"><b>心法</b>：输出你应该问销售的 3-5 个问题，每个问题配“为什么重要”和“对方可能怎么绕”，最后给红灯信号——什么回答意味着“别继续了”。</p>
           </article>
@@ -809,9 +809,9 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>invest-dictionary-concept-combinator</code>（<b>概念串联</b>）</span>
+              <span><code>mangofolio-concept-combinator</code>（<b>概念串联</b>）</span>
             </div>
-            <p class="scene__heart"><b>心法</b>：6 类内容（数据 / 事件 / 政策 / 异动 / 财报 / 个人决策）各有模板，拆成核心词条串成叙事线，输出 6 屏可发布网页。想快速听懂不求成品时，用 <code>combo-narrative</code>（新闻翻译机）即可。</p>
+            <p class="scene__heart"><b>心法</b>：6 类内容（数据 / 事件 / 政策 / 异动 / 财报 / 个人决策）各有模板，拆成核心词条串成叙事线，输出 6 屏可发布网页。想快速听懂不求成品时，用 <code>mangofolio-combo-narrative</code>（新闻翻译机）即可。</p>
           </article>
 
           <!-- 场景八 -->
@@ -835,7 +835,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             </div>
             <div class="scene__skill">
               <span class="scene__label">配套 SKILL</span>
-              <span><code>daily-hotword</code>（<b>每日热词</b>）</span>
+              <span><code>mangofolio-daily-hotword</code>（<b>每日热词</b>）</span>
             </div>
             <p class="scene__heart"><b>心法</b>：围绕一条热点话题拆出 3-5 个今天必须懂的热词，每个词讲人话 + 说明为什么今天要看它，最后串成一句能复述给朋友的话。</p>
           </article>
@@ -851,7 +851,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
       <div class="sec-head">
         <div class="sec-head__main">
           <h2>知识库入口</h2>
-          <p>词条在站内查，提示词与 Skill 定义沉淀在 ima。</p>
+          <p>词条在站内查，1113 个词条与「8 个场景怎么问」的查询指引都沉淀在 ima。</p>
         </div>
         <div class="sec-head__aside">两个入口</div>
       </div>
@@ -862,7 +862,7 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             <span class="kico" aria-hidden="true">词</span>
             <h3>在线词库</h3>
           </div>
-          <p>900+ 理财词条随时查，按章节浏览，说人话不装逼。</p>
+          <p>1113 个理财词条随时查，22 个篇章，按章节浏览，说人话不装逼。</p>
           <span class="kb-card__go">去看看 →</span>
         </a>
         <a class="kb-card" href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">
@@ -870,9 +870,25 @@ cp -r skill/daily-hotword ~/.claude/skills/</pre>
             <span class="kico" aria-hidden="true">库</span>
             <h3>ima 知识库</h3>
           </div>
-          <p>提示词与 Skill 定义沉淀进 ima，可复制、可传播、可照着改（SkillHub 上架地址就绪后更新）。</p>
+          <p>1113 个词条全量收录，另含《Skill 场景查询指引》与《知识库常见问题》：哪个场景用哪个 Skill、提示词怎么改、查不到词怎么反馈。</p>
           <span class="kb-card__go">去 ima 打开 →</span>
         </a>
+      </div>
+
+      <!-- ============ 知识库使用问答 ============ -->
+      <div class="redlines" id="kb-faq" style="margin-top:28px">
+        <h3>知识库怎么用 · 常见问题</h3>
+        <ol>
+          <li><b>知识库和网站词库有什么区别？</b>网站是检索入口（一个词一个页面）；ima 知识库是「可复制的语料 + 提示词库」，适合把词条和 Skill 定义喂给自己的 AI 客户端，投顾可以直接拿去改。</li>
+          <li><b>查不到某个词怎么办？</b>先确认它是不是「投资术语」（品牌名、产品名、个股代码不在收录范围）；确实该收没收的，按第 8 条渠道反馈，下一批补。</li>
+          <li><b>不同场景该用哪个 Skill？</b>单个词 → 词条生成器；一段新闻 → 新闻翻译机；亏了慌 → 理财急诊；A 还是 B → 二选一擂台；该不该做 → 决策拆解桌；怕被销售绕 → 防坑提问器；要交付网页 → 概念串联；追热点 → 每日热词。</li>
+          <li><b>没装 Skill 能用知识库吗？</b>能。知识库里的词条本身就是人话版解释，直接把问题发给 AI 让它参照词条回答即可；装了 Skill 才会强制走「说人话、不给买卖结论」的质量红线。</li>
+          <li><b>词条会更新吗？</b>会。新词按批增补（当前 1113 个，22 个篇章），词条口径随监管与市场变化修订，以站内最新页面为准。</li>
+          <li><b>知识库内容能商用吗？</b>个人学习、投教科普、内部培训可直接用；对外课程、付费社群、机构交付属商用，需另行授权。</li>
+          <li><b>能直接当投资建议用吗？</b>不能。知识库与 Skill 只输出「看什么 / 问什么 / 取决于什么」，不输出「买什么」，也不承诺收益、不保本保息。</li>
+          <li><b>发现错误怎么反馈？</b>词条纠错、收录建议，走 <a href="https://github.com/lj22503/invest-dictionary/issues" target="_blank" rel="noopener">GitHub Issues</a> 或站内「关于我们」的联系方式；纠错会同步回网站与知识库。</li>
+        </ol>
+        <p class="redlines__note">以上问答同步收录在 ima 知识库《投资词典 · Skill 场景查询指引》一文，可整篇转给同事或客户。</p>
       </div>
 
       <div class="redlines">

@@ -6714,4 +6714,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E7%B1%BB%E5%B9%B3%E5%87%86%E5%9F%BA%E9%87%91</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E5%85%89%E4%BC%8F%EF%BC%88%E8%A3%85%E6%9C%BA%E8%B6%85%E8%B6%8A%E7%85%A4%E7%94%B5%EF%BC%89</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

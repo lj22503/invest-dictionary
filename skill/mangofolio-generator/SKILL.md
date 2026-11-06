@@ -1,5 +1,5 @@
 ---
-name: invest-dictionary-generator
+name: mangofolio-generator
 description: 生成"说人话"的中文金融/投资词条，输出可直接发布为投资词典（Invest Dictionary）网页的词条内容与 HTML 页面。当用户想新增投资术语词条、扩充投资词典、按"说人话不装逼"风格解释金融概念时使用。触发词：投资词条、金融术语、说人话、Invest Dictionary、投资词典词条生成。
 version: 1.1.0
 license: MIT

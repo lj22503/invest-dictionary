@@ -13,7 +13,7 @@
 - **数据面**：`web/terms` 472 页；`dictionary.json` 唯一数据源；`sitemap.xml` 由 `scripts/generate-sitemap.py` 同源生成；首页 `ALL_ENTRIES` 由 `scripts/sync_all_entries.py` 同步。
 
 ### 二期（已完成 · 待 push）
-- **新增 Skill**：`skill/invest-dictionary-concept-combinator/`
+- **新增 Skill**：`skill/mangofolio-concept-combinator/`
   - SKILL.md（11 节 / 6 模板架构 / 投顾工作台定位）
   - templates/narrative-page.html（6 屏 HTML 模板，v1.0 brand-token 兼容）
   - templates/narrative-outline.md（Markdown 草稿骨架）
@@ -23,7 +23,7 @@
 
 ### 通用规约（继续生效）
 - 提交前必跑：`python scripts/check-consistency.py`（见 AGENTS.md）。
-- 品牌视觉硬约束：以 `web/terms/14天期逆回购.html` 为基准页；任何 HTML/JS 引入新模板必须对齐 v1.0 令牌（详见 `invest-dictionary-generator/SKILL.md §品牌视觉硬约束`）。
+- 品牌视觉硬约束：以 `web/terms/14天期逆回购.html` 为基准页；任何 HTML/JS 引入新模板必须对齐 v1.0 令牌（详见 `mangofolio-generator/SKILL.md §品牌视觉硬约束`）。
 
 ### 一期遗留（仍 pending）
 - `dictionary.json` 去重「信用卡」+ id 352/353 撞号（473 → 472）。
@@ -97,11 +97,11 @@
 
 ## 4. 关键 cron 路径修正（**重要**）
 
-之前认为 `batch_fill_1000.py` 是 cron，但实际 cron 是 **Marvis `C:\Users\lj225\.marvis\schedules\11_1_0.yaml`**，直接按 `skill/invest-dictionary-generator/templates/term-page.html`（hot-word 模板）生成新词条。
+之前认为 `batch_fill_1000.py` 是 cron，但实际 cron 是 **Marvis `C:\Users\lj225\.marvis\schedules\11_1_0.yaml`**，直接按 `skill/mangofolio-generator/templates/term-page.html`（hot-word 模板）生成新词条。
 
 **模板现状（2026-09-22）**：两个模板均已完成 Wave 2（字体链 + emoji 段、圆角走 `--mf-radii-*`、footer 单次注入、内联硬编码色改 `:root` 变量）；**暗色模式（Wave 3）未做**。
 
-> **2026-09-20 更新（入口层修复后）**：两个 cron（`11_1_0.yaml` 词条线、`12_1_0.yaml` 热词线）的 prompt 均已写入【品牌视觉基准】+【产出前自检清单】，统一以 `web/terms/14天期逆回购.html` 为唯一基准页；`skill/invest-dictionary-generator/SKILL.md` 已升级 v1.1.0，同步品牌视觉硬约束与视觉自检清单（含删除"纸感手账风格"表述）。
+> **2026-09-20 更新（入口层修复后）**：两个 cron（`11_1_0.yaml` 词条线、`12_1_0.yaml` 热词线）的 prompt 均已写入【品牌视觉基准】+【产出前自检清单】，统一以 `web/terms/14天期逆回购.html` 为唯一基准页；`skill/mangofolio-generator/SKILL.md` 已升级 v1.1.0，同步品牌视觉硬约束与视觉自检清单（含删除"纸感手账风格"表述）。
 > **热词 cron 同样产出 HTML 页面，属于本次品牌视觉改造范围——本节此前"与改造无关"的判断已作废、不可再引用。** 模板层尚未同步，模板与基准页冲突时一律以基准页为准。
 
 ---

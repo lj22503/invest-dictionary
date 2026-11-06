@@ -28,7 +28,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 # ============== 路径 ==============
 ROOT = Path(r'D:\claudework\invest-dictionary')
-TPL  = ROOT / 'skill/invest-dictionary-generator/templates/term-page-regular.html'
+TPL  = ROOT / 'skill/mangofolio-generator/templates/term-page-regular.html'
 DICT = ROOT / 'web/dictionary.json'
 MD_DIR = ROOT / 'docs/terms-md'
 HTML_DIR = ROOT / 'web/terms'
@@ -112,7 +112,7 @@ def call_claude(terms_batch):
         raise RuntimeError('缺少 ANTHROPIC_AUTH_TOKEN 环境变量')
 
     # few-shot：从 examples 货币.md + docs/terms-md 应急金.md 取样
-    fewshot_1 = (ROOT / 'skill/invest-dictionary-generator/examples/货币.md').read_text(encoding='utf-8')
+    fewshot_1 = (ROOT / 'skill/mangofolio-generator/examples/货币.md').read_text(encoding='utf-8')
     fewshot_2_path = MD_DIR / '应急金.md'
     fewshot_2 = fewshot_2_path.read_text(encoding='utf-8') if fewshot_2_path.exists() else ''
 

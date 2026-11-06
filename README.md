@@ -2,7 +2,7 @@
 
 # 投资词典 · Invest Dictionary
 
-**1083 个投资术语，说人话，不装逼。**
+**1113 个投资术语，说人话，不装逼。**
 
 一个面向普通人的**中文投资术语词典**（Chinese investment dictionary / financial glossary）。
 每一个词条都用"3 分钟能看懂"的方式解释：一句话定义 → 为什么重要 → 怎么用 → 常见坑。
@@ -10,9 +10,9 @@
 [![在线词典](https://img.shields.io/badge/在线体验-dictionary.mangofolio.com-c43a31?style=for-the-badge)](https://dictionary.mangofolio.com)
 [![GitHub Stars](https://img.shields.io/github/stars/lj22503/invest-dictionary?style=for-the-badge&color=gold)](https://github.com/lj22503/invest-dictionary/stargazers)
 [![License](https://img.shields.io/badge/License-Apache--2.0-yellow?style=for-the-badge)](LICENSE)
-[![Skill](https://img.shields.io/badge/Agent_Skill-可复用-8b5040?style=for-the-badge)](skill/invest-dictionary-generator)
+[![Skill](https://img.shields.io/badge/Agent_Skill-可复用-8b5040?style=for-the-badge)](skill/mangofolio-generator)
 
-**中文金融扫盲 · 说人话的投资科普 · 1083 个理财必备术语 · 覆盖股票/基金/债券/保险/房产/宏观**
+**中文金融扫盲 · 说人话的投资科普 · 1113 个理财必备术语 · 覆盖股票/基金/债券/保险/房产/宏观**
 
 </div>
 
@@ -31,7 +31,7 @@
 
 | 入口 | 地址 | 说明 |
 |------|------|------|
-| 🏠 投资词典（本项目） | https://dictionary.mangofolio.com | 1083 个词条 · 22 个篇章 · 全文搜索 |
+| 🏠 投资词典（本项目） | https://dictionary.mangofolio.com | 1113 个词条 · 22 个篇章 · 全文搜索 |
 | 🧠 投资大脑 InvestBrain | https://brain.mangofolio.com | 投资决策与行为分析 |
 | 🐻 投资伙伴 InvestBuddy | https://investbuddy.mangofolio.com | 投资人格测试与守护兽 |
 | 📊 市场观察 MangoView | https://view.mangofolio.com | 市场行情可视化 |
@@ -40,7 +40,7 @@
 
 ## 特性
 
-- 📚 **1083 个词条**，覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章
+- 📚 **1113 个词条**，覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章
 - 🗣️ **说人话**：每个词条 = 一句话定义 + 真实场景 + 实操步骤 + 常见坑
 - 🔍 **全文搜索**：输入关键词即时过滤，章节联动
 - 🌐 **SEO 就绪**：每个词条独立页面，含 Schema.org `DefinedTerm` 结构化数据、OG/Twitter Card、canonical、面包屑、上下篇导航
@@ -64,11 +64,11 @@ python -m http.server 8080
 
 ### 使用词条生成 Skill（AI 用户）
 
-本仓库附带 `skill/invest-dictionary-generator`，让 Claude / 各类 Agent 按同一方法论生成新词条：
+本仓库附带 `skill/mangofolio-generator`，让 Claude / 各类 Agent 按同一方法论生成新词条：
 
 ```bash
 # 复制到你的 Agent 技能目录（以 Claude Code 为例）
-cp -r skill/invest-dictionary-generator ~/.claude/skills/
+cp -r skill/mangofolio-generator ~/.claude/skills/
 ```
 
 之后对 Agent 说："用投资词典的方法写一个词条：**可转债**"，即可得到符合本词典风格的词条 Markdown 与 HTML 页面。
@@ -79,17 +79,34 @@ cp -r skill/invest-dictionary-generator ~/.claude/skills/
 
 | 场景 | 提示词示例（照着发） | 配套 Skill |
 |------|------|------|
-| **查词学词** | "用投资词典的方法写一个词条：**可转债**" | `invest-dictionary-generator`（单词条生成） |
-| **看新闻** | "帮我翻译这段新闻：**央行降准0.5个百分点，释放长期资金约1万亿**，说人话" | `combo-narrative`（新闻翻译机） |
-| **持仓亏了** | "**我买的理财亏了，要不要赶紧卖掉？**" | `symptom-lookup`（理财急诊 / 症状倒查） |
-| **产品对比** | "手里有 10 万，**存定期还是买银行理财？**" | `duel-compare`（二选一擂台） |
-| **重大决定** | "**我要不要提前还房贷？**" | `decision-mosaic`（决策拆解桌 / 决策拼图） |
-| **防坑提问** | "**增额终身寿险**，我该问销售什么问题？" | `question-probe`（防坑提问器 / 该问什么） |
-| **复杂事件** | "把这段做成网页：**央行降准后市场怎么看**，讲给客户听" | `invest-dictionary-concept-combinator`（概念串联） |
-| **今日热词** | "**今日热词**，今天市场都在聊什么？" | `daily-hotword`（每日热词） |
+| **查词学词** | "用投资词典的方法写一个词条：**可转债**" | `mangofolio-generator`（单词条生成） |
+| **看新闻** | "帮我翻译这段新闻：**央行降准0.5个百分点，释放长期资金约1万亿**，说人话" | `mangofolio-combo-narrative`（新闻翻译机） |
+| **持仓亏了** | "**我买的理财亏了，要不要赶紧卖掉？**" | `mangofolio-symptom-lookup`（理财急诊 / 症状倒查） |
+| **产品对比** | "手里有 10 万，**存定期还是买银行理财？**" | `mangofolio-duel-compare`（二选一擂台） |
+| **重大决定** | "**我要不要提前还房贷？**" | `mangofolio-decision-mosaic`（决策拆解桌 / 决策拼图） |
+| **防坑提问** | "**增额终身寿险**，我该问销售什么问题？" | `mangofolio-question-probe`（防坑提问器 / 该问什么） |
+| **复杂事件** | "把这段做成网页：**央行降准后市场怎么看**，讲给客户听" | `mangofolio-concept-combinator`（概念串联） |
+| **今日热词** | "**今日热词**，今天市场都在聊什么？" | `mangofolio-daily-hotword`（每日热词） |
 
-> 💡 五个核心 Skill 的分工口诀：**看新闻找 combo-narrative，亏了找 symptom-lookup，纠结二选一找 duel-compare，纠结该不该找 decision-mosaic，面对产品找 question-probe**。
+> 💡 五个核心 Skill 的分工口诀：**看新闻找 mangofolio-combo-narrative，亏了找 mangofolio-symptom-lookup，纠结二选一找 mangofolio-duel-compare，纠结该不该找 mangofolio-decision-mosaic，面对产品找 mangofolio-question-probe**。
 > 所有 Skill 输出均为"概念梳理与提问参考"，不构成投资建议。
+**三种安装方式**：
+
+```bash
+# ① 全量安装（8 个场景 Skill）
+for s in mangofolio-generator mangofolio-combo-narrative mangofolio-symptom-lookup mangofolio-duel-compare \
+         mangofolio-decision-mosaic mangofolio-question-probe mangofolio-concept-combinator mangofolio-daily-hotword; do
+  cp -r skill/$s ~/.claude/skills/
+done
+
+# ② 只装单个场景
+cp -r skill/mangofolio-symptom-lookup ~/.claude/skills/
+```
+
+③ **从 SkillHub 安装**：本仓库 8 个 Skill 均已按 SkillHub 规范封装（YAML frontmatter 含 `name` / `description` / `version` / `license`），可通过 GitHub 仓库导入发布，或在 SkillHub 搜索「投资词典」系列安装。
+
+> 📖 **配套指引**：8 个场景的完整提示词、Skill 安装说明、提示词可替换变量与 12 条常见问题，已沉淀在 ima 知识库「投资词典」中的《投资词典_Skill场景查询指引》，仓库 `docs/` 下同步一份 Markdown。
+
 
 ## 目录结构
 
@@ -97,25 +114,25 @@ cp -r skill/invest-dictionary-generator ~/.claude/skills/
 invest-dictionary/
 ├── web/                          # 字典网页版（Vercel 静态部署）
 │   ├── index.html                # 首页：搜索 + 22 篇章词条卡片
-│   ├── terms/                    # 1083 个词条独立页面
+│   ├── terms/                    # 1113 个词条独立页面
 │   ├── dictionary.json           # 词条数据源（id/slug/title/related）
 │   ├── sitemap.xml / robots.txt  # SEO
 │   └── vercel.json               # 部署配置
 ├── skill/
-│   ├── invest-dictionary-generator/   # 金融词条生成 Skill
+│   ├── mangofolio-generator/   # 金融词条生成 Skill
 │   │   ├── SKILL.md              # 方法论 + 质量三原则 + 命名规范
 │   │   ├── templates/            # 词条 Markdown / HTML 模板
 │   │   └── examples/             # 示例词条
-│   ├── invest-dictionary-concept-combinator/   # 概念串联（原有 Skill，保留原名）
+│   ├── mangofolio-concept-combinator/   # 概念串联（原有 Skill，保留原名）
 │   │   ├── SKILL.md              # 6 屏叙事方法论（S1-S6 模板）
 │   │   ├── templates/            # 叙事大纲 / 页面模板
 │   │   └── examples/             # 示例叙事
-│   ├── symptom-lookup/           # 理财急诊（症状倒查）
-│   ├── combo-narrative/          # 新闻翻译机（概念串联轻量版）
-│   ├── duel-compare/             # 二选一擂台（二选一对打）
-│   ├── decision-mosaic/          # 决策拆解桌（决策拼图）
-│   ├── question-probe/           # 防坑提问器（该问什么）
-│   └── daily-hotword/            # 每日热词
+│   ├── mangofolio-symptom-lookup/           # 理财急诊（症状倒查）
+│   ├── mangofolio-combo-narrative/          # 新闻翻译机（概念串联轻量版）
+│   ├── mangofolio-duel-compare/             # 二选一擂台（二选一对打）
+│   ├── mangofolio-decision-mosaic/          # 决策拆解桌（决策拼图）
+│   ├── mangofolio-question-probe/           # 防坑提问器（该问什么）
+│   └── mangofolio-daily-hotword/            # 每日热词
 └── docs/
     ├── PROJECT_GOALS.md          # 项目目标记录
     ├── PITFALLS.md               # 已知坑点（开发排雷手册）
