@@ -1,9 +1,15 @@
 ---
 name: mangofolio-question-probe
+slug: mangofolio-question-probe
 description: 给一个产品名、概念或销售话术，输出购买前该问销售的 3-5 个问题，每个配「为什么重要」「对方可能的回避话术」，并给红灯信号。用于识别保本保息、锁定复利、过去三年年化等高话术里的坑。触发词：防坑提问、我该问销售什么、销售话术。
+displayName: 防坑提问器
+summary: 给一个产品或一段销售话术，输出你该当面问的 3-5 个问题，附「为什么重要」与「对方可能的回避话术」。
+tags: ["投资词典", "防坑", "销售话术", "理财科普"]
+homepage: https://dictionary.mangofolio.com/
 version: 1.0.0
 license: MIT
 agent_created: true
+category: finance
 ---
 
 # 防坑提问器 · Question Probe

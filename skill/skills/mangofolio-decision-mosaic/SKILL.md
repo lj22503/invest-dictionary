@@ -1,9 +1,15 @@
 ---
 name: mangofolio-decision-mosaic
+slug: mangofolio-decision-mosaic
 description: 面对「我要不要做这件事」的单边财务决策（提前还贷、存教育金、买增额寿），拆出这个决策取决于哪几个变量，每个变量配该看的词条，给分界线与今天就能做的行动清单，不给「该做 / 不该做」的结论。触发词：决策拆解、该不该提前还房贷、该不该存教育金。
+displayName: 决策拆解桌
+summary: 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
+tags: ["投资词典", "理财决策", "变量拆解", "行动清单"]
+homepage: https://dictionary.mangofolio.com/
 version: 1.0.0
 license: MIT
 agent_created: true
+category: finance
 ---
 
 # 决策拆解桌 · Decision Mosaic

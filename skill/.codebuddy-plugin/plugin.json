@@ -7,6 +7,11 @@
   "author": {
     "name": "Mangofolio"
   },
+  "icon": "assets/logo-512.png",
+  "logo": "assets/logo.svg",
+  "homepage": "https://dictionary.mangofolio.com/",
+  "repository": "https://github.com/lj22503/invest-dictionary",
+  "license": "MIT",
   "keywords": [
     "投资词典",
     "理财科普",
@@ -16,5 +21,15 @@
     "防坑",
     "财经新闻解读"
   ],
-  "category": "finance"
+  "category": "finance",
+  "skills": [
+    "./skills/mangofolio-symptom-lookup",
+    "./skills/mangofolio-question-probe",
+    "./skills/mangofolio-duel-compare",
+    "./skills/mangofolio-decision-mosaic",
+    "./skills/mangofolio-combo-narrative",
+    "./skills/mangofolio-daily-hotword",
+    "./skills/mangofolio-concept-combinator",
+    "./skills/mangofolio-generator"
+  ]
 }

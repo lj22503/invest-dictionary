@@ -1,9 +1,15 @@
 ---
 name: mangofolio-daily-hotword
+slug: mangofolio-daily-hotword
 description: 围绕一条今日热点话题，挑出 3-5 个必须懂的投资热词，逐个讲人话、说明它在话题里扮演的角色，最后串成一条能复述给别人听的话题解读。触发词：今日热词、今天市场在聊什么、今天有什么热点。
+displayName: 每日热词
+summary: 围绕一条今日热点，挑出 3-5 个必须懂的热词逐个讲人话，串成一段能复述给别人听的话题解读。
+tags: ["投资词典", "热点解读", "每日更新", "理财科普"]
+homepage: https://dictionary.mangofolio.com/
 version: 1.0.0
 license: MIT
 agent_created: true
+category: finance
 ---
 
 # 每日热词 · Daily Hotword

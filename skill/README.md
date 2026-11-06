@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo-512.png" width="120" height="120" alt="Mangofolio 投资词典">
+</p>
+
 # Mangofolio · 把投资的词翻译成人话
 
 8 个 Skill，一套方法论：**先把词讲明白，再谈这件事跟你有什么关系，最后只给分界线、不给买卖结论。**

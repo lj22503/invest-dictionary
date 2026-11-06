@@ -1,9 +1,15 @@
 ---
 name: mangofolio-symptom-lookup
+slug: mangofolio-symptom-lookup
 description: 用户用口语描述一个理财「症状」（亏了、被推荐高息产品、听说黄金要涨、房贷利率降了），倒查最该看的 3-5 个投资词典词条，并指出先看哪一条；只帮理解与分辨，不给买卖建议。触发词：理财急诊、我买的理财亏了、被推荐高息产品。
+displayName: 理财急诊
+summary: 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
+tags: ["投资词典", "理财科普", "风险识别", "说人话"]
+homepage: https://dictionary.mangofolio.com/
 version: 1.0.0
 license: MIT
 agent_created: true
+category: finance
 ---
 
 # 理财急诊 · Symptom Lookup

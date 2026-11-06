@@ -1,9 +1,15 @@
 ---
 name: mangofolio-generator
+slug: mangofolio-generator
 description: 生成说人话的中文金融 / 投资词条，按「一句话定义 + 为什么重要 + 怎么用 + 常见坑」结构输出 Markdown 或词典风格 HTML 页。当用户要新增词条、扩充词库或按词典风格解释概念时使用。触发词：写一个词条、金融术语解释、词条生成。
+displayName: 词条生成器
+summary: 把任何一个金融概念，写成普通人 3 分钟能看懂、AI 与搜索引擎都能读懂的词条。
+tags: ["投资词典", "内容生产", "词条写作", "结构化写作"]
+homepage: https://dictionary.mangofolio.com/
 version: 1.1.0
 license: MIT
 agent_created: true
+category: finance
 ---
 
 # 金融词条生成器 · Invest Dictionary Generator
