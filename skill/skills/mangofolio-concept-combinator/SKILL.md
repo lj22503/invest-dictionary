@@ -6,7 +6,7 @@ displayName: 概念串联
 summary: 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
 tags: ["投资词典", "叙事写作", "网页输出", "概念串联"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.0.0
+version: 1.1.0
 license: MIT
 agent_created: true
 category: finance

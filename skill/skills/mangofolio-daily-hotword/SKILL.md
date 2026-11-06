@@ -6,7 +6,7 @@ displayName: 每日热词
 summary: 围绕一条今日热点，挑出 3-5 个必须懂的热词逐个讲人话，串成一段能复述给别人听的话题解读。
 tags: ["投资词典", "热点解读", "每日更新", "理财科普"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.0.0
+version: 1.1.0
 license: MIT
 agent_created: true
 category: finance

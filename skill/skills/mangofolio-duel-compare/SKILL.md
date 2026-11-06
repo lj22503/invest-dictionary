@@ -6,7 +6,7 @@ displayName: 二选一擂台
 summary: 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
 tags: ["投资词典", "理财决策", "方案对比", "说人话"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.0.0
+version: 1.1.0
 license: MIT
 agent_created: true
 category: finance

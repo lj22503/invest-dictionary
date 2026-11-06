@@ -6,7 +6,7 @@ displayName: 新闻翻译机
 summary: 把看不懂的财经新闻、宏观数据、政策文件拆成核心概念，串成从「现象」到「对你意味着什么」的因果链。
 tags: ["投资词典", "财经新闻", "宏观解读", "说人话"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.0.0
+version: 1.1.0
 license: MIT
 agent_created: true
 category: finance

@@ -6,7 +6,7 @@ displayName: 决策拆解桌
 summary: 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
 tags: ["投资词典", "理财决策", "变量拆解", "行动清单"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.0.0
+version: 1.1.0
 license: MIT
 agent_created: true
 category: finance

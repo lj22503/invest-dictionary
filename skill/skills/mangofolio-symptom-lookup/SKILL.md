@@ -6,7 +6,7 @@ displayName: 理财急诊
 summary: 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
 tags: ["投资词典", "理财科普", "风险识别", "说人话"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.0.0
+version: 1.1.0
 license: MIT
 agent_created: true
 category: finance

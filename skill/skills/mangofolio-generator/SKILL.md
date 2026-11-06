@@ -6,7 +6,7 @@ displayName: 词条生成器
 summary: 把任何一个金融概念，写成普通人 3 分钟能看懂、AI 与搜索引擎都能读懂的词条。
 tags: ["投资词典", "内容生产", "词条写作", "结构化写作"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.1.0
+version: 1.2.0
 license: MIT
 agent_created: true
 category: finance
