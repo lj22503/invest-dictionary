@@ -19,7 +19,7 @@
 
 ### 第二步：写 Markdown 词条
 
-按 [skill/mangofolio-generator/templates/term-card.md](skill/mangofolio-generator/templates/term-card.md) 模板撰写，包含 4 个部分：
+按 [skill/skills/mangofolio-generator/templates/term-card.md](skill/skills/mangofolio-generator/templates/term-card.md) 模板撰写，包含 4 个部分：
 
 ```
 # 词条名（别名）
@@ -49,7 +49,7 @@
 
 ### 第四步：生成 HTML 页面
 
-- 复用 [templates/term-page.html](skill/mangofolio-generator/templates/term-page.html)
+- 复用 [templates/term-page.html](skill/skills/mangofolio-generator/templates/term-page.html)
 - canonical / og:url 使用正式域名 `https://dictionary.mangofolio.com/terms/{文件名}.html`
 - 相关词条链接 href 必须用**归一化文件名**，否则含特殊字符的词条会断链
 

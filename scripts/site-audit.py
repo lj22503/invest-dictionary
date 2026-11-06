@@ -545,6 +545,63 @@ def audit(root, rules, rep):
             "合规红线：最高法判例认定词典属实用工具类（查词无须手机号），"
             "默认勾选违法、以注销账号替代撤回同意不成立")
 
+    # ---------- skill（上架包）----------
+    # 上架后包里没有仓库里的一切：web/terms 基准页、docs/specs、~/.claude 路径都不存在。
+    # 这类引用一旦残留，Skill 会在别人机器上静默失效；索引与词库不同步则会让 AI 校验错词条。
+    repo_root = os.path.dirname(root)
+    skill_root = os.path.join(repo_root, "skill")
+    skills_dir = os.path.join(skill_root, "skills")
+    plugin_json = os.path.join(skill_root, ".codebuddy-plugin", "plugin.json")
+    if os.path.isdir(skills_dir):
+        if not os.path.exists(plugin_json):
+            rep.add("skill", "FAIL", "上架包 plugin.json", "缺 skill/.codebuddy-plugin/plugin.json",
+                    "按已上架包结构补：name / version / description / author / keywords / category")
+        else:
+            try:
+                pj = json.load(open(plugin_json, encoding="utf-8"))
+                miss_k = [k for k in ("name", "version", "description", "author") if k not in pj]
+                rep.add("skill", "FAIL" if miss_k else "PASS", "上架包 plugin.json",
+                        ("缺字段：%s" % ",".join(miss_k)) if miss_k else "齐备（%s v%s）" % (pj.get("name"), pj.get("version")), "")
+            except Exception as e:
+                rep.add("skill", "FAIL", "上架包 plugin.json", "解析失败：%s" % e, "")
+
+        try:
+            dict_n = len(json.load(open(os.path.join(root, "dictionary.json"), encoding="utf-8")))
+        except Exception:
+            dict_n = -1
+        names = sorted(d for d in os.listdir(skills_dir) if os.path.isdir(os.path.join(skills_dir, d)))
+        bad_idx, no_meta, dead_ref = [], [], []
+        for sn in names:
+            sdir = os.path.join(skills_dir, sn)
+            md = os.path.join(sdir, "SKILL.md")
+            idx = os.path.join(sdir, "references", "term-index.txt")
+            if os.path.exists(idx):
+                n = sum(1 for _ in open(idx, encoding="utf-8"))
+                if dict_n > 0 and n != dict_n:
+                    bad_idx.append("%s(%d/%d)" % (sn, n, dict_n))
+            else:
+                bad_idx.append("%s(无索引)" % sn)
+            if os.path.exists(md):
+                body = open(md, encoding="utf-8").read()
+                parts = body.split("---")
+                head = parts[1] if len(parts) >= 3 else ""
+                if "agent_created:" not in head:
+                    no_meta.append(sn)
+                for pat in ("web/terms/", "../../docs/", "~/.claude/"):
+                    if pat in body:
+                        dead_ref.append("%s→%s" % (sn, pat))
+                        break
+        rep.add("skill", "FAIL" if bad_idx else "PASS", "Skill 词条索引与词库同步",
+                ("不一致：%s" % ", ".join(bad_idx)) if bad_idx
+                else "%d 个 skill 均为 %d 条" % (len(names), dict_n),
+                "跑 python scripts/sync-skill-term-index.py")
+        rep.add("skill", "FAIL" if no_meta else "PASS", "Skill frontmatter agent_created",
+                ("缺：%s" % ", ".join(no_meta)) if no_meta else "%d 个均含" % len(names),
+                "官方规范要求，便于后续 skill_manage 修改")
+        rep.add("skill", "FAIL" if dead_ref else "PASS", "Skill 无仓库私有路径",
+                ("残留：%s" % ", ".join(dead_ref)) if dead_ref else "无 web/terms、docs、~/.claude 引用",
+                "上架包内不存在这些路径，需改为包内相对路径或删除")
+
     # ---------- hygiene ----------
     # 判定口径：磁盘上有备份文件 ≠ 会被部署。只要 .vercelignore 全覆盖就不算问题
     # （本地留着是给人回滚用的，删掉反而危险）。真正要报警的是「漏网」。

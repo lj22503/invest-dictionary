@@ -1,8 +1,9 @@
 ---
 name: mangofolio-concept-combinator
-description: 让每个人用 AI 成为自己的投顾。把一段复杂内容（数据/事件/政策/异动/财报/个人决策）拆成核心词条，串成叙事线，输出 6 屏可发布的网页。触发词：跑一遍叙事流程、把这段做成网页、解读这段内容、帮我做成客户能看懂的、我要发客户简报、概念串联。
+description: 把一段复杂内容（宏观数据、事件、政策、市场异动、公司财报、个人决策）拆成核心词条，串成叙事线，输出 6 屏可发布的网页。适合需要交付成品的解读场景，不是纯文字问答。触发词：概念串联、做成 6 屏网页、客户简报。
 version: 1.0.0
 license: MIT
+agent_created: true
 ---
 
 # 概念串联叙事师 · Invest Dictionary Concept Combinator
@@ -20,7 +21,7 @@ license: MIT
 **与 mangofolio-generator 的关系**：generator 教 AI 写**单个词条**（怎么说人话解释"M1"）；本 Skill 教 AI 把**多个词条**组合起来（怎么用 M1 / M2 / 社融 / 住户贷款 一起讲清楚"国家在缩着过"）。两者拼起来使用，互不依赖。
 
 **仓库**：https://github.com/lj22503/invest-dictionary
-**在线词典**：https://dictionary.mangofolio.com/（472 个词条随时调用）
+**在线词典**：https://dictionary.mangofolio.com/（1000+ 个词条随时调用）
 **兄弟项目**：投资大脑 Brain · 投资伙伴 Buddy · 市场观察 View · 财务工具箱 FinTools
 
 
@@ -61,13 +62,23 @@ license: MIT
 | 5 行动 | 怎么用 / 怎么避 / 怎么选 | 表格分情况给建议 |
 | 6 收尾 | 一句话余味 | 留思考的画面，不写"综上所述" |
 
-**HTML 视觉硬约束**（继承自 `mangofolio-generator/SKILL.md §品牌视觉硬约束`，与基准页 `web/terms/14天期逆回购.html` 逐项对齐；本 Skill 不重抄规则全文，**冲突时以 generator 为准**）：
+**HTML 视觉硬约束**（继承自 `../mangofolio-generator/SKILL.md §品牌视觉硬约束`，与基准页 `../mangofolio-generator/templates/term-page-baseline.html` 逐项对齐；本 Skill 不重抄规则全文，**冲突时以 generator 为准**）：
 - 色板仅用 `#FFFFFF` / `#F97316` / `#E05E0A` / `#3A332C` / `#8A7D70` / `#241610` 系（详见 generator）
 - 字体链每条末尾必须带 emoji 段 `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"`
 - 圆角只用 `16px`（卡片）/ `9999px`（按钮）/ `2~12px`（小元素）/ `50%`（圆点）
-- 模板与示例见本仓库 `templates/narrative-page.html`、`examples/q3-2026.html`
+- 模板与示例见本 Skill 自带 `templates/narrative-page.html`、`examples/q3-2026.html`
 - 必要时将 `templates/narrative-page.html` 的样式拷贝到目标，再覆盖 hero / 卡片内容
 
+
+## 词条校验（输出前必做）
+
+本 Skill 会点名"该看哪几个词条"。这些词条必须真实存在，不能凭记忆编：
+
+1. 读取本 Skill 目录下的 `references/term-index.txt`（每行 `词条名<TAB>文件名`，覆盖全站词条）
+2. 按「完全相等 → 去括注后相等 → 包含」的顺序匹配；命中后可用文件名拼链接：
+   `https://dictionary.mangofolio.com/terms/<文件名去掉 .html>`
+3. 未命中时，换一个语义最接近且**索引里确实存在**的词条，不得输出索引外的词条名
+4. 索引不可读时，只说"该查哪个方向"，不点名具体词条
 
 ## 4. 跨模板通用质量标准
 
@@ -810,7 +821,7 @@ Skill 不替用户选模板——6 个模板差异显著（同样是挂钩子，
 
 **方式二：作为项目 Skill 加载**
 
-放在 `~/.claude/skills/` 或等价路径下，对 AI 说「用 `mangofolio-concept-combinator` 跑 S2 处理这篇文章」即可。
+放在 `~/.workbuddy/skills/` 或等价路径下，对 AI 说「用 `mangofolio-concept-combinator` 跑 S2 处理这篇文章」即可。
 
 **方式三：拆成三步**
 
@@ -836,10 +847,8 @@ S2-S6 骨架已就绪，worked example 待续。
 | 姐妹 skill | `../mangofolio-generator/SKILL.md` | 单词条生成方法论，本 Skill 的"词条"侧 |
 | HTML 模板 | `templates/narrative-page.html` | 6 屏通用 HTML 骨架（v1.0 brand-token 兼容） |
 | Markdown 模板 | `templates/narrative-outline.md` | 6 屏 Markdown 草稿骨架 |
-| 设计令牌速查 | `../../docs/design-tokens.md` | 色板、字体链、圆角的权威源 |
-| 原始 spec | `../../docs/specs/概念组合应用.txt` | 第一版方法论雏形（4700+ 行） |
-| 原始 spec | `../../docs/specs/投顾写文工作台.txt` | 投顾定位 + 6 模板结构（3400+ 行） |
-| 品牌视觉硬约束 | `../mangofolio-generator/SKILL.md` §品牌视觉硬约束 | 与基准页 `web/terms/14天期逆回购.html` 对齐 |
+| 设计令牌 | 本文件 §3 的内联硬约束 | 色板、字体链、圆角的权威源 |
+| 品牌视觉硬约束 | `../mangofolio-generator/SKILL.md` §品牌视觉硬约束 | 与基准页 `../mangofolio-generator/templates/term-page-baseline.html` 对齐 |
 
 
 ## 附录 C · 提交前自检（投顾工作台视角）

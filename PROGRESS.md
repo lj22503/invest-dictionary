@@ -3,6 +3,37 @@
 > mangofolio 生态第 3 块 · 术语平权（听得懂）。1083 个中文投资术语，"说人话不装逼"。
 > 进度记录：每次对话收尾更新（项目线规范②）。
 
+## 2026-11-06 · Skill 包上架改造（批 1）：从 8 个裸目录变成可提交审核的 plugin
+
+### 起因
+要上架 WorkBuddy Marketplace / SkillHub，并按规范 review `skill/`。审阅发现方法论质量高（8/8 过官方格式校验），但"上架就绪度"只有约 55%：包形态不对、2 个 Skill 硬依赖仓库文件、6 个被点名词条在词典里不存在、词条数过期、5 组触发词互撞。审阅报告见 `docs/SKILL_REVIEW_20261106.md`。
+
+### 改法
+| 类别 | 改动 |
+|---|---|
+| 包形态 | 8 个目录 `git mv` 进 `skill/skills/`；新增 `.codebuddy-plugin/plugin.json`（对齐已上架包 `a-share-analysis` 字段）、`README.md`（上架页文案 + 8 技能路由表）、`LICENSE`；新增 `references/routing.md` 处理 5 组触发词互撞 |
+| 元数据 | 8 个 SKILL.md 全部补 `agent_created: true`；description 统一收敛为「做什么 + 何时用 + 2-3 个高辨识触发词」，去掉泛词（说人话）与撞车词（靠谱吗 / 提前还贷 / 增额寿 / 解读这段内容） |
+| 词条真实性 | 缺失的 5 个词条**换成词典里真实存在的**：浮亏vs实亏→割肉（亏损卖出）、净值型理财→银行理财（净值型 / 预期收益型）、赎回踩踏→流动性风险、增额寿→增额终身寿险、长期资金→货币乘数；decision-mosaic 场景库 7 个同类问题一并换（租售比/折旧/地段/交易成本/配置比例/风险承受能力） |
+| 过期数据 | 448 / 472 词条 → "1000+，以站点实时为准"（不再写死，避免每次 cron 都要改） |
+| 失效路径 | `web/terms/14天期逆回购.html` → 包内 `templates/term-page-baseline.html`（34KB 基准页随包分发）；`../../docs/*` 删除；`~/.claude/skills/` → `~/.workbuddy/skills/` |
+| 词条校验 | 新增 `scripts/sync-skill-term-index.py` 为 8 个 skill 各生成一份 `references/term-index.txt`（1115 条 / 50KB），SKILL.md 统一加「词条校验（输出前必做）」一节——这是原来最系统性的缺口：红线要求"词条必须存在"，但包里根本没有可查的东西 |
+| 冗余清理 | 删 7 个 `.bak`（-148KB，占包 35%） |
+
+### 门禁与验证
+- `site-audit.py` 新增 4 项 skill 维度检查（plugin.json 齐备 / 索引与词库同步 / agent_created / 无仓库私有路径），24 → **31 项全 PASS**
+- 新增 `scripts/check-skill-terms.py`：提取场景库、候选池、【最该先看】、【关键概念】、示例里的点名词条，逐个校验存在性——当前 **6 个 skill 提及 56 个词条，0 缺失**
+- 8 个 skill 官方 `package_skill.py` 全部打包通过；plugin 包 226.8 KB / 29 文件
+- `sync-skill-term-index.py` 已接入 `sync-site.py` 链路（词库一变就重刷，防漂移）
+
+### 遗留（批 2）
+- `question-probe` 第 2 步"每类产品 3-5 个必问问题"仍是空壳，需补 6 类清单
+- `concept-combinator` 855 行超载，需拆 `references/template-s1..s6.md`
+- 2 处红线/示例矛盾（combo-narrative "大概率下降" vs 不预测；symptom-lookup "不急着卖" vs 不给买卖结论）
+- `daily-hotword` 无实时数据防线（可能编造当日热点）
+- `generator` 待重构后上架（老板确认本轮不动）
+
+---
+
 ## 2026-11-03 · 热搜榜 v2：只展示能落到词条的词（并与今日热词分工）
 
 ### 起因

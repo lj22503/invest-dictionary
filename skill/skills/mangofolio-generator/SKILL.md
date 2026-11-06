@@ -1,8 +1,9 @@
 ---
 name: mangofolio-generator
-description: 生成"说人话"的中文金融/投资词条，输出可直接发布为投资词典（Invest Dictionary）网页的词条内容与 HTML 页面。当用户想新增投资术语词条、扩充投资词典、按"说人话不装逼"风格解释金融概念时使用。触发词：投资词条、金融术语、说人话、Invest Dictionary、投资词典词条生成。
+description: 生成说人话的中文金融 / 投资词条，按「一句话定义 + 为什么重要 + 怎么用 + 常见坑」结构输出 Markdown 或词典风格 HTML 页。当用户要新增词条、扩充词库或按词典风格解释概念时使用。触发词：写一个词条、金融术语解释、词条生成。
 version: 1.1.0
 license: MIT
+agent_created: true
 ---
 
 # 金融词条生成器 · Invest Dictionary Generator
@@ -10,7 +11,7 @@ license: MIT
 ## 定位
 
 把任何一个金融/投资概念，写成一个普通人 3 分钟能看懂、AI 和搜索引擎都能读懂的词条。
-本 Skill 沉淀自 Invest Dictionary（投资词典）项目 448 个词条的生成方法论（词条数须与 `web/dictionary.json` 实际条目数一致）。
+本 Skill 沉淀自 Invest Dictionary（投资词典）项目 1000+ 个词条的生成方法论（具体条数以词库站点实时数据为准，勿硬编码旧值）。
 
 仓库：https://github.com/lj22503/invest-dictionary
 在线词典：https://dictionary.mangofolio.com/
@@ -65,7 +66,7 @@ license: MIT
 
 ### 方式 B：HTML 词条页（用于直接发布到投资词典）
 
-- 视觉与结构的**唯一基准页**：`web/terms/14天期逆回购.html`。生成任何 HTML 词条页之前，必须先 read_text 该基准页，逐项对齐其色板、字体链、圆角、版式与页脚；仓库模板 `templates/term-page.html` 尚未完成品牌视觉同步（后续步骤处理），模板与基准页冲突时一律**以基准页为准**
+- 视觉与结构的**唯一基准页**：`templates/term-page-baseline.html`（随本 Skill 分发）。生成任何 HTML 词条页之前，必须先读取该文件，逐项对齐其色板、字体链、圆角、版式与页脚；`templates/term-page.html` 与基准页冲突时，一律**以基准页为准**。若基准页不可读，按本节列出的硬约束生成，不要中断任务
 - 头部元数据必填：`title`、`description`（一句话定义）、`canonical`（正式域名）、OG/Twitter Card、Schema.org `DefinedTerm` JSON-LD
 - 正文用故事卡结构（`article.card`，含 `.card-title`/`.card-body`/`.card-quote`/`.card-number`/`.step-list`）；样式一律对齐基准页，**禁止复用任何"纸感手账"类旧样式**
 - 页尾加"上下篇导航"（term-pager）与"相关词条"（term-related，链接用归一化编码 URL）
@@ -104,6 +105,16 @@ license: MIT
 3. 提交 PR 时：同时提供词条 Markdown、HTML 页、并在 `dictionary.json` 中登记（id 递增、slug 用归一化命名、related 填相关词条 id）。
 4. 命名与风格不符会被维护者打回：说人话、有场景、有坑点。
 
+## 词条校验（输出前必做）
+
+本 Skill 会点名"该看哪几个词条"。这些词条必须真实存在，不能凭记忆编：
+
+1. 读取本 Skill 目录下的 `references/term-index.txt`（每行 `词条名<TAB>文件名`，覆盖全站词条）
+2. 按「完全相等 → 去括注后相等 → 包含」的顺序匹配；命中后可用文件名拼链接：
+   `https://dictionary.mangofolio.com/terms/<文件名去掉 .html>`
+3. 未命中时，换一个语义最接近且**索引里确实存在**的词条，不得输出索引外的词条名
+4. 索引不可读时，只说"该查哪个方向"，不点名具体词条
+
 ## 质量检查清单（生成后必查）
 
 **内容项**
@@ -133,6 +144,6 @@ license: MIT
 ## 参考
 
 - 在线词典：https://dictionary.mangofolio.com/
-- 数据源：`web/dictionary.json`（当前 448 词条；写法上任一处声称的条目数必须与该文件实际条目数一致，勿硬编码旧值）
-- 视觉基准页：`web/terms/14天期逆回购.html`（品牌视觉与结构的唯一基准，冲突时以此页为准）
+- 数据源：https://dictionary.mangofolio.com/（1000+ 词条，条数以线上为准，勿硬编码）
+- 视觉基准页：`templates/term-page-baseline.html`（随包分发，冲突时以此页为准）
 - 模板：`templates/term-page.html`、`templates/term-card.md`（模板层品牌视觉同步进行中，尚未完成前不得作为视觉依据）

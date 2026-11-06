@@ -146,14 +146,14 @@
 把仓库里的 skill 目录复制到你的技能目录：
 
 ```bash
-cp -r skill/mangofolio-generator          ~/.claude/skills/
-cp -r skill/mangofolio-combo-narrative                      ~/.claude/skills/
-cp -r skill/mangofolio-symptom-lookup                       ~/.claude/skills/
-cp -r skill/mangofolio-duel-compare                         ~/.claude/skills/
-cp -r skill/mangofolio-decision-mosaic                      ~/.claude/skills/
-cp -r skill/mangofolio-question-probe                       ~/.claude/skills/
-cp -r skill/mangofolio-concept-combinator ~/.claude/skills/
-cp -r skill/mangofolio-daily-hotword                        ~/.claude/skills/
+cp -r skill/skills/mangofolio-generator          ~/.workbuddy/skills/
+cp -r skill/skills/mangofolio-combo-narrative                      ~/.workbuddy/skills/
+cp -r skill/skills/mangofolio-symptom-lookup                       ~/.workbuddy/skills/
+cp -r skill/skills/mangofolio-duel-compare                         ~/.workbuddy/skills/
+cp -r skill/skills/mangofolio-decision-mosaic                      ~/.workbuddy/skills/
+cp -r skill/skills/mangofolio-question-probe                       ~/.workbuddy/skills/
+cp -r skill/skills/mangofolio-concept-combinator ~/.workbuddy/skills/
+cp -r skill/skills/mangofolio-daily-hotword                        ~/.workbuddy/skills/
 ```
 
 仓库地址：https://github.com/lj22503/invest-dictionary

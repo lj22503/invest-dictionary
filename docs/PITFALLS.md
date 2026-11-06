@@ -273,6 +273,20 @@
 - **修复**：`importlib.util.spec_from_file_location` 按路径加载。
 - **预防**：脚本间复用逻辑，统一走按路径加载，别指望 `import`。
 
+## 38. Skill 上架包不能引用仓库里的一切（2026-11-06）
+
+- **现象**：`generator/SKILL.md` 写"必须先 read_text `web/terms/14天期逆回购.html`"，`concept-combinator` 引用 `../../docs/specs/*.txt`、`templates/narrative-page.html`，还有 Claude 平台路径 `~/.claude/skills/`。
+- **根因**：Skill 在仓库里写、在仓库里用，所有相对路径都"恰好能跑"。上架后包里只有 SKILL.md 与自带资源，这些路径全部不存在——AI 要么报错中断，要么凭空编样式。
+- **修复**：基准页复制进 `templates/term-page-baseline.html` 随包分发，路径改成包内相对路径；删掉 `../../docs/*`；平台路径改 `~/.workbuddy/skills/`；并补一句"资源不可读时按内联规则生成，不要中断"。
+- **预防**：`site-audit.py` 新增扫描项「Skill 无仓库私有路径」（`web/terms/`、`../../docs/`、`~/.claude/` 三个模式）。写 Skill 时把"这个文件上架后还在吗"当成必答问题。
+
+## 39. 红线写着"必须存在"，但包里没东西可查（2026-11-06）
+
+- **现象**：8 个 Skill 都有「✅ 热词必须是词典里能查到的词条」这类红线，实际示例里却在用 `浮亏 vs 实亏`、`净值型理财`、`赎回踩踏`、`增额寿`、`长期资金` 五个**词典里根本不存在**的词条（另有 decision-mosaic 场景库 7 个）。
+- **根因**：红线的约束对象是"词条存在性"，但包里没有任何词条清单，AI 只能凭记忆判断——红线等于没写。这和 #35（脚本没进链路）、#34（调研不回填）是同一类病：**规则没有可执行的校验载体**。
+- **修复**：`scripts/sync-skill-term-index.py` 为每个 skill 生成 `references/term-index.txt`（title + filename，1115 条约 50KB）；SKILL.md 加「词条校验（输出前必做）」，规定匹配顺序与"未命中时不得输出索引外词条"；`scripts/check-skill-terms.py` 反向校验 Skill 里点名的词条是否都在索引里。
+- **预防**：索引生成已进 `sync-site.py` 链路；词库增删后忘了重刷，`site-audit` 的「Skill 词条索引与词库同步」会直接 FAIL。
+
 ---
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*

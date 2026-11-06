@@ -134,7 +134,7 @@
 
 | 对象 | 状态 |
 |---|---|
-| `skill/mangofolio-generator/templates/term-page.html`、`term-page-regular.html` | 已按本规范重做（Wave2） |
+| `skill/skills/mangofolio-generator/templates/term-page.html`、`term-page-regular.html` | 已按本规范重做（Wave2） |
 | `web/index.html` + `web/terms/*.html`（存量 453 页） | 已刷 token（2026-09-21 全量） |
 | cron 入口（`11_1_0.yaml` / `12_1_0.yaml` 的 prompt + `SKILL.md`） | 已写【品牌视觉基准】+【产出前自检清单】，新产出自动对齐 |
 | **抖音图文线** `D:\ANT\agents\marvis\08-每日热词图文\main.py` | **例外（2026-09-22 决策）**：保留暖灰宣纸渐变底 `#F7F5F2→#EFEAE2`，不随本规范变更 |
