@@ -46,3 +46,6 @@ web/temp/
 temp_*.json
 *_dump.txt
 web/_existing_slugs.txt
+
+# 上架打包产物
+dist/
