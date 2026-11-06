@@ -1,0 +1,63 @@
+{
+  "name": "mango",
+  "version": "1.0.0",
+  "description": "Mango turns Chinese finance jargon into plain language: looks up terms, decodes news, compares two options, breaks down money decisions and questions sales pitches. Explains and helps you tell things apart, never gives buy or sell advice.",
+  "author": {
+    "name": "Mangofolio",
+    "email": "hello@mangofolio.com"
+  },
+  "homepage": "https://dictionary.mangofolio.com/",
+  "license": "MIT",
+  "keywords": [
+    "理财科普",
+    "金融术语",
+    "说人话",
+    "投资词典",
+    "防坑",
+    "财经新闻解读"
+  ],
+  "agents": ["./agents/mango.md"],
+  "skills": [
+    "./skills/mangofolio-symptom-lookup",
+    "./skills/mangofolio-question-probe",
+    "./skills/mangofolio-duel-compare",
+    "./skills/mangofolio-decision-mosaic",
+    "./skills/mangofolio-combo-narrative",
+    "./skills/mangofolio-daily-hotword",
+    "./skills/mangofolio-concept-combinator",
+    "./skills/mangofolio-generator"
+  ],
+
+  "expertType": "agent",
+  "agentName": "mango",
+
+  "displayName": {
+    "en": "Mango",
+    "zh": "Mango"
+  },
+  "profession": {
+    "en": "Plain-Language Money Explainer",
+    "zh": "理财说人话专家"
+  },
+  "displayDescription": {
+    "en": "Turns investing jargon into everyday Chinese. Looks up a 1000+ term dictionary, decodes finance news, compares two options, questions sales pitches and breaks down personal money decisions. Always explains, never advises.",
+    "zh": "把投资的词翻译成人话：查词条、拆新闻、比方案、防话术坑、拆财务决策，只帮理解与分辨，不给买卖建议。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "我买的理财最近亏了，帮我看看该先搞懂哪几个词",
+    "en": "My fund is losing money — which terms should I understand first?"
+  },
+  "plugin": "mango",
+  "tags": [
+    { "en": "Money Basics", "zh": "理财科普" },
+    { "en": "Finance Jargon", "zh": "金融术语" },
+    { "en": "Pitch Checking", "zh": "话术防坑" }
+  ],
+  "quickPrompts": [
+    { "en": "My fund is losing money — which terms should I understand first?", "zh": "我买的理财最近亏了，帮我看看该先搞懂哪几个词" },
+    { "en": "Break this finance news down into plain language", "zh": "这段财经新闻看不懂，帮我拆成人话" },
+    { "en": "The seller says it is principal-protected — what should I ask?", "zh": "销售说这个产品保本保息，我该当面问他什么" }
+  ]
+}
