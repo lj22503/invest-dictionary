@@ -57,8 +57,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 2rem 1rem 4rem;
-    font-family:
-      var(--mf-fonts-sans);
+    font-family: var(--mf-fonts-sans), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
     color: var(--ink);
     line-height: 1.9;
     letter-spacing: 0.01em;
@@ -487,7 +486,7 @@ body.term-page {
 }
 </style>
 <style>
-  /* ===== Brand tokens v1.0 · 与基准页 web/terms/14天期逆回购.html 对齐 ===== */
+  /* ===== Brand tokens v1.0 · 与品牌基准页对齐 ===== */
   :root {
     /* 基础映射（Wave 1 已建立） */
     --bg-paper: var(--mf-colors-background);
@@ -799,7 +798,7 @@ body.term-page {
   }
 </style>
 <style>
-    .mangofolio-nav { border-top: 1px solid var(--border-dashed); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: var(--ink-light); background: transparent; font-family: var(--mf-fonts-sans); }
+    .mangofolio-nav { border-top: 1px solid var(--border-dashed); margin-top: 48px; padding: 18px 24px 22px; text-align: center; font-size: 13px; color: var(--ink-light); background: transparent; font-family: var(--mf-fonts-sans), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
     .mangofolio-nav .mf-label { display: block; margin-bottom: 8px; font-weight: 600; letter-spacing: .08em; color: var(--ink-strong); }
     .mangofolio-nav a { display: inline-block; margin: 4px 10px; color: var(--accent); text-decoration: none; }
     .mangofolio-nav a:hover { text-decoration: underline; }
@@ -885,15 +884,15 @@ body.term-page {
 <!-- ===== 这个词被用在哪些成品里（M2 新增） ===== -->
 <div class="term-products" id="termProducts">
   <style>
-    .term-products { max-width: 720px; width: 100%; margin: 1.5rem auto 0; padding: 1.4rem 1.2rem; background: var(--mf-colors-background-surface, #fffdf9); border: 1px solid var(--mf-colors-border-weak, #ece5d6); border-radius: 14px; font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
-    .term-products h3 { font-size: 1.02rem; margin-bottom: 0.5rem; font-family: var(--mf-fonts-display); }
-    .term-products .tp-lead { font-size: 0.85rem; color: var(--mf-colors-text-weak, #8a7f6f); margin-bottom: 0.9rem; line-height: 1.7; }
+    .term-products { max-width: 720px; width: 100%; margin: 1.5rem auto 0; padding: 1.4rem 1.2rem; background: var(--card-bg, #FFFFFF); border: 1px solid var(--border-dashed, rgba(36,22,16,.10)); border-radius: 12px; font-family: var(--mf-fonts-ui), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
+    .term-products h3 { font-size: 1.02rem; margin-bottom: 0.5rem; font-family: var(--mf-fonts-display), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"; }
+    .term-products .tp-lead { font-size: 0.85rem; color: var(--ink-light, #8A7D70); margin-bottom: 0.9rem; line-height: 1.7; }
     .tp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.9rem; }
-    .tp-card { display: block; text-decoration: none; border: 1px solid var(--mf-colors-border-weak, #ece5d6); border-radius: 10px; padding: 0.55rem 0.75rem; background: var(--mf-colors-background, #fffdf9); transition: border-color .15s, transform .15s; }
+    .tp-card { display: block; text-decoration: none; border: 1px solid var(--border-dashed, rgba(36,22,16,.10)); border-radius: 8px; padding: 0.55rem 0.75rem; background: var(--card-bg, #FFFFFF); transition: border-color .15s, transform .15s; }
     .tp-card:hover { border-color: var(--accent, #f97316); transform: translateY(-1px); }
-    .tp-card .tp-name { font-size: 0.86rem; font-weight: 600; color: var(--ink, #2c2c2c); margin-bottom: 2px; }
-    .tp-card .tp-scene { font-size: 0.72rem; color: var(--mf-colors-text-weak, #8a7f6f); line-height: 1.5; }
-    .tp-foot { font-size: 0.78rem; color: var(--mf-colors-text-weak, #8a7f6f); line-height: 1.6; }
+    .tp-card .tp-name { font-size: 0.86rem; font-weight: 600; color: var(--ink, #3A332C); margin-bottom: 2px; }
+    .tp-card .tp-scene { font-size: 0.72rem; color: var(--ink-light, #8A7D70); line-height: 1.5; }
+    .tp-foot { font-size: 0.78rem; color: var(--ink-light, #8A7D70); line-height: 1.6; }
     .tp-foot a { color: var(--accent, #f97316); }
     @media (max-width: 560px) { .tp-grid { grid-template-columns: 1fr; } }
   </style>

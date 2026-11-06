@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_b1cb52ebd92d11f1bc42525400638852
-    ReservedCode1: HaVjk7EMFHIHaGf6OZrCOdk1joWarX707bUtPJCePGJ/+792uKJ+bKQEfB0bLQ0XSoLgE6x4WCahCGJyM7gkeZwTqrziYff66aX3x33r/S6ecG7XTRtZiddH0NVGuf+k8Mlo+XTK1c1KXB3vd0yHHhnvC9fdkblCPDNJPBh1UIcbIOhJq/SJnIeI5F0=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_b1cb52ebd92d11f1bc42525400638852
-    ReservedCode2: HaVjk7EMFHIHaGf6OZrCOdk1joWarX707bUtPJCePGJ/+792uKJ+bKQEfB0bLQ0XSoLgE6x4WCahCGJyM7gkeZwTqrziYff66aX3x33r/S6ecG7XTRtZiddH0NVGuf+k8Mlo+XTK1c1KXB3vd0yHHhnvC9fdkblCPDNJPBh1UIcbIOhJq/SJnIeI5F0=
----
-
 # 投资词典 · Skill 场景查询指引
 
 > **1113 个投资术语，说人话，不装逼。8 个场景，每个场景一条提示词，配一个 Skill。你遇到什么事，就照抄哪条提示词发给 AI。**
