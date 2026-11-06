@@ -346,15 +346,47 @@
 .hot-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   height: 48px;
   min-width: 0;
-  padding: 0 10px;
+  padding: 0 6px 0 10px;
   border-radius: var(--mf-radii-medium);
   color: var(--band-ink);
   font-size: 0.9rem;
 }
-.hot-item:hover { background: var(--mf-colors-background-warning); color: var(--band-ink); }
+.hot-item:hover { background: var(--mf-colors-background-warning); }
+/* 主体：点词直达词条页 */
+.hot-main {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  height: 100%;
+  color: var(--band-ink);
+  text-decoration: none;
+  cursor: pointer;
+}
+.hot-main:hover { color: var(--band-ink); }
+.hot-main:hover .hot-term { color: var(--mf-colors-text-accent-mango); }
+/* 次级入口：AI 解读 */
+.hot-ai {
+  flex: 0 0 auto;
+  padding: 3px 9px;
+  border: 1px solid var(--mf-colors-border);
+  border-radius: 999px;
+  background: none;
+  color: var(--band-ink-weak);
+  font-family: inherit;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.hot-ai:hover {
+  border-color: var(--mf-colors-text-accent-mango);
+  color: var(--mf-colors-text-accent-mango);
+}
 .hot-term {
   display: inline-flex;
   align-items: center;
@@ -822,6 +854,15 @@
   color: var(--mf-colors-text-weak);
 }
 .modal-foot a { font-weight: 600; }
+/* 热词弹窗：直达词条 */
+.modal-term-link {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 12px auto 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 1000px) {
@@ -942,7 +983,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "dateModified": "2026-11-03",
+  "dateModified": "2026-11-06",
   "@type": "WebSite",
   "@id": "https://dictionary.mangofolio.com/#website",
   "name": "投资词典 · Invest Dictionary",
@@ -965,7 +1006,7 @@
 </script>
 <script type="application/ld+json">
 {
-  "dateModified": "2026-11-03",
+  "dateModified": "2026-11-06",
   "@type": "Organization",
   "@id": "https://dictionary.mangofolio.com/#organization",
   "name": "投资词典 · Invest Dictionary",
@@ -1082,7 +1123,7 @@
           <div class="hot-head">
             <span class="hot-title">今天在聊什么</span>
             <span class="hot-date"></span>
-            <span class="hot-note">点击热词 → 触发 AI 解读</span>
+            <span class="hot-note">点词进词条 · AI 解读看右侧</span>
           </div>
           <div class="hot-list">
             <div class="hot-track" id="hotTrack"></div>
@@ -1382,6 +1423,7 @@
     <div class="modal-scene" id="modal-scene"></div>
     <div class="prompt-box" id="modal-prompt"></div>
     <button class="copy-btn" onclick="copyModalPrompt()">一键复制提示词</button>
+    <a class="modal-term-link" id="modal-term-link" hidden>查看词条 →</a>
     <p class="modal-foot">以上为概念梳理与提问参考，不构成投资建议。<a href="https://ima.qq.com/wiki/?shareId=82c25e3f0c5ffe78aa84cb9355b5f78848b1553918648dd04b7066a2418c84d4" target="_blank" rel="noopener">想装成 Skill？去 ima 知识库</a></p>
   </div>
 </div>
@@ -1394,7 +1436,7 @@
       <div class="sec-head__aside"><a href="/dictionary">打开完整词库 →</a></div>
     </div>
     <details class="terms-all">
-      <summary>共 1113 个词条，22 个篇章（点击展开）</summary>
+      <summary>共 1115 个词条，22 个篇章（点击展开）</summary>
       <div class="terms-group">
         <p class="terms-group__title">第一篇 钱的本质<span class="terms-group__n">44</span></p>
         <p class="terms-group__list">
@@ -1462,9 +1504,9 @@
         </p>
       </div>
       <div class="terms-group">
-        <p class="terms-group__title">第十二篇 宏观与周期<span class="terms-group__n">33</span></p>
+        <p class="terms-group__title">第十二篇 宏观与周期<span class="terms-group__n">34</span></p>
         <p class="terms-group__list">
-          <a href="terms/%E7%BB%8F%E6%B5%8E%E5%91%A8%E6%9C%9F%EF%BC%88%E5%A4%8D%E8%8B%8F%20_%20%E7%B9%81%E8%8D%A3%20_%20%E8%A1%B0%E9%80%80%20_%20%E8%90%A7%E6%9D%A1%EF%BC%89">经济周期（复苏 / 繁荣 / 衰退 / 萧条）</a> · <a href="terms/%E8%B4%A2%E6%94%BF%E8%B5%A4%E5%AD%97%20_%20%E8%B5%A4%E5%AD%97%E7%8E%87%EF%BC%883%25%E8%AD%A6%E6%88%92%E7%BA%BF%EF%BC%89">财政赤字 / 赤字率（3%警戒线）</a> · <a href="terms/%E4%B8%93%E9%A1%B9%E5%80%BA%EF%BC%88%E5%9C%B0%E6%96%B9%E5%9F%BA%E5%BB%BA%E7%9A%84%E9%92%B1%E4%BB%8E%E5%93%AA%E6%9D%A5%EF%BC%89">专项债（地方基建的钱从哪来）</a> · <a href="terms/%E6%B1%87%E7%8E%87%EF%BC%88%E4%BA%BA%E6%B0%91%E5%B8%81%E5%8D%87%E5%80%BC_%E8%B4%AC%E5%80%BC%EF%BC%89">汇率（人民币升值/贬值）</a> · <a href="terms/%E7%BE%8E%E6%9E%97%E6%97%B6%E9%92%9F">美林时钟</a> · <a href="terms/%E6%BB%9E%E8%83%80">滞胀</a> · <a href="terms/%E5%A4%96%E6%B1%87%E5%82%A8%E5%A4%87">外汇储备</a> · <a href="terms/%E7%BE%8E%E5%80%BA%E6%94%B6%E7%9B%8A%E7%8E%87">美债收益率</a> · <a href="terms/%E6%95%B0%E6%8D%AE%E4%BA%A7%E6%9D%83">数据产权</a> · <a href="terms/%E5%A5%97%E6%81%AF%E4%BA%A4%E6%98%93">套息交易</a> · <a href="terms/%E5%BA%93%E5%AD%98%E5%91%A8%E6%9C%9F%EF%BC%88%E5%9F%BA%E9%92%A6%E5%91%A8%E6%9C%9F%EF%BC%89">库存周期（基钦周期）</a> · <a href="terms/%E8%BD%AF%E7%9D%80%E9%99%86%20_%20%E7%A1%AC%E7%9D%80%E9%99%86">软着陆 / 硬着陆</a> · <a href="terms/%E6%98%8E%E6%96%AF%E5%9F%BA%E6%97%B6%E5%88%BB">明斯基时刻</a> · <a href="terms/%E9%A1%BA%E5%91%A8%E6%9C%9F%20_%20%E9%80%86%E5%91%A8%E6%9C%9F">顺周期 / 逆周期</a> · <a href="terms/%E6%94%BF%E7%AD%96%E6%80%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7">政策性金融工具</a> · <a href="terms/%E5%BA%B7%E6%B3%A2%E5%91%A8%E6%9C%9F">康波周期</a> · <a href="terms/%E7%B2%AE%E4%BB%B7%EF%BC%88%E5%85%A8%E7%90%83%E9%A3%9F%E5%93%81%E4%BB%B7%E6%A0%BC%EF%BC%89">粮价（全球食品价格）</a> · <a href="terms/%E4%BE%9B%E7%BB%99%E4%BE%A7%E6%94%B9%E9%9D%A9">供给侧改革</a> · <a href="terms/%E9%A2%86%E5%85%88%E6%8C%87%E6%A0%87%20_%20%E5%90%8C%E6%AD%A5%E6%8C%87%E6%A0%87%20_%20%E6%BB%9E%E5%90%8E%E6%8C%87%E6%A0%87">领先指标 / 同步指标 / 滞后指标</a> · <a href="terms/%E8%BF%87%E7%83%AD">过热</a> · <a href="terms/%E5%8F%8C%E5%BE%AA%E7%8E%AF%20_%20%E5%86%85%E5%BE%AA%E7%8E%AF%20_%20%E5%A4%96%E5%BE%AA%E7%8E%AF">双循环 / 内循环 / 外循环</a> · <a href="terms/%E6%88%BF%E5%9C%B0%E4%BA%A7%E5%91%A8%E6%9C%9F">房地产周期</a> · <a href="terms/%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8%E8%A1%B0%E9%80%80">资产负债表衰退</a> · <a href="terms/%E7%BB%8F%E6%B5%8E%E9%9F%A7%E6%80%A7">经济韧性</a> · <a href="terms/%E6%9C%B1%E6%A0%BC%E6%8B%89%E5%91%A8%E6%9C%9F">朱格拉周期</a> · <a href="terms/%E9%80%9A%E8%83%80%E4%BA%A4%E6%98%93%20_%20%E5%A4%8D%E8%8B%8F%E4%BA%A4%E6%98%93">通胀交易 / 复苏交易</a> · <a href="terms/%E6%B3%A1%E6%B2%AB%E7%A0%B4%E8%A3%82">泡沫破裂</a> · <a href="terms/%E6%B5%81%E5%8A%A8%E6%80%A7%E9%99%B7%E9%98%B1">流动性陷阱</a> · <a href="terms/%E5%80%BA%E5%8A%A1%E5%91%A8%E6%9C%9F">债务周期</a> · <a href="terms/%E5%BA%93%E5%85%B9%E6%B6%85%E8%8C%A8%E5%91%A8%E6%9C%9F">库兹涅茨周期</a> · <a href="terms/%E6%97%A5%E6%9C%AC%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4">日本失去的三十年</a> · <a href="terms/%E9%9C%80%E6%B1%82%E4%BE%A7%E7%AE%A1%E7%90%86">需求侧管理</a> · <a href="terms/%E9%95%BF%E5%91%A8%E6%9C%9F%20_%20%E7%9F%AD%E5%91%A8%E6%9C%9F%EF%BC%88%E5%BA%B7%E6%B3%A2%20vs%20%E5%9F%BA%E9%92%A6%EF%BC%89">长周期 / 短周期（康波 vs 基钦）</a>
+          <a href="terms/%E7%BB%8F%E6%B5%8E%E5%91%A8%E6%9C%9F%EF%BC%88%E5%A4%8D%E8%8B%8F%20_%20%E7%B9%81%E8%8D%A3%20_%20%E8%A1%B0%E9%80%80%20_%20%E8%90%A7%E6%9D%A1%EF%BC%89">经济周期（复苏 / 繁荣 / 衰退 / 萧条）</a> · <a href="terms/%E8%B4%A2%E6%94%BF%E8%B5%A4%E5%AD%97%20_%20%E8%B5%A4%E5%AD%97%E7%8E%87%EF%BC%883%25%E8%AD%A6%E6%88%92%E7%BA%BF%EF%BC%89">财政赤字 / 赤字率（3%警戒线）</a> · <a href="terms/%E4%B8%93%E9%A1%B9%E5%80%BA%EF%BC%88%E5%9C%B0%E6%96%B9%E5%9F%BA%E5%BB%BA%E7%9A%84%E9%92%B1%E4%BB%8E%E5%93%AA%E6%9D%A5%EF%BC%89">专项债（地方基建的钱从哪来）</a> · <a href="terms/%E6%B1%87%E7%8E%87%EF%BC%88%E4%BA%BA%E6%B0%91%E5%B8%81%E5%8D%87%E5%80%BC_%E8%B4%AC%E5%80%BC%EF%BC%89">汇率（人民币升值/贬值）</a> · <a href="terms/%E7%BE%8E%E6%9E%97%E6%97%B6%E9%92%9F">美林时钟</a> · <a href="terms/%E6%BB%9E%E8%83%80">滞胀</a> · <a href="terms/%E5%A4%96%E6%B1%87%E5%82%A8%E5%A4%87">外汇储备</a> · <a href="terms/%E7%BE%8E%E5%80%BA%E6%94%B6%E7%9B%8A%E7%8E%87">美债收益率</a> · <a href="terms/%E6%95%B0%E6%8D%AE%E4%BA%A7%E6%9D%83">数据产权</a> · <a href="terms/%E5%A5%97%E6%81%AF%E4%BA%A4%E6%98%93">套息交易</a> · <a href="terms/%E5%BA%93%E5%AD%98%E5%91%A8%E6%9C%9F%EF%BC%88%E5%9F%BA%E9%92%A6%E5%91%A8%E6%9C%9F%EF%BC%89">库存周期（基钦周期）</a> · <a href="terms/%E8%BD%AF%E7%9D%80%E9%99%86%20_%20%E7%A1%AC%E7%9D%80%E9%99%86">软着陆 / 硬着陆</a> · <a href="terms/%E6%98%8E%E6%96%AF%E5%9F%BA%E6%97%B6%E5%88%BB">明斯基时刻</a> · <a href="terms/%E9%A1%BA%E5%91%A8%E6%9C%9F%20_%20%E9%80%86%E5%91%A8%E6%9C%9F">顺周期 / 逆周期</a> · <a href="terms/%E6%94%BF%E7%AD%96%E6%80%A7%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7">政策性金融工具</a> · <a href="terms/%E5%BA%B7%E6%B3%A2%E5%91%A8%E6%9C%9F">康波周期</a> · <a href="terms/%E7%B2%AE%E4%BB%B7%EF%BC%88%E5%85%A8%E7%90%83%E9%A3%9F%E5%93%81%E4%BB%B7%E6%A0%BC%EF%BC%89">粮价（全球食品价格）</a> · <a href="terms/%E4%BE%9B%E7%BB%99%E4%BE%A7%E6%94%B9%E9%9D%A9">供给侧改革</a> · <a href="terms/%E9%A2%86%E5%85%88%E6%8C%87%E6%A0%87%20_%20%E5%90%8C%E6%AD%A5%E6%8C%87%E6%A0%87%20_%20%E6%BB%9E%E5%90%8E%E6%8C%87%E6%A0%87">领先指标 / 同步指标 / 滞后指标</a> · <a href="terms/%E8%BF%87%E7%83%AD">过热</a> · <a href="terms/%E5%8F%8C%E5%BE%AA%E7%8E%AF%20_%20%E5%86%85%E5%BE%AA%E7%8E%AF%20_%20%E5%A4%96%E5%BE%AA%E7%8E%AF">双循环 / 内循环 / 外循环</a> · <a href="terms/%E6%88%BF%E5%9C%B0%E4%BA%A7%E5%91%A8%E6%9C%9F">房地产周期</a> · <a href="terms/%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8%E8%A1%B0%E9%80%80">资产负债表衰退</a> · <a href="terms/%E7%BB%8F%E6%B5%8E%E9%9F%A7%E6%80%A7">经济韧性</a> · <a href="terms/%E6%9C%B1%E6%A0%BC%E6%8B%89%E5%91%A8%E6%9C%9F">朱格拉周期</a> · <a href="terms/%E9%80%9A%E8%83%80%E4%BA%A4%E6%98%93%20_%20%E5%A4%8D%E8%8B%8F%E4%BA%A4%E6%98%93">通胀交易 / 复苏交易</a> · <a href="terms/%E6%B3%A1%E6%B2%AB%E7%A0%B4%E8%A3%82">泡沫破裂</a> · <a href="terms/%E6%B5%81%E5%8A%A8%E6%80%A7%E9%99%B7%E9%98%B1">流动性陷阱</a> · <a href="terms/%E5%80%BA%E5%8A%A1%E5%91%A8%E6%9C%9F">债务周期</a> · <a href="terms/%E5%BA%93%E5%85%B9%E6%B6%85%E8%8C%A8%E5%91%A8%E6%9C%9F">库兹涅茨周期</a> · <a href="terms/%E6%97%A5%E6%9C%AC%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4">日本失去的三十年</a> · <a href="terms/%E9%9C%80%E6%B1%82%E4%BE%A7%E7%AE%A1%E7%90%86">需求侧管理</a> · <a href="terms/%E9%95%BF%E5%91%A8%E6%9C%9F%20_%20%E7%9F%AD%E5%91%A8%E6%9C%9F%EF%BC%88%E5%BA%B7%E6%B3%A2%20vs%20%E5%9F%BA%E9%92%A6%EF%BC%89">长周期 / 短周期（康波 vs 基钦）</a> · <a href="terms/%E5%85%89%E4%BC%8F%EF%BC%88%E8%A3%85%E6%9C%BA%E8%B6%85%E8%B6%8A%E7%85%A4%E7%94%B5%EF%BC%89">光伏（装机超越煤电）</a>
         </p>
       </div>
       <div class="terms-group">
@@ -1486,9 +1528,9 @@
         </p>
       </div>
       <div class="terms-group">
-        <p class="terms-group__title">第十六篇 金融市场黑话与交易场景<span class="terms-group__n">66</span></p>
+        <p class="terms-group__title">第十六篇 金融市场黑话与交易场景<span class="terms-group__n">67</span></p>
         <p class="terms-group__list">
-          <a href="terms/%E4%B8%8A%E8%BD%A6%20_%20%E4%B8%8B%E8%BD%A6">上车 / 下车</a> · <a href="terms/%E8%B8%8F%E7%A9%BA%EF%BC%88%E7%9C%8B%E7%9D%80%E6%B6%A8%E6%B2%A1%E4%B9%B0%EF%BC%89">踏空（看着涨没买）</a> · <a href="terms/%E8%A2%AB%E5%A5%97%EF%BC%88%E5%A5%97%E7%89%A2%EF%BC%89">被套（套牢）</a> · <a href="terms/%E5%89%B2%E8%82%89%EF%BC%88%E4%BA%8F%E6%8D%9F%E5%8D%96%E5%87%BA%EF%BC%89">割肉（亏损卖出）</a> · <a href="terms/%E6%8A%84%E5%BA%95%EF%BC%88%E6%8E%A5%E9%A3%9E%E5%88%80%EF%BC%89">抄底（接飞刀）</a> · <a href="terms/%E9%80%83%E9%A1%B6">逃顶</a> · <a href="terms/%E6%8E%A5%E7%9B%98%E4%BE%A0%EF%BC%88%E9%AB%98%E4%BD%8D%E6%8E%A5%E7%9B%98%EF%BC%89">接盘侠（高位接盘）</a> · <a href="terms/%E5%9B%BD%E5%AE%B6%E9%98%9F%EF%BC%88%E8%AF%81%E9%87%91%20_%20%E6%B1%87%E9%87%91%20_%20%E7%A4%BE%E4%BF%9D%EF%BC%89">国家队（证金 / 汇金 / 社保）</a> · <a href="terms/%E5%8C%97%E5%90%91%E8%B5%84%E9%87%91%20_%20%E5%8D%97%E5%90%91%E8%B5%84%E9%87%91">北向资金 / 南向资金</a> · <a href="terms/%E4%B8%BB%E5%8A%9B%20_%20%E5%BA%84%E5%AE%B6%EF%BC%88%E6%93%8D%E7%BA%B5%E5%B8%82%E5%9C%BA%EF%BC%89">主力 / 庄家（操纵市场）</a> · <a href="terms/%E6%B8%B8%E8%B5%84%EF%BC%88%E7%83%AD%E9%92%B1%20_%20%E7%9F%AD%E7%BA%BF%E8%B5%84%E9%87%91%EF%BC%89">游资（热钱 / 短线资金）</a> · <a href="terms/%E9%9F%AD%E8%8F%9C%EF%BC%88%E5%8F%8D%E5%A4%8D%E8%A2%AB%E6%94%B6%E5%89%B2%E7%9A%84%E6%95%A3%E6%88%B7%EF%BC%89">韭菜（反复被收割的散户）</a> · <a href="terms/%E5%8E%BB%E6%95%A3%E6%88%B7%E5%8C%96">去散户化</a> · <a href="terms/%E6%8B%89%E9%AB%98%E5%87%BA%E8%B4%A7">拉高出货</a> · <a href="terms/%E7%A0%B8%E7%9B%98">砸盘</a> · <a href="terms/%E6%8A%A4%E7%9B%98">护盘</a> · <a href="terms/%E6%94%BF%E7%AD%96%E5%BA%95%20_%20%E5%B8%82%E5%9C%BA%E5%BA%95%EF%BC%88%E5%8F%8C%E5%BA%95%EF%BC%89">政策底 / 市场底（双底）</a> · <a href="terms/%E7%89%9B%E5%B8%82%20_%20%E7%86%8A%E5%B8%82%20_%20%E9%9C%87%E8%8D%A1%E5%B8%82">牛市 / 熊市 / 震荡市</a> · <a href="terms/%E7%BB%93%E6%9E%84%E6%80%A7%E8%A1%8C%E6%83%85">结构性行情</a> · <a href="terms/%E5%B7%A6%E4%BE%A7%E4%BA%A4%E6%98%93%20_%20%E5%8F%B3%E4%BE%A7%E4%BA%A4%E6%98%93">左侧交易 / 右侧交易</a> · <a href="terms/%E6%BB%A1%E4%BB%93%20_%20%E6%B8%85%E4%BB%93%20_%20%E5%8D%8A%E4%BB%93">满仓 / 清仓 / 半仓</a> · <a href="terms/%E5%BB%BA%E4%BB%93%20_%20%E5%8A%A0%E4%BB%93%20_%20%E5%87%8F%E4%BB%93%20_%20%E8%B0%83%E4%BB%93">建仓 / 加仓 / 减仓 / 调仓</a> · <a href="terms/%E4%BB%93%E4%BD%8D%E7%AE%A1%E7%90%86">仓位管理</a> · <a href="terms/%E5%81%9AT%EF%BC%88T%2B0%E6%93%8D%E4%BD%9C%EF%BC%89">做T（T+0操作）</a> · <a href="terms/%E6%B4%97%E7%9B%98">洗盘</a> · <a href="terms/%E8%B5%9B%E9%81%93%20_%20%E6%99%AF%E6%B0%94%E5%BA%A6">赛道 / 景气度</a> · <a href="terms/%E5%A4%8D%E7%9B%98">复盘</a> · <a href="terms/%E5%A6%96%E8%82%A1">妖股</a> · <a href="terms/%E9%AB%98%E6%8A%9B%E4%BD%8E%E5%90%B8">高抛低吸</a> · <a href="terms/%E6%B3%A2%E6%AE%B5%E6%93%8D%E4%BD%9C">波段操作</a> · <a href="terms/%E4%BA%A4%E6%98%93%E7%BA%AA%E5%BE%8B">交易纪律</a> · <a href="terms/%E6%85%A2%E7%89%9B%20_%20%E5%BF%AB%E7%89%9B%20_%20%E7%96%AF%E7%89%9B">慢牛 / 快牛 / 疯牛</a> · <a href="terms/%E6%89%93%E6%9D%BF%20_%20%E8%BF%9E%E6%9D%BF%20_%20%E7%82%B8%E6%9D%BF%20_%20%E5%A4%A9%E5%9C%B0%E6%9D%BF">打板 / 连板 / 炸板 / 天地板</a> · <a href="terms/%E9%98%B4%E8%B7%8C%20_%20%E6%80%A5%E8%B7%8C">阴跌 / 急跌</a> · <a href="terms/%E6%8B%89%E9%AB%98%20_%20%E7%A0%B8%E7%9B%98%20_%20%E6%8A%A4%E7%9B%98%20_%20%E6%B4%97%E7%9B%98">拉高 / 砸盘 / 护盘 / 洗盘</a> · <a href="terms/%E7%BA%A2%E5%8D%81%E6%9C%88%E8%A1%8C%E6%83%85">红十月行情</a> · <a href="terms/%E8%BD%AE%E5%8A%A8%20_%20%E9%AB%98%E4%BD%8E%E5%88%87">轮动 / 高低切</a> · <a href="terms/%E7%A9%BA%E4%BB%93">空仓</a> · <a href="terms/%E8%BD%BB%E4%BB%93%20_%20%E9%87%8D%E4%BB%93">轻仓 / 重仓</a> · <a href="terms/%E5%8D%96%E9%A3%9E">卖飞</a> · <a href="terms/%E8%AF%B1%E5%A4%9A%20_%20%E8%AF%B1%E7%A9%BA">诱多 / 诱空</a> · <a href="terms/%E5%A5%97%E7%89%A2%E7%9B%98%20_%20%E8%8E%B7%E5%88%A9%E7%9B%98%20_%20%E6%8A%9B%E5%8E%8B">套牢盘 / 获利盘 / 抛压</a> · <a href="terms/%E9%9C%87%E4%BB%93">震仓</a> · <a href="terms/%E6%94%BE%E9%87%8F%E4%B8%8A%E6%B6%A8%20_%20%E7%BC%A9%E9%87%8F%E4%B8%8B%E8%B7%8C">放量上涨 / 缩量下跌</a> · <a href="terms/%E6%B7%B1V%20_%20%E5%8F%8D%E5%BC%B9%20_%20%E5%8F%8D%E8%BD%AC%20_%20%E4%BC%81%E7%A8%B3">深V / 反弹 / 反转 / 企稳</a> · <a href="terms/%E6%8A%95%E8%B5%84%E4%BD%93%E7%B3%BB%20_%20%E4%BA%A4%E6%98%93%E4%BD%93%E7%B3%BB">投资体系 / 交易体系</a> · <a href="terms/%E6%B6%88%E6%81%AF%E9%9D%A2%20_%20%E6%94%BF%E7%AD%96%E9%9D%A2%20_%20%E8%B5%84%E9%87%91%E9%9D%A2%20_%20%E6%83%85%E7%BB%AA%E9%9D%A2">消息面 / 政策面 / 资金面 / 情绪面</a> · <a href="terms/%E4%BA%94%E7%A9%B7%E5%85%AD%E7%BB%9D%E4%B8%83%E7%BF%BB%E8%BA%AB">五穷六绝七翻身</a> · <a href="terms/%E6%97%A5%E5%8E%86%E6%95%88%E5%BA%94%EF%BC%88%E6%98%A5%E8%8A%82%20_%20%E5%B9%B4%E6%9C%AB%EF%BC%89">日历效应（春节/年末）</a> · <a href="terms/%E5%B1%B1%E9%A1%B6%20_%20%E5%8D%8A%E5%B1%B1%E8%85%B0%EF%BC%88%E9%AB%98%E4%BD%8D%E9%BB%91%E8%AF%9D%EF%BC%89">山顶 / 半山腰（高位黑话）</a> · <a href="terms/%E5%9C%B0%E9%87%8F%E5%9C%B0%E4%BB%B7%EF%BC%88%E6%B2%A1%E4%BA%BA%E4%B9%B0%E5%8D%96%E7%9A%84%E5%BA%95%E9%83%A8%EF%BC%89">地量地价（没人买卖的底部）</a> · <a href="terms/%E5%A4%A9%E9%87%8F%E5%A4%A9%E4%BB%B7%EF%BC%88%E6%83%85%E7%BB%AA%E9%A1%B6%E7%82%B9%E7%9A%84%E4%BF%A1%E5%8F%B7%EF%BC%89">天量天价（情绪顶点的信号）</a> · <a href="terms/%E7%AB%99%E5%B2%97">站岗</a> · <a href="terms/%E6%89%BF%E6%8E%A5">承接</a> · <a href="terms/%E5%88%86%E6%AD%A7%E8%BD%AC%E4%B8%80%E8%87%B4%20_%20%E5%BC%B1%E8%BD%AC%E5%BC%BA">分歧转一致 / 弱转强</a> · <a href="terms/%E8%A1%A5%E6%B6%A8">补涨</a> · <a href="terms/%E6%B6%A8%E5%81%9C%E6%95%A2%E6%AD%BB%E9%98%9F">涨停敢死队</a> · <a href="terms/%E5%8D%A1%E4%BD%8D">卡位</a> · <a href="terms/%E7%9B%98%E5%90%8E%E6%80%BB%E7%BB%93">盘后总结</a> · <a href="terms/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%EF%BC%88%E5%85%A5%E9%97%A8%E2%86%92%E8%BF%9B%E9%98%B6%EF%BC%89">学习路径（入门→进阶）</a> · <a href="terms/%E6%A8%A1%E6%8B%9F%E7%9B%98">模拟盘</a> · <a href="terms/%E5%AE%9E%E7%9B%98">实盘</a> · <a href="terms/%E6%94%BF%E7%AD%96%E5%BA%95%20_%20%E5%B8%82%E5%9C%BA%E5%BA%95">政策底 _ 市场底</a> · <a href="terms/%E4%BD%8E%E5%90%B8%E9%AB%98%E6%8A%9B">低吸高抛</a> · <a href="terms/%E6%94%BE%E9%87%8F%20_%20%E7%BC%A9%E9%87%8F">放量 / 缩量</a> · <a href="terms/%E8%83%9C%E7%8E%87%20_%20%E8%B5%94%E7%8E%87">胜率 / 赔率</a>
+          <a href="terms/%E4%B8%8A%E8%BD%A6%20_%20%E4%B8%8B%E8%BD%A6">上车 / 下车</a> · <a href="terms/%E8%B8%8F%E7%A9%BA%EF%BC%88%E7%9C%8B%E7%9D%80%E6%B6%A8%E6%B2%A1%E4%B9%B0%EF%BC%89">踏空（看着涨没买）</a> · <a href="terms/%E8%A2%AB%E5%A5%97%EF%BC%88%E5%A5%97%E7%89%A2%EF%BC%89">被套（套牢）</a> · <a href="terms/%E5%89%B2%E8%82%89%EF%BC%88%E4%BA%8F%E6%8D%9F%E5%8D%96%E5%87%BA%EF%BC%89">割肉（亏损卖出）</a> · <a href="terms/%E6%8A%84%E5%BA%95%EF%BC%88%E6%8E%A5%E9%A3%9E%E5%88%80%EF%BC%89">抄底（接飞刀）</a> · <a href="terms/%E9%80%83%E9%A1%B6">逃顶</a> · <a href="terms/%E6%8E%A5%E7%9B%98%E4%BE%A0%EF%BC%88%E9%AB%98%E4%BD%8D%E6%8E%A5%E7%9B%98%EF%BC%89">接盘侠（高位接盘）</a> · <a href="terms/%E5%9B%BD%E5%AE%B6%E9%98%9F%EF%BC%88%E8%AF%81%E9%87%91%20_%20%E6%B1%87%E9%87%91%20_%20%E7%A4%BE%E4%BF%9D%EF%BC%89">国家队（证金 / 汇金 / 社保）</a> · <a href="terms/%E5%8C%97%E5%90%91%E8%B5%84%E9%87%91%20_%20%E5%8D%97%E5%90%91%E8%B5%84%E9%87%91">北向资金 / 南向资金</a> · <a href="terms/%E4%B8%BB%E5%8A%9B%20_%20%E5%BA%84%E5%AE%B6%EF%BC%88%E6%93%8D%E7%BA%B5%E5%B8%82%E5%9C%BA%EF%BC%89">主力 / 庄家（操纵市场）</a> · <a href="terms/%E6%B8%B8%E8%B5%84%EF%BC%88%E7%83%AD%E9%92%B1%20_%20%E7%9F%AD%E7%BA%BF%E8%B5%84%E9%87%91%EF%BC%89">游资（热钱 / 短线资金）</a> · <a href="terms/%E9%9F%AD%E8%8F%9C%EF%BC%88%E5%8F%8D%E5%A4%8D%E8%A2%AB%E6%94%B6%E5%89%B2%E7%9A%84%E6%95%A3%E6%88%B7%EF%BC%89">韭菜（反复被收割的散户）</a> · <a href="terms/%E5%8E%BB%E6%95%A3%E6%88%B7%E5%8C%96">去散户化</a> · <a href="terms/%E6%8B%89%E9%AB%98%E5%87%BA%E8%B4%A7">拉高出货</a> · <a href="terms/%E7%A0%B8%E7%9B%98">砸盘</a> · <a href="terms/%E6%8A%A4%E7%9B%98">护盘</a> · <a href="terms/%E6%94%BF%E7%AD%96%E5%BA%95%20_%20%E5%B8%82%E5%9C%BA%E5%BA%95%EF%BC%88%E5%8F%8C%E5%BA%95%EF%BC%89">政策底 / 市场底（双底）</a> · <a href="terms/%E7%89%9B%E5%B8%82%20_%20%E7%86%8A%E5%B8%82%20_%20%E9%9C%87%E8%8D%A1%E5%B8%82">牛市 / 熊市 / 震荡市</a> · <a href="terms/%E7%BB%93%E6%9E%84%E6%80%A7%E8%A1%8C%E6%83%85">结构性行情</a> · <a href="terms/%E5%B7%A6%E4%BE%A7%E4%BA%A4%E6%98%93%20_%20%E5%8F%B3%E4%BE%A7%E4%BA%A4%E6%98%93">左侧交易 / 右侧交易</a> · <a href="terms/%E6%BB%A1%E4%BB%93%20_%20%E6%B8%85%E4%BB%93%20_%20%E5%8D%8A%E4%BB%93">满仓 / 清仓 / 半仓</a> · <a href="terms/%E5%BB%BA%E4%BB%93%20_%20%E5%8A%A0%E4%BB%93%20_%20%E5%87%8F%E4%BB%93%20_%20%E8%B0%83%E4%BB%93">建仓 / 加仓 / 减仓 / 调仓</a> · <a href="terms/%E4%BB%93%E4%BD%8D%E7%AE%A1%E7%90%86">仓位管理</a> · <a href="terms/%E5%81%9AT%EF%BC%88T%2B0%E6%93%8D%E4%BD%9C%EF%BC%89">做T（T+0操作）</a> · <a href="terms/%E6%B4%97%E7%9B%98">洗盘</a> · <a href="terms/%E8%B5%9B%E9%81%93%20_%20%E6%99%AF%E6%B0%94%E5%BA%A6">赛道 / 景气度</a> · <a href="terms/%E5%A4%8D%E7%9B%98">复盘</a> · <a href="terms/%E5%A6%96%E8%82%A1">妖股</a> · <a href="terms/%E9%AB%98%E6%8A%9B%E4%BD%8E%E5%90%B8">高抛低吸</a> · <a href="terms/%E6%B3%A2%E6%AE%B5%E6%93%8D%E4%BD%9C">波段操作</a> · <a href="terms/%E4%BA%A4%E6%98%93%E7%BA%AA%E5%BE%8B">交易纪律</a> · <a href="terms/%E6%85%A2%E7%89%9B%20_%20%E5%BF%AB%E7%89%9B%20_%20%E7%96%AF%E7%89%9B">慢牛 / 快牛 / 疯牛</a> · <a href="terms/%E6%89%93%E6%9D%BF%20_%20%E8%BF%9E%E6%9D%BF%20_%20%E7%82%B8%E6%9D%BF%20_%20%E5%A4%A9%E5%9C%B0%E6%9D%BF">打板 / 连板 / 炸板 / 天地板</a> · <a href="terms/%E9%98%B4%E8%B7%8C%20_%20%E6%80%A5%E8%B7%8C">阴跌 / 急跌</a> · <a href="terms/%E6%8B%89%E9%AB%98%20_%20%E7%A0%B8%E7%9B%98%20_%20%E6%8A%A4%E7%9B%98%20_%20%E6%B4%97%E7%9B%98">拉高 / 砸盘 / 护盘 / 洗盘</a> · <a href="terms/%E7%BA%A2%E5%8D%81%E6%9C%88%E8%A1%8C%E6%83%85">红十月行情</a> · <a href="terms/%E8%BD%AE%E5%8A%A8%20_%20%E9%AB%98%E4%BD%8E%E5%88%87">轮动 / 高低切</a> · <a href="terms/%E7%A9%BA%E4%BB%93">空仓</a> · <a href="terms/%E8%BD%BB%E4%BB%93%20_%20%E9%87%8D%E4%BB%93">轻仓 / 重仓</a> · <a href="terms/%E5%8D%96%E9%A3%9E">卖飞</a> · <a href="terms/%E8%AF%B1%E5%A4%9A%20_%20%E8%AF%B1%E7%A9%BA">诱多 / 诱空</a> · <a href="terms/%E5%A5%97%E7%89%A2%E7%9B%98%20_%20%E8%8E%B7%E5%88%A9%E7%9B%98%20_%20%E6%8A%9B%E5%8E%8B">套牢盘 / 获利盘 / 抛压</a> · <a href="terms/%E9%9C%87%E4%BB%93">震仓</a> · <a href="terms/%E6%94%BE%E9%87%8F%E4%B8%8A%E6%B6%A8%20_%20%E7%BC%A9%E9%87%8F%E4%B8%8B%E8%B7%8C">放量上涨 / 缩量下跌</a> · <a href="terms/%E6%B7%B1V%20_%20%E5%8F%8D%E5%BC%B9%20_%20%E5%8F%8D%E8%BD%AC%20_%20%E4%BC%81%E7%A8%B3">深V / 反弹 / 反转 / 企稳</a> · <a href="terms/%E6%8A%95%E8%B5%84%E4%BD%93%E7%B3%BB%20_%20%E4%BA%A4%E6%98%93%E4%BD%93%E7%B3%BB">投资体系 / 交易体系</a> · <a href="terms/%E6%B6%88%E6%81%AF%E9%9D%A2%20_%20%E6%94%BF%E7%AD%96%E9%9D%A2%20_%20%E8%B5%84%E9%87%91%E9%9D%A2%20_%20%E6%83%85%E7%BB%AA%E9%9D%A2">消息面 / 政策面 / 资金面 / 情绪面</a> · <a href="terms/%E4%BA%94%E7%A9%B7%E5%85%AD%E7%BB%9D%E4%B8%83%E7%BF%BB%E8%BA%AB">五穷六绝七翻身</a> · <a href="terms/%E6%97%A5%E5%8E%86%E6%95%88%E5%BA%94%EF%BC%88%E6%98%A5%E8%8A%82%20_%20%E5%B9%B4%E6%9C%AB%EF%BC%89">日历效应（春节/年末）</a> · <a href="terms/%E5%B1%B1%E9%A1%B6%20_%20%E5%8D%8A%E5%B1%B1%E8%85%B0%EF%BC%88%E9%AB%98%E4%BD%8D%E9%BB%91%E8%AF%9D%EF%BC%89">山顶 / 半山腰（高位黑话）</a> · <a href="terms/%E5%9C%B0%E9%87%8F%E5%9C%B0%E4%BB%B7%EF%BC%88%E6%B2%A1%E4%BA%BA%E4%B9%B0%E5%8D%96%E7%9A%84%E5%BA%95%E9%83%A8%EF%BC%89">地量地价（没人买卖的底部）</a> · <a href="terms/%E5%A4%A9%E9%87%8F%E5%A4%A9%E4%BB%B7%EF%BC%88%E6%83%85%E7%BB%AA%E9%A1%B6%E7%82%B9%E7%9A%84%E4%BF%A1%E5%8F%B7%EF%BC%89">天量天价（情绪顶点的信号）</a> · <a href="terms/%E7%AB%99%E5%B2%97">站岗</a> · <a href="terms/%E6%89%BF%E6%8E%A5">承接</a> · <a href="terms/%E5%88%86%E6%AD%A7%E8%BD%AC%E4%B8%80%E8%87%B4%20_%20%E5%BC%B1%E8%BD%AC%E5%BC%BA">分歧转一致 / 弱转强</a> · <a href="terms/%E8%A1%A5%E6%B6%A8">补涨</a> · <a href="terms/%E6%B6%A8%E5%81%9C%E6%95%A2%E6%AD%BB%E9%98%9F">涨停敢死队</a> · <a href="terms/%E5%8D%A1%E4%BD%8D">卡位</a> · <a href="terms/%E7%9B%98%E5%90%8E%E6%80%BB%E7%BB%93">盘后总结</a> · <a href="terms/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%EF%BC%88%E5%85%A5%E9%97%A8%E2%86%92%E8%BF%9B%E9%98%B6%EF%BC%89">学习路径（入门→进阶）</a> · <a href="terms/%E6%A8%A1%E6%8B%9F%E7%9B%98">模拟盘</a> · <a href="terms/%E5%AE%9E%E7%9B%98">实盘</a> · <a href="terms/%E6%94%BF%E7%AD%96%E5%BA%95%20_%20%E5%B8%82%E5%9C%BA%E5%BA%95">政策底 _ 市场底</a> · <a href="terms/%E4%BD%8E%E5%90%B8%E9%AB%98%E6%8A%9B">低吸高抛</a> · <a href="terms/%E6%94%BE%E9%87%8F%20_%20%E7%BC%A9%E9%87%8F">放量 / 缩量</a> · <a href="terms/%E8%83%9C%E7%8E%87%20_%20%E8%B5%94%E7%8E%87">胜率 / 赔率</a> · <a href="terms/%E7%B1%BB%E5%B9%B3%E5%87%86%E5%9F%BA%E9%87%91">类平准基金</a>
         </p>
       </div>
       <div class="terms-group">
@@ -2684,7 +2726,9 @@ var ALL_ENTRIES = [
 {"id":1110,"title":"婚恋诈骗","chapter":"第二十二篇：骗局与避坑指南","card_titles":["感情陷阱"],"file":"婚恋诈骗.html","filename":"婚恋诈骗.html"},
 {"id":1111,"title":"招生诈骗","chapter":"第二十二篇：骗局与避坑指南","card_titles":["骗局画像"],"file":"招生诈骗.html","filename":"招生诈骗.html"},
 {"id":1112,"title":"洗钱 / 帮信罪","chapter":"第二十二篇：骗局与避坑指南","card_titles":["两个罪名"],"file":"洗钱 _ 帮信罪.html","filename":"洗钱 _ 帮信罪.html"},
-{"id":1113,"title":"跟单软件 / EA","chapter":"第二十二篇：骗局与避坑指南","card_titles":["话术与套路"],"file":"跟单软件 _ EA.html","filename":"跟单软件 _ EA.html"}
+{"id":1113,"title":"跟单软件 / EA","chapter":"第二十二篇：骗局与避坑指南","card_titles":["话术与套路"],"file":"跟单软件 _ EA.html","filename":"跟单软件 _ EA.html"},
+{"id":1114,"title":"类平准基金","chapter":"第十六篇：金融市场黑话与交易场景","card_titles":["国家队里的“托底钱袋子”"],"file":"类平准基金.html","filename":"类平准基金.html"},
+{"id":1115,"title":"光伏（装机超越煤电）","chapter":"第十二篇：宏观与周期","card_titles":["装机第一，不等于发电第一"],"file":"光伏（装机超越煤电）.html","filename":"光伏（装机超越煤电）.html"}
 ];
 var __entriesReady = false;
 var __entriesWaiters = [];
@@ -3010,11 +3054,23 @@ function openSkillModal(key) {
   document.getElementById('modal').classList.add('active');
 }
 
-function openHotModal(title, desc) {
+function openHotModal(title, desc, href) {
   var prompt = '你是一名「每日热词解说员」。请用说人话的方式解读今天的热词：「' + title + '」。\n背景：' + (desc || '') + '\n\n要求：\n1. 一句话定义这个词。\n2. 为什么今天要看它。\n3. 和我的生活/理财有什么关系。\n4. 不预测涨跌，不给买卖建议。';
   document.getElementById('modal-title').innerText = '🔥 ' + title;
   document.getElementById('modal-scene').innerText = desc || '今日热词，点击触发 AI 解读。';
   document.getElementById('modal-prompt').innerText = prompt;
+  /* 弹窗里也留一条直达词条的出口，避免「只给提示词、不给词条」 */
+  var link = document.getElementById('modal-term-link');
+  if (link) {
+    if (href && href.indexOf('terms/') === 0) {
+      link.href = href;
+      link.textContent = '查看「' + title + '」词条 →';
+      link.hidden = false;
+    } else {
+      link.hidden = true;
+      link.removeAttribute('href');
+    }
+  }
   document.getElementById('modal').classList.add('active');
 }
 
@@ -3060,28 +3116,78 @@ function fallbackCopy(text) {
   var dateEl = document.querySelector('.hot-date');
   if (!track) return;
 
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  /* 去括注 / 去并列：「M0 / M1 / M2（货币供应量）」->「M0」 */
+  function cleanWord(t) {
+    return String(t || '').split(/[（(]/)[0].split(' / ')[0].split('/')[0].trim();
+  }
+
+  /* 热词 -> 词条：全等或去括注后全等优先，其次包含匹配；匹配不到返回 null */
+  function findEntry(word) {
+    var w = String(word || '').trim();
+    var wc = cleanWord(w);
+    if (!wc || typeof ALL_ENTRIES === 'undefined' || !ALL_ENTRIES) return null;
+    var loose = null;
+    for (var i = 0; i < ALL_ENTRIES.length; i++) {
+      var e = ALL_ENTRIES[i];
+      var t = String(e.title || '');
+      var c = cleanWord(t);
+      if (t === w || c === wc) return e;
+      if (!loose && c && (c.indexOf(wc) !== -1 || wc.indexOf(c) !== -1)) loose = e;
+    }
+    return loose;
+  }
+
+  /* 一条热词：左侧主体直达词条页，右侧按钮触发 AI 解读 */
+  function hotItem(title, desc) {
+    var e = findEntry(title);
+    var href = e ? entryLink(e) : '';
+    return '<div class="hot-item">' +
+      '<a class="hot-main" href="' + (href || 'javascript:void(0)') + '"' +
+        ' data-title="' + esc(title) + '" data-desc="' + esc(desc) + '">' +
+        '<span class="hot-term"><span class="hot-badge">HOT</span>' + esc(title) + '</span>' +
+        '<span class="hot-desc">' + esc(desc) + '</span></a>' +
+      '<button class="hot-ai" type="button" data-title="' + esc(title) +
+        '" data-desc="' + esc(desc) + '" data-href="' + esc(href) +
+        '" aria-label="用 AI 解读这个词">AI 解读</button>' +
+      '</div>';
+  }
+
   function renderItems(items) {
     var html = '';
-    items.forEach(function (it) {
-      html += '<a class="hot-item" href="javascript:void(0)" onclick="openHotModal(\'' + it.title.replace(/'/g, "\\'") + '\', \'' + (it.desc || '').replace(/'/g, "\\'") + '\')">' +
-        '<span class="hot-term"><span class="hot-badge">HOT</span>' + it.title + '</span>' +
-        '<span class="hot-desc">' + it.desc + '</span></a>';
-    });
+    items.forEach(function (it) { html += hotItem(it.title, it.desc || ''); });
     track.innerHTML = html;
   }
 
   function renderFallback() {
     if (ALL_ENTRIES && ALL_ENTRIES.length) {
-      var defaults = ALL_ENTRIES.slice(0, 5);
       var html = '';
-      defaults.forEach(function (e) {
-        html += '<a class="hot-item" href="javascript:void(0)" onclick="openHotModal(\'' + e.title.replace(/'/g, "\\'") + '\', \'经典词条复习\')">' +
-          '<span class="hot-term"><span class="hot-badge">HOT</span>' + e.title + '</span>' +
-          '<span class="hot-desc">今日暂无接口热词，点开复习这条经典词条。</span></a>';
+      ALL_ENTRIES.slice(0, 5).forEach(function (e) {
+        html += hotItem(e.title, '今日暂无接口热词，点开复习这条经典词条。');
       });
       track.innerHTML = html;
     }
   }
+
+  /* 事件委托：右侧按钮开弹窗；匹配不到词条时主体也开弹窗（不留死链） */
+  track.addEventListener('click', function (ev) {
+    var ai = ev.target.closest('.hot-ai');
+    if (ai) {
+      ev.preventDefault();
+      openHotModal(ai.getAttribute('data-title'), ai.getAttribute('data-desc'), ai.getAttribute('data-href') || '');
+      return;
+    }
+    var main = ev.target.closest('.hot-main');
+    if (main && main.getAttribute('href') === 'javascript:void(0)') {
+      ev.preventDefault();
+      openHotModal(main.getAttribute('data-title'), main.getAttribute('data-desc'), '');
+    }
+  });
 
   function startCarousel() {
     var items = track.querySelectorAll('.hot-item');
