@@ -14,16 +14,32 @@ serve.py —— 本地预览服务器（对齐 Vercel cleanUrls 行为）
   3. /dictionary          -> 返回 web/dictionary.html
   4. 静态资源（css/js/png 等）按原路径直出
 
+API 兜底（web/api/*.js 是 Vercel serverless，本地跑不起来）：
+  - 只读接口（daily-hot / hot-search / hotword）转发到线上，保证本地所见=线上所得
+  - 写接口（events / subscribe / unsubscribe / send-daily）本地吞掉，
+    绝不转发——否则本地预览会污染线上统计与订阅名单
+  - 转发失败不报错，仍返回 404，前端本就有降级分支
+
 用法：
   python scripts/serve.py            # 默认 8899
   python scripts/serve.py 9000       # 指定端口
+  MF_API_UPSTREAM=https://xxx python scripts/serve.py   # 指到别的上游（如预发）
 """
 import os
 import sys
 import html
+import json
 import posixpath
 import http.server
+import urllib.request
+import urllib.error
 import urllib.parse
+
+API_UPSTREAM = os.environ.get("MF_API_UPSTREAM", "https://dictionary.mangofolio.com").rstrip("/")
+# 只读：可以放心转发到线上
+API_READONLY = {"/api/daily-hot", "/api/hot-search"}
+# 一个都不许转发（会在线上产生写操作）
+API_LOCAL_ONLY = {"/api/events", "/api/subscribe", "/api/unsubscribe", "/api/send-daily"}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(ROOT, "web")
@@ -39,13 +55,21 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_HEAD(self):
         self._dispatch("HEAD")
 
+    def do_POST(self):
+        self._dispatch("POST")
+
     def _dispatch(self, method):
         # 剥离 query / fragment
+        raw = self.path
         clean = self.path.split("?", 1)[0].split("#", 1)[0]
         try:
             decoded = urllib.parse.unquote(clean)
         except Exception:
             decoded = clean
+
+        # /api/* 交给转发层，不参与文件查找
+        if decoded.startswith("/api/"):
+            return self._api(decoded, raw, method)
 
         if decoded.endswith("/"):
             decoded = decoded.rstrip("/") or "/"
@@ -75,6 +99,59 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._404(decoded)
 
         return self._serve(fs)
+
+    def _api(self, path, raw, method):
+        p = path.rstrip("/") or "/"
+        # 写接口本地吞掉——绝不能转发，否则本地预览会写脏线上数据
+        if p in API_LOCAL_ONLY:
+            self.send_response(204)
+            self.send_header("Content-Length", "0")
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+            return
+        if p not in API_READONLY:
+            return self._404(path)
+
+        body = None
+        if method == "POST":
+            n = int(self.headers.get("Content-Length") or 0)
+            body = self.rfile.read(n) if n > 0 else b""
+        req = urllib.request.Request(API_UPSTREAM + raw, data=body, method=method)
+        req.add_header("Accept", "application/json")
+        if body:
+            req.add_header("Content-Type", "application/json")
+        try:
+            # 显式绕过代理：shell 的 http_proxy 会把 127.0.0.1 的转发也代理掉 → 假 502
+            opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+            with opener.open(req, timeout=8) as resp:
+                data = resp.read()
+                ctype = resp.headers.get("Content-Type", "application/json")
+        except Exception as exc:
+            # 上游不可达不算本地故障，前端有降级分支，这里只留提示
+            return self._json(404, {
+                "ok": False,
+                "error": "本地未取到线上数据：%s" % exc,
+                "hint": "页面会自动降级，不影响版式预览",
+                "upstream": API_UPSTREAM + raw,
+            })
+        self.send_response(200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(data)))
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Preview-Upstream", API_UPSTREAM)
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(data)
+
+    def _json(self, code, obj):
+        body = json.dumps(obj, ensure_ascii=False).encode("utf-8")
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(body)
 
     def _to_fs(self, decoded):
         rel = decoded.lstrip("/")
