@@ -2,11 +2,11 @@
 name: mangofolio-decision-mosaic
 slug: mangofolio-decision-mosaic
 description: 面对「我要不要做这件事」的单边财务决策（提前还贷、存教育金、买增额寿），拆出这个决策取决于哪几个变量，每个变量配该看的词条，给分界线与今天就能做的行动清单，不给「该做 / 不该做」的结论。触发词：决策拆解、该不该提前还房贷、该不该存教育金。
-displayName: 决策拆解桌
-display_name: 决策拆解桌
-display_name_en: Decision Mosaic
-summary: 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
-description_zh: 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
+displayName: 财务决策
+display_name: 财务决策
+display_name_en: Money Decisions
+summary: 财务决策说人话 —— 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
+description_zh: 财务决策说人话 —— 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
 description_en: Break a personal money decision into the variables it really depends on, map each variable to a dictionary term, and list actions you can take today.
 tags: ["投资词典", "理财决策", "变量拆解", "行动清单"]
 homepage: https://dictionary.mangofolio.com/
@@ -16,11 +16,11 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 决策拆解桌 · Decision Mosaic
+# 财务决策 · Money Decisions
 
 > **用户说出一个具体的财务决策，你输出"这个决策需要哪几个变量同时在场"，每个变量配一个该看的词条，给分界线（不给结论），再给一个可勾选的行动清单。**
 
-与 `mangofolio-duel-compare`（二选一擂台）的区别：04 是"我该不该做这件事"（单边决策），03 是"我该选 A 还是 B"。04 拆变量，03 比选项。配合方式：先跑 04 拆变量，如果拆完发现"其实就是 A 和 B 的选择"，再跑 03 做对比。
+与 `mangofolio-duel-compare`（产品对比）的区别：04 是"我该不该做这件事"（单边决策），03 是"我该选 A 还是 B"。04 拆变量，03 比选项。配合方式：先跑 04 拆变量，如果拆完发现"其实就是 A 和 B 的选择"，再跑 03 做对比。
 
 ## 角色
 
@@ -318,10 +318,10 @@ category: finance
 | **适用** | 用户纠结"该不该做某件事"的单边财务决策（提前还贷、存教育金、买增额寿、搬存款去理财） |
 | **适用** | 用户需要"填几个数字"才能看清决策边界，需要可勾选行动清单 |
 | **适用** | 决策涉及负债 / 房产 / 投资 / 家庭长期规划四组 12 类场景 |
-| **不适用** | 用户做"A 还是 B"二选一（两个选项对打）→ 用 `mangofolio-duel-compare`（二选一擂台），先跑 04 拆变量发现是二选一再切 03 |
-| **不适用** | 用户描述一个现象，想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财急诊） |
-| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（防坑提问器） |
-| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻翻译机）或 `concept-combinator`（概念串联） |
+| **不适用** | 用户做"A 还是 B"二选一（两个选项对打）→ 用 `mangofolio-duel-compare`（产品对比），先跑 04 拆变量发现是二选一再切 03 |
+| **不适用** | 用户描述一个现象，想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财痛点） |
+| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（话术防坑） |
+| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻拆解）或 `concept-combinator`（概念串联） |
 | **不适用** | 纯情感 / 关系决策（离婚、生二胎），不硬套财务模板——按库外决策处理，只从财务角度给提示 |
 
 ---

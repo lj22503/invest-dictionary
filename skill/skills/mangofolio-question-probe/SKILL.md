@@ -2,11 +2,11 @@
 name: mangofolio-question-probe
 slug: mangofolio-question-probe
 description: 给一个产品名、概念或销售话术，输出购买前该问销售的 3-5 个问题，每个配「为什么重要」「对方可能的回避话术」，并给红灯信号。用于识别保本保息、锁定复利、过去三年年化等高话术里的坑。触发词：防坑提问、我该问销售什么、销售话术。
-displayName: 防坑提问器
-display_name: 防坑提问器
-display_name_en: Pitch Interrogator
-summary: 给一个产品或一段销售话术，输出你该当面问的 3-5 个问题，附「为什么重要」与「对方可能的回避话术」。
-description_zh: 给一个产品或一段销售话术，输出你该当面问的 3-5 个问题，附「为什么重要」与「对方可能的回避话术」。
+displayName: 话术防坑
+display_name: 话术防坑
+display_name_en: Pitch Checker
+summary: 销售话术说人话 —— 给一个产品或一段销售话术，输出你该当面问的 3-5 个问题，附「为什么重要」与「对方可能的回避话术」。
+description_zh: 销售话术说人话 —— 给一个产品或一段销售话术，输出你该当面问的 3-5 个问题，附「为什么重要」与「对方可能的回避话术」。
 description_en: Turn a product name or a sales pitch into 3-5 questions to ask before buying, each with why it matters and how the seller may dodge it, plus red flags.
 tags: ["投资词典", "防坑", "销售话术", "理财科普"]
 homepage: https://dictionary.mangofolio.com/
@@ -16,11 +16,11 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 防坑提问器 · Question Probe
+# 话术防坑 · Pitch Checker
 
 > **用户给出一个产品名或概念，你输出"你应该问销售的 3-5 个问题"，每个问题配一句"为什么重要"和"对方可能的回避话术"。**
 
-与 `mangofolio-symptom-lookup`（理财急诊）是一对：02 解决"我遇到这事该看什么"，05 解决"我面对这个产品该问什么"。02 帮用户理解，05 帮用户验证。
+与 `mangofolio-symptom-lookup`（理财痛点）是一对：02 解决"我遇到这事该看什么"，05 解决"我面对这个产品该问什么"。02 帮用户理解，05 帮用户验证。
 
 ## 角色
 
@@ -205,8 +205,8 @@ category: finance
 | **适用** | 用户面对一个具体产品（保险 / 基金 / 理财 / 债券 / 权益），想搞清购买前该问销售什么 |
 | **适用** | 用户收到一段销售话术（"锁定3%复利""保本保息""送意外险"），想验证是不是话术 |
 | **适用** | 用户想学会"自己会问"，而不是"听销售说" |
-| **不适用** | 用户描述一个现象（亏了 / 被推荐），想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财急诊） |
-| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻翻译机）或 `concept-combinator`（概念串联） |
+| **不适用** | 用户描述一个现象（亏了 / 被推荐），想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财痛点） |
+| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻拆解）或 `concept-combinator`（概念串联） |
 | **不适用** | 用户做"A 还是 B"二选一 → 用 `mangofolio-duel-compare`（二选一对打） |
 | **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（决策拼图） |
 

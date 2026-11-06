@@ -5,8 +5,8 @@ description: 把一段复杂内容（宏观数据、事件、政策、市场异�
 displayName: 概念串联
 display_name: 概念串联
 display_name_en: Concept Chain
-summary: 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
-description_zh: 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
+summary: 宏观事件说人话 —— 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
+description_zh: 宏观事件说人话 —— 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
 description_en: Turn complex material into a six-screen mobile web narrative a non-expert can finish reading, built from linked dictionary terms.
 tags: ["投资词典", "叙事写作", "网页输出", "概念串联"]
 homepage: https://dictionary.mangofolio.com/
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 概念串联叙事师 · Invest Dictionary Concept Combinator
+# 概念串联叙事师 · Concept Chain
 
 > **让每个普通人都能成为自己的投顾** —— 把词典词条拼起来，把复杂内容讲给普通人听。
 
@@ -854,7 +854,7 @@ S2-S6 骨架已就绪，worked example 待续。
 
 | 文档 | 路径 | 说明 |
 | :--- | :--- | :--- |
-| 姐妹 skill | 同系列「词条生成器」技能（市场内单独安装） | 单词条生成方法论，本 Skill 的"词条"侧 |
+| 姐妹 skill | 同系列「投资翻译」技能（市场内单独安装） | 单词条生成方法论，本 Skill 的"词条"侧 |
 | HTML 模板 | `templates/narrative-page.html` | 6 屏通用 HTML 骨架（v1.0 brand-token 兼容） |
 | Markdown 模板 | `templates/narrative-outline.md` | 6 屏 Markdown 草稿骨架 |
 | 设计令牌 | 本文件 §3 的内联硬约束 | 色板、字体链、圆角的权威源 |

@@ -80,13 +80,13 @@ cp -r skill/mangofolio-generator ~/.claude/skills/
 | 场景 | 提示词示例（照着发） | 配套 Skill |
 |------|------|------|
 | **查词学词** | "用投资词典的方法写一个词条：**可转债**" | `mangofolio-generator`（单词条生成） |
-| **看新闻** | "帮我翻译这段新闻：**央行降准0.5个百分点，释放长期资金约1万亿**，说人话" | `mangofolio-combo-narrative`（新闻翻译机） |
-| **持仓亏了** | "**我买的理财亏了，要不要赶紧卖掉？**" | `mangofolio-symptom-lookup`（理财急诊 / 症状倒查） |
-| **产品对比** | "手里有 10 万，**存定期还是买银行理财？**" | `mangofolio-duel-compare`（二选一擂台） |
-| **重大决定** | "**我要不要提前还房贷？**" | `mangofolio-decision-mosaic`（决策拆解桌 / 决策拼图） |
-| **防坑提问** | "**增额终身寿险**，我该问销售什么问题？" | `mangofolio-question-probe`（防坑提问器 / 该问什么） |
+| **看新闻** | "帮我翻译这段新闻：**央行降准0.5个百分点，释放长期资金约1万亿**，说人话" | `mangofolio-combo-narrative`（新闻拆解） |
+| **持仓亏了** | "**我买的理财亏了，要不要赶紧卖掉？**" | `mangofolio-symptom-lookup`（理财痛点 / 症状倒查） |
+| **二选一** | "手里有 10 万，**存定期还是买银行理财？**" | `mangofolio-duel-compare`（产品对比） |
+| **重大决定** | "**我要不要提前还房贷？**" | `mangofolio-decision-mosaic`（财务决策 / 决策拼图） |
+| **防坑提问** | "**增额终身寿险**，我该问销售什么问题？" | `mangofolio-question-probe`（话术防坑 / 该问什么） |
 | **复杂事件** | "把这段做成网页：**央行降准后市场怎么看**，讲给客户听" | `mangofolio-concept-combinator`（概念串联） |
-| **今日热词** | "**今日热词**，今天市场都在聊什么？" | `mangofolio-daily-hotword`（每日热词） |
+| **今日热词** | "**今日热词**，今天市场都在聊什么？" | `mangofolio-daily-hotword`（热点追踪） |
 
 > 💡 五个核心 Skill 的分工口诀：**看新闻找 mangofolio-combo-narrative，亏了找 mangofolio-symptom-lookup，纠结二选一找 mangofolio-duel-compare，纠结该不该找 mangofolio-decision-mosaic，面对产品找 mangofolio-question-probe**。
 > 所有 Skill 输出均为"概念梳理与提问参考"，不构成投资建议。
@@ -127,12 +127,12 @@ invest-dictionary/
 │   │   ├── SKILL.md              # 6 屏叙事方法论（S1-S6 模板）
 │   │   ├── templates/            # 叙事大纲 / 页面模板
 │   │   └── examples/             # 示例叙事
-│   ├── mangofolio-symptom-lookup/           # 理财急诊（症状倒查）
-│   ├── mangofolio-combo-narrative/          # 新闻翻译机（概念串联轻量版）
-│   ├── mangofolio-duel-compare/             # 二选一擂台（二选一对打）
-│   ├── mangofolio-decision-mosaic/          # 决策拆解桌（决策拼图）
-│   ├── mangofolio-question-probe/           # 防坑提问器（该问什么）
-│   └── mangofolio-daily-hotword/            # 每日热词
+│   ├── mangofolio-symptom-lookup/           # 理财痛点（症状倒查）
+│   ├── mangofolio-combo-narrative/          # 新闻拆解（概念串联轻量版）
+│   ├── mangofolio-duel-compare/             # 产品对比（二选一对打）
+│   ├── mangofolio-decision-mosaic/          # 财务决策（决策拼图）
+│   ├── mangofolio-question-probe/           # 话术防坑（该问什么）
+│   └── mangofolio-daily-hotword/            # 热点追踪
 └── docs/
     ├── PROJECT_GOALS.md          # 项目目标记录
     ├── PITFALLS.md               # 已知坑点（开发排雷手册）

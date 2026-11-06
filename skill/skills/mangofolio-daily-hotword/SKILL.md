@@ -2,11 +2,11 @@
 name: mangofolio-daily-hotword
 slug: mangofolio-daily-hotword
 description: 围绕一条今日热点话题，挑出 3-5 个必须懂的投资热词，逐个讲人话、说明它在话题里扮演的角色，最后串成一条能复述给别人听的话题解读。触发词：今日热词、今天市场在聊什么、今天有什么热点。
-displayName: 每日热词
-display_name: 每日热词
-display_name_en: Daily Buzzwords
-summary: 围绕一条今日热点，挑出 3-5 个必须懂的热词逐个讲人话，串成一段能复述给别人听的话题解读。
-description_zh: 围绕一条今日热点，挑出 3-5 个必须懂的热词逐个讲人话，串成一段能复述给别人听的话题解读。
+displayName: 热点追踪
+display_name: 热点追踪
+display_name_en: Trend Tracker
+summary: 市场热点说人话 —— 围绕一条今日热点，挑出 3-5 个必须懂的热词逐个讲人话，串成一段能复述给别人听的话题解读。
+description_zh: 市场热点说人话 —— 围绕一条今日热点，挑出 3-5 个必须懂的热词逐个讲人话，串成一段能复述给别人听的话题解读。
 description_en: Pick 3-5 must-know investing terms from today's hot topic, explain each in plain language, then tie them into one story you can retell to someone else.
 tags: ["投资词典", "热点解读", "每日更新", "理财科普"]
 homepage: https://dictionary.mangofolio.com/
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 每日热词 · Daily Hotword
+# 热点追踪 · Trend Tracker
 
 > **围绕一条今日热点话题，提取 3-5 个与话题强相关的词典热词，每个热词给一句话人话、在话题里扮演的角色、为什么今天要看它，最后串成一条话题解读。**
 
@@ -146,12 +146,12 @@ category: finance
 | **适用** | 用户想快速知道"今天市场在聊什么、这些词什么意思" |
 | **适用** | 用户给出一条热点话题 / 新闻标题，想拆出核心热词 |
 | **适用** | 用户需要"热词清单 + 话题解读"，用于追热点、补知识 |
-| **不适用** | 用户需要把一段完整新闻 / 数据做深度人话解读 → 用 `mangofolio-combo-narrative`（新闻翻译机） |
+| **不适用** | 用户需要把一段完整新闻 / 数据做深度人话解读 → 用 `mangofolio-combo-narrative`（新闻拆解） |
 | **不适用** | 用户需要"可发布的 6 屏网页成品" → 用 `concept-combinator`（概念串联） |
-| **不适用** | 用户描述一个"现象"（亏了 / 被推荐），想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财急诊） |
-| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（防坑提问器） |
-| **不适用** | 用户做"A 还是 B"二选一 → 用 `mangofolio-duel-compare`（二选一擂台） |
-| **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（决策拆解桌） |
+| **不适用** | 用户描述一个"现象"（亏了 / 被推荐），想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财痛点） |
+| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（话术防坑） |
+| **不适用** | 用户做"A 还是 B"二选一 → 用 `mangofolio-duel-compare`（产品对比） |
+| **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（财务决策） |
 
 ---
 

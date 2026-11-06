@@ -20,7 +20,7 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 
 纯静态 HTML/CSS/JS（无框架）；Schema.org DefinedTerm 结构化数据；Vercel 托管；Agent Skill（Markdown 方法论）。
 
-**埋点链路**：`web/js/tracker.js` 零依赖 SDK + `web/api/events.js` Edge function 走 `@vercel/kv`（与 5 站共享 `invest-dictionary-kv`，key 前缀 `evt:dictionary:`）；公共属性 page_referrer（同源）+ utm_5 透传；KV 还承担邮件订阅（subscribers set + subscriber:meta hash）与每日热词缓存（daily_hot）。
+**埋点链路**：`web/js/tracker.js` 零依赖 SDK + `web/api/events.js` Edge function 走 `@vercel/kv`（与 5 站共享 `invest-dictionary-kv`，key 前缀 `evt:dictionary:`）；公共属性 page_referrer（同源）+ utm_5 透传；KV 还承担邮件订阅（subscribers set + subscriber:meta hash）与热点追踪缓存（daily_hot）。
 
 ## 目录与约定
 
@@ -28,7 +28,7 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 - `web/css/mangofolio-tokens-v09.css` — 颜色/字体/间距/圆角**唯一令牌源**；`web/css/site.css` — 三页共用外壳（色带 `.band--*` / 页头 / 页脚 / 区块头 / 按钮 / 卡片 / 目录 / 代码块）。页面专属样式才写进各自 `<style>`，禁止三页各抄一份 header/footer
 - 三页设计口径见 `docs/specs/三页改版设计规格.md`（色带表 / 信息架构 / 硬规则 / 验收标准）；外来参考包只放 `docs/reference/`，**不进 web/**
 - `web/dictionary.json` — 词条唯一数据源（id/slug/chapter/description/related）
-- `skill/` — **上架用 plugin 包**（`.codebuddy-plugin/plugin.json` + `README.md` + `LICENSE`）：`skills/` 下 8 个 Skill（理财急诊 / 防坑提问 / 二选一 / 决策拆解 / 新闻翻译 / 每日热词 / 概念串联 / 词条生成），`references/routing.md` 是触发词路由表；每个 skill 自带 `references/term-index.txt`（词条索引，由 `scripts/sync-skill-term-index.py` 生成，随词库更新重刷）
+- `skill/` — **上架用 plugin 包**（`.codebuddy-plugin/plugin.json` + `README.md` + `LICENSE`）：`skills/` 下 8 个 Skill（理财痛点 / 防坑提问 / 二选一 / 决策拆解 / 新闻翻译 / 热点追踪 / 概念串联 / 词条生成），`references/routing.md` 是触发词路由表；每个 skill 自带 `references/term-index.txt`（词条索引，由 `scripts/sync-skill-term-index.py` 生成，随词库更新重刷）
 - `docs/` — PROJECT_GOALS.md（目标清单）、PITFALLS.md（坑点）、design-tokens.md（令牌速查）、HANDOFF.md（接手说明）、BRAND_AUDIT_2026-09-19.md、superpowers/（spec 与 plan）
 - **slug 归一化**：词条名中 `/`、`*`、`>` 一律替换为 `_`（文件名）；所有链接（相关词条、首页卡片）必须用归一化文件名
 - **域名**：正式域名 dictionary.mangofolio.com；禁止旧域名 `investbuddy.com` 残留。扫描范围含 canonical / og:url / sitemap / robots **及页内所有绝对 URL（社交分享、复制链接等）**；匹配模式用 `//investbuddy.com`，避免误伤合法子站 `investbuddy.mangofolio.com`

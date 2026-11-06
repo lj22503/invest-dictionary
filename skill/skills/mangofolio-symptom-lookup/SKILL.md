@@ -1,12 +1,12 @@
 ---
 name: mangofolio-symptom-lookup
 slug: mangofolio-symptom-lookup
-description: 用户用口语描述一个理财「症状」（亏了、被推荐高息产品、听说黄金要涨、房贷利率降了），倒查最该看的 3-5 个投资词典词条，并指出先看哪一条；只帮理解与分辨，不给买卖建议。触发词：理财急诊、我买的理财亏了、被推荐高息产品。
-displayName: 理财急诊
-display_name: 理财急诊
-display_name_en: Money Triage
-summary: 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
-description_zh: 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
+description: 用户用口语描述一个理财「症状」（亏了、被推荐高息产品、听说黄金要涨、房贷利率降了），倒查最该看的 3-5 个投资词典词条，并指出先看哪一条；只帮理解与分辨，不给买卖建议。触发词：理财痛点、我买的理财亏了、被推荐高息产品。
+displayName: 理财痛点
+display_name: 理财痛点
+display_name_en: Money Pain Points
+summary: 理财焦虑说人话 —— 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
+description_zh: 理财焦虑说人话 —— 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
 description_en: Describe a money problem in plain words and get the 3-5 dictionary terms you should read first, in a recommended reading order. Explains and helps you tell things apart, never advises.
 tags: ["投资词典", "理财科普", "风险识别", "说人话"]
 homepage: https://dictionary.mangofolio.com/
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 理财急诊 · Symptom Lookup
+# 理财痛点 · Money Pain Points
 
 > **用户描述一个"症状"（理财亏了、被推荐高息产品、听说黄金要涨），你倒查出"该查的几个词条"，并告诉他最该先看哪一条。**
 
@@ -176,7 +176,7 @@ category: finance
 | **适用** | 用户描述一个具体"现象"（亏了 / 被推荐 / 听说要涨 / 要不要提前还），想搞清该看什么词条 |
 | **适用** | 用户情绪化、表述口语化、说不清术语，需要把"我遇到个事"翻译成"该搞懂的几个概念" |
 | **不适用** | 用户给的是一个产品名 / 一段销售话术，想搞清该问销售什么问题 → 用 `mangofolio-question-probe`（该问什么） |
-| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻翻译机）或 `concept-combinator`（概念串联） |
+| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻拆解）或 `concept-combinator`（概念串联） |
 | **不适用** | 用户做"A 还是 B"二选一 → 用 `mangofolio-duel-compare`（二选一对打） |
 | **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（决策拼图） |
 | **不适用** | 用户只想查单个词条含义 → 用 `mangofolio-generator`（单词条生成） |

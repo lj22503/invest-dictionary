@@ -2,11 +2,11 @@
 name: mangofolio-duel-compare
 slug: mangofolio-duel-compare
 description: 把「A 还是 B」的二选一放进同一个场景并排对比：先校验两个选项是否真在同一场景里对打，再按最坏情况、流动性、收益来源、适合谁四个维度比对，给分界线与当场可算的试算。触发词：二选一、A 还是 B、买房还是租房。
-displayName: 二选一擂台
-display_name: 二选一擂台
-display_name_en: Head to Head
-summary: 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
-description_zh: 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
+displayName: 产品对比
+display_name: 产品对比
+display_name_en: Product Face-off
+summary: 产品对比说人话 —— 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
+description_zh: 产品对比说人话 —— 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
 description_en: Compare an A-or-B money choice inside one scenario across worst case, liquidity, return source and who it suits, with a break-even line and on-the-spot math.
 tags: ["投资词典", "理财决策", "方案对比", "说人话"]
 homepage: https://dictionary.mangofolio.com/
@@ -16,11 +16,11 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 二选一擂台 · Duel Compare
+# 产品对比 · Product Face-off
 
 > **用户给出一个"A 还是 B"的选择，你把两个选项放进同一个决策场景里，并排对比，给出"什么条件下选 A、什么条件下选 B、什么条件下两个都别选"的分界线。**
 
-与 `mangofolio-decision-mosaic`（决策拆解桌）的区别：04 是"我该不该做这件事"，03 是"我该选 A 还是 B"。04 拆变量，03 比选项。03 的关键不是"罗列优缺点"，是先让用户确认"这两个选项是不是真的在同一个场景里对打"——很多时候，用户以为自己在 A 和 B 之间选，其实 A 和 B 解决的不是同一个问题。
+与 `mangofolio-decision-mosaic`（财务决策）的区别：04 是"我该不该做这件事"，03 是"我该选 A 还是 B"。04 拆变量，03 比选项。03 的关键不是"罗列优缺点"，是先让用户确认"这两个选项是不是真的在同一个场景里对打"——很多时候，用户以为自己在 A 和 B 之间选，其实 A 和 B 解决的不是同一个问题。
 
 ## 角色
 
@@ -283,11 +283,11 @@ category: finance
 | :--- | :--- |
 | **适用** | 用户给出两个明确的选项（A 还是 B），两个选项属于同一决策场景（闲钱放哪 / 住哪 / 怎么买） |
 | **适用** | 用户被"收益"带偏，需要从"最坏情况 / 流动性 / 收益来源 / 适合谁"四个维度重新审视 |
-| **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（决策拆解桌），拆完发现是二选一再切本 Skill |
+| **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（财务决策），拆完发现是二选一再切本 Skill |
 | **不适用** | 两个选项解决的不是同一个问题（买黄金 vs 买国债）→ 场景校验不通过，不硬比，引导"你买它的目的是什么" |
-| **不适用** | 用户描述一个现象，想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财急诊） |
-| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（防坑提问器） |
-| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻翻译机）或 `concept-combinator`（概念串联） |
+| **不适用** | 用户描述一个现象，想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财痛点） |
+| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（话术防坑） |
+| **不适用** | 用户给一段新闻 / 数据，想读懂内容 → 用 `mangofolio-combo-narrative`（新闻拆解）或 `concept-combinator`（概念串联） |
 
 ---
 

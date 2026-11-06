@@ -2,11 +2,11 @@
 name: mangofolio-combo-narrative
 slug: mangofolio-combo-narrative
 description: 把一段看不懂的财经新闻、宏观数据或政策文件翻译成人话：拆出其中的核心概念，串成从「现象」到「对你意味着什么」的因果链，不预测涨跌、不喊利好利空。当用户扔来一段具体内容求解读时使用。触发词：翻译这段新闻、这条消息什么意思、解读这段财经内容。
-displayName: 新闻翻译机
-display_name: 新闻翻译机
-display_name_en: News Translator
-summary: 把看不懂的财经新闻、宏观数据、政策文件拆成核心概念，串成从「现象」到「对你意味着什么」的因果链。
-description_zh: 把看不懂的财经新闻、宏观数据、政策文件拆成核心概念，串成从「现象」到「对你意味着什么」的因果链。
+displayName: 新闻拆解
+display_name: 新闻拆解
+display_name_en: News Breakdown
+summary: 财经新闻说人话 —— 把看不懂的财经新闻、宏观数据、政策文件拆成核心概念，串成从「现象」到「对你意味着什么」的因果链。
+description_zh: 财经新闻说人话 —— 把看不懂的财经新闻、宏观数据、政策文件拆成核心概念，串成从「现象」到「对你意味着什么」的因果链。
 description_en: Translate a piece of financial news, macro data or policy text into its core concepts and a causal chain from what happened to what it means for you, without predicting prices.
 tags: ["投资词典", "财经新闻", "宏观解读", "说人话"]
 homepage: https://dictionary.mangofolio.com/
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 新闻翻译机 · Combo Narrative
+# 新闻拆解 · News Breakdown
 
 > **用户扔来一段看不懂的新闻，你把里面的多个概念识别出来，串成一条从"现象"到"对你意味着什么"的叙事线，用普通人能懂的话讲出来。**
 
@@ -155,10 +155,10 @@ category: finance
 | **适用** | 用户刷到一条财经新闻 / 宏观数据 / 政策 / 事件，看不懂但想知道"说了啥、对我有啥影响" |
 | **适用** | 用户需要快速人话版解读，不需要发布级成品网页 |
 | **不适用** | 用户需要"可发布的 6 屏网页成品"（投顾交付客户）→ 用 `concept-combinator`（概念串联） |
-| **不适用** | 用户描述一个"现象"（理财亏了 / 被推荐），想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财急诊） |
-| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（防坑提问器） |
-| **不适用** | 用户做"A 还是 B"二选一 → 用 `mangofolio-duel-compare`（二选一擂台） |
-| **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（决策拆解桌） |
+| **不适用** | 用户描述一个"现象"（理财亏了 / 被推荐），想搞清该看什么词条 → 用 `mangofolio-symptom-lookup`（理财痛点） |
+| **不适用** | 用户面对一个产品不知道该问什么 → 用 `mangofolio-question-probe`（话术防坑） |
+| **不适用** | 用户做"A 还是 B"二选一 → 用 `mangofolio-duel-compare`（产品对比） |
+| **不适用** | 用户纠结"该不该做某件事"（单边决策）→ 用 `mangofolio-decision-mosaic`（财务决策） |
 | **不适用** | 用户只想查单个词条含义 → 用 `mangofolio-generator`（单词条生成） |
 
 ---
