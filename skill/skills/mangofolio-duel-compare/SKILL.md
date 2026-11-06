@@ -3,15 +3,19 @@ name: mangofolio-duel-compare
 slug: mangofolio-duel-compare
 description: 把「A 还是 B」的二选一放进同一个场景并排对比：先校验两个选项是否真在同一场景里对打，再按最坏情况、流动性、收益来源、适合谁四个维度比对，给分界线与当场可算的试算。触发词：二选一、A 还是 B、买房还是租房。
 displayName: 二选一擂台
+display_name: 二选一擂台
+display_name_en: Head to Head
 summary: 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
+description_zh: 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
+description_en: Compare an A-or-B money choice inside one scenario across worst case, liquidity, return source and who it suits, with a break-even line and on-the-spot math.
 tags: ["投资词典", "理财决策", "方案对比", "说人话"]
 homepage: https://dictionary.mangofolio.com/
 version: 1.1.0
+author: Mangofolio
 license: MIT
 agent_created: true
 category: finance
 ---
-
 # 二选一擂台 · Duel Compare
 
 > **用户给出一个"A 还是 B"的选择，你把两个选项放进同一个决策场景里，并排对比，给出"什么条件下选 A、什么条件下选 B、什么条件下两个都别选"的分界线。**

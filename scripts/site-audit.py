@@ -570,7 +570,10 @@ def audit(root, rules, rep):
         except Exception:
             dict_n = -1
         names = sorted(d for d in os.listdir(skills_dir) if os.path.isdir(os.path.join(skills_dir, d)))
-        bad_idx, no_meta, dead_ref = [], [], []
+        bad_idx, no_meta, dead_ref, miss_fm, cross_ref = [], [], [], [], []
+        # WorkBuddy 开放平台 SKILL.md frontmatter 必填项（缺一项市场详情页就填不满）
+        FM_REQUIRED = ("name", "display_name", "display_name_en", "description",
+                       "description_zh", "description_en", "version", "author")
         for sn in names:
             sdir = os.path.join(skills_dir, sn)
             md = os.path.join(sdir, "SKILL.md")
@@ -587,6 +590,12 @@ def audit(root, rules, rep):
                 head = parts[1] if len(parts) >= 3 else ""
                 if "agent_created:" not in head:
                     no_meta.append(sn)
+                lack = [k for k in FM_REQUIRED if not re.search(r"^%s:\s*\S" % k, head, re.M)]
+                if lack:
+                    miss_fm.append("%s(缺%s)" % (sn, ",".join(lack)))
+                # 单技能包独立安装，../其他技能 的路径在包里不存在
+                if "../mangofolio-" in body:
+                    cross_ref.append(sn)
                 for pat in ("web/terms/", "../../docs/", "~/.claude/"):
                     if pat in body:
                         dead_ref.append("%s→%s" % (sn, pat))
@@ -601,6 +610,13 @@ def audit(root, rules, rep):
         rep.add("skill", "FAIL" if dead_ref else "PASS", "Skill 无仓库私有路径",
                 ("残留：%s" % ", ".join(dead_ref)) if dead_ref else "无 web/terms、docs、~/.claude 引用",
                 "上架包内不存在这些路径，需改为包内相对路径或删除")
+        rep.add("skill", "FAIL" if miss_fm else "PASS", "WorkBuddy 平台 frontmatter 必填 8 项",
+                ("缺：%s" % ", ".join(miss_fm)) if miss_fm
+                else "%d 个均含 name/display_name(_en)/description(_zh/_en)/version/author" % len(names),
+                "跑 python scripts/fix-skill-frontmatter.py 补齐")
+        rep.add("skill", "FAIL" if cross_ref else "PASS", "Skill 无跨技能相对引用",
+                ("残留：%s" % ", ".join(cross_ref)) if cross_ref else "无 ../mangofolio-* 依赖",
+                "平台按单技能包发布，跨技能路径会失效，需复制资源到本包或改文案")
 
     # ---------- hygiene ----------
     # 判定口径：磁盘上有备份文件 ≠ 会被部署。只要 .vercelignore 全覆盖就不算问题

@@ -3,15 +3,19 @@ name: mangofolio-concept-combinator
 slug: mangofolio-concept-combinator
 description: 把一段复杂内容（宏观数据、事件、政策、市场异动、公司财报、个人决策）拆成核心词条，串成叙事线，输出 6 屏可发布的网页。适合需要交付成品的解读场景，不是纯文字问答。触发词：概念串联、做成 6 屏网页、客户简报。
 displayName: 概念串联
+display_name: 概念串联
+display_name_en: Concept Chain
 summary: 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
+description_zh: 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
+description_en: Turn complex material into a six-screen mobile web narrative a non-expert can finish reading, built from linked dictionary terms.
 tags: ["投资词典", "叙事写作", "网页输出", "概念串联"]
 homepage: https://dictionary.mangofolio.com/
 version: 1.1.0
+author: Mangofolio
 license: MIT
 agent_created: true
 category: finance
 ---
-
 # 概念串联叙事师 · Invest Dictionary Concept Combinator
 
 > **让每个普通人都能成为自己的投顾** —— 把词典词条拼起来，把复杂内容讲给普通人听。
@@ -68,8 +72,8 @@ category: finance
 | 5 行动 | 怎么用 / 怎么避 / 怎么选 | 表格分情况给建议 |
 | 6 收尾 | 一句话余味 | 留思考的画面，不写"综上所述" |
 
-**HTML 视觉硬约束**（继承自 `../mangofolio-generator/SKILL.md §品牌视觉硬约束`，与基准页 `../mangofolio-generator/templates/term-page-baseline.html` 逐项对齐；本 Skill 不重抄规则全文，**冲突时以 generator 为准**）：
-- 色板仅用 `#FFFFFF` / `#F97316` / `#E05E0A` / `#3A332C` / `#8A7D70` / `#241610` 系（详见 generator）
+**HTML 视觉硬约束**（与基准页 `templates/term-page-baseline.html` 逐项对齐，基准页已随本 Skill 自带，**冲突时以基准页为准**）：
+- 色板仅用 `#FFFFFF` / `#F97316` / `#E05E0A` / `#3A332C` / `#8A7D70` / `#241610` 系（详见基准页）
 - 字体链每条末尾必须带 emoji 段 `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"`
 - 圆角只用 `16px`（卡片）/ `9999px`（按钮）/ `2~12px`（小元素）/ `50%`（圆点）
 - 模板与示例见本 Skill 自带 `templates/narrative-page.html`、`examples/q3-2026.html`
@@ -850,11 +854,11 @@ S2-S6 骨架已就绪，worked example 待续。
 
 | 文档 | 路径 | 说明 |
 | :--- | :--- | :--- |
-| 姐妹 skill | `../mangofolio-generator/SKILL.md` | 单词条生成方法论，本 Skill 的"词条"侧 |
+| 姐妹 skill | 同系列「词条生成器」技能（市场内单独安装） | 单词条生成方法论，本 Skill 的"词条"侧 |
 | HTML 模板 | `templates/narrative-page.html` | 6 屏通用 HTML 骨架（v1.0 brand-token 兼容） |
 | Markdown 模板 | `templates/narrative-outline.md` | 6 屏 Markdown 草稿骨架 |
 | 设计令牌 | 本文件 §3 的内联硬约束 | 色板、字体链、圆角的权威源 |
-| 品牌视觉硬约束 | `../mangofolio-generator/SKILL.md` §品牌视觉硬约束 | 与基准页 `../mangofolio-generator/templates/term-page-baseline.html` 对齐 |
+| 品牌视觉硬约束 | 本文件 §HTML 视觉硬约束 + `templates/term-page-baseline.html` | 基准页随包自带，不依赖外部技能 |
 
 
 ## 附录 C · 提交前自检（投顾工作台视角）
