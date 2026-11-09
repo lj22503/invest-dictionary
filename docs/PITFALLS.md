@@ -287,6 +287,13 @@
 - **修复**：`scripts/sync-skill-term-index.py` 为每个 skill 生成 `references/term-index.txt`（title + filename，1115 条约 50KB）；SKILL.md 加「词条校验（输出前必做）」，规定匹配顺序与"未命中时不得输出索引外词条"；`scripts/check-skill-terms.py` 反向校验 Skill 里点名的词条是否都在索引里。
 - **预防**：索引生成已进 `sync-site.py` 链路；词库增删后忘了重刷，`site-audit` 的「Skill 词条索引与词库同步」会直接 FAIL。
 
+## 40. 词条校验要求「读全索引」，把专家拖成龟速（2026-11-09）
+
+- **现象**：Mango 专家连挂 8 个技能后，经常几十秒不返回，用户以为卡死。
+- **根因**：这是 #39 的续集。#39 为了让 AI 不编造词条，规定它"输出前读取 `references/term-index.txt`"。索引 1100+ 行 / 50KB，等于**每次回答前先往上下文灌 1.5 万 token，还要求它扫全表**；再叠加 `concept-combinator` 一个文件里内联的 6 套模板（44KB，实际只用到一套），单次最坏加载 93KB。规则写得越严，AI 读得越多，响应越慢——**正确性和速度在这里是同一个旋钮**。
+- **修复**：① 校验改成 `grep -F "词条名" references/term-index.txt`，命中 128 字节，省 99.7%；② `concept-combinator` 拆成主文件 12KB + 6 个模板文件，只读选中的那一份（879 行 → 202 行）；③ `mango.md` 增设「上下文纪律」：一次只加载一个技能、不预读、不整份读索引。改造后单次加载 63–71KB → 12–20KB。
+- **预防**：**写给 AI 的规则要先算读取成本**。凡是「必须先读 XX 才能保证正确」的条款，问一句"AI 是不是只能靠读全文"——能换成 grep / 查询 / 分片的，就别让它读全文。单个 SKILL.md 超过 300 行、单个 references 超过 10KB，都该考虑拆分或改成检索式访问。
+
 ---
 ---
 *本文档与 docs/PROJECT_GOALS.md 一同维护，同步副本见 Obsidian `D:\ObsidianVault\02-Projects\`。*
