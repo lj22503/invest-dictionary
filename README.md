@@ -34,7 +34,7 @@
 | 🏠 投资词典（本项目） | https://dictionary.mangofolio.com | 1113 个词条 · 22 个篇章 · 全文搜索 |
 | 🧠 投资大脑 InvestBrain | https://brain.mangofolio.com | 投资决策与行为分析 |
 | 🐻 投资伙伴 InvestBuddy | https://investbuddy.mangofolio.com | 投资人格测试与守护兽 |
-| 📊 市场观察 MangoView | https://view.mangofolio.com | 市场行情可视化 |
+| 📊 市场观察 MangoView | https://forge.mangofolio.com | 市场行情可视化 |
 
 > 本项目是 **Mangofolio 系列**的一员，专注"投资术语科普"。
 
