@@ -127,6 +127,9 @@ grep -F "可转债" references/term-index.txt          # 精确词
 grep -F -m 8 "利率" references/term-index.txt       # 模糊找候选
 ```
 
+路径打不开时，先用 `ls references/` 或 `find . -name term-index.txt` 定位一次再查。
+**不要反复重试同一条失败命令**——重试的代价比不校验还大。
+
 每行格式是 `词条名<TAB>文件名`。命中后用文件名拼链接：
 `https://dictionary.mangofolio.com/terms/<文件名去掉 .html>`
 
