@@ -75,6 +75,12 @@ def main():
             block(BASE + "/privacy", "yearly", "0.2", mdate(os.path.join(WEB, "privacy.html"))),
             block(BASE + "/terms-of-service", "yearly", "0.2",
                   mdate(os.path.join(WEB, "terms-of-service.html")))]
+    # 用法示例页（/cases/*）：目录扫描，新增 case 自动进 sitemap，不用改代码
+    cases_dir = os.path.join(WEB, "cases")
+    if os.path.isdir(cases_dir):
+        for fn in sorted(f for f in os.listdir(cases_dir) if f.endswith(".html")):
+            urls.append(block(BASE + "/cases/" + quote(fn[:-5], safe=""), "monthly", "0.7",
+                              mdate(os.path.join(cases_dir, fn))))
     for fn in order:
         # P0-1：cleanUrls:true 已生效，对外 URL 一律不带 .html
         stem = fn[:-5] if fn.endswith(".html") else fn

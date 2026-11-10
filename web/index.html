@@ -587,6 +587,49 @@
   object-fit: cover;
   object-position: top center;
 }
+/* 案例图 → 落地页：图可点，右下角给角标，避免用户以为只是配图 */
+.scene-figure__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.scene-figure__more {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(36, 22, 16, .78);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  backdrop-filter: blur(6px);
+  transition: background .15s, color .15s, transform .15s;
+}
+.scene-figure__link:hover .scene-figure__more {
+  background: var(--mf-colors-background-primary);
+  color: var(--mf-colors-text-on-primary);
+  transform: translateY(-1px);
+}
+.scene-figure__link:focus-visible {
+  outline: 2px solid var(--mf-colors-border-focused);
+  outline-offset: 2px;
+}
+/* 手机上图片被裁成 196px 高，角标放下沿会压住卡片内容，改挪到右上角空白处 */
+@media (max-width: 660px) {
+  .scene-figure__more {
+    right: 9px;
+    bottom: auto;
+    top: 9px;
+    padding: 5px 10px;
+    font-size: 11px;
+    background: rgba(36, 22, 16, .72);
+  }
+}
 
 .scene-rail {
   display: flex;
@@ -1183,7 +1226,10 @@
             </div>
           </div>
           <figure class="scene-figure">
-            <img src="assets/cases/narrative.png" alt="新闻拆解输出示例：把一段新闻拆成核心概念与因果线" width="541" height="714" loading="eager">
+            <a class="scene-figure__link" href="/cases/narrative" aria-label="看完整示例：把一条财经新闻拆成因果链">
+              <img src="assets/cases/narrative.png" alt="新闻拆解输出示例：把「M1 增速 3.2%、M2 增速 7.2%」一段新闻拆成核心概念与因果链" width="541" height="714" loading="eager">
+              <span class="scene-figure__more">看完整示例 →</span>
+            </a>
           </figure>
         </div>
 
