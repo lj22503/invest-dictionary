@@ -1122,16 +1122,16 @@
 - [跟单软件 / EA](https://dictionary.mangofolio.com/terms/%E8%B7%9F%E5%8D%95%E8%BD%AF%E4%BB%B6%20_%20EA): 话术与套路
 - [类平准基金](https://dictionary.mangofolio.com/terms/%E7%B1%BB%E5%B9%B3%E5%87%86%E5%9F%BA%E9%87%91): 国家队里的“托底钱袋子”
 - [光伏（装机超越煤电）](https://dictionary.mangofolio.com/terms/%E5%85%89%E4%BC%8F%EF%BC%88%E8%A3%85%E6%9C%BA%E8%B6%85%E8%B6%8A%E7%85%A4%E7%94%B5%EF%BC%89): 装机第一，不等于发电第一
-- [技术性熊市](https://dictionary.mangofolio.com/terms/%E6%8A%80%E6%9C%AF%E6%80%A7%E7%86%8A%E5%B8%82): 
-- [创业板指权重上限](https://dictionary.mangofolio.com/terms/%E5%88%9B%E4%B8%9A%E6%9D%BF%E6%8C%87%E6%9D%83%E9%87%8D%E4%B8%8A%E9%99%90): 
-- [央行购金](https://dictionary.mangofolio.com/terms/%E5%A4%AE%E8%A1%8C%E8%B4%AD%E9%87%91): 
-- [资本市场稳市机制](https://dictionary.mangofolio.com/terms/%E8%B5%84%E6%9C%AC%E5%B8%82%E5%9C%BA%E7%A8%B3%E5%B8%82%E6%9C%BA%E5%88%B6): 
-- [护盘式回购](https://dictionary.mangofolio.com/terms/%E6%8A%A4%E7%9B%98%E5%BC%8F%E5%9B%9E%E8%B4%AD): 
-- [超跌反弹](https://dictionary.mangofolio.com/terms/%E8%B6%85%E8%B7%8C%E5%8F%8D%E5%BC%B9): 
-- [外汇存款准备金率](https://dictionary.mangofolio.com/terms/%E5%A4%96%E6%B1%87%E5%AD%98%E6%AC%BE%E5%87%86%E5%A4%87%E9%87%91%E7%8E%87): 
-- [港股通ETF](https://dictionary.mangofolio.com/terms/%E6%B8%AF%E8%82%A1%E9%80%9AETF): 
-- [同业存单指数基金](https://dictionary.mangofolio.com/terms/%E5%90%8C%E4%B8%9A%E5%AD%98%E5%8D%95%E6%8C%87%E6%95%B0%E5%9F%BA%E9%87%91): 
-- [冰雪经济](https://dictionary.mangofolio.com/terms/%E5%86%B0%E9%9B%AA%E7%BB%8F%E6%B5%8E): 
+- [技术性熊市](https://dictionary.mangofolio.com/terms/%E6%8A%80%E6%9C%AF%E6%80%A7%E7%86%8A%E5%B8%82): 20% 这条线是怎么划的
+- [创业板指权重上限](https://dictionary.mangofolio.com/terms/%E5%88%9B%E4%B8%9A%E6%9D%BF%E6%8C%87%E6%9D%83%E9%87%8D%E4%B8%8A%E9%99%90): 改了什么：15% 的天花板，只降不升
+- [央行购金](https://dictionary.mangofolio.com/terms/%E5%A4%AE%E8%A1%8C%E8%B4%AD%E9%87%91): 央行买金，买的是什么
+- [资本市场稳市机制](https://dictionary.mangofolio.com/terms/%E8%B5%84%E6%9C%AC%E5%B8%82%E5%9C%BA%E7%A8%B3%E5%B8%82%E6%9C%BA%E5%88%B6): 稳市机制“稳”的到底是什么
+- [护盘式回购](https://dictionary.mangofolio.com/terms/%E6%8A%A4%E7%9B%98%E5%BC%8F%E5%9B%9E%E8%B4%AD): “护盘式”回购，和普通回购不是一回事
+- [超跌反弹](https://dictionary.mangofolio.com/terms/%E8%B6%85%E8%B7%8C%E5%8F%8D%E5%BC%B9): 反弹，是把“多跌的”还回来
+- [外汇存款准备金率](https://dictionary.mangofolio.com/terms/%E5%A4%96%E6%B1%87%E5%AD%98%E6%AC%BE%E5%87%86%E5%A4%87%E9%87%91%E7%8E%87): 央行还有第二个“存款准备金”
+- [港股通ETF](https://dictionary.mangofolio.com/terms/%E6%B8%AF%E8%82%A1%E9%80%9AETF): 不是所有港股ETF你都买得到
+- [同业存单指数基金](https://dictionary.mangofolio.com/terms/%E5%90%8C%E4%B8%9A%E5%AD%98%E5%8D%95%E6%8C%87%E6%95%B0%E5%9F%BA%E9%87%91): 一篮子银行借条
+- [冰雪经济](https://dictionary.mangofolio.com/terms/%E5%86%B0%E9%9B%AA%E7%BB%8F%E6%B5%8E): 看天吃饭的产业链
 
 ## 词库与指南
 - [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1125 个词条按篇章全部列出，支持搜索与章节筛选
