@@ -618,6 +618,85 @@ def audit(root, rules, rep):
                 ("残留：%s" % ", ".join(cross_ref)) if cross_ref else "无 ../mangofolio-* 依赖",
                 "平台按单技能包发布，跨技能路径会失效，需复制资源到本包或改文案")
 
+    # ---------- scenario ----------
+    # 每日 08:30 管线写 web/data/hot-scenarios.json，此前没有任何门禁。
+    # 数据一旦缺条/缺合规声明/来源变纯文本，没人会发现——因为它当前还没有消费方，
+    # 坏了页面也不会报错。所以这里替未来的消费方先把契约卡住。
+    sp = os.path.join(root, "data", "hot-scenarios.json")
+    want_scenes = ["查词学词", "看新闻", "持仓亏了", "产品对比",
+                   "重大决定", "防坑提问", "复杂事件", "今日热词"]
+    if not os.path.exists(sp):
+        rep.add("scenario", "FAIL", "当日 8 场景数据存在",
+                "缺 web/data/hot-scenarios.json", "跑每日 08:30 管线重新生成")
+    else:
+        try:
+            sd = json.load(open(sp, encoding="utf-8"))
+            sits = sd.get("items") or []
+            sdate = str(sd.get("date") or "")
+        except Exception as e:
+            sd, sits, sdate = {}, [], ""
+            rep.add("scenario", "FAIL", "当日 8 场景数据可解析", "JSON 解析失败：%s" % e,
+                    "修好 JSON；旧文件在 web/data/hot-scenarios.json.bak-* 可回滚")
+        if sits:
+            got = [str(i.get("scene") or "") for i in sits]
+            miss = [s for s in want_scenes if s not in got]
+            extra = [s for s in got if s not in want_scenes]
+            ok_cnt = (len(sits) == 8 and not miss and not extra)
+            rep.add("scenario", "PASS" if ok_cnt else "FAIL", "8 个场景齐全且不重不漏",
+                    "%d 条%s%s" % (len(sits),
+                                  ("｜缺：%s" % "、".join(miss)) if miss else "",
+                                  ("｜多：%s" % "、".join(extra)) if extra else ""),
+                    "按 docs/specs/信源抓取管线设计.md §3 的 8 场景映射生成")
+
+            bad_fact = [i.get("id", "?") for i in sits
+                        if not all(str(i.get(k) or "").strip()
+                                   for k in ("title", "question", "answer", "hot"))]
+            rep.add("scenario", "PASS" if not bad_fact else "FAIL", "场景必填字段非空",
+                    ("空字段：%s" % ", ".join(bad_fact)) if bad_fact else "title/question/answer/hot 均非空",
+                    "缺字段的场景按对应 Skill 结构补齐")
+
+            no_link = [i.get("id", "?") for i in sits
+                       if not any(re.search(r"\((https?://[^)]+)\)", str(s))
+                                  for s in (i.get("sources") or []))]
+            rep.add("scenario", "PASS" if not no_link else "FAIL", "来源含可点击链接",
+                    ("无 http 链接：%s" % ", ".join(no_link)) if no_link
+                    else "每条场景至少 1 条 [标题](url)",
+                    "sources 必须是 markdown 链接；纯文本书名号不可点击")
+
+            no_dis = [i.get("id", "?") for i in sits
+                      if "不构成投资建议" not in str(i.get("answer") or "")
+                      or "不构成投资建议" not in str(i.get("answer") or "")[-40:]]
+            rep.add("scenario", "PASS" if not no_dis else "FAIL", "answer 末尾合规声明",
+                    ("缺声明：%s" % ", ".join(no_dis)) if no_dis
+                    else "%d 条均以「不构成投资建议」收尾" % len(sits),
+                    "合规红线，回答末尾必须保留")
+
+            no_tag = [i.get("id", "?") for i in sits if not (i.get("tags") or [])]
+            rep.add("scenario", "PASS" if not no_tag else "FAIL", "场景 tags 非空",
+                    ("空 tags：%s" % ", ".join(no_tag)) if no_tag else "均带 %d 个标签" %
+                    (sum(len(i.get("tags") or []) for i in sits) // len(sits)),
+                    "tags 用于词条联动与检索")
+
+            try:
+                import datetime as _dt
+                today = _dt.date.today()
+                sd_date = _dt.date.fromisoformat(sdate)
+                age = (today - sd_date).days
+            except Exception:
+                age = None
+            if age is None:
+                rep.add("scenario", "FAIL", "数据日期可解析", "date=%r" % sdate,
+                        "格式为 YYYY-MM-DD")
+            elif age > 1:
+                rep.add("scenario", "FAIL", "数据是当日的",
+                        "date=%s，已滞后 %d 天" % (sdate, age),
+                        "定时任务可能失败；查 WorkBuddy 自动化执行记录")
+            elif age == 1:
+                rep.add("scenario", "WARN", "数据是当日的",
+                        "date=%s（昨天），今日管线可能还没跑（08:30 触发）" % sdate, "")
+            else:
+                rep.add("scenario", "PASS", "数据是当日的", "date=%s" % sdate)
+
     # ---------- hygiene ----------
     # 判定口径：磁盘上有备份文件 ≠ 会被部署。只要 .vercelignore 全覆盖就不算问题
     # （本地留着是给人回滚用的，删掉反而危险）。真正要报警的是「漏网」。
