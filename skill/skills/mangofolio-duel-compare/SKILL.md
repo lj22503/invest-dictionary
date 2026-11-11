@@ -10,7 +10,7 @@ description_zh: 产品对比说人话 —— 把「A 还是 B」放进同一场�
 description_en: Compare an A-or-B money choice inside one scenario across worst case, liquidity, return source and who it suits, with a break-even line and on-the-spot math.
 tags: ["投资词典", "理财决策", "方案对比", "说人话"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.1.0
+version: 1.2.1
 author: Mangofolio
 license: MIT
 agent_created: true

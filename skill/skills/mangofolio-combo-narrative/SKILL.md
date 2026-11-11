@@ -10,7 +10,7 @@ description_zh: 财经新闻说人话 —— 把看不懂的财经新闻、宏�
 description_en: Translate a piece of financial news, macro data or policy text into its core concepts and a causal chain from what happened to what it means for you, without predicting prices.
 tags: ["投资词典", "财经新闻", "宏观解读", "说人话"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.1.0
+version: 1.2.1
 author: Mangofolio
 license: MIT
 agent_created: true

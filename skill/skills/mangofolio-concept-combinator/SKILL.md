@@ -10,7 +10,7 @@ description_zh: 宏观事件说人话 —— 把复杂内容拆成核心词条�
 description_en: Turn complex material into a six-screen mobile web narrative a non-expert can finish reading, built from linked dictionary terms.
 tags: ["投资词典", "叙事写作", "网页输出", "概念串联"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.1.0
+version: 1.2.1
 author: Mangofolio
 license: MIT
 agent_created: true
