@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>物理AI</title>
+<meta name="description" content="让 AI 从屏幕里长出身体：靠摄像头看、靠算法算、靠电机动手，机器人、自动驾驶、无人机都是它的载体。">
+<meta name="keywords" content="物理AI, Physical AI, 具身智能, 人形机器人, 世界模型, 伺服电机, 减速器">
+<link rel="canonical" href="https://dictionary.mangofolio.com/terms/%E7%89%A9%E7%90%86AI">
+
+<!-- Open Graph -->
+<meta property="og:title" content="物理AI - 投资词典 · Invest Dictionary">
+<meta property="og:description" content="让 AI 从屏幕里长出身体：靠摄像头看、靠算法算、靠电机动手，机器人、自动驾驶、无人机都是它的载体。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dictionary.mangofolio.com/terms/%E7%89%A9%E7%90%86AI">
+<meta property="og:image" content="https://dictionary.mangofolio.com/og-cover.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="物理AI - 投资词典 · Invest Dictionary">
+<meta name="twitter:description" content="让 AI 从屏幕里长出身体：靠摄像头看、靠算法算、靠电机动手，机器人、自动驾驶、无人机都是它的载体。">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "dateModified": "2026-11-11",
+  "@type": "DefinedTerm",
+  "name": "物理AI",
+  "description": "让 AI 从屏幕里长出身体：靠摄像头看、靠算法算、靠电机动手，机器人、自动驾驶、无人机都是它的载体。",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "投资词典 · Invest Dictionary"
+  },
+  "termCode": "dict-物理AI",
+  "url": "https://dictionary.mangofolio.com/terms/%E7%89%A9%E7%90%86AI"
+}
+</script>
+<style>
+  :root {
+    /* 品牌色板 · 与基准页 web/terms/14天期逆回购.html 对齐 */
+    --bg-paper: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --accent: #F97316;
+    --accent-hover: #E05E0A;
+    --ink: #3A332C;
+    --ink-light: #8A7D70;
+    --ink-strong: #241610;
+    --ink-disabled: rgba(36,22,16,.30);
+    --border-dashed: rgba(36,22,16,.10);
+    --border-soft: rgba(36,22,16,.18);
+    --border-faint: rgba(36,22,16,.06);
+    --glass-bg: rgba(255,255,255,.92);
+    --overlay-faint: rgba(36,22,16,.02);
+    --accent-a04: rgba(249,115,22,.04);
+    --accent-a06: rgba(249,115,22,.06);
+    --accent-a08: rgba(249,115,22,.08);
+    --accent-a10: rgba(249,115,22,.10);
+    --accent-a15: rgba(249,115,22,.15);
+    --accent-a18: rgba(249,115,22,.18);
+    --accent-a30: rgba(249,115,22,.30);
+    --accent-a40: rgba(249,115,22,.40);
+    --shadow-soft: 0 1px 2px rgba(36,22,16,.05);
+    --shadow-hover: 0 4px 8px rgba(36,22,16,.08);
+  }
+
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg-paper);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem 4rem;
+    font-family: "Inter", "Noto Serif SC", "Source Han Serif SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    color: var(--ink);
+    line-height: 1.9;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== 纸面 ===== */
+  .paper {
+    max-width: 720px;
+    width: 100%;
+    background: var(--bg-paper);
+    border: 1px solid var(--border-dashed);
+    border-radius: 16px;
+    padding: 3rem 2.5rem 2.5rem;
+    box-shadow: 0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10);
+    position: relative;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.8rem;
+    position: relative;
+  }
+
+  .title-wrap { flex: 1; }
+
+  .main-title {
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--ink-strong);
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.35em;
+    letter-spacing: 0.02em;
+  }
+
+  .main-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--accent) 0px,
+        var(--accent) 4px,
+        transparent 4px,
+        transparent 10px,
+        var(--accent) 10px,
+        var(--accent) 12px,
+        transparent 12px,
+        transparent 18px
+      );
+    border-radius: 3px;
+    opacity: 0.75;
+  }
+
+  .subtitle {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    letter-spacing: 0.03em;
+    font-style: italic;
+    font-family: var(--mf-fonts-display-extended), "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  }
+
+  /* ===== 卡间分隔 ===== */
+  .card-divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-divider::before {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 3px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(36,22,16,.18) 0px,
+        rgba(36,22,16,.18) 6px,
+        transparent 6px,
+        transparent 16px,
+        rgba(36,22,16,.18) 16px,
+        rgba(36,22,16,.18) 22px,
+        transparent 22px,
+        transparent 36px
+      );
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  .card-divider::after {
+    content: '✂';
+    position: absolute;
+    font-size: 0.85rem;
+    color: var(--accent);
+    opacity: 0.5;
+    top: -4px;
+    right: 12%;
+    transform: rotate(10deg);
+  }
+
+  /* ===== 故事卡 ===== */
+  .card {
+    position: relative;
+    padding: 1.8rem 1.5rem 2rem;
+    margin-bottom: 0.6rem;
+    border: 1px solid var(--border-dashed);
+    border-radius: 16px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-soft);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10);
+  }
+
+  .card-number {
+    position: absolute;
+    top: -14px;
+    left: 16px;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 9999px;
+    background: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", "Fraunces", ui-monospace, Consolas, monospace, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-size: 0.85rem;
+    color: var(--bg-paper);
+    font-weight: 700;
+    user-select: none;
+  }
+
+  .card-title {
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink-strong);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.45em;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.01em;
+  }
+
+  .card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--accent) 0px,
+        var(--accent) 3px,
+        transparent 3px,
+        transparent 7px,
+        var(--accent) 7px,
+        var(--accent) 10px,
+        transparent 10px,
+        transparent 14px
+      );
+    border-radius: 2px;
+    opacity: 0.65;
+  }
+
+  .card-body {
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+    font-family: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  }
+
+  .card-body p { margin-bottom: 0.7rem; }
+
+  .card-body strong { color: var(--ink-strong); }
+
+  .card-body .highlight {
+    position: relative;
+    display: inline;
+    padding: 0 0.15em;
+  }
+
+  .card-body .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--accent-a18);
+    z-index: -1;
+    border-radius: 2px;
+  }
+
+  .card-body .tag {
+    display: inline-block;
+    background: var(--accent-a10);
+    color: var(--accent-hover);
+    padding: 0.1em 0.5em;
+    border-radius: 9999px;
+    border: 1px solid var(--accent-a30);
+    font-size: 0.85rem;
+    margin: 0 0.1em;
+  }
+
+  .step-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .step-list li {
+    position: relative;
+    padding-left: 1.8em;
+    margin-bottom: 0.7rem;
+  }
+
+  .step-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow: 0 0 0 2px var(--accent-a15);
+  }
+
+  .card-quote {
+    border-left: 2px solid var(--accent-a40);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--ink);
+    font-style: italic;
+    font-size: 0.92rem;
+  }
+
+  /* ===== 面包屑 / 分享 / 导航 ===== */
+  .term-breadcrumb,
+  .share-bar,
+  .term-pager,
+  .term-related,
+  .term-back {
+    font-family: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  }
+
+  .term-breadcrumb {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-light);
+  }
+
+  .term-breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .term-breadcrumb a:hover { text-decoration: underline; }
+
+  .term-breadcrumb .bc-sep {
+    margin: 0 0.4rem;
+    color: var(--ink-light);
+  }
+
+  .term-breadcrumb .bc-current {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .share-bar {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto 1.2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .share-bar .share-label {
+    font-size: 0.82rem;
+    color: var(--ink-light);
+    margin-right: 0.3rem;
+  }
+
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--border-dashed);
+    border-radius: 9999px;
+    background: var(--card-bg);
+    color: var(--ink);
+    font-size: 0.82rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  }
+
+  .share-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-a06);
+  }
+
+  .share-btn.wechat-btn { position: relative; }
+
+  .share-btn.wechat-btn .qr-popup {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    border: 1px solid var(--border-dashed);
+    border-radius: 8px;
+    padding: 0.8rem;
+    box-shadow: 0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10);
+    z-index: 100;
+    text-align: center;
+  }
+
+  .share-btn.wechat-btn:hover .qr-popup,
+  .share-btn.wechat-btn:focus .qr-popup { display: block; }
+
+  .share-btn.wechat-btn .qr-popup-url {
+    display: block;
+    font-family: "JetBrains Mono", ui-monospace, Consolas, monospace, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    font-size: 0.72rem;
+    color: var(--ink-strong);
+    background: rgba(36,22,16,.04);
+    padding: 6px 8px;
+    border-radius: 4px;
+    word-break: break-all;
+    margin-bottom: 4px;
+  }
+
+  .share-btn.wechat-btn .qr-popup-hint {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--ink-light);
+    text-align: center;
+  }
+
+  .copy-toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink-strong);
+    color: var(--bg-paper);
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.88rem;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+    font-family: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  }
+
+  .copy-toast.show { opacity: 1; }
+
+  .term-pager {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.8rem auto 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .term-pager a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 9999px;
+    background: var(--card-bg);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .term-pager a:hover {
+    border-color: var(--accent);
+    background: var(--accent-a08);
+    color: var(--accent);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .term-pager .pager-disabled {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-faint);
+    border-radius: 9999px;
+    background: var(--overlay-faint);
+    color: var(--ink-disabled);
+    font-size: 0.88rem;
+    cursor: default;
+  }
+
+  .term-related {
+    position: relative;
+    max-width: 720px;
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    background: var(--accent-a04);
+  }
+
+  .term-related::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20px;
+    width: 36px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 4px;
+  }
+
+  .term-related h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ink-strong);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+    font-family: "Noto Serif SC", "Source Han Serif SC", serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+  }
+
+  .related-links {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.9;
+  }
+
+  .related-links a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .related-links a:hover { text-decoration: underline; }
+
+  .term-back {
+    max-width: 720px;
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .term-back a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.88rem;
+  }
+
+  .term-back a:hover { text-decoration: underline; }
+
+  .term-footer-spacer { height: 3rem; }
+
+  /* ===== 全站页脚（每页只注入一次） ===== */
+  .mangofolio-nav {
+    font-family: "Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+    border-top: 1px solid var(--border-dashed);
+    margin-top: 48px;
+    padding: 18px 24px 22px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-light);
+    background: transparent;
+    width: 100%;
+  }
+
+  .mangofolio-nav .mf-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    color: var(--ink-strong);
+  }
+
+  .mangofolio-nav a {
+    display: inline-block;
+    margin: 4px 10px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .mangofolio-nav a:hover { text-decoration: underline; }
+
+  .mangofolio-nav .mf-note {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--ink-light);
+  }
+
+  @media (max-width: 600px) {
+    html { font-size: 15px; }
+
+    .paper {
+      padding: 2rem 1.2rem 1.8rem;
+      border-radius: 12px;
+    }
+
+    .main-title { font-size: 2.4rem; }
+
+    .card { padding: 1.5rem 1rem 1.5rem; }
+
+    .card-title { font-size: 1.25rem; }
+
+    .card-number {
+      min-width: 28px;
+      height: 28px;
+      padding: 0 8px;
+      font-size: 0.78rem;
+      top: -12px;
+      left: 12px;
+    }
+
+    .card-body {
+      font-size: 0.88rem;
+      line-height: 1.85;
+    }
+
+    .share-bar {
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .share-btn {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.78rem;
+    }
+
+    .term-breadcrumb { font-size: 0.78rem; }
+
+    .term-pager {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .term-pager a, .term-pager .pager-disabled {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .card-divider::after { right: 5%; }
+  }
+</style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#F97316">
+<link rel="stylesheet" href="../css/mangofolio-tokens-v09.css">
+</head>
+<body class="term-page">
+
+<div class="copy-toast" id="copyToast">链接已复制</div>
+
+<nav class="term-breadcrumb" aria-label="面包屑导航">
+  <a href="/">投资词典</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-current">物理AI</span>
+</nav>
+
+<!-- 分享 -->
+<div class="share-bar">
+  <span class="share-label">分享给朋友：</span>
+  <button class="share-btn" onclick="copyPageUrl()" type="button">复制链接</button>
+  <a class="share-btn" href="javascript:void(0)" onclick="shareToWeibo()" rel="noopener">微博</a>
+  <span class="share-btn wechat-btn" onclick="copyPageUrl()" role="button" tabindex="0">微信<span class="qr-popup"><span class="qr-popup-url"></span><span class="qr-popup-hint">复制链接发微信</span></span></span>
+</div>
+
+<!-- 正文 -->
+<div class="paper">
+  <header class="header">
+    <div class="title-wrap">
+      <h1 class="main-title">物理AI</h1>
+      <p class="subtitle">—— 投资词典 · Invest Dictionary · 最后更新：2026-11-11</p>
+    </div>
+  </header>
+
+  <article class="card">
+    <div class="card-number">①</div>
+    <h2 class="card-title">AI 长出身体之后</h2>
+    <div class="card-body">
+      <p><strong>物理 AI（Physical AI）= 让人工智能直接处理真实世界的物理规律。</strong>它不只在屏幕里回你一段话，还要靠摄像头看、靠算法算、靠电机动手——看见桌沿要绕开，抓起鸡蛋不能捏碎，踩到湿地会打滑。</p>
+      <p>它的载体很具体：人形机器人、工厂机械臂、自动驾驶、无人机、仓库里的搬运 AGV，都算。<span class="tag">数字世界</span>与<span class="tag">物理世界</span>的区别很粗暴：数字 AI 答错了，重跑一次就行；物理 AI 算错了，东西会摔坏、人会受伤。</p>
+      <p>11 月 10 日的 A 股给了它一个很直白的注脚：<span class="highlight">物理 AI 板块全天维持强势</span>，豪恩汽电收涨超 10%，凡拓数创、能科科技、格灵深瞳等纷纷跟涨。</p>
+      <div class="card-quote">一句话：数字 AI 交付的是文字，物理 AI 交付的是动作。</div>
+    </div>
+  </article>
+
+  <div class="card-divider"></div>
+
+  <article class="card">
+    <div class="card-number">②</div>
+    <h2 class="card-title">为什么重要：算力建完，钱要落到“手和关节”上</h2>
+    <div class="card-body">
+      <p>算力中心是地基，应用才是收租的房子。过去两年钱先堆在芯片和算力上，接下来要找的是“谁能把这些算力用起来”——AI 短剧、游戏、影视这类数字应用先受益，机器人、智驾这类物理应用弹性更大。</p>
+      <p>11 月 10 日盘面正是这么走的：影视院线高开高走（华智数媒、华策影视、金逸影视、上海电影涨停），物理 AI 与半导体同步走强；沪指收涨 0.08% 报 3663.72 点，创业板指涨 1.46%，两市成交约 1.5 万亿元，超 4200 只个股上涨。</p>
+      <p>跟普通人的关系有两层：<strong>生活上</strong>，你会先在仓库分拣、工厂巡检、商场导览这些场景里撞见它，而不是先在自己家里；<strong>投资上</strong>，赚到钱的是做零件、拿订单的公司，不是把“物理 AI”写进简介的公司。</p>
+    </div>
+  </article>
+
+  <div class="card-divider"></div>
+
+  <article class="card">
+    <div class="card-number">③</div>
+    <h2 class="card-title">怎么用：四个能验证的信号</h2>
+    <div class="card-body">
+      <ul class="step-list">
+        <li><strong>看订单，不看演示视频</strong>：发布会上的流畅步态不等于量产交付。找“中标 / 定点 / 量产”公告，再看这块业务在营收里占多少。</li>
+        <li><strong>看卡脖子环节</strong>：物理 AI 的钱集中在“手”和“关节”——伺服电机、减速器、灵巧手、力与触觉传感器、丝杠。这些环节有真实出货的公司，才吃得到订单。</li>
+        <li><strong>看量能，不只看涨幅</strong>：11 月 10 日超 4200 只个股上涨，但成交额只比前一天多 200 多亿，属于“缩量普涨”，更像存量资金轮动，不是新钱大举进场。</li>
+        <li><strong>分清物理 AI 和人形机器人</strong>：物理 AI 是更大的筐，装得下智驾、无人机、工业机器人；人形机器人只是其中一个形态。两个词不是同一只股票。</li>
+      </ul>
+      <div class="card-quote">一句话：物理 AI 卖的不是想象力，是能重复交付的零部件。</div>
+    </div>
+  </article>
+
+  <div class="card-divider"></div>
+
+  <article class="card">
+    <div class="card-number">④</div>
+    <h2 class="card-title">常见坑：把故事当业绩</h2>
+    <div class="card-body">
+      <ul class="step-list">
+        <li><strong>蹭概念改简介</strong>：主营没变，公告先变。看到“拟布局”“拟设立子公司”这类措辞，先当没有。</li>
+        <li><strong>把“送样”当“定点”，把“定点”当“放量”</strong>：这三步之间隔着 1 到 3 年，股价却常常三个月走完两年预期。</li>
+        <li><strong>拿海外龙头当同步指标</strong>：11 月 10 日英伟达跌逾 5%、两个交易日累计跌约 10%，A 股物理 AI 反而走强——说明国内这波是应用端补涨，不是跟着算力龙头走。</li>
+        <li><strong>忽略估值和情绪</strong>：题材股涨的是预期，跌的是兑现。追高前先问一句：这家公司的机器人业务，今年贡献了多少收入？</li>
+        <li><strong>忽略技术路线的分歧</strong>：端到端大模型、分层控制、遥操作采集数据，路线还没统一，押单一技术路线的公司风险更集中。</li>
+      </ul>
+    </div>
+  </article>
+</div>
+
+<nav class="term-pager"><a href="%E5%86%B0%E9%9B%AA%E7%BB%8F%E6%B5%8E" class="pager-prev" title="冰雪经济">← 冰雪经济</a><span class="pager-disabled">已是最后一篇</span></nav>
+
+<div class="term-related">
+  <h3>关联词条</h3>
+  <div class="related-links"><a href="%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA">人形机器人</a> · <a href="AI%E7%AE%97%E5%8A%9B">AI算力</a> · <a href="AI%E6%99%BA%E8%83%BD%E4%BD%93">AI智能体</a> · <a href="%E8%8B%B1%E4%BC%9F%E8%BE%BE%EF%BC%88AI%E8%8A%AF%E7%89%87%E5%B7%A8%E5%A4%B4%EF%BC%89">英伟达（AI芯片巨头）</a></div>
+</div>
+
+<div class="term-back"><a href="/">← 返回投资词典</a></div>
+
+<div class="term-footer-spacer"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var urlEl = document.querySelector('.qr-popup-url');
+  if (urlEl) urlEl.textContent = window.location.href;
+});
+
+function copyPageUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  }).catch(function() {
+    var ta = document.createElement('textarea');
+    ta.value = window.location.href;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2000);
+  });
+}
+
+function shareToWeibo() {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  window.open('https://service.weibo.com/share/share.php?url=' + url + '&title=' + title, '_blank', 'noopener,width=600,height=500');
+}
+</script>
+
+<script src="../js/knowledge-card.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js')})}</script>
+<script defer src="../js/tracker.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  if (typeof window.track !== 'function') return;
+  var word = document.title.replace(/\u4ec0\u4e48\u610f\u601d.*/, '').trim();
+  if (!word) {
+    var h1 = document.querySelector('h1.main-title, h1');
+    if (h1) word = h1.textContent.trim();
+  }
+  if (word) window.track('word_lookup', { word: word });
+});
+</script>
+
+<!-- Mangofolio 系列导航 -->
+<footer class="mangofolio-nav">
+  <span class="mf-label">Mangofolio 系列</span>
+  <a href="https://dictionary.mangofolio.com">投资词典 Dictionary</a>
+  <a href="https://brain.mangofolio.com">投资大脑 Brain</a>
+  <a href="https://investbuddy.mangofolio.com">投资伙伴 Buddy</a>
+  <a href="https://forge.mangofolio.com">市场观察 View</a>
+  <a href="https://invest-tools.mangofolio.app">财务工具箱 FinTools</a>
+  <span class="mf-note">内容由 AI 生成，仅供学习参考，不构成投资建议</span>
+  <span class="mf-note"><a href="/privacy">隐私政策</a> · <a href="/terms-of-service">用户协议</a></span>
+</footer>
+
+</body>
+</html>
