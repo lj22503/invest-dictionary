@@ -16,10 +16,12 @@ CPI（居民消费价格指数）	CPI（居民消费价格指数）.html
 CPO（共封装光学）	CPO（共封装光学）.html
 CRS	CRS.html
 CTA 策略	CTA 策略.html
+DCF（现金流折现估值）	DCF（现金流折现估值）.html
 DR利率（银行间质押式回购利率）	DR利率.html
 DeFi	DeFi.html
 DeepSeek API涨价	DeepSeek API涨价.html
 ESG投资	ESG投资.html
+ETF折溢价（溢价率与折价率）	ETF折溢价（溢价率与折价率）.html
 ETF联接基金	ETF联接基金.html
 ETF（交易型开放式指数基金）	ETF（交易型开放式指数基金）.html
 EV/EBITDA	EV_EBITDA.html
@@ -67,6 +69,7 @@ Tokenomics / 代币经济	Tokenomics _ 代币经济.html
 Token贷	Token贷.html
 VIX（恐慌指数）	VIX（恐慌指数）.html
 VaR（在险价值）	VaR（在险价值）.html
+XIRR（不定期现金流的内部收益率）	XIRR（不定期现金流的内部收益率）.html
 Ⅱ类户 / Ⅲ类户	Ⅱ类户 _ Ⅲ类户.html
 一级市场 vs 二级市场	一级市场 vs 二级市场.html
 七日年化收益率	七日年化收益率.html
@@ -1100,6 +1103,7 @@ VaR（在险价值）	VaR（在险价值）.html
 题材股 / 概念股	题材股 _ 概念股.html
 风格切换	风格切换.html
 风险平价	风险平价.html
+风险等级（R1-R5）	风险等级（R1-R5）.html
 风险预算	风险预算.html
 风险（系统性风险 vs 非系统性风险）	风险（系统性风险 vs 非系统性风险）.html
 食品价格 / 菜篮子	食品价格 _ 菜篮子.html
