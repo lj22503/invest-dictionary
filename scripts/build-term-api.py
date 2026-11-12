@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(ROOT, "web")
@@ -72,7 +73,7 @@ def build_index():
         fn = x.get("filename") or (x["title"] + ".html")
         out.append({
             "t": x["title"],
-            "u": "/" + fn[:-5],
+            "u": "/terms/" + quote(fn[:-5], safe=""),
             "c": x.get("chapter", ""),
             "k": x.get("card_titles") or [],
         })

@@ -62,7 +62,7 @@ export default async function handler(req) {
   return new Response(html, {
     headers: {
       'content-type': 'text/html; charset=utf-8',
-      'x-term-url': encodeURI(url),
+      'x-term-url': url,
       'x-term-bytes': String(new TextEncoder().encode(html).length),
       'cache-control': 'no-store',
     },
