@@ -48,26 +48,14 @@ def main():
         print("[ERROR] 找不到 %s，请先确认 skill 目录结构" % SKILLS_DIR)
         return 1
 
-    written, skipped = [], []
+    written = []
     for name in sorted(os.listdir(SKILLS_DIR)):
         skill_dir = os.path.join(SKILLS_DIR, name)
         if not os.path.isdir(skill_dir):
             continue
         ref_dir = os.path.join(skill_dir, "references")
-        out = os.path.join(ref_dir, "term-index.txt")
-
-        # 技能正文不查本地索引时，不要往里塞一份 50KB 的死重（包体积白涨，agent 还可能去读）
-        md = os.path.join(skill_dir, "SKILL.md")
-        body = open(md, encoding="utf-8").read() if os.path.exists(md) else ""
-        if "term-index.txt" not in body:
-            if os.path.exists(out):
-                os.remove(out)
-                skipped.append((name, "已删除旧索引"))
-            else:
-                skipped.append((name, "不需要"))
-            continue
-
         os.makedirs(ref_dir, exist_ok=True)
+        out = os.path.join(ref_dir, "term-index.txt")
         with open(out, "w", encoding="utf-8", newline="\n") as f:
             f.write(payload)
         written.append((name, len(payload.encode("utf-8"))))
@@ -76,9 +64,7 @@ def main():
     print("单份大小：%.1f KB" % (len(payload.encode("utf-8")) / 1024.0))
     for name, size in written:
         print("  OK  %-34s %.1f KB" % (name, size / 1024.0))
-    for name, why in skipped:
-        print("  --  %-34s %s" % (name, why))
-    print("共写入 %d 个 Skill，跳过 %d 个" % (len(written), len(skipped)))
+    print("共写入 %d 个 Skill" % len(written))
     return 0
 
 

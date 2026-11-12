@@ -579,19 +579,14 @@ def audit(root, rules, rep):
             sdir = os.path.join(skills_dir, sn)
             md = os.path.join(sdir, "SKILL.md")
             idx = os.path.join(sdir, "references", "term-index.txt")
-            body = open(md, encoding="utf-8").read() if os.path.exists(md) else ""
-            # 正文不查本地索引的技能（改成调接口或纯短答）不需要这 50KB，但也不许留残骸
-            needs_idx = "term-index.txt" in body
-            if needs_idx:
-                if os.path.exists(idx):
-                    n = sum(1 for _ in open(idx, encoding="utf-8"))
-                    if dict_n > 0 and n != dict_n:
-                        bad_idx.append("%s(%d/%d)" % (sn, n, dict_n))
-                else:
-                    bad_idx.append("%s(缺索引)" % sn)
-            elif os.path.exists(idx):
-                bad_idx.append("%s(已不查索引但文件残留)" % sn)
+            if os.path.exists(idx):
+                n = sum(1 for _ in open(idx, encoding="utf-8"))
+                if dict_n > 0 and n != dict_n:
+                    bad_idx.append("%s(%d/%d)" % (sn, n, dict_n))
+            else:
+                bad_idx.append("%s(无索引)" % sn)
             if os.path.exists(md):
+                body = open(md, encoding="utf-8").read()
                 parts = body.split("---")
                 head = parts[1] if len(parts) >= 3 else ""
                 if "agent_created:" not in head:
