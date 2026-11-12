@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_d8353efcdd7511f1997d52540024e231
-    ReservedCode1: PMqklGjX1FIvD0kslZfxYeKhKLC2CW+M+WZ2IciVRNLImADOAPNz3eC1rKKZZ0Ac6tdbt0/pTd7mBmT3LRZ2JBaZjx6PwWsCjtFXLgHQ2DSTFSV+0pCKwsE1qpyyu5Siupbgy+yDxylvT2H5ZSCapPGGCahHtPLPVtwhzf53n4895F0gfJog+fsz0ik=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_d8353efcdd7511f1997d52540024e231
-    ReservedCode2: PMqklGjX1FIvD0kslZfxYeKhKLC2CW+M+WZ2IciVRNLImADOAPNz3eC1rKKZZ0Ac6tdbt0/pTd7mBmT3LRZ2JBaZjx6PwWsCjtFXLgHQ2DSTFSV+0pCKwsE1qpyyu5Siupbgy+yDxylvT2H5ZSCapPGGCahHtPLPVtwhzf53n4895F0gfJog+fsz0ik=
----
-
 # XIRR（不定期现金流的内部收益率）
 
 > 隔几个月投一笔、金额还不一样的时候，把所有现金流连同日期一起丢进去，解出一个真正按年计的实际收益率。

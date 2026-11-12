@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 1c835e55ba3b06878e6538b2edadf703_d59ed525dd7511f1997d52540024e231
-    ReservedCode1: iD/f50pBYOeLxktEJU/+IPxJppxOjl+pUEbomxQn6MnM2XCVYkUkWQy1GrcqTNWTX1s6DjP0FjxlMmzwT7WXOOdvgDQd6Rf/g8XyHyLJaAWplwKBTi7Vv94C+BKR3+l/0rGLeoMQBx5p2kaAZDh0b7PEXRQqp7VKFJonwPm9bozKGdjIvCzbKHtYq6o=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 1c835e55ba3b06878e6538b2edadf703_d59ed525dd7511f1997d52540024e231
-    ReservedCode2: iD/f50pBYOeLxktEJU/+IPxJppxOjl+pUEbomxQn6MnM2XCVYkUkWQy1GrcqTNWTX1s6DjP0FjxlMmzwT7WXOOdvgDQd6Rf/g8XyHyLJaAWplwKBTi7Vv94C+BKR3+l/0rGLeoMQBx5p2kaAZDh0b7PEXRQqp7VKFJonwPm9bozKGdjIvCzbKHtYq6o=
----
-
 # DCF（现金流折现估值）
 
 > 把公司未来能赚到的钱，按"今天的钱比明天的钱值钱"折回今天再加总，得出它现在大约值多少。
