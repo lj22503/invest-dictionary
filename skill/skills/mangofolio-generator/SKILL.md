@@ -10,7 +10,7 @@ description_zh: 金融词条说人话 —— 把任何一个金融概念，写�
 description_en: Write a plain-language Chinese finance dictionary entry in a fixed structure (one-line definition, why it matters, how to use it, common traps) as Markdown or a dictionary-style HTML page.
 tags: ["投资词典", "内容生产", "词条写作", "结构化写作"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.3.1
+version: 1.4.0
 author: Mangofolio
 license: MIT
 agent_created: true
@@ -74,31 +74,48 @@ category: finance
 **相关词条**：词条A、词条B（用归一化 slug 命名，见"命名规范"）
 ```
 
-### 方式 B：HTML 词条页（用于直接发布到投资词典）
+### 方式 B：HTML 词条页（交给接口渲染，不要自己写 HTML）
 
-- 视觉与结构的**唯一基准页**：`templates/term-page-baseline.html`（随本 Skill 分发）。生成任何 HTML 词条页之前，必须先读取该文件，逐项对齐其色板、字体链、圆角、版式与页脚；`templates/term-page.html` 与基准页冲突时，一律**以基准页为准**。若基准页不可读，按本节列出的硬约束生成，不要中断任务
-- 头部元数据必填：`title`、`description`（一句话定义）、`canonical`（正式域名）、OG/Twitter Card、Schema.org `DefinedTerm` JSON-LD
-- 正文用故事卡结构（`article.card`，含 `.card-title`/`.card-body`/`.card-quote`/`.card-number`/`.step-list`）；样式一律对齐基准页，**禁止复用任何"纸感手账"类旧样式**
-- 页尾加"上下篇导航"（term-pager）与"相关词条"（term-related，链接用归一化编码 URL）
+模型只产出结构化 JSON，整页 HTML 由服务端模板渲染。**不要手写 HTML，不要读模板文件。**
 
-### 方式 B 的品牌视觉硬约束（强制，与基准页逐项对齐）
+```bash
+curl -s -X POST https://dictionary.mangofolio.com/api/term-page \
+  -H 'content-type: application/json' -d @/tmp/term.json -o 货币.html
+```
 
-- **色板（只允许这些颜色，全部写成页内 `:root` 变量）**
-  - 纯白 `#FFFFFF`（`--bg-paper` / `--card-bg`）、主橙 `#F97316`（`--accent`）、深橙 `#E05E0A`（`--accent-hover`）
-  - 正文墨 `#3A332C`（`--ink`）、暖灰 `#8A7D70`（`--ink-light`）、标题深墨 `#241610`、描边 `rgba(36,22,16,.10)`（`--border-dashed`）
-  - 允许的透明色仅限 `#241610` 系（.02/.04/.05/.06/.08/.10/.18/.30）、`#F97316` 系（.04/.06/.08/.10/.15/.18/.30/.40）与 `rgba(255,255,255,.92)`
-  - 禁止品牌外色值、命名色（red/blue/gray 等）、纸纹/宣纸纹理与噪点背景；渐变只允许基准页的品牌虚线装饰（`repeating-linear-gradient` 的 `#F97316`、`#E05E0A` 或 `rgba(36,22,16,.18)` 短划）
-- **字体链（每条 `font-family` 末尾必须带 emoji 段 `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji"`；禁止裸 `serif` / Times）**
-  - body（页面级）：`"Inter", "Noto Serif SC", "Source Han Serif SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", <emoji 段>, sans-serif`
-  - 组件 / UI（面包屑、分享条、正文段落、导航、页脚等）：`"Inter", "PingFang SC", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif, <emoji 段>`
-  - 标题衬线：`"Noto Serif SC", "Source Han Serif SC", "Songti SC", serif, <emoji 段>`（次级标题可省 `"Songti SC"`）
-  - 数字与装饰：`"Fraunces", "Noto Serif SC", serif, <emoji 段>`
-  - 等宽：`"JetBrains Mono", "Fraunces", ui-monospace, Consolas, monospace, <emoji 段>`（可省 `"Fraunces"`）
-  - 除以上字族外不得引入其他字族；字体文件引入（Google Fonts 等）由模板层统一处理，词条生成任务不得自行添加外部字体请求
-- **圆角**：只允许 `16px`（卡片/面板）、`9999px`（按钮/标签/胶囊）、`2~12px`（小元素）、`50%`（圆点）
-- **版式基线**：html 字号 17px；body `line-height:1.9`、`letter-spacing:.01em`；`.paper` 固定 `max-width:720px`、白底、`1px solid rgba(36,22,16,.10)` 边框、16px 圆角、阴影 `0 4px 8px rgba(36,22,16,.08), 0 12px 32px rgba(36,22,16,.10)`；`h1.main-title` 为 3.2rem / 900 字重 / `#241610`，下方品牌橙虚线装饰
-- **结构顺序（固定，类名与位置不得增删改名）**：copy-toast → `nav.term-breadcrumb` → `.share-bar` → `.paper`（header：`h1.main-title` + `p.subtitle`「—— 投资词典 · Invest Dictionary」；正文 2~4 张 `article.card`，卡间 `.card-divider`）→ `nav.term-pager` → `.term-related` → `.term-back` → `.term-footer-spacer` → `footer.mangofolio-nav`
-- **页脚**：全站统一 `footer.mangofolio-nav`，「Mangofolio 系列」标签 + 5 个系列链接（投资词典 Dictionary / 投资大脑 Brain / 投资伙伴 Buddy / 市场观察 View / 财务工具箱 FinTools，链接色 `#F97316`）+ 免责声明「内容由 AI 生成，仅供学习参考，不构成投资建议」；每页只出现一次，页脚样式不得重复注入
+JSON 契约（必填 `title` / `summary` / `cards`）：
+
+```json
+{
+  "title": "货币",
+  "summary": "一句话定义，≤160 字，会进 meta 描述与搜索结果",
+  "chapter": "第一篇：钱的本质",
+  "keywords": ["信用", "购买力"],
+  "cards": [
+    {
+      "q": "你手里攥着的**100块**",
+      "body": [
+        { "p": "段落正文" },
+        { "quote": "金句，会渲染成左侧竖线的引用块" },
+        { "ul": ["步骤一", "步骤二"] },
+        { "note": "浅色小字，用于点睛或反问" }
+      ]
+    }
+  ],
+  "related": ["信用", "购买力"]
+}
+```
+
+- `cards` 2~6 张；每张必须有 `q`（口语化小标题），`body` 至少一个块
+- 正文里 `**词**` → 黄色马克笔高亮，`__词__` → 米色胶囊标签；其余字符一律按纯文本转义，可以放心写 `<` `&`
+- `chapter` 省略会自动按词条名反查；`related` 省略会自动取同章节词条
+- 面包屑、上下篇、相关词条、页脚、OG/Twitter、Schema.org `DefinedTerm` 全部由接口补齐，**不要自己写**
+- 返回 400 时读 `errors` 数组改 JSON 再传；**不要改成手写 HTML 绕过校验**
+- 响应头 `x-term-url` 是这个页面在站内的正式地址，`x-term-bytes` 是字节数
+- 接口不可用（网络失败 / 5xx）→ 降级为方式 A 输出 Markdown，并说明「HTML 页待接口可用后再生成」，不得手写整页 HTML
+
+为什么这样：让模型照着基准页写整页 HTML，等于让模型当模板引擎——读 32KB 模板、写 31KB 输出，
+一次两三分钟。改成输出几百字 JSON、服务端套模板，接口 1 秒内返回，视觉还不会跑偏。
 
 ## 命名规范（重要，易踩坑）
 
@@ -118,6 +135,15 @@ category: finance
 ## 词条校验（输出前必做）
 
 本 Skill 会点名“该看哪几个词条”。这些词条必须真实存在，不能凭记忆编。
+
+**优先用接口查（一次拿到词条名、章节、四张卡片小标题，返回约 1KB）：**
+
+```bash
+curl -s 'https://dictionary.mangofolio.com/api/term-search?q=CPI&n=5'
+```
+
+命中结果里的 `t` 是词条名、`u` 是站内链接、`c` 是所属章节、`k` 是四张卡片的小标题。
+接口不通时再用下面的本地索引：
 
 **用命令查，不要把整份索引读进上下文。** 索引有 1100+ 行 / 50 KB，整份读进来会明显拖慢响应，
 而你每次需要的只是其中 3–5 行。以下路径相对本 Skill 目录：
@@ -154,22 +180,16 @@ grep -F -m 8 "利率" references/term-index.txt       # 模糊找候选
 - [ ] 无假二维码、无 HTML 残留（如 `<div>`、CSS 碎片混入正文）
 - [ ] 页面条目数与数据源一致
 
-**视觉项（任一项不通过必须先修正，未通过不得写入仓库）**
+**视觉项（已由接口保证，不用逐项自检）**
 
-- [ ] 页内存在 `:root` 变量块，色值全部来自品牌色板
-- [ ] 无品牌外色值、无纸纹/宣纸/噪点背景、无非品牌渐变（全量核对 `#` 与 `rgba` 取值）
-- [ ] 字体链与基准页一致且含 emoji 段，无裸 `serif`
-- [ ] 圆角只出现 `16px` / `9999px` / `2~12px` / `50%`
-- [ ] `footer.mangofolio-nav` 仅 1 处，5 个系列链接与免责声明齐全，页脚样式未重复注入
-- [ ] `subtitle` 为固定文案「—— 投资词典 · Invest Dictionary」，未混入其它词条名
-- [ ] 无占位符残留（`{{ }}`、TODO、lorem、xx%）
-- [ ] 结构完整：面包屑 → 分享条 → `.paper`（h1 + subtitle + 2~4 张 `article.card`）→ term-pager → term-related → term-back
-- [ ] 元数据齐备：`title` / `description` / `canonical` / OG / Twitter Card / Schema.org `DefinedTerm` JSON-LD
-- [ ] 无 `googleapis` 等外部字体请求（字体引入由模板层统一处理）
+- [ ] 这个页面是 `/api/term-page` 返回的，不是我手写的 HTML
+- [ ] 页面里没有 `@@` 占位符残留（有的话说明接口异常，重传一次）
+- [ ] 生成的链接用的是响应头 `x-term-url`，不是我拼的域名
 
 ## 参考
 
 - 在线词典：https://dictionary.mangofolio.com/
 - 数据源：https://dictionary.mangofolio.com/（1000+ 词条，条数以线上为准，勿硬编码）
-- 视觉基准页：`templates/term-page-baseline.html`（随包分发，冲突时以此页为准）
-- 模板：`templates/term-page.html`、`templates/term-card.md`（模板层品牌视觉同步进行中，尚未完成前不得作为视觉依据）
+- 页面渲染接口：`POST https://dictionary.mangofolio.com/api/term-page`（视觉由服务端模板保证，模板已不再随包分发）
+- 查词接口：`GET https://dictionary.mangofolio.com/api/term-search?q=CPI&n=5`
+- Markdown 词条模板：`templates/term-card.md`

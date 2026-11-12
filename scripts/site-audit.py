@@ -30,6 +30,7 @@ import fnmatch
 import json
 import os
 import re
+import subprocess
 import sys
 from urllib.parse import unquote
 
@@ -617,6 +618,27 @@ def audit(root, rules, rep):
         rep.add("skill", "FAIL" if cross_ref else "PASS", "Skill 无跨技能相对引用",
                 ("残留：%s" % ", ".join(cross_ref)) if cross_ref else "无 ../mangofolio-* 依赖",
                 "平台按单技能包发布，跨技能路径会失效，需复制资源到本包或改文案")
+
+        # 词条页接口：外壳与索引是从 web/terms/货币.html 和 dictionary.json 抽出来的。
+        # 站内改样式后忘了重建，接口出的页面会和站内慢慢分叉，而两边的截图都对得上——最难发现。
+        api_dir = os.path.join(root, "api")
+        api_files = ("_term-render.js", "_term-shell.js", "_term-index.js", "term-page.js", "term-search.js")
+        miss_api = [f for f in api_files if not os.path.exists(os.path.join(api_dir, f))]
+        if miss_api:
+            rep.add("skill", "FAIL", "词条页接口资源", "缺：" + ", ".join(miss_api),
+                    "跑 python scripts/build-term-api.py")
+        else:
+            try:
+                r = subprocess.run(
+                    [sys.executable, os.path.join(repo_root, "scripts", "build-term-api.py"), "--check"],
+                    capture_output=True, text=True, timeout=120)
+                ok_api = r.returncode == 0
+                tail = (r.stdout or r.stderr).strip().splitlines()
+                detail = tail[-1] if tail else ("5 个文件齐备" if ok_api else "不一致")
+            except Exception as e:
+                ok_api, detail = False, "检查失败：%s" % e
+            rep.add("skill", "PASS" if ok_api else "FAIL", "词条页接口资源与站内页面一致", detail,
+                    "跑 python scripts/build-term-api.py 重建外壳与索引")
 
     # ---------- scenario ----------
     # 每日 08:30 管线写 web/data/hot-scenarios.json，此前没有任何门禁。
