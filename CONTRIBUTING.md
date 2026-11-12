@@ -19,7 +19,7 @@
 
 ### 第二步：写 Markdown 词条
 
-按 [skill/skills/mangofolio-generator/templates/term-card.md](skill/skills/mangofolio-generator/templates/term-card.md) 模板撰写，包含 4 个部分：
+按下面的四段式撰写（模板文件已不再随技能包分发，结构以本节为准）：
 
 ```
 # 词条名（别名）
