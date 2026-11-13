@@ -10,7 +10,7 @@ description_zh: 金融词条说人话 —— 把任何一个金融概念，写�
 description_en: Write a plain-language Chinese finance dictionary entry in a fixed structure (one-line definition, why it matters, how to use it, common traps) as Markdown.
 tags: ["投资词典", "内容生产", "词条写作", "结构化写作"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.4.2
+version: 1.4.3
 author: Mangofolio
 license: MIT
 agent_created: true
@@ -80,8 +80,11 @@ category: finance
 
 ---
 
+**站内词条**：[词条名](https://dictionary.mangofolio.com/terms/xxx)　← 站内已收录才写这一行
 **相关词条**：词条A、词条B（用归一化 slug 命名，见"命名规范"）
 ```
+
+末尾这一行不是可选项：读者看完你写的词条，要有一条路回词典看完整版。查不到就不写，也不要编链接。
 
 ## 命名规范（重要，易踩坑）
 
@@ -98,24 +101,25 @@ category: finance
 3. 提交 PR 时：提供词条 Markdown，并在 `dictionary.json` 中登记（id 递增、slug 用归一化命名、related 填相关词条 id）。
 4. 命名与风格不符会被维护者打回：说人话、有场景、有坑点。
 
-## 词条校验（要举例时才查）
+## 查站内词条（每次必做一次）
 
-正文要点名别的词条时，名字必须真实存在，不能凭记忆编。**不举例就不用查。**
-
-一次接口调用就够（返回约 1KB）：
+开写前先查一次用户问的这个词。**这一查有两个用途**：确认站内有没有（防重复）、拿到链接（末尾要附）。
 
 ```bash
-curl -s 'https://dictionary.mangofolio.com/api/term-search?q=CPI&n=5'
+curl -s 'https://dictionary.mangofolio.com/api/term-search?q=CPI&n=3'
 ```
 
-`t` 词条名 / `u` 站内链接 / `c` 章节 / `k` 四张卡片小标题。
+`t` 词条名 / `u` 站内路径（已编码）/ `c` 章节 / `k` 四张卡片小标题。
 
-- 命中 → 直接用 `t` 和 `u`
-- 没命中 → 去掉括注再查一次（`可转债（可转换公司债券）` → 查 `可转债`）
-- 接口不通 → grep 一次本地索引：`grep -F "可转债" references/term-index.txt`（**不要整份读**，索引 50KB）
-- 仍然没有 → 不点名，只说"该查哪个方向"
+- **命中同名或同义** → 记住 `t` 和 `u`，正文末尾写：
+  `**站内词条**：[t](https://dictionary.mangofolio.com + u)`
+- **只命中相近的**（查`CPI`得到`核心CPI`）→ 不当作同一条，末尾不写站内链接；可以把相近词放进「相关词条」
+- **没命中** → 说明这是站内还没收录的词，正常写，不写站内链接，**不要编链接**
+- **接口不通** → 跳过这一行继续写，`grep -F "词" references/term-index.txt` 兜一次（别整份读），仍不行就算了
 
-**一共最多两次查询，不要重试。** 查不到就换成不点名具体词条的写法，这比多跑几轮划算。
+一次查询约 0.3 秒，比你多写一段话便宜。**但只查一次，不要重试、不要循环换关键词。**
+
+正文里点名别的词条时，同样用 `t` 和 `u`，不要凭记忆写名字。
 没有命令执行能力时，可以点名最确定的词条，但要在末尾注明"词条名未逐一核对"。
 
 ## 质量检查清单（生成后必查）
@@ -127,6 +131,7 @@ curl -s 'https://dictionary.mangofolio.com/api/term-search?q=CPI&n=5'
 - [ ] 正文 ≥2 张故事卡，且覆盖"这是什么 / 为什么重要"
 - [ ] 含至少 1 个真实场景或数字例子
 - [ ] 含"常见坑 / 误区"（除非概念确无坑）
+- [ ] 站内已收录时，末尾附了站内词条链接（查不到就不写，不许编）
 - [ ] 点名的词条用归一化文件名，链接可跳转
 
 ## 参考
