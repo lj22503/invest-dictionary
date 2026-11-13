@@ -74,6 +74,33 @@ def main():
     L.append("## 首页")
     L.append("- [投资词典首页](%s/): 全部词条目录与篇章导航" % BASE)
     L.append("")
+    # MCP 段：外部开发者拿到端点后最容易卡在「传输选错」——选 SSE 会打到
+    # 不存在的 /sse，拿到 404 页面再报 `unexpected token '<'`，看不出是传输问题。
+    # 所以这一段必须自己写清楚，不能指望对方猜。计数全部动态，不写死。
+    L.append("## MCP 连接器（给 AI 客户端用）")
+    L.append("")
+    L.append("- 端点：%s/api/mcp" % BASE)
+    L.append("- 传输：**Streamable HTTP**（单端点 POST，JSON-RPC 2.0）。不要选 SSE——"
+             "本服务没有 /sse 这一路，选错会拿到 404 页面并报 `unexpected token '<'`")
+    L.append("- 鉴权：无。不需要 token，不需要 OAuth")
+    L.append("- 协议版本：优先 2025-11-25，兼容 2025-06-18 / 2025-03-26")
+    L.append("- GET 端点返回 405 是正常的（本服务不提供服务端主动推送），"
+             "人看的说明页在 %s/api/mcp-info" % BASE)
+    L.append("")
+    L.append("工具 3 个，全部只读、无副作用（readOnlyHint: true）：")
+    L.append("- `search_terms(q, limit=3)`：按词或一句话模糊查，返回词条名、站内链接、"
+             "章节、四张卡片小标题。limit 默认 3、最多 20")
+    L.append("- `get_term(title)`：已知词条名时取单条，比 search_terms 省")
+    L.append("- `list_chapters()`：列出全部 %d 个篇章及每章词条数" % len(chapters))
+    L.append("")
+    L.append("约定：查不到就说「站内没有收录」，不要编造站内链接；"
+             "本服务只给词条骨架，不提供正文全文。")
+    L.append("")
+    L.append("最小验证（工具列表）：")
+    L.append("")
+    L.append("    curl -s %s/api/mcp -H 'content-type: application/json' "
+             "-d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'" % BASE)
+    L.append("")
     L.append("## 词条（共 %d 条）" % n)
     for x in items:
         title = x.get("title") or x.get("slug")

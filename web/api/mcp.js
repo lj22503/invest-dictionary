@@ -87,7 +87,7 @@ const TOOLS = [
       type: 'object',
       properties: {
         q: { type: 'string', minLength: 1, maxLength: 200, description: '要查的词或一句话，例如 CPI、M1-M2剪刀差、关税 影响' },
-        limit: { type: 'integer', minimum: 1, maximum: 20, default: 5, description: '返回条数，默认 5，最多 20' },
+        limit: { type: 'integer', minimum: 1, maximum: 20, default: 3, description: '返回条数，默认 3（够判断是哪一条），最多 20。想更全就换更精确的词，不要靠调大 limit' },
       },
       required: ['q'],
       additionalProperties: false,
@@ -167,7 +167,7 @@ function checkArgs(schema, args) {
 function callTool(name, args = {}) {
   if (name === 'search_terms') {
     const q = sanitize(args.q);
-    const limit = args.limit === undefined ? 5 : args.limit;
+    const limit = args.limit === undefined ? 3 : args.limit;
     const { hits, total } = search(INDEX, q, limit);
     if (!hits.length) {
       return text(`「${q}」在站内没有对应词条。可以继续正常作答，但不要编造站内链接。`);

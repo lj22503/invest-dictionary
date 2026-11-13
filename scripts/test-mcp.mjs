@@ -67,9 +67,10 @@ function check(name, fn) {
     check(`${t.name} 禁止额外参数`, () => assert.strictEqual(t.inputSchema.additionalProperties, false));
   }
   const st = tools.find((t) => t.name === 'search_terms');
-  check('limit 声明为 integer 且有上下限', () => {
+  check('limit 声明为 integer、有上下限、默认 3', () => {
     assert.strictEqual(st.inputSchema.properties.limit.type, 'integer');
     assert.strictEqual(st.inputSchema.properties.limit.maximum, 20);
+    assert.strictEqual(st.inputSchema.properties.limit.default, 3);
   });
   check('工具描述里的条数与索引一致', () => assert.ok(!/1133/.test(st.description) || st.description.includes(String(1133))));
 }
@@ -160,8 +161,12 @@ for (const [q, expect] of [
   check('get_term 模糊名能命中站内标题', () => assert.ok(g.json.result.content[0].text.includes('M1-M2剪刀差')));
   const c = await call('list_chapters', {});
   check('list_chapters 条数与索引一致', () => assert.ok(c.json.result.content[0].text.startsWith('共 1133 条词条')));
-  const d = await call('search_terms', { q: 'CPI' });
-  check('不传 limit 走默认 5', () => assert.ok(d.json.result.content[0].text.includes('命中')));
+  const d = await call('search_terms', { q: '债' });
+  check('不传 limit 走默认 3', () => {
+    const m = d.json.result.content[0].text.match(/命中 (\d+) 条/);
+    assert.ok(m, '响应里没有命中数');
+    assert.strictEqual(Number(m[1]), 3, `实际命中 ${m[1]} 条`);
+  });
 }
 
 // ── 8. 回显清洗：查询词里夹换行不能伪造「链接：」行 ────────────────────────────

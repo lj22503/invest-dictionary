@@ -6,6 +6,25 @@
 ## 首页
 - [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
 
+## MCP 连接器（给 AI 客户端用）
+
+- 端点：https://dictionary.mangofolio.com/api/mcp
+- 传输：**Streamable HTTP**（单端点 POST，JSON-RPC 2.0）。不要选 SSE——本服务没有 /sse 这一路，选错会拿到 404 页面并报 `unexpected token '<'`
+- 鉴权：无。不需要 token，不需要 OAuth
+- 协议版本：优先 2025-11-25，兼容 2025-06-18 / 2025-03-26
+- GET 端点返回 405 是正常的（本服务不提供服务端主动推送），人看的说明页在 https://dictionary.mangofolio.com/api/mcp-info
+
+工具 3 个，全部只读、无副作用（readOnlyHint: true）：
+- `search_terms(q, limit=3)`：按词或一句话模糊查，返回词条名、站内链接、章节、四张卡片小标题。limit 默认 3、最多 20
+- `get_term(title)`：已知词条名时取单条，比 search_terms 省
+- `list_chapters()`：列出全部 22 个篇章及每章词条数
+
+约定：查不到就说「站内没有收录」，不要编造站内链接；本服务只给词条骨架，不提供正文全文。
+
+最小验证（工具列表）：
+
+    curl -s https://dictionary.mangofolio.com/api/mcp -H 'content-type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+
 ## 词条（共 1133 条）
 - [货币](https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81): 你手里攥着的100块
 - [信用](https://dictionary.mangofolio.com/terms/%E4%BF%A1%E7%94%A8): 全世界最贵的三个字
