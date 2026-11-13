@@ -579,14 +579,14 @@ def audit(root, rules, rep):
             sdir = os.path.join(skills_dir, sn)
             md = os.path.join(sdir, "SKILL.md")
             idx = os.path.join(sdir, "references", "term-index.txt")
+            body = open(md, encoding="utf-8").read() if os.path.exists(md) else ""
+            # 查词改走接口（/api/term-search 或 MCP）。包里再带一份 50KB 副本，
+            # 词库一更新就过期，还得重打 8 个包——那是快照，不是数据源。
+            if "/api/term-search" not in body and "/api/mcp" not in body:
+                bad_idx.append("%s(未写查词接口)" % sn)
             if os.path.exists(idx):
-                n = sum(1 for _ in open(idx, encoding="utf-8"))
-                if dict_n > 0 and n != dict_n:
-                    bad_idx.append("%s(%d/%d)" % (sn, n, dict_n))
-            else:
-                bad_idx.append("%s(无索引)" % sn)
+                bad_idx.append("%s(残留 term-index.txt)" % sn)
             if os.path.exists(md):
-                body = open(md, encoding="utf-8").read()
                 parts = body.split("---")
                 head = parts[1] if len(parts) >= 3 else ""
                 if "agent_created:" not in head:
@@ -601,10 +601,10 @@ def audit(root, rules, rep):
                     if pat in body:
                         dead_ref.append("%s→%s" % (sn, pat))
                         break
-        rep.add("skill", "FAIL" if bad_idx else "PASS", "Skill 词条索引与词库同步",
-                ("不一致：%s" % ", ".join(bad_idx)) if bad_idx
-                else "%d 个 skill 均为 %d 条" % (len(names), dict_n),
-                "跑 python scripts/sync-skill-term-index.py")
+        rep.add("skill", "FAIL" if bad_idx else "PASS", "Skill 查词走接口（不打包内副本）",
+                ("问题：%s" % ", ".join(bad_idx)) if bad_idx
+                else "%d 个 skill 均调接口，无本地索引残留（词库 %d 条）" % (len(names), dict_n),
+                "SKILL.md 必须写 /api/term-search 或 /api/mcp；references/term-index.txt 已废弃")
         rep.add("skill", "FAIL" if no_meta else "PASS", "Skill frontmatter agent_created",
                 ("缺：%s" % ", ".join(no_meta)) if no_meta else "%d 个均含" % len(names),
                 "官方规范要求，便于后续 skill_manage 修改")

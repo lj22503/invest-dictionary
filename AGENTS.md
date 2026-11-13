@@ -28,7 +28,7 @@ Vercel 部署（web/ 为根目录，vercel.json 已配置 cleanUrls + 安全响�
 - `web/css/mangofolio-tokens-v09.css` — 颜色/字体/间距/圆角**唯一令牌源**；`web/css/site.css` — 三页共用外壳（色带 `.band--*` / 页头 / 页脚 / 区块头 / 按钮 / 卡片 / 目录 / 代码块）。页面专属样式才写进各自 `<style>`，禁止三页各抄一份 header/footer
 - 三页设计口径见 `docs/specs/三页改版设计规格.md`（色带表 / 信息架构 / 硬规则 / 验收标准）；外来参考包只放 `docs/reference/`，**不进 web/**
 - `web/dictionary.json` — 词条唯一数据源（id/slug/chapter/description/related）
-- `skill/` — **上架用 plugin 包**（`.codebuddy-plugin/plugin.json` + `README.md` + `LICENSE`）：`skills/` 下 8 个 Skill（投资翻译 / 新闻拆解 / 概念串联 / 热点追踪 / 财务决策 / 产品对比 / 话术防坑 / 理财痛点），命名体例统一为「主名 + XX说人话」；`references/routing.md` 是触发词路由表；每个 skill 自带 `references/term-index.txt`（词条索引，由 `scripts/sync-skill-term-index.py` 生成，随词库更新重刷）
+- `skill/` — **上架用 plugin 包**（`.codebuddy-plugin/plugin.json` + `README.md` + `LICENSE`）：`skills/` 下 8 个 Skill（投资翻译 / 新闻拆解 / 概念串联 / 热点追踪 / 财务决策 / 产品对比 / 话术防坑 / 理财痛点），命名体例统一为「主名 + XX说人话」；`references/routing.md` 是触发词路由表；每个 skill 的查词走接口 `GET /api/term-search` 或 MCP `POST /api/mcp`（工具 `search_terms`），**包内不再带 `term-index.txt` 副本**——副本是快照，词库一变就过期，还会逼着重打 8 个包
 - **三种上架形态**（包结构不同，别混）：① WorkBuddy 市场技能 = 一个技能一个包，包根是 `SKILL.md`，由 `scripts/build-workbuddy.py` 生成到 `dist/workbuddy/`；② SkillHub = 直接发布 `skill/skills/<name>` 目录，由 `scripts/publish-skillhub.py`；③ 专家 = `.codebuddy-plugin/plugin.json` + `agents/mango.md` + `skills/` 副本，本地在 `$WORKBUDDY_CONFIG_DIR/plugins/marketplaces/my-experts/plugins/mango/`，改完 skill 要跑 `scripts/sync-expert.py` 再打包
 - `docs/` — PROJECT_GOALS.md（目标清单）、PITFALLS.md（坑点）、design-tokens.md（令牌速查）、HANDOFF.md（接手说明）、BRAND_AUDIT_2026-09-19.md、superpowers/（spec 与 plan）
 - **slug 归一化**：词条名中 `/`、`*`、`>` 一律替换为 `_`（文件名）；所有链接（相关词条、首页卡片）必须用归一化文件名

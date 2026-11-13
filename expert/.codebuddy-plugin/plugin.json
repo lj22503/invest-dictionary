@@ -1,6 +1,6 @@
 {
   "name": "mango",
-  "version": "1.1.5",
+  "version": "1.1.7",
   "description": "Mango turns Chinese finance jargon into plain language: looks up terms, decodes news, compares two options, breaks down money decisions and questions sales pitches. Explains and helps you tell things apart, never gives buy or sell advice.",
   "author": {
     "name": "Mangofolio",
@@ -16,7 +16,9 @@
     "防坑",
     "财经新闻解读"
   ],
-  "agents": ["./agents/mango.md"],
+  "agents": [
+    "./agents/mango.md"
+  ],
   "skills": [
     "./skills/mangofolio-symptom-lookup",
     "./skills/mangofolio-question-probe",
@@ -27,10 +29,8 @@
     "./skills/mangofolio-concept-combinator",
     "./skills/mangofolio-generator"
   ],
-
   "expertType": "agent",
   "agentName": "mango",
-
   "displayName": {
     "en": "Mango",
     "zh": "Mango"
@@ -51,13 +51,31 @@
   },
   "plugin": "mango",
   "tags": [
-    { "en": "Money Basics", "zh": "理财科普" },
-    { "en": "Finance Jargon", "zh": "金融术语" },
-    { "en": "Pitch Checking", "zh": "话术防坑" }
+    {
+      "en": "Money Basics",
+      "zh": "理财科普"
+    },
+    {
+      "en": "Finance Jargon",
+      "zh": "金融术语"
+    },
+    {
+      "en": "Pitch Checking",
+      "zh": "话术防坑"
+    }
   ],
   "quickPrompts": [
-    { "en": "My fund is losing money — which terms should I understand first?", "zh": "我买的理财最近亏了，帮我看看该先搞懂哪几个词" },
-    { "en": "Break this finance news down into plain language", "zh": "这段财经新闻看不懂，帮我拆成人话" },
-    { "en": "The seller says it is principal-protected — what should I ask?", "zh": "销售说这个产品保本保息，我该当面问他什么" }
+    {
+      "en": "My fund is losing money — which terms should I understand first?",
+      "zh": "我买的理财最近亏了，帮我看看该先搞懂哪几个词"
+    },
+    {
+      "en": "Break this finance news down into plain language",
+      "zh": "这段财经新闻看不懂，帮我拆成人话"
+    },
+    {
+      "en": "The seller says it is principal-protected — what should I ask?",
+      "zh": "销售说这个产品保本保息，我该当面问他什么"
+    }
   ]
 }

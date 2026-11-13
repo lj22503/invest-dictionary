@@ -10,7 +10,7 @@ description_zh: 理财焦虑说人话 —— 用一句口语描述（亏了、�
 description_en: Describe a money problem in plain words and get the 3-5 dictionary terms you should read first, in a recommended reading order. Explains and helps you tell things apart, never advises.
 tags: ["投资词典", "理财科普", "风险识别", "说人话"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.2.1
+version: 1.3.0
 author: Mangofolio
 license: MIT
 agent_created: true
@@ -100,31 +100,27 @@ category: finance
 【看完你能做的判断】
 一句话：看完这几条，你能回答自己一个问题：______
 
-## 词条校验（输出前必做）
+## 词条校验（输出前必做一次）
 
 本 Skill 会点名“该看哪几个词条”。这些词条必须真实存在，不能凭记忆编。
 
-**用命令查，不要把整份索引读进上下文。** 索引有 1100+ 行 / 50 KB，整份读进来会明显拖慢响应，
-而你每次需要的只是其中 3–5 行。以下路径相对本 Skill 目录：
+**用接口查，一次约 1KB：**
 
 ```bash
-grep -F "可转债" references/term-index.txt          # 精确词
-grep -F -m 8 "利率" references/term-index.txt       # 模糊找候选
+curl -s 'https://dictionary.mangofolio.com/api/term-search?q=CPI&n=5'
 ```
 
-路径打不开时，先用 `ls references/` 或 `find . -name term-index.txt` 定位一次再查。
-**不要反复重试同一条失败命令**——重试的代价比不校验还大。
+返回 `hits` 里：`t` 词条名、`u` 站内链接（前面拼 `https://dictionary.mangofolio.com`）、`c` 章节、`k` 四张卡片小标题、`s` 相关度。
 
-每行格式是 `词条名<TAB>文件名`。命中后用文件名拼链接：
-`https://dictionary.mangofolio.com/terms/<文件名去掉 .html>`
+已连 MCP 连接器（`https://dictionary.mangofolio.com/api/mcp`）时，等价于调工具 `search_terms`（参数 `{"q":"CPI","limit":5}`）；有就用工具，没有就 curl。
 
-- **完全相等** → 直接用
-- **没命中** → 去掉括注再查一次（`可转债（可转换公司债券）` → 查 `可转债`）
-- **还没命中** → 换一个关键词再查，取语义最近的一条
-- **两次都没有** → 只说“该查哪个方向”，不点名具体词条
+- **完全同名** → 直接用 `t` 和 `u`
+- **只是相近** → 用语义最近的一条，但不要改它的名字
+- **没命中** → 只说“该查哪个方向”，不点名具体词条，绝不凭空造名字
+- **接口不通** → 同样不点名，**不要重试**；包里已不带本地索引，别去找 `references/term-index.txt`
 
-**没有命令执行能力时**：不要整份读取索引。可以点名你最确定的词条，
-但要在输出末尾注明“词条名未逐一核对”，绝不允许凭印象编一个词条名出来。
+接口是实时的：词库今天新增的词条今天就能查到，比包里带一份快照准。
+
 
 ## 质量红线
 

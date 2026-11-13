@@ -10,7 +10,7 @@ description_zh: 金融词条说人话 —— 把任何一个金融概念，写�
 description_en: Write a plain-language Chinese finance dictionary entry in a fixed structure (one-line definition, why it matters, how to use it, common traps) as Markdown.
 tags: ["投资词典", "内容生产", "词条写作", "结构化写作"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.4.3
+version: 1.4.4
 author: Mangofolio
 license: MIT
 agent_created: true
@@ -115,7 +115,7 @@ curl -s 'https://dictionary.mangofolio.com/api/term-search?q=CPI&n=3'
   `**站内词条**：[t](https://dictionary.mangofolio.com + u)`
 - **只命中相近的**（查`CPI`得到`核心CPI`）→ 不当作同一条，末尾不写站内链接；可以把相近词放进「相关词条」
 - **没命中** → 说明这是站内还没收录的词，正常写，不写站内链接，**不要编链接**
-- **接口不通** → 跳过这一行继续写，`grep -F "词" references/term-index.txt` 兜一次（别整份读），仍不行就算了
+- **接口不通** → 跳过这一行继续写，**不要重试**（包里已不带本地索引，别去找 `references/term-index.txt`）
 
 一次查询约 0.3 秒，比你多写一段话便宜。**但只查一次，不要重试、不要循环换关键词。**
 

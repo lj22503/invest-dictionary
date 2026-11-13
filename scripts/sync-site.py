@@ -46,9 +46,8 @@ STEPS = [
     ("generate-sitemap.py", "sitemap.xml 重建（含 lastmod）"),
     ("generate-llms.py", "llms.txt 重建"),
     ("update-manifest-count.py", "manifest.json 计数对齐"),
-    # Skill 包里每个 skill 都带一份 references/term-index.txt 做「词条是否存在」校验。
-    # 词库一变就必须重刷，否则 Skill 会照着旧索引判断、或校验不到新词。
-    ("sync-skill-term-index.py", "Skill 词条索引同步（skill/skills/*/references）"),
+    # 注意：Skill 已不再打包内词条索引（term-index.txt）。查词改走
+    # /api/term-search 与 /api/mcp，词库更新即生效，无需重刷副本或重打包。
 ]
 
 
