@@ -213,6 +213,11 @@ for (const [q, expect] of [
 
   const goodProto = await post({ jsonrpc: '2.0', id: 1, method: 'ping' }, { 'mcp-protocol-version': '2025-06-18' });
   check('合法 MCP-Protocol-Version 放行', () => assert.strictEqual(goodProto.status, 200));
+
+  // 老客户端手里缓存着「老服务端 bug 回落出来的 2024-11-05」，必须照常服务，
+  // 否则上线即打断正在工作的会话（实测 WorkBuddy 会直接报 Unsupported protocol version）
+  const legacy = await post({ jsonrpc: '2.0', id: 1, method: 'ping' }, { 'mcp-protocol-version': '2024-11-05' });
+  check('遗留版本头 2024-11-05 照常放行（只收不说）', () => assert.strictEqual(legacy.status, 200));
 }
 
 // ── 10. 未声明能力的方法统一 -32601 ─────────────────────────────────────────

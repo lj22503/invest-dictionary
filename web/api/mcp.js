@@ -32,6 +32,13 @@ const VERSION = process.env.VERCEL_GIT_COMMIT_SHA
 // `unexpected token '<'`，没人能从这个错里看出是版本问题。
 const VERSIONS = ['2025-11-25', '2025-06-18', '2025-03-26'];
 
+// 但「不声明」不等于「拒收」。改版前服务端 bug 把未知版本回落成了 2024-11-05，
+// 于是所有老连接都在请求头里带着这个值。上线后直接 400 会把正在工作的会话打断
+// （实测 WorkBuddy 当场报 Unsupported protocol version），而要用户重连才能恢复。
+// 所以这类"历史遗留的版本串"只收不说：头里带它照常服务，initialize 时不主动给。
+const LEGACY_ACCEPT = ['2024-11-05'];
+const ACCEPTED = new Set([...VERSIONS, ...LEGACY_ACCEPT]);
+
 const ALLOWED_ORIGINS = new Set([SITE, 'https://www.mangofolio.com', 'https://mangofolio.com']);
 const isLocalOrigin = (o) => /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(o);
 
@@ -333,7 +340,7 @@ export default async function handler(req) {
   }
 
   const proto = req.headers.get('mcp-protocol-version');
-  if (proto && !VERSIONS.includes(proto)) {
+  if (proto && !ACCEPTED.has(proto)) {
     return new Response(
       JSON.stringify(rpcErr(null, -32600, `Unsupported protocol version: ${proto}`, { supported: VERSIONS })),
       { status: 400, headers: { 'content-type': 'application/json', ...H } },
