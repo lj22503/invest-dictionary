@@ -66,6 +66,27 @@ def build_shell():
     return s
 
 
+def aliases(title):
+    """拆出可用于匹配的别名：括号里的说法、斜杠分隔的并列词、去掉括注的主名。
+
+    「CPI（居民消费价格指数）」→ ['CPI', '居民消费价格指数']
+    「降息 / 加息」            → ['降息', '加息']
+    「M0 / M1 / M2（货币供应量）」→ ['M0', 'M1', 'M2', '货币供应量']
+    """
+    out = set()
+    for inner in re.findall(r"[（(]([^）)]+)[）)]", title):
+        inner = inner.strip()
+        if inner:
+            out.add(inner)
+    main = re.sub(r"[（(][^）)]*[）)]", "", title)
+    for part in re.split(r"[/／、]", main):
+        part = part.strip()
+        if part:
+            out.add(part)
+    out.discard("")
+    return sorted(out)
+
+
 def build_index():
     d = json.load(io.open(os.path.join(WEB, "dictionary.json"), encoding="utf-8"))
     out = []
@@ -76,6 +97,7 @@ def build_index():
             "u": "/terms/" + quote(fn[:-5], safe=""),
             "c": x.get("chapter", ""),
             "k": x.get("card_titles") or [],
+            "a": aliases(x["title"]),
         })
     return out
 

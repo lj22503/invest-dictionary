@@ -5,9 +5,10 @@
 // 的 term-index.txt，也不必读整篇词条页。
 //
 // 响应：
-//   { ok, q, n, total, hits: [{ t, u, c, k }] }
-//     t 词条名  u 站内链接  c 所属章节  k 四张卡片的小标题
+//   { ok, q, n, total, tokens, hits: [{ t, u, c, k, s }] }
+//     t 词条名  u 站内链接  c 所属章节  k 四张卡片的小标题  s 相关度
 import INDEX from './_term-index.js';
+import { search } from './_term-query.js';
 
 export const config = { runtime: 'edge' };
 
@@ -23,20 +24,6 @@ const json = (obj, status = 200) =>
     headers: { 'content-type': 'application/json; charset=utf-8', ...CORS },
   });
 
-const norm = (s) => String(s || '').toLowerCase().replace(/[\s\-_·、，,。.（）()《》"'"'']/g, '');
-
-function score(term, q) {
-  const t = norm(term.t);
-  const k = (term.k || []).map(norm).join('');
-  if (t === q) return 100;
-  if (t.startsWith(q)) return 80;
-  if (t.includes(q)) return 60;
-  if (q.includes(t) && t.length >= 2) return 50;
-  if (k.includes(q)) return 25;
-  if (norm(term.c).includes(q)) return 10;
-  return 0;
-}
-
 export default function handler(req) {
   if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
   if (req.method !== 'GET') return json({ ok: false, error: '只支持 GET' }, 405);
@@ -46,17 +33,6 @@ export default function handler(req) {
   const n = Math.min(Math.max(parseInt(u.searchParams.get('n') || '5', 10) || 5, 1), 20);
   if (!raw) return json({ ok: false, error: '缺 q 参数，例如 /api/term-search?q=CPI' }, 400);
 
-  const q = norm(raw);
-  const scored = [];
-  for (const term of INDEX) {
-    const s = score(term, q);
-    if (s > 0) scored.push({ s, term });
-  }
-  scored.sort((a, b) => b.s - a.s || a.term.t.length - b.term.t.length || a.term.t.localeCompare(b.term.t));
-
-  const hits = scored.slice(0, n).map((x) => ({
-    t: x.term.t, u: x.term.u, c: x.term.c, k: x.term.k, s: x.s,
-  }));
-
-  return json({ ok: true, q: raw, n: hits.length, total: scored.length, hits });
+  const { hits, total, tokens } = search(INDEX, raw, n);
+  return json({ ok: true, q: raw, n: hits.length, total, tokens, hits });
 }
