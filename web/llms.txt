@@ -1,12 +1,12 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1130 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1133 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
 - [投资词典首页](https://dictionary.mangofolio.com/): 全部词条目录与篇章导航
 
-## 词条（共 1130 条）
+## 词条（共 1133 条）
 - [货币](https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81): 你手里攥着的100块
 - [信用](https://dictionary.mangofolio.com/terms/%E4%BF%A1%E7%94%A8): 全世界最贵的三个字
 - [M0 / M1 / M2（货币供应量）](https://dictionary.mangofolio.com/terms/M0%20_%20M1%20_%20M2%EF%BC%88%E8%B4%A7%E5%B8%81%E4%BE%9B%E5%BA%94%E9%87%8F%EF%BC%89): 你家三个钱包，就是央行的小抄
@@ -1137,9 +1137,12 @@
 - [ETF折溢价（溢价率与折价率）](https://dictionary.mangofolio.com/terms/ETF%E6%8A%98%E6%BA%A2%E4%BB%B7%EF%BC%88%E6%BA%A2%E4%BB%B7%E7%8E%87%E4%B8%8E%E6%8A%98%E4%BB%B7%E7%8E%87%EF%BC%89): 两个价格，一个净值
 - [XIRR（不定期现金流的内部收益率）](https://dictionary.mangofolio.com/terms/XIRR%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E7%8E%B0%E9%87%91%E6%B5%81%E7%9A%84%E5%86%85%E9%83%A8%E6%94%B6%E7%9B%8A%E7%8E%87%EF%BC%89): 它和 IRR 差在哪
 - [风险等级（R1-R5）](https://dictionary.mangofolio.com/terms/%E9%A3%8E%E9%99%A9%E7%AD%89%E7%BA%A7%EF%BC%88R1-R5%EF%BC%89): 五个档位怎么来的
+- [对等降税](https://dictionary.mangofolio.com/terms/%E5%AF%B9%E7%AD%89%E9%99%8D%E7%A8%8E): 
+- [关键人风险（Key Man Risk）](https://dictionary.mangofolio.com/terms/%E5%85%B3%E9%94%AE%E4%BA%BA%E9%A3%8E%E9%99%A9%EF%BC%88Key%20Man%20Risk%EF%BC%89): 
+- [DR001](https://dictionary.mangofolio.com/terms/DR001): 
 
 ## 词库与指南
-- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1130 个词条按篇章全部列出，支持搜索与章节筛选
+- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1133 个词条按篇章全部列出，支持搜索与章节筛选
 - [使用指南（8 个场景）](https://dictionary.mangofolio.com/guide): 8 个场景 × 提示词样例 × 对应 Skill，照抄就能用
 - [隐私政策](https://dictionary.mangofolio.com/privacy): 信息收集与使用说明
 - [用户协议](https://dictionary.mangofolio.com/terms-of-service): 服务边界与不构成投资建议的约定

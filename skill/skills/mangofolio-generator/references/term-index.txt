@@ -17,6 +17,7 @@ CPO（共封装光学）	CPO（共封装光学）.html
 CRS	CRS.html
 CTA 策略	CTA 策略.html
 DCF（现金流折现估值）	DCF（现金流折现估值）.html
+DR001	DR001.html
 DR利率（银行间质押式回购利率）	DR利率.html
 DeFi	DeFi.html
 DeepSeek API涨价	DeepSeek API涨价.html
@@ -235,6 +236,7 @@ XIRR（不定期现金流的内部收益率）	XIRR（不定期现金流的内�
 共有产权房 / 保障房	共有产权房 _ 保障房.html
 共识机制（PoW / PoS）	共识机制（PoW _ PoS）.html
 关税（贸易壁垒）	关税（贸易壁垒）.html
+关键人风险（Key Man Risk）	关键人风险（Key Man Risk）.html
 养老成本	养老成本.html
 养老理财 / 养老储蓄	养老理财 _ 养老储蓄.html
 养老目标基金	养老目标基金.html
@@ -468,6 +470,7 @@ XIRR（不定期现金流的内部收益率）	XIRR（不定期现金流的内�
 对冲（Hedge / 套期保值）	对冲（Hedge _ 套期保值）.html
 对冲（套期保值）	对冲（套期保值）.html
 对手方风险	对手方风险.html
+对等降税	对等降税.html
 导师 / 托	导师 _ 托.html
 寿险保额怎么算	寿险保额怎么算.html
 封闭式基金	封闭式基金.html
