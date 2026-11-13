@@ -37,7 +37,7 @@ import urllib.parse
 
 API_UPSTREAM = os.environ.get("MF_API_UPSTREAM", "https://dictionary.mangofolio.com").rstrip("/")
 # 只读：可以放心转发到线上
-API_READONLY = {"/api/daily-hot", "/api/hot-search"}
+API_READONLY = {"/api/daily-hot", "/api/hot-search", "/api/mcp", "/api/mcp-info"}
 # 一个都不许转发（会在线上产生写操作）
 API_LOCAL_ONLY = {"/api/events", "/api/subscribe", "/api/unsubscribe", "/api/send-daily"}
 
@@ -126,6 +126,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             with opener.open(req, timeout=8) as resp:
                 data = resp.read()
                 ctype = resp.headers.get("Content-Type", "application/json")
+                code = resp.status
+        except urllib.error.HTTPError as exc:
+            # 4xx/5xx 也要原样透传，否则本地看到的永远是 200，改坏了也发现不了
+            data = exc.read()
+            ctype = exc.headers.get("Content-Type", "application/json") if exc.headers else "application/json"
+            code = exc.code
         except Exception as exc:
             # 上游不可达不算本地故障，前端有降级分支，这里只留提示
             return self._json(404, {
@@ -134,7 +140,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 "hint": "页面会自动降级，不影响版式预览",
                 "upstream": API_UPSTREAM + raw,
             })
-        self.send_response(200)
+        self.send_response(code)
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(data)))
         self.send_header("Cache-Control", "no-store")

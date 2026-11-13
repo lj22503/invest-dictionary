@@ -5,67 +5,162 @@
 //
 // 支持的 JSON-RPC 方法：initialize / notifications/initialized / ping / tools/list / tools/call
 // 工具：search_terms（查词）、get_term（取单条）、list_chapters（列章节）
+//
+// ── 传输语义按 2025-06-18 办，三处踩过的坑，改之前先读 ────────────────────────
+// 1) GET 必须回 405（或 SSE）。回 200+JSON 会让每个 SDK 客户端把 GET 理解成
+//    「服务端开了流又被意外关掉」，于是每 1.4 秒重连一次，静置一小时约 2500 次空转，
+//    而且客户端 onerror 是 0，谁都不会发现。说明页已搬去 /api/mcp-info。
+// 2) 通知（无 id）不得有回包，一律 202 空体；非法请求必须回 -32600，不能静默 202。
+//    这两件事同源：判据要用「有没有 id」，不是「方法名认不认识」。
+// 3) 参数不合 schema 是协议错误（-32602），不是 isError 结果。走 isError 的话
+//    HTTP 仍是 200，客户端统计里成功率 100%，故障永远不上报。
 import INDEX from './_term-index.js';
 import { search, norm } from './_term-query.js';
 
 export const config = { runtime: 'edge' };
 
 const SITE = 'https://dictionary.mangofolio.com';
-const VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const NAME = 'mangofolio-dictionary';
-const VERSION = '1.0.0';
+const SEMVER = '1.1.0';
+const VERSION = process.env.VERCEL_GIT_COMMIT_SHA
+  ? `${SEMVER}+${process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7)}`
+  : SEMVER;
 
-const CORS = {
-  'access-control-allow-origin': '*',
+// 只声明「传输语义真实现了」的版本，顺序从新到旧，回落取 VERSIONS[0]。
+// 2024-11-05 故意不在里面：那个版本只有 HTTP+SSE（/sse + /messages），本服务没实现，
+// 声称支持它等于「声明了不存在的传输」——客户端会去连 404 的 /sse，最后报
+// `unexpected token '<'`，没人能从这个错里看出是版本问题。
+const VERSIONS = ['2025-11-25', '2025-06-18', '2025-03-26'];
+
+const ALLOWED_ORIGINS = new Set([SITE, 'https://www.mangofolio.com', 'https://mangofolio.com']);
+const isLocalOrigin = (o) => /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(o);
+
+const CORS_BASE = {
   'access-control-allow-methods': 'POST, GET, OPTIONS',
-  'access-control-allow-headers': 'content-type, accept, mcp-session-id, mcp-protocol-version',
-  'access-control-expose-headers': 'mcp-session-id',
+  'access-control-allow-headers': 'content-type, accept, mcp-protocol-version',
+  vary: 'origin',
 };
 
+// 有 Origin 时回显白名单来源（配合 Vary，避免缓存串味）；没有 Origin 的
+// 是非浏览器客户端（桌面 / CLI / 服务端），照旧放行。
+function cors(origin) {
+  return origin ? { ...CORS_BASE, 'access-control-allow-origin': origin } : CORS_BASE;
+}
+
 const rpc = (id, result) => ({ jsonrpc: '2.0', id, result });
-const rpcErr = (id, code, message) => ({ jsonrpc: '2.0', id, error: { code, message } });
+const rpcErr = (id, code, message, data) => ({
+  jsonrpc: '2.0',
+  id,
+  error: data === undefined ? { code, message } : { code, message, data },
+});
+
+const text = (s) => ({ content: [{ type: 'text', text: s }], isError: false });
+
+// 回显用户的查询词之前先清洗。两件事都要做：
+//   1) 控制字符会把「链接：」伪造行混进结果，而伪造行与真实行同前缀同缩进，模型分不出来；
+//   2) 查询词里自带的 URL 会被模型当成站内链接抄走——这个服务唯一的产出就是站内链接，
+//      不能让它由外部输入决定。所以回显里的 URL 一律打码。
+// 只影响回显，不影响检索用的原词（检索用的是清洗后的串，正常查询词不含 URL）。
+const sanitize = (s) =>
+  String(s)
+    .replace(/https?:\/\/\S+/gi, '［外部链接已移除］')
+    .replace(/[\u0000-\u001f\u007f]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 200);
 
 const TOOLS = [
   {
     name: 'search_terms',
+    title: '查投资词典',
     description:
-      '在投资词典的 1133 条中文金融词条里查词。用户提到任何一个金融名词（CPI、剪刀差、可转债、北向资金）时先调它，确认站内有没有、拿到可点击链接。支持多词查询（「美国 加息」）。返回词条名、链接、章节、四张卡片小标题。',
+      `在投资词典的 ${INDEX.length} 条中文金融词条里查词。用户提到任何一个金融名词（CPI、剪刀差、可转债、北向资金）时先调它，确认站内有没有、拿到站内链接。支持多词查询（「美国 加息」）。返回词条名、链接、章节、四张卡片小标题。只在不知道确切词条名时用；知道确切名字用 get_term 更省。`,
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
     inputSchema: {
       type: 'object',
       properties: {
-        q: { type: 'string', description: '要查的词或一句话，例如 CPI、M1-M2剪刀差、关税 影响' },
-        limit: { type: 'number', description: '返回条数，默认 5，最多 20' },
+        q: { type: 'string', minLength: 1, maxLength: 200, description: '要查的词或一句话，例如 CPI、M1-M2剪刀差、关税 影响' },
+        limit: { type: 'integer', minimum: 1, maximum: 20, default: 5, description: '返回条数，默认 5，最多 20' },
       },
       required: ['q'],
+      additionalProperties: false,
     },
   },
   {
     name: 'get_term',
+    title: '取词条骨架',
     description:
-      '按词条名精确取一条词条的结构（章节、四张卡片小标题、站内链接）。当你已经知道词条名、只想要它的讲解骨架时用；只记得大概说法就用 search_terms。',
+      `按词条名取一条词条的结构（章节、四张卡片小标题、站内链接）。知道确切词条名时用它，比 search_terms 省。只记得大概说法、不确定站内叫什么时用 search_terms。参数可与站内标题不完全一致（「剪刀差」能命中「M1-M2剪刀差」）。`,
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
     inputSchema: {
       type: 'object',
-      properties: { title: { type: 'string', description: '词条名，可与站内标题不完全一致' } },
+      properties: {
+        title: { type: 'string', minLength: 1, maxLength: 200, description: '词条名，可与站内标题不完全一致' },
+      },
       required: ['title'],
+      additionalProperties: false,
     },
   },
   {
     name: 'list_chapters',
-    description:
-      '列出词典的全部篇章及每章词条数。用户问「你们都有哪些内容」「从哪看起」时用它给出全貌，不要凭空罗列。',
-    inputSchema: { type: 'object', properties: {} },
+    title: '列出篇章',
+    description: `列出词典的全部篇章及每章词条数（共 ${INDEX.length} 条）。用户问「你们都有哪些内容」「从哪看起」时用它给出全貌，不要凭空罗列。`,
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+    inputSchema: { type: 'object', properties: {}, additionalProperties: false },
   },
 ];
 
-function text(s) {
-  return { content: [{ type: 'text', text: s }], isError: false };
+// ── 参数校验：直接从 inputSchema 派生，避免 schema 与校验两处口头约定 ──────────
+const typeOf = (v) => (Array.isArray(v) ? 'array' : v === null ? 'null' : typeof v);
+
+const describe = (p) => {
+  if (!p) return '无此参数';
+  if (p.type === 'string') {
+    if (p.minLength != null && p.maxLength != null) return `string（${p.minLength}–${p.maxLength} 字）`;
+    return 'string';
+  }
+  if (p.type === 'integer' || p.type === 'number') {
+    if (p.minimum != null && p.maximum != null) return `${p.type}（${p.minimum}–${p.maximum}）`;
+    return p.type;
+  }
+  return p.type || '任意';
+};
+
+// 返回 null 表示通过；否则返回可直接放进 error.data 的定位信息
+function checkArgs(schema, args) {
+  const a = args === undefined || args === null ? {} : args;
+  if (typeof a !== 'object' || Array.isArray(a)) {
+    return { field: 'arguments', expected: 'object', received: typeOf(a) };
+  }
+  for (const k of schema.required || []) {
+    if (!(k in a) || a[k] === undefined) return { field: k, expected: describe(schema.properties[k]) + '，必填', received: 'undefined' };
+  }
+  for (const [k, v] of Object.entries(a)) {
+    const p = (schema.properties || {})[k];
+    if (!p) {
+      if (schema.additionalProperties === false) return { field: k, expected: '不在参数表内，请删除', received: typeOf(v) };
+      continue;
+    }
+    if (p.type === 'string' && typeof v !== 'string') return { field: k, expected: describe(p), received: typeOf(v) };
+    if ((p.type === 'integer' || p.type === 'number') && typeof v !== 'number') return { field: k, expected: describe(p), received: typeOf(v) };
+    if (p.type === 'integer' && !Number.isInteger(v)) return { field: k, expected: describe(p), received: String(v) };
+    if (typeof v === 'string') {
+      if (p.minLength != null && v.length < p.minLength) return { field: k, expected: describe(p), received: '空字符串' };
+      if (p.maxLength != null && v.length > p.maxLength) return { field: k, expected: describe(p), received: `长度 ${v.length}` };
+    }
+    if (typeof v === 'number') {
+      if (p.minimum != null && v < p.minimum) return { field: k, expected: describe(p), received: String(v) };
+      if (p.maximum != null && v > p.maximum) return { field: k, expected: describe(p), received: String(v) };
+    }
+  }
+  return null;
 }
 
+// ── 工具实现（返回内容保持原样，只把回显的查询词做了清洗）──────────────────────
 function callTool(name, args = {}) {
   if (name === 'search_terms') {
-    const q = String(args.q || '').trim();
-    if (!q) return { content: [{ type: 'text', text: '缺参数 q' }], isError: true };
-    const limit = Math.min(Math.max(parseInt(args.limit || '5', 10) || 5, 1), 20);
+    const q = sanitize(args.q);
+    const limit = args.limit === undefined ? 5 : args.limit;
     const { hits, total } = search(INDEX, q, limit);
     if (!hits.length) {
       return text(`「${q}」在站内没有对应词条。可以继续正常作答，但不要编造站内链接。`);
@@ -79,8 +174,7 @@ function callTool(name, args = {}) {
   }
 
   if (name === 'get_term') {
-    const raw = String(args.title || '').trim();
-    if (!raw) return { content: [{ type: 'text', text: '缺参数 title' }], isError: true };
+    const raw = sanitize(args.title);
     const q = norm(raw);
     const fmt = (x, note = '') => {
       const cards = (x.k || []).map((y, i) => `${i + 1}. ${y}`).join('\n');
@@ -95,7 +189,7 @@ function callTool(name, args = {}) {
       INDEX.find((x) => (x.a || []).some((a) => norm(a) === q && norm(x.t).startsWith(q)));
     if (exact) return fmt(exact);
 
-    // 用户写的是站内标题的一部分（「剪刀差」→「M1-M2剪刀差」），分够高就直接给，不再列一堆候选
+    // 用户写的是站内标题的一部分（「剪刀差」→「M1-M2剪刀差」），分够高就直接给
     const { hits } = search(INDEX, raw, 1);
     if (hits.length && hits[0].s >= 56) {
       const found = INDEX.find((x) => x.t === hits[0].t);
@@ -118,62 +212,132 @@ function callTool(name, args = {}) {
     return text(`共 ${INDEX.length} 条词条，${m.size} 个篇章：\n${rows.join('\n')}`);
   }
 
-  return { content: [{ type: 'text', text: `未知工具：${name}` }], isError: true };
+  return null;
 }
 
-function handle(msg) {
-  const { id = null, method, params } = msg || {};
+// ── 消息处理 ────────────────────────────────────────────────────────────────
+// 返回值：undefined 表示不需要回包（通知 / 客户端回传的 response）
+function handle(msg, origin) {
+  // 非法消息一律 -32600，不要静默成 202——否则客户端会一直等一个永远不来的响应
+  if (!msg || typeof msg !== 'object' || Array.isArray(msg)) {
+    return rpcErr(null, -32600, 'Invalid Request: 必须是单个 JSON-RPC 对象');
+  }
+  if (typeof msg.method !== 'string') {
+    // 客户端回传的 response（我们不发请求，收到就直接吞掉）
+    if ('result' in msg || 'error' in msg) return undefined;
+    return rpcErr(msg.id ?? null, -32600, 'Invalid Request: 缺 method');
+  }
+  if (msg.jsonrpc !== '2.0') return rpcErr(msg.id ?? null, -32600, 'Invalid Request: jsonrpc 必须为 "2.0"');
+
+  const hasId = Object.prototype.hasOwnProperty.call(msg, 'id') && msg.id !== undefined;
+  if (!hasId) {
+    // 通知：JSON-RPC 规定不得回包。判据是「有没有 id」，不是「方法名认不认识」。
+    return undefined;
+  }
+  if (msg.id === null) return rpcErr(null, -32600, 'Invalid Request: id 不能为 null');
+
+  const { id, method, params } = msg;
 
   if (method === 'initialize') {
     const want = params?.protocolVersion;
-    return rpc(id, {
-      protocolVersion: VERSIONS.includes(want) ? want : VERSIONS[VERSIONS.length - 1],
-      capabilities: { tools: { listChanged: false } },
-      serverInfo: { name: NAME, version: VERSION },
-      instructions:
-        '投资词典：1133 条中文金融词条。用户提到金融名词时先用 search_terms 查，拿到站内链接后附在回答末尾；查不到就说没收录，不要编链接。',
-    });
+    const pick = VERSIONS.includes(want) ? want : VERSIONS[0];
+    return rpc(
+      id,
+      rpcResult({
+        protocolVersion: pick,
+        capabilities: { tools: { listChanged: false } },
+        serverInfo: { name: NAME, title: '投资词典', version: VERSION, websiteUrl: SITE },
+        instructions: `投资词典：${INDEX.length} 条中文金融词条。用户提到金融名词时先用 search_terms 查，拿到站内链接后附在回答末尾；查不到就说没收录，不要编链接。本服务只给词条骨架，不提供正文全文。`,
+      }),
+    );
   }
 
-  // 通知类消息没有 id，按规范不回包体
-  if (!method && !id) return null;
-  if (method === 'notifications/initialized' || method === 'initialized') return null;
+  if (method === 'notifications/initialized' || method === 'initialized') return undefined;
   if (method === 'ping') return rpc(id, {});
 
   if (method === 'tools/list') return rpc(id, { tools: TOOLS });
 
   if (method === 'tools/call') {
     const name = params?.name;
+    const tool = TOOLS.find((t) => t.name === name);
+    // 未知工具是协议错误，不是工具执行结果
+    if (!tool) return rpcErr(id, -32602, `Unknown tool: ${String(name)}`, { supported: TOOLS.map((t) => t.name) });
+
+    const bad = checkArgs(tool.inputSchema, params?.arguments);
+    if (bad) return rpcErr(id, -32602, `Invalid params: ${bad.field} 应为 ${bad.expected}`, bad);
+
     try {
-      return rpc(id, callTool(name, params?.arguments || {}));
+      const out = callTool(name, params?.arguments || {});
+      if (!out) return rpcErr(id, -32602, `Unknown tool: ${name}`);
+      let bytes = 0;
+      try {
+        bytes = JSON.stringify(out).length;
+      } catch {}
+      // 只记结构化字段，不记查询内容（用户输入不入库），只记长度
+      console.log(
+        JSON.stringify({
+          evt: 'mcp_tool',
+          tool: name,
+          q_len: String(params?.arguments?.q ?? params?.arguments?.title ?? '').length,
+          limit: params?.arguments?.limit ?? null,
+          isError: out.isError,
+          bytes,
+          origin: origin || null,
+        }),
+      );
+      return rpc(id, out);
     } catch (e) {
-      return rpcErr(id, -32603, `工具执行失败：${e.message}`);
+      console.error(JSON.stringify({ evt: 'mcp_tool_error', tool: name, msg: String(e?.message || e).slice(0, 200) }));
+      // 对外只给固定文案，异常原文进日志
+      return rpcErr(id, -32603, 'Internal error: 工具执行失败');
     }
   }
-
-  if (method === 'resources/list') return rpc(id, { resources: [] });
-  if (method === 'prompts/list') return rpc(id, { prompts: [] });
 
   return rpcErr(id, -32601, `不支持的方法：${method}`);
 }
 
-export default async function handler(req) {
-  if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
+// 2026-07-28 起 result 要带 resultType；当前版本不需要，留个单点便于将来迁移
+const rpcResult = (r) => r;
 
-  if (req.method === 'GET') {
-    return new Response(
-      JSON.stringify({
-        ok: true,
-        name: NAME,
-        hint: '这是 MCP 端点，用 POST 发 JSON-RPC；浏览器直接打开看到这条说明是正常的。',
-        tools: TOOLS.map((t) => t.name),
-      }),
-      { headers: { 'content-type': 'application/json; charset=utf-8', ...CORS } },
-    );
+// ── 入口 ────────────────────────────────────────────────────────────────────
+export default async function handler(req) {
+  const origin = req.headers.get('origin');
+  const allowed = !origin || ALLOWED_ORIGINS.has(origin) || isLocalOrigin(origin);
+  const H = cors(origin);
+
+  if (!allowed) {
+    // 挡在 DNS rebinding 与「任意网页用 no-cors 空打接口」这条路上。
+    return new Response(JSON.stringify({ error: 'origin not allowed' }), {
+      status: 403,
+      headers: { 'content-type': 'application/json' },
+    });
   }
 
+  if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: H });
+
+  // GET 必须 405：回 200+JSON 会让客户端以为流断了，每 1.4 秒重连一次
   if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: '只支持 POST' }), { status: 405, headers: CORS });
+    return new Response(null, {
+      status: 405,
+      headers: { ...H, allow: 'POST, OPTIONS', link: `<${SITE}/api/mcp-info>; rel="help"` },
+    });
+  }
+
+  const ctype = req.headers.get('content-type') || '';
+  if (!ctype.includes('application/json')) {
+    // text/plain 的 POST 不触发 CORS 预检，是「网页直调」的入口，所以必须挡
+    return new Response(JSON.stringify(rpcErr(null, -32600, 'Content-Type 必须是 application/json')), {
+      status: 415,
+      headers: { 'content-type': 'application/json', ...H },
+    });
+  }
+
+  const proto = req.headers.get('mcp-protocol-version');
+  if (proto && !VERSIONS.includes(proto)) {
+    return new Response(
+      JSON.stringify(rpcErr(null, -32600, `Unsupported protocol version: ${proto}`, { supported: VERSIONS })),
+      { status: 400, headers: { 'content-type': 'application/json', ...H } },
+    );
   }
 
   let body;
@@ -182,17 +346,24 @@ export default async function handler(req) {
   } catch {
     return new Response(JSON.stringify(rpcErr(null, -32700, 'JSON 解析失败')), {
       status: 400,
-      headers: { 'content-type': 'application/json', ...CORS },
+      headers: { 'content-type': 'application/json', ...H },
     });
   }
 
-  const batch = Array.isArray(body);
-  const out = (batch ? body : [body]).map(handle).filter(Boolean);
+  // 2025-06-18 已移除 batch：POST 体必须是单个消息对象
+  if (Array.isArray(body)) {
+    return new Response(
+      JSON.stringify(rpcErr(null, -32600, 'Invalid Request: batch 已不在 2025-06-18 规范内，请逐条发送')),
+      { status: 400, headers: { 'content-type': 'application/json', ...H } },
+    );
+  }
 
-  // 全是通知（无回包）时按规范返回 202
-  if (!out.length) return new Response(null, { status: 202, headers: CORS });
+  const out = handle(body, origin);
 
-  return new Response(JSON.stringify(batch ? out : out[0]), {
-    headers: { 'content-type': 'application/json; charset=utf-8', ...CORS },
+  // 通知 / 客户端 response：202 且无体
+  if (out === undefined) return new Response(null, { status: 202, headers: H });
+
+  return new Response(JSON.stringify(out), {
+    headers: { 'content-type': 'application/json; charset=utf-8', ...H },
   });
 }
