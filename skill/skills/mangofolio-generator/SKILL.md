@@ -2,8 +2,8 @@
 name: mangofolio-generator
 slug: mangofolio-generator
 description: 生成说人话的中文金融 / 投资词条，按「一句话定义 + 为什么重要 + 怎么用 + 常见坑」结构输出 Markdown。当用户要新增词条、扩充词库或按词典风格解释概念时使用。触发词：写一个词条、金融术语解释、词条生成。
-displayName: 投资翻译
-display_name: 投资翻译
+displayName: 金融词条说人话
+display_name: 金融词条说人话
 display_name_en: Term Translator
 summary: 金融词条说人话 —— 把任何一个金融概念，写成普通人 3 分钟能看懂、AI 与搜索引擎都能读懂的词条。
 description_zh: 金融词条说人话 —— 把任何一个金融概念，写成普通人 3 分钟能看懂、AI 与搜索引擎都能读懂的词条。
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 投资翻译 · Term Translator
+# 金融词条说人话 · Term Translator
 
 ## 定位
 

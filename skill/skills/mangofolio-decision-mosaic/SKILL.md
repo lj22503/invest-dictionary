@@ -2,8 +2,8 @@
 name: mangofolio-decision-mosaic
 slug: mangofolio-decision-mosaic
 description: 面对「我要不要做这件事」的单边财务决策（提前还贷、存教育金、买增额寿），拆出这个决策取决于哪几个变量，每个变量配该看的词条，给分界线与今天就能做的行动清单，不给「该做 / 不该做」的结论。触发词：决策拆解、该不该提前还房贷、该不该存教育金。
-displayName: 财务决策
-display_name: 财务决策
+displayName: 财务决策说人话
+display_name: 财务决策说人话
 display_name_en: Money Decisions
 summary: 财务决策说人话 —— 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
 description_zh: 财务决策说人话 —— 面对「我要不要做这件事」，拆出决策取决于哪几个变量，每个变量配一个该看的词条和今天能做的行动。
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 财务决策 · Money Decisions
+# 财务决策说人话 · Money Decisions
 
 > **用户说出一个具体的财务决策，你输出"这个决策需要哪几个变量同时在场"，每个变量配一个该看的词条，给分界线（不给结论），再给一个可勾选的行动清单。**
 

@@ -2,8 +2,8 @@
 name: mangofolio-concept-combinator
 slug: mangofolio-concept-combinator
 description: 把一段复杂内容（宏观数据、事件、政策、市场异动、公司财报、个人决策）拆成核心词条，串成叙事线，输出 6 屏可发布的网页。适合需要交付成品的解读场景，不是纯文字问答。触发词：概念串联、做成 6 屏网页、客户简报。
-displayName: 概念串联
-display_name: 概念串联
+displayName: 宏观事件说人话
+display_name: 宏观事件说人话
 display_name_en: Concept Chain
 summary: 宏观事件说人话 —— 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
 description_zh: 宏观事件说人话 —— 把复杂内容拆成核心词条，沿因果链串成叙事线，输出一个普通人在手机上能读完的 6 屏网页。
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 概念串联叙事师 · Concept Chain
+# 宏观事件说人话 · Concept Chain
 
 > **让每个普通人都能成为自己的投顾** —— 把词典词条拼起来，把复杂内容讲给普通人听。
 

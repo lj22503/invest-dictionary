@@ -2,8 +2,8 @@
 name: mangofolio-symptom-lookup
 slug: mangofolio-symptom-lookup
 description: 用户用口语描述一个理财「症状」（亏了、被推荐高息产品、听说黄金要涨、房贷利率降了），倒查最该看的 3-5 个投资词典词条，并指出先看哪一条；只帮理解与分辨，不给买卖建议。触发词：理财痛点、我买的理财亏了、被推荐高息产品。
-displayName: 理财痛点
-display_name: 理财痛点
+displayName: 理财焦虑说人话
+display_name: 理财焦虑说人话
 display_name_en: Money Pain Points
 summary: 理财焦虑说人话 —— 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
 description_zh: 理财焦虑说人话 —— 用一句口语描述（亏了、被推荐高息产品、听说黄金要涨），倒查出该看的词条，并指出最该先看哪一条。
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 理财痛点 · Money Pain Points
+# 理财焦虑说人话 · Money Pain Points
 
 > **用户描述一个"症状"（理财亏了、被推荐高息产品、听说黄金要涨），你倒查出"该查的几个词条"，并告诉他最该先看哪一条。**
 

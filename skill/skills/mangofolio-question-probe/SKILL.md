@@ -2,8 +2,8 @@
 name: mangofolio-question-probe
 slug: mangofolio-question-probe
 description: 给一个产品名、概念或销售话术，输出购买前该问销售的 3-5 个问题，每个配「为什么重要」「对方可能的回避话术」，并给红灯信号。用于识别保本保息、锁定复利、过去三年年化等高话术里的坑。触发词：防坑提问、我该问销售什么、销售话术。
-displayName: 话术防坑
-display_name: 话术防坑
+displayName: 销售话术说人话
+display_name: 销售话术说人话
 display_name_en: Pitch Checker
 summary: 销售话术说人话 —— 给一个产品或一段销售话术，输出你该当面问的 3-5 个问题，附「为什么重要」与「对方可能的回避话术」。
 description_zh: 销售话术说人话 —— 给一个产品或一段销售话术，输出你该当面问的 3-5 个问题，附「为什么重要」与「对方可能的回避话术」。
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 话术防坑 · Pitch Checker
+# 销售话术说人话 · Pitch Checker
 
 > **用户给出一个产品名或概念，你输出"你应该问销售的 3-5 个问题"，每个问题配一句"为什么重要"和"对方可能的回避话术"。**
 

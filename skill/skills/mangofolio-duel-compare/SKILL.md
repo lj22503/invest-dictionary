@@ -2,8 +2,8 @@
 name: mangofolio-duel-compare
 slug: mangofolio-duel-compare
 description: 把「A 还是 B」的二选一放进同一个场景并排对比：先校验两个选项是否真在同一场景里对打，再按最坏情况、流动性、收益来源、适合谁四个维度比对，给分界线与当场可算的试算。触发词：二选一、A 还是 B、买房还是租房。
-displayName: 产品对比
-display_name: 产品对比
+displayName: 产品对比说人话
+display_name: 产品对比说人话
 display_name_en: Product Face-off
 summary: 产品对比说人话 —— 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
 description_zh: 产品对比说人话 —— 把「A 还是 B」放进同一场景并排对比，按最坏情况、流动性、收益来源、适合谁四个维度给出分界线。
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 产品对比 · Product Face-off
+# 产品对比说人话 · Product Face-off
 
 > **用户给出一个"A 还是 B"的选择，你把两个选项放进同一个决策场景里，并排对比，给出"什么条件下选 A、什么条件下选 B、什么条件下两个都别选"的分界线。**
 

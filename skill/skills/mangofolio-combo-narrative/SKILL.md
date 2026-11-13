@@ -2,8 +2,8 @@
 name: mangofolio-combo-narrative
 slug: mangofolio-combo-narrative
 description: 把一段看不懂的财经新闻、宏观数据或政策文件翻译成人话：拆出其中的核心概念，串成从「现象」到「对你意味着什么」的因果链，不预测涨跌、不喊利好利空。当用户扔来一段具体内容求解读时使用。触发词：翻译这段新闻、这条消息什么意思、解读这段财经内容。
-displayName: 新闻拆解
-display_name: 新闻拆解
+displayName: 财经新闻说人话
+display_name: 财经新闻说人话
 display_name_en: News Breakdown
 summary: 财经新闻说人话 —— 把看不懂的财经新闻、宏观数据、政策文件拆成核心概念，串成从「现象」到「对你意味着什么」的因果链。
 description_zh: 财经新闻说人话 —— 把看不懂的财经新闻、宏观数据、政策文件拆成核心概念，串成从「现象」到「对你意味着什么」的因果链。
@@ -16,7 +16,7 @@ license: MIT
 agent_created: true
 category: finance
 ---
-# 新闻拆解 · News Breakdown
+# 财经新闻说人话 · News Breakdown
 
 > **用户扔来一段看不懂的新闻，你把里面的多个概念识别出来，串成一条从"现象"到"对你意味着什么"的叙事线，用普通人能懂的话讲出来。**
 
