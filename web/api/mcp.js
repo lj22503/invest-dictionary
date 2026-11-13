@@ -292,7 +292,10 @@ function handle(msg, origin, proto) {
         protocolVersion: pick,
         capabilities: { tools: { listChanged: false } },
         serverInfo: { name: NAME, title: '投资词典', version: VERSION, websiteUrl: SITE },
-        instructions: `投资词典：${INDEX.length} 条中文金融词条。用户提到金融名词时先用 search_terms 查，拿到站内链接后附在回答末尾；查不到就说没收录，不要编链接。本服务只给词条骨架，不提供正文全文。`,
+        // 最后一句是「怎么把链接交到用户手上」。不给这句，模型会把 `链接：https://…`
+        // 原样抄进回答，用户看到的是一串 percent-encoded 字符；写成 Markdown 链接，
+        // 客户端才会渲染成可点的词条名（技能包里一直就是这么约定的，见 generator/SKILL.md）。
+        instructions: `投资词典：${INDEX.length} 条中文金融词条。用户提到金融名词时先用 search_terms 查，拿到站内链接后附在回答末尾；查不到就说没收录，不要编链接。引用站内链接时写成 Markdown 链接 [词条名](完整链接)，不要直接贴裸 URL。本服务只给词条骨架，不提供正文全文。`,
       }),
     );
   }
