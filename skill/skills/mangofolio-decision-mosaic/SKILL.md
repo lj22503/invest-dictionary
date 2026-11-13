@@ -10,7 +10,7 @@ description_zh: 财务决策说人话 —— 面对「我要不要做这件事�
 description_en: Break a personal money decision into the variables it really depends on, map each variable to a dictionary term, and list actions you can take today.
 tags: ["投资词典", "理财决策", "变量拆解", "行动清单"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.3.0
+version: 1.5.0
 author: Mangofolio
 license: MIT
 agent_created: true

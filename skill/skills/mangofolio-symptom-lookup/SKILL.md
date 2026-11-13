@@ -10,7 +10,7 @@ description_zh: 理财焦虑说人话 —— 用一句口语描述（亏了、�
 description_en: Describe a money problem in plain words and get the 3-5 dictionary terms you should read first, in a recommended reading order. Explains and helps you tell things apart, never advises.
 tags: ["投资词典", "理财科普", "风险识别", "说人话"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.3.0
+version: 1.5.0
 author: Mangofolio
 license: MIT
 agent_created: true

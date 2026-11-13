@@ -10,7 +10,7 @@ description_zh: 市场热点说人话 —— 围绕一条今日热点，挑出 3
 description_en: Pick 3-5 must-know investing terms from today's hot topic, explain each in plain language, then tie them into one story you can retell to someone else.
 tags: ["投资词典", "热点解读", "每日更新", "理财科普"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.3.0
+version: 1.5.0
 author: Mangofolio
 license: MIT
 agent_created: true

@@ -10,7 +10,7 @@ description_zh: 销售话术说人话 —— 给一个产品或一段销售话�
 description_en: Turn a product name or a sales pitch into 3-5 questions to ask before buying, each with why it matters and how the seller may dodge it, plus red flags.
 tags: ["投资词典", "防坑", "销售话术", "理财科普"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.3.0
+version: 1.5.0
 author: Mangofolio
 license: MIT
 agent_created: true

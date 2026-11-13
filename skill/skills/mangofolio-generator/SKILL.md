@@ -10,7 +10,7 @@ description_zh: 金融词条说人话 —— 把任何一个金融概念，写�
 description_en: Write a plain-language Chinese finance dictionary entry in a fixed structure (one-line definition, why it matters, how to use it, common traps) as Markdown.
 tags: ["投资词典", "内容生产", "词条写作", "结构化写作"]
 homepage: https://dictionary.mangofolio.com/
-version: 1.4.4
+version: 1.5.0
 author: Mangofolio
 license: MIT
 agent_created: true
