@@ -190,6 +190,11 @@ for (const [q, expect] of [
   const noHdr = await call('search_terms', { q: 'CPI' });
   check('没带版本头时保守不发', () => assert.strictEqual(links(noHdr).length, 0));
 
+  // 旧版服务端 bug 把未知版本回落成 2024-11-05，这个假值会被客户端缓存进会话。
+  // 那个版本没有 Streamable HTTP，真客户端发不出这个 POST，所以按新版本对待。
+  const legacy = await post({ jsonrpc: '2.0', id: 14, method: 'tools/call', params: args }, { 'mcp-protocol-version': '2024-11-05' });
+  check('遗留假版本 2024-11-05 仍发 resource_link', () => assert.ok(links(legacy).length > 0));
+
   const g = await post({ jsonrpc: '2.0', id: 13, method: 'tools/call', params: { name: 'get_term', arguments: { title: '可转债' } } }, { 'mcp-protocol-version': '2025-11-25' });
   check('get_term 也附 resource_link', () => assert.strictEqual(links(g).length, 1));
 }

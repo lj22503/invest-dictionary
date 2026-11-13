@@ -72,8 +72,17 @@ const text = (s) => ({ content: [{ type: 'text', text: s }], isError: false });
 // 拿到的 content 是判别式联合，未知 type 会让解析整体失败、工具调用直接报错。
 // 所以只在协商版本明确 >= 2025-06-18 时附加；请求头没带版本时保守不发，
 // 宁可少一个便利，不能把一个能用的调用改坏。
-const supportsResourceLink = (proto) =>
-  typeof proto === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(proto) && proto >= '2025-06-18';
+//
+// 2024-11-05 是例外，且是唯一例外：那个版本压根没有 Streamable HTTP，真客户端
+// 发不出我们这个 POST。头里出现它，只可能是旧版服务端 bug 回落出来的遗留值
+// （客户端把这个假版本缓存进了会话）。它实际在用 Streamable HTTP，就按
+// 2025-06-18 对待——否则一个假的版本号会把新能力永久关掉。
+const effectiveProto = (p) => (p === '2024-11-05' ? '2025-06-18' : p);
+
+const supportsResourceLink = (proto) => {
+  const p = effectiveProto(proto);
+  return typeof p === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(p) && p >= '2025-06-18';
+};
 
 // text 保持原样（它是老客户端唯一的取数路径，不因新能力而删内容），
 // 链接项并列追加在后。
