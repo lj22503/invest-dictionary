@@ -63,6 +63,34 @@ const rpcErr = (id, code, message, data) => ({
 
 const text = (s) => ({ content: [{ type: 'text', text: s }], isError: false });
 
+// ── 结构化链接项（resource_link）─────────────────────────────────────────────
+// 只给纯文本时，模型必须把 `%E5%8F%AF%E8%BD%AC%E5%80%BA` 这种 percent-encoded
+// 链接逐字抄进回答，抄错一个字节就是给用户一个 404——而这个服务存在的唯一目的
+// 就是把用户导回站内。resource_link 让客户端直接渲染成卡片，模型只引用不转写。
+//
+// 但它是 2025-06-18 才有的 content type：更早的客户端（2025-03-26 / 2024-11-05）
+// 拿到的 content 是判别式联合，未知 type 会让解析整体失败、工具调用直接报错。
+// 所以只在协商版本明确 >= 2025-06-18 时附加；请求头没带版本时保守不发，
+// 宁可少一个便利，不能把一个能用的调用改坏。
+const supportsResourceLink = (proto) =>
+  typeof proto === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(proto) && proto >= '2025-06-18';
+
+// text 保持原样（它是老客户端唯一的取数路径，不因新能力而删内容），
+// 链接项并列追加在后。
+function withLinks(out, terms, enabled) {
+  if (!enabled) return out;
+  for (const t of terms) {
+    out.content.push({
+      type: 'resource_link',
+      uri: SITE + t.u,
+      name: t.t,
+      description: t.c ? `${t.c}` : undefined,
+      mimeType: 'text/html',
+    });
+  }
+  return out;
+}
+
 // 回显用户的查询词之前先清洗。两件事都要做：
 //   1) 控制字符会把「链接：」伪造行混进结果，而伪造行与真实行同前缀同缩进，模型分不出来；
 //   2) 查询词里自带的 URL 会被模型当成站内链接抄走——这个服务唯一的产出就是站内链接，
@@ -164,7 +192,8 @@ function checkArgs(schema, args) {
 }
 
 // ── 工具实现（返回内容保持原样，只把回显的查询词做了清洗）──────────────────────
-function callTool(name, args = {}) {
+function callTool(name, args = {}, opts = {}) {
+  const link = !!opts.linkTerms;
   if (name === 'search_terms') {
     const q = sanitize(args.q);
     const limit = args.limit === undefined ? 3 : args.limit;
@@ -177,18 +206,18 @@ function callTool(name, args = {}) {
       const cards = (h.k || []).map((x) => '· ' + x).join('\n    ');
       return `${i + 1}. ${h.t}\n   链接：${url}\n   章节：${h.c || '（未分章）'}${cards ? '\n   卡片：\n    ' + cards : ''}`;
     });
-    return text(`「${q}」命中 ${hits.length} 条（共 ${total} 条候选）：\n\n${lines.join('\n\n')}`);
+    return withLinks(text(`「${q}」命中 ${hits.length} 条（共 ${total} 条候选）：\n\n${lines.join('\n\n')}`), hits, link);
   }
 
   if (name === 'get_term') {
     const raw = sanitize(args.title);
     const q = norm(raw);
-    const fmt = (x, note = '') => {
-      const cards = (x.k || []).map((y, i) => `${i + 1}. ${y}`).join('\n');
-      return text(
-        `${note}${x.t}\n链接：${SITE}${x.u}\n章节：${x.c || '（未分章）'}\n卡片：\n${cards || '（无）'}`,
+    const fmt = (x, note = '') =>
+      withLinks(
+        text(`${note}${x.t}\n链接：${SITE}${x.u}\n章节：${x.c || '（未分章）'}\n卡片：\n${(x.k || []).map((y, i) => `${i + 1}. ${y}`).join('\n') || '（无）'}`),
+        [x],
+        link,
       );
-    };
 
     const exact =
       INDEX.find((x) => norm(x.t) === q) ||
@@ -224,7 +253,7 @@ function callTool(name, args = {}) {
 
 // ── 消息处理 ────────────────────────────────────────────────────────────────
 // 返回值：undefined 表示不需要回包（通知 / 客户端回传的 response）
-function handle(msg, origin) {
+function handle(msg, origin, proto) {
   // 非法消息一律 -32600，不要静默成 202——否则客户端会一直等一个永远不来的响应
   if (!msg || typeof msg !== 'object' || Array.isArray(msg)) {
     return rpcErr(null, -32600, 'Invalid Request: 必须是单个 JSON-RPC 对象');
@@ -274,7 +303,7 @@ function handle(msg, origin) {
     if (bad) return rpcErr(id, -32602, `Invalid params: ${bad.field} 应为 ${bad.expected}`, bad);
 
     try {
-      const out = callTool(name, params?.arguments || {});
+      const out = callTool(name, params?.arguments || {}, { linkTerms: supportsResourceLink(proto) });
       if (!out) return rpcErr(id, -32602, `Unknown tool: ${name}`);
       let bytes = 0;
       try {
@@ -289,6 +318,8 @@ function handle(msg, origin) {
           limit: params?.arguments?.limit ?? null,
           isError: out.isError,
           bytes,
+          proto: proto || null,
+          links: out.content.filter((c) => c.type === 'resource_link').length,
           origin: origin || null,
         }),
       );
@@ -365,7 +396,7 @@ export default async function handler(req) {
     );
   }
 
-  const out = handle(body, origin);
+  const out = handle(body, origin, proto);
 
   // 通知 / 客户端 response：202 且无体
   if (out === undefined) return new Response(null, { status: 202, headers: H });
