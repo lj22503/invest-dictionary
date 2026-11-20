@@ -129,6 +129,11 @@
       "permanent": true
     },
     {
+      "source": "/terms/%E8%B4%A7%E5%B8%81%E4%BE%9B%E5%BA%94%E9%87%8F%EF%BC%88M0/(.*)",
+      "destination": "/terms/货币供应量（M0_ M1_ M2）",
+      "permanent": true
+    },
+    {
       "source": "/terms/",
       "destination": "/dictionary",
       "permanent": true
