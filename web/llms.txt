@@ -1,6 +1,6 @@
 # 投资词典 Invest Dictionary
 
-> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1142 个词条。
+> 投资术语，说人话，不装逼。覆盖货币、股票、基金、债券、保险、房产、宏观、AI 金融等 22 个篇章、1147 个词条。
 > 网址：https://dictionary.mangofolio.com
 
 ## 首页
@@ -25,7 +25,7 @@
 
     curl -s https://dictionary.mangofolio.com/api/mcp -H 'content-type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
 
-## 词条（共 1142 条）
+## 词条（共 1147 条）
 - [货币](https://dictionary.mangofolio.com/terms/%E8%B4%A7%E5%B8%81): 你手里攥着的100块
 - [信用](https://dictionary.mangofolio.com/terms/%E4%BF%A1%E7%94%A8): 全世界最贵的三个字
 - [M0 / M1 / M2（货币供应量）](https://dictionary.mangofolio.com/terms/M0%20_%20M1%20_%20M2%EF%BC%88%E8%B4%A7%E5%B8%81%E4%BE%9B%E5%BA%94%E9%87%8F%EF%BC%89): 你家三个钱包，就是央行的小抄
@@ -255,7 +255,7 @@
 - [隔夜逆回购](https://dictionary.mangofolio.com/terms/%E9%9A%94%E5%A4%9C%E9%80%86%E5%9B%9E%E8%B4%AD): 央行又在月中出手了
 - [公积金装修提取](https://dictionary.mangofolio.com/terms/%E5%85%AC%E7%A7%AF%E9%87%91%E8%A3%85%E4%BF%AE%E6%8F%90%E5%8F%96): 装修的钱，公积金也能掏了
 - [资本开支](https://dictionary.mangofolio.com/terms/%E8%B5%84%E6%9C%AC%E5%BC%80%E6%94%AF): 腾讯一季度花了 527.8 亿
-- [买断式逆回购](https://dictionary.mangofolio.com/terms/%E4%B9%B0%E6%96%AD%E5%BC%8F%E9%80%86%E5%9B%9E%E8%B4%AD): 央行预告 9 月 7 日续作 5000 亿“长钱”
+- [买断式逆回购](https://dictionary.mangofolio.com/terms/%E4%B9%B0%E6%96%AD%E5%BC%8F%E9%80%86%E5%9B%9E%E8%B4%AD): 今天：2000 亿元、6 个月的长钱
 - [5年期存款利率](https://dictionary.mangofolio.com/terms/5%E5%B9%B4%E6%9C%9F%E5%AD%98%E6%AC%BE%E5%88%A9%E7%8E%87): 7 月存款利率：全员下降，只有 5 年期涨了
 - [DeepSeek API涨价](https://dictionary.mangofolio.com/terms/DeepSeek%20API%E6%B6%A8%E4%BB%B7): DeepSeek 官宣涨价：最高涨 350%
 - [CPO（共封装光学）](https://dictionary.mangofolio.com/terms/CPO%EF%BC%88%E5%85%B1%E5%B0%81%E8%A3%85%E5%85%89%E5%AD%A6%EF%BC%89): 英伟达官宣：CPO 交换机全面量产
@@ -339,7 +339,7 @@
 - [出口 / 进口](https://dictionary.mangofolio.com/terms/%E5%87%BA%E5%8F%A3%20_%20%E8%BF%9B%E5%8F%A3): 什么是出口 / 进口：一个在赚钱，一个在花钱
 - [失业率](https://dictionary.mangofolio.com/terms/%E5%A4%B1%E4%B8%9A%E7%8E%87): 什么是失业率：想干活没活干的人有多少
 - [美元指数](https://dictionary.mangofolio.com/terms/%E7%BE%8E%E5%85%83%E6%8C%87%E6%95%B0): 什么是美元指数：美元的“团体赛成绩单”
-- [黄金价格](https://dictionary.mangofolio.com/terms/%E9%BB%84%E9%87%91%E4%BB%B7%E6%A0%BC): 黄金价格是什么：钱不值钱和世界不安分的报警器
+- [黄金价格](https://dictionary.mangofolio.com/terms/%E9%BB%84%E9%87%91%E4%BB%B7%E6%A0%BC): 今天：一克黄金，四个价
 - [财政政策 vs 货币政策](https://dictionary.mangofolio.com/terms/%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96%20vs%20%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96): 什么是财政政策 / 货币政策：两只手，两套工具
 - [房价](https://dictionary.mangofolio.com/terms/%E6%88%BF%E4%BB%B7): 什么是房价：一个商品，两种身份
 - [人口老龄化](https://dictionary.mangofolio.com/terms/%E4%BA%BA%E5%8F%A3%E8%80%81%E9%BE%84%E5%8C%96): 什么是人口老龄化：老人变多、小孩变少
@@ -1156,20 +1156,26 @@
 - [ETF折溢价（溢价率与折价率）](https://dictionary.mangofolio.com/terms/ETF%E6%8A%98%E6%BA%A2%E4%BB%B7%EF%BC%88%E6%BA%A2%E4%BB%B7%E7%8E%87%E4%B8%8E%E6%8A%98%E4%BB%B7%E7%8E%87%EF%BC%89): 两个价格，一个净值
 - [XIRR（不定期现金流的内部收益率）](https://dictionary.mangofolio.com/terms/XIRR%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E7%8E%B0%E9%87%91%E6%B5%81%E7%9A%84%E5%86%85%E9%83%A8%E6%94%B6%E7%9B%8A%E7%8E%87%EF%BC%89): 它和 IRR 差在哪
 - [风险等级（R1-R5）](https://dictionary.mangofolio.com/terms/%E9%A3%8E%E9%99%A9%E7%AD%89%E7%BA%A7%EF%BC%88R1-R5%EF%BC%89): 五个档位怎么来的
-- [对等降税](https://dictionary.mangofolio.com/terms/%E5%AF%B9%E7%AD%89%E9%99%8D%E7%A8%8E): 
-- [关键人风险（Key Man Risk）](https://dictionary.mangofolio.com/terms/%E5%85%B3%E9%94%AE%E4%BA%BA%E9%A3%8E%E9%99%A9%EF%BC%88Key%20Man%20Risk%EF%BC%89): 
-- [DR001](https://dictionary.mangofolio.com/terms/DR001): 
-- [新型储能](https://dictionary.mangofolio.com/terms/%E6%96%B0%E5%9E%8B%E5%82%A8%E8%83%BD): 
-- [加息预期](https://dictionary.mangofolio.com/terms/%E5%8A%A0%E6%81%AF%E9%A2%84%E6%9C%9F): 
-- [国家医保药品目录](https://dictionary.mangofolio.com/terms/%E5%9B%BD%E5%AE%B6%E5%8C%BB%E4%BF%9D%E8%8D%AF%E5%93%81%E7%9B%AE%E5%BD%95): 
-- [量化交易](https://dictionary.mangofolio.com/terms/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93): 
-- [AI资本开支](https://dictionary.mangofolio.com/terms/AI%E8%B5%84%E6%9C%AC%E5%BC%80%E6%94%AF): 建 AI 算力一年要花多少钱，机构刚把 2030 年预测下调四成
-- [长时储能](https://dictionary.mangofolio.com/terms/%E9%95%BF%E6%97%B6%E5%82%A8%E8%83%BD): 一次充电能放电 4 小时以上的储能，2030 年新型储能平均时长要做到 3 小时
-
-- [AI 通胀](https://dictionary.mangofolio.com/terms/AI%20%E9%80%9A%E8%83%80): AI 建设把芯片、电力的价格买上去，再顺着成本推到物价，通胀就更难降下来
+- [对等降税](https://dictionary.mangofolio.com/terms/%E5%AF%B9%E7%AD%89%E9%99%8D%E7%A8%8E): 300 亿对 300 亿，怎么个换法
+- [关键人风险（Key Man Risk）](https://dictionary.mangofolio.com/terms/%E5%85%B3%E9%94%AE%E4%BA%BA%E9%A3%8E%E9%99%A9%EF%BC%88Key%20Man%20Risk%EF%BC%89): 这是什么：钱挂在一个人身上
+- [DR001](https://dictionary.mangofolio.com/terms/DR001): 这是什么：银行之间借一晚钱的价格
+- [新型储能](https://dictionary.mangofolio.com/terms/%E6%96%B0%E5%9E%8B%E5%82%A8%E8%83%BD): 这是什么：给电网配的「充电宝」
+- [加息预期](https://dictionary.mangofolio.com/terms/%E5%8A%A0%E6%81%AF%E9%A2%84%E6%9C%9F): 这是什么：市场提前给央行「算命」
+- [国家医保药品目录](https://dictionary.mangofolio.com/terms/%E5%9B%BD%E5%AE%B6%E5%8C%BB%E4%BF%9D%E8%8D%AF%E5%93%81%E7%9B%AE%E5%BD%95): 今天聊的“医保目录”，是哪些药能报销的那份名单
+- [量化交易](https://dictionary.mangofolio.com/terms/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93): 今天为什么提它：监管把“量化”放进了研究清单
+- [AI资本开支](https://dictionary.mangofolio.com/terms/AI%E8%B5%84%E6%9C%AC%E5%BC%80%E6%94%AF): 这是什么：AI 行业的“年度装修预算”
+- [长时储能](https://dictionary.mangofolio.com/terms/%E9%95%BF%E6%97%B6%E5%82%A8%E8%83%BD): 这是什么：从“充电宝”变成“水库”
+- [水贝金价](https://dictionary.mangofolio.com/terms/%E6%B0%B4%E8%B4%9D%E9%87%91%E4%BB%B7): 这是什么：黄金的“出厂价”
+- [AI 通胀](https://dictionary.mangofolio.com/terms/AI%20%E9%80%9A%E8%83%80): 这是什么：AI 把上游价格顶起来了
+- [铜价（铜博士）](https://dictionary.mangofolio.com/terms/%E9%93%9C%E4%BB%B7%EF%BC%88%E9%93%9C%E5%8D%9A%E5%A3%AB%EF%BC%89): 这是什么：为什么铜被叫“铜博士”
+- [利率比价关系](https://dictionary.mangofolio.com/terms/%E5%88%A9%E7%8E%87%E6%AF%94%E4%BB%B7%E5%85%B3%E7%B3%BB): 这是什么：四个价格互相咬合
+- [美联储会议纪要（FOMC Minutes）](https://dictionary.mangofolio.com/terms/%E7%BE%8E%E8%81%94%E5%82%A8%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81%EF%BC%88FOMC%20Minutes%EF%BC%89): 这是什么：比决议更细的“会议记录”
+- [存量资金博弈](https://dictionary.mangofolio.com/terms/%E5%AD%98%E9%87%8F%E8%B5%84%E9%87%91%E5%8D%9A%E5%BC%88): 这是什么：老钱在板块之间搬家
+- [K型分化（K型复苏）](https://dictionary.mangofolio.com/terms/K%E5%9E%8B%E5%88%86%E5%8C%96%EF%BC%88K%E5%9E%8B%E5%A4%8D%E8%8B%8F%EF%BC%89): 这是什么：两条线分岔的那个字母
+- [市场广度（涨跌家数）](https://dictionary.mangofolio.com/terms/%E5%B8%82%E5%9C%BA%E5%B9%BF%E5%BA%A6%EF%BC%88%E6%B6%A8%E8%B7%8C%E5%AE%B6%E6%95%B0%EF%BC%89): 这是什么：几十个大家伙在投票，五千个在定输赢
 
 ## 词库与指南
-- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1142 个词条按篇章全部列出，支持搜索与章节筛选
+- [全部词条（词库）](https://dictionary.mangofolio.com/dictionary): 1147 个词条按篇章全部列出，支持搜索与章节筛选
 - [使用指南（8 个场景）](https://dictionary.mangofolio.com/guide): 8 个场景 × 提示词样例 × 对应 Skill，照抄就能用
 - [隐私政策](https://dictionary.mangofolio.com/privacy): 信息收集与使用说明
 - [用户协议](https://dictionary.mangofolio.com/terms-of-service): 服务边界与不构成投资建议的约定
