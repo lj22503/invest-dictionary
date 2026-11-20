@@ -2,7 +2,7 @@
 title: "希腊字母（Delta/Gamma/Theta/Vega）"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-希腊字母（Delta_Gamma_Theta_Vega）
-source: "https://invest-dictionary.mangofolio.com/terms/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%EF%BC%88Delta_Gamma_Theta_Vega%EF%BC%89"
+source: "https://dictionary.mangofolio.com/terms/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%EF%BC%88Delta_Gamma_Theta_Vega%EF%BC%89"
 tags:
   - Delta
   - Gamma

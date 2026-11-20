@@ -2,7 +2,7 @@
 title: "期现套利 / 跨期套利 / 蝶式套利"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-期现套利 _ 跨期套利 _ 蝶式套利
-source: "https://invest-dictionary.mangofolio.com/terms/%E6%9C%9F%E7%8E%B0%E5%A5%97%E5%88%A9%20_%20%E8%B7%A8%E6%9C%9F%E5%A5%97%E5%88%A9%20_%20%E8%9D%B6%E5%BC%8F%E5%A5%97%E5%88%A9"
+source: "https://dictionary.mangofolio.com/terms/%E6%9C%9F%E7%8E%B0%E5%A5%97%E5%88%A9%20_%20%E8%B7%A8%E6%9C%9F%E5%A5%97%E5%88%A9%20_%20%E8%9D%B6%E5%BC%8F%E5%A5%97%E5%88%A9"
 tags:
   - 期现套利
   - 跨期套利

@@ -2,7 +2,7 @@
 title: "黄金期货"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-黄金期货
-source: "https://invest-dictionary.mangofolio.com/terms/%E9%BB%84%E9%87%91%E6%9C%9F%E8%B4%A7"
+source: "https://dictionary.mangofolio.com/terms/%E9%BB%84%E9%87%91%E6%9C%9F%E8%B4%A7"
 tags:
   - 黄金期货
   - 上期所

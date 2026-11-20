@@ -2,7 +2,7 @@
 title: "移仓换月"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-移仓换月
-source: "https://invest-dictionary.mangofolio.com/terms/%E7%A7%BB%E4%BB%93%E6%8D%A2%E6%9C%88"
+source: "https://dictionary.mangofolio.com/terms/%E7%A7%BB%E4%BB%93%E6%8D%A2%E6%9C%88"
 tags:
   - 移仓换月
   - 换月

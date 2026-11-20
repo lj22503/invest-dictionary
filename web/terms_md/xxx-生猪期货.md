@@ -2,7 +2,7 @@
 title: "生猪期货"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-生猪期货
-source: "https://invest-dictionary.mangofolio.com/terms/%E7%94%9F%E7%8C%AA%E6%9C%9F%E8%B4%A7"
+source: "https://dictionary.mangofolio.com/terms/%E7%94%9F%E7%8C%AA%E6%9C%9F%E8%B4%A7"
 tags:
   - 生猪期货
   - 猪周期

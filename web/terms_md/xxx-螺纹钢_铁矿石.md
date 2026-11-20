@@ -2,7 +2,7 @@
 title: "螺纹钢 / 铁矿石"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-螺纹钢 _ 铁矿石
-source: "https://invest-dictionary.mangofolio.com/terms/%E8%9E%BA%E7%BA%B9%E9%92%A2%20_%20%E9%93%81%E7%9F%BF%E7%9F%B3"
+source: "https://dictionary.mangofolio.com/terms/%E8%9E%BA%E7%BA%B9%E9%92%A2%20_%20%E9%93%81%E7%9F%BF%E7%9F%B3"
 tags:
   - 螺纹钢期货
   - 铁矿石期货

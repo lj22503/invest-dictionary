@@ -2,7 +2,7 @@
 title: "最小变动价位"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-最小变动价位
-source: "https://invest-dictionary.mangofolio.com/terms/%E6%9C%80%E5%B0%8F%E5%8F%98%E5%8A%A8%E4%BB%B7%E4%BD%8D"
+source: "https://dictionary.mangofolio.com/terms/%E6%9C%80%E5%B0%8F%E5%8F%98%E5%8A%A8%E4%BB%B7%E4%BD%8D"
 tags:
   - 最小变动价位
   - tick

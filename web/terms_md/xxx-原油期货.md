@@ -2,7 +2,7 @@
 title: "原油期货"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-原油期货
-source: "https://invest-dictionary.mangofolio.com/terms/%E5%8E%9F%E6%B2%B9%E6%9C%9F%E8%B4%A7"
+source: "https://dictionary.mangofolio.com/terms/%E5%8E%9F%E6%B2%B9%E6%9C%9F%E8%B4%A7"
 tags:
   - 原油期货
   - 上海国际能源交易中心

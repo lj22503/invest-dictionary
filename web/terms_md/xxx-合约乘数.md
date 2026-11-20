@@ -2,7 +2,7 @@
 title: "合约乘数"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-合约乘数
-source: "https://invest-dictionary.mangofolio.com/terms/%E5%90%88%E7%BA%A6%E4%B9%98%E6%95%B0"
+source: "https://dictionary.mangofolio.com/terms/%E5%90%88%E7%BA%A6%E4%B9%98%E6%95%B0"
 tags:
   - 合约乘数
   - 期货合约规模

@@ -2,7 +2,7 @@
 title: "期权定价 / Black-Scholes"
 subtitle: "—— 投资词典 · Invest Dictionary · 最后更新：2026-11-02"
 termCode: dict-期权定价 _ Black-Scholes
-source: "https://invest-dictionary.mangofolio.com/terms/%E6%9C%9F%E6%9D%83%E5%AE%9A%E4%BB%B7%20_%20Black-Scholes"
+source: "https://dictionary.mangofolio.com/terms/%E6%9C%9F%E6%9D%83%E5%AE%9A%E4%BB%B7%20_%20Black-Scholes"
 tags:
   - 期权定价
   - Black-Scholes
