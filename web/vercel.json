@@ -124,7 +124,7 @@
       "permanent": true
     },
     {
-      "source": "/terms/%E8%8C%85%E6%8C%87%E6%95%B0(.*)",
+      "source": "/terms/%E8%8C%85%E6%8C%87%E6%95%B0%20/%20%E5%AE%81%E7%BB%84%E5%90%88",
       "destination": "/terms/茅指数 _ 宁组合",
       "permanent": true
     },
@@ -145,6 +145,11 @@
     },
     {
       "source": "/index.html%23(.*)",
+      "destination": "/dictionary",
+      "permanent": true
+    },
+    {
+      "source": "/index.html%2523(.*)",
       "destination": "/dictionary",
       "permanent": true
     }
