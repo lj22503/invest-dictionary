@@ -391,8 +391,15 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  min-width: 0;
   font-weight: 700;
   white-space: nowrap;
+}
+/* 词条名单独一层，超长时出省略号，不撑破卡片 */
+.hot-txt {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .hot-badge {
   padding: 1px 6px;
@@ -1039,6 +1046,11 @@
   .hot-card { padding: 14px 14px 10px; }
   .hot-head { margin-bottom: 8px; gap: 8px; }
   .hot-note { display: none; }
+  /* 一行只有 300px 宽，描述被截成「2026 年 11 …」等于没信息；手机端只留词 + AI 解读 */
+  .hot-desc { display: none; }
+  .hot-item { padding: 0 6px 0 8px; }
+  .hot-main { flex: 0 1 auto; }
+  .hot-term { font-size: 0.95rem; max-width: 100%; }
 }
 
 </style>
@@ -3248,7 +3260,7 @@ function fallbackCopy(text) {
     return '<div class="hot-item">' +
       '<a class="hot-main" href="' + (href || 'javascript:void(0)') + '"' +
         ' data-title="' + esc(title) + '" data-desc="' + esc(desc) + '">' +
-        '<span class="hot-term"><span class="hot-badge">HOT</span>' + esc(title) + '</span>' +
+        '<span class="hot-term"><span class="hot-badge">HOT</span><span class="hot-txt">' + esc(title) + '</span></span>' +
         '<span class="hot-desc">' + esc(desc) + '</span></a>' +
       '<button class="hot-ai" type="button" data-title="' + esc(title) +
         '" data-desc="' + esc(desc) + '" data-href="' + esc(href) +
