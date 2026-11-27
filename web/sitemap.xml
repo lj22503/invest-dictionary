@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dictionary.mangofolio.com/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -6957,6 +6957,18 @@
   <url>
     <loc>https://dictionary.mangofolio.com/terms/%E5%87%80%E5%9B%9E%E7%AC%BC</loc>
     <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E5%88%9B%E4%B8%9A%E6%9D%BF%E5%81%9A%E5%B8%82%E4%BA%A4%E6%98%93</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dictionary.mangofolio.com/terms/%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E8%87%AA%E8%B4%AD</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
